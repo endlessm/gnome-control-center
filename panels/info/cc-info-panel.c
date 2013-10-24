@@ -99,9 +99,6 @@ struct _CcInfoPanelPrivate
 {
   GtkBuilder    *builder;
   GtkWidget     *extra_options_dialog;
-  char          *gnome_version;
-  char          *gnome_distributor;
-  char          *gnome_date;
   GtkWidget     *scrolled_window;
   GtkWidget     *detail_vbox;
   GtkWidget     *hbox1;
@@ -127,120 +124,6 @@ struct _CcInfoPanelPrivate
 static void get_primary_disc_info_start (CcInfoPanel *self);
 static void sync_state_from_updater     (CcInfoPanel *self,
                                          gboolean is_initial_state);
-
-typedef struct
-{
-  char *major;
-  char *minor;
-  char *micro;
-  char *distributor;
-  char *date;
-  char **current;
-} VersionData;
-
-static void
-version_start_element_handler (GMarkupParseContext      *ctx,
-                               const char               *element_name,
-                               const char              **attr_names,
-                               const char              **attr_values,
-                               gpointer                  user_data,
-                               GError                  **error)
-{
-  VersionData *data = user_data;
-  if (g_str_equal (element_name, "platform"))
-    data->current = &data->major;
-  else if (g_str_equal (element_name, "minor"))
-    data->current = &data->minor;
-  else if (g_str_equal (element_name, "micro"))
-    data->current = &data->micro;
-  else if (g_str_equal (element_name, "distributor"))
-    data->current = &data->distributor;
-  else if (g_str_equal (element_name, "date"))
-    data->current = &data->date;
-  else
-    data->current = NULL;
-}
-
-static void
-version_end_element_handler (GMarkupParseContext      *ctx,
-                             const char               *element_name,
-                             gpointer                  user_data,
-                             GError                  **error)
-{
-  VersionData *data = user_data;
-  data->current = NULL;
-}
-
-static void
-version_text_handler (GMarkupParseContext *ctx,
-                      const char          *text,
-                      gsize                text_len,
-                      gpointer             user_data,
-                      GError             **error)
-{
-  VersionData *data = user_data;
-  if (data->current != NULL)
-    *data->current = g_strstrip (g_strdup (text));
-}
-
-static gboolean
-load_gnome_version (char **version,
-                    char **distributor,
-                    char **date)
-{
-  GMarkupParser version_parser = {
-    version_start_element_handler,
-    version_end_element_handler,
-    version_text_handler,
-    NULL,
-    NULL,
-  };
-  GError              *error;
-  GMarkupParseContext *ctx;
-  char                *contents;
-  gsize                length;
-  VersionData         *data;
-  gboolean             ret;
-
-  ret = FALSE;
-
-  error = NULL;
-  if (!g_file_get_contents (DATADIR "/gnome/gnome-version.xml",
-                            &contents,
-                            &length,
-                            &error))
-    return FALSE;
-
-  data = g_new0 (VersionData, 1);
-  ctx = g_markup_parse_context_new (&version_parser, 0, data, NULL);
-
-  if (!g_markup_parse_context_parse (ctx, contents, length, &error))
-    {
-      g_warning ("Invalid version file: '%s'", error->message);
-    }
-  else
-    {
-      if (version != NULL)
-        *version = g_strdup_printf ("%s.%s.%s", data->major, data->minor, data->micro);
-      if (distributor != NULL)
-        *distributor = g_strdup (data->distributor);
-      if (date != NULL)
-        *date = g_strdup (data->date);
-
-      ret = TRUE;
-    }
-
-  g_markup_parse_context_free (ctx);
-  g_free (data->major);
-  g_free (data->minor);
-  g_free (data->micro);
-  g_free (data->distributor);
-  g_free (data->date);
-  g_free (data);
-  g_free (contents);
-
-  return ret;
-};
 
 static void
 graphics_data_free (GraphicsData *gdata)
@@ -435,9 +318,6 @@ cc_info_panel_finalize (GObject *object)
       g_cancellable_cancel (priv->cancellable);
       g_clear_object (&priv->cancellable);
     }
-  g_free (priv->gnome_version);
-  g_free (priv->gnome_date);
-  g_free (priv->gnome_distributor);
 
   if (priv->updater_cancellable)
     {
@@ -549,48 +429,44 @@ get_os_info (void)
 }
 
 static char *
-get_os_type (void)
+get_os_type (GHashTable       *os_info,
+             GtkTextDirection  direction)
 {
-  GHashTable *os_info;
-  gchar *name, *result, *build_id;
-  int bits;
+  char *result;
+  char *version;
+  char *build_id;
 
-  os_info = get_os_info ();
+  result = NULL;
+  version = NULL;
+  build_id = NULL;
 
   if (!os_info)
     return NULL;
 
-  name = g_hash_table_lookup (os_info, "PRETTY_NAME");
+  version = g_hash_table_lookup (os_info, "VERSION_ID");
   build_id = g_hash_table_lookup (os_info, "BUILD_ID");
+
+  if (build_id)
+    result = g_strdup_printf ("%s (%s)", version, build_id);
+  else
+    result = g_strdup_printf ("%s", version);
+
+  return result;
+}
+
+static char *
+get_os_description (void)
+{
+  int bits;
+  gchar *result;
 
   if (GLIB_SIZEOF_VOID_P == 8)
     bits = 64;
   else
     bits = 32;
 
-  if (build_id)
-    {
-      /* translators: This is the name of the OS, followed by the type
-       * of architecture and the build id, for example:
-       * "Fedora 18 (Spherical Cow) 64-bit (Build ID: xyz)" or
-       * "Ubuntu (Oneric Ocelot) 32-bit (Build ID: jki)" */
-      if (name)
-        result = g_strdup_printf (_("%s %d-bit (Build ID: %s)"), name, bits, build_id);
-      else
-        result = g_strdup_printf (_("%d-bit (Build ID: %s)"), bits, build_id);
-    }
-  else
-    {
-      /* translators: This is the name of the OS, followed by the type
-       * of architecture, for example:
-       * "Fedora 18 (Spherical Cow) 64-bit" or "Ubuntu (Oneric Ocelot) 32-bit" */
-      if (name)
-        result = g_strdup_printf (_("%s %d-bit"), name, bits);
-      else
-        result = g_strdup_printf (_("%d-bit"), bits);
-    }
-
-  g_clear_pointer (&os_info, g_hash_table_destroy);
+  /* translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit" */
+  result = g_strdup_printf (_("%d-bit"), bits);
 
   return result;
 }
@@ -782,24 +658,6 @@ on_section_changed (GtkTreeSelection  *selection,
   gtk_tree_path_free (path);
 }
 
-static void
-move_one_up (GtkWidget *table,
-	     GtkWidget *child)
-{
-  int top_attach, bottom_attach;
-
-  gtk_container_child_get (GTK_CONTAINER (table),
-                           child,
-                           "top-attach", &top_attach,
-                           "bottom-attach", &bottom_attach,
-                           NULL);
-  gtk_container_child_set (GTK_CONTAINER (table),
-                           child,
-                           "top-attach", top_attach - 1,
-                           "bottom-attach", bottom_attach - 1,
-                           NULL);
-}
-
 static struct {
   const char *id;
   const char *display;
@@ -830,8 +688,6 @@ set_virtualization_label (CcInfoPanel  *self,
   {
     gtk_widget_hide (WID ("virt_type_label"));
     gtk_widget_hide (WID ("label18"));
-    move_one_up (WID("table1"), WID("label8"));
-    move_one_up (WID("table1"), WID("disk_label"));
     return;
   }
 
@@ -1883,6 +1739,8 @@ on_attribution_label_link (GtkLabel *label,
 static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
+  GtkTextDirection direction;
+  GHashTable *os_info;
   GtkWidget  *widget;
   glibtop_mem mem;
   const glibtop_sysinfo *info;
@@ -1894,6 +1752,8 @@ info_panel_setup_overview (CcInfoPanel  *self)
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
 
+  direction = gtk_widget_get_direction (GTK_WIDGET (self));
+  os_info = get_os_info ();
   info = glibtop_get_sysinfo ();
 
   widget = WID ("processor_label");
@@ -1902,7 +1762,7 @@ info_panel_setup_overview (CcInfoPanel  *self)
   g_free (text);
 
   widget = WID ("os_type_label");
-  text = get_os_type ();
+  text = get_os_type (os_info, direction);
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
 
@@ -1935,6 +1795,8 @@ info_panel_setup_overview (CcInfoPanel  *self)
                         G_CALLBACK (updates_link_activated), self);
       sync_initial_state_from_updater (self);
     }
+
+  g_clear_pointer (&os_info, g_hash_table_destroy);
 }
 
 static void
