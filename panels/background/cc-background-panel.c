@@ -21,6 +21,7 @@
 
 #include <config.h>
 
+#include <endless/endless.h>
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n-lib.h>
@@ -44,6 +45,8 @@
 #define WP_SHADING_KEY "color-shading-type"
 #define WP_PCOLOR_KEY "primary-color"
 #define WP_SCOLOR_KEY "secondary-color"
+
+#define EOS_DEFAULT_BG_URI "eos:///default"
 
 CC_PANEL_REGISTER (CcBackgroundPanel, cc_background_panel)
 
@@ -456,6 +459,46 @@ on_lock_preview_draw (GtkWidget         *widget,
   return TRUE;
 }
 
+static gchar *
+get_personality_default_bg_uri (void)
+{
+  const gchar ** personalities;
+  const gchar *personality;
+  gchar *path, *filename, *uri;
+  GFile *file;
+  gint idx;
+
+  uri = NULL;
+
+  personalities = g_malloc0 (3 * sizeof (gchar *));
+  personalities[0] = eos_get_system_personality ();
+  personalities[1] = "default";
+
+  for (idx = 0; personalities[idx] != NULL; idx++)
+    {
+      personality = personalities[idx];
+      filename = g_strdup_printf ("desktop-background-%s.jpg", personality);
+      path = g_build_filename (DATADIR "/EndlessOS/personality-defaults",
+                               filename,
+                               NULL);
+      file = g_file_new_for_path (path);
+
+      if (g_file_query_exists (file, NULL))
+        uri = g_file_get_uri (file);
+
+      g_free (filename);
+      g_free (path);
+      g_object_unref (file);
+
+      if (uri != NULL)
+        break;
+    }
+
+  g_free (personalities);
+
+  return uri;
+}
+
 static void
 reload_current_bg (CcBackgroundPanel *self,
                    GSettings         *settings)
@@ -473,6 +516,15 @@ reload_current_bg (CcBackgroundPanel *self,
 
   /* initalise the current background information from settings */
   uri = g_settings_get_string (settings, WP_URI_KEY);
+
+  /* initialise from personality if required */
+  if (g_strcmp0 (uri, EOS_DEFAULT_BG_URI) == 0)
+    {
+      g_free (uri);
+      uri = get_personality_default_bg_uri ();
+    }
+
+  /* fall through the former logic otherwise */
   if (uri && *uri == '\0')
     {
       g_clear_pointer (&uri, g_free);
