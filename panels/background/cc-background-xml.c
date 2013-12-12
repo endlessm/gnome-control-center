@@ -20,6 +20,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
+#include <endless/endless.h>
 #include <gio/gio.h>
 #include <string.h>
 #include <libxml/parser.h>
@@ -152,6 +153,33 @@ emit_added_in_idle (CcBackgroundXml *xml,
 #define UNSET_FLAG(flag) G_STMT_START{ (flags&=~(flag)); }G_STMT_END
 #define SET_FLAG(flag) G_STMT_START{ (flags|=flag); }G_STMT_END
 
+#define EOS_BG_XML_FILE_PREFIX "endlessos-backgrounds"
+
+static gboolean
+xml_item_valid_for_eos_personality (const gchar *filename)
+{
+  gchar *basename, *str;
+  gboolean retval;
+  const gchar *eos_personality;
+
+  basename = g_path_get_basename (filename);
+  retval = TRUE;
+
+  /* We're not looking at an EndlessOS bg catalog, assume it's fine. */
+  if (!g_str_has_prefix (basename, EOS_BG_XML_FILE_PREFIX))
+    goto out;
+
+  eos_personality = eos_get_system_personality ();
+  str = g_strdup_printf (EOS_BG_XML_FILE_PREFIX "-%s", eos_personality);
+
+  retval = g_str_has_prefix (basename, str);
+  g_free (str);
+
+ out:
+  g_free (basename);
+  return retval;
+}
+
 static gboolean
 cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
 				     const gchar     *filename,
@@ -164,8 +192,12 @@ cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
   gint i;
   gboolean retval;
 
-  wplist = xmlParseFile (filename);
   retval = FALSE;
+
+  if (!xml_item_valid_for_eos_personality (filename))
+    return retval;
+
+  wplist = xmlParseFile (filename);
 
   if (!wplist)
     return retval;
@@ -178,7 +210,7 @@ cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
     if (!strcmp ((gchar *)list->name, "wallpaper")) {
       CcBackgroundItem * item;
       CcBackgroundItemFlags flags;
-      char *uri, *cname, *id;
+      char *cname, *id;
 
       flags = 0;
       cname = NULL;
@@ -281,27 +313,40 @@ cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
       /* Check whether the target file exists */
       {
         GFile *file;
-        const char *uri;
+        GFileInfo *file_info;
+        const char *item_uri;
 
-	uri = cc_background_item_get_uri (item);
-	if (uri != NULL)
-	  {
-            file = g_file_new_for_uri (uri);
-	    if (g_file_query_exists (file, NULL) == FALSE)
-	      {
-	        g_object_unref (item);
-	        continue;
-	      }
-	    g_object_unref (file);
-	  }
+        item_uri = cc_background_item_get_uri (item);
+        if (item_uri != NULL) {
+          file = g_file_new_for_uri (item_uri);
+          file_info = g_file_query_info (file,
+                                         "standard::name,standard::is-symlink,standard::symlink-target",
+                                         G_FILE_QUERY_INFO_NONE,
+                                         NULL, NULL);
+          if (!file_info) {
+            g_object_unref (file);
+            g_object_unref (item);
+            continue;
+          }
+
+          /* Resolve symlink if present */
+          if (g_file_info_get_is_symlink (file_info))
+            id = g_filename_to_uri (g_file_info_get_symlink_target (file_info),
+                                    NULL, NULL);
+          else
+            id = g_strdup (item_uri);
+
+          g_object_unref (file_info);
+          g_object_unref (file);
+        } else {
+          char *catalog_uri;
+          catalog_uri = g_filename_to_uri (filename, NULL, NULL);          
+          id = g_strdup_printf ("%s#%s", catalog_uri, cname);
+          g_free (catalog_uri);
+        }
       }
 
-      /* FIXME, this is a broken way of doing,
-       * need to use proper code here */
-      uri = g_filename_to_uri (filename, NULL, NULL);
-      id = g_strdup_printf ("%s#%s", uri, cname);
       g_free (cname);
-      g_free (uri);
 
       /* Make sure we don't already have this one and that filename exists */
       if (g_hash_table_lookup (xml->priv->wp_hash, id) != NULL) {
