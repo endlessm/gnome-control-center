@@ -1703,8 +1703,7 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
                                    mode_height))
         continue;
 
-      res = make_resolution_string (gnome_rr_mode_get_width (modes[i]),
-                                    gnome_rr_mode_get_height (modes[i]));
+      res = gnome_rr_mode_get_name (modes[i]);
       present = GPOINTER_TO_INT (g_hash_table_lookup (resolutions, res));
       if (!present)
         {
@@ -1724,7 +1723,6 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
                                              &iter);
             }
         }
-      g_free (res);
     }
 
   /* ensure a resolution is selected by default */
