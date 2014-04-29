@@ -1655,20 +1655,6 @@ make_aspect_string (gint width,
   return aspect;
 }
 
-static char *
-make_resolution_string (GnomeRRMode *mode)
-{
-  gint width = gnome_rr_mode_get_width (mode);
-  gint height = gnome_rr_mode_get_height (mode);
-  const char *aspect = make_aspect_string (width, height);
-  const char *interlaced = gnome_rr_mode_get_is_interlaced (mode) ? "i" : "";
-
-  if (aspect != NULL)
-    return g_strdup_printf ("%d × %d%s (%s)", width, height, interlaced, aspect);
-  else
-    return g_strdup_printf ("%d × %d%s", width, height, interlaced);
-}
-
 static GtkWidget *
 list_box_item (const gchar *title,
                const gchar *subtitle)
@@ -1741,7 +1727,7 @@ setup_frequency_combo_box (CcDisplayPanel *panel,
   GnomeRRMode *current_mode;
   GtkTreeModel *model;
   GtkTreeIter iter;
-  gchar *res;
+  const gchar *res;
   GSList *l, *frequencies;
   guint i;
   gboolean prev_dup;
@@ -1754,9 +1740,8 @@ setup_frequency_combo_box (CcDisplayPanel *panel,
   gtk_list_store_clear (GTK_LIST_STORE (model));
 
   i = 0;
-  res = make_resolution_string (resolution_mode);
+  res = gnome_rr_mode_get_name (resolution_mode);
   frequencies = g_slist_copy (g_hash_table_lookup (priv->res_freqs, res));
-  g_free (res);
   frequencies = g_slist_sort (frequencies, sort_frequencies);
   prev_dup = FALSE;
 
@@ -1861,7 +1846,7 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
   for (i = 0; modes[i] != NULL; i++)
     {
       GSList *l;
-      gchar *res;
+      const gchar *res;
       gint output_width, output_height, mode_width, mode_height;
 
       if (!current_mode)
@@ -1877,7 +1862,7 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
                                    mode_height))
         continue;
 
-      res = make_resolution_string (modes[i]);
+      res = gnome_rr_mode_get_name (modes[i]);
 
       if ((l = g_hash_table_lookup (priv->res_freqs, res)) == NULL)
         {
@@ -1897,7 +1882,7 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
         }
 
       l = g_slist_append (l, modes[i]);
-      g_hash_table_replace (priv->res_freqs, res, l);
+      g_hash_table_replace (priv->res_freqs, g_strdup (res), l);
     }
 
   /* ensure a resolution is selected by default */
