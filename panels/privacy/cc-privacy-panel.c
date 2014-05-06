@@ -22,6 +22,7 @@
 #include "cc-privacy-panel.h"
 #include "cc-privacy-resources.h"
 
+#include <act/act.h>
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
 
@@ -243,9 +244,20 @@ add_screen_lock (CcPrivacyPanel *self)
   GtkWidget *w;
   GtkWidget *dialog;
   GtkWidget *label;
+  ActUserManager *um;
+  ActUser *user;
+  gboolean automatic_login;
 
-  w = get_on_off_label (self->priv->lock_settings, "lock-enabled");
-  add_row (self, _("Screen Lock"), "screen_lock_dialog", w);
+  um = act_user_manager_get_default ();
+  user = act_user_manager_get_user_by_id (um, getuid ());
+  automatic_login = act_user_get_automatic_login (user);
+
+  if (automatic_login) {
+    add_row (self, _("Screen Lock"), "screen_lock_dialog", gtk_label_new (_("Off")));
+  } else {
+    w = get_on_off_label (self->priv->lock_settings, "lock-enabled");
+    add_row (self, _("Screen Lock"), "screen_lock_dialog", w);
+  }
 
   w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "screen_lock_done"));
   dialog = self->priv->screen_lock_dialog;
@@ -255,14 +267,25 @@ add_screen_lock (CcPrivacyPanel *self)
                     G_CALLBACK (gtk_widget_hide_on_delete), NULL);
 
   w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "automatic_screen_lock"));
-  g_settings_bind (self->priv->lock_settings, "lock-enabled",
-                   w, "active",
-                   G_SETTINGS_BIND_DEFAULT);
+
+  if (automatic_login) {
+    gtk_switch_set_active (GTK_SWITCH (w), FALSE);
+    gtk_widget_set_sensitive (w, FALSE);
+  } else {
+    g_settings_bind (self->priv->lock_settings, "lock-enabled",
+                     w, "active",
+                     G_SETTINGS_BIND_DEFAULT);
+  }
 
   w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "lock_after_combo"));
-  g_settings_bind (self->priv->lock_settings, "lock-enabled",
-                   w, "sensitive",
-                   G_SETTINGS_BIND_GET);
+
+  if (automatic_login) {
+    gtk_widget_set_sensitive (w, FALSE);
+  } else {
+    g_settings_bind (self->priv->lock_settings, "lock-enabled",
+                     w, "sensitive",
+                     G_SETTINGS_BIND_GET);
+  }
 
   label = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "lock_after_label"));
 
