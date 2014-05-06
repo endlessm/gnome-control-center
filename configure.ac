@@ -151,6 +151,7 @@ PKG_CHECK_MODULES(PRINTERS_PANEL, $COMMON_MODULES
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   smbclient)
 PKG_CHECK_MODULES(PRIVACY_PANEL, $COMMON_MODULES
+                  accountsservice >= $ACCOUNTSSERVICE_REQUIRED_VERSION
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
