@@ -31,6 +31,7 @@ sources += gnome.compile_resources(
 
 deps = common_deps + [
   polkit_gobject_dep,
+  accounts_dep,
 ]
 
 cflags += '-DGNOMELOCALEDIR="@0@"'.format(control_center_localedir)
