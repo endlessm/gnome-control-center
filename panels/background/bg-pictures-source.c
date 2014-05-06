@@ -51,6 +51,7 @@ struct _BgPicturesSourcePrivate
   GnomeDesktopThumbnailFactory *thumb_factory;
 
   GFileMonitor *picture_dir_monitor;
+  GFileMonitor *wallpapers_dir_monitor;
   GFileMonitor *cache_dir_monitor;
 
   GHashTable *known_items;
@@ -100,6 +101,7 @@ bg_pictures_source_finalize (GObject *object)
   g_clear_pointer (&bg_source->priv->known_items, g_hash_table_destroy);
 
   g_clear_object (&bg_source->priv->picture_dir_monitor);
+  g_clear_object (&bg_source->priv->wallpapers_dir_monitor);
   g_clear_object (&bg_source->priv->cache_dir_monitor);
 
   G_OBJECT_CLASS (bg_pictures_source_parent_class)->finalize (object);
@@ -939,6 +941,7 @@ static void
 bg_pictures_source_init (BgPicturesSource *self)
 {
   const gchar *pictures_path;
+  const gchar *wallpapers_path;
   BgPicturesSourcePrivate *priv;
   char *cache_path;
   GtkListStore *store;
@@ -956,6 +959,10 @@ bg_pictures_source_init (BgPicturesSource *self)
     pictures_path = g_get_home_dir ();
 
   priv->picture_dir_monitor = monitor_path (self, pictures_path);
+
+  wallpapers_path = g_get_user_special_dir_for_desktop_id ("gnome-wallpapers.desktop");
+  if (wallpapers_path)
+    priv->wallpapers_dir_monitor = monitor_path (self, wallpapers_path);
 
   cache_path = bg_pictures_source_get_cache_path ();
   priv->cache_dir_monitor = monitor_path (self, cache_path);
