@@ -23,7 +23,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include <act/act.h>
+#include <string.h>
 
 #include "cc-add-user-dialog.h"
 #include "cc-realm-manager.h"
@@ -268,7 +268,7 @@ update_password_strength (CcAddUserDialog *self)
 
         verify = gtk_entry_get_text (self->local_verify_entry);
         if (strlen (verify) == 0) {
-                gtk_widget_set_sensitive (GTK_WIDGET (self->local_verify_entry), strength_level > 1);
+                gtk_widget_set_sensitive (GTK_WIDGET (self->local_verify_entry), TRUE);
         }
 
         return strength_level;
@@ -284,7 +284,6 @@ local_validate (CcAddUserDialog *self)
         const gchar *password;
         const gchar *verify;
         gchar *tip;
-        gint strength;
 
         name = gtk_combo_box_text_get_active_text (self->local_username_combo);
         valid_login = is_valid_username (name, &tip);
@@ -305,8 +304,8 @@ local_validate (CcAddUserDialog *self)
         password = gtk_entry_get_text (self->local_password_entry);
         verify = gtk_entry_get_text (self->local_verify_entry);
         if (self->local_password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
-                strength = update_password_strength (self);
-                valid_password = strength > 1 && strcmp (password, verify) == 0;
+                update_password_strength (self);
+                valid_password = password && password[0] != '\0' && strcmp (password, verify) == 0;
         } else {
                 valid_password = TRUE;
         }
