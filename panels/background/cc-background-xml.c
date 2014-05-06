@@ -330,10 +330,24 @@ cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
           }
 
           /* Resolve symlink if present */
-          if (g_file_info_get_is_symlink (file_info))
-            id = g_filename_to_uri (g_file_info_get_symlink_target (file_info),
-                                    NULL, NULL);
-          else
+          if (g_file_info_get_is_symlink (file_info)) {
+            GFile *parent_path;
+            GFile *resolved_file;
+            const char *target;
+            char *resolved_uri;
+
+            parent_path = g_file_get_parent (file);
+            target = g_file_info_get_symlink_target (file_info);
+            g_assert (target);
+
+            resolved_file = g_file_resolve_relative_path (parent_path, target);
+            resolved_uri = g_file_get_uri (resolved_file);
+
+            id = g_strdup (resolved_uri);
+
+            g_object_unref (resolved_file);
+            g_free (resolved_uri);
+          } else
             id = g_strdup (item_uri);
 
           g_object_unref (file_info);
