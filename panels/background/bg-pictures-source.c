@@ -47,6 +47,7 @@ struct _BgPicturesSourcePrivate
   GnomeDesktopThumbnailFactory *thumb_factory;
 
   GFileMonitor *picture_dir_monitor;
+  GFileMonitor *wallpapers_dir_monitor;
   GFileMonitor *cache_dir_monitor;
 
   GHashTable *known_items;
@@ -114,6 +115,7 @@ bg_pictures_source_finalize (GObject *object)
   g_clear_pointer (&bg_source->priv->known_items, g_hash_table_destroy);
 
   g_clear_object (&bg_source->priv->picture_dir_monitor);
+  g_clear_object (&bg_source->priv->wallpapers_dir_monitor);
   g_clear_object (&bg_source->priv->cache_dir_monitor);
 
   G_OBJECT_CLASS (bg_pictures_source_parent_class)->finalize (object);
@@ -594,12 +596,44 @@ files_changed_cb (GFileMonitor      *monitor,
     }
 }
 
+static GFileMonitor *
+monitor_path (BgPicturesSource *self,
+              const char       *path)
+{
+  GFileMonitor *monitor;
+  GFile *dir;
+
+  g_mkdir_with_parents (path, USER_DIR_MODE);
+
+  dir = g_file_new_for_path (path);
+  g_file_enumerate_children_async (dir,
+                                   ATTRIBUTES,
+                                   G_FILE_QUERY_INFO_NONE,
+                                   G_PRIORITY_LOW, self->priv->cancellable,
+                                   dir_enum_async_ready, self);
+
+  monitor = g_file_monitor_directory (dir,
+                                      G_FILE_MONITOR_NONE,
+                                      self->priv->cancellable,
+                                      NULL);
+
+  if (monitor)
+    g_signal_connect (monitor,
+                      "changed",
+                      G_CALLBACK (files_changed_cb),
+                      self);
+
+  g_object_unref (dir);
+
+  return monitor;
+}
+
 static void
 bg_pictures_source_init (BgPicturesSource *self)
 {
   const gchar *pictures_path;
+  const gchar *wallpapers_path;
   BgPicturesSourcePrivate *priv;
-  GFile *dir;
   char *cache_path;
   GtkListStore *store;
 
@@ -612,49 +646,14 @@ bg_pictures_source_init (BgPicturesSource *self)
 					     NULL);
 
   pictures_path = g_get_user_special_dir (G_USER_DIRECTORY_PICTURES);
-  g_mkdir_with_parents (pictures_path, USER_DIR_MODE);
+  priv->picture_dir_monitor = monitor_path (self, pictures_path);
 
-  dir = g_file_new_for_path (pictures_path);
-  g_file_enumerate_children_async (dir,
-				   ATTRIBUTES,
-                                   G_FILE_QUERY_INFO_NONE,
-                                   G_PRIORITY_LOW, priv->cancellable,
-                                   dir_enum_async_ready, self);
-
-  priv->picture_dir_monitor = g_file_monitor_directory (dir,
-                                                        G_FILE_MONITOR_NONE,
-                                                        priv->cancellable,
-                                                        NULL);
-
-  if (priv->picture_dir_monitor)
-    g_signal_connect (priv->picture_dir_monitor,
-                      "changed",
-                      G_CALLBACK (files_changed_cb),
-                      self);
-
-  g_object_unref (dir);
+  wallpapers_path = g_get_user_special_dir_for_desktop_id ("gnome-wallpapers.desktop");
+  if (wallpapers_path)
+    priv->wallpapers_dir_monitor = monitor_path (self, wallpapers_path);
 
   cache_path = bg_pictures_source_get_cache_path ();
-  g_mkdir_with_parents (cache_path, USER_DIR_MODE);
-
-  dir = g_file_new_for_path (cache_path);
-  g_file_enumerate_children_async (dir,
-				   ATTRIBUTES,
-                                   G_FILE_QUERY_INFO_NONE,
-                                   G_PRIORITY_LOW, priv->cancellable,
-                                   dir_enum_async_ready, self);
-
-  priv->cache_dir_monitor = g_file_monitor_directory (dir,
-                                                      G_FILE_MONITOR_NONE,
-                                                      priv->cancellable,
-                                                      NULL);
-  if (priv->cache_dir_monitor)
-    g_signal_connect (priv->cache_dir_monitor,
-                      "changed",
-                      G_CALLBACK (files_changed_cb),
-                      self);
-
-  g_object_unref (dir);
+  priv->cache_dir_monitor = monitor_path (self, cache_path);
 
   priv->thumb_factory =
     gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_LARGE);
