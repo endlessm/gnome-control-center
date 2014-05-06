@@ -85,9 +85,8 @@ update_password_strength (UmPasswordDialog *um)
         gtk_level_bar_set_value (GTK_LEVEL_BAR (um->strength_indicator), strength_level);
         gtk_label_set_label (GTK_LABEL (um->password_hint), long_hint);
 
-        if (strength_level > 0) {
-                set_entry_validation_checkmark (GTK_ENTRY (um->password_entry));
-        } else if (strlen (password) == 0) {
+        set_entry_validation_checkmark (GTK_ENTRY (um->password_entry));
+        if (strlen (password) == 0) {
                 set_entry_generation_icon (GTK_ENTRY (um->password_entry));
         } else {
                 clear_entry_validation_error (GTK_ENTRY (um->password_entry));
@@ -224,14 +223,13 @@ update_sensitivity (UmPasswordDialog *um)
 {
         const gchar *password, *verify;
         gboolean can_change;
-        int strength;
 
         password = gtk_entry_get_text (GTK_ENTRY (um->password_entry));
         verify = gtk_entry_get_text (GTK_ENTRY (um->verify_entry));
 
         if (um->password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
-                strength = update_password_strength (um);
-                can_change = strength > 0 && strcmp (password, verify) == 0 &&
+                update_password_strength (um);
+                can_change = password && password[0] != '\0' && strcmp (password, verify) == 0 &&
                              (um->old_password_ok || !gtk_widget_get_visible (um->old_password_entry));
         }
         else {
