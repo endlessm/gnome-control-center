@@ -1335,6 +1335,7 @@ on_permission_changed (GPermission *permission,
 {
         CcUserPanelPrivate *d = data;
         gboolean is_authorized;
+        gboolean is_shared_account;
         gboolean self_selected;
         ActUser *user;
         GtkWidget *widget;
@@ -1345,6 +1346,7 @@ on_permission_changed (GPermission *permission,
         }
 
         is_authorized = g_permission_get_allowed (G_PERMISSION (d->permission));
+        is_shared_account = g_strcmp0 (act_user_get_user_name (user), "shared") == 0;
         self_selected = act_user_get_uid (user) == geteuid ();
 
         widget = get_widget (d, "add-user-toolbutton");
@@ -1417,13 +1419,14 @@ on_permission_changed (GPermission *permission,
                 add_unlock_tooltip (get_widget (d, "autologin-switch"));
         }
 
-        /* The full name entry: insensitive if remote or not authorized and not self */
+        /* The full name entry: insensitive if remote or not authorized and not
+           self, or is Shared Account */
         widget = get_widget (d, "full-name-entry");
         if (!act_user_is_local_account (user)) {
                 cc_editable_entry_set_editable (CC_EDITABLE_ENTRY (widget), FALSE);
                 remove_unlock_tooltip (widget);
 
-        } else if (is_authorized || self_selected) {
+        } else if (!is_shared_account && (is_authorized || self_selected)) {
                 cc_editable_entry_set_editable (CC_EDITABLE_ENTRY (widget), TRUE);
                 remove_unlock_tooltip (widget);
 
