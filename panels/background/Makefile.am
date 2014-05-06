@@ -104,6 +104,6 @@ xdgdirs_in_files = gnome-wallpapers.desktop.in
 xdgdirs_DATA = $(xdgdirs_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(xdgdirs_DATA) $(BUILT_SOURCES) stamp-gdesktop-enums-types.h
-EXTRA_DIST = $(resource_files) background.gresource.xml
+EXTRA_DIST = $(resource_files) background.gresource.xml gnome-wallpapers.desktop.in
 
 -include $(top_srcdir)/git.mk
