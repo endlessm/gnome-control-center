@@ -1354,6 +1354,7 @@ on_permission_changed (GPermission *permission,
 {
         CcUserPanelPrivate *d = data;
         gboolean is_authorized;
+        gboolean is_shared_account;
         gboolean self_selected;
         ActUser *user;
         GtkWidget *widget;
@@ -1364,6 +1365,7 @@ on_permission_changed (GPermission *permission,
         }
 
         is_authorized = g_permission_get_allowed (G_PERMISSION (d->permission));
+        is_shared_account = g_strcmp0 (act_user_get_user_name (user), "shared") == 0;
         self_selected = act_user_get_uid (user) == geteuid ();
 
         gtk_stack_set_visible_child_name (GTK_STACK (d->headerbar_buttons), is_authorized ? PAGE_ADDUSER : PAGE_LOCK);
@@ -1438,13 +1440,13 @@ on_permission_changed (GPermission *permission,
                 add_unlock_tooltip (get_widget (d, "autologin-switch"));
         }
 
-        /* The full name entry: insensitive if remote or not authorized and not self */
+        /* The full name entry: insensitive if remote or not authorized and not
+           self, or is Shared Account */
         widget = get_widget (d, "full-name-entry");
         if (!act_user_is_local_account (user)) {
                 gtk_widget_set_sensitive (widget, FALSE);
                 remove_unlock_tooltip (widget);
-
-        } else if (is_authorized || self_selected) {
+        } else if (!is_shared_account && (is_authorized || self_selected)) {
                 gtk_widget_set_sensitive (widget, TRUE);
                 remove_unlock_tooltip (widget);
 
