@@ -304,7 +304,6 @@ local_validate (UmAccountDialog *self)
         const gchar *password;
         const gchar *verify;
         gchar *tip;
-        gint strength;
 
         name = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (self->local_username));
         valid_login = is_valid_username (name, &tip);
@@ -326,8 +325,8 @@ local_validate (UmAccountDialog *self)
         password = gtk_entry_get_text (GTK_ENTRY (self->local_password));
         verify = gtk_entry_get_text (GTK_ENTRY (self->local_verify));
         if (self->local_password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
-                strength = update_password_strength (self);
-                valid_password = strength > 0 && strcmp (password, verify) == 0;
+                update_password_strength (self);
+                valid_password = password && password[0] != '\0' && strcmp (password, verify) == 0;
         } else {
                 valid_password = TRUE;
         }
