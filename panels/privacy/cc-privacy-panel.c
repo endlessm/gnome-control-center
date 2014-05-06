@@ -23,6 +23,7 @@
 #include "cc-privacy-resources.h"
 #include "cc-util.h"
 
+#include <act/act.h>
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
 #include <polkit/polkit.h>
@@ -423,21 +424,45 @@ static void
 add_screen_lock (CcPrivacyPanel *self)
 {
   GtkLabel *label;
+  ActUserManager *um;
+  ActUser *user;
+  gboolean automatic_login;
 
-  label = get_on_off_label (self->lock_settings, "lock-enabled");
-  gtk_widget_show (GTK_WIDGET (label));
-  add_row (self, _("Screen Lock"), self->screen_lock_dialog, GTK_WIDGET (label));
+  um = act_user_manager_get_default ();
+  user = act_user_manager_get_user_by_id (um, getuid ());
+  automatic_login = act_user_get_automatic_login (user);
+
+  if (automatic_login) {
+    GtkWidget *off_label;
+
+    off_label = gtk_label_new (_("Off"));
+    gtk_widget_show (GTK_WIDGET (off_label));
+    add_row (self, _("Screen Lock"), self->screen_lock_dialog, off_label);
+  } else {
+    label = get_on_off_label (self->lock_settings, "lock-enabled");
+    gtk_widget_show (GTK_WIDGET (label));
+    add_row (self, _("Screen Lock"), self->screen_lock_dialog, GTK_WIDGET (label));
+  }
 
   g_signal_connect (self->screen_lock_dialog, "delete-event",
                     G_CALLBACK (gtk_widget_hide_on_delete), NULL);
 
-  g_settings_bind (self->lock_settings, "lock-enabled",
-                   self->automatic_screen_lock_switch, "active",
-                   G_SETTINGS_BIND_DEFAULT);
+  if (automatic_login) {
+    gtk_switch_set_active (self->automatic_screen_lock_switch, FALSE);
+    gtk_widget_set_sensitive (GTK_WIDGET (self->automatic_screen_lock_switch), FALSE);
+  } else {
+    g_settings_bind (self->lock_settings, "lock-enabled",
+                     self->automatic_screen_lock_switch, "active",
+                     G_SETTINGS_BIND_DEFAULT);
+  }
 
-  g_settings_bind (self->lock_settings, "lock-enabled",
-                   self->lock_after_combo, "sensitive",
-                   G_SETTINGS_BIND_GET);
+  if (automatic_login) {
+    gtk_widget_set_sensitive (GTK_WIDGET (self->lock_after_combo), FALSE);
+  } else {
+    g_settings_bind (self->lock_settings, "lock-enabled",
+                     self->lock_after_combo, "sensitive",
+                     G_SETTINGS_BIND_GET);
+  }
 
   g_object_bind_property (self->lock_after_combo, "sensitive", self->lock_after_label, "sensitive", G_BINDING_DEFAULT);
 
