@@ -89,18 +89,11 @@ update_password_strength (CcPasswordDialog *self)
         gtk_level_bar_set_value (self->strength_indicator, strength_level);
         gtk_label_set_label (self->password_hint_label, hint);
 
-        if (strength_level > 1) {
-                gtk_widget_remove_css_class (GTK_WIDGET (self->password_entry), "error");
-        } else if (strlen (password) == 0) {
-                //gtk_widget_hide (GTK_WIDGET (self->password_entry_status_icon));
-                //gtk_widget_show (GTK_WIDGET (self->generate_password_button));
-        } else {
-                gtk_widget_add_css_class (GTK_WIDGET (self->password_entry), "error");
-        }
+        gtk_widget_remove_css_class (GTK_WIDGET (self->password_entry), "error");
 
         verify = gtk_editable_get_text (GTK_EDITABLE (self->verify_entry));
         if (strlen (verify) == 0) {
-                gtk_widget_set_sensitive (GTK_WIDGET (self->verify_entry), strength_level > 1);
+                gtk_widget_set_sensitive (GTK_WIDGET (self->verify_entry), TRUE);
         }
 
         return strength_level;
@@ -194,14 +187,13 @@ update_sensitivity (CcPasswordDialog *self)
 {
         const gchar *password, *verify;
         gboolean can_change;
-        int strength;
 
         password = gtk_editable_get_text (GTK_EDITABLE (self->password_entry));
         verify = gtk_editable_get_text (GTK_EDITABLE (self->verify_entry));
 
         if (self->password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
-                strength = update_password_strength (self);
-                can_change = strength > 1 && strcmp (password, verify) == 0 &&
+                update_password_strength (self);
+                can_change = password && password[0] != '\0' && strcmp (password, verify) == 0 &&
                              (self->old_password_ok || !gtk_widget_get_visible (GTK_WIDGET (self->old_password_entry)));
         }
         else {
