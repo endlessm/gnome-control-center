@@ -195,7 +195,7 @@ load_gnome_version (char **version,
   ret = FALSE;
 
   error = NULL;
-  if (!g_file_get_contents (DATADIR "/EndlessOS/endlessos-version.xml",
+  if (!g_file_get_contents (DATADIR "/gnome/gnome-version.xml",
                             &contents,
                             &length,
                             &error))
@@ -501,48 +501,85 @@ cc_info_panel_class_init (CcInfoPanelClass *klass)
 }
 
 static char *
+get_item (const char *buffer, const char *name)
+{
+  char *label, *start, *end, *result;
+  char end_char;
+
+  result = NULL;
+  start = NULL;
+  end = NULL;
+  label = g_strconcat (name, "=", NULL);
+  if ((start = strstr (buffer, label)) != NULL)
+    {
+      start += strlen (label);
+      end_char = '\n';
+      if (*start == '"')
+        {
+          start++;
+          end_char = '"';
+        }
+
+      end = strchr (start, end_char);
+    }
+
+    if (start != NULL && end != NULL)
+      {
+        result = g_strndup (start, end - start);
+      }
+
+  g_free (label);
+
+  return result;
+}
+
+static char *
 get_os_type (void)
 {
-  int bits;
   char *buffer;
   char *name;
   char *result;
+  char *version;
 
+  result = NULL;
   name = NULL;
-
+  version = NULL;
   if (g_file_get_contents ("/etc/os-release", &buffer, NULL, NULL))
     {
-       char *start, *end;
+      name = get_item (buffer, "NAME");
+      version = get_item (buffer, "VERSION_ID");
 
-       start = end = NULL;
-       if ((start = strstr (buffer, "PRETTY_NAME=\"")) != NULL)
-         {
-           start += strlen ("PRETTY_NAME=\"");
-           end = strchr (start, '"');
-         }
-
-       if (start != NULL && end != NULL)
-         {
-           name = g_strndup (start, end - start);
-         }
-
-       g_free (buffer);
+      g_free (buffer);
     }
+
+  if (name && version)
+    {
+      result = g_strconcat (name, " ", version, NULL);
+    }
+  else if (name)
+    {
+      result = g_strdup (name);
+    }
+
+  g_free (name);
+  g_free (version);
+
+  return result;
+}
+
+static char *
+get_os_description (void)
+{
+  int bits;
+  gchar *result;
 
   if (GLIB_SIZEOF_VOID_P == 8)
     bits = 64;
   else
     bits = 32;
 
-  /* translators: This is the name of the OS, followed by the type
-   * of architecture, for example:
-   * "Fedora 18 (Spherical Cow) 64-bit" or "Ubuntu (Oneric Ocelot) 32-bit" */
-  if (name)
-    result = g_strdup_printf (_("%s %d-bit"), name, bits);
-  else
-    result = g_strdup_printf (_("%d-bit"), bits);
-
-  g_free (name);
+  /* translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit" */
+  result = g_strdup_printf (_("%d-bit"), bits);
 
   return result;
 }
@@ -1566,6 +1603,11 @@ info_panel_setup_overview (CcInfoPanel  *self)
 
   widget = WID ("os_type_label");
   text = get_os_type ();
+  gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
+  g_free (text);
+
+  widget = WID ("os_description_label");
+  text = get_os_description ();
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
 

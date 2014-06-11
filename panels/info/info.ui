@@ -249,11 +249,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="version_label">
+                              <object class="GtkLabel" id="os_type_label">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="label">Version 3.0</property>
                                 <property name="selectable">True</property>
+                                <property name="margin-bottom">24</property>
                                 <attributes>
                                   <attribute name="scale" value="1.25"/>
                                 </attributes>
@@ -317,19 +318,35 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="label7">
+                                  <object class="GtkLabel" id="label19">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">1</property>
-                                    <property name="label" translatable="yes" comments="To translators: this field contains the distro name, version and type">Base system</property>
-                                    <property name="mnemonic_widget">os_type_label</property>
+                                    <property name="label" translatable="yes">OS Type</property>
+                                    <property name="mnemonic_widget">os_description_label</property>
                                     <style>
                                       <class name="dim-label"/>
                                     </style>
                                   </object>
                                   <packing>
-                                    <property name="top_attach">4</property>
-                                    <property name="bottom_attach">5</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="bottom_attach">4</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="label7">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="xalign">1</property>
+                                    <property name="label">GNOME</property>
+                                    <property name="mnemonic_widget">version_label</property>
+                                    <style>
+                                      <class name="dim-label"/>
+                                    </style>
+                                  </object>
+                                  <packing>
+                                    <property name="top_attach">5</property>
+                                    <property name="bottom_attach">6</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -344,8 +361,8 @@
                                     </style>
                                   </object>
                                   <packing>
-                                    <property name="top_attach">6</property>
-                                    <property name="bottom_attach">7</property>
+                                    <property name="top_attach">7</property>
+                                    <property name="bottom_attach">8</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -389,7 +406,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="os_type_label">
+                                  <object class="GtkLabel" id="os_description_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
@@ -399,8 +416,23 @@
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="right_attach">2</property>
-                                    <property name="top_attach">4</property>
-                                    <property name="bottom_attach">5</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="bottom_attach">4</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="version_label">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="xalign">0</property>
+                                    <property name="label">Unknown</property>
+                                    <property name="selectable">True</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="right_attach">2</property>
+                                    <property name="top_attach">5</property>
+                                    <property name="bottom_attach">6</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -414,8 +446,8 @@
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="right_attach">2</property>
-                                    <property name="top_attach">6</property>
-                                    <property name="bottom_attach">7</property>
+                                    <property name="top_attach">7</property>
+                                    <property name="bottom_attach">8</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -497,8 +529,8 @@
                                     </style>
                                   </object>
                                   <packing>
-                                    <property name="top_attach">3</property>
-                                    <property name="bottom_attach">4</property>
+                                    <property name="top_attach">4</property>
+                                    <property name="bottom_attach">5</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -526,8 +558,8 @@
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="right_attach">2</property>
-                                    <property name="top_attach">3</property>
-                                    <property name="bottom_attach">4</property>
+                                    <property name="top_attach">4</property>
+                                    <property name="bottom_attach">5</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -545,8 +577,8 @@
                                     </style>
                                   </object>
                                   <packing>
-                                    <property name="top_attach">5</property>
-                                    <property name="bottom_attach">6</property>
+                                    <property name="top_attach">6</property>
+                                    <property name="bottom_attach">7</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -560,8 +592,8 @@
                                   <packing>
                                     <property name="left_attach">1</property>
                                     <property name="right_attach">2</property>
-                                    <property name="top_attach">5</property>
-                                    <property name="bottom_attach">6</property>
+                                    <property name="top_attach">6</property>
+                                    <property name="bottom_attach">7</property>
                                   </packing>
                                 </child>
                               </object>
