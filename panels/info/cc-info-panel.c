@@ -195,7 +195,7 @@ load_gnome_version (char **version,
   ret = FALSE;
 
   error = NULL;
-  if (!g_file_get_contents (DATADIR "/EndlessOS/endlessos-version.xml",
+  if (!g_file_get_contents (DATADIR "/gnome/gnome-version.xml",
                             &contents,
                             &length,
                             &error))
