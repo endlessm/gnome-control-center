@@ -25,6 +25,7 @@
 
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
+#include <polkit/polkit.h>
 
 #define REMEMBER_RECENT_FILES "remember-recent-files"
 #define RECENT_FILES_MAX_AGE "recent-files-max-age"
@@ -59,6 +60,10 @@ struct _CcPrivacyPanel
   GtkDialog   *camera_dialog;
   GtkLabel    *camera_label;
   GtkSwitch   *camera_switch;
+  GtkDialog   *metrics_dialog;
+  GtkWidget   *metrics_done;
+  GtkWidget   *metrics_enable_switch;
+  GtkWidget   *metrics_label;
   GtkDialog   *microphone_dialog;
   GtkLabel    *microphone_label;
   GtkSwitch   *microphone_switch;
@@ -97,6 +102,7 @@ struct _CcPrivacyPanel
   GHashTable *location_app_switches;
 
   GtkSizeGroup *location_icon_size_group;
+  GDBusProxy *metrics_proxy;
 };
 
 CC_PANEL_REGISTER (CcPrivacyPanel, cc_privacy_panel)
@@ -955,6 +961,108 @@ add_microphone (CcPrivacyPanel *self)
 }
 
 static void
+set_on_off_label_for_metrics (GtkWidget *label,
+                              gboolean is_active)
+{
+  gtk_label_set_text (GTK_LABEL (label), is_active ? _("On") : _("Off"));
+  gtk_widget_show (label);
+}
+
+static void
+metrics_switch_active_changed_cb (GtkSwitch *widget,
+                                  GParamSpec *pspec,
+                                  CcPrivacyPanel *self)
+{
+  gboolean metrics_active;
+  g_autoptr(GError) error = NULL;
+
+  metrics_active = gtk_switch_get_active (widget);
+  g_dbus_proxy_call_sync (self->metrics_proxy,
+                          "SetEnabled",
+                          g_variant_new ("(b)", metrics_active),
+                          G_DBUS_CALL_FLAGS_NONE, -1,
+                          NULL, &error);
+
+  if (error != NULL)
+    g_critical ("Unable to set the enabled state of metrics daemon: %s", error->message);
+}
+
+static void
+on_metrics_proxy_properties_changed (GDBusProxy *proxy,
+                                     GVariant *changed_properties,
+                                     GStrv invalidated_properties,
+                                     CcPrivacyPanel *self)
+{
+  g_autoptr(GVariant) enabled_prop = NULL;
+  gboolean metrics_active;
+
+  enabled_prop = g_variant_lookup_value (changed_properties, "Enabled", G_VARIANT_TYPE_BOOLEAN);
+  if (!enabled_prop)
+    return;
+
+  metrics_active = g_variant_get_boolean (enabled_prop);
+
+  gtk_switch_set_active (GTK_SWITCH (self->metrics_enable_switch), metrics_active);
+
+  set_on_off_label_for_metrics (self->metrics_label, metrics_active);
+}
+
+static void
+add_metrics (CcPrivacyPanel *self)
+{
+  g_autoptr(GPermission) permission = NULL;
+  g_autoptr(GVariant) value = NULL;
+  g_autoptr(GError) error = NULL;
+  GtkWidget *dialog;
+  gboolean metrics_active;
+  gboolean metrics_can_change;
+
+  self->metrics_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                             G_DBUS_PROXY_FLAGS_NONE,
+                                                             NULL,
+                                                             "com.endlessm.Metrics",
+                                                             "/com/endlessm/Metrics",
+                                                             "com.endlessm.Metrics.EventRecorderServer",
+                                                             NULL, &error);
+  if (error != NULL)
+    {
+      g_critical ("Unable to create a DBus proxy for the metrics daemon: %s", error->message);
+      metrics_active = FALSE;
+    }
+  else
+    {
+      g_signal_connect (self->metrics_proxy, "g-properties-changed",
+                        G_CALLBACK (on_metrics_proxy_properties_changed), self);
+
+      value = g_dbus_proxy_get_cached_property (self->metrics_proxy, "Enabled");
+      metrics_active = g_variant_get_boolean (value);
+    }
+
+  permission = polkit_permission_new_sync ("com.endlessm.Metrics.SetEnabled",
+                                           NULL, NULL, NULL);
+  if (!permission)
+    metrics_can_change = FALSE;
+  else
+    metrics_can_change = g_permission_get_allowed (permission);
+
+  self->metrics_label = gtk_label_new (NULL);
+  set_on_off_label_for_metrics (self->metrics_label, metrics_active);
+  add_row (self, _("Metrics"), self->metrics_dialog, self->metrics_label);
+
+  dialog = GTK_WIDGET (self->metrics_dialog);
+  g_signal_connect_swapped (self->metrics_done, "clicked",
+                            G_CALLBACK (gtk_widget_hide), dialog);
+  g_signal_connect (dialog, "delete-event",
+                    G_CALLBACK (gtk_widget_hide_on_delete), NULL);
+
+  gtk_widget_set_sensitive (self->metrics_enable_switch, metrics_can_change);
+  gtk_switch_set_active (GTK_SWITCH (self->metrics_enable_switch), metrics_active);
+
+  g_signal_connect (self->metrics_enable_switch, "notify::active",
+                    G_CALLBACK (metrics_switch_active_changed_cb), self);
+}
+
+static void
 retain_history_combo_changed_cb (GtkWidget      *widget,
                                  CcPrivacyPanel *self)
 {
@@ -1341,6 +1449,7 @@ cc_privacy_panel_finalize (GObject *object)
   g_clear_pointer (&self->location_apps_perms, g_variant_unref);
   g_clear_pointer (&self->location_apps_data, g_variant_unref);
   g_clear_pointer (&self->location_app_switches, g_hash_table_unref);
+  g_clear_object (&self->metrics_proxy);
 
   G_OBJECT_CLASS (cc_privacy_panel_parent_class)->finalize (object);
 }
@@ -1395,6 +1504,7 @@ cc_privacy_panel_init (CcPrivacyPanel *self)
 
   add_screen_lock (self);
   add_location (self);
+  add_metrics (self);
   add_camera (self);
   add_microphone (self);
   add_usage_history (self);
@@ -1435,6 +1545,9 @@ cc_privacy_panel_class_init (CcPrivacyPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, location_services_switch);
   gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, camera_dialog);
   gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, camera_switch);
+  gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, metrics_dialog);
+  gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, metrics_done);
+  gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, metrics_enable_switch);
   gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, microphone_dialog);
   gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, microphone_switch);
   gtk_widget_class_bind_template_child (widget_class, CcPrivacyPanel, lock_after_combo);
