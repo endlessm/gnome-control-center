@@ -474,12 +474,8 @@ paint_output (CcDisplayPanel    *panel,
                                       priv->thumbnail_factory,
                                       gdk_screen_get_default (), width, height);
 
-  if (cc_display_monitor_is_primary (output)
-      || cc_display_config_is_cloning (configuration))
-    {
-      y += TOP_BAR_HEIGHT;
-      height -= TOP_BAR_HEIGHT;
-    }
+  if (cc_display_monitor_is_primary (output) || cc_display_config_is_cloning (configuration))
+    height -= TOP_BAR_HEIGHT;
 
   if (pixbuf)
     gdk_cairo_set_source_pixbuf (cr, pixbuf, x + 1, y + 1);
