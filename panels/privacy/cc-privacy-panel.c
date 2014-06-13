@@ -25,6 +25,7 @@
 
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
+#include <polkit/polkit.h>
 
 CC_PANEL_REGISTER (CcPrivacyPanel, cc_privacy_panel)
 
@@ -46,6 +47,7 @@ struct _CcPrivacyPanelPrivate
 {
   GtkBuilder *builder;
   GtkWidget  *recent_dialog;
+  GtkWidget  *metrics_dialog;
   GtkWidget  *screen_lock_dialog;
   GtkWidget  *location_dialog;
   GtkWidget  *location_label;
@@ -55,6 +57,7 @@ struct _CcPrivacyPanelPrivate
   GtkWidget  *location_apps_list_box;
   GtkWidget  *location_apps_label;
   GtkWidget  *location_apps_frame;
+  GtkWidget  *metrics_label;
 
   GSettings  *lockdown_settings;
   GSettings  *lock_settings;
@@ -75,6 +78,8 @@ struct _CcPrivacyPanelPrivate
   GHashTable *location_app_switches;
 
   GtkSizeGroup *location_icon_size_group;
+
+  GDBusProxy *metrics_proxy;
 };
 
 static char *
@@ -865,6 +870,112 @@ add_location (CcPrivacyPanel *self)
 }
 
 static void
+set_on_off_label_for_metrics (GtkWidget *label,
+                              gboolean is_active)
+{
+  gtk_label_set_text (GTK_LABEL (label), is_active ? _("On") : _("Off"));
+}
+
+static void
+metrics_switch_active_changed_cb (GtkSwitch *widget,
+                                  GParamSpec *pspec,
+                                  CcPrivacyPanel *self)
+{
+  gboolean metrics_active;
+  g_autoptr(GError) error = NULL;
+
+  metrics_active = gtk_switch_get_active (widget);
+  g_dbus_proxy_call_sync (self->priv->metrics_proxy,
+                          "SetEnabled",
+                          g_variant_new ("(b)", metrics_active),
+                          G_DBUS_CALL_FLAGS_NONE, -1,
+                          NULL, &error);
+
+  if (error != NULL)
+    g_critical ("Unable to set the enabled state of metrics daemon: %s", error->message);
+}
+
+static void
+on_metrics_proxy_properties_changed (GDBusProxy *proxy,
+                                     GVariant *changed_properties,
+                                     GStrv invalidated_properties,
+                                     CcPrivacyPanel *self)
+{
+  g_autoptr(GVariant) enabled_prop = NULL;
+  gboolean metrics_active;
+  GtkWidget *w;
+
+  enabled_prop = g_variant_lookup_value (changed_properties, "Enabled", G_VARIANT_TYPE_BOOLEAN);
+  if (!enabled_prop)
+    return;
+
+  metrics_active = g_variant_get_boolean (enabled_prop);
+
+  w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_enable_switch"));
+  gtk_switch_set_active (GTK_SWITCH (w), metrics_active);
+
+  set_on_off_label_for_metrics (self->priv->metrics_label, metrics_active);
+}
+
+static void
+add_metrics (CcPrivacyPanel *self)
+{
+  g_autoptr(GPermission) permission = NULL;
+  g_autoptr(GVariant) value = NULL;
+  g_autoptr(GError) error = NULL;
+  GtkWidget *w;
+  GtkWidget *dialog;
+  gboolean metrics_active;
+  gboolean metrics_can_change;
+
+  self->priv->metrics_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                             G_DBUS_PROXY_FLAGS_NONE,
+                                                             NULL,
+                                                             "com.endlessm.Metrics",
+                                                             "/com/endlessm/Metrics",
+                                                             "com.endlessm.Metrics.EventRecorderServer",
+                                                             NULL, &error);
+  if (error != NULL)
+    {
+      g_critical ("Unable to create a DBus proxy for the metrics daemon: %s", error->message);
+      metrics_active = FALSE;
+    }
+  else
+    {
+      g_signal_connect (self->priv->metrics_proxy, "g-properties-changed",
+                        G_CALLBACK (on_metrics_proxy_properties_changed), self);
+
+      value = g_dbus_proxy_get_cached_property (self->priv->metrics_proxy, "Enabled");
+      metrics_active = g_variant_get_boolean (value);
+    }
+
+  permission = polkit_permission_new_sync ("com.endlessm.Metrics.SetEnabled",
+                                           NULL, NULL, NULL);
+  if (!permission)
+    metrics_can_change = FALSE;
+  else
+    metrics_can_change = g_permission_get_allowed (permission);
+
+  self->priv->metrics_label = gtk_label_new (NULL);
+  set_on_off_label_for_metrics (self->priv->metrics_label, metrics_active);
+  add_row (self, _("Metrics"), "metrics_dialog", self->priv->metrics_label);
+
+  w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_done"));
+  dialog = self->priv->metrics_dialog;
+  g_signal_connect_swapped (w, "clicked",
+                            G_CALLBACK (gtk_widget_hide), dialog);
+  g_signal_connect (dialog, "delete-event",
+                    G_CALLBACK (gtk_widget_hide_on_delete), NULL);
+
+  w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_enable_switch"));
+  gtk_widget_set_sensitive (w, metrics_can_change);
+  gtk_switch_set_active (GTK_SWITCH (w), metrics_active);
+
+  g_signal_connect (w, "notify::active",
+                    G_CALLBACK (metrics_switch_active_changed_cb), self);
+}
+
+static void
 retain_history_combo_changed_cb (GtkWidget      *widget,
                                  CcPrivacyPanel *self)
 {
@@ -1274,6 +1385,7 @@ cc_privacy_panel_finalize (GObject *object)
   g_clear_pointer (&priv->location_apps_perms, g_variant_unref);
   g_clear_pointer (&priv->location_apps_data, g_variant_unref);
   g_clear_pointer (&priv->location_app_switches, g_hash_table_unref);
+  g_clear_object (&priv->metrics_proxy);
 
   G_OBJECT_CLASS (cc_privacy_panel_parent_class)->finalize (object);
 }
@@ -1334,6 +1446,7 @@ cc_privacy_panel_init (CcPrivacyPanel *self)
     }
 
   self->priv->recent_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "recent_dialog"));
+  self->priv->metrics_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_dialog"));
   self->priv->screen_lock_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "screen_lock_dialog"));
   self->priv->location_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "location_dialog"));
   self->priv->trash_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "trash_dialog"));
@@ -1369,6 +1482,7 @@ cc_privacy_panel_init (CcPrivacyPanel *self)
 
   add_screen_lock (self);
   add_location (self);
+  add_metrics (self);
   add_usage_history (self);
   add_trash_temp (self);
   add_software (self);
