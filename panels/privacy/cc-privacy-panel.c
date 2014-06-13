@@ -40,6 +40,7 @@ struct _CcPrivacyPanelPrivate
 {
   GtkBuilder *builder;
   GtkWidget  *recent_dialog;
+  GtkWidget  *metrics_dialog;
   GtkWidget  *screen_lock_dialog;
   GtkWidget  *trash_dialog;
   GtkWidget  *list_box;
@@ -299,6 +300,48 @@ add_screen_lock (CcPrivacyPanel *self)
   g_settings_bind (self->priv->notification_settings, "show-in-lock-screen",
                    w, "active",
                    G_SETTINGS_BIND_DEFAULT);
+}
+
+static GtkWidget *
+get_on_off_label_for_metrics (void)
+{
+  GtkWidget *widget;
+
+  /* TODO: get state from the metrics daemon */
+  widget = gtk_label_new (_("On"));
+  return widget;
+}
+
+static void
+metrics_switch_active_changed_cb (GtkSwitch *widget,
+                                  GParamSpec *pspec,
+                                  CcPrivacyPanel *self)
+{
+  /* TODO: set state to metrics daemon */
+}
+
+static void
+add_metrics (CcPrivacyPanel *self)
+{
+  GtkWidget *w;
+  GtkWidget *dialog;
+
+  add_row (self, _("Metrics"), "metrics_dialog", get_on_off_label_for_metrics ());
+
+  w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_done"));
+  dialog = self->priv->metrics_dialog;
+  g_signal_connect_swapped (w, "clicked",
+                            G_CALLBACK (gtk_widget_hide), dialog);
+  g_signal_connect (dialog, "delete-event",
+                    G_CALLBACK (gtk_widget_hide_on_delete), NULL);
+
+  w = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_enable_switch"));
+
+  /* TODO: get state from the metrics daemon */
+  gtk_switch_set_active (GTK_SWITCH (w), TRUE);
+
+  g_signal_connect (w, "notify::active",
+                    G_CALLBACK (metrics_switch_active_changed_cb), self);
 }
 
 static void
@@ -681,6 +724,7 @@ cc_privacy_panel_init (CcPrivacyPanel *self)
     }
 
   self->priv->recent_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "recent_dialog"));
+  self->priv->metrics_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "metrics_dialog"));
   self->priv->screen_lock_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "screen_lock_dialog"));
   self->priv->trash_dialog = GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "trash_dialog"));
 
@@ -704,6 +748,7 @@ cc_privacy_panel_init (CcPrivacyPanel *self)
   self->priv->notification_settings = g_settings_new ("org.gnome.desktop.notifications");
 
   add_screen_lock (self);
+  add_metrics (self);
   add_usage_history (self);
   add_trash_temp (self);
 
