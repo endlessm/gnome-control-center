@@ -365,10 +365,7 @@ paint_output (CcDisplayPanel    *panel,
 
   if (gnome_rr_output_info_get_primary (output)
       || gnome_rr_config_get_clone (configuration))
-    {
-      y += TOP_BAR_HEIGHT;
-      height -= TOP_BAR_HEIGHT;
-    }
+    height -= TOP_BAR_HEIGHT;
 
   if (pixbuf)
     gdk_cairo_set_source_pixbuf (cr, pixbuf, x + 1, y + 1);
