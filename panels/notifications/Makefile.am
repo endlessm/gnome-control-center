@@ -4,6 +4,7 @@ INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(NOTIFICATIONS_PANEL_CFLAGS)			\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-I$(top_srcdir)/panels/common/			\
 	$(NULL)
 
 noinst_LTLIBRARIES = libnotifications.la

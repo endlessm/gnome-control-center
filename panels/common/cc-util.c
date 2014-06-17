@@ -19,8 +19,9 @@
 
 #include "config.h"
 
+#include <gio/gio.h>
+#include <gio/gdesktopappinfo.h>
 #include <string.h>
-
 
 #include "cc-util.h"
 
@@ -102,4 +103,20 @@ cc_util_normalize_casefold_and_unaccent (const char *str)
   tmp[j] = '\0';
 
   return tmp;
+}
+
+GAppInfo *
+cc_util_app_info_from_app_id_with_vendor (const char *app_id)
+{
+  char *vendor_app_id;
+  GDesktopAppInfo *app_info;
+
+  vendor_app_id = g_strconcat ("eos-app-", app_id, NULL);
+  app_info = g_desktop_app_info_new (vendor_app_id);
+  g_free (vendor_app_id);
+
+  if (app_info == NULL)
+    app_info = g_desktop_app_info_new (app_id);
+
+  return G_APP_INFO (app_info);
 }

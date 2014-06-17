@@ -22,6 +22,7 @@
 #include "cc-search-panel.h"
 #include "cc-search-locations-dialog.h"
 #include "cc-search-resources.h"
+#include "cc-util.h"
 
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
@@ -397,6 +398,7 @@ search_panel_add_one_app_info (CcSearchPanel *self,
 {
   GtkWidget *row, *box, *w;
   GIcon *icon;
+  gint width, height;
 
   /* gnome-control-center is special cased in the shell,
      and is not configurable */
@@ -424,6 +426,8 @@ search_panel_add_one_app_info (CcSearchPanel *self,
     g_object_ref (icon);
 
   w = gtk_image_new_from_gicon (icon, GTK_ICON_SIZE_DIALOG);
+  if (gtk_icon_size_lookup (GTK_ICON_SIZE_DIALOG, &width, &height))
+    gtk_image_set_pixel_size (GTK_IMAGE (w), MAX (width, height));
   gtk_container_add (GTK_CONTAINER (box), w);
   g_object_unref (icon);
 
@@ -477,7 +481,7 @@ search_panel_add_one_provider (CcSearchPanel *self,
       goto out;
     }
 
-  app_info = G_APP_INFO (g_desktop_app_info_new (desktop_id));
+  app_info = cc_util_app_info_from_app_id_with_vendor (desktop_id);
   g_free (desktop_id);
 
   if (app_info == NULL)
