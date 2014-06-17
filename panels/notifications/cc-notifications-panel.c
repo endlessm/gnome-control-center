@@ -30,6 +30,7 @@
 #include "cc-notifications-panel.h"
 #include "cc-notifications-resources.h"
 #include "cc-edit-dialog.h"
+#include "cc-util.h"
 
 #define MASTER_SCHEMA "org.gnome.desktop.notifications"
 #define APP_SCHEMA MASTER_SCHEMA ".application"
@@ -273,7 +274,7 @@ maybe_add_app_id (CcNotificationsPanel *panel,
   settings = g_settings_new_with_path (APP_SCHEMA, path);
 
   full_app_id = g_settings_get_string (settings, "application-id");
-  app_info = G_APP_INFO (g_desktop_app_info_new (full_app_id));
+  app_info = cc_util_app_info_from_app_id_with_vendor (full_app_id);
 
   if (app_info == NULL) {
     /* The application cannot be found, probably it was uninstalled */
@@ -354,11 +355,18 @@ process_app_info (CcNotificationsPanel *panel,
                   GAppInfo             *app_info)
 {
   Application *app;
+  GAppInfo *vendor_app_info;
   char *app_id;
+  const char *bare_id;
   char *canonical_app_id;
   char *path;
   GSettings *settings;
   GSource *source;
+
+  bare_id = g_app_info_get_id (app_info);
+  vendor_app_info = cc_util_app_info_from_app_id_with_vendor (bare_id);
+  if (vendor_app_info == NULL)
+    vendor_app_info = g_object_ref (app_info);
 
   app_id = app_info_get_id (app_info);
   canonical_app_id = g_strcanon (app_id,
@@ -374,7 +382,7 @@ process_app_info (CcNotificationsPanel *panel,
   app = g_slice_new (Application);
   app->canonical_app_id = canonical_app_id;
   app->settings = settings;
-  app->app_info = g_object_ref (app_info);
+  app->app_info = vendor_app_info;
   app->panel = g_object_ref (panel);
 
   source = g_idle_source_new ();
