@@ -23,6 +23,7 @@
 
 #include <glib.h>
 
-char *cc_util_normalize_casefold_and_unaccent (const char *str);
+char     * cc_util_normalize_casefold_and_unaccent  (const char *str);
+GAppInfo * cc_util_app_info_from_app_id_with_vendor (const char *app_id);
 
 #endif
