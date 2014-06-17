@@ -22,6 +22,7 @@
 #include "cc-search-panel.h"
 #include "cc-search-locations-dialog.h"
 #include "cc-search-resources.h"
+#include "cc-util.h"
 
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
@@ -477,7 +478,7 @@ search_panel_add_one_provider (CcSearchPanel *self,
       goto out;
     }
 
-  app_info = G_APP_INFO (g_desktop_app_info_new (desktop_id));
+  app_info = cc_util_app_info_from_app_id_with_vendor (desktop_id);
   g_free (desktop_id);
 
   if (app_info == NULL)
