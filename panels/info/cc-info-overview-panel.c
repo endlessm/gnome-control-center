@@ -108,6 +108,76 @@ typedef struct
 
 G_DEFINE_TYPE_WITH_PRIVATE (CcInfoOverviewPanel, cc_info_overview_panel, CC_TYPE_PANEL)
 
+static gboolean
+on_attribution_label_link (GtkLabel            *label,
+                           gchar               *uri,
+                           CcInfoOverviewPanel *self)
+{
+  g_autoptr(GError) error = NULL;
+  const gchar * const * languages;
+  const gchar * const * data_dirs;
+  const gchar *language;
+  g_autofree gchar *pdf_uri = NULL;
+  g_autofree gchar *path = NULL;
+  gint i, j;
+  gboolean found = FALSE;
+
+  if (g_strcmp0 (uri, "attribution-link") != 0)
+    return FALSE;
+
+  data_dirs = g_get_system_data_dirs ();
+  languages = g_get_language_names ();
+  path = NULL;
+
+  for (i = 0; languages[i] != NULL; i++)
+    {
+      language = languages[i];
+
+      for (j = 0; data_dirs[j] != NULL; j++)
+        {
+          path = g_build_filename (data_dirs[j],
+                                   "eos-license-service",
+                                   "terms",
+                                   language,
+                                   "Endless-Terms-of-Use.pdf",
+                                   NULL);
+
+          if (g_file_test (path, G_FILE_TEST_EXISTS))
+            {
+              found = TRUE;
+              break;
+            }
+
+          g_free (path);
+          path = NULL;
+        }
+
+      if (found)
+        break;
+    }
+
+  if (!found)
+    {
+      g_warning ("Unable to find terms and conditions PDF on the system");
+      return TRUE;
+    }
+
+  pdf_uri = g_filename_to_uri (path, NULL, &error);
+
+  if (error)
+    {
+      g_warning ("Unable to construct terms and conditions PDF uri: %s", error->message);
+      return TRUE;
+    }
+
+  gtk_show_uri (NULL, pdf_uri, gtk_get_current_event_time (), &error);
+
+  if (error)
+    g_warning ("Unable to display terms and conditions PDF: %s", error->message);
+
+  return TRUE;
+}
+
 static void
 version_start_element_handler (GMarkupParseContext      *ctx,
                                const char               *element_name,
@@ -928,6 +998,7 @@ cc_info_overview_panel_class_init (CcInfoOverviewPanelClass *klass)
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, label8);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, grid1);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, label18);
+  gtk_widget_class_bind_template_callback (widget_class, on_attribution_label_link);
 }
 
 static void
