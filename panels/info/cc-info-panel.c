@@ -1622,6 +1622,19 @@ info_panel_setup_overview (CcInfoPanel  *self)
   refresh_update_button (self);
 }
 
+static gboolean
+on_attribution_label_link (GtkLabel *label,
+                           gchar *uri,
+                           CcInfoPanel *self)
+{
+  if (g_strcmp0 (uri, "attribution-link") != 0)
+    return FALSE;
+
+  /* TODO: open browser */
+
+  return TRUE;
+}
+
 static void
 refresh_update_button (CcInfoPanel  *self)
 {
@@ -1947,6 +1960,9 @@ cc_info_panel_init (CcInfoPanel *self)
 
   widget = WID ("updates_button");
   g_signal_connect (widget, "clicked", G_CALLBACK (on_updates_button_clicked), self);
+
+  widget = WID ("attribution_label");
+  g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
 
   info_panel_setup_updates (self);
   info_panel_setup_selector (self);
