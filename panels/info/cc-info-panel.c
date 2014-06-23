@@ -1630,8 +1630,7 @@ on_attribution_label_link (GtkLabel *label,
   if (g_strcmp0 (uri, "attribution-link") != 0)
     return FALSE;
 
-  /* TODO: open browser */
-
+  gtk_show_uri (NULL, "http://localhost:3010", gtk_get_current_event_time (), NULL);
   return TRUE;
 }
 
