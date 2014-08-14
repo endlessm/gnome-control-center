@@ -1603,18 +1603,6 @@ make_aspect_string (gint width,
   return aspect;
 }
 
-static char *
-make_resolution_string (gint width,
-                        gint height)
-{
-  const char *aspect = make_aspect_string (width, height);
-
-  if (aspect != NULL)
-    return g_strdup_printf ("%d × %d (%s)", width, height, aspect);
-  else
-    return g_strdup_printf ("%d × %d", width, height);
-}
-
 static GtkWidget *
 list_box_item (const gchar *title,
                const gchar *subtitle)
@@ -1680,7 +1668,7 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
 
   for (i = 0; modes[i] != NULL; i++)
     {
-      gchar *res;
+      const gchar *res;
       gboolean present;
       gint output_width, output_height, mode_width, mode_height;
 
