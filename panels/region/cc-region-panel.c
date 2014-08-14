@@ -176,15 +176,6 @@ cc_region_panel_finalize (GObject *object)
 	G_OBJECT_CLASS (cc_region_panel_parent_class)->finalize (object);
 }
 
-static void
-cc_region_panel_constructed (GObject *object)
-{
-        CcRegionPanel *self = CC_REGION_PANEL (object);
-	CcRegionPanelPrivate *priv = self->priv;
-
-        G_OBJECT_CLASS (cc_region_panel_parent_class)->constructed (object);
-}
-
 static const char *
 cc_region_panel_get_help_uri (CcPanel *panel)
 {
@@ -201,7 +192,6 @@ cc_region_panel_class_init (CcRegionPanelClass * klass)
 
 	panel_class->get_help_uri = cc_region_panel_get_help_uri;
 
-        object_class->constructed = cc_region_panel_constructed;
 	object_class->finalize = cc_region_panel_finalize;
 }
 
