@@ -2422,6 +2422,30 @@ cc_display_panel_box_row_activated (GtkListBox     *listbox,
 }
 
 static void
+setup_initial_selection (CcDisplayPanel *panel)
+{
+  CcDisplayPanelPrivate *priv = panel->priv;
+  GnomeRROutputInfo **outputs;
+  gint i, num_connected_outputs = 0;
+
+  outputs = gnome_rr_config_get_outputs (priv->current_configuration);
+
+  /* count the number of active */
+  for (i = 0; outputs[i]; i++)
+    num_connected_outputs++;
+
+  /* If we only have one output, pop up the dialog right away */
+  if (num_connected_outputs == 1)
+    {
+      GtkListBoxRow *output_row;
+
+      output_row = gtk_list_box_get_row_at_index (GTK_LIST_BOX (priv->displays_listbox), 0);
+      cc_display_panel_box_row_activated (GTK_LIST_BOX (priv->displays_listbox),
+					  GTK_WIDGET (output_row), panel);
+    }
+}
+
+static void
 mapped_cb (CcDisplayPanel *panel)
 {
   CcDisplayPanelPrivate *priv = panel->priv;
@@ -2433,6 +2457,8 @@ mapped_cb (CcDisplayPanel *panel)
   if (toplevel)
     priv->focus_id = g_signal_connect (toplevel, "notify::has-toplevel-focus",
                                        G_CALLBACK (dialog_toplevel_focus_changed), panel);
+
+  setup_initial_selection (panel);
 }
 
 static void
