@@ -383,7 +383,7 @@ on_screen_changed (CcDisplayPanel *panel)
   GnomeRRConfig *current;
   CcDisplayPanelPrivate *priv = panel->priv;
   GnomeRROutputInfo **outputs;
-  gint i, num_active_outputs = 0, num_connected_outputs = 0, number = 0;
+  gint i, num_connected_outputs = 0, number = 0;
   gboolean clone, combined = FALSE;
   GtkSizeGroup *sizegroup;
   GList *sorted_outputs = NULL, *l;
@@ -421,9 +421,6 @@ on_screen_changed (CcDisplayPanel *panel)
       else
         sorted_outputs = g_list_append (sorted_outputs, outputs[i]);
 
-
-      if (gnome_rr_output_info_is_active (outputs[i]))
-        num_active_outputs++;
       num_connected_outputs++;
     }
 
@@ -1606,18 +1603,6 @@ make_aspect_string (gint width,
   return aspect;
 }
 
-static char *
-make_resolution_string (gint width,
-                        gint height)
-{
-  const char *aspect = make_aspect_string (width, height);
-
-  if (aspect != NULL)
-    return g_strdup_printf ("%d × %d (%s)", width, height, aspect);
-  else
-    return g_strdup_printf ("%d × %d", width, height);
-}
-
 static GtkWidget *
 list_box_item (const gchar *title,
                const gchar *subtitle)
@@ -1683,7 +1668,7 @@ setup_resolution_combo_box (CcDisplayPanel  *panel,
 
   for (i = 0; modes[i] != NULL; i++)
     {
-      gchar *res;
+      const gchar *res;
       gboolean present;
       gint output_width, output_height, mode_width, mode_height;
 
@@ -1922,22 +1907,162 @@ checkbutton_toggled (GtkCheckButton *check_button,
   update_apply_button (panel);
 }
 
+typedef struct {
+  CcDisplayPanel *panel;
+
+  gboolean was_clone;
+  gboolean was_primary;
+  gint old_width;
+  gint old_height;
+  GtkWidget *listbox;
+} OutputSetupDialogData;
+
+static void
+output_setup_dialog_response_cb (GtkDialog *dialog,
+				 gint response,
+				 OutputSetupDialogData *data)
+{
+  CcDisplayPanel *panel = data->panel;
+  CcDisplayPanelPrivate *priv = panel->priv;
+
+  if (response == GTK_RESPONSE_ACCEPT)
+    {
+      GnomeRROutputInfo **outputs;
+      GtkListBoxRow *row;
+      GnomeRRRotation rotation;
+      gboolean active = TRUE;
+      gboolean primary = data->was_primary;
+      gboolean clone = data->was_clone;
+      gint i;
+
+      if (g_hash_table_size (output_ids) > 1)
+        {
+          gint new_width, new_height;
+
+          outputs = gnome_rr_config_get_outputs (priv->current_configuration);
+
+          gnome_rr_output_info_get_geometry (priv->current_output, NULL, NULL,
+                                             &new_width, &new_height);
+
+          row = gtk_list_box_get_selected_row (GTK_LIST_BOX (data->listbox));
+
+          switch (gtk_list_box_row_get_index (row))
+            {
+            case DISPLAY_MODE_PRIMARY:
+              primary = TRUE;
+              clone = FALSE;
+              break;
+
+#if 0
+            case DISPLAY_MODE_PRESENTATION:
+              gnome_rr_config_set_clone (priv->current_configuration, FALSE);
+              primary = FALSE;
+              clone = FALSE;
+              break;
+#endif
+
+            case DISPLAY_MODE_MIRROR:
+              clone = TRUE;
+              break;
+
+            case DISPLAY_MODE_SECONDARY:
+              primary = FALSE;
+              clone = FALSE;
+              break;
+
+            case DISPLAY_MODE_OFF:
+              clone = FALSE;
+              active = FALSE;
+              break;
+            }
+
+          gnome_rr_output_info_set_active (priv->current_output, active);
+          gnome_rr_output_info_set_primary (priv->current_output, primary);
+          gnome_rr_config_set_clone (priv->current_configuration, clone);
+
+          for (i = 0; outputs[i]; i++)
+            {
+              if (!gnome_rr_output_info_is_active (outputs[i]))
+                continue;
+
+              if (clone)
+                {
+                  /* set all active outputs to the same size and position when
+                   * cloning */
+                  gnome_rr_output_info_set_geometry (outputs[i], 0, 0,
+                                                     new_width, new_height);
+                }
+              else if (outputs[i] != priv->current_output)
+                {
+                  /* ensure no other outputs are primary if this output is now
+                   * primary, or find another output to set as primary if this
+                   * output is no longer primary */
+
+                  gnome_rr_output_info_set_primary (outputs[i], !primary);
+                  if (!data->was_primary)
+                    break;
+                }
+            }
+
+          /* if the display was previously in clone mode, ensure the outputs
+           * are arranged correctly */
+          if ((data->was_clone && !clone))
+            lay_out_outputs_horizontally (panel);
+
+          if (!clone)
+            realign_outputs_after_resolution_change (panel,
+                                                     priv->current_output,
+                                                     data->old_width, data->old_height);
+        }
+
+      /* check rotation */
+      rotation = gnome_rr_output_info_get_rotation (priv->current_output);
+
+      /* other options such as reflection are not supported */
+      rotation &= (GNOME_RR_ROTATION_0 | GNOME_RR_ROTATION_90
+                   | GNOME_RR_ROTATION_180 | GNOME_RR_ROTATION_270);
+      if (rotation == 0)
+        rotation = GNOME_RR_ROTATION_0;
+      gnome_rr_output_info_set_rotation (priv->current_output, rotation);
+
+      apply_current_configuration (panel);
+    }
+  else if (response == GTK_RESPONSE_NONE)
+    {
+      /* panel is being destroyed */
+      return;
+    }
+  else
+    {
+      /* changes cancelled, so re-read the current configuration */
+      on_screen_changed (panel);
+    }
+
+  priv->rotate_left_button = NULL;
+  priv->rotate_right_button = NULL;
+  priv->res_combo = NULL;
+  priv->apply_button = NULL;
+  gtk_widget_destroy (priv->dialog);
+  priv->dialog = NULL;
+}
+
 static void
 show_setup_dialog (CcDisplayPanel *panel)
 {
   CcDisplayPanelPrivate *priv = panel->priv;
   GtkWidget *listbox = NULL, *content_area, *item, *box, *frame, *preview;
   GtkWidget *label, *rotate_box;
-  gint i, width_mm, height_mm, old_width, old_height;
+  gint i, width_mm, height_mm;
   GnomeRROutput *output;
   gchar *str;
-  gboolean clone, was_clone, primary, was_primary, active;
+  gboolean clone, primary, active;
   GtkListStore *res_model;
   GtkCellRenderer *renderer;
   GnomeRRRotation rotation;
   gboolean show_rotation;
-  gint response, num_active_outputs = 0;
+  gint num_active_outputs = 0;
   GnomeRROutputInfo **outputs;
+  OutputSetupDialogData *data;
 
   outputs = gnome_rr_config_get_outputs (priv->current_configuration);
 
@@ -2004,57 +2129,57 @@ show_setup_dialog (CcDisplayPanel *panel)
                                    GTK_STYLE_CLASS_LINKED);
       gtk_grid_attach (GTK_GRID (priv->config_grid), rotate_box, 0, 1, 2, 1);
       gtk_widget_set_halign (rotate_box, GTK_ALIGN_CENTER);
-    }
 
-  if (gnome_rr_output_info_supports_rotation (priv->current_output,
-                                              GNOME_RR_ROTATION_90))
-    {
-      priv->rotate_left_button = gtk_toggle_button_new ();
-      if (rotation == GNOME_RR_ROTATION_90)
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->rotate_left_button), TRUE);
-      g_signal_connect (priv->rotate_left_button, "clicked",
-                        G_CALLBACK (rotate_left_clicked), panel);
-      g_signal_connect_swapped (priv->rotate_left_button, "clicked",
-                                G_CALLBACK (gtk_widget_queue_draw), preview);
-      gtk_container_add (GTK_CONTAINER (priv->rotate_left_button),
-                         gtk_image_new_from_icon_name ("object-rotate-left-symbolic",
-                                                       GTK_ICON_SIZE_BUTTON));
-      gtk_widget_set_halign (priv->rotate_left_button, GTK_ALIGN_END);
-      gtk_container_add (GTK_CONTAINER (rotate_box), priv->rotate_left_button);
-    }
+      if (gnome_rr_output_info_supports_rotation (priv->current_output,
+                                                  GNOME_RR_ROTATION_90))
+        {
+          priv->rotate_left_button = gtk_toggle_button_new ();
+          if (rotation == GNOME_RR_ROTATION_90)
+            gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->rotate_left_button), TRUE);
+          g_signal_connect (priv->rotate_left_button, "clicked",
+                            G_CALLBACK (rotate_left_clicked), panel);
+          g_signal_connect_swapped (priv->rotate_left_button, "clicked",
+                                    G_CALLBACK (gtk_widget_queue_draw), preview);
+          gtk_container_add (GTK_CONTAINER (priv->rotate_left_button),
+                             gtk_image_new_from_icon_name ("object-rotate-left-symbolic",
+                                                           GTK_ICON_SIZE_BUTTON));
+          gtk_widget_set_halign (priv->rotate_left_button, GTK_ALIGN_END);
+          gtk_container_add (GTK_CONTAINER (rotate_box), priv->rotate_left_button);
+        }
 
-  if (gnome_rr_output_info_supports_rotation (priv->current_output,
-                                              GNOME_RR_ROTATION_180))
-    {
-      priv->upside_down_button = gtk_toggle_button_new ();
-      if (rotation == GNOME_RR_ROTATION_180)
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->upside_down_button), TRUE);
-      g_signal_connect (priv->upside_down_button, "clicked",
-                        G_CALLBACK (upside_down_clicked), panel);
-      g_signal_connect_swapped (priv->upside_down_button, "clicked",
-                                G_CALLBACK (gtk_widget_queue_draw), preview);
-      gtk_container_add (GTK_CONTAINER (priv->upside_down_button),
-                         gtk_image_new_from_icon_name ("object-flip-vertical-symbolic",
-                                                       GTK_ICON_SIZE_BUTTON));
-      gtk_widget_set_halign (priv->upside_down_button, GTK_ALIGN_FILL);
-      gtk_container_add (GTK_CONTAINER (rotate_box), priv->upside_down_button);
-    }
+      if (gnome_rr_output_info_supports_rotation (priv->current_output,
+                                                  GNOME_RR_ROTATION_180))
+        {
+          priv->upside_down_button = gtk_toggle_button_new ();
+          if (rotation == GNOME_RR_ROTATION_180)
+            gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->upside_down_button), TRUE);
+          g_signal_connect (priv->upside_down_button, "clicked",
+                            G_CALLBACK (upside_down_clicked), panel);
+          g_signal_connect_swapped (priv->upside_down_button, "clicked",
+                                    G_CALLBACK (gtk_widget_queue_draw), preview);
+          gtk_container_add (GTK_CONTAINER (priv->upside_down_button),
+                             gtk_image_new_from_icon_name ("object-flip-vertical-symbolic",
+                                                           GTK_ICON_SIZE_BUTTON));
+          gtk_widget_set_halign (priv->upside_down_button, GTK_ALIGN_FILL);
+          gtk_container_add (GTK_CONTAINER (rotate_box), priv->upside_down_button);
+        }
 
-  if (gnome_rr_output_info_supports_rotation (priv->current_output,
-                                              GNOME_RR_ROTATION_270))
-    {
-      priv->rotate_right_button = gtk_toggle_button_new ();
-      if (rotation == GNOME_RR_ROTATION_270)
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->rotate_right_button), TRUE);
-      g_signal_connect (priv->rotate_right_button, "clicked",
-                        G_CALLBACK (rotate_right_clicked), panel);
-      g_signal_connect_swapped (priv->rotate_right_button, "clicked",
-                                G_CALLBACK (gtk_widget_queue_draw), preview);
-      gtk_container_add (GTK_CONTAINER (priv->rotate_right_button),
-                         gtk_image_new_from_icon_name ("object-rotate-right-symbolic",
-                                                       GTK_ICON_SIZE_BUTTON));
-      gtk_widget_set_halign (priv->rotate_right_button, GTK_ALIGN_START);
-      gtk_container_add (GTK_CONTAINER (rotate_box), priv->rotate_right_button);
+      if (gnome_rr_output_info_supports_rotation (priv->current_output,
+                                                  GNOME_RR_ROTATION_270))
+        {
+          priv->rotate_right_button = gtk_toggle_button_new ();
+          if (rotation == GNOME_RR_ROTATION_270)
+            gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->rotate_right_button), TRUE);
+          g_signal_connect (priv->rotate_right_button, "clicked",
+                            G_CALLBACK (rotate_right_clicked), panel);
+          g_signal_connect_swapped (priv->rotate_right_button, "clicked",
+                                    G_CALLBACK (gtk_widget_queue_draw), preview);
+          gtk_container_add (GTK_CONTAINER (priv->rotate_right_button),
+                             gtk_image_new_from_icon_name ("object-rotate-right-symbolic",
+                                                           GTK_ICON_SIZE_BUTTON));
+          gtk_widget_set_halign (priv->rotate_right_button, GTK_ALIGN_START);
+          gtk_container_add (GTK_CONTAINER (rotate_box), priv->rotate_right_button);
+        }
     }
 
   /* size */
@@ -2106,8 +2231,8 @@ show_setup_dialog (CcDisplayPanel *panel)
   gtk_widget_set_halign (label, GTK_ALIGN_END);
   gtk_widget_set_halign (priv->res_combo, GTK_ALIGN_START);
 
-  was_clone = clone = gnome_rr_config_get_clone (priv->current_configuration);
-  was_primary = primary = gnome_rr_output_info_get_primary (priv->current_output);
+  clone = gnome_rr_config_get_clone (priv->current_configuration);
+  primary = gnome_rr_output_info_get_primary (priv->current_output);
   active = gnome_rr_output_info_is_active (priv->current_output);
 
   if (num_active_outputs > 1 || !active)
@@ -2192,126 +2317,17 @@ show_setup_dialog (CcDisplayPanel *panel)
   gtk_container_add (GTK_CONTAINER (box), priv->config_grid);
   gtk_widget_show_all (box);
 
+  data = g_slice_new0 (OutputSetupDialogData);
+  data->panel = panel;
+  data->listbox = listbox;
+  data->was_clone = clone;
+  data->was_primary = primary;
   gnome_rr_output_info_get_geometry (priv->current_output, NULL, NULL,
-                                     &old_width, &old_height);
+                                     &data->old_width, &data->old_height);
 
-  response = gtk_dialog_run (GTK_DIALOG (priv->dialog));
-  if (response == GTK_RESPONSE_ACCEPT)
-    {
-      GnomeRROutputInfo **outputs;
-      GtkListBoxRow *row;
-      GnomeRRRotation rotation;
-      gboolean active = TRUE;
-
-      if (g_hash_table_size (output_ids) > 1)
-        {
-          gint new_width, new_height;
-
-          outputs = gnome_rr_config_get_outputs (priv->current_configuration);
-
-          gnome_rr_output_info_get_geometry (priv->current_output, NULL, NULL,
-                                             &new_width, &new_height);
-
-          row = gtk_list_box_get_selected_row (GTK_LIST_BOX (listbox));
-
-          switch (gtk_list_box_row_get_index (row))
-            {
-            case DISPLAY_MODE_PRIMARY:
-              primary = TRUE;
-              clone = FALSE;
-              break;
-
-#if 0
-            case DISPLAY_MODE_PRESENTATION:
-              gnome_rr_config_set_clone (priv->current_configuration, FALSE);
-              primary = FALSE;
-              clone = FALSE;
-              break;
-#endif
-
-            case DISPLAY_MODE_MIRROR:
-              clone = TRUE;
-              break;
-
-            case DISPLAY_MODE_SECONDARY:
-              primary = FALSE;
-              clone = FALSE;
-              break;
-
-            case DISPLAY_MODE_OFF:
-              clone = FALSE;
-              active = FALSE;
-              break;
-            }
-
-          gnome_rr_output_info_set_active (priv->current_output, active);
-          gnome_rr_output_info_set_primary (priv->current_output, primary);
-          gnome_rr_config_set_clone (priv->current_configuration, clone);
-
-          for (i = 0; outputs[i]; i++)
-            {
-              if (!gnome_rr_output_info_is_active (outputs[i]))
-                continue;
-
-              if (clone)
-                {
-                  /* set all active outputs to the same size and position when
-                   * cloning */
-                  gnome_rr_output_info_set_geometry (outputs[i], 0, 0,
-                                                     new_width, new_height);
-                }
-              else if (outputs[i] != priv->current_output)
-                {
-                  /* ensure no other outputs are primary if this output is now
-                   * primary, or find another output to set as primary if this
-                   * output is no longer primary */
-
-                  gnome_rr_output_info_set_primary (outputs[i], !primary);
-                  if (!was_primary)
-                    break;
-                }
-            }
-
-          /* if the display was previously in clone mode, ensure the outputs
-           * are arranged correctly */
-          if ((was_clone && !clone))
-            lay_out_outputs_horizontally (panel);
-
-          if (!clone)
-            realign_outputs_after_resolution_change (panel,
-                                                     priv->current_output,
-                                                     old_width, old_height);
-        }
-
-      /* check rotation */
-      rotation = gnome_rr_output_info_get_rotation (priv->current_output);
-
-      /* other options such as reflection are not supported */
-      rotation &= (GNOME_RR_ROTATION_0 | GNOME_RR_ROTATION_90
-                   | GNOME_RR_ROTATION_180 | GNOME_RR_ROTATION_270);
-      if (rotation == 0)
-        rotation = GNOME_RR_ROTATION_0;
-      gnome_rr_output_info_set_rotation (priv->current_output, rotation);
-
-      apply_current_configuration (panel);
-    }
-  else if (response == GTK_RESPONSE_NONE)
-    {
-      /* panel is being destroyed */
-      return;
-    }
-  else
-    {
-      /* changes cancelled, so re-read the current configuration */
-      on_screen_changed (panel);
-    }
-
-  priv->rotate_left_button = NULL;
-  priv->rotate_right_button = NULL;
-  priv->res_combo = NULL;
-  priv->apply_button = NULL;
-  gtk_widget_destroy (priv->dialog);
-  priv->dialog = NULL;
+  gtk_widget_show_all (priv->dialog);
+  g_signal_connect (priv->dialog, "response",
+		    G_CALLBACK (output_setup_dialog_response_cb), data);
 }
 
 static void
@@ -2335,6 +2351,30 @@ cc_display_panel_box_row_activated (GtkListBox     *listbox,
 }
 
 static void
+setup_initial_selection (CcDisplayPanel *panel)
+{
+  CcDisplayPanelPrivate *priv = panel->priv;
+  GnomeRROutputInfo **outputs;
+  gint i, num_connected_outputs = 0;
+
+  outputs = gnome_rr_config_get_outputs (priv->current_configuration);
+
+  /* count the number of active */
+  for (i = 0; outputs[i]; i++)
+    num_connected_outputs++;
+
+  /* If we only have one output, pop up the dialog right away */
+  if (num_connected_outputs == 1)
+    {
+      GtkListBoxRow *output_row;
+
+      output_row = gtk_list_box_get_row_at_index (GTK_LIST_BOX (priv->displays_listbox), 0);
+      cc_display_panel_box_row_activated (GTK_LIST_BOX (priv->displays_listbox),
+					  GTK_WIDGET (output_row), panel);
+    }
+}
+
+static void
 mapped_cb (CcDisplayPanel *panel)
 {
   CcDisplayPanelPrivate *priv = panel->priv;
@@ -2346,6 +2386,8 @@ mapped_cb (CcDisplayPanel *panel)
   if (toplevel)
     priv->focus_id = g_signal_connect (toplevel, "notify::has-toplevel-focus",
                                        G_CALLBACK (dialog_toplevel_focus_changed), panel);
+
+  setup_initial_selection (panel);
 }
 
 static void
