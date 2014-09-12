@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 3.9.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-20 01:05+0200\n"
+"POT-Creation-Date: 2014-09-12 16:09-0700\n"
 "PO-Revision-Date: 2013-10-20 01:05+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -29,35 +29,31 @@ msgid "Changes throughout the day"
 msgstr "Endres i løpet av dagen"
 
 #: ../panels/background/background.ui.h:4
-msgid "Lock Screen"
-msgstr "Lås skjerm"
-
-#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Tile"
 msgstr "Flislegg"
 
-#: ../panels/background/background.ui.h:6
+#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Zoom"
 msgstr "Zoom"
 
-#: ../panels/background/background.ui.h:7
+#: ../panels/background/background.ui.h:6
 msgctxt "background, style"
 msgid "Center"
 msgstr "Midtstill"
 
-#: ../panels/background/background.ui.h:8
+#: ../panels/background/background.ui.h:7
 msgctxt "background, style"
 msgid "Scale"
 msgstr "Skaler"
 
-#: ../panels/background/background.ui.h:9
+#: ../panels/background/background.ui.h:8
 msgctxt "background, style"
 msgid "Fill"
 msgstr "Fyll"
 
-#: ../panels/background/background.ui.h:10
+#: ../panels/background/background.ui.h:9
 msgctxt "background, style"
 msgid "Span"
 msgstr "Strekk"
@@ -68,6 +64,7 @@ msgid "Select Background"
 msgstr "Velg bakgrunn"
 
 #: ../panels/background/cc-background-chooser-dialog.c:312
+#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Bakgrunner"
 
@@ -95,21 +92,21 @@ msgstr "Fant ingen bilder"
 msgid "You can add images to your %s folder and they will show up here"
 msgstr "Du kan legge til bilder i din %s-mappe så vil de vises her"
 
-#: ../panels/background/cc-background-chooser-dialog.c:428
+#: ../panels/background/cc-background-chooser-dialog.c:429
 #: ../panels/bluetooth/cc-bluetooth-panel.c:640
-#: ../panels/color/cc-color-panel.c:221 ../panels/color/cc-color-panel.c:958
-#: ../panels/display/cc-display-panel.c:1509
-#: ../panels/display/cc-display-panel.c:1924
-#: ../panels/network/connection-editor/vpn-helpers.c:245
-#: ../panels/network/connection-editor/vpn-helpers.c:374
+#: ../panels/color/cc-color-panel.c:222 ../panels/color/cc-color-panel.c:959
+#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/network/connection-editor/vpn-helpers.c:250
+#: ../panels/network/connection-editor/vpn-helpers.c:379
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:470
+#: ../panels/privacy/cc-privacy-panel.c:616
 #: ../panels/search/cc-search-locations-dialog.c:682
-#: ../panels/sharing/cc-sharing-panel.c:435
+#: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
 #: ../panels/user-accounts/um-photo-dialog.c:96
 #: ../panels/user-accounts/um-photo-dialog.c:221
@@ -117,7 +114,7 @@ msgstr "Du kan legge til bilder i din %s-mappe så vil de vises her"
 msgid "_Cancel"
 msgstr "A_vbryt"
 
-#: ../panels/background/cc-background-chooser-dialog.c:429
+#: ../panels/background/cc-background-chooser-dialog.c:430
 #: ../panels/printers/ppd-selection-dialog.ui.h:3
 #: ../panels/user-accounts/um-photo-dialog.c:98
 msgid "Select"
@@ -138,7 +135,7 @@ msgstr "%d x %d"
 msgid "No Desktop Background"
 msgstr "Ingen skrivebordsbakgrunn"
 
-#: ../panels/background/cc-background-panel.c:493
+#: ../panels/background/cc-background-panel.c:504
 msgid "Current background"
 msgstr "Nåværende bakgrunn"
 
@@ -398,48 +395,48 @@ msgstr "Ikke kalibrert"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
-#: ../panels/color/cc-color-panel.c:137
+#: ../panels/color/cc-color-panel.c:138
 msgid "Default: "
 msgstr "Forvalg: "
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile his a standard space like AdobeRGB
-#: ../panels/color/cc-color-panel.c:145
+#: ../panels/color/cc-color-panel.c:146
 msgid "Colorspace: "
 msgstr "Fargeområde: "
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile is a test profile
-#: ../panels/color/cc-color-panel.c:152
+#: ../panels/color/cc-color-panel.c:153
 msgid "Test profile: "
 msgstr "Testprofil:"
 
 #. TRANSLATORS: an ICC profile is a file containing colorspace data
-#: ../panels/color/cc-color-panel.c:219
+#: ../panels/color/cc-color-panel.c:220
 msgid "Select ICC Profile File"
 msgstr "Velg fil for ICC-profil"
 
-#: ../panels/color/cc-color-panel.c:222
+#: ../panels/color/cc-color-panel.c:223
 msgid "_Import"
 msgstr "_Importer"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:233
+#: ../panels/color/cc-color-panel.c:234
 msgid "Supported ICC profiles"
 msgstr "Støttede ICC-profiler"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:240
+#: ../panels/color/cc-color-panel.c:241
 #: ../panels/network/wireless-security/eap-method-fast.c:410
 msgid "All files"
 msgstr "Alle filer"
 
-#: ../panels/color/cc-color-panel.c:579
+#: ../panels/color/cc-color-panel.c:580
 msgid "Screen"
 msgstr "Skjerm"
 
 #. TRANSLATORS: this is when the upload of the profile failed
-#: ../panels/color/cc-color-panel.c:903
+#: ../panels/color/cc-color-panel.c:904
 #, c-format
 msgid "Failed to upload file: %s"
 msgstr "Klarte ikke å laste opp fil: %s"
@@ -447,39 +444,39 @@ msgstr "Klarte ikke å laste opp fil: %s"
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
 #. * only shown when the user uses a LiveCD to calibrate
-#: ../panels/color/cc-color-panel.c:917
+#: ../panels/color/cc-color-panel.c:918
 msgid "The profile has been uploaded to:"
 msgstr "Profilen ble lastet opp til:"
 
-#: ../panels/color/cc-color-panel.c:919
+#: ../panels/color/cc-color-panel.c:920
 msgid "Write down this URL."
 msgstr "Skriv ned denne URLen."
 
-#: ../panels/color/cc-color-panel.c:920
+#: ../panels/color/cc-color-panel.c:921
 msgid "Restart this computer and boot your normal operating system."
 msgstr "Start denne datamaskinen på nytt og start ditt normale operativsystem."
 
-#: ../panels/color/cc-color-panel.c:921
+#: ../panels/color/cc-color-panel.c:922
 msgid "Type the URL into your browser to download and install the profile."
 msgstr "Skriv URLen inn i nettleseren for å laste ned og installere profilen."
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
-#: ../panels/color/cc-color-panel.c:955
+#: ../panels/color/cc-color-panel.c:956
 msgid "Save Profile"
 msgstr "Lagre profil"
 
-#: ../panels/color/cc-color-panel.c:959
-#: ../panels/network/connection-editor/vpn-helpers.c:375
+#: ../panels/color/cc-color-panel.c:960
+#: ../panels/network/connection-editor/vpn-helpers.c:380
 msgid "_Save"
 msgstr "_Lagre"
 
 #. TRANSLATORS: this is when the button is sensitive
-#: ../panels/color/cc-color-panel.c:1315
+#: ../panels/color/cc-color-panel.c:1316
 msgid "Create a color profile for the selected device"
 msgstr "Lag en fargeprofil for valgt enhet"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1330 ../panels/color/cc-color-panel.c:1354
+#: ../panels/color/cc-color-panel.c:1331 ../panels/color/cc-color-panel.c:1355
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
@@ -488,12 +485,12 @@ msgstr ""
 "tilkoblet."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1364
+#: ../panels/color/cc-color-panel.c:1365
 msgid "The measuring instrument does not support printer profiling."
 msgstr "Måleinstrumentet støtter ikke profilering av skrivere."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1375
+#: ../panels/color/cc-color-panel.c:1376
 msgid "The device type is not currently supported."
 msgstr "Enhetstypen er ikke støttet."
 
@@ -580,7 +577,7 @@ msgstr "Kalibrering av skjerm"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -603,7 +600,7 @@ msgstr "Ferdig"
 #. 15000 = 15 sec
 #. 750 = 0.75 sec
 #. Text printed on screen
-#: ../panels/color/color.ui.h:1 ../panels/wacom/calibrator/calibrator-gui.c:81
+#: ../panels/color/color.ui.h:1 ../panels/wacom/calibrator/calibrator-gui.c:83
 msgid "Screen Calibration"
 msgstr "Kalibrering av skjerm"
 
@@ -934,7 +931,7 @@ msgstr "Mer …"
 msgid "No languages found"
 msgstr "Ingen språk funnet"
 
-#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:1
+#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:3
 msgid "Language"
 msgstr "Språk"
 
@@ -1104,25 +1101,27 @@ msgstr "Endre innstillinger for systemets klokke og dato"
 msgid "To change time or date settings, you need to authenticate."
 msgstr "Du må autentisere deg for å endre innstillinger for tid og dato."
 
-#: ../panels/display/cc-display-panel.c:485
+#: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
 msgstr "Lokk lukket"
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:488
+#: ../panels/display/cc-display-panel.c:484
 msgid "Mirrored"
 msgstr "Speilet"
 
-#: ../panels/display/cc-display-panel.c:490
-#: ../panels/display/cc-display-panel.c:2057
+#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:2255
 msgid "Primary"
 msgstr "Primær"
 
-#: ../panels/display/cc-display-panel.c:492
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1738 ../panels/power/cc-power-panel.c:1749
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/display/cc-display-panel.c:488
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1743 ../panels/power/cc-power-panel.c:1754
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1130,82 +1129,91 @@ msgstr "Primær"
 msgid "Off"
 msgstr "Av"
 
-#: ../panels/display/cc-display-panel.c:495
+#: ../panels/display/cc-display-panel.c:491
 msgid "Secondary"
 msgstr "Sekundær"
 
-#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:1501
 msgid "Arrange Combined Displays"
 msgstr "Organiser sammenslåtte skjermer"
 
-#: ../panels/display/cc-display-panel.c:1511
-#: ../panels/display/cc-display-panel.c:1927
+#: ../panels/display/cc-display-panel.c:1507
+#: ../panels/display/cc-display-panel.c:2089
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Apply"
 msgstr "_Bruk"
 
-#: ../panels/display/cc-display-panel.c:1532
+#: ../panels/display/cc-display-panel.c:1528
 msgid "Drag displays to rearrange them"
 msgstr "Dra skjermer for å omorganisere dem"
 
-#. size
-#: ../panels/display/cc-display-panel.c:1991
+#: ../panels/display/cc-display-panel.c:2191
 msgid "Size"
 msgstr "Størrelse"
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:2006
+#: ../panels/display/cc-display-panel.c:2204
 msgid "Aspect Ratio"
 msgstr "Høyde-/breddeforhold"
 
-#: ../panels/display/cc-display-panel.c:2027
+#: ../panels/display/cc-display-panel.c:2225
 #: ../panels/printers/pp-options-dialog.c:86
 msgid "Resolution"
 msgstr "Oppløsning"
 
-#: ../panels/display/cc-display-panel.c:2058
+#: ../panels/display/cc-display-panel.c:2256
 msgid "Show the top bar and Activities Overview on this display"
 msgstr "Vis topplinjen og aktivitetsoversikten på denne skjermen"
 
-#: ../panels/display/cc-display-panel.c:2064
+#: ../panels/display/cc-display-panel.c:2262
 msgid "Secondary Display"
 msgstr "Sekundær skjerm"
 
-#: ../panels/display/cc-display-panel.c:2065
+#: ../panels/display/cc-display-panel.c:2263
 msgid "Join this display with another to create an extra workspace"
 msgstr ""
 "Slå sammen denne skjermen med en annen for å lage et ekstra arbeidsområde"
 
-#: ../panels/display/cc-display-panel.c:2072
+#: ../panels/display/cc-display-panel.c:2270
 msgid "Presentation"
 msgstr "Presentasjon"
 
-#: ../panels/display/cc-display-panel.c:2073
+#: ../panels/display/cc-display-panel.c:2271
 msgid "Show slideshows and media only"
 msgstr "Vis kun lysbildeserier og medier"
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2078
+#: ../panels/display/cc-display-panel.c:2276
 msgid "Mirror"
 msgstr "Speil"
 
-#: ../panels/display/cc-display-panel.c:2079
+#: ../panels/display/cc-display-panel.c:2277
 msgid "Show your existing view on both displays"
 msgstr "Vis eksisterende visning på begge skjermer"
 
-#: ../panels/display/cc-display-panel.c:2085
+#: ../panels/display/cc-display-panel.c:2283
 msgid "Turn Off"
 msgstr "Slå av"
 
-#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/display/cc-display-panel.c:2284
 msgid "Don't use this display"
 msgstr "Ikke bruk denne skjermen"
 
+#. overscan
 #: ../panels/display/cc-display-panel.c:2301
+msgid "Shrink screen to fit TV"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2307
+#, fuzzy
+msgid "Scaling"
+msgstr "Skaler"
+
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Could not get screen information"
 msgstr "Fant ikke informasjon om skjermen"
 
-#: ../panels/display/cc-display-panel.c:2332
+#: ../panels/display/cc-display-panel.c:2463
 msgid "_Arrange Combined Displays"
 msgstr "Org_aniser sammenslåtte skjermer"
 
@@ -1223,53 +1231,49 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "Panel;Prosjektor;xrandr;Skjerm;Oppløsning;Oppdater;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:451 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:454 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: ../panels/info/cc-info-panel.c:534
-#, c-format
-msgid "%s %d-bit"
-msgstr "%s %d-bit"
-
-#: ../panels/info/cc-info-panel.c:536
+#. translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit"
+#: ../panels/info/cc-info-panel.c:582
 #, c-format
 msgid "%d-bit"
 msgstr "%d-bit"
 
-#: ../panels/info/cc-info-panel.c:1216
+#: ../panels/info/cc-info-panel.c:1260
 msgid "Ask what to do"
 msgstr "Spør hva som skal gjøres"
 
-#: ../panels/info/cc-info-panel.c:1220
+#: ../panels/info/cc-info-panel.c:1264
 msgid "Do nothing"
 msgstr "Ikke gjør noe"
 
-#: ../panels/info/cc-info-panel.c:1224
+#: ../panels/info/cc-info-panel.c:1268
 msgid "Open folder"
 msgstr "Åpne mappe"
 
-#: ../panels/info/cc-info-panel.c:1315
+#: ../panels/info/cc-info-panel.c:1359
 msgid "Other Media"
 msgstr "Annet medie"
 
-#: ../panels/info/cc-info-panel.c:1346
+#: ../panels/info/cc-info-panel.c:1390
 msgid "Select an application for audio CDs"
 msgstr "Velg et program for lyd-CDer"
 
-#: ../panels/info/cc-info-panel.c:1347
+#: ../panels/info/cc-info-panel.c:1391
 msgid "Select an application for video DVDs"
 msgstr "Velg et program for video-DVDer"
 
-#: ../panels/info/cc-info-panel.c:1348
+#: ../panels/info/cc-info-panel.c:1392
 msgid "Select an application to run when a music player is connected"
 msgstr "Velg et program som skal kjøres når en musikkavspiller kobles til"
 
-#: ../panels/info/cc-info-panel.c:1349
+#: ../panels/info/cc-info-panel.c:1393
 msgid "Select an application to run when a camera is connected"
 msgstr "Velg et program som skal kjøres når et kamera kobles til"
 
-#: ../panels/info/cc-info-panel.c:1350
+#: ../panels/info/cc-info-panel.c:1394
 msgid "Select an application for software CDs"
 msgstr "Velg et program for programvare-CDer"
 
@@ -1278,89 +1282,89 @@ msgstr "Velg et program for programvare-CDer"
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
 #.
-#: ../panels/info/cc-info-panel.c:1362
+#: ../panels/info/cc-info-panel.c:1406
 msgid "audio DVD"
 msgstr "Lyd-DVD"
 
-#: ../panels/info/cc-info-panel.c:1363
+#: ../panels/info/cc-info-panel.c:1407
 msgid "blank Blu-ray disc"
 msgstr "Tom Blu-ray-plate"
 
-#: ../panels/info/cc-info-panel.c:1364
+#: ../panels/info/cc-info-panel.c:1408
 msgid "blank CD disc"
 msgstr "Tom CD-plate"
 
-#: ../panels/info/cc-info-panel.c:1365
+#: ../panels/info/cc-info-panel.c:1409
 msgid "blank DVD disc"
 msgstr "Tom DVD-plate"
 
-#: ../panels/info/cc-info-panel.c:1366
+#: ../panels/info/cc-info-panel.c:1410
 msgid "blank HD DVD disc"
 msgstr "tom HD-DVD plate"
 
-#: ../panels/info/cc-info-panel.c:1367
+#: ../panels/info/cc-info-panel.c:1411
 msgid "Blu-ray video disc"
 msgstr "Blu-ray videoplate"
 
-#: ../panels/info/cc-info-panel.c:1368
+#: ../panels/info/cc-info-panel.c:1412
 msgid "e-book reader"
 msgstr "E-bokleser"
 
-#: ../panels/info/cc-info-panel.c:1369
+#: ../panels/info/cc-info-panel.c:1413
 msgid "HD DVD video disc"
 msgstr "HD-DVD-videoplate"
 
-#: ../panels/info/cc-info-panel.c:1370
+#: ../panels/info/cc-info-panel.c:1414
 msgid "Picture CD"
 msgstr "Bilde-CD"
 
-#: ../panels/info/cc-info-panel.c:1371
+#: ../panels/info/cc-info-panel.c:1415
 msgid "Super Video CD"
 msgstr "Super Video CD"
 
-#: ../panels/info/cc-info-panel.c:1372
+#: ../panels/info/cc-info-panel.c:1416
 msgid "Video CD"
 msgstr "Video-CD"
 
-#: ../panels/info/cc-info-panel.c:1373
+#: ../panels/info/cc-info-panel.c:1417
 msgid "Windows software"
 msgstr "Windows programvare"
 
-#: ../panels/info/cc-info-panel.c:1374
+#: ../panels/info/cc-info-panel.c:1418
 msgid "Software"
 msgstr "Programvare"
 
-#: ../panels/info/cc-info-panel.c:1497
+#: ../panels/info/cc-info-panel.c:1541
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "Seksjon"
 
-#: ../panels/info/cc-info-panel.c:1506 ../panels/info/info.ui.h:13
+#: ../panels/info/cc-info-panel.c:1550 ../panels/info/info.ui.h:13
 msgid "Overview"
 msgstr "Oversikt"
 
-#: ../panels/info/cc-info-panel.c:1512 ../panels/info/info.ui.h:20
+#: ../panels/info/cc-info-panel.c:1556 ../panels/info/info.ui.h:20
 msgid "Default Applications"
 msgstr "Forvalgte programmer"
 
-#: ../panels/info/cc-info-panel.c:1517 ../panels/info/info.ui.h:28
+#: ../panels/info/cc-info-panel.c:1561 ../panels/info/info.ui.h:28
 msgid "Removable Media"
 msgstr "Avtagbare medier"
 
-#: ../panels/info/cc-info-panel.c:1542
+#: ../panels/info/cc-info-panel.c:1586
 #, c-format
 msgid "Version %s"
 msgstr "Versjon %s"
 
-#: ../panels/info/cc-info-panel.c:1592
+#: ../panels/info/cc-info-panel.c:1653
 msgid "Install Updates"
 msgstr "Installer oppdateringer"
 
-#: ../panels/info/cc-info-panel.c:1596
+#: ../panels/info/cc-info-panel.c:1657
 msgid "System Up-To-Date"
 msgstr "Systemet er oppdatert"
 
-#: ../panels/info/cc-info-panel.c:1600
+#: ../panels/info/cc-info-panel.c:1661
 msgid "Checking for Updates"
 msgstr "Ser etter oppdateringer"
 
@@ -1400,17 +1404,22 @@ msgid "Device name"
 msgstr "Navn på enhet"
 
 #: ../panels/info/info.ui.h:5
+#, fuzzy
+msgid "Version"
+msgstr "Versjon 0"
+
+#: ../panels/info/info.ui.h:6
 msgid "Memory"
 msgstr "Minne"
 
-#: ../panels/info/info.ui.h:6
+#: ../panels/info/info.ui.h:7
 msgid "Processor"
 msgstr "Prosessor"
 
-#. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-msgid "Base system"
-msgstr "Operativsystem"
+#, fuzzy
+msgid "OS Type"
+msgstr "Type:"
 
 #: ../panels/info/info.ui.h:9
 msgid "Disk"
@@ -1765,7 +1774,6 @@ msgid "Cursor blink speed"
 msgstr "Hastighet for blinkende markør"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/region.ui.h:5
 msgid "Input Sources"
 msgstr "Inndatakilder"
 
@@ -1974,11 +1982,11 @@ msgstr "Enkeltklikk, sekundærknapp"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:358
+#: ../panels/network/cc-network-panel.c:361
 msgid "Air_plane Mode"
 msgstr "_Flymodus"
 
-#: ../panels/network/cc-network-panel.c:930
+#: ../panels/network/cc-network-panel.c:933
 msgid "Network proxy"
 msgstr "Nettverksproxy"
 
@@ -1986,14 +1994,14 @@ msgstr "Nettverksproxy"
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: ../panels/network/cc-network-panel.c:1109 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1244
+#: ../panels/network/cc-network-panel.c:1247
 msgid "The system network services are not compatible with this version."
 msgstr ""
 "Nettverkstjenesten for dette systemet er ikke kompatibelt med denne "
@@ -2191,7 +2199,7 @@ msgstr "Manuell"
 msgid "Link-Local Only"
 msgstr "Kun link-local"
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:942
+#: ../panels/network/connection-editor/ce-page-ip4.c:934
 #: ../panels/network/network-wifi.ui.h:46
 msgid "IPv4"
 msgstr "IPv4"
@@ -2213,7 +2221,7 @@ msgstr "Automatisk"
 msgid "Automatic, DHCP only"
 msgstr "Automatisk. Kun DHCP"
 
-#: ../panels/network/connection-editor/ce-page-ip6.c:902
+#: ../panels/network/connection-editor/ce-page-ip6.c:894
 #: ../panels/network/network-wifi.ui.h:47
 msgid "IPv6"
 msgstr "IPv6"
@@ -2438,7 +2446,7 @@ msgstr "Ny profil"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1471
+#: ../panels/user-accounts/um-account-dialog.c:1470
 msgid "_Add"
 msgstr "_Legg til"
 
@@ -2451,23 +2459,23 @@ msgstr "VPN"
 msgid "Bond"
 msgstr "Bundet"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:597
+#: ../panels/network/connection-editor/net-connection-editor.c:600
 msgid "Bridge"
 msgstr "Bro"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:598
+#: ../panels/network/connection-editor/net-connection-editor.c:601
 msgid "VLAN"
 msgstr "VLAN"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:749
+#: ../panels/network/connection-editor/net-connection-editor.c:752
 msgid "Could not load VPN plugins"
 msgstr "Klarte ikke å laste VPN-tillegg"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:818
+#: ../panels/network/connection-editor/net-connection-editor.c:821
 msgid "Import from file…"
 msgstr "Importer fil …"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:889
+#: ../panels/network/connection-editor/net-connection-editor.c:892
 msgid "Add Network Connection"
 msgstr "Legg til nettverkstilkobling"
 
@@ -2503,11 +2511,11 @@ msgstr ""
 msgid "S_ecurity"
 msgstr "Sikk_erhet"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:205
+#: ../panels/network/connection-editor/vpn-helpers.c:210
 msgid "Cannot import VPN connection"
 msgstr "Kan ikke importere VPN-forbindelse"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:207
+#: ../panels/network/connection-editor/vpn-helpers.c:212
 #, c-format
 msgid ""
 "The file '%s' could not be read or does not contain recognized VPN "
@@ -2520,36 +2528,36 @@ msgstr ""
 "\n"
 "Feil: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:242
+#: ../panels/network/connection-editor/vpn-helpers.c:247
 msgid "Select file to import"
 msgstr "Velg fil som skal importeres"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:246
+#: ../panels/network/connection-editor/vpn-helpers.c:251
 #: ../panels/printers/cc-printers-panel.c:1947
-#: ../panels/sharing/cc-sharing-panel.c:436
+#: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
 msgstr "_Åpne"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:294
+#: ../panels/network/connection-editor/vpn-helpers.c:299
 #, c-format
 msgid "A file named \"%s\" already exists."
 msgstr "En fil med navn «%s» eksisterer allerede."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:296
+#: ../panels/network/connection-editor/vpn-helpers.c:301
 msgid "_Replace"
 msgstr "E_rstatt"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:298
+#: ../panels/network/connection-editor/vpn-helpers.c:303
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr "Vil du erstatte %s med VPN-forbindelsen du lagrer?"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:334
+#: ../panels/network/connection-editor/vpn-helpers.c:339
 msgid "Cannot export VPN connection"
 msgstr "Kan ikke eksportere VPN-forbindelse"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:336
+#: ../panels/network/connection-editor/vpn-helpers.c:341
 #, c-format
 msgid ""
 "The VPN connection '%s' could not be exported to %s.\n"
@@ -2560,7 +2568,7 @@ msgstr ""
 "\n"
 "Feil: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:371
+#: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection..."
 msgstr "Eksporter VPN-forbindelse …"
 
@@ -2668,6 +2676,11 @@ msgstr "Profil %d"
 #: ../panels/network/net-device-mobile.c:232
 msgid "Add new connection"
 msgstr "Legg til ny tilkobling"
+
+#: ../panels/network/net-device-team.c:77
+#, fuzzy
+msgid "Team slaves"
+msgstr "Lag bro mellom slaver"
 
 #: ../panels/network/net-device-wifi.c:1110
 msgid ""
@@ -3560,10 +3573,11 @@ msgctxt "notifications"
 msgid "Show Details in Lock Screen"
 msgstr "Vis detaljer ved låsing av skjerm"
 
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1744 ../panels/power/cc-power-panel.c:1751
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1749 ../panels/power/cc-power-panel.c:1756
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -3762,171 +3776,171 @@ msgstr "Lader"
 msgid "Discharging"
 msgstr "Lader ut"
 
-#: ../panels/power/cc-power-panel.c:395
+#: ../panels/power/cc-power-panel.c:400
 msgctxt "Battery name"
 msgid "Main"
 msgstr "Hoved"
 
-#: ../panels/power/cc-power-panel.c:397
+#: ../panels/power/cc-power-panel.c:402
 msgctxt "Battery name"
 msgid "Extra"
 msgstr "Ekstra"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:469
+#: ../panels/power/cc-power-panel.c:474
 msgid "Wireless mouse"
 msgstr "Trådløs mus"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:472
+#: ../panels/power/cc-power-panel.c:477
 msgid "Wireless keyboard"
 msgstr "Trådløst tastatur"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:475
+#: ../panels/power/cc-power-panel.c:480
 msgid "Uninterruptible power supply"
 msgstr "Avbruddsfri strømforsyning"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:478
+#: ../panels/power/cc-power-panel.c:483
 msgid "Personal digital assistant"
 msgstr "Personlig digital assistent"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:481
+#: ../panels/power/cc-power-panel.c:486
 msgid "Cellphone"
 msgstr "Mobiltelefon"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:484
+#: ../panels/power/cc-power-panel.c:489
 msgid "Media player"
 msgstr "Musikkavspiller"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:487
+#: ../panels/power/cc-power-panel.c:492
 msgid "Tablet"
 msgstr "Tegnebrett"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:490
+#: ../panels/power/cc-power-panel.c:495
 msgid "Computer"
 msgstr "Datamaskin"
 
 #. TRANSLATORS: secondary battery, misc
-#: ../panels/power/cc-power-panel.c:493 ../panels/power/cc-power-panel.c:740
-#: ../panels/power/cc-power-panel.c:2075
+#: ../panels/power/cc-power-panel.c:498 ../panels/power/cc-power-panel.c:745
+#: ../panels/power/cc-power-panel.c:2080
 msgid "Battery"
 msgstr "Batteri"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:539
+#: ../panels/power/cc-power-panel.c:544
 msgctxt "Battery power"
 msgid "Charging"
 msgstr "Lader"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:546
+#: ../panels/power/cc-power-panel.c:551
 msgctxt "Battery power"
 msgid "Caution"
 msgstr "Advarsel"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:551
+#: ../panels/power/cc-power-panel.c:556
 msgctxt "Battery power"
 msgid "Low"
 msgstr "Lav"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:556
+#: ../panels/power/cc-power-panel.c:561
 msgctxt "Battery power"
 msgid "Good"
 msgstr "God"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:561
+#: ../panels/power/cc-power-panel.c:566
 msgctxt "Battery power"
 msgid "Fully charged"
 msgstr "Fullt ladet"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:565
+#: ../panels/power/cc-power-panel.c:570
 msgctxt "Battery power"
 msgid "Empty"
 msgstr "Tom"
 
-#: ../panels/power/cc-power-panel.c:738
+#: ../panels/power/cc-power-panel.c:743
 msgid "Batteries"
 msgstr "Batterier"
 
-#: ../panels/power/cc-power-panel.c:1144
+#: ../panels/power/cc-power-panel.c:1149
 msgid "When _idle"
 msgstr "Når led_ig"
 
-#: ../panels/power/cc-power-panel.c:1513
+#: ../panels/power/cc-power-panel.c:1518
 msgid "Power Saving"
 msgstr "Strømsparing"
 
-#: ../panels/power/cc-power-panel.c:1541
+#: ../panels/power/cc-power-panel.c:1546
 msgid "_Screen brightness"
 msgstr "Lysstyrke for _skjerm"
 
-#: ../panels/power/cc-power-panel.c:1547
+#: ../panels/power/cc-power-panel.c:1552
 msgid "_Keyboard brightness"
 msgstr "Lysstyrke for s_kjerm"
 
-#: ../panels/power/cc-power-panel.c:1557
+#: ../panels/power/cc-power-panel.c:1562
 msgid "_Dim screen when inactive"
 msgstr "_Demp skjermen når inaktiv"
 
-#: ../panels/power/cc-power-panel.c:1582
+#: ../panels/power/cc-power-panel.c:1587
 msgid "_Blank screen"
 msgstr "_Slå av skjerm"
 
-#: ../panels/power/cc-power-panel.c:1619
+#: ../panels/power/cc-power-panel.c:1624
 msgid "_Wi-Fi"
 msgstr "_Trådløs"
 
-#: ../panels/power/cc-power-panel.c:1624
+#: ../panels/power/cc-power-panel.c:1629
 msgid "Turns off wireless devices"
 msgstr "Slår av trådløse enheter"
 
-#: ../panels/power/cc-power-panel.c:1649
+#: ../panels/power/cc-power-panel.c:1654
 msgid "_Mobile broadband"
 msgstr "_Mobilt bredbånd"
 
-#: ../panels/power/cc-power-panel.c:1654
+#: ../panels/power/cc-power-panel.c:1659
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr "Slår av mobile bredbåndsenheter (3G, 4G, WiMax, etc.)"
 
-#: ../panels/power/cc-power-panel.c:1689
+#: ../panels/power/cc-power-panel.c:1694
 msgid "_Bluetooth"
 msgstr "_Blåtann"
 
-#: ../panels/power/cc-power-panel.c:1740
+#: ../panels/power/cc-power-panel.c:1745
 msgid "When on battery power"
 msgstr "På batteristrøm"
 
-#: ../panels/power/cc-power-panel.c:1742
+#: ../panels/power/cc-power-panel.c:1747
 msgid "When plugged in"
 msgstr "Når den er koblet til strøm"
 
-#: ../panels/power/cc-power-panel.c:1871
+#: ../panels/power/cc-power-panel.c:1876
 msgid "Suspend & Power Off"
 msgstr "Hvilemodus og slå av"
 
-#: ../panels/power/cc-power-panel.c:1904
+#: ../panels/power/cc-power-panel.c:1909
 msgid "_Automatic suspend"
 msgstr "_Automatisk hvilemodus"
 
-#: ../panels/power/cc-power-panel.c:1928
+#: ../panels/power/cc-power-panel.c:1933
 msgid "When battery power is _critical"
 msgstr "Når batterikapasiteten er _kritisk lav"
 
-#: ../panels/power/cc-power-panel.c:1985
+#: ../panels/power/cc-power-panel.c:1990
 msgid "Power Off"
 msgstr "Slå av"
 
-#: ../panels/power/cc-power-panel.c:2122
+#: ../panels/power/cc-power-panel.c:2127
 msgid "Devices"
 msgstr "Enheter"
 
@@ -4030,7 +4044,7 @@ msgid "Authenticate"
 msgstr "Autentiser"
 
 #: ../panels/printers/authentication-dialog.ui.h:5
-#: ../panels/sharing/sharing.ui.h:23
+#: ../panels/sharing/sharing.ui.h:21
 #: ../panels/user-accounts/data/account-dialog.ui.h:6
 msgid "Password"
 msgstr "Passord"
@@ -4614,39 +4628,45 @@ msgstr ""
 "Beklager! Systemets utskriftstjeneste\n"
 "ser ikke ut til å være tilgjengelig."
 
-#: ../panels/privacy/cc-privacy-panel.c:248 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "Lås skjerm"
 
-#: ../panels/privacy/cc-privacy-panel.c:361 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#, fuzzy
+msgid "Metrics"
+msgstr "Metrisk"
+
+#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "Bruk og historikk"
 
-#: ../panels/privacy/cc-privacy-panel.c:489
+#: ../panels/privacy/cc-privacy-panel.c:635
 msgid "Empty all items from Trash?"
 msgstr "Tøm alle oppføringer fra papirkurven?"
 
-#: ../panels/privacy/cc-privacy-panel.c:490
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Alle oppføringer i papirkurven vil bli slettet permanent."
 
-#: ../panels/privacy/cc-privacy-panel.c:491 ../panels/privacy/privacy.ui.h:32
+#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "_Tøm papirkurv"
 
-#: ../panels/privacy/cc-privacy-panel.c:514
+#: ../panels/privacy/cc-privacy-panel.c:660
 msgid "Delete all the temporary files?"
 msgstr "Slett alle midlertidige filer?"
 
-#: ../panels/privacy/cc-privacy-panel.c:515
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "All the temporary files will be permanently deleted."
 msgstr "Alle midlertidige filer vil bli slettet permanent."
 
-#: ../panels/privacy/cc-privacy-panel.c:516 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "_Fjern midlertidige filer"
 
-#: ../panels/privacy/cc-privacy-panel.c:538 ../panels/privacy/privacy.ui.h:31
+#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "Tøm papirkurv og midlertidige filer"
 
@@ -4740,22 +4760,32 @@ msgid "Retain _History"
 msgstr "Behold _historikk"
 
 #: ../panels/privacy/privacy.ui.h:27
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:28
+msgid "Enable Metrics Collection"
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:30
 msgid "The Screen Lock protects your privacy when you are away."
 msgstr "Låsing av skjermen hjelper deg med personvernet når du er borte."
 
-#: ../panels/privacy/privacy.ui.h:28
+#: ../panels/privacy/privacy.ui.h:31
 msgid "Automatic Screen _Lock"
 msgstr "Automatisk _låsing av skjerm"
 
-#: ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/privacy.ui.h:32
 msgid "Lock screen _after blank for"
 msgstr "_Lås skjermen etter at den er slått av i"
 
-#: ../panels/privacy/privacy.ui.h:30
+#: ../panels/privacy/privacy.ui.h:33
 msgid "Show _Notifications"
 msgstr "Vis varsli_nger"
 
-#: ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/privacy.ui.h:37
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
@@ -4763,15 +4793,15 @@ msgstr ""
 "Tøm papirkurv og midlertidige filer automatisk for å hjelpe med å holde "
 "datamaskinen fri for unødvendig sensitiv informasjon."
 
-#: ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/privacy.ui.h:38
 msgid "Automatically empty _Trash"
 msgstr "Tøm _papirkurven automatisk"
 
-#: ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/privacy.ui.h:39
 msgid "Automatically purge Temporary _Files"
 msgstr "Tøm _midlertidige filer automatisk"
 
-#: ../panels/privacy/privacy.ui.h:37
+#: ../panels/privacy/privacy.ui.h:40
 msgid "Purge _After"
 msgstr "Tøm _etter"
 
@@ -4794,40 +4824,37 @@ msgid "No input sources found"
 msgstr "Ingen inndatakilder funnet"
 
 #: ../panels/region/cc-input-chooser.c:1070
-msgctxt "Input Source"
+#, fuzzy
+msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Annen"
 
-#: ../panels/region/cc-region-panel.c:239
+#: ../panels/region/cc-region-panel.c:230
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr "Økten må startes på nytt for at endringene skal tre i kraft"
 
-#: ../panels/region/cc-region-panel.c:240
+#: ../panels/region/cc-region-panel.c:231
 msgid "Restart Now"
 msgstr "Start på nytt nå"
 
-#: ../panels/region/cc-region-panel.c:569
+#: ../panels/region/cc-region-panel.c:560
 msgctxt "Language"
 msgid "None"
 msgstr "Ingen"
 
-#: ../panels/region/cc-region-panel.c:853
+#: ../panels/region/cc-region-panel.c:844
 msgid "No input source selected"
 msgstr "Ingen inndatakilder valgt"
 
-#: ../panels/region/cc-region-panel.c:1084
+#: ../panels/region/cc-region-panel.c:1075
 msgid "Sorry"
 msgstr "Beklager"
 
-#: ../panels/region/cc-region-panel.c:1086
+#: ../panels/region/cc-region-panel.c:1077
 msgid "Input methods can't be used on the login screen"
 msgstr "Inndatametoder kan ikke brukes i påloggingsskjermen"
 
-#: ../panels/region/cc-region-panel.c:1716
-msgid "Login Screen"
-msgstr "Påloggingsskjerm"
-
-#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:3
+#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:5
 msgid "Formats"
 msgstr "Formater"
 
@@ -4870,12 +4897,14 @@ msgid "Language;Layout;Keyboard;Input;"
 msgstr "Språk;Utforming;Tastatur;Inndata;"
 
 #: ../panels/region/input-chooser.ui.h:1
-msgid "Add an Input Source"
-msgstr "Legg til en inndatakilde"
+#, fuzzy
+msgid "Add a Keyboard Layout"
+msgstr "Tastatursnarveier"
 
 #: ../panels/region/input-options.ui.h:1
-msgid "Input Source Options"
-msgstr "Alternativer for inndatakilde"
+#, fuzzy
+msgid "Keyboard Layout Options"
+msgstr "Innstillinger for tastatur"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -4917,19 +4946,32 @@ msgstr "Alternativ bytt til neste kilde"
 msgid "Left+Right Alt"
 msgstr "Venstre+høyre Alt"
 
+#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1298
+msgid "My Account"
+msgstr "Min konto"
+
 #: ../panels/region/region.ui.h:2
+msgid "Login Screen"
+msgstr "Påloggingsskjerm"
+
+#: ../panels/region/region.ui.h:4
 msgid "English (United Kingdom)"
 msgstr "Engelsk (Storbritannia)"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "United Kingdom"
 msgstr "Storbritannia"
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:7
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "Tastatursnarveier"
+
+#: ../panels/region/region.ui.h:8
 msgid "Options"
 msgstr "Alternativer"
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Login settings are used by all users when logging into the system"
 msgstr ""
 "Innstillinger for pålogging brukes av alle brukere når de logger på systemet"
@@ -4961,7 +5003,7 @@ msgstr "Velg lokasjon"
 msgid "_OK"
 msgstr "_OK"
 
-#: ../panels/search/cc-search-panel.c:177
+#: ../panels/search/cc-search-panel.c:178
 msgid "No applications found"
 msgstr "Ingen programmer funnet"
 
@@ -5006,11 +5048,11 @@ msgctxt "service is disabled"
 msgid "Off"
 msgstr "Av"
 
-#: ../panels/sharing/cc-sharing-panel.c:432
+#: ../panels/sharing/cc-sharing-panel.c:422
 msgid "Choose a Folder"
 msgstr "Velg en mappe"
 
-#: ../panels/sharing/cc-sharing-panel.c:739
+#: ../panels/sharing/cc-sharing-panel.c:736
 msgid "Copy"
 msgstr "Kopier"
 
@@ -5051,70 +5093,62 @@ msgstr ""
 "Deling med Bluetooth lar deg dele filer med andre enheter som har Bluetooth"
 
 #: ../panels/sharing/sharing.ui.h:3
-msgid "Share Public Folder"
-msgstr "Del offentlig mappe"
-
-#: ../panels/sharing/sharing.ui.h:4
 msgid "Only Receive From Trusted Devices"
 msgstr "Motta kun fra enheter du stoler på"
 
-#: ../panels/sharing/sharing.ui.h:5
+#: ../panels/sharing/sharing.ui.h:4
 msgid "Save Received Files to Downloads Folder"
 msgstr "Lagre mottatte filer til nedlastingsmappen"
 
-#: ../panels/sharing/sharing.ui.h:6
-msgid "Only share with Trusted Devices"
-msgstr "Del kun med enheter du stoler på"
-
-#: ../panels/sharing/sharing.ui.h:7
+#: ../panels/sharing/sharing.ui.h:5
 msgid "Computer Name"
 msgstr "Navn på datamaskin"
 
-#: ../panels/sharing/sharing.ui.h:8
+#: ../panels/sharing/sharing.ui.h:6
 msgid "Personal File Sharing"
 msgstr "Personlig fildeling"
 
-#: ../panels/sharing/sharing.ui.h:9
+#: ../panels/sharing/sharing.ui.h:7
 msgid "Screen Sharing"
 msgstr "Deling av skjerm"
 
-#: ../panels/sharing/sharing.ui.h:10
+#: ../panels/sharing/sharing.ui.h:8
 msgid "Media Sharing"
 msgstr "Deling av media"
 
-#: ../panels/sharing/sharing.ui.h:11
+#: ../panels/sharing/sharing.ui.h:9
 msgid "Remote Login"
 msgstr "Ekstern pålogging"
 
-#: ../panels/sharing/sharing.ui.h:12
+#: ../panels/sharing/sharing.ui.h:10
 msgid "Some services are disabled because of no network access."
 msgstr "Npen tjenester er slått av fordi det ikke finnes nettverk."
 
-#: ../panels/sharing/sharing.ui.h:13
+#: ../panels/sharing/sharing.ui.h:11
 msgid "Share Music, Photos and Videos with others on the current network."
 msgstr "Del musikk, bilder og videoer med andre på aktivt nettverk."
 
-#: ../panels/sharing/sharing.ui.h:14
+#: ../panels/sharing/sharing.ui.h:12
 msgid "Share Media On This Network"
 msgstr "Del media på dette nettverket"
 
-#: ../panels/sharing/sharing.ui.h:15
+#: ../panels/sharing/sharing.ui.h:13
 msgid "Shared Folders"
 msgstr "Delte mapper"
 
-#: ../panels/sharing/sharing.ui.h:16
+#: ../panels/sharing/sharing.ui.h:14
 msgid "column"
 msgstr "kolonne"
 
-#: ../panels/sharing/sharing.ui.h:17
+#: ../panels/sharing/sharing.ui.h:15
 msgid "Add Folder"
 msgstr "Legg til mappe"
 
-#: ../panels/sharing/sharing.ui.h:18
+#: ../panels/sharing/sharing.ui.h:16
 msgid "Remove Folder"
 msgstr "Fjern mappe"
 
-#: ../panels/sharing/sharing.ui.h:20
+#: ../panels/sharing/sharing.ui.h:18
 #, no-c-format
 msgid ""
 "Personal File Sharing allows you to share your Public folder with others on "
@@ -5123,15 +5157,15 @@ msgstr ""
 "Personlig fildeling lar deg dele din offentlige mappe med andre på aktivt "
 "nettverk ved å bruke: <a href=\"dav://%s\"dav://%s</a>"
 
-#: ../panels/sharing/sharing.ui.h:21
+#: ../panels/sharing/sharing.ui.h:19
 msgid "Share Public Folder On This Network"
 msgstr "Del offentlig mappe på dette nettverket"
 
-#: ../panels/sharing/sharing.ui.h:22
+#: ../panels/sharing/sharing.ui.h:20
 msgid "Require Password"
 msgstr "Krev passord"
 
-#: ../panels/sharing/sharing.ui.h:25
+#: ../panels/sharing/sharing.ui.h:23
 #, no-c-format
 msgid ""
 "Allow remote users to connect using the Secure Shell command:\n"
@@ -5140,7 +5174,7 @@ msgstr ""
 "Tillat at eksterne brukere kobler til med Secure Shell-kommandoen:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
 
-#: ../panels/sharing/sharing.ui.h:28
+#: ../panels/sharing/sharing.ui.h:26
 #, no-c-format
 msgid ""
 "Allow remote users to view or control your screen by connecting to: <a href="
@@ -5149,19 +5183,19 @@ msgstr ""
 "Tillat eksterne brukere å se eller kontrollere din skjerm ved å koble til: "
 "<a href=\"vnc://%s\">vnc://%s</a>"
 
-#: ../panels/sharing/sharing.ui.h:29
+#: ../panels/sharing/sharing.ui.h:27
 msgid "Remote View"
 msgstr "Ekstern visning"
 
-#: ../panels/sharing/sharing.ui.h:30
+#: ../panels/sharing/sharing.ui.h:28
 msgid "Remote Control"
 msgstr "Fjernstyring"
 
-#: ../panels/sharing/sharing.ui.h:31
+#: ../panels/sharing/sharing.ui.h:29
 msgid "Approve All Connections"
 msgstr "Godkjenn alle tilkoblinger"
 
-#: ../panels/sharing/sharing.ui.h:32
+#: ../panels/sharing/sharing.ui.h:30
 msgid "Show Password"
 msgstr "Vis passord"
 
@@ -6239,28 +6273,28 @@ msgstr "Skal være lik nettstedsadressen til din kontotilbyder."
 msgid "Failed to add account"
 msgstr "Klarte ikke å legge til en konto"
 
-#: ../panels/user-accounts/um-account-dialog.c:316
+#: ../panels/user-accounts/um-account-dialog.c:315
 msgid "This will be used to name your home folder and can't be changed."
 msgstr "Dette vil brukes til å navngi hjemmemappen din og kan ikke endres."
 
-#: ../panels/user-accounts/um-account-dialog.c:449
+#: ../panels/user-accounts/um-account-dialog.c:448
 msgid "Passwords do not match."
 msgstr "Passordene er ikke like."
 
-#: ../panels/user-accounts/um-account-dialog.c:719
-#: ../panels/user-accounts/um-account-dialog.c:765
+#: ../panels/user-accounts/um-account-dialog.c:718
+#: ../panels/user-accounts/um-account-dialog.c:764
 msgid "Failed to register account"
 msgstr "Klarte ikke å registrere konto"
 
-#: ../panels/user-accounts/um-account-dialog.c:903
+#: ../panels/user-accounts/um-account-dialog.c:902
 msgid "No supported way to authenticate with this domain"
 msgstr "Ingen støttet måte å autentisere med dette domenet"
 
-#: ../panels/user-accounts/um-account-dialog.c:962
+#: ../panels/user-accounts/um-account-dialog.c:961
 msgid "Failed to join domain"
 msgstr "Klarte ikke å bli med i domenet"
 
-#: ../panels/user-accounts/um-account-dialog.c:1023
+#: ../panels/user-accounts/um-account-dialog.c:1022
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
@@ -6268,7 +6302,7 @@ msgstr ""
 "Brukernavnet virket ikke.\n"
 "Vennligst prøv igjen."
 
-#: ../panels/user-accounts/um-account-dialog.c:1030
+#: ../panels/user-accounts/um-account-dialog.c:1029
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
@@ -6276,20 +6310,20 @@ msgstr ""
 "Passordet virket ikke.\n"
 "Vennligst prøv igjen."
 
-#: ../panels/user-accounts/um-account-dialog.c:1038
+#: ../panels/user-accounts/um-account-dialog.c:1037
 msgid "Failed to log into domain"
 msgstr "Klarte ikke å logge inn i domenet"
 
-#: ../panels/user-accounts/um-account-dialog.c:1096
+#: ../panels/user-accounts/um-account-dialog.c:1095
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr "Kan ikke finne domenet. Kanskje du stavet det feil?"
 
-#: ../panels/user-accounts/um-account-dialog.c:1446
+#: ../panels/user-accounts/um-account-dialog.c:1445
 msgid "Add User"
 msgstr "Legg til bruker"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1459
+#: ../panels/user-accounts/um-account-dialog.c:1458
 msgid "_Enterprise Login"
 msgstr "Innlogging for b_edrifter"
 
@@ -6436,19 +6470,19 @@ msgstr "Økten ble avsluttet"
 msgid "Session Started"
 msgstr "Økten startet"
 
-#: ../panels/user-accounts/um-password-dialog.c:146
+#: ../panels/user-accounts/um-password-dialog.c:145
 msgid "Please choose another password."
 msgstr "Vennligst velg et annet passord."
 
-#: ../panels/user-accounts/um-password-dialog.c:155
+#: ../panels/user-accounts/um-password-dialog.c:154
 msgid "Please type your current password again."
 msgstr "Vennligst skriv inn nåværende passord igjen."
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:160
 msgid "Password could not be changed"
 msgstr "Passordet kunne ikke endres"
 
-#: ../panels/user-accounts/um-password-dialog.c:287
+#: ../panels/user-accounts/um-password-dialog.c:285
 msgid "The passwords do not match."
 msgstr "Passordene er ikke like."
 
@@ -6578,12 +6612,12 @@ msgstr ""
 "Klikk på *-ikonet\n"
 "for å gjøre endringer"
 
-#: ../panels/user-accounts/um-user-panel.c:1080
+#: ../panels/user-accounts/um-user-panel.c:1082
 msgid "Create a user account"
 msgstr "Lag en ny brukerkonto"
 
-#: ../panels/user-accounts/um-user-panel.c:1091
-#: ../panels/user-accounts/um-user-panel.c:1380
+#: ../panels/user-accounts/um-user-panel.c:1093
+#: ../panels/user-accounts/um-user-panel.c:1383
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
@@ -6591,22 +6625,18 @@ msgstr ""
 "Klikk på *-ikonet\n"
 "for å lage en brukerkonto"
 
-#: ../panels/user-accounts/um-user-panel.c:1101
+#: ../panels/user-accounts/um-user-panel.c:1103
 msgid "Delete the selected user account"
 msgstr "Slett valgt brukerkonto"
 
-#: ../panels/user-accounts/um-user-panel.c:1113
-#: ../panels/user-accounts/um-user-panel.c:1385
+#: ../panels/user-accounts/um-user-panel.c:1115
+#: ../panels/user-accounts/um-user-panel.c:1388
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr ""
 "Klikk på *-ikonet\n"
 "for å slette valgt brukerkonto"
-
-#: ../panels/user-accounts/um-user-panel.c:1295
-msgid "My Account"
-msgstr "Min konto"
 
 #: ../panels/user-accounts/um-utils.c:551
 #, c-format
@@ -6657,7 +6687,7 @@ msgstr ""
 "nede en ny tastekombinasjon for å redigere en snarvei, eller trykk "
 "slettetast for å fjerne den."
 
-#: ../panels/wacom/calibrator/calibrator-gui.c:82
+#: ../panels/wacom/calibrator/calibrator-gui.c:84
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
@@ -6665,7 +6695,7 @@ msgstr ""
 "Vennligst tapp på målmarkørene når de vises på skjermen for å kalibrere "
 "tegnebrettet."
 
-#: ../panels/wacom/calibrator/calibrator-gui.c:86
+#: ../panels/wacom/calibrator/calibrator-gui.c:88
 msgid "Mis-click detected, restarting..."
 msgstr "Feil klikk oppdaget. Starter på nytt …"
 
@@ -6976,11 +7006,11 @@ msgstr "Panel som skal vises"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[PANEL] [ARGUMENT …]"
 
-#: ../shell/cc-application.c:142
+#: ../shell/cc-application.c:145
 msgid "- Settings"
 msgstr "- Innstillinger"
 
-#: ../shell/cc-application.c:160
+#: ../shell/cc-application.c:163
 #, c-format
 msgid ""
 "%s\n"
@@ -6990,15 +7020,15 @@ msgstr ""
 "Kjøre «%s --help» for å se en full liste med tilgjengelige "
 "kommandolinjeflagg.\n"
 
-#: ../shell/cc-application.c:190
+#: ../shell/cc-application.c:193
 msgid "Available panels:"
 msgstr "Tilgjengelige paneler:"
 
-#: ../shell/cc-application.c:325
+#: ../shell/cc-application.c:328
 msgid "Help"
 msgstr "Hjelp"
 
-#: ../shell/cc-application.c:326
+#: ../shell/cc-application.c:329
 msgid "Quit"
 msgstr "Avslutt"
 
@@ -7029,3 +7059,28 @@ msgstr "Innstillinger"
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Brukervalg;Innstillinger;"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Lås skjerm"
+
+#~ msgid "%s %d-bit"
+#~ msgstr "%s %d-bit"
+
+#~ msgid "Base system"
+#~ msgstr "Operativsystem"
+
+#~ msgctxt "Input Source"
+#~ msgid "Other"
+#~ msgstr "Annen"
+
+#~ msgid "Add an Input Source"
+#~ msgstr "Legg til en inndatakilde"
+
+#~ msgid "Input Source Options"
+#~ msgstr "Alternativer for inndatakilde"
+
+#~ msgid "Share Public Folder"
+#~ msgstr "Del offentlig mappe"
+
+#~ msgid "Only share with Trusted Devices"
+#~ msgstr "Del kun med enheter du stoler på"
