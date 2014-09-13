@@ -93,9 +93,6 @@ struct _CcInfoPanelPrivate
 {
   GtkBuilder    *builder;
   GtkWidget     *extra_options_dialog;
-  char          *gnome_version;
-  char          *gnome_distributor;
-  char          *gnome_date;
   UpdatesState   updates_state;
 
   GCancellable  *cancellable;
@@ -172,65 +169,6 @@ version_text_handler (GMarkupParseContext *ctx,
   if (data->current != NULL)
     *data->current = g_strstrip (g_strdup (text));
 }
-
-static gboolean
-load_gnome_version (char **version,
-                    char **distributor,
-                    char **date)
-{
-  GMarkupParser version_parser = {
-    version_start_element_handler,
-    version_end_element_handler,
-    version_text_handler,
-    NULL,
-    NULL,
-  };
-  GError              *error;
-  GMarkupParseContext *ctx;
-  char                *contents;
-  gsize                length;
-  VersionData         *data;
-  gboolean             ret;
-
-  ret = FALSE;
-
-  error = NULL;
-  if (!g_file_get_contents (DATADIR "/gnome/gnome-version.xml",
-                            &contents,
-                            &length,
-                            &error))
-    return FALSE;
-
-  data = g_new0 (VersionData, 1);
-  ctx = g_markup_parse_context_new (&version_parser, 0, data, NULL);
-
-  if (!g_markup_parse_context_parse (ctx, contents, length, &error))
-    {
-      g_warning ("Invalid version file: '%s'", error->message);
-    }
-  else
-    {
-      if (version != NULL)
-        *version = g_strdup_printf ("%s.%s.%s", data->major, data->minor, data->micro);
-      if (distributor != NULL)
-        *distributor = g_strdup (data->distributor);
-      if (date != NULL)
-        *date = g_strdup (data->date);
-
-      ret = TRUE;
-    }
-
-  g_markup_parse_context_free (ctx);
-  g_free (data->major);
-  g_free (data->minor);
-  g_free (data->micro);
-  g_free (data->distributor);
-  g_free (data->date);
-  g_free (data);
-  g_free (contents);
-
-  return ret;
-};
 
 typedef struct
 {
@@ -480,9 +418,6 @@ cc_info_panel_finalize (GObject *object)
       g_cancellable_cancel (priv->cancellable);
       g_clear_object (&priv->cancellable);
     }
-  g_free (priv->gnome_version);
-  g_free (priv->gnome_date);
-  g_free (priv->gnome_distributor);
 
   g_clear_object (&priv->media_settings);
 
@@ -1572,21 +1507,9 @@ static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
   GtkWidget  *widget;
-  gboolean    res;
   glibtop_mem mem;
   const glibtop_sysinfo *info;
   char       *text;
-
-  res = load_gnome_version (&self->priv->gnome_version,
-                            &self->priv->gnome_distributor,
-                            &self->priv->gnome_date);
-  if (res)
-    {
-      widget = WID ("version_label");
-      text = g_strdup_printf (_("Version %s"), self->priv->gnome_version);
-      gtk_label_set_text (GTK_LABEL (widget), text);
-      g_free (text);
-    }
 
   glibtop_get_mem (&mem);
   text = g_format_size_full (mem.total, G_FORMAT_SIZE_IEC_UNITS);

@@ -14,9 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: control-center\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"control-center&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-30 23:46-0400\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-12 16:09-0700\n"
 "PO-Revision-Date: 2013-09-30 23:46-0400\n"
 "Last-Translator: Ryan Lortie <desrt@desrt.ca>\n"
 "Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
@@ -37,45 +36,42 @@ msgid "Changes throughout the day"
 msgstr "Ŝanĝas dum la tago"
 
 #: ../panels/background/background.ui.h:4
-msgid "Lock Screen"
-msgstr "Ŝlosa ekranon"
-
-#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Tile"
 msgstr "Kaheligi"
 
-#: ../panels/background/background.ui.h:6
+#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Zoom"
 msgstr "Zomi"
 
-#: ../panels/background/background.ui.h:7
+#: ../panels/background/background.ui.h:6
 msgctxt "background, style"
 msgid "Center"
 msgstr "Centrigi"
 
-#: ../panels/background/background.ui.h:8
+#: ../panels/background/background.ui.h:7
 msgctxt "background, style"
 msgid "Scale"
 msgstr "Skali"
 
-#: ../panels/background/background.ui.h:9
+#: ../panels/background/background.ui.h:8
 msgctxt "background, style"
 msgid "Fill"
 msgstr "Plenigi"
 
-#: ../panels/background/background.ui.h:10
+#: ../panels/background/background.ui.h:9
 msgctxt "background, style"
 msgid "Span"
 msgstr "Etendi"
 
 #. translators: This is the title of the wallpaper chooser dialog.
-#: ../panels/background/cc-background-chooser-dialog.c:293
+#: ../panels/background/cc-background-chooser-dialog.c:292
 msgid "Select Background"
 msgstr "Elekti fonon"
 
 #: ../panels/background/cc-background-chooser-dialog.c:312
+#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Ekranfonoj"
 
@@ -92,32 +88,32 @@ msgid "Flickr"
 msgstr "Flickr"
 
 #. translators: No pictures were found
-#: ../panels/background/cc-background-chooser-dialog.c:393
+#: ../panels/background/cc-background-chooser-dialog.c:385
 msgid "No Pictures Found"
 msgstr "Neniuj bildoj trovita"
 
 #. translators: %s here is the name of the Pictures directory, the string should be translated in
 #. * the context "You can add images to your Pictures folder and they will show up here"
-#: ../panels/background/cc-background-chooser-dialog.c:408
+#: ../panels/background/cc-background-chooser-dialog.c:400
 #, c-format
 msgid "You can add images to your %s folder and they will show up here"
 msgstr "Vi povas aldoni bildojn al via %s dosierujo tiam ili montros ĉi tie"
 
-#: ../panels/background/cc-background-chooser-dialog.c:436
+#: ../panels/background/cc-background-chooser-dialog.c:429
 #: ../panels/bluetooth/cc-bluetooth-panel.c:640
-#: ../panels/color/cc-color-panel.c:221 ../panels/color/cc-color-panel.c:958
-#: ../panels/display/cc-display-panel.c:1494
-#: ../panels/display/cc-display-panel.c:1909
-#: ../panels/network/connection-editor/vpn-helpers.c:245
-#: ../panels/network/connection-editor/vpn-helpers.c:374
-#: ../panels/network/net-device-wifi.c:1195
-#: ../panels/network/net-device-wifi.c:1403
+#: ../panels/color/cc-color-panel.c:222 ../panels/color/cc-color-panel.c:959
+#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/network/connection-editor/vpn-helpers.c:250
+#: ../panels/network/connection-editor/vpn-helpers.c:379
+#: ../panels/network/net-device-wifi.c:1194
+#: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:470
+#: ../panels/privacy/cc-privacy-panel.c:616
 #: ../panels/search/cc-search-locations-dialog.c:682
-#: ../panels/sharing/cc-sharing-panel.c:421
+#: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
 #: ../panels/user-accounts/um-photo-dialog.c:96
 #: ../panels/user-accounts/um-photo-dialog.c:221
@@ -125,7 +121,7 @@ msgstr "Vi povas aldoni bildojn al via %s dosierujo tiam ili montros ĉi tie"
 msgid "_Cancel"
 msgstr "_Nuligi"
 
-#: ../panels/background/cc-background-chooser-dialog.c:437
+#: ../panels/background/cc-background-chooser-dialog.c:430
 #: ../panels/printers/ppd-selection-dialog.ui.h:3
 #: ../panels/user-accounts/um-photo-dialog.c:98
 msgid "Select"
@@ -146,7 +142,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Neniu labortabla fono"
 
-#: ../panels/background/cc-background-panel.c:492
+#: ../panels/background/cc-background-panel.c:504
 msgid "Current background"
 msgstr "Aktuala fono"
 
@@ -412,49 +408,49 @@ msgstr "Nekalibrite"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
-#: ../panels/color/cc-color-panel.c:137
+#: ../panels/color/cc-color-panel.c:138
 msgid "Default: "
 msgstr "Defaŭlte:"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile his a standard space like AdobeRGB
-#: ../panels/color/cc-color-panel.c:145
+#: ../panels/color/cc-color-panel.c:146
 #, fuzzy
 msgid "Colorspace: "
 msgstr "Kolorspaco:"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile is a test profile
-#: ../panels/color/cc-color-panel.c:152
+#: ../panels/color/cc-color-panel.c:153
 msgid "Test profile: "
 msgstr "Test-profilo:"
 
 #. TRANSLATORS: an ICC profile is a file containing colorspace data
-#: ../panels/color/cc-color-panel.c:219
+#: ../panels/color/cc-color-panel.c:220
 msgid "Select ICC Profile File"
 msgstr "Elekti ICC-profildosieron"
 
-#: ../panels/color/cc-color-panel.c:222
+#: ../panels/color/cc-color-panel.c:223
 msgid "_Import"
 msgstr "E_nporti"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:233
+#: ../panels/color/cc-color-panel.c:234
 msgid "Supported ICC profiles"
 msgstr "Subtenataj ICC-profiloj"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:240
+#: ../panels/color/cc-color-panel.c:241
 #: ../panels/network/wireless-security/eap-method-fast.c:410
 msgid "All files"
 msgstr "Ĉiuj dosieroj"
 
-#: ../panels/color/cc-color-panel.c:579
+#: ../panels/color/cc-color-panel.c:580
 msgid "Screen"
 msgstr "Ekrano"
 
 #. TRANSLATORS: this is when the upload of the profile failed
-#: ../panels/color/cc-color-panel.c:903
+#: ../panels/color/cc-color-panel.c:904
 #, fuzzy, c-format
 msgid "Failed to upload file: %s"
 msgstr "Eraro dum konservado de agordaro: %s"
@@ -462,40 +458,40 @@ msgstr "Eraro dum konservado de agordaro: %s"
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
 #. * only shown when the user uses a LiveCD to calibrate
-#: ../panels/color/cc-color-panel.c:917
+#: ../panels/color/cc-color-panel.c:918
 msgid "The profile has been uploaded to:"
 msgstr ""
 
-#: ../panels/color/cc-color-panel.c:919
+#: ../panels/color/cc-color-panel.c:920
 msgid "Write down this URL."
 msgstr ""
 
-#: ../panels/color/cc-color-panel.c:920
+#: ../panels/color/cc-color-panel.c:921
 msgid "Restart this computer and boot your normal operating system."
 msgstr ""
 
-#: ../panels/color/cc-color-panel.c:921
+#: ../panels/color/cc-color-panel.c:922
 msgid "Type the URL into your browser to download and install the profile."
 msgstr ""
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
-#: ../panels/color/cc-color-panel.c:955
+#: ../panels/color/cc-color-panel.c:956
 #, fuzzy
 msgid "Save Profile"
 msgstr "Forigi profilon"
 
-#: ../panels/color/cc-color-panel.c:959
-#: ../panels/network/connection-editor/vpn-helpers.c:375
+#: ../panels/color/cc-color-panel.c:960
+#: ../panels/network/connection-editor/vpn-helpers.c:380
 msgid "_Save"
 msgstr "Kon_servi"
 
 #. TRANSLATORS: this is when the button is sensitive
-#: ../panels/color/cc-color-panel.c:1315
+#: ../panels/color/cc-color-panel.c:1316
 msgid "Create a color profile for the selected device"
 msgstr "Krei kolorprofilon por la elektita aparato"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1330 ../panels/color/cc-color-panel.c:1354
+#: ../panels/color/cc-color-panel.c:1331 ../panels/color/cc-color-panel.c:1355
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
@@ -504,12 +500,12 @@ msgstr ""
 "korekte konektita."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1364
+#: ../panels/color/cc-color-panel.c:1365
 msgid "The measuring instrument does not support printer profiling."
 msgstr "La mezurilo ne subtenas presilprofiladon."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1375
+#: ../panels/color/cc-color-panel.c:1376
 msgid "The device type is not currently supported."
 msgstr "La aparttipo ne estas aktuale subtenita."
 
@@ -601,7 +597,7 @@ msgstr "Kalibrigo"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "Cancel"
 msgstr "Nuligi"
 
@@ -621,10 +617,10 @@ msgid "Done"
 msgstr "Farite"
 
 #. Timeout parameters
-#. 5000 = 5 sec
+#. 15000 = 15 sec
 #. 750 = 0.75 sec
 #. Text printed on screen
-#: ../panels/color/color.ui.h:1 ../panels/wacom/calibrator/calibrator-gui.c:81
+#: ../panels/color/color.ui.h:1 ../panels/wacom/calibrator/calibrator-gui.c:83
 msgid "Screen Calibration"
 msgstr ""
 
@@ -959,7 +955,7 @@ msgstr "Pli…"
 msgid "No languages found"
 msgstr "Neniuj lingvoj trovitaj"
 
-#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:1
+#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:3
 msgid "Language"
 msgstr "Lingvo"
 
@@ -969,28 +965,28 @@ msgid "_Done"
 msgstr "_Finita"
 
 #. Translators: This is the full date and time format used in 12-hour mode.
-#: ../panels/datetime/cc-datetime-panel.c:358
+#: ../panels/datetime/cc-datetime-panel.c:363
 msgid "%e %B %Y, %l:%M %p"
 msgstr "%e %B %Y, %l:%M %p"
 
 #. Translators: This is the full date and time format used in 24-hour mode.
-#: ../panels/datetime/cc-datetime-panel.c:363
+#: ../panels/datetime/cc-datetime-panel.c:368
 msgid "%e %B %Y, %R"
 msgstr "%e %B %Y, %R"
 
 #. Translators: UTC here means the Coordinated Universal Time.
 #. * %:::z will be replaced by the offset from UTC e.g. UTC+02
-#: ../panels/datetime/cc-datetime-panel.c:579
+#: ../panels/datetime/cc-datetime-panel.c:584
 msgid "UTC%:::z"
 msgstr "UTC%:::z"
 
 #. Translators: This is the time format used in 12-hour mode.
-#: ../panels/datetime/cc-datetime-panel.c:584
+#: ../panels/datetime/cc-datetime-panel.c:589
 msgid "%l:%M %p"
 msgstr "%l:%M %p"
 
 #. Translators: This is the time format used in 24-hour mode.
-#: ../panels/datetime/cc-datetime-panel.c:589
+#: ../panels/datetime/cc-datetime-panel.c:594
 msgid "%R"
 msgstr "%R"
 
@@ -1129,25 +1125,27 @@ msgstr "Ŝanĝi sistemajn agordoj pri horo kaj dato"
 msgid "To change time or date settings, you need to authenticate."
 msgstr "Por ŝanĝi tempajn aŭ datajn agordojn, vi devas aŭtentigi."
 
-#: ../panels/display/cc-display-panel.c:472
+#: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
 msgstr "Kovrilo ferma"
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:475
+#: ../panels/display/cc-display-panel.c:484
 msgid "Mirrored"
 msgstr "Spegulata"
 
-#: ../panels/display/cc-display-panel.c:477
-#: ../panels/display/cc-display-panel.c:2042
+#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:2255
 msgid "Primary"
 msgstr "Ĉefa"
 
-#: ../panels/display/cc-display-panel.c:479
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1729 ../panels/power/cc-power-panel.c:1740
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/display/cc-display-panel.c:488
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1743 ../panels/power/cc-power-panel.c:1754
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1155,81 +1153,90 @@ msgstr "Ĉefa"
 msgid "Off"
 msgstr "Neaktiva"
 
-#: ../panels/display/cc-display-panel.c:482
+#: ../panels/display/cc-display-panel.c:491
 msgid "Secondary"
 msgstr "Kroma"
 
-#: ../panels/display/cc-display-panel.c:1490
+#: ../panels/display/cc-display-panel.c:1501
 msgid "Arrange Combined Displays"
 msgstr "Aranĝi kombinitajn ekranojn"
 
-#: ../panels/display/cc-display-panel.c:1496
-#: ../panels/display/cc-display-panel.c:1912
+#: ../panels/display/cc-display-panel.c:1507
+#: ../panels/display/cc-display-panel.c:2089
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Apply"
 msgstr "_Apliki"
 
-#: ../panels/display/cc-display-panel.c:1517
+#: ../panels/display/cc-display-panel.c:1528
 msgid "Drag displays to rearrange them"
 msgstr "Ŝovu ekranojn por rearanĝi"
 
-#. size
-#: ../panels/display/cc-display-panel.c:1976
+#: ../panels/display/cc-display-panel.c:2191
 msgid "Size"
 msgstr "Grando"
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:1991
+#: ../panels/display/cc-display-panel.c:2204
 msgid "Aspect Ratio"
 msgstr "Aspekta rilatumo"
 
-#: ../panels/display/cc-display-panel.c:2012
+#: ../panels/display/cc-display-panel.c:2225
 #: ../panels/printers/pp-options-dialog.c:86
 msgid "Resolution"
 msgstr "Distingivo"
 
-#: ../panels/display/cc-display-panel.c:2043
+#: ../panels/display/cc-display-panel.c:2256
 msgid "Show the top bar and Activities Overview on this display"
 msgstr "Montri la supran breton kaj Aktivecoj-Superrigardon ĉi ekrane"
 
-#: ../panels/display/cc-display-panel.c:2049
+#: ../panels/display/cc-display-panel.c:2262
 msgid "Secondary Display"
 msgstr "Kroma ekrano"
 
-#: ../panels/display/cc-display-panel.c:2050
+#: ../panels/display/cc-display-panel.c:2263
 msgid "Join this display with another to create an extra workspace"
 msgstr "Kunmeti ĉi ekranon kun alia por krei ekstran laborspacon"
 
-#: ../panels/display/cc-display-panel.c:2057
+#: ../panels/display/cc-display-panel.c:2270
 msgid "Presentation"
 msgstr "Prezento"
 
-#: ../panels/display/cc-display-panel.c:2058
+#: ../panels/display/cc-display-panel.c:2271
 msgid "Show slideshows and media only"
 msgstr "Montri nur lumbildojn kaj aŭdvidaĵon"
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2063
+#: ../panels/display/cc-display-panel.c:2276
 msgid "Mirror"
 msgstr "Speguli"
 
-#: ../panels/display/cc-display-panel.c:2064
+#: ../panels/display/cc-display-panel.c:2277
 msgid "Show your existing view on both displays"
 msgstr "Montri vian ekzistantan vidon per ambaŭ ekranoj"
 
-#: ../panels/display/cc-display-panel.c:2070
+#: ../panels/display/cc-display-panel.c:2283
 msgid "Turn Off"
 msgstr "Elŝalti"
 
-#: ../panels/display/cc-display-panel.c:2071
+#: ../panels/display/cc-display-panel.c:2284
 msgid "Don't use this display"
 msgstr "Ne uzi ĉi ekranon"
 
-#: ../panels/display/cc-display-panel.c:2286
+#. overscan
+#: ../panels/display/cc-display-panel.c:2301
+msgid "Shrink screen to fit TV"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2307
+#, fuzzy
+msgid "Scaling"
+msgstr "Rulumado"
+
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Could not get screen information"
 msgstr "Ne eblas akiri informojn pri ekranoj"
 
-#: ../panels/display/cc-display-panel.c:2317
+#: ../panels/display/cc-display-panel.c:2463
 msgid "_Arrange Combined Displays"
 msgstr "_Aranĝi kombinitajn ekranojn"
 
@@ -1247,53 +1254,49 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "Panelo;Projekciilo;xrandr;Ekrano;Distingivo;Aktualigi;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:451 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:454 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: ../panels/info/cc-info-panel.c:534
-#, c-format
-msgid "%s %d-bit"
-msgstr "%s %d-bita"
-
-#: ../panels/info/cc-info-panel.c:536
+#. translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit"
+#: ../panels/info/cc-info-panel.c:582
 #, c-format
 msgid "%d-bit"
 msgstr "%d-bita"
 
-#: ../panels/info/cc-info-panel.c:1216
+#: ../panels/info/cc-info-panel.c:1260
 msgid "Ask what to do"
 msgstr "Demandi kion fari"
 
-#: ../panels/info/cc-info-panel.c:1220
+#: ../panels/info/cc-info-panel.c:1264
 msgid "Do nothing"
 msgstr "Fari nenion"
 
-#: ../panels/info/cc-info-panel.c:1224
+#: ../panels/info/cc-info-panel.c:1268
 msgid "Open folder"
 msgstr "Malfermi dosierujon"
 
-#: ../panels/info/cc-info-panel.c:1315
+#: ../panels/info/cc-info-panel.c:1359
 msgid "Other Media"
 msgstr "Aliaj datumportiloj"
 
-#: ../panels/info/cc-info-panel.c:1346
+#: ../panels/info/cc-info-panel.c:1390
 msgid "Select an application for audio CDs"
 msgstr "Elekti aplikaĵon por son-KDj"
 
-#: ../panels/info/cc-info-panel.c:1347
+#: ../panels/info/cc-info-panel.c:1391
 msgid "Select an application for video DVDs"
 msgstr "Elekti aplikaĵon por video-DVDj"
 
-#: ../panels/info/cc-info-panel.c:1348
+#: ../panels/info/cc-info-panel.c:1392
 msgid "Select an application to run when a music player is connected"
 msgstr "Elektu rulendan aplikaĵon kiam muzikludilon estas konektita"
 
-#: ../panels/info/cc-info-panel.c:1349
+#: ../panels/info/cc-info-panel.c:1393
 msgid "Select an application to run when a camera is connected"
 msgstr "Elektu rulendan aplikaĵon kiam kamerao estas konektita"
 
-#: ../panels/info/cc-info-panel.c:1350
+#: ../panels/info/cc-info-panel.c:1394
 msgid "Select an application for software CDs"
 msgstr "Elekti aplikaĵon por programar-KDj"
 
@@ -1302,89 +1305,89 @@ msgstr "Elekti aplikaĵon por programar-KDj"
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
 #.
-#: ../panels/info/cc-info-panel.c:1362
+#: ../panels/info/cc-info-panel.c:1406
 msgid "audio DVD"
 msgstr "son-DVD"
 
-#: ../panels/info/cc-info-panel.c:1363
+#: ../panels/info/cc-info-panel.c:1407
 msgid "blank Blu-ray disc"
 msgstr "malplena Blu-radia disko"
 
-#: ../panels/info/cc-info-panel.c:1364
+#: ../panels/info/cc-info-panel.c:1408
 msgid "blank CD disc"
 msgstr "malplena KD-disko"
 
-#: ../panels/info/cc-info-panel.c:1365
+#: ../panels/info/cc-info-panel.c:1409
 msgid "blank DVD disc"
 msgstr "malplena DVD-disko"
 
-#: ../panels/info/cc-info-panel.c:1366
+#: ../panels/info/cc-info-panel.c:1410
 msgid "blank HD DVD disc"
 msgstr "malplena HD-DVD-disko"
 
-#: ../panels/info/cc-info-panel.c:1367
+#: ../panels/info/cc-info-panel.c:1411
 msgid "Blu-ray video disc"
 msgstr "Blu-radia videodisko"
 
-#: ../panels/info/cc-info-panel.c:1368
+#: ../panels/info/cc-info-panel.c:1412
 msgid "e-book reader"
 msgstr "retlibrolegilo"
 
-#: ../panels/info/cc-info-panel.c:1369
+#: ../panels/info/cc-info-panel.c:1413
 msgid "HD DVD video disc"
 msgstr "HD-DVD-videodisko"
 
-#: ../panels/info/cc-info-panel.c:1370
+#: ../panels/info/cc-info-panel.c:1414
 msgid "Picture CD"
 msgstr "Bild-KD"
 
-#: ../panels/info/cc-info-panel.c:1371
+#: ../panels/info/cc-info-panel.c:1415
 msgid "Super Video CD"
 msgstr "Super-Video-KD"
 
-#: ../panels/info/cc-info-panel.c:1372
+#: ../panels/info/cc-info-panel.c:1416
 msgid "Video CD"
 msgstr "Video-KD"
 
-#: ../panels/info/cc-info-panel.c:1373
+#: ../panels/info/cc-info-panel.c:1417
 msgid "Windows software"
 msgstr "Windows-programaro"
 
-#: ../panels/info/cc-info-panel.c:1374
+#: ../panels/info/cc-info-panel.c:1418
 msgid "Software"
 msgstr "Programaro"
 
-#: ../panels/info/cc-info-panel.c:1497
+#: ../panels/info/cc-info-panel.c:1541
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "Sekcio"
 
-#: ../panels/info/cc-info-panel.c:1506 ../panels/info/info.ui.h:13
+#: ../panels/info/cc-info-panel.c:1550 ../panels/info/info.ui.h:13
 msgid "Overview"
 msgstr "Superrigardo"
 
-#: ../panels/info/cc-info-panel.c:1512 ../panels/info/info.ui.h:20
+#: ../panels/info/cc-info-panel.c:1556 ../panels/info/info.ui.h:20
 msgid "Default Applications"
 msgstr "Defaŭltaj aplikaĵoj"
 
-#: ../panels/info/cc-info-panel.c:1517 ../panels/info/info.ui.h:28
+#: ../panels/info/cc-info-panel.c:1561 ../panels/info/info.ui.h:28
 msgid "Removable Media"
 msgstr "Demetebla datumportilo"
 
-#: ../panels/info/cc-info-panel.c:1542
+#: ../panels/info/cc-info-panel.c:1586
 #, c-format
 msgid "Version %s"
 msgstr "Versio %s"
 
-#: ../panels/info/cc-info-panel.c:1592
+#: ../panels/info/cc-info-panel.c:1653
 msgid "Install Updates"
 msgstr "Instali ĝisdatigojn"
 
-#: ../panels/info/cc-info-panel.c:1596
+#: ../panels/info/cc-info-panel.c:1657
 msgid "System Up-To-Date"
 msgstr "Ĝisdata sistemo"
 
-#: ../panels/info/cc-info-panel.c:1600
+#: ../panels/info/cc-info-panel.c:1661
 msgid "Checking for Updates"
 msgstr "Regi pri ĝisdatigoj"
 
@@ -1422,17 +1425,22 @@ msgid "Device name"
 msgstr "Aparatnomo"
 
 #: ../panels/info/info.ui.h:5
+#, fuzzy
+msgid "Version"
+msgstr "Versio 0"
+
+#: ../panels/info/info.ui.h:6
 msgid "Memory"
 msgstr "Memoro"
 
-#: ../panels/info/info.ui.h:6
+#: ../panels/info/info.ui.h:7
 msgid "Processor"
 msgstr "Procesoro"
 
-#. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-msgid "Base system"
-msgstr "Baza sistemo"
+#, fuzzy
+msgid "OS Type"
+msgstr "Tipo"
 
 #: ../panels/info/info.ui.h:9
 msgid "Disk"
@@ -1797,7 +1805,6 @@ msgid "Cursor blink speed"
 msgstr "Rapido de kursora pulsado"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/region.ui.h:5
 msgid "Input Sources"
 msgstr "Enigaj fontoj"
 
@@ -2025,11 +2032,11 @@ msgstr ""
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:358
+#: ../panels/network/cc-network-panel.c:361
 msgid "Air_plane Mode"
 msgstr "_Aviadila reĝimo"
 
-#: ../panels/network/cc-network-panel.c:930
+#: ../panels/network/cc-network-panel.c:933
 msgid "Network proxy"
 msgstr "Retprokurilo"
 
@@ -2037,14 +2044,14 @@ msgstr "Retprokurilo"
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: ../panels/network/cc-network-panel.c:1109 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1244
+#: ../panels/network/cc-network-panel.c:1247
 msgid "The system network services are not compatible with this version."
 msgstr "La sistemaj retservoj ne kongruas kun ĉi tiu versio."
 
@@ -2240,7 +2247,7 @@ msgstr "Permane"
 msgid "Link-Local Only"
 msgstr "Nur \"Ligi-Loke\""
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:942
+#: ../panels/network/connection-editor/ce-page-ip4.c:934
 #: ../panels/network/network-wifi.ui.h:46
 msgid "IPv4"
 msgstr "IPv4"
@@ -2262,7 +2269,7 @@ msgstr "Aŭtomate"
 msgid "Automatic, DHCP only"
 msgstr "Aŭtomate, nur DHCP"
 
-#: ../panels/network/connection-editor/ce-page-ip6.c:902
+#: ../panels/network/connection-editor/ce-page-ip6.c:894
 #: ../panels/network/network-wifi.ui.h:47
 msgid "IPv6"
 msgstr "IPv6"
@@ -2487,7 +2494,7 @@ msgstr "Nova profilo"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1471
+#: ../panels/user-accounts/um-account-dialog.c:1470
 msgid "_Add"
 msgstr "_Aldoni"
 
@@ -2500,23 +2507,23 @@ msgstr "VPN"
 msgid "Bond"
 msgstr "Bindo"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:597
+#: ../panels/network/connection-editor/net-connection-editor.c:600
 msgid "Bridge"
 msgstr "Ponto"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:598
+#: ../panels/network/connection-editor/net-connection-editor.c:601
 msgid "VLAN"
 msgstr "VLAN"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:749
+#: ../panels/network/connection-editor/net-connection-editor.c:752
 msgid "Could not load VPN plugins"
 msgstr "Ne eblas ŝargi VPN-an etendojn"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:818
+#: ../panels/network/connection-editor/net-connection-editor.c:821
 msgid "Import from file…"
 msgstr "Importi de dosiero…"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:889
+#: ../panels/network/connection-editor/net-connection-editor.c:892
 msgid "Add Network Connection"
 msgstr "Aldoni retan konekton"
 
@@ -2526,7 +2533,7 @@ msgid "_Reset"
 msgstr "_Vakigi agordojn"
 
 #: ../panels/network/connection-editor/reset-page.ui.h:2
-#: ../panels/network/net-device-wifi.c:1404
+#: ../panels/network/net-device-wifi.c:1403
 #: ../panels/network/network-wifi.ui.h:40
 msgid "_Forget"
 msgstr "_Forgesi"
@@ -2550,11 +2557,11 @@ msgstr "_Forigi ĉiujn detalojn de ĉi reto kaj ne klopodi aŭtomate konekti"
 msgid "S_ecurity"
 msgstr "S_ekureco"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:205
+#: ../panels/network/connection-editor/vpn-helpers.c:210
 msgid "Cannot import VPN connection"
 msgstr "Ne eblas enporti VPN-konekton"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:207
+#: ../panels/network/connection-editor/vpn-helpers.c:212
 #, c-format
 msgid ""
 "The file '%s' could not be read or does not contain recognized VPN "
@@ -2567,36 +2574,36 @@ msgstr ""
 "\n"
 "Eraro: %s"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:242
+#: ../panels/network/connection-editor/vpn-helpers.c:247
 msgid "Select file to import"
 msgstr "Elekti enportendan dosieron"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:246
+#: ../panels/network/connection-editor/vpn-helpers.c:251
 #: ../panels/printers/cc-printers-panel.c:1947
-#: ../panels/sharing/cc-sharing-panel.c:422
+#: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
 msgstr "_Malfermi"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:294
+#: ../panels/network/connection-editor/vpn-helpers.c:299
 #, c-format
 msgid "A file named \"%s\" already exists."
 msgstr "Dosiero nomita «%s» jam ekzistas."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:296
+#: ../panels/network/connection-editor/vpn-helpers.c:301
 msgid "_Replace"
 msgstr "_Anstataŭigi"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:298
+#: ../panels/network/connection-editor/vpn-helpers.c:303
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr "Ĉu vi volas anstataŭigi %s per la VPN-konekto vi estas konservanta?"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:334
+#: ../panels/network/connection-editor/vpn-helpers.c:339
 msgid "Cannot export VPN connection"
 msgstr "Ne eblas elporti VPN-konekton"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:336
+#: ../panels/network/connection-editor/vpn-helpers.c:341
 #, c-format
 msgid ""
 "The VPN connection '%s' could not be exported to %s.\n"
@@ -2607,7 +2614,7 @@ msgstr ""
 "\n"
 "Eraro: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:371
+#: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection..."
 msgstr "Elporti VPN-konekton..."
 
@@ -2697,7 +2704,7 @@ msgid "Wired"
 msgstr "Drate"
 
 #: ../panels/network/net-device-ethernet.c:352
-#: ../panels/network/net-device-wifi.c:1545
+#: ../panels/network/net-device-wifi.c:1558
 #: ../panels/network/network-ethernet.ui.h:3
 #: ../panels/network/network-mobile.ui.h:8
 #: ../panels/network/network-simple.ui.h:8
@@ -2714,7 +2721,12 @@ msgstr "Profilo %d"
 msgid "Add new connection"
 msgstr "Aldoni novan konekton"
 
-#: ../panels/network/net-device-wifi.c:1111
+#: ../panels/network/net-device-team.c:77
+#, fuzzy
+msgid "Team slaves"
+msgstr "Pontaj sklavoj"
+
+#: ../panels/network/net-device-wifi.c:1110
 msgid ""
 "If you have a connection to the Internet other than wireless, you can set up "
 "a wireless hotspot to share the connection with others."
@@ -2722,12 +2734,12 @@ msgstr ""
 "Se vi havas konekton al la interreto (krom Wi-Fi), vi povas agordi sendratan "
 "retkaptejon por kunhavi la konekton kun aliaj."
 
-#: ../panels/network/net-device-wifi.c:1115
+#: ../panels/network/net-device-wifi.c:1114
 #, c-format
 msgid "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
 msgstr "Se vi aktivigi la sendratan retkaptejon, vi malkonektos de <b>%s</b>."
 
-#: ../panels/network/net-device-wifi.c:1119
+#: ../panels/network/net-device-wifi.c:1118
 msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
@@ -2735,23 +2747,23 @@ msgstr ""
 "Ne eblas atingi interreton tra via sendrata aparato dum la retkaptejo "
 "aktivigas."
 
-#: ../panels/network/net-device-wifi.c:1193
+#: ../panels/network/net-device-wifi.c:1192
 msgid "Stop hotspot and disconnect any users?"
 msgstr "Haltigi retkaptejon kaj malkonektiĝi ĉiujn uzantojn?"
 
-#: ../panels/network/net-device-wifi.c:1196
+#: ../panels/network/net-device-wifi.c:1195
 msgid "_Stop Hotspot"
 msgstr "Halti_gi retkaptejon"
 
-#: ../panels/network/net-device-wifi.c:1268
+#: ../panels/network/net-device-wifi.c:1267
 msgid "System policy prohibits use as a Hotspot"
 msgstr "Sistema politiko malebligas uzon kiel retkaptejo"
 
-#: ../panels/network/net-device-wifi.c:1271
+#: ../panels/network/net-device-wifi.c:1270
 msgid "Wireless device does not support Hotspot mode"
 msgstr "Sendrata aparato ne subtenas retkapteja reĝimo"
 
-#: ../panels/network/net-device-wifi.c:1400
+#: ../panels/network/net-device-wifi.c:1399
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
@@ -2759,19 +2771,19 @@ msgstr ""
 "Retaj detaloj por la elektitaj retoj, inkludante pasvortojn kaj iuj ajn "
 "propraj agordoj perdiĝos."
 
-#: ../panels/network/net-device-wifi.c:1710
+#: ../panels/network/net-device-wifi.c:1726
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:13
 msgid "History"
 msgstr "Historio"
 
-#: ../panels/network/net-device-wifi.c:1714 ../panels/power/power.ui.h:21
+#: ../panels/network/net-device-wifi.c:1730 ../panels/power/power.ui.h:21
 #: ../panels/privacy/privacy.ui.h:23 ../panels/sound/gvc-mixer-dialog.c:1596
-#: ../panels/wacom/cc-wacom-page.c:525
+#: ../panels/wacom/cc-wacom-page.c:534
 msgid "_Close"
 msgstr "_Fermi"
 
 #. translators: This is the label for the "Forget wireless network" functionality
-#: ../panels/network/net-device-wifi.c:1722
+#: ../panels/network/net-device-wifi.c:1738
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
 msgstr "_Forgesi"
@@ -3604,10 +3616,11 @@ msgctxt "notifications"
 msgid "Show Details in Lock Screen"
 msgstr "Montri detalojn en ŝlosa ekrano"
 
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1735 ../panels/power/cc-power-panel.c:1742
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1749 ../panels/power/cc-power-panel.c:1756
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -3812,186 +3825,186 @@ msgstr "Ŝargante"
 msgid "Discharging"
 msgstr "Ŝargante"
 
-#: ../panels/power/cc-power-panel.c:395
+#: ../panels/power/cc-power-panel.c:400
 msgctxt "Battery name"
 msgid "Main"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:397
+#: ../panels/power/cc-power-panel.c:402
 msgctxt "Battery name"
 msgid "Extra"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:488
+#: ../panels/power/cc-power-panel.c:474
 msgid "Wireless mouse"
 msgstr "Sendrata muso"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:492
+#: ../panels/power/cc-power-panel.c:477
 msgid "Wireless keyboard"
 msgstr "Sendrata klavaro"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:496
+#: ../panels/power/cc-power-panel.c:480
 msgid "Uninterruptible power supply"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:501
+#: ../panels/power/cc-power-panel.c:483
 msgid "Personal digital assistant"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:505
+#: ../panels/power/cc-power-panel.c:486
 msgid "Cellphone"
 msgstr "Poŝtelefono"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:509
+#: ../panels/power/cc-power-panel.c:489
 msgid "Media player"
 msgstr "Plurmedioludilo"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:513
+#: ../panels/power/cc-power-panel.c:492
 msgid "Tablet"
 msgstr "Tabulkomputilo"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:517
+#: ../panels/power/cc-power-panel.c:495
 msgid "Computer"
 msgstr "Komputilo"
 
 #. TRANSLATORS: secondary battery, misc
-#: ../panels/power/cc-power-panel.c:521 ../panels/power/cc-power-panel.c:731
-#: ../panels/power/cc-power-panel.c:2066
+#: ../panels/power/cc-power-panel.c:498 ../panels/power/cc-power-panel.c:745
+#: ../panels/power/cc-power-panel.c:2080
 msgid "Battery"
 msgstr "Akumulatoro"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:530
+#: ../panels/power/cc-power-panel.c:544
 #, fuzzy
 msgctxt "Battery power"
 msgid "Charging"
 msgstr "Ŝargante"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:537
+#: ../panels/power/cc-power-panel.c:551
 #, fuzzy
 msgctxt "Battery power"
 msgid "Caution"
 msgstr "Averto"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:542
+#: ../panels/power/cc-power-panel.c:556
 #, fuzzy
 msgctxt "Battery power"
 msgid "Low"
 msgstr "Malalte"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:547
+#: ../panels/power/cc-power-panel.c:561
 #, fuzzy
 msgctxt "Battery power"
 msgid "Good"
 msgstr "Bone"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:552
+#: ../panels/power/cc-power-panel.c:566
 #, fuzzy
 msgctxt "Battery power"
 msgid "Fully charged"
 msgstr "Plena krano"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:556
+#: ../panels/power/cc-power-panel.c:570
 #, fuzzy
 msgctxt "Battery power"
 msgid "Empty"
 msgstr "Malplene"
 
-#: ../panels/power/cc-power-panel.c:729
+#: ../panels/power/cc-power-panel.c:743
 msgid "Batteries"
 msgstr "Baterioj"
 
-#: ../panels/power/cc-power-panel.c:1135
+#: ../panels/power/cc-power-panel.c:1149
 msgid "When _idle"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1504
+#: ../panels/power/cc-power-panel.c:1518
 msgid "Power Saving"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1532
+#: ../panels/power/cc-power-panel.c:1546
 #, fuzzy
 msgid "_Screen brightness"
 msgstr "Heleco"
 
-#: ../panels/power/cc-power-panel.c:1538
+#: ../panels/power/cc-power-panel.c:1552
 #, fuzzy
 msgid "_Keyboard brightness"
 msgstr "Klavaraj agordoj"
 
-#: ../panels/power/cc-power-panel.c:1548
+#: ../panels/power/cc-power-panel.c:1562
 #, fuzzy
 msgid "_Dim screen when inactive"
 msgstr "Paŭzigi kiam neaktive dum"
 
-#: ../panels/power/cc-power-panel.c:1573
+#: ../panels/power/cc-power-panel.c:1587
 #, fuzzy
 msgid "_Blank screen"
 msgstr "Ŝlosi ekranon"
 
-#: ../panels/power/cc-power-panel.c:1610
+#: ../panels/power/cc-power-panel.c:1624
 msgid "_Wi-Fi"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1615
+#: ../panels/power/cc-power-panel.c:1629
 msgid "Turns off wireless devices"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1640
+#: ../panels/power/cc-power-panel.c:1654
 #, fuzzy
 msgid "_Mobile broadband"
 msgstr "Poŝlarĝkapacita"
 
-#: ../panels/power/cc-power-panel.c:1645
+#: ../panels/power/cc-power-panel.c:1659
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1680
+#: ../panels/power/cc-power-panel.c:1694
 #, fuzzy
 msgid "_Bluetooth"
 msgstr "Bludento"
 
-#: ../panels/power/cc-power-panel.c:1731
+#: ../panels/power/cc-power-panel.c:1745
 #, fuzzy
 msgid "When on battery power"
 msgstr "Dum akumulatora energio"
 
-#: ../panels/power/cc-power-panel.c:1733
+#: ../panels/power/cc-power-panel.c:1747
 msgid "When plugged in"
 msgstr "Kiam konektita"
 
-#: ../panels/power/cc-power-panel.c:1862
+#: ../panels/power/cc-power-panel.c:1876
 msgid "Suspend & Power Off"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1895
+#: ../panels/power/cc-power-panel.c:1909
 #, fuzzy
 msgid "_Automatic suspend"
 msgstr "Aŭtomate"
 
-#: ../panels/power/cc-power-panel.c:1919
+#: ../panels/power/cc-power-panel.c:1933
 #, fuzzy
 msgid "When battery power is _critical"
 msgstr "Kiam kurento estas _kritike malalta"
 
-#: ../panels/power/cc-power-panel.c:1976
+#: ../panels/power/cc-power-panel.c:1990
 msgid "Power Off"
 msgstr "Elŝalti"
 
-#: ../panels/power/cc-power-panel.c:2113
+#: ../panels/power/cc-power-panel.c:2127
 msgid "Devices"
 msgstr "Aparatoj"
 
@@ -4099,7 +4112,7 @@ msgid "Authenticate"
 msgstr "_Aŭtentigi"
 
 #: ../panels/printers/authentication-dialog.ui.h:5
-#: ../panels/sharing/sharing.ui.h:23
+#: ../panels/sharing/sharing.ui.h:21
 #: ../panels/user-accounts/data/account-dialog.ui.h:6
 #, fuzzy
 msgid "Password"
@@ -4701,39 +4714,45 @@ msgstr ""
 "Pardonu! Ŝajnas, ke la sistema\n"
 "presilservo ne disponeblas."
 
-#: ../panels/privacy/cc-privacy-panel.c:248 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "Ekrana ŝloso"
 
-#: ../panels/privacy/cc-privacy-panel.c:361 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#, fuzzy
+msgid "Metrics"
+msgstr "Metriko"
+
+#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "Uzado kaj historio"
 
-#: ../panels/privacy/cc-privacy-panel.c:489
+#: ../panels/privacy/cc-privacy-panel.c:635
 msgid "Empty all items from Trash?"
 msgstr "Vakigi ĉiujn erojn de la rubejo?"
 
-#: ../panels/privacy/cc-privacy-panel.c:490
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Ĉiuj eroj en la rubejo forigitos permanente."
 
-#: ../panels/privacy/cc-privacy-panel.c:491 ../panels/privacy/privacy.ui.h:32
+#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "_Malplenigi rubejon"
 
-#: ../panels/privacy/cc-privacy-panel.c:514
+#: ../panels/privacy/cc-privacy-panel.c:660
 msgid "Delete all the temporary files?"
 msgstr "Forigi ĉiujn provizorajn dosierojn?"
 
-#: ../panels/privacy/cc-privacy-panel.c:515
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "All the temporary files will be permanently deleted."
 msgstr "ĉiuj provizoraj dosieroj forigitos permanente."
 
-#: ../panels/privacy/cc-privacy-panel.c:516 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "_Forigi provizorajn dosierojn"
 
-#: ../panels/privacy/cc-privacy-panel.c:538 ../panels/privacy/privacy.ui.h:31
+#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "Vakigi rubejon kaj provizorajn dosierojn"
 
@@ -4825,22 +4844,32 @@ msgid "Retain _History"
 msgstr "Reteni _historion"
 
 #: ../panels/privacy/privacy.ui.h:27
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:28
+msgid "Enable Metrics Collection"
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:30
 msgid "The Screen Lock protects your privacy when you are away."
 msgstr "La ekrana ŝloso protektas vian privatecon kiam vi estas fora."
 
-#: ../panels/privacy/privacy.ui.h:28
+#: ../panels/privacy/privacy.ui.h:31
 msgid "Automatic Screen _Lock"
 msgstr "Aŭtomata ekrana ŝloso"
 
-#: ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/privacy.ui.h:32
 msgid "Lock screen _after blank for"
 msgstr "Ŝ_losi ekranon post malplena por"
 
-#: ../panels/privacy/privacy.ui.h:30
+#: ../panels/privacy/privacy.ui.h:33
 msgid "Show _Notifications"
 msgstr "Montri _sciiojn"
 
-#: ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/privacy.ui.h:37
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
@@ -4848,15 +4877,15 @@ msgstr ""
 "Aŭtomate vakigi la rubejon kaj provizorajn dosierojn por helpi forigi "
 "nebezonitan konfidencan informon de via komputilo."
 
-#: ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/privacy.ui.h:38
 msgid "Automatically empty _Trash"
 msgstr "Aŭtomate malplenigi rubejon"
 
-#: ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/privacy.ui.h:39
 msgid "Automatically purge Temporary _Files"
 msgstr "Aŭtomate forigi provizorajn dosierojn"
 
-#: ../panels/privacy/privacy.ui.h:37
+#: ../panels/privacy/privacy.ui.h:40
 msgid "Purge _After"
 msgstr "Vakigi _post"
 
@@ -4879,40 +4908,37 @@ msgid "No input sources found"
 msgstr "Neniuj enigaj fontoj trovitaj"
 
 #: ../panels/region/cc-input-chooser.c:1070
-msgctxt "Input Source"
+#, fuzzy
+msgctxt "Keyboard Layout"
 msgid "Other"
-msgstr "Alia"
+msgstr "Alia..."
 
-#: ../panels/region/cc-region-panel.c:239
+#: ../panels/region/cc-region-panel.c:230
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr "Via seanco devas restartiti por ŝanĝoj efektiviĝi"
 
-#: ../panels/region/cc-region-panel.c:240
+#: ../panels/region/cc-region-panel.c:231
 msgid "Restart Now"
 msgstr "Restarti nun"
 
-#: ../panels/region/cc-region-panel.c:569
+#: ../panels/region/cc-region-panel.c:560
 msgctxt "Language"
 msgid "None"
 msgstr "Neniu"
 
-#: ../panels/region/cc-region-panel.c:853
+#: ../panels/region/cc-region-panel.c:844
 msgid "No input source selected"
 msgstr "Neniu eniga fonto elektita"
 
-#: ../panels/region/cc-region-panel.c:1084
+#: ../panels/region/cc-region-panel.c:1075
 msgid "Sorry"
 msgstr "Pardonu"
 
-#: ../panels/region/cc-region-panel.c:1086
+#: ../panels/region/cc-region-panel.c:1077
 msgid "Input methods can't be used on the login screen"
 msgstr "Enigaj metodoj ne uzeblas ĉe ensaluta ekrano"
 
-#: ../panels/region/cc-region-panel.c:1716
-msgid "Login Screen"
-msgstr "Ensaluta ekrano"
-
-#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:3
+#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:5
 msgid "Formats"
 msgstr "Formoj"
 
@@ -4956,12 +4982,13 @@ msgid "Language;Layout;Keyboard;Input;"
 msgstr "lingvo;klavarfasono;klavaro;eniga;fulmoklavojn;"
 
 #: ../panels/region/input-chooser.ui.h:1
-msgid "Add an Input Source"
-msgstr "Aldoni enigan fonton"
+#, fuzzy
+msgid "Add a Keyboard Layout"
+msgstr "Klavarfason-agordoj"
 
 #: ../panels/region/input-options.ui.h:1
-msgid "Input Source Options"
-msgstr "Enigaj fontaj agordoj"
+msgid "Keyboard Layout Options"
+msgstr "Klavarfason-agordoj"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -5003,19 +5030,32 @@ msgstr "Ŝanĝi al sekva fonto (alterna)"
 msgid "Left+Right Alt"
 msgstr "Ambaŭ \"Alt\" klavoj"
 
+#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1298
+msgid "My Account"
+msgstr "Mia konto"
+
 #: ../panels/region/region.ui.h:2
+msgid "Login Screen"
+msgstr "Ensaluta ekrano"
+
+#: ../panels/region/region.ui.h:4
 msgid "English (United Kingdom)"
 msgstr "Angla (Unuiĝinta Reĝlando)"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "United Kingdom"
 msgstr "Unuiĝinta Reĝlando"
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:7
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "Klavarfason-agordoj"
+
+#: ../panels/region/region.ui.h:8
 msgid "Options"
 msgstr "Agordoj"
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Login settings are used by all users when logging into the system"
 msgstr "Ensalutaj agordoj uzatas de ĉiuj uzantoj kiam ensalutanta sistemen"
 
@@ -5046,7 +5086,7 @@ msgstr "Elekti lokon"
 msgid "_OK"
 msgstr "_Bone"
 
-#: ../panels/search/cc-search-panel.c:177
+#: ../panels/search/cc-search-panel.c:178
 msgid "No applications found"
 msgstr "Neniuj aplikaĵoj trovitaj"
 
@@ -5082,21 +5122,21 @@ msgstr "Movi malsupren"
 msgid "Preferences"
 msgstr "Agordoj"
 
-#: ../panels/sharing/cc-sharing-panel.c:274
+#: ../panels/sharing/cc-sharing-panel.c:285
 msgctxt "service is enabled"
 msgid "On"
 msgstr "Aktiva"
 
-#: ../panels/sharing/cc-sharing-panel.c:276
+#: ../panels/sharing/cc-sharing-panel.c:287
 msgctxt "service is disabled"
 msgid "Off"
 msgstr "Malaktiva"
 
-#: ../panels/sharing/cc-sharing-panel.c:418
+#: ../panels/sharing/cc-sharing-panel.c:422
 msgid "Choose a Folder"
 msgstr "Elektu dosierujon"
 
-#: ../panels/sharing/cc-sharing-panel.c:702
+#: ../panels/sharing/cc-sharing-panel.c:736
 msgid "Copy"
 msgstr "Kopii"
 
@@ -5137,122 +5177,114 @@ msgid ""
 msgstr ""
 
 #: ../panels/sharing/sharing.ui.h:3
-msgid "Share Public Folder"
-msgstr ""
-
-#: ../panels/sharing/sharing.ui.h:4
 msgid "Only Receive From Trusted Devices"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:5
+#: ../panels/sharing/sharing.ui.h:4
 msgid "Save Received Files to Downloads Folder"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:6
-msgid "Only share with Trusted Devices"
-msgstr ""
-
-#: ../panels/sharing/sharing.ui.h:7
+#: ../panels/sharing/sharing.ui.h:5
 #, fuzzy
 msgid "Computer Name"
 msgstr "Komputilo"
 
-#: ../panels/sharing/sharing.ui.h:8
+#: ../panels/sharing/sharing.ui.h:6
 msgid "Personal File Sharing"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:9
+#: ../panels/sharing/sharing.ui.h:7
 #, fuzzy
 msgid "Screen Sharing"
 msgstr "Ekranlegilo"
 
-#: ../panels/sharing/sharing.ui.h:10
+#: ../panels/sharing/sharing.ui.h:8
 #, fuzzy
 msgid "Media Sharing"
 msgstr "Plurmedioludilo"
 
-#: ../panels/sharing/sharing.ui.h:11
+#: ../panels/sharing/sharing.ui.h:9
 #, fuzzy
 msgid "Remote Login"
 msgstr "Forigi regionon"
 
-#: ../panels/sharing/sharing.ui.h:12
+#: ../panels/sharing/sharing.ui.h:10
 msgid "Some services are disabled because of no network access."
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:13
+#: ../panels/sharing/sharing.ui.h:11
 msgid "Share Music, Photos and Videos with others on the current network."
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:14
+#: ../panels/sharing/sharing.ui.h:12
 msgid "Share Media On This Network"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:15
+#: ../panels/sharing/sharing.ui.h:13
 #, fuzzy
 msgid "Shared Folders"
 msgstr "Bilddosierujo"
 
-#: ../panels/sharing/sharing.ui.h:16
+#: ../panels/sharing/sharing.ui.h:14
 msgid "column"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:17
+#: ../panels/sharing/sharing.ui.h:15
 #, fuzzy
 msgid "Add Folder"
 msgstr "Aldoni profilon"
 
-#: ../panels/sharing/sharing.ui.h:18
+#: ../panels/sharing/sharing.ui.h:16
 #, fuzzy
 msgid "Remove Folder"
 msgstr "Forigi uzanton"
 
-#: ../panels/sharing/sharing.ui.h:20
+#: ../panels/sharing/sharing.ui.h:18
 #, no-c-format
 msgid ""
 "Personal File Sharing allows you to share your Public folder with others on "
 "your current network using: <a href=\"dav://%s\">dav://%s</a>"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:21
+#: ../panels/sharing/sharing.ui.h:19
 msgid "Share Public Folder On This Network"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:22
+#: ../panels/sharing/sharing.ui.h:20
 #, fuzzy
 msgid "Require Password"
 msgstr "Gruppasvorto"
 
-#: ../panels/sharing/sharing.ui.h:25
+#: ../panels/sharing/sharing.ui.h:23
 #, no-c-format
 msgid ""
 "Allow remote users to connect using the Secure Shell command:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:28
+#: ../panels/sharing/sharing.ui.h:26
 #, no-c-format
 msgid ""
 "Allow remote users to view or control your screen by connecting to: <a href="
 "\"vnc://%s\">vnc://%s</a>"
 msgstr ""
 
-#: ../panels/sharing/sharing.ui.h:29
+#: ../panels/sharing/sharing.ui.h:27
 #, fuzzy
 msgid "Remote View"
 msgstr "Forigi aparaton"
 
-#: ../panels/sharing/sharing.ui.h:30
+#: ../panels/sharing/sharing.ui.h:28
 #, fuzzy
 msgid "Remote Control"
 msgstr "Laŭtecregilo"
 
-#: ../panels/sharing/sharing.ui.h:31
+#: ../panels/sharing/sharing.ui.h:29
 #, fuzzy
 msgid "Approve All Connections"
 msgstr "Konekto"
 
-#: ../panels/sharing/sharing.ui.h:32
+#: ../panels/sharing/sharing.ui.h:30
 #, fuzzy
 msgid "Show Password"
 msgstr "_Montri pasvorton"
@@ -6377,55 +6409,55 @@ msgstr ""
 msgid "Failed to add account"
 msgstr "Fiaskis aldoni konton"
 
-#: ../panels/user-accounts/um-account-dialog.c:316
+#: ../panels/user-accounts/um-account-dialog.c:315
 msgid "This will be used to name your home folder and can't be changed."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:449
+#: ../panels/user-accounts/um-account-dialog.c:448
 #, fuzzy
 msgid "Passwords do not match."
 msgstr "La pasvortoj ne kongruas"
 
-#: ../panels/user-accounts/um-account-dialog.c:719
-#: ../panels/user-accounts/um-account-dialog.c:765
+#: ../panels/user-accounts/um-account-dialog.c:718
+#: ../panels/user-accounts/um-account-dialog.c:764
 #, fuzzy
 msgid "Failed to register account"
 msgstr "Fiaskis krei uzanton"
 
-#: ../panels/user-accounts/um-account-dialog.c:903
+#: ../panels/user-accounts/um-account-dialog.c:902
 msgid "No supported way to authenticate with this domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:962
+#: ../panels/user-accounts/um-account-dialog.c:961
 msgid "Failed to join domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1023
+#: ../panels/user-accounts/um-account-dialog.c:1022
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1030
+#: ../panels/user-accounts/um-account-dialog.c:1029
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1038
+#: ../panels/user-accounts/um-account-dialog.c:1037
 msgid "Failed to log into domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1096
+#: ../panels/user-accounts/um-account-dialog.c:1095
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1446
+#: ../panels/user-accounts/um-account-dialog.c:1445
 msgid "Add User"
 msgstr "Aldoni uzanton"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1459
+#: ../panels/user-accounts/um-account-dialog.c:1458
 #, fuzzy
 msgid "_Enterprise Login"
 msgstr "_Fingroprema ensaluto"
@@ -6576,19 +6608,19 @@ msgstr "Seanco finis"
 msgid "Session Started"
 msgstr "Seanco komencis"
 
-#: ../panels/user-accounts/um-password-dialog.c:146
+#: ../panels/user-accounts/um-password-dialog.c:145
 msgid "Please choose another password."
 msgstr "Bonvole elektu alian pasvorton."
 
-#: ../panels/user-accounts/um-password-dialog.c:155
+#: ../panels/user-accounts/um-password-dialog.c:154
 msgid "Please type your current password again."
 msgstr "Bonvole tajpu vian aktualan pasvorton denove."
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:160
 msgid "Password could not be changed"
 msgstr "Ne eblis ŝanĝi pasvorton."
 
-#: ../panels/user-accounts/um-password-dialog.c:287
+#: ../panels/user-accounts/um-password-dialog.c:285
 #, fuzzy
 msgid "The passwords do not match."
 msgstr "La pasvortoj ne kongruas"
@@ -6722,12 +6754,12 @@ msgstr ""
 "Por fari ŝanĝojn,\n"
 "klaku unue la *-piktogramon"
 
-#: ../panels/user-accounts/um-user-panel.c:1080
+#: ../panels/user-accounts/um-user-panel.c:1082
 msgid "Create a user account"
 msgstr "Krei uzantkonton"
 
-#: ../panels/user-accounts/um-user-panel.c:1091
-#: ../panels/user-accounts/um-user-panel.c:1380
+#: ../panels/user-accounts/um-user-panel.c:1093
+#: ../panels/user-accounts/um-user-panel.c:1383
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
@@ -6735,22 +6767,18 @@ msgstr ""
 "Por krei uzantkonton,\n"
 "klaku unue la *-piktogramon"
 
-#: ../panels/user-accounts/um-user-panel.c:1101
+#: ../panels/user-accounts/um-user-panel.c:1103
 msgid "Delete the selected user account"
 msgstr "Forigi la elektitan uzantkonton"
 
-#: ../panels/user-accounts/um-user-panel.c:1113
-#: ../panels/user-accounts/um-user-panel.c:1385
+#: ../panels/user-accounts/um-user-panel.c:1115
+#: ../panels/user-accounts/um-user-panel.c:1388
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr ""
 "Por forigi la elektitan uzantkonton,\n"
 "klaku unue la *-piktogramon"
-
-#: ../panels/user-accounts/um-user-panel.c:1295
-msgid "My Account"
-msgstr "Mia konto"
 
 #: ../panels/user-accounts/um-utils.c:551
 #, c-format
@@ -6806,13 +6834,13 @@ msgstr ""
 "Por redakti klavkombinon, alklaku la vicon kaj premu la novajn klavojn aŭ "
 "premu la retropaŝan klavon por vakigi."
 
-#: ../panels/wacom/calibrator/calibrator-gui.c:82
+#: ../panels/wacom/calibrator/calibrator-gui.c:84
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
 msgstr ""
 
-#: ../panels/wacom/calibrator/calibrator-gui.c:86
+#: ../panels/wacom/calibrator/calibrator-gui.c:88
 msgid "Mis-click detected, restarting..."
 msgstr ""
 
@@ -6870,7 +6898,7 @@ msgstr "Tajpadmonitoro"
 msgid "%d of %d"
 msgstr "%d de %d"
 
-#: ../panels/wacom/cc-wacom-page.c:522
+#: ../panels/wacom/cc-wacom-page.c:531
 msgid "Display Mapping"
 msgstr ""
 
@@ -7009,22 +7037,22 @@ msgstr ""
 msgid "Mode Switch #%d"
 msgstr ""
 
-#: ../panels/wacom/gsd-wacom-device.c:1336
+#: ../panels/wacom/gsd-wacom-device.c:1335
 #, c-format
 msgid "Left Button #%d"
 msgstr ""
 
-#: ../panels/wacom/gsd-wacom-device.c:1339
+#: ../panels/wacom/gsd-wacom-device.c:1338
 #, c-format
 msgid "Right Button #%d"
 msgstr ""
 
-#: ../panels/wacom/gsd-wacom-device.c:1342
+#: ../panels/wacom/gsd-wacom-device.c:1341
 #, c-format
 msgid "Top Button #%d"
 msgstr ""
 
-#: ../panels/wacom/gsd-wacom-device.c:1345
+#: ../panels/wacom/gsd-wacom-device.c:1344
 #, c-format
 msgid "Bottom Button #%d"
 msgstr ""
@@ -7131,12 +7159,12 @@ msgstr "Panelo por montri"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr ""
 
-#: ../shell/cc-application.c:142
+#: ../shell/cc-application.c:145
 #, fuzzy
 msgid "- Settings"
 msgstr "Ĉiuj agordoj"
 
-#: ../shell/cc-application.c:160
+#: ../shell/cc-application.c:163
 #, c-format
 msgid ""
 "%s\n"
@@ -7146,16 +7174,16 @@ msgstr ""
 "Rulu '%s --help' por vidi kompletan liston de disponeblaj komandliniaj "
 "opcioj.\n"
 
-#: ../shell/cc-application.c:190
+#: ../shell/cc-application.c:193
 #, fuzzy
 msgid "Available panels:"
 msgstr "Disponeblaj profiloj"
 
-#: ../shell/cc-application.c:325
+#: ../shell/cc-application.c:328
 msgid "Help"
 msgstr "Helpo"
 
-#: ../shell/cc-application.c:326
+#: ../shell/cc-application.c:329
 msgid "Quit"
 msgstr ""
 
@@ -7189,6 +7217,25 @@ msgstr "Agordoj"
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "agordoj;opcioj;"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Ŝlosa ekranon"
+
+#~ msgid "%s %d-bit"
+#~ msgstr "%s %d-bita"
+
+#~ msgid "Base system"
+#~ msgstr "Baza sistemo"
+
+#~ msgctxt "Input Source"
+#~ msgid "Other"
+#~ msgstr "Alia"
+
+#~ msgid "Add an Input Source"
+#~ msgstr "Aldoni enigan fonton"
+
+#~ msgid "Input Source Options"
+#~ msgstr "Enigaj fontaj agordoj"
 
 #~ msgid "Device type:"
 #~ msgstr "Aparattipo:"
@@ -7556,9 +7603,6 @@ msgstr "agordoj;opcioj;"
 #~ msgid "Enable _mouse clicks with touchpad"
 #~ msgstr "Ebligi _musklakojn per tuŝplato"
 
-#~ msgid "Scrolling"
-#~ msgstr "Rulumado"
-
 #~ msgid "_Disabled"
 #~ msgstr "_Elŝaltite"
 
@@ -7692,9 +7736,6 @@ msgstr "agordoj;opcioj;"
 
 #~ msgid "Change your region and language settings"
 #~ msgstr "Ŝanĝi vian regionon kaj lingvajn agordojn"
-
-#~ msgid "Keyboard Layout Options"
-#~ msgstr "Klavarfason-agordoj"
 
 #~ msgid ""
 #~ "The login screen, system accounts and new user accounts use the system-"

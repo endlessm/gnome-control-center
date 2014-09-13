@@ -20,9 +20,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"control-center&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-25 07:21+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-12 16:09-0700\n"
 "PO-Revision-Date: 2014-02-28 21:08+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
@@ -44,37 +43,32 @@ msgstr "Фон"
 msgid "Changes throughout the day"
 msgstr "Меняется в течение дня"
 
-#. To translators: This is the noon, not the verb
-#: ../panels/background/background.ui.h:5
-msgid "Lock Screen"
-msgstr "Экран блокировки"
-
-#: ../panels/background/background.ui.h:6
+#: ../panels/background/background.ui.h:4
 msgctxt "background, style"
 msgid "Tile"
 msgstr "Мозаика"
 
-#: ../panels/background/background.ui.h:7
+#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Zoom"
 msgstr "Приближение"
 
-#: ../panels/background/background.ui.h:8
+#: ../panels/background/background.ui.h:6
 msgctxt "background, style"
 msgid "Center"
 msgstr "По центру"
 
-#: ../panels/background/background.ui.h:9
+#: ../panels/background/background.ui.h:7
 msgctxt "background, style"
 msgid "Scale"
 msgstr "Масштаб"
 
-#: ../panels/background/background.ui.h:10
+#: ../panels/background/background.ui.h:8
 msgctxt "background, style"
 msgid "Fill"
 msgstr "Заполнить"
 
-#: ../panels/background/background.ui.h:11
+#: ../panels/background/background.ui.h:9
 msgctxt "background, style"
 msgid "Span"
 msgstr "Вместить"
@@ -85,6 +79,7 @@ msgid "Select Background"
 msgstr "Выбор фона"
 
 #: ../panels/background/cc-background-chooser-dialog.c:312
+#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Обои"
 
@@ -114,17 +109,17 @@ msgstr "Можно добавить изображения в папку %s и �
 
 #: ../panels/background/cc-background-chooser-dialog.c:429
 #: ../panels/bluetooth/cc-bluetooth-panel.c:640
-#: ../panels/color/cc-color-panel.c:221 ../panels/color/cc-color-panel.c:958
-#: ../panels/display/cc-display-panel.c:1510
-#: ../panels/display/cc-display-panel.c:1952
-#: ../panels/network/connection-editor/vpn-helpers.c:245
-#: ../panels/network/connection-editor/vpn-helpers.c:374
+#: ../panels/color/cc-color-panel.c:222 ../panels/color/cc-color-panel.c:959
+#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/network/connection-editor/vpn-helpers.c:250
+#: ../panels/network/connection-editor/vpn-helpers.c:379
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:470
+#: ../panels/privacy/cc-privacy-panel.c:616
 #: ../panels/search/cc-search-locations-dialog.c:682
 #: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
@@ -155,7 +150,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Без фона рабочего стола"
 
-#: ../panels/background/cc-background-panel.c:493
+#: ../panels/background/cc-background-panel.c:504
 msgid "Current background"
 msgstr "Текущий фон"
 
@@ -416,48 +411,48 @@ msgstr "Неоткалиброванный"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
-#: ../panels/color/cc-color-panel.c:137
+#: ../panels/color/cc-color-panel.c:138
 msgid "Default: "
 msgstr "По умолчанию:"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile his a standard space like AdobeRGB
-#: ../panels/color/cc-color-panel.c:145
+#: ../panels/color/cc-color-panel.c:146
 msgid "Colorspace: "
 msgstr "Цветовое пространство: "
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile is a test profile
-#: ../panels/color/cc-color-panel.c:152
+#: ../panels/color/cc-color-panel.c:153
 msgid "Test profile: "
 msgstr "Тестовый профиль: "
 
 #. TRANSLATORS: an ICC profile is a file containing colorspace data
-#: ../panels/color/cc-color-panel.c:219
+#: ../panels/color/cc-color-panel.c:220
 msgid "Select ICC Profile File"
 msgstr "Выберите файл профиля ICC"
 
-#: ../panels/color/cc-color-panel.c:222
+#: ../panels/color/cc-color-panel.c:223
 msgid "_Import"
 msgstr "_Импортировать"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:233
+#: ../panels/color/cc-color-panel.c:234
 msgid "Supported ICC profiles"
 msgstr "Поддерживаемые профили ICC"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:240
+#: ../panels/color/cc-color-panel.c:241
 #: ../panels/network/wireless-security/eap-method-fast.c:410
 msgid "All files"
 msgstr "Все файлы"
 
-#: ../panels/color/cc-color-panel.c:579
+#: ../panels/color/cc-color-panel.c:580
 msgid "Screen"
 msgstr "Экран"
 
 #. TRANSLATORS: this is when the upload of the profile failed
-#: ../panels/color/cc-color-panel.c:903
+#: ../panels/color/cc-color-panel.c:904
 #, c-format
 msgid "Failed to upload file: %s"
 msgstr "Не удалось загрузить файл: %s"
@@ -465,40 +460,40 @@ msgstr "Не удалось загрузить файл: %s"
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
 #. * only shown when the user uses a LiveCD to calibrate
-#: ../panels/color/cc-color-panel.c:917
+#: ../panels/color/cc-color-panel.c:918
 msgid "The profile has been uploaded to:"
 msgstr "Профиль был загружен на:"
 
-#: ../panels/color/cc-color-panel.c:919
+#: ../panels/color/cc-color-panel.c:920
 msgid "Write down this URL."
 msgstr "Запишите этот URL."
 
-#: ../panels/color/cc-color-panel.c:920
+#: ../panels/color/cc-color-panel.c:921
 msgid "Restart this computer and boot your normal operating system."
 msgstr "Перезапустите компьютер и загрузите обычную операционную систему."
 
-#: ../panels/color/cc-color-panel.c:921
+#: ../panels/color/cc-color-panel.c:922
 msgid "Type the URL into your browser to download and install the profile."
 msgstr ""
 "Введите URL в адресную строку браузера, чтобы загрузить и установить профиль."
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
-#: ../panels/color/cc-color-panel.c:955
+#: ../panels/color/cc-color-panel.c:956
 msgid "Save Profile"
 msgstr "Сохранить профиль"
 
-#: ../panels/color/cc-color-panel.c:959
-#: ../panels/network/connection-editor/vpn-helpers.c:375
+#: ../panels/color/cc-color-panel.c:960
+#: ../panels/network/connection-editor/vpn-helpers.c:380
 msgid "_Save"
 msgstr "_Сохранить"
 
 #. TRANSLATORS: this is when the button is sensitive
-#: ../panels/color/cc-color-panel.c:1315
+#: ../panels/color/cc-color-panel.c:1316
 msgid "Create a color profile for the selected device"
 msgstr "Создать цветовой профиль для выбранного устройства"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1330 ../panels/color/cc-color-panel.c:1354
+#: ../panels/color/cc-color-panel.c:1331 ../panels/color/cc-color-panel.c:1355
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
@@ -507,12 +502,12 @@ msgstr ""
 "подключен."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1364
+#: ../panels/color/cc-color-panel.c:1365
 msgid "The measuring instrument does not support printer profiling."
 msgstr "Измерительный инструмент не поддерживает профилирование принтеров."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1375
+#: ../panels/color/cc-color-panel.c:1376
 msgid "The device type is not currently supported."
 msgstr "Этот тип устройств ещё не поддерживается."
 
@@ -600,7 +595,7 @@ msgstr "Калибровка экрана"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -959,7 +954,7 @@ msgstr "Ещё…"
 msgid "No languages found"
 msgstr "Ни один язык не найден"
 
-#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:1
+#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:3
 msgid "Language"
 msgstr "Язык"
 
@@ -1131,25 +1126,27 @@ msgstr "Изменить системное время и дату"
 msgid "To change time or date settings, you need to authenticate."
 msgstr "Для изменения времени или даты требуется аутентификация."
 
-#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
 msgstr "Крышка ноутбука закрыта"
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:489
+#: ../panels/display/cc-display-panel.c:484
 msgid "Mirrored"
 msgstr "Дублируемый"
 
-#: ../panels/display/cc-display-panel.c:491
-#: ../panels/display/cc-display-panel.c:2101
+#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:2255
 msgid "Primary"
 msgstr "Основной"
 
-#: ../panels/display/cc-display-panel.c:493
-#: ../panels/notifications/cc-notifications-panel.c:205
+#: ../panels/display/cc-display-panel.c:488
+#: ../panels/notifications/cc-notifications-panel.c:206
 #: ../panels/power/cc-power-panel.c:1743 ../panels/power/cc-power-panel.c:1754
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1157,80 +1154,90 @@ msgstr "Основной"
 msgid "Off"
 msgstr "Выключен"
 
-#: ../panels/display/cc-display-panel.c:496
+#: ../panels/display/cc-display-panel.c:491
 msgid "Secondary"
 msgstr "Дополнительный"
 
-#: ../panels/display/cc-display-panel.c:1506
+#: ../panels/display/cc-display-panel.c:1501
 msgid "Arrange Combined Displays"
 msgstr "Упорядочить сгруппированные экраны"
 
-#: ../panels/display/cc-display-panel.c:1512
-#: ../panels/display/cc-display-panel.c:1955
+#: ../panels/display/cc-display-panel.c:1507
+#: ../panels/display/cc-display-panel.c:2089
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Apply"
 msgstr "_Применить"
 
-#: ../panels/display/cc-display-panel.c:1533
+#: ../panels/display/cc-display-panel.c:1528
 msgid "Drag displays to rearrange them"
 msgstr "Перетащите экраны, чтобы изменить их порядок"
 
-#: ../panels/display/cc-display-panel.c:2037
+#: ../panels/display/cc-display-panel.c:2191
 msgid "Size"
 msgstr "Размер"
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:2050
+#: ../panels/display/cc-display-panel.c:2204
 msgid "Aspect Ratio"
 msgstr "Соотношение сторон"
 
-#: ../panels/display/cc-display-panel.c:2071
+#: ../panels/display/cc-display-panel.c:2225
 #: ../panels/printers/pp-options-dialog.c:86
 msgid "Resolution"
 msgstr "Разрешение"
 
-#: ../panels/display/cc-display-panel.c:2102
+#: ../panels/display/cc-display-panel.c:2256
 msgid "Show the top bar and Activities Overview on this display"
 msgstr "Показывать верхнюю панель и режим обзора на этом дисплее"
 
-#: ../panels/display/cc-display-panel.c:2108
+#: ../panels/display/cc-display-panel.c:2262
 msgid "Secondary Display"
 msgstr "Дополнительный экран"
 
-#: ../panels/display/cc-display-panel.c:2109
+#: ../panels/display/cc-display-panel.c:2263
 msgid "Join this display with another to create an extra workspace"
 msgstr "Объединить этот дисплей с другим для увеличения рабочего пространства"
 
-#: ../panels/display/cc-display-panel.c:2116
+#: ../panels/display/cc-display-panel.c:2270
 msgid "Presentation"
 msgstr "Презентация"
 
-#: ../panels/display/cc-display-panel.c:2117
+#: ../panels/display/cc-display-panel.c:2271
 msgid "Show slideshows and media only"
 msgstr "Показывать только слайд-шоу и мультимедиа"
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2122
+#: ../panels/display/cc-display-panel.c:2276
 msgid "Mirror"
 msgstr "Зеркало"
 
-#: ../panels/display/cc-display-panel.c:2123
+#: ../panels/display/cc-display-panel.c:2277
 msgid "Show your existing view on both displays"
 msgstr "Показывать текущий вид на обоих дисплеях"
 
-#: ../panels/display/cc-display-panel.c:2129
+#: ../panels/display/cc-display-panel.c:2283
 msgid "Turn Off"
 msgstr "Выключить"
 
-#: ../panels/display/cc-display-panel.c:2130
+#: ../panels/display/cc-display-panel.c:2284
 msgid "Don't use this display"
 msgstr "Не использовать этот монитор"
 
-#: ../panels/display/cc-display-panel.c:2345
+#. overscan
+#: ../panels/display/cc-display-panel.c:2301
+msgid "Shrink screen to fit TV"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2307
+#, fuzzy
+msgid "Scaling"
+msgstr "Масштаб"
+
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Could not get screen information"
 msgstr "Не удалось получить информацию об экране"
 
-#: ../panels/display/cc-display-panel.c:2376
+#: ../panels/display/cc-display-panel.c:2463
 msgid "_Arrange Combined Displays"
 msgstr "_Расположить объединённые дисплеи"
 
@@ -1248,53 +1255,49 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "Панель;Проектор;xrandr;Экран;Разрешение;Обновить;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:452 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:454 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: ../panels/info/cc-info-panel.c:539
-#, c-format
-msgid "%s %d-bit"
-msgstr "%s %d-бит"
-
-#: ../panels/info/cc-info-panel.c:541
+#. translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit"
+#: ../panels/info/cc-info-panel.c:582
 #, c-format
 msgid "%d-bit"
 msgstr "%d-бит"
 
-#: ../panels/info/cc-info-panel.c:1221
+#: ../panels/info/cc-info-panel.c:1260
 msgid "Ask what to do"
 msgstr "Спрашивать, что делать"
 
-#: ../panels/info/cc-info-panel.c:1225
+#: ../panels/info/cc-info-panel.c:1264
 msgid "Do nothing"
 msgstr "Ничего не делать"
 
-#: ../panels/info/cc-info-panel.c:1229
+#: ../panels/info/cc-info-panel.c:1268
 msgid "Open folder"
 msgstr "Открыть папку"
 
-#: ../panels/info/cc-info-panel.c:1320
+#: ../panels/info/cc-info-panel.c:1359
 msgid "Other Media"
 msgstr "Другой носитель"
 
-#: ../panels/info/cc-info-panel.c:1351
+#: ../panels/info/cc-info-panel.c:1390
 msgid "Select an application for audio CDs"
 msgstr "Выберите приложение для звуковых компакт-дисков"
 
-#: ../panels/info/cc-info-panel.c:1352
+#: ../panels/info/cc-info-panel.c:1391
 msgid "Select an application for video DVDs"
 msgstr "Выберите приложения для видео DVD"
 
-#: ../panels/info/cc-info-panel.c:1353
+#: ../panels/info/cc-info-panel.c:1392
 msgid "Select an application to run when a music player is connected"
 msgstr "Выберите приложение, запускаемое при подключении музыкального плеера"
 
-#: ../panels/info/cc-info-panel.c:1354
+#: ../panels/info/cc-info-panel.c:1393
 msgid "Select an application to run when a camera is connected"
 msgstr "Выберите приложение, запускаемое при подключении камеры"
 
-#: ../panels/info/cc-info-panel.c:1355
+#: ../panels/info/cc-info-panel.c:1394
 msgid "Select an application for software CDs"
 msgstr "Выберите приложение для компакт-дисков с программами"
 
@@ -1303,89 +1306,89 @@ msgstr "Выберите приложение для компакт-дисков
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
 #.
-#: ../panels/info/cc-info-panel.c:1367
+#: ../panels/info/cc-info-panel.c:1406
 msgid "audio DVD"
 msgstr "звуковой DVD"
 
-#: ../panels/info/cc-info-panel.c:1368
+#: ../panels/info/cc-info-panel.c:1407
 msgid "blank Blu-ray disc"
 msgstr "чистый диск Blu-ray"
 
-#: ../panels/info/cc-info-panel.c:1369
+#: ../panels/info/cc-info-panel.c:1408
 msgid "blank CD disc"
 msgstr "чистый компакт-диск"
 
-#: ../panels/info/cc-info-panel.c:1370
+#: ../panels/info/cc-info-panel.c:1409
 msgid "blank DVD disc"
 msgstr "чистый диск DVD"
 
-#: ../panels/info/cc-info-panel.c:1371
+#: ../panels/info/cc-info-panel.c:1410
 msgid "blank HD DVD disc"
 msgstr "чистый диск HD DVD"
 
-#: ../panels/info/cc-info-panel.c:1372
+#: ../panels/info/cc-info-panel.c:1411
 msgid "Blu-ray video disc"
 msgstr "видеодиск Blu-ray"
 
-#: ../panels/info/cc-info-panel.c:1373
+#: ../panels/info/cc-info-panel.c:1412
 msgid "e-book reader"
 msgstr "устройство чтения электронных книг"
 
-#: ../panels/info/cc-info-panel.c:1374
+#: ../panels/info/cc-info-panel.c:1413
 msgid "HD DVD video disc"
 msgstr "видеодиск HD DVD"
 
-#: ../panels/info/cc-info-panel.c:1375
+#: ../panels/info/cc-info-panel.c:1414
 msgid "Picture CD"
 msgstr "диск Picture CD"
 
-#: ../panels/info/cc-info-panel.c:1376
+#: ../panels/info/cc-info-panel.c:1415
 msgid "Super Video CD"
 msgstr "компакт-диск Super Video"
 
-#: ../panels/info/cc-info-panel.c:1377
+#: ../panels/info/cc-info-panel.c:1416
 msgid "Video CD"
 msgstr "видеодиск VCD"
 
-#: ../panels/info/cc-info-panel.c:1378
+#: ../panels/info/cc-info-panel.c:1417
 msgid "Windows software"
 msgstr "приложение Windows"
 
-#: ../panels/info/cc-info-panel.c:1379
+#: ../panels/info/cc-info-panel.c:1418
 msgid "Software"
 msgstr "Приложение"
 
-#: ../panels/info/cc-info-panel.c:1502
+#: ../panels/info/cc-info-panel.c:1541
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "Раздел"
 
-#: ../panels/info/cc-info-panel.c:1511 ../panels/info/info.ui.h:13
+#: ../panels/info/cc-info-panel.c:1550 ../panels/info/info.ui.h:13
 msgid "Overview"
 msgstr "Обзор"
 
-#: ../panels/info/cc-info-panel.c:1517 ../panels/info/info.ui.h:20
+#: ../panels/info/cc-info-panel.c:1556 ../panels/info/info.ui.h:20
 msgid "Default Applications"
 msgstr "Приложения по умолчанию"
 
-#: ../panels/info/cc-info-panel.c:1522 ../panels/info/info.ui.h:28
+#: ../panels/info/cc-info-panel.c:1561 ../panels/info/info.ui.h:28
 msgid "Removable Media"
 msgstr "Съёмный носитель"
 
-#: ../panels/info/cc-info-panel.c:1547
+#: ../panels/info/cc-info-panel.c:1586
 #, c-format
 msgid "Version %s"
 msgstr "Версия %s"
 
-#: ../panels/info/cc-info-panel.c:1597
+#: ../panels/info/cc-info-panel.c:1653
 msgid "Install Updates"
 msgstr "Установить обновления"
 
-#: ../panels/info/cc-info-panel.c:1601
+#: ../panels/info/cc-info-panel.c:1657
 msgid "System Up-To-Date"
 msgstr "Нет обновлений"
 
-#: ../panels/info/cc-info-panel.c:1605
+#: ../panels/info/cc-info-panel.c:1661
 msgid "Checking for Updates"
 msgstr "Проверка на наличие обновлений"
 
@@ -1426,17 +1429,22 @@ msgid "Device name"
 msgstr "Название устройства"
 
 #: ../panels/info/info.ui.h:5
+#, fuzzy
+msgid "Version"
+msgstr "Версия 0"
+
+#: ../panels/info/info.ui.h:6
 msgid "Memory"
 msgstr "Память"
 
-#: ../panels/info/info.ui.h:6
+#: ../panels/info/info.ui.h:7
 msgid "Processor"
 msgstr "Процессор"
 
-#. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-msgid "Base system"
-msgstr "Базовая система"
+#, fuzzy
+msgid "OS Type"
+msgstr "Тип"
 
 #: ../panels/info/info.ui.h:9
 msgid "Disk"
@@ -1792,7 +1800,6 @@ msgid "Cursor blink speed"
 msgstr "Частота мигания курсора"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/region.ui.h:5
 msgid "Input Sources"
 msgstr "Источники ввода"
 
@@ -2002,11 +2009,11 @@ msgstr "Один щелчок, вторичная кнопка"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:358
+#: ../panels/network/cc-network-panel.c:361
 msgid "Air_plane Mode"
 msgstr "Режим для _авиаперелётов"
 
-#: ../panels/network/cc-network-panel.c:930
+#: ../panels/network/cc-network-panel.c:933
 msgid "Network proxy"
 msgstr "Сетевая прокси-служба"
 
@@ -2014,14 +2021,14 @@ msgstr "Сетевая прокси-служба"
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: ../panels/network/cc-network-panel.c:1109 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "VPN %s"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1244
+#: ../panels/network/cc-network-panel.c:1247
 msgid "The system network services are not compatible with this version."
 msgstr "Системные сетевые службы несовместимы с этой версией."
 
@@ -2465,7 +2472,7 @@ msgstr "Создать профиль"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1471
+#: ../panels/user-accounts/um-account-dialog.c:1470
 msgid "_Add"
 msgstr "_Добавить"
 
@@ -2530,11 +2537,11 @@ msgstr ""
 msgid "S_ecurity"
 msgstr "_Безопасность"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:205
+#: ../panels/network/connection-editor/vpn-helpers.c:210
 msgid "Cannot import VPN connection"
 msgstr "Не удалось импортировать соединение VPN"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:207
+#: ../panels/network/connection-editor/vpn-helpers.c:212
 #, c-format
 msgid ""
 "The file '%s' could not be read or does not contain recognized VPN "
@@ -2547,36 +2554,36 @@ msgstr ""
 "\n"
 "Ошибка: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:242
+#: ../panels/network/connection-editor/vpn-helpers.c:247
 msgid "Select file to import"
 msgstr "Выберите файл для импортирования"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:246
+#: ../panels/network/connection-editor/vpn-helpers.c:251
 #: ../panels/printers/cc-printers-panel.c:1947
 #: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
 msgstr "_Открыть"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:294
+#: ../panels/network/connection-editor/vpn-helpers.c:299
 #, c-format
 msgid "A file named \"%s\" already exists."
 msgstr "Файл с именем «%s» уже существует."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:296
+#: ../panels/network/connection-editor/vpn-helpers.c:301
 msgid "_Replace"
 msgstr "_Заменить"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:298
+#: ../panels/network/connection-editor/vpn-helpers.c:303
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr "Заменить %s сохраняемым VPN-соединением?"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:334
+#: ../panels/network/connection-editor/vpn-helpers.c:339
 msgid "Cannot export VPN connection"
 msgstr "Не удалось экспортировать соединение VPN"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:336
+#: ../panels/network/connection-editor/vpn-helpers.c:341
 #, c-format
 msgid ""
 "The VPN connection '%s' could not be exported to %s.\n"
@@ -2587,7 +2594,7 @@ msgstr ""
 "\n"
 "Ошибка: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:371
+#: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection..."
 msgstr "Экспортировать соединение VPN…"
 
@@ -3593,10 +3600,11 @@ msgctxt "notifications"
 msgid "Show Details in Lock Screen"
 msgstr "Показывать подробности в уведомлениях при заблокированном экране"
 
-#: ../panels/notifications/cc-notifications-panel.c:205
+#: ../panels/notifications/cc-notifications-panel.c:206
 #: ../panels/power/cc-power-panel.c:1749 ../panels/power/cc-power-panel.c:1756
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -4668,39 +4676,45 @@ msgstr ""
 "Системная служба печати\n"
 "недоступна или не запущена."
 
-#: ../panels/privacy/cc-privacy-panel.c:248 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "Блокировка экрана"
 
-#: ../panels/privacy/cc-privacy-panel.c:361 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#, fuzzy
+msgid "Metrics"
+msgstr "Метрика"
+
+#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "Статистика и история"
 
-#: ../panels/privacy/cc-privacy-panel.c:489
+#: ../panels/privacy/cc-privacy-panel.c:635
 msgid "Empty all items from Trash?"
 msgstr "Удалить все объекты из корзины?"
 
-#: ../panels/privacy/cc-privacy-panel.c:490
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Все объекты корзины будут безвозвратно удалены."
 
-#: ../panels/privacy/cc-privacy-panel.c:491 ../panels/privacy/privacy.ui.h:32
+#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "_Очистить корзину"
 
-#: ../panels/privacy/cc-privacy-panel.c:514
+#: ../panels/privacy/cc-privacy-panel.c:660
 msgid "Delete all the temporary files?"
 msgstr "Удалить все временные файлы?"
 
-#: ../panels/privacy/cc-privacy-panel.c:515
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "All the temporary files will be permanently deleted."
 msgstr "Все временные файлы будут безвозвратно удалены."
 
-#: ../panels/privacy/cc-privacy-panel.c:516 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "_Удалить временные файлы"
 
-#: ../panels/privacy/cc-privacy-panel.c:538 ../panels/privacy/privacy.ui.h:31
+#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "Очистка корзины и временные файлы"
 
@@ -4795,23 +4809,33 @@ msgid "Retain _History"
 msgstr "Сохранение _истории"
 
 #: ../panels/privacy/privacy.ui.h:27
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:28
+msgid "Enable Metrics Collection"
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:30
 msgid "The Screen Lock protects your privacy when you are away."
 msgstr ""
 "Блокировка экрана защищает вашу конфиденциальность, когда вас нет на месте."
 
-#: ../panels/privacy/privacy.ui.h:28
+#: ../panels/privacy/privacy.ui.h:31
 msgid "Automatic Screen _Lock"
 msgstr "Автоматическая _блокировка экрана"
 
-#: ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/privacy.ui.h:32
 msgid "Lock screen _after blank for"
 msgstr "Блокировка экрана"
 
-#: ../panels/privacy/privacy.ui.h:30
+#: ../panels/privacy/privacy.ui.h:33
 msgid "Show _Notifications"
 msgstr "Показывать _уведомления"
 
-#: ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/privacy.ui.h:37
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
@@ -4819,15 +4843,15 @@ msgstr ""
 "Автоматически очищать корзину и удалять временные файлы, чтобы помочь "
 "сохранить компьютер свободным от ненужных конфиденциальной информации."
 
-#: ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/privacy.ui.h:38
 msgid "Automatically empty _Trash"
 msgstr "Автоматически очищать _корзину"
 
-#: ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/privacy.ui.h:39
 msgid "Automatically purge Temporary _Files"
 msgstr "Автоматически удалять временные _файлы"
 
-#: ../panels/privacy/privacy.ui.h:37
+#: ../panels/privacy/privacy.ui.h:40
 msgid "Purge _After"
 msgstr "Очищать п_осле"
 
@@ -4850,40 +4874,37 @@ msgid "No input sources found"
 msgstr "Источники ввода не найдены"
 
 #: ../panels/region/cc-input-chooser.c:1070
-msgctxt "Input Source"
+#, fuzzy
+msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Другое"
 
-#: ../panels/region/cc-region-panel.c:239
+#: ../panels/region/cc-region-panel.c:230
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr "Необходимо перезапустить сеанс, чтобы изменения вступили в силу"
 
-#: ../panels/region/cc-region-panel.c:240
+#: ../panels/region/cc-region-panel.c:231
 msgid "Restart Now"
 msgstr "Перезапустить сейчас"
 
-#: ../panels/region/cc-region-panel.c:569
+#: ../panels/region/cc-region-panel.c:560
 msgctxt "Language"
 msgid "None"
 msgstr "Нет"
 
-#: ../panels/region/cc-region-panel.c:853
+#: ../panels/region/cc-region-panel.c:844
 msgid "No input source selected"
 msgstr "Не выбран источник ввода"
 
-#: ../panels/region/cc-region-panel.c:1084
+#: ../panels/region/cc-region-panel.c:1075
 msgid "Sorry"
 msgstr "Извините"
 
-#: ../panels/region/cc-region-panel.c:1086
+#: ../panels/region/cc-region-panel.c:1077
 msgid "Input methods can't be used on the login screen"
 msgstr "Методы ввода нельзя использовать на экране входа в систему"
 
-#: ../panels/region/cc-region-panel.c:1716
-msgid "Login Screen"
-msgstr "Экран входа"
-
-#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:3
+#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:5
 msgid "Formats"
 msgstr "Форматы"
 
@@ -4927,12 +4948,14 @@ msgid "Language;Layout;Keyboard;Input;"
 msgstr "Язык;Раскладка;Клавиатура;Ввод;"
 
 #: ../panels/region/input-chooser.ui.h:1
-msgid "Add an Input Source"
-msgstr "Добавить источник ввода"
+#, fuzzy
+msgid "Add a Keyboard Layout"
+msgstr "Комбинации клавиш"
 
 #: ../panels/region/input-options.ui.h:1
-msgid "Input Source Options"
-msgstr "Параметры источников ввода"
+#, fuzzy
+msgid "Keyboard Layout Options"
+msgstr "Параметры клавиатуры"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -4974,19 +4997,32 @@ msgstr "Альтернативный переключатель источник
 msgid "Left+Right Alt"
 msgstr "Левый+Правый Alt"
 
+#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1298
+msgid "My Account"
+msgstr "Моя учётная запись"
+
 #: ../panels/region/region.ui.h:2
+msgid "Login Screen"
+msgstr "Экран входа"
+
+#: ../panels/region/region.ui.h:4
 msgid "English (United Kingdom)"
 msgstr "Английский (Великобритания)"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "United Kingdom"
 msgstr "Великобритания"
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:7
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "Комбинации клавиш"
+
+#: ../panels/region/region.ui.h:8
 msgid "Options"
 msgstr "Параметры"
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Login settings are used by all users when logging into the system"
 msgstr "Параметры входа в систему используются всеми пользователями"
 
@@ -5017,7 +5053,7 @@ msgstr "Выберите расположение"
 msgid "_OK"
 msgstr "_OK"
 
-#: ../panels/search/cc-search-panel.c:177
+#: ../panels/search/cc-search-panel.c:178
 msgid "No applications found"
 msgstr "Приложения не найдены"
 
@@ -6302,29 +6338,29 @@ msgstr "Веб-адрес должен совпадать с адресом пр
 msgid "Failed to add account"
 msgstr "Не удалось добавить учётную запись"
 
-#: ../panels/user-accounts/um-account-dialog.c:316
+#: ../panels/user-accounts/um-account-dialog.c:315
 msgid "This will be used to name your home folder and can't be changed."
 msgstr ""
 "Используется для именования вашей домашней папки и не может быть изменено."
 
-#: ../panels/user-accounts/um-account-dialog.c:449
+#: ../panels/user-accounts/um-account-dialog.c:448
 msgid "Passwords do not match."
 msgstr "Пароли не совпадают."
 
-#: ../panels/user-accounts/um-account-dialog.c:719
-#: ../panels/user-accounts/um-account-dialog.c:765
+#: ../panels/user-accounts/um-account-dialog.c:718
+#: ../panels/user-accounts/um-account-dialog.c:764
 msgid "Failed to register account"
 msgstr "Не удалось зарегистрировать учётную запись"
 
-#: ../panels/user-accounts/um-account-dialog.c:903
+#: ../panels/user-accounts/um-account-dialog.c:902
 msgid "No supported way to authenticate with this domain"
 msgstr "Нет поддерживаемого метода аутентификации в этом домене"
 
-#: ../panels/user-accounts/um-account-dialog.c:962
+#: ../panels/user-accounts/um-account-dialog.c:961
 msgid "Failed to join domain"
 msgstr "Не удалось подключить к домену"
 
-#: ../panels/user-accounts/um-account-dialog.c:1023
+#: ../panels/user-accounts/um-account-dialog.c:1022
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
@@ -6332,7 +6368,7 @@ msgstr ""
 "Неправильное имя пользователя.\n"
 "Попробуйте ещё раз."
 
-#: ../panels/user-accounts/um-account-dialog.c:1030
+#: ../panels/user-accounts/um-account-dialog.c:1029
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
@@ -6340,20 +6376,20 @@ msgstr ""
 "Неправильный пароль.\n"
 "Попробуйте ещё раз."
 
-#: ../panels/user-accounts/um-account-dialog.c:1038
+#: ../panels/user-accounts/um-account-dialog.c:1037
 msgid "Failed to log into domain"
 msgstr "Не удалось войти в домен"
 
-#: ../panels/user-accounts/um-account-dialog.c:1096
+#: ../panels/user-accounts/um-account-dialog.c:1095
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr "Не удалось найти домен. Может быть, он написан с ошибкой?"
 
-#: ../panels/user-accounts/um-account-dialog.c:1446
+#: ../panels/user-accounts/um-account-dialog.c:1445
 msgid "Add User"
 msgstr "Добавить пользователя"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1459
+#: ../panels/user-accounts/um-account-dialog.c:1458
 msgid "_Enterprise Login"
 msgstr "_Корпоративный вход"
 
@@ -6500,19 +6536,19 @@ msgstr "Сеанс завершён"
 msgid "Session Started"
 msgstr "Сеанс начат"
 
-#: ../panels/user-accounts/um-password-dialog.c:146
+#: ../panels/user-accounts/um-password-dialog.c:145
 msgid "Please choose another password."
 msgstr "Выберите другой пароль."
 
-#: ../panels/user-accounts/um-password-dialog.c:155
+#: ../panels/user-accounts/um-password-dialog.c:154
 msgid "Please type your current password again."
 msgstr "Введите пароль ещё раз."
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:160
 msgid "Password could not be changed"
 msgstr "Не удалось изменить пароль"
 
-#: ../panels/user-accounts/um-password-dialog.c:287
+#: ../panels/user-accounts/um-password-dialog.c:285
 msgid "The passwords do not match."
 msgstr "Пароли не совпадают."
 
@@ -6642,12 +6678,12 @@ msgstr ""
 "Чтобы изменить,\n"
 "сначала нажмите на значок *"
 
-#: ../panels/user-accounts/um-user-panel.c:1080
+#: ../panels/user-accounts/um-user-panel.c:1082
 msgid "Create a user account"
 msgstr "Создать учётную запись пользователя"
 
-#: ../panels/user-accounts/um-user-panel.c:1091
-#: ../panels/user-accounts/um-user-panel.c:1380
+#: ../panels/user-accounts/um-user-panel.c:1093
+#: ../panels/user-accounts/um-user-panel.c:1383
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
@@ -6655,22 +6691,18 @@ msgstr ""
 "Чтобы создать учётную запись пользователя,\n"
 "сначала нажмите на значок *"
 
-#: ../panels/user-accounts/um-user-panel.c:1101
+#: ../panels/user-accounts/um-user-panel.c:1103
 msgid "Delete the selected user account"
 msgstr "Удалить выбранную учётную запись пользователя"
 
-#: ../panels/user-accounts/um-user-panel.c:1113
-#: ../panels/user-accounts/um-user-panel.c:1385
+#: ../panels/user-accounts/um-user-panel.c:1115
+#: ../panels/user-accounts/um-user-panel.c:1388
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr ""
 "Чтобы удалить выбранную учётную запись пользователя,\n"
 "сначала нажмите на значок *"
-
-#: ../panels/user-accounts/um-user-panel.c:1295
-msgid "My Account"
-msgstr "Моя учётная запись"
 
 #: ../panels/user-accounts/um-utils.c:551
 #, c-format
@@ -7095,6 +7127,25 @@ msgstr "Параметры"
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Настройка;Параметры;"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Экран блокировки"
+
+#~ msgid "%s %d-bit"
+#~ msgstr "%s %d-бит"
+
+#~ msgid "Base system"
+#~ msgstr "Базовая система"
+
+#~ msgctxt "Input Source"
+#~ msgid "Other"
+#~ msgstr "Другое"
+
+#~ msgid "Add an Input Source"
+#~ msgstr "Добавить источник ввода"
+
+#~ msgid "Input Source Options"
+#~ msgstr "Параметры источников ввода"
 
 #~ msgid "Share Public Folder"
 #~ msgstr "Общий доступ к папке"

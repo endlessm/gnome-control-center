@@ -6,9 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"control-center&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-10-08 16:05+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-12 16:09-0700\n"
 "PO-Revision-Date: 2013-10-10 23:39+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
@@ -31,35 +30,31 @@ msgid "Changes throughout the day"
 msgstr "Тағйироти рӯз"
 
 #: ../panels/background/background.ui.h:4
-msgid "Lock Screen"
-msgstr "Экрани қулф"
-
-#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Tile"
 msgstr "Сафолпӯш"
 
-#: ../panels/background/background.ui.h:6
+#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Zoom"
 msgstr "Танзими андоза"
 
-#: ../panels/background/background.ui.h:7
+#: ../panels/background/background.ui.h:6
 msgctxt "background, style"
 msgid "Center"
 msgstr "Ба марказ кӯчонидан"
 
-#: ../panels/background/background.ui.h:8
+#: ../panels/background/background.ui.h:7
 msgctxt "background, style"
 msgid "Scale"
 msgstr "Миқиёсбандӣ"
 
-#: ../panels/background/background.ui.h:9
+#: ../panels/background/background.ui.h:8
 msgctxt "background, style"
 msgid "Fill"
 msgstr "Пуркунӣ"
 
-#: ../panels/background/background.ui.h:10
+#: ../panels/background/background.ui.h:9
 msgctxt "background, style"
 msgid "Span"
 msgstr "Ваҷаб"
@@ -70,6 +65,7 @@ msgid "Select Background"
 msgstr "Интихоби пасзамина"
 
 #: ../panels/background/cc-background-chooser-dialog.c:312
+#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Тасвирҳои экран"
 
@@ -99,21 +95,21 @@ msgstr ""
 "Шумо метавонед тасвирҳоро ба ҷузвдони %s илова кунед ва онҳо дар ин ҷо "
 "намоиш дода мешаванд"
 
-#: ../panels/background/cc-background-chooser-dialog.c:428
+#: ../panels/background/cc-background-chooser-dialog.c:429
 #: ../panels/bluetooth/cc-bluetooth-panel.c:640
-#: ../panels/color/cc-color-panel.c:221 ../panels/color/cc-color-panel.c:958
-#: ../panels/display/cc-display-panel.c:1509
-#: ../panels/display/cc-display-panel.c:1924
-#: ../panels/network/connection-editor/vpn-helpers.c:245
-#: ../panels/network/connection-editor/vpn-helpers.c:374
+#: ../panels/color/cc-color-panel.c:222 ../panels/color/cc-color-panel.c:959
+#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/network/connection-editor/vpn-helpers.c:250
+#: ../panels/network/connection-editor/vpn-helpers.c:379
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:470
+#: ../panels/privacy/cc-privacy-panel.c:616
 #: ../panels/search/cc-search-locations-dialog.c:682
-#: ../panels/sharing/cc-sharing-panel.c:435
+#: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
 #: ../panels/user-accounts/um-photo-dialog.c:96
 #: ../panels/user-accounts/um-photo-dialog.c:221
@@ -121,7 +117,7 @@ msgstr ""
 msgid "_Cancel"
 msgstr "_Бекор кардан"
 
-#: ../panels/background/cc-background-chooser-dialog.c:429
+#: ../panels/background/cc-background-chooser-dialog.c:430
 #: ../panels/printers/ppd-selection-dialog.ui.h:3
 #: ../panels/user-accounts/um-photo-dialog.c:98
 msgid "Select"
@@ -142,7 +138,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Бе пасзаминаи мизи корӣ"
 
-#: ../panels/background/cc-background-panel.c:493
+#: ../panels/background/cc-background-panel.c:504
 msgid "Current background"
 msgstr "Пасзаминаи ҷорӣ"
 
@@ -406,48 +402,48 @@ msgstr "Санҷиш нашудааст"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
-#: ../panels/color/cc-color-panel.c:137
+#: ../panels/color/cc-color-panel.c:138
 msgid "Default: "
 msgstr "Пешфарз:"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile his a standard space like AdobeRGB
-#: ../panels/color/cc-color-panel.c:145
+#: ../panels/color/cc-color-panel.c:146
 msgid "Colorspace: "
 msgstr "Фазои рангин:"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile is a test profile
-#: ../panels/color/cc-color-panel.c:152
+#: ../panels/color/cc-color-panel.c:153
 msgid "Test profile: "
 msgstr "Санҷиши профил:"
 
 #. TRANSLATORS: an ICC profile is a file containing colorspace data
-#: ../panels/color/cc-color-panel.c:219
+#: ../panels/color/cc-color-panel.c:220
 msgid "Select ICC Profile File"
 msgstr "Интихоби файли профили ICC"
 
-#: ../panels/color/cc-color-panel.c:222
+#: ../panels/color/cc-color-panel.c:223
 msgid "_Import"
 msgstr "_Ворид кардан"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:233
+#: ../panels/color/cc-color-panel.c:234
 msgid "Supported ICC profiles"
 msgstr "Профилҳои дастгиришудаи ICC"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:240
+#: ../panels/color/cc-color-panel.c:241
 #: ../panels/network/wireless-security/eap-method-fast.c:410
 msgid "All files"
 msgstr "Ҳамаи файлҳо"
 
-#: ../panels/color/cc-color-panel.c:579
+#: ../panels/color/cc-color-panel.c:580
 msgid "Screen"
 msgstr "Экран"
 
 #. TRANSLATORS: this is when the upload of the profile failed
-#: ../panels/color/cc-color-panel.c:903
+#: ../panels/color/cc-color-panel.c:904
 #, c-format
 msgid "Failed to upload file: %s"
 msgstr "Боркунии файл қатъ шуд: %s"
@@ -455,42 +451,42 @@ msgstr "Боркунии файл қатъ шуд: %s"
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
 #. * only shown when the user uses a LiveCD to calibrate
-#: ../panels/color/cc-color-panel.c:917
+#: ../panels/color/cc-color-panel.c:918
 msgid "The profile has been uploaded to:"
 msgstr "Профил ба макони зерин бор шудааст:"
 
-#: ../panels/color/cc-color-panel.c:919
+#: ../panels/color/cc-color-panel.c:920
 msgid "Write down this URL."
 msgstr "Ин суроғаи URL-ро нависед."
 
-#: ../panels/color/cc-color-panel.c:920
+#: ../panels/color/cc-color-panel.c:921
 msgid "Restart this computer and boot your normal operating system."
 msgstr ""
 "Бозоғозидани ин компютер ва роҳандозӣ кардани системаи омили муқаррарии шумо"
 
-#: ../panels/color/cc-color-panel.c:921
+#: ../panels/color/cc-color-panel.c:922
 msgid "Type the URL into your browser to download and install the profile."
 msgstr ""
 "Суроғаи URL-ро ба браузери худ ворид кунед, то ин ки профилро боргирӣ ва "
 "насб кунед."
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
-#: ../panels/color/cc-color-panel.c:955
+#: ../panels/color/cc-color-panel.c:956
 msgid "Save Profile"
 msgstr "Захира кардани профил"
 
-#: ../panels/color/cc-color-panel.c:959
-#: ../panels/network/connection-editor/vpn-helpers.c:375
+#: ../panels/color/cc-color-panel.c:960
+#: ../panels/network/connection-editor/vpn-helpers.c:380
 msgid "_Save"
 msgstr "_Захира кардан"
 
 #. TRANSLATORS: this is when the button is sensitive
-#: ../panels/color/cc-color-panel.c:1315
+#: ../panels/color/cc-color-panel.c:1316
 msgid "Create a color profile for the selected device"
 msgstr "Эҷод кардани профили рангин барои дастгоҳи интихобшуда"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1330 ../panels/color/cc-color-panel.c:1354
+#: ../panels/color/cc-color-panel.c:1331 ../panels/color/cc-color-panel.c:1355
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
@@ -499,12 +495,12 @@ msgstr ""
 "дуруст пайваст шудаанд."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1364
+#: ../panels/color/cc-color-panel.c:1365
 msgid "The measuring instrument does not support printer profiling."
 msgstr "Абзори ченкунӣ профилҳои принтерро дастгирӣ намекунад."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1375
+#: ../panels/color/cc-color-panel.c:1376
 msgid "The device type is not currently supported."
 msgstr "Намуди дастгоҳ дар айни ҳол дастгирӣ намешавад."
 
@@ -591,7 +587,7 @@ msgstr "Санҷиши дисплей"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "Cancel"
 msgstr "Бекор кардан"
 
@@ -611,10 +607,10 @@ msgid "Done"
 msgstr "Тайёр"
 
 #. Timeout parameters
-#. 5000 = 5 sec
+#. 15000 = 15 sec
 #. 750 = 0.75 sec
 #. Text printed on screen
-#: ../panels/color/color.ui.h:1 ../panels/wacom/calibrator/calibrator-gui.c:81
+#: ../panels/color/color.ui.h:1 ../panels/wacom/calibrator/calibrator-gui.c:83
 msgid "Screen Calibration"
 msgstr "Санҷиши экран"
 
@@ -947,7 +943,7 @@ msgstr "Бештар…"
 msgid "No languages found"
 msgstr "Ягон забон ёфт нашудааст"
 
-#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:1
+#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:3
 msgid "Language"
 msgstr "Забон"
 
@@ -1117,25 +1113,27 @@ msgstr "Тағйир додани танзимоти вақт ва санаи с
 msgid "To change time or date settings, you need to authenticate."
 msgstr "Барои тағйир додани танзимоти вақт ё сана, шумо бояд ворид шавед."
 
-#: ../panels/display/cc-display-panel.c:485
+#: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
 msgstr "Сапрӯши пӯшида"
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:488
+#: ../panels/display/cc-display-panel.c:484
 msgid "Mirrored"
 msgstr "Мунъакис"
 
-#: ../panels/display/cc-display-panel.c:490
-#: ../panels/display/cc-display-panel.c:2057
+#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:2255
 msgid "Primary"
 msgstr "Асосӣ"
 
-#: ../panels/display/cc-display-panel.c:492
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1729 ../panels/power/cc-power-panel.c:1740
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/display/cc-display-panel.c:488
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1743 ../panels/power/cc-power-panel.c:1754
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1143,83 +1141,92 @@ msgstr "Асосӣ"
 msgid "Off"
 msgstr "Хомӯш"
 
-#: ../panels/display/cc-display-panel.c:495
+#: ../panels/display/cc-display-panel.c:491
 msgid "Secondary"
 msgstr "Дуюм"
 
-#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:1501
 msgid "Arrange Combined Displays"
 msgstr "Мураттабсозии дисплейҳои ҳамҷояшуда"
 
-#: ../panels/display/cc-display-panel.c:1511
-#: ../panels/display/cc-display-panel.c:1927
+#: ../panels/display/cc-display-panel.c:1507
+#: ../panels/display/cc-display-panel.c:2089
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Apply"
 msgstr "_Татбиқ кардан"
 
-#: ../panels/display/cc-display-panel.c:1532
+#: ../panels/display/cc-display-panel.c:1528
 msgid "Drag displays to rearrange them"
 msgstr "Барои аз нав мураттабсозии дисплейҳо, онҳоро кашед"
 
-#. size
-#: ../panels/display/cc-display-panel.c:1991
+#: ../panels/display/cc-display-panel.c:2191
 msgid "Size"
 msgstr "Андоза"
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:2006
+#: ../panels/display/cc-display-panel.c:2204
 msgid "Aspect Ratio"
 msgstr "Таносуб"
 
-#: ../panels/display/cc-display-panel.c:2027
+#: ../panels/display/cc-display-panel.c:2225
 #: ../panels/printers/pp-options-dialog.c:86
 msgid "Resolution"
 msgstr "Возеҳӣ"
 
-#: ../panels/display/cc-display-panel.c:2058
+#: ../panels/display/cc-display-panel.c:2256
 msgid "Show the top bar and Activities Overview on this display"
 msgstr "Намоиш додани навори болоӣ ва хулосаи фаъолият дар ин дисплей"
 
-#: ../panels/display/cc-display-panel.c:2064
+#: ../panels/display/cc-display-panel.c:2262
 msgid "Secondary Display"
 msgstr "Дисплейи дуюм"
 
-#: ../panels/display/cc-display-panel.c:2065
+#: ../panels/display/cc-display-panel.c:2263
 msgid "Join this display with another to create an extra workspace"
 msgstr ""
 "Муттаҳид кардани ин дисплей бо дисплейи дигар барои омода кардни фазои кории "
 "иловагӣ"
 
-#: ../panels/display/cc-display-panel.c:2072
+#: ../panels/display/cc-display-panel.c:2270
 msgid "Presentation"
 msgstr "Тақдим"
 
-#: ../panels/display/cc-display-panel.c:2073
+#: ../panels/display/cc-display-panel.c:2271
 msgid "Show slideshows and media only"
 msgstr "Намоиш додани танҳо слайдҳо ва мултимедиа"
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2078
+#: ../panels/display/cc-display-panel.c:2276
 msgid "Mirror"
 msgstr "Оина"
 
-#: ../panels/display/cc-display-panel.c:2079
+#: ../panels/display/cc-display-panel.c:2277
 msgid "Show your existing view on both displays"
 msgstr "Намоиш додани намуди ҷорӣ дар ҳар дуи дисплей"
 
-#: ../panels/display/cc-display-panel.c:2085
+#: ../panels/display/cc-display-panel.c:2283
 msgid "Turn Off"
 msgstr "Хомӯш кардан"
 
-#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/display/cc-display-panel.c:2284
 msgid "Don't use this display"
 msgstr "Истифода набурдани ин дисплей"
 
+#. overscan
 #: ../panels/display/cc-display-panel.c:2301
+msgid "Shrink screen to fit TV"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2307
+#, fuzzy
+msgid "Scaling"
+msgstr "Миқиёсбандӣ"
+
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Could not get screen information"
 msgstr "Иттилооти экран ёфт нашуд"
 
-#: ../panels/display/cc-display-panel.c:2332
+#: ../panels/display/cc-display-panel.c:2463
 msgid "_Arrange Combined Displays"
 msgstr "_Мураттабсозии дисплейҳои ҳамҷояшуда"
 
@@ -1237,56 +1244,52 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "Панел;Проектор;xrandr;Экран;Возеҳӣ;Навсозӣ;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:451 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:454 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "Номаълум"
 
-#: ../panels/info/cc-info-panel.c:534
-#, c-format
-msgid "%s %d-bit"
-msgstr "%s %d-бит"
-
-#: ../panels/info/cc-info-panel.c:536
+#. translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit"
+#: ../panels/info/cc-info-panel.c:582
 #, c-format
 msgid "%d-bit"
 msgstr "%d-бит"
 
-#: ../panels/info/cc-info-panel.c:1216
+#: ../panels/info/cc-info-panel.c:1260
 msgid "Ask what to do"
 msgstr "Чӣ бояд кард?"
 
-#: ../panels/info/cc-info-panel.c:1220
+#: ../panels/info/cc-info-panel.c:1264
 msgid "Do nothing"
 msgstr "Амалиёт лозим нест"
 
-#: ../panels/info/cc-info-panel.c:1224
+#: ../panels/info/cc-info-panel.c:1268
 msgid "Open folder"
 msgstr "Кушодани ҷузвдон"
 
-#: ../panels/info/cc-info-panel.c:1315
+#: ../panels/info/cc-info-panel.c:1359
 msgid "Other Media"
 msgstr "Мултимедиаи дигар"
 
-#: ../panels/info/cc-info-panel.c:1346
+#: ../panels/info/cc-info-panel.c:1390
 msgid "Select an application for audio CDs"
 msgstr "Интихоби барнома барои аудио дар дискҳои CD"
 
-#: ../panels/info/cc-info-panel.c:1347
+#: ../panels/info/cc-info-panel.c:1391
 msgid "Select an application for video DVDs"
 msgstr "Интихоби барнома барои видео дар дискҳои DVD"
 
-#: ../panels/info/cc-info-panel.c:1348
+#: ../panels/info/cc-info-panel.c:1392
 msgid "Select an application to run when a music player is connected"
 msgstr ""
 "Барномаеро барои иҷро шудан ҳангоми пайваст шудани плеери мусиқӣ интихоб "
 "кунед"
 
-#: ../panels/info/cc-info-panel.c:1349
+#: ../panels/info/cc-info-panel.c:1393
 msgid "Select an application to run when a camera is connected"
 msgstr ""
 "Барномаеро барои иҷро шудан ҳангоми пайваст шудани камера интихоб кунед"
 
-#: ../panels/info/cc-info-panel.c:1350
+#: ../panels/info/cc-info-panel.c:1394
 msgid "Select an application for software CDs"
 msgstr "Интихоби барнома барои нармафзор дан дискҳои CD"
 
@@ -1295,89 +1298,89 @@ msgstr "Интихоби барнома барои нармафзор дан д�
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
 #.
-#: ../panels/info/cc-info-panel.c:1362
+#: ../panels/info/cc-info-panel.c:1406
 msgid "audio DVD"
 msgstr "Диски аудиоии DVD"
 
-#: ../panels/info/cc-info-panel.c:1363
+#: ../panels/info/cc-info-panel.c:1407
 msgid "blank Blu-ray disc"
 msgstr "диски холии Blu-ray"
 
-#: ../panels/info/cc-info-panel.c:1364
+#: ../panels/info/cc-info-panel.c:1408
 msgid "blank CD disc"
 msgstr "диски холии CD"
 
-#: ../panels/info/cc-info-panel.c:1365
+#: ../panels/info/cc-info-panel.c:1409
 msgid "blank DVD disc"
 msgstr "диски холии DVD"
 
-#: ../panels/info/cc-info-panel.c:1366
+#: ../panels/info/cc-info-panel.c:1410
 msgid "blank HD DVD disc"
 msgstr "диски холии HD DVD"
 
-#: ../panels/info/cc-info-panel.c:1367
+#: ../panels/info/cc-info-panel.c:1411
 msgid "Blu-ray video disc"
 msgstr "Диски видеои Blu-ray"
 
-#: ../panels/info/cc-info-panel.c:1368
+#: ../panels/info/cc-info-panel.c:1412
 msgid "e-book reader"
 msgstr "Хонандаи китобхои электронӣ"
 
-#: ../panels/info/cc-info-panel.c:1369
+#: ../panels/info/cc-info-panel.c:1413
 msgid "HD DVD video disc"
 msgstr "Диски видеои HD DVD"
 
-#: ../panels/info/cc-info-panel.c:1370
+#: ../panels/info/cc-info-panel.c:1414
 msgid "Picture CD"
 msgstr "Суратҳо дар CD"
 
-#: ../panels/info/cc-info-panel.c:1371
+#: ../panels/info/cc-info-panel.c:1415
 msgid "Super Video CD"
 msgstr "Супервидеои CD"
 
-#: ../panels/info/cc-info-panel.c:1372
+#: ../panels/info/cc-info-panel.c:1416
 msgid "Video CD"
 msgstr "Видеои CD"
 
-#: ../panels/info/cc-info-panel.c:1373
+#: ../panels/info/cc-info-panel.c:1417
 msgid "Windows software"
 msgstr "Нармафзори Windows"
 
-#: ../panels/info/cc-info-panel.c:1374
+#: ../panels/info/cc-info-panel.c:1418
 msgid "Software"
 msgstr "Нармафзор"
 
-#: ../panels/info/cc-info-panel.c:1497
+#: ../panels/info/cc-info-panel.c:1541
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "Қисмат"
 
-#: ../panels/info/cc-info-panel.c:1506 ../panels/info/info.ui.h:13
+#: ../panels/info/cc-info-panel.c:1550 ../panels/info/info.ui.h:13
 msgid "Overview"
 msgstr "Хулоса"
 
-#: ../panels/info/cc-info-panel.c:1512 ../panels/info/info.ui.h:20
+#: ../panels/info/cc-info-panel.c:1556 ../panels/info/info.ui.h:20
 msgid "Default Applications"
 msgstr "Барномаҳои пешфарз"
 
-#: ../panels/info/cc-info-panel.c:1517 ../panels/info/info.ui.h:28
+#: ../panels/info/cc-info-panel.c:1561 ../panels/info/info.ui.h:28
 msgid "Removable Media"
 msgstr "Медиаи ҷудошаванда"
 
-#: ../panels/info/cc-info-panel.c:1542
+#: ../panels/info/cc-info-panel.c:1586
 #, c-format
 msgid "Version %s"
 msgstr "Версияи %s"
 
-#: ../panels/info/cc-info-panel.c:1592
+#: ../panels/info/cc-info-panel.c:1653
 msgid "Install Updates"
 msgstr "Насб кардани навсозиҳо"
 
-#: ../panels/info/cc-info-panel.c:1596
+#: ../panels/info/cc-info-panel.c:1657
 msgid "System Up-To-Date"
 msgstr "Системаи шумо нав мебошад"
 
-#: ../panels/info/cc-info-panel.c:1600
+#: ../panels/info/cc-info-panel.c:1661
 msgid "Checking for Updates"
 msgstr "Санҷиши навсозиҳо"
 
@@ -1417,17 +1420,22 @@ msgid "Device name"
 msgstr "Номи дастгоҳ"
 
 #: ../panels/info/info.ui.h:5
+#, fuzzy
+msgid "Version"
+msgstr "Версияи 0"
+
+#: ../panels/info/info.ui.h:6
 msgid "Memory"
 msgstr "Ҳофиза"
 
-#: ../panels/info/info.ui.h:6
+#: ../panels/info/info.ui.h:7
 msgid "Processor"
 msgstr "Просессор"
 
-#. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-msgid "Base system"
-msgstr "Системаи асосӣ"
+#, fuzzy
+msgid "OS Type"
+msgstr "Навъ"
 
 #: ../panels/info/info.ui.h:9
 msgid "Disk"
@@ -1785,7 +1793,6 @@ msgid "Cursor blink speed"
 msgstr "Суръати мижазании курсор"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/region.ui.h:5
 msgid "Input Sources"
 msgstr "Манбаҳои вуруд"
 
@@ -1996,11 +2003,11 @@ msgstr "Зеркунии якбора, тугмаи иловагӣ"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:358
+#: ../panels/network/cc-network-panel.c:361
 msgid "Air_plane Mode"
 msgstr "Ҳ_олати ҳавопаймо"
 
-#: ../panels/network/cc-network-panel.c:930
+#: ../panels/network/cc-network-panel.c:933
 msgid "Network proxy"
 msgstr "Прокси шабака"
 
@@ -2008,14 +2015,14 @@ msgstr "Прокси шабака"
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: ../panels/network/cc-network-panel.c:1109 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "VPN-и %s"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1244
+#: ../panels/network/cc-network-panel.c:1247
 msgid "The system network services are not compatible with this version."
 msgstr "Хидматҳои шабакавии система бо ин версия мутобиқат намекунанд."
 
@@ -2211,7 +2218,7 @@ msgstr "Дастӣ"
 msgid "Link-Local Only"
 msgstr "Танҳо пайванди маҳаллӣ"
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:942
+#: ../panels/network/connection-editor/ce-page-ip4.c:934
 #: ../panels/network/network-wifi.ui.h:46
 msgid "IPv4"
 msgstr "IPv4"
@@ -2233,7 +2240,7 @@ msgstr "Худкор"
 msgid "Automatic, DHCP only"
 msgstr "Худкорона, танҳо DHCP"
 
-#: ../panels/network/connection-editor/ce-page-ip6.c:902
+#: ../panels/network/connection-editor/ce-page-ip6.c:894
 #: ../panels/network/network-wifi.ui.h:47
 msgid "IPv6"
 msgstr "IPv6"
@@ -2458,7 +2465,7 @@ msgstr "Профили нав"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1471
+#: ../panels/user-accounts/um-account-dialog.c:1470
 msgid "_Add"
 msgstr "_Илова кардан"
 
@@ -2471,23 +2478,23 @@ msgstr "VPN"
 msgid "Bond"
 msgstr "Пайваст"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:597
+#: ../panels/network/connection-editor/net-connection-editor.c:600
 msgid "Bridge"
 msgstr "Кӯпрук"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:598
+#: ../panels/network/connection-editor/net-connection-editor.c:601
 msgid "VLAN"
 msgstr "VLAN"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:749
+#: ../panels/network/connection-editor/net-connection-editor.c:752
 msgid "Could not load VPN plugins"
 msgstr "Плагинҳои VPN бор намешаванд"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:818
+#: ../panels/network/connection-editor/net-connection-editor.c:821
 msgid "Import from file…"
 msgstr "Ворид кардан аз файл…"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:889
+#: ../panels/network/connection-editor/net-connection-editor.c:892
 msgid "Add Network Connection"
 msgstr "Илова кардани пайвасти шабака"
 
@@ -2522,11 +2529,11 @@ msgstr ""
 msgid "S_ecurity"
 msgstr "_Амният"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:205
+#: ../panels/network/connection-editor/vpn-helpers.c:210
 msgid "Cannot import VPN connection"
 msgstr "Пайвасти VPN ворид намешавад"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:207
+#: ../panels/network/connection-editor/vpn-helpers.c:212
 #, c-format
 msgid ""
 "The file '%s' could not be read or does not contain recognized VPN "
@@ -2539,36 +2546,36 @@ msgstr ""
 "\n"
 "Хатогӣ: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:242
+#: ../panels/network/connection-editor/vpn-helpers.c:247
 msgid "Select file to import"
 msgstr "Интихоби файл барои воридот"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:246
+#: ../panels/network/connection-editor/vpn-helpers.c:251
 #: ../panels/printers/cc-printers-panel.c:1947
-#: ../panels/sharing/cc-sharing-panel.c:436
+#: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
 msgstr "_Кушодан"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:294
+#: ../panels/network/connection-editor/vpn-helpers.c:299
 #, c-format
 msgid "A file named \"%s\" already exists."
 msgstr "Номи файли \"%s\" аллакай мавҷуд аст."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:296
+#: ../panels/network/connection-editor/vpn-helpers.c:301
 msgid "_Replace"
 msgstr "Ҷойгузин _кардан"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:298
+#: ../panels/network/connection-editor/vpn-helpers.c:303
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr "Шумо мехоҳед, ки %s-ро бо пайвасти VPN-и захирашуда ҷойгузин кунед?"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:334
+#: ../panels/network/connection-editor/vpn-helpers.c:339
 msgid "Cannot export VPN connection"
 msgstr "Пайвасти VPN содир намешавад"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:336
+#: ../panels/network/connection-editor/vpn-helpers.c:341
 #, c-format
 msgid ""
 "The VPN connection '%s' could not be exported to %s.\n"
@@ -2579,7 +2586,7 @@ msgstr ""
 "\n"
 "Хатогӣ: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:371
+#: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection..."
 msgstr "Содир кардани пайвасти VPN..."
 
@@ -2687,6 +2694,11 @@ msgstr "Профили %d"
 #: ../panels/network/net-device-mobile.c:232
 msgid "Add new connection"
 msgstr "Илова кардани пайвасти нав"
+
+#: ../panels/network/net-device-team.c:77
+#, fuzzy
+msgid "Team slaves"
+msgstr "Кӯпруки фармонбар"
 
 #: ../panels/network/net-device-wifi.c:1110
 msgid ""
@@ -3580,10 +3592,11 @@ msgctxt "notifications"
 msgid "Show Details in Lock Screen"
 msgstr "Намоиш додани тафсилот дар экрани қулф"
 
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1735 ../panels/power/cc-power-panel.c:1742
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1749 ../panels/power/cc-power-panel.c:1756
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -3785,171 +3798,171 @@ msgstr "Пуркунии барқ"
 msgid "Discharging"
 msgstr "Тамомшавии барқ"
 
-#: ../panels/power/cc-power-panel.c:395
+#: ../panels/power/cc-power-panel.c:400
 msgctxt "Battery name"
 msgid "Main"
 msgstr "Асосӣ"
 
-#: ../panels/power/cc-power-panel.c:397
+#: ../panels/power/cc-power-panel.c:402
 msgctxt "Battery name"
 msgid "Extra"
 msgstr "Иловагӣ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:488
+#: ../panels/power/cc-power-panel.c:474
 msgid "Wireless mouse"
 msgstr "Муши бесим"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:492
+#: ../panels/power/cc-power-panel.c:477
 msgid "Wireless keyboard"
 msgstr "Клавиатураи бесим"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:496
+#: ../panels/power/cc-power-panel.c:480
 msgid "Uninterruptible power supply"
 msgstr "Таъминоти қатънашавандаи барқ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:501
+#: ../panels/power/cc-power-panel.c:483
 msgid "Personal digital assistant"
 msgstr "Ёрдамчии рақамии шахсӣ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:505
+#: ../panels/power/cc-power-panel.c:486
 msgid "Cellphone"
 msgstr "Телефони мобилӣ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:509
+#: ../panels/power/cc-power-panel.c:489
 msgid "Media player"
 msgstr "Плеери мултимедиа"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:513
+#: ../panels/power/cc-power-panel.c:492
 msgid "Tablet"
 msgstr "Планшет"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:517
+#: ../panels/power/cc-power-panel.c:495
 msgid "Computer"
 msgstr "Компютер"
 
 #. TRANSLATORS: secondary battery, misc
-#: ../panels/power/cc-power-panel.c:521 ../panels/power/cc-power-panel.c:731
-#: ../panels/power/cc-power-panel.c:2066
+#: ../panels/power/cc-power-panel.c:498 ../panels/power/cc-power-panel.c:745
+#: ../panels/power/cc-power-panel.c:2080
 msgid "Battery"
 msgstr "Батарея"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:530
+#: ../panels/power/cc-power-panel.c:544
 msgctxt "Battery power"
 msgid "Charging"
 msgstr "Пуркунии барқ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:537
+#: ../panels/power/cc-power-panel.c:551
 msgctxt "Battery power"
 msgid "Caution"
 msgstr "Диққат"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:542
+#: ../panels/power/cc-power-panel.c:556
 msgctxt "Battery power"
 msgid "Low"
 msgstr "Паст"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:547
+#: ../panels/power/cc-power-panel.c:561
 msgctxt "Battery power"
 msgid "Good"
 msgstr "Хуб"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:552
+#: ../panels/power/cc-power-panel.c:566
 msgctxt "Battery power"
 msgid "Fully charged"
 msgstr "Комилан пур аст"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:556
+#: ../panels/power/cc-power-panel.c:570
 msgctxt "Battery power"
 msgid "Empty"
 msgstr "Холӣ"
 
-#: ../panels/power/cc-power-panel.c:729
+#: ../panels/power/cc-power-panel.c:743
 msgid "Batteries"
 msgstr "Батареяҳо"
 
-#: ../panels/power/cc-power-panel.c:1135
+#: ../panels/power/cc-power-panel.c:1149
 msgid "When _idle"
 msgstr "Вақте ки беҳаракат аст"
 
-#: ../panels/power/cc-power-panel.c:1504
+#: ../panels/power/cc-power-panel.c:1518
 msgid "Power Saving"
 msgstr "Захиракунии барқ"
 
-#: ../panels/power/cc-power-panel.c:1532
+#: ../panels/power/cc-power-panel.c:1546
 msgid "_Screen brightness"
 msgstr "_Равшании экран"
 
-#: ../panels/power/cc-power-panel.c:1538
+#: ../panels/power/cc-power-panel.c:1552
 msgid "_Keyboard brightness"
 msgstr "_Дурахшонии экран"
 
-#: ../panels/power/cc-power-panel.c:1548
+#: ../panels/power/cc-power-panel.c:1562
 msgid "_Dim screen when inactive"
 msgstr "_Камнур кардани экран дар ҳолати ғайрифаъол"
 
-#: ../panels/power/cc-power-panel.c:1573
+#: ../panels/power/cc-power-panel.c:1587
 msgid "_Blank screen"
 msgstr "_Экрани холӣ"
 
-#: ../panels/power/cc-power-panel.c:1610
+#: ../panels/power/cc-power-panel.c:1624
 msgid "_Wi-Fi"
 msgstr "_Wi-Fi"
 
-#: ../panels/power/cc-power-panel.c:1615
+#: ../panels/power/cc-power-panel.c:1629
 msgid "Turns off wireless devices"
 msgstr "Хомӯш кардани дастгоҳҳои бесим"
 
-#: ../panels/power/cc-power-panel.c:1640
+#: ../panels/power/cc-power-panel.c:1654
 msgid "_Mobile broadband"
 msgstr "_Паҳннавори мобилӣ"
 
-#: ../panels/power/cc-power-panel.c:1645
+#: ../panels/power/cc-power-panel.c:1659
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr "Дастгоҳҳои паҳннавори мобилиро (3G, 4G, WiMax, ва ғайра) хомӯш мекунад"
 
-#: ../panels/power/cc-power-panel.c:1680
+#: ../panels/power/cc-power-panel.c:1694
 msgid "_Bluetooth"
 msgstr "_Bluetooth"
 
-#: ../panels/power/cc-power-panel.c:1731
+#: ../panels/power/cc-power-panel.c:1745
 msgid "When on battery power"
 msgstr "Вақте ки аз батарея кор мекунад"
 
-#: ../panels/power/cc-power-panel.c:1733
+#: ../panels/power/cc-power-panel.c:1747
 msgid "When plugged in"
 msgstr "Вақте ки аз манбаъ барқ кор мекунад"
 
-#: ../panels/power/cc-power-panel.c:1862
+#: ../panels/power/cc-power-panel.c:1876
 msgid "Suspend & Power Off"
 msgstr "Таваққуф ва анҷоми кор"
 
-#: ../panels/power/cc-power-panel.c:1895
+#: ../panels/power/cc-power-panel.c:1909
 msgid "_Automatic suspend"
 msgstr "_Таваққуфи худкор"
 
-#: ../panels/power/cc-power-panel.c:1919
+#: ../panels/power/cc-power-panel.c:1933
 msgid "When battery power is _critical"
 msgstr "_Вақте ки барқи батарея қариб ба анҷом расид"
 
-#: ../panels/power/cc-power-panel.c:1976
+#: ../panels/power/cc-power-panel.c:1990
 msgid "Power Off"
 msgstr "Анҷоми кор"
 
-#: ../panels/power/cc-power-panel.c:2113
+#: ../panels/power/cc-power-panel.c:2127
 msgid "Devices"
 msgstr "Дастгоҳҳо"
 
@@ -4055,7 +4068,7 @@ msgid "Authenticate"
 msgstr "Санҷиши ҳаққоният"
 
 #: ../panels/printers/authentication-dialog.ui.h:5
-#: ../panels/sharing/sharing.ui.h:23
+#: ../panels/sharing/sharing.ui.h:21
 #: ../panels/user-accounts/data/account-dialog.ui.h:6
 msgid "Password"
 msgstr "Парол"
@@ -4639,39 +4652,45 @@ msgstr ""
 "Мутаассифона, хидмати системаи чоп\n"
 "дар айни ҳол дастнорас аст."
 
-#: ../panels/privacy/cc-privacy-panel.c:248 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "Экрани қулф"
 
-#: ../panels/privacy/cc-privacy-panel.c:361 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#, fuzzy
+msgid "Metrics"
+msgstr "Метрӣ"
+
+#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "Истифодабарӣ ва таърих"
 
-#: ../panels/privacy/cc-privacy-panel.c:489
+#: ../panels/privacy/cc-privacy-panel.c:635
 msgid "Empty all items from Trash?"
 msgstr "Ҳамаи объектҳои сабадро бебозгашт нест мекунед?"
 
-#: ../panels/privacy/cc-privacy-panel.c:490
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Ҳамаи объектҳои сабад бебозгашт нест карда мешаванд."
 
-#: ../panels/privacy/cc-privacy-panel.c:491 ../panels/privacy/privacy.ui.h:32
+#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "_Холӣ кардани сабад"
 
-#: ../panels/privacy/cc-privacy-panel.c:514
+#: ../panels/privacy/cc-privacy-panel.c:660
 msgid "Delete all the temporary files?"
 msgstr "Ҳамаи файлҳои муваққатиро нест мекунед?"
 
-#: ../panels/privacy/cc-privacy-panel.c:515
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "All the temporary files will be permanently deleted."
 msgstr "Ҳамаи файлҳои муваққатӣ бебозгашт нест карда мешаванд."
 
-#: ../panels/privacy/cc-privacy-panel.c:516 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "_Пок кардани файлҳои муваққатӣ"
 
-#: ../panels/privacy/cc-privacy-panel.c:538 ../panels/privacy/privacy.ui.h:31
+#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "Пок кардани сабад ва файлҳои муваққатӣ"
 
@@ -4767,23 +4786,34 @@ msgid "Retain _History"
 msgstr "Нигоҳ доштани _таърих"
 
 #: ../panels/privacy/privacy.ui.h:27
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:28
+#, fuzzy
+msgid "Enable Metrics Collection"
+msgstr "Фаъол кардани ин ҳисоб"
+
+#: ../panels/privacy/privacy.ui.h:30
 msgid "The Screen Lock protects your privacy when you are away."
 msgstr ""
 "Қулфи экран ҳангоми мавҷуд набудани шумо махфияти шуморо муҳофизат мекунад."
 
-#: ../panels/privacy/privacy.ui.h:28
+#: ../panels/privacy/privacy.ui.h:31
 msgid "Automatic Screen _Lock"
 msgstr "Қулфи экрани _худкор"
 
-#: ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/privacy.ui.h:32
 msgid "Lock screen _after blank for"
 msgstr "Қулф кардани экран _баъд аз холӣ дар давоми"
 
-#: ../panels/privacy/privacy.ui.h:30
+#: ../panels/privacy/privacy.ui.h:33
 msgid "Show _Notifications"
 msgstr "_Намоиш додани огоҳиҳо"
 
-#: ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/privacy.ui.h:37
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
@@ -4791,15 +4821,15 @@ msgstr ""
 "Тоза кардани сабад ва файлҳои муваққатӣ ба таври худкор барои нигоҳ доштани "
 "компютер бе иттилооти нодаркор."
 
-#: ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/privacy.ui.h:38
 msgid "Automatically empty _Trash"
 msgstr "Холӣ кардани сабад _ба таври худкор"
 
-#: ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/privacy.ui.h:39
 msgid "Automatically purge Temporary _Files"
 msgstr "Холӣ кардани файлҳои _муваққатӣ ба таври худкор"
 
-#: ../panels/privacy/privacy.ui.h:37
+#: ../panels/privacy/privacy.ui.h:40
 msgid "Purge _After"
 msgstr "Пок кардан _баъд аз"
 
@@ -4822,40 +4852,37 @@ msgid "No input sources found"
 msgstr "Ягон манбаи вуруд ёфт нашудааст"
 
 #: ../panels/region/cc-input-chooser.c:1070
-msgctxt "Input Source"
+#, fuzzy
+msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Дигар"
 
-#: ../panels/region/cc-region-panel.c:239
+#: ../panels/region/cc-region-panel.c:230
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr "Барои татбиқ кардани тағйирот шумо бояд системаро бозоғозӣ кунед"
 
-#: ../panels/region/cc-region-panel.c:240
+#: ../panels/region/cc-region-panel.c:231
 msgid "Restart Now"
 msgstr "Ҳозир бозоғозӣ кардан"
 
-#: ../panels/region/cc-region-panel.c:569
+#: ../panels/region/cc-region-panel.c:560
 msgctxt "Language"
 msgid "None"
 msgstr "Ҳеҷ"
 
-#: ../panels/region/cc-region-panel.c:853
+#: ../panels/region/cc-region-panel.c:844
 msgid "No input source selected"
 msgstr "Ягон манбаи вуруд интихоб нашудааст"
 
-#: ../panels/region/cc-region-panel.c:1084
+#: ../panels/region/cc-region-panel.c:1075
 msgid "Sorry"
 msgstr "Бубахшед"
 
-#: ../panels/region/cc-region-panel.c:1086
+#: ../panels/region/cc-region-panel.c:1077
 msgid "Input methods can't be used on the login screen"
 msgstr "Усулҳои вуруд наметавонанд дар экрани воридшавӣ истифода шаванд"
 
-#: ../panels/region/cc-region-panel.c:1716
-msgid "Login Screen"
-msgstr "Экрани воридшавӣ"
-
-#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:3
+#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:5
 msgid "Formats"
 msgstr "Форматҳо"
 
@@ -4900,12 +4927,14 @@ msgid "Language;Layout;Keyboard;Input;"
 msgstr "Забон;Тарҳбандӣ;Клавиатура;Вуруд;"
 
 #: ../panels/region/input-chooser.ui.h:1
-msgid "Add an Input Source"
-msgstr "Илова кардани манбаи вуруд"
+#, fuzzy
+msgid "Add a Keyboard Layout"
+msgstr "Миёнбурҳои клавиатура"
 
 #: ../panels/region/input-options.ui.h:1
-msgid "Input Source Options"
-msgstr "Имконоти манбаи вуруд"
+#, fuzzy
+msgid "Keyboard Layout Options"
+msgstr "Танзимоти клавиатура"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -4947,19 +4976,32 @@ msgstr "Қатъу васлкунии иловагӣ ба манбаи навб�
 msgid "Left+Right Alt"
 msgstr "Alt-и рост + чап"
 
+#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1298
+msgid "My Account"
+msgstr "Ҳисоби ман"
+
 #: ../panels/region/region.ui.h:2
+msgid "Login Screen"
+msgstr "Экрани воридшавӣ"
+
+#: ../panels/region/region.ui.h:4
 msgid "English (United Kingdom)"
 msgstr "Англисӣ (Шоҳигарии Муттаҳида)"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "United Kingdom"
 msgstr "Британияи Кабир"
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:7
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "Миёнбурҳои клавиатура"
+
+#: ../panels/region/region.ui.h:8
 msgid "Options"
 msgstr "Имконот"
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Login settings are used by all users when logging into the system"
 msgstr ""
 "Танзимоти воридшавӣ бо ҳамаи корбарон ҳангоми воридшавӣ ба система истифода "
@@ -4992,7 +5034,7 @@ msgstr "Интихоби ҷойгиршавӣ"
 msgid "_OK"
 msgstr "_OK"
 
-#: ../panels/search/cc-search-panel.c:177
+#: ../panels/search/cc-search-panel.c:178
 msgid "No applications found"
 msgstr "Ягон барнома ёфт нашуд"
 
@@ -5038,11 +5080,11 @@ msgctxt "service is disabled"
 msgid "Off"
 msgstr "Хомӯш"
 
-#: ../panels/sharing/cc-sharing-panel.c:432
+#: ../panels/sharing/cc-sharing-panel.c:422
 msgid "Choose a Folder"
 msgstr "Интихоб кардани ҷузвдон"
 
-#: ../panels/sharing/cc-sharing-panel.c:739
+#: ../panels/sharing/cc-sharing-panel.c:736
 msgid "Copy"
 msgstr "Нусха бардоштан"
 
@@ -5085,74 +5127,66 @@ msgstr ""
 "дастгоҳҳои дигари Bluetooth-дор мубодила кунед"
 
 #: ../panels/sharing/sharing.ui.h:3
-msgid "Share Public Folder"
-msgstr "Мубодила кардани ҷузвдони оммавӣ"
-
-#: ../panels/sharing/sharing.ui.h:4
 msgid "Only Receive From Trusted Devices"
 msgstr "Қабул кардан танҳо аз дастгоҳҳои боэътибор"
 
-#: ../panels/sharing/sharing.ui.h:5
+#: ../panels/sharing/sharing.ui.h:4
 msgid "Save Received Files to Downloads Folder"
 msgstr "Захира кардани файлҳои захирашуда ба ҷузвдони боргириҳо"
 
-#: ../panels/sharing/sharing.ui.h:6
-msgid "Only share with Trusted Devices"
-msgstr "Мубодила кардан танҳо бо дастгоҳҳои боэътибор"
-
-#: ../panels/sharing/sharing.ui.h:7
+#: ../panels/sharing/sharing.ui.h:5
 msgid "Computer Name"
 msgstr "Номи компютер"
 
-#: ../panels/sharing/sharing.ui.h:8
+#: ../panels/sharing/sharing.ui.h:6
 msgid "Personal File Sharing"
 msgstr "Мубодилаи файлҳои шахсӣ"
 
-#: ../panels/sharing/sharing.ui.h:9
+#: ../panels/sharing/sharing.ui.h:7
 msgid "Screen Sharing"
 msgstr "Мубодилаи экран"
 
-#: ../panels/sharing/sharing.ui.h:10
+#: ../panels/sharing/sharing.ui.h:8
 msgid "Media Sharing"
 msgstr "Мубодилакунии медиа"
 
-#: ../panels/sharing/sharing.ui.h:11
+#: ../panels/sharing/sharing.ui.h:9
 msgid "Remote Login"
 msgstr "Воридшавии дурдаст"
 
-#: ../panels/sharing/sharing.ui.h:12
+#: ../panels/sharing/sharing.ui.h:10
 msgid "Some services are disabled because of no network access."
 msgstr ""
 "Аз сабаби мавҷуд набудани дастрасии шабакавӣ, баъзе хидматҳо ғайрифаъол "
 "карда шудаанд."
 
-#: ../panels/sharing/sharing.ui.h:13
+#: ../panels/sharing/sharing.ui.h:11
 msgid "Share Music, Photos and Videos with others on the current network."
 msgstr ""
 "Мубодила кардани мусиқӣ, суратҳо ва видеоҳо бо корбарни дигар дар шабакаи "
 "ҷорӣ."
 
-#: ../panels/sharing/sharing.ui.h:14
+#: ../panels/sharing/sharing.ui.h:12
 msgid "Share Media On This Network"
 msgstr "Мубодила кардани медиа дар ин шабака"
 
-#: ../panels/sharing/sharing.ui.h:15
+#: ../panels/sharing/sharing.ui.h:13
 msgid "Shared Folders"
 msgstr "Ҷузвдонҳои мубодилашуда"
 
-#: ../panels/sharing/sharing.ui.h:16
+#: ../panels/sharing/sharing.ui.h:14
 msgid "column"
 msgstr "сутун"
 
-#: ../panels/sharing/sharing.ui.h:17
+#: ../panels/sharing/sharing.ui.h:15
 msgid "Add Folder"
 msgstr "Илова кардани ҷузвдон"
 
-#: ../panels/sharing/sharing.ui.h:18
+#: ../panels/sharing/sharing.ui.h:16
 msgid "Remove Folder"
 msgstr "Тоза кардани ҷузвдон"
 
-#: ../panels/sharing/sharing.ui.h:20
+#: ../panels/sharing/sharing.ui.h:18
 #, no-c-format
 msgid ""
 "Personal File Sharing allows you to share your Public folder with others on "
@@ -5162,15 +5196,15 @@ msgstr ""
 "\"-и худро бо дигарон дар шабакаи ҷории худ тавассути зерин мебодила кунед: "
 "<a href=\"dav://%s\">dav://%s</a>"
 
-#: ../panels/sharing/sharing.ui.h:21
+#: ../panels/sharing/sharing.ui.h:19
 msgid "Share Public Folder On This Network"
 msgstr "Мубодила кардани ҷузвдони оммавӣ дар ин шабака"
 
-#: ../panels/sharing/sharing.ui.h:22
+#: ../panels/sharing/sharing.ui.h:20
 msgid "Require Password"
 msgstr "Парол ҳатмист"
 
-#: ../panels/sharing/sharing.ui.h:25
+#: ../panels/sharing/sharing.ui.h:23
 #, no-c-format
 msgid ""
 "Allow remote users to connect using the Secure Shell command:\n"
@@ -5180,7 +5214,7 @@ msgstr ""
 "Secure Shell-ро истифода баранд:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
 
-#: ../panels/sharing/sharing.ui.h:28
+#: ../panels/sharing/sharing.ui.h:26
 #, no-c-format
 msgid ""
 "Allow remote users to view or control your screen by connecting to: <a href="
@@ -5189,19 +5223,19 @@ msgstr ""
 "Ба корбарони дурдаст иҷозат диҳед, ки тавонанд экрани шуморо бинанд ё идора "
 "кунанд (тавассути): <a href=\"vnc://%s\">vnc://%s</a>"
 
-#: ../panels/sharing/sharing.ui.h:29
+#: ../panels/sharing/sharing.ui.h:27
 msgid "Remote View"
 msgstr "Намоиши дурдаст"
 
-#: ../panels/sharing/sharing.ui.h:30
+#: ../panels/sharing/sharing.ui.h:28
 msgid "Remote Control"
 msgstr "Идоракунии дурдаст"
 
-#: ../panels/sharing/sharing.ui.h:31
+#: ../panels/sharing/sharing.ui.h:29
 msgid "Approve All Connections"
 msgstr "Тасдиқ кардани ҳамаи пайвастҳо"
 
-#: ../panels/sharing/sharing.ui.h:32
+#: ../panels/sharing/sharing.ui.h:30
 msgid "Show Password"
 msgstr "Намоиш додани парол"
 
@@ -6285,30 +6319,30 @@ msgstr "Бояд ба суроғаи веби ҳисоби провайдери 
 msgid "Failed to add account"
 msgstr "Иловакунии ҳисоб қатъ шуд"
 
-#: ../panels/user-accounts/um-account-dialog.c:316
+#: ../panels/user-accounts/um-account-dialog.c:315
 msgid "This will be used to name your home folder and can't be changed."
 msgstr ""
 "Ин барои номи ҷузвдони асосӣ истифода мешавад ва тағйир дода намешавад."
 
-#: ../panels/user-accounts/um-account-dialog.c:449
+#: ../panels/user-accounts/um-account-dialog.c:448
 msgid "Passwords do not match."
 msgstr "Паролҳо мувофиқат намекунанд."
 
-#: ../panels/user-accounts/um-account-dialog.c:719
-#: ../panels/user-accounts/um-account-dialog.c:765
+#: ../panels/user-accounts/um-account-dialog.c:718
+#: ../panels/user-accounts/um-account-dialog.c:764
 msgid "Failed to register account"
 msgstr "Қайдкунии ҳисоб қатъ шуд"
 
-#: ../panels/user-accounts/um-account-dialog.c:903
+#: ../panels/user-accounts/um-account-dialog.c:902
 msgid "No supported way to authenticate with this domain"
 msgstr ""
 "Ягон имконияти дастгирӣ барои санҷиши ҳаққоният бо ин домен вуҷуд надорад"
 
-#: ../panels/user-accounts/um-account-dialog.c:962
+#: ../panels/user-accounts/um-account-dialog.c:961
 msgid "Failed to join domain"
 msgstr "Ҳамроҳ шудан ба домен қатъ шуд"
 
-#: ../panels/user-accounts/um-account-dialog.c:1023
+#: ../panels/user-accounts/um-account-dialog.c:1022
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
@@ -6316,7 +6350,7 @@ msgstr ""
 "Номи вуруд нодуруст аст.\n"
 "Лутфан амалро такрор кунед."
 
-#: ../panels/user-accounts/um-account-dialog.c:1030
+#: ../panels/user-accounts/um-account-dialog.c:1029
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
@@ -6324,20 +6358,20 @@ msgstr ""
 "Пароли вуруд нодуруст аст.\n"
 "Лутфан амалро такрор кунед."
 
-#: ../panels/user-accounts/um-account-dialog.c:1038
+#: ../panels/user-accounts/um-account-dialog.c:1037
 msgid "Failed to log into domain"
 msgstr "Ворид шудан ба домен қатъ шуд"
 
-#: ../panels/user-accounts/um-account-dialog.c:1096
+#: ../panels/user-accounts/um-account-dialog.c:1095
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr "Домен ёфт нашуд. Эҳтимол аст, ки шумо онро хатогӣ ворид кардед?"
 
-#: ../panels/user-accounts/um-account-dialog.c:1446
+#: ../panels/user-accounts/um-account-dialog.c:1445
 msgid "Add User"
 msgstr "Илова кардани корбар"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1459
+#: ../panels/user-accounts/um-account-dialog.c:1458
 msgid "_Enterprise Login"
 msgstr "_Воридшавии корӣ"
 
@@ -6487,19 +6521,19 @@ msgstr "Ҷаласа хотима ёфт"
 msgid "Session Started"
 msgstr "Ҷаласа оғоз ёфт"
 
-#: ../panels/user-accounts/um-password-dialog.c:146
+#: ../panels/user-accounts/um-password-dialog.c:145
 msgid "Please choose another password."
 msgstr "Лутфан, пароли дигареро интихоб кунед."
 
-#: ../panels/user-accounts/um-password-dialog.c:155
+#: ../panels/user-accounts/um-password-dialog.c:154
 msgid "Please type your current password again."
 msgstr "Лутфан, пароли ҷории худро ворид кунед."
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:160
 msgid "Password could not be changed"
 msgstr "Парол тағйир дода намешавад"
 
-#: ../panels/user-accounts/um-password-dialog.c:287
+#: ../panels/user-accounts/um-password-dialog.c:285
 msgid "The passwords do not match."
 msgstr "Паролҳо мувофиқат намекунанд."
 
@@ -6630,12 +6664,12 @@ msgstr ""
 "Барои даровардани тағйирот,\n"
 "аввал нишонаи \"*\"-ро зер кунед"
 
-#: ../panels/user-accounts/um-user-panel.c:1080
+#: ../panels/user-accounts/um-user-panel.c:1082
 msgid "Create a user account"
 msgstr "Эҷод кардани ҳисоби корбар"
 
-#: ../panels/user-accounts/um-user-panel.c:1091
-#: ../panels/user-accounts/um-user-panel.c:1380
+#: ../panels/user-accounts/um-user-panel.c:1093
+#: ../panels/user-accounts/um-user-panel.c:1383
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
@@ -6643,22 +6677,18 @@ msgstr ""
 "Барои эҷод кардани ҳисоби корбар,\n"
 "пеш аз ҳама нишонаи * -ро зер кунед"
 
-#: ../panels/user-accounts/um-user-panel.c:1101
+#: ../panels/user-accounts/um-user-panel.c:1103
 msgid "Delete the selected user account"
 msgstr "Нест кардани ҳисоби корбари интихобшуда"
 
-#: ../panels/user-accounts/um-user-panel.c:1113
-#: ../panels/user-accounts/um-user-panel.c:1385
+#: ../panels/user-accounts/um-user-panel.c:1115
+#: ../panels/user-accounts/um-user-panel.c:1388
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr ""
 "Барои нест кардани ҳисоби корбари интихобшуда,\n"
 "пеш аз ҳама нишонаи * -ро зер кунед"
-
-#: ../panels/user-accounts/um-user-panel.c:1295
-msgid "My Account"
-msgstr "Ҳисоби ман"
 
 #: ../panels/user-accounts/um-utils.c:551
 #, c-format
@@ -6709,7 +6739,7 @@ msgstr ""
 "кунед, тугмаи миёнбурро дар клавиатура зер кунед ва тугмаҳои навро таъин "
 "кунед, ё ки барои пок кардан тугмаи Backspace-ро пахш кунед."
 
-#: ../panels/wacom/calibrator/calibrator-gui.c:82
+#: ../panels/wacom/calibrator/calibrator-gui.c:84
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
@@ -6717,7 +6747,7 @@ msgstr ""
 "Лутфан, барои санҷидани планшет маркерҳои ҳадафиро ҳангоми пайдо шудани "
 "онгҳо зарба занед."
 
-#: ../panels/wacom/calibrator/calibrator-gui.c:86
+#: ../panels/wacom/calibrator/calibrator-gui.c:88
 msgid "Mis-click detected, restarting..."
 msgstr "Зеркунии нодуруст ташхис карда шуд, бозоғозӣ шуда истодааст..."
 
@@ -6843,86 +6873,86 @@ msgid "Left-Handed Orientation"
 msgstr "Самти чап"
 
 #. If no mode is available, we use "left-ring-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1065
+#: ../panels/wacom/gsd-wacom-device.c:1063
 msgid "Left Ring"
 msgstr "Ҳалқаи чап"
 
-#: ../panels/wacom/gsd-wacom-device.c:1076
+#: ../panels/wacom/gsd-wacom-device.c:1074
 #, c-format
 msgid "Left Ring Mode #%d"
 msgstr "Ҳолати ҳалқаи чапи #%d"
 
 #. If no mode is available, we use "right-ring-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1096
+#: ../panels/wacom/gsd-wacom-device.c:1094
 msgid "Right Ring"
 msgstr "Ҳалқаи рост"
 
-#: ../panels/wacom/gsd-wacom-device.c:1107
+#: ../panels/wacom/gsd-wacom-device.c:1105
 #, c-format
 msgid "Right Ring Mode #%d"
 msgstr "Ҳолати ҳалқаи рости #%d"
 
 #. If no mode is available, we use "left-strip-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1149
+#: ../panels/wacom/gsd-wacom-device.c:1147
 msgid "Left Touchstrip"
 msgstr "Тасмаи ламсии чап"
 
-#: ../panels/wacom/gsd-wacom-device.c:1160
+#: ../panels/wacom/gsd-wacom-device.c:1158
 #, c-format
 msgid "Left Touchstrip Mode #%d"
 msgstr "Ҳолати тасмаи ламсии чапи #%d"
 
 #. If no mode is available, we use "right-strip-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1180
+#: ../panels/wacom/gsd-wacom-device.c:1178
 msgid "Right Touchstrip"
 msgstr "Ҳолати тасмаи ламсии рост"
 
-#: ../panels/wacom/gsd-wacom-device.c:1191
+#: ../panels/wacom/gsd-wacom-device.c:1189
 #, c-format
 msgid "Right Touchstrip Mode #%d"
 msgstr "Ҳолати тасмаи ламсии #%d"
 
-#: ../panels/wacom/gsd-wacom-device.c:1217
+#: ../panels/wacom/gsd-wacom-device.c:1215
 #, c-format
 msgid "Left Touchring Mode Switch"
 msgstr "Ивазкунии ҳолати ҳалқаи ламсии чап"
 
-#: ../panels/wacom/gsd-wacom-device.c:1219
+#: ../panels/wacom/gsd-wacom-device.c:1217
 #, c-format
 msgid "Right Touchring Mode Switch"
 msgstr "Ивазкунии ҳолати ҳалқаи ламсии рост"
 
-#: ../panels/wacom/gsd-wacom-device.c:1222
+#: ../panels/wacom/gsd-wacom-device.c:1220
 #, c-format
 msgid "Left Touchstrip Mode Switch"
 msgstr "Ивазкунии ҳолати тасмаи ламсии чап"
 
-#: ../panels/wacom/gsd-wacom-device.c:1224
+#: ../panels/wacom/gsd-wacom-device.c:1222
 #, c-format
 msgid "Right Touchstrip Mode Switch"
 msgstr "Ивазкунии ҳолати тасмаи ламсии рост"
 
-#: ../panels/wacom/gsd-wacom-device.c:1229
+#: ../panels/wacom/gsd-wacom-device.c:1227
 #, c-format
 msgid "Mode Switch #%d"
 msgstr "Ивазкунии ҳолати #%d"
 
-#: ../panels/wacom/gsd-wacom-device.c:1337
+#: ../panels/wacom/gsd-wacom-device.c:1335
 #, c-format
 msgid "Left Button #%d"
 msgstr "Тугмаи чап #%d"
 
-#: ../panels/wacom/gsd-wacom-device.c:1340
+#: ../panels/wacom/gsd-wacom-device.c:1338
 #, c-format
 msgid "Right Button #%d"
 msgstr "Тугмаи рост #%d"
 
-#: ../panels/wacom/gsd-wacom-device.c:1343
+#: ../panels/wacom/gsd-wacom-device.c:1341
 #, c-format
 msgid "Top Button #%d"
 msgstr "Поёни боло #%d"
 
-#: ../panels/wacom/gsd-wacom-device.c:1346
+#: ../panels/wacom/gsd-wacom-device.c:1344
 #, c-format
 msgid "Bottom Button #%d"
 msgstr "Тугмаи поён #%d"
@@ -7028,11 +7058,11 @@ msgstr "Панел барои намоиш"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[PANEL] [ARGUMENT…]"
 
-#: ../shell/cc-application.c:142
+#: ../shell/cc-application.c:145
 msgid "- Settings"
 msgstr "- Танзимот"
 
-#: ../shell/cc-application.c:160
+#: ../shell/cc-application.c:163
 #, c-format
 msgid ""
 "%s\n"
@@ -7042,15 +7072,15 @@ msgstr ""
 "Барои дидани рӯйхати пурраи фармонҳои дастрас, фармони '%s --help' -ро иҷро "
 "кунед.\n"
 
-#: ../shell/cc-application.c:190
+#: ../shell/cc-application.c:193
 msgid "Available panels:"
 msgstr "Лавҳаҳои дастрас:"
 
-#: ../shell/cc-application.c:325
+#: ../shell/cc-application.c:328
 msgid "Help"
 msgstr "Кӯмак"
 
-#: ../shell/cc-application.c:326
+#: ../shell/cc-application.c:329
 msgid "Quit"
 msgstr "Баромад"
 
@@ -7081,6 +7111,31 @@ msgstr "Танзимот"
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Хусусиятҳо;Танзимот;"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Экрани қулф"
+
+#~ msgid "%s %d-bit"
+#~ msgstr "%s %d-бит"
+
+#~ msgid "Base system"
+#~ msgstr "Системаи асосӣ"
+
+#~ msgctxt "Input Source"
+#~ msgid "Other"
+#~ msgstr "Дигар"
+
+#~ msgid "Add an Input Source"
+#~ msgstr "Илова кардани манбаи вуруд"
+
+#~ msgid "Input Source Options"
+#~ msgstr "Имконоти манбаи вуруд"
+
+#~ msgid "Share Public Folder"
+#~ msgstr "Мубодила кардани ҷузвдони оммавӣ"
+
+#~ msgid "Only share with Trusted Devices"
+#~ msgstr "Мубодила кардан танҳо бо дастгоҳҳои боэътибор"
 
 #~ msgid "Device type:"
 #~ msgstr "Навъи дастгоҳ:"
@@ -7421,9 +7476,6 @@ msgstr "Хусусиятҳо;Танзимот;"
 
 #~ msgid "Disable this account"
 #~ msgstr "Ғайрифаъол кардани ин ҳисоб"
-
-#~ msgid "Enable this account"
-#~ msgstr "Фаъол кардани ин ҳисоб"
 
 #~ msgid "C_onfirm password"
 #~ msgstr "_Тасдиқ кардани парол"

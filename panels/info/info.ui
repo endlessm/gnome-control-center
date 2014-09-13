@@ -249,23 +249,6 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="os_type_label">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label">Version 3.0</property>
-                                <property name="selectable">True</property>
-                                <property name="margin-bottom">24</property>
-                                <attributes>
-                                  <attribute name="scale" value="1.25"/>
-                                </attributes>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">False</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
                               <object class="GtkTable" id="table1">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
@@ -286,6 +269,22 @@
                                   </object>
                                 </child>
                                 <child>
+                                  <object class="GtkLabel" id="label7">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="xalign">1</property>
+                                    <property name="label" translatable="yes">Version</property>
+                                    <property name="mnemonic_widget">os_type_label</property>
+                                    <style>
+                                      <class name="dim-label"/>
+                                    </style>
+                                  </object>
+                                  <packing>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">2</property>
+                                  </packing>
+                                </child>
+                                <child>
                                   <object class="GtkLabel" id="label5">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
@@ -297,8 +296,8 @@
                                     </style>
                                   </object>
                                   <packing>
-                                    <property name="top_attach">1</property>
-                                    <property name="bottom_attach">2</property>
+                                    <property name="top_attach">2</property>
+                                    <property name="bottom_attach">3</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -313,8 +312,8 @@
                                     </style>
                                   </object>
                                   <packing>
-                                    <property name="top_attach">2</property>
-                                    <property name="bottom_attach">3</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="bottom_attach">4</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -324,22 +323,6 @@
                                     <property name="xalign">1</property>
                                     <property name="label" translatable="yes">OS Type</property>
                                     <property name="mnemonic_widget">os_description_label</property>
-                                    <style>
-                                      <class name="dim-label"/>
-                                    </style>
-                                  </object>
-                                  <packing>
-                                    <property name="top_attach">3</property>
-                                    <property name="bottom_attach">4</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel" id="label7">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="xalign">1</property>
-                                    <property name="label">GNOME</property>
-                                    <property name="mnemonic_widget">version_label</property>
                                     <style>
                                       <class name="dim-label"/>
                                     </style>
@@ -376,7 +359,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="memory_label">
+                                  <object class="GtkLabel" id="os_type_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
@@ -391,7 +374,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="processor_label">
+                                  <object class="GtkLabel" id="memory_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
@@ -406,7 +389,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="os_description_label">
+                                  <object class="GtkLabel" id="processor_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
@@ -421,7 +404,7 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="version_label">
+                                  <object class="GtkLabel" id="os_description_label">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
@@ -610,7 +593,7 @@
 				<property name="use_markup">True</property>
 				<property name="xalign">0</property>
 				<property name="margin_left">22</property>
-                                <property name="label">EndlessOS uses &lt;a href='attribution-link'&gt;open source software and content&lt;/a&gt;</property>
+                                <property name="label">Endless uses &lt;a href='attribution-link'&gt;open source software and content&lt;/a&gt;</property>
 				<attributes>
 				  <attribute name="scale" value="0.83"/>
 				</attributes>

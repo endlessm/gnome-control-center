@@ -14,9 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"control-center&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-10 18:08+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-12 16:09-0700\n"
 "PO-Revision-Date: 2014-01-11 23:54+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
@@ -43,35 +42,31 @@ msgid "Changes throughout the day"
 msgstr "Pakeitimai per dieną"
 
 #: ../panels/background/background.ui.h:4
-msgid "Lock Screen"
-msgstr "Užrakinti ekraną"
-
-#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Tile"
 msgstr "Išdėstyti"
 
-#: ../panels/background/background.ui.h:6
+#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Zoom"
 msgstr "Keisti mastelį"
 
-#: ../panels/background/background.ui.h:7
+#: ../panels/background/background.ui.h:6
 msgctxt "background, style"
 msgid "Center"
 msgstr "Centruoti"
 
-#: ../panels/background/background.ui.h:8
+#: ../panels/background/background.ui.h:7
 msgctxt "background, style"
 msgid "Scale"
 msgstr "Ištempti"
 
-#: ../panels/background/background.ui.h:9
+#: ../panels/background/background.ui.h:8
 msgctxt "background, style"
 msgid "Fill"
 msgstr "Užpildyti"
 
-#: ../panels/background/background.ui.h:10
+#: ../panels/background/background.ui.h:9
 msgctxt "background, style"
 msgid "Span"
 msgstr "Apgaubti"
@@ -82,6 +77,7 @@ msgid "Select Background"
 msgstr "Pasirinkti foną"
 
 #: ../panels/background/cc-background-chooser-dialog.c:312
+#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Darbastalio paveikslėliai"
 
@@ -111,17 +107,17 @@ msgstr "Galite pridėti paveikslėlių į aplanką %s ir juos matysite čia"
 
 #: ../panels/background/cc-background-chooser-dialog.c:429
 #: ../panels/bluetooth/cc-bluetooth-panel.c:640
-#: ../panels/color/cc-color-panel.c:221 ../panels/color/cc-color-panel.c:958
-#: ../panels/display/cc-display-panel.c:1510
-#: ../panels/display/cc-display-panel.c:1952
-#: ../panels/network/connection-editor/vpn-helpers.c:245
-#: ../panels/network/connection-editor/vpn-helpers.c:374
+#: ../panels/color/cc-color-panel.c:222 ../panels/color/cc-color-panel.c:959
+#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/network/connection-editor/vpn-helpers.c:250
+#: ../panels/network/connection-editor/vpn-helpers.c:379
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:470
+#: ../panels/privacy/cc-privacy-panel.c:616
 #: ../panels/search/cc-search-locations-dialog.c:682
 #: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
@@ -152,7 +148,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Nėra darbastalio fono"
 
-#: ../panels/background/cc-background-panel.c:493
+#: ../panels/background/cc-background-panel.c:504
 msgid "Current background"
 msgstr "Dabartinis fonas"
 
@@ -414,48 +410,48 @@ msgstr "Nekalibruotas"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
-#: ../panels/color/cc-color-panel.c:137
+#: ../panels/color/cc-color-panel.c:138
 msgid "Default: "
 msgstr "Numatytasis: "
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile his a standard space like AdobeRGB
-#: ../panels/color/cc-color-panel.c:145
+#: ../panels/color/cc-color-panel.c:146
 msgid "Colorspace: "
 msgstr "Spalvų erdvė:"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile is a test profile
-#: ../panels/color/cc-color-panel.c:152
+#: ../panels/color/cc-color-panel.c:153
 msgid "Test profile: "
 msgstr "Bandomasis profilis: "
 
 #. TRANSLATORS: an ICC profile is a file containing colorspace data
-#: ../panels/color/cc-color-panel.c:219
+#: ../panels/color/cc-color-panel.c:220
 msgid "Select ICC Profile File"
 msgstr "Pasirinkite ICC profilio failą"
 
-#: ../panels/color/cc-color-panel.c:222
+#: ../panels/color/cc-color-panel.c:223
 msgid "_Import"
 msgstr "_Importuoti"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:233
+#: ../panels/color/cc-color-panel.c:234
 msgid "Supported ICC profiles"
 msgstr "Palaikomi ICC profiliai"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:240
+#: ../panels/color/cc-color-panel.c:241
 #: ../panels/network/wireless-security/eap-method-fast.c:410
 msgid "All files"
 msgstr "Visi failai"
 
-#: ../panels/color/cc-color-panel.c:579
+#: ../panels/color/cc-color-panel.c:580
 msgid "Screen"
 msgstr "Ekranas"
 
 #. TRANSLATORS: this is when the upload of the profile failed
-#: ../panels/color/cc-color-panel.c:903
+#: ../panels/color/cc-color-panel.c:904
 #, c-format
 msgid "Failed to upload file: %s"
 msgstr "Nepavyko nusiųsti failo: %s"
@@ -463,39 +459,39 @@ msgstr "Nepavyko nusiųsti failo: %s"
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
 #. * only shown when the user uses a LiveCD to calibrate
-#: ../panels/color/cc-color-panel.c:917
+#: ../panels/color/cc-color-panel.c:918
 msgid "The profile has been uploaded to:"
 msgstr "Profilis buvo nusiųstas į:"
 
-#: ../panels/color/cc-color-panel.c:919
+#: ../panels/color/cc-color-panel.c:920
 msgid "Write down this URL."
 msgstr "Užsirašyti šį URL."
 
-#: ../panels/color/cc-color-panel.c:920
+#: ../panels/color/cc-color-panel.c:921
 msgid "Restart this computer and boot your normal operating system."
 msgstr "Paleisti kompiuterį iš naujo ir įkelti normalią operacinę sistemą."
 
-#: ../panels/color/cc-color-panel.c:921
+#: ../panels/color/cc-color-panel.c:922
 msgid "Type the URL into your browser to download and install the profile."
 msgstr "Įveskite URL naršyklėje profilio parsiuntimui ir įdiegimui."
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
-#: ../panels/color/cc-color-panel.c:955
+#: ../panels/color/cc-color-panel.c:956
 msgid "Save Profile"
 msgstr "Įrašyti profilį"
 
-#: ../panels/color/cc-color-panel.c:959
-#: ../panels/network/connection-editor/vpn-helpers.c:375
+#: ../panels/color/cc-color-panel.c:960
+#: ../panels/network/connection-editor/vpn-helpers.c:380
 msgid "_Save"
 msgstr "Į_rašyti"
 
 #. TRANSLATORS: this is when the button is sensitive
-#: ../panels/color/cc-color-panel.c:1315
+#: ../panels/color/cc-color-panel.c:1316
 msgid "Create a color profile for the selected device"
 msgstr "Sukurti spalvų profilį pasirinktam įrenginiui"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1330 ../panels/color/cc-color-panel.c:1354
+#: ../panels/color/cc-color-panel.c:1331 ../panels/color/cc-color-panel.c:1355
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
@@ -504,12 +500,12 @@ msgstr ""
 "prijungtas."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1364
+#: ../panels/color/cc-color-panel.c:1365
 msgid "The measuring instrument does not support printer profiling."
 msgstr "Matavimo prietaisas nepalaiko spausdintuvo profiliavimo."
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1375
+#: ../panels/color/cc-color-panel.c:1376
 msgid "The device type is not currently supported."
 msgstr "Įrenginio tipas šiuo metu nepalaikomas."
 
@@ -596,7 +592,7 @@ msgstr "Vaizduoklio kalibravimas"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "Cancel"
 msgstr "Atsisakyti"
 
@@ -952,7 +948,7 @@ msgstr "Daugiau…"
 msgid "No languages found"
 msgstr "Nerasta kalbų"
 
-#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:1
+#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:3
 msgid "Language"
 msgstr "Kalba"
 
@@ -1122,25 +1118,27 @@ msgstr "Keiskite sistemos laiko ir datos nustatymus"
 msgid "To change time or date settings, you need to authenticate."
 msgstr "Datos ir laiko nustatymams pakeisti reikia patvirtinti tapatybę."
 
-#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
 msgstr "Užvertas"
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:489
+#: ../panels/display/cc-display-panel.c:484
 msgid "Mirrored"
 msgstr "Dubliuoti"
 
-#: ../panels/display/cc-display-panel.c:491
-#: ../panels/display/cc-display-panel.c:2101
+#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:2255
 msgid "Primary"
 msgstr "Pagrindinis"
 
-#: ../panels/display/cc-display-panel.c:493
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1738 ../panels/power/cc-power-panel.c:1749
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/display/cc-display-panel.c:488
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1743 ../panels/power/cc-power-panel.c:1754
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1148,80 +1146,90 @@ msgstr "Pagrindinis"
 msgid "Off"
 msgstr "Išjungta"
 
-#: ../panels/display/cc-display-panel.c:496
+#: ../panels/display/cc-display-panel.c:491
 msgid "Secondary"
 msgstr "Antrinis"
 
-#: ../panels/display/cc-display-panel.c:1506
+#: ../panels/display/cc-display-panel.c:1501
 msgid "Arrange Combined Displays"
 msgstr "Išdėstyti vaizduoklius"
 
-#: ../panels/display/cc-display-panel.c:1512
-#: ../panels/display/cc-display-panel.c:1955
+#: ../panels/display/cc-display-panel.c:1507
+#: ../panels/display/cc-display-panel.c:2089
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Apply"
 msgstr "_Pritaikyti"
 
-#: ../panels/display/cc-display-panel.c:1533
+#: ../panels/display/cc-display-panel.c:1528
 msgid "Drag displays to rearrange them"
 msgstr "Tempkite vaizduoklius jų išdėstymui"
 
-#: ../panels/display/cc-display-panel.c:2037
+#: ../panels/display/cc-display-panel.c:2191
 msgid "Size"
 msgstr "Dydis"
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:2050
+#: ../panels/display/cc-display-panel.c:2204
 msgid "Aspect Ratio"
 msgstr "Proporcija"
 
-#: ../panels/display/cc-display-panel.c:2071
+#: ../panels/display/cc-display-panel.c:2225
 #: ../panels/printers/pp-options-dialog.c:86
 msgid "Resolution"
 msgstr "Skiriamoji geba"
 
-#: ../panels/display/cc-display-panel.c:2102
+#: ../panels/display/cc-display-panel.c:2256
 msgid "Show the top bar and Activities Overview on this display"
 msgstr "Rodyti viršutinę juostą ir veiklų apžvalgą šiame vaizduoklyje"
 
-#: ../panels/display/cc-display-panel.c:2108
+#: ../panels/display/cc-display-panel.c:2262
 msgid "Secondary Display"
 msgstr "Antrinis vaizduoklis"
 
-#: ../panels/display/cc-display-panel.c:2109
+#: ../panels/display/cc-display-panel.c:2263
 msgid "Join this display with another to create an extra workspace"
 msgstr "Prijungti šį vaizduoklį prie kito papildomai darbo vietai sukurti"
 
-#: ../panels/display/cc-display-panel.c:2116
+#: ../panels/display/cc-display-panel.c:2270
 msgid "Presentation"
 msgstr "Pateiktis"
 
-#: ../panels/display/cc-display-panel.c:2117
+#: ../panels/display/cc-display-panel.c:2271
 msgid "Show slideshows and media only"
 msgstr "Rodyti tik skaidres ir daugialypę terpę"
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2122
+#: ../panels/display/cc-display-panel.c:2276
 msgid "Mirror"
 msgstr "Veidrodis"
 
-#: ../panels/display/cc-display-panel.c:2123
+#: ../panels/display/cc-display-panel.c:2277
 msgid "Show your existing view on both displays"
 msgstr "Rodyti jūsų esamą vaizdą abiejuose vaizduokliuose"
 
-#: ../panels/display/cc-display-panel.c:2129
+#: ../panels/display/cc-display-panel.c:2283
 msgid "Turn Off"
 msgstr "Išjungti"
 
-#: ../panels/display/cc-display-panel.c:2130
+#: ../panels/display/cc-display-panel.c:2284
 msgid "Don't use this display"
 msgstr "Nenaudoti šio vaizduoklio"
 
-#: ../panels/display/cc-display-panel.c:2345
+#. overscan
+#: ../panels/display/cc-display-panel.c:2301
+msgid "Shrink screen to fit TV"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2307
+#, fuzzy
+msgid "Scaling"
+msgstr "Ištempti"
+
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Could not get screen information"
 msgstr "Nepavyko gauti ekrano informacijos"
 
-#: ../panels/display/cc-display-panel.c:2376
+#: ../panels/display/cc-display-panel.c:2463
 msgid "_Arrange Combined Displays"
 msgstr "Iš_dėstyti sujungtus vaizduoklius"
 
@@ -1239,53 +1247,49 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "Skydelis;Projektorius;xrandr;Ekranas;Raiška;Atnaujinimas;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:452 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:454 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "Nežinomas"
 
-#: ../panels/info/cc-info-panel.c:539
-#, c-format
-msgid "%s %d-bit"
-msgstr "%s %d-bitų"
-
-#: ../panels/info/cc-info-panel.c:541
+#. translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit"
+#: ../panels/info/cc-info-panel.c:582
 #, c-format
 msgid "%d-bit"
 msgstr "%d-bitų"
 
-#: ../panels/info/cc-info-panel.c:1221
+#: ../panels/info/cc-info-panel.c:1260
 msgid "Ask what to do"
 msgstr "Klausti, ką daryti"
 
-#: ../panels/info/cc-info-panel.c:1225
+#: ../panels/info/cc-info-panel.c:1264
 msgid "Do nothing"
 msgstr "Nieko nedaryti"
 
-#: ../panels/info/cc-info-panel.c:1229
+#: ../panels/info/cc-info-panel.c:1268
 msgid "Open folder"
 msgstr "Atverti aplanką"
 
-#: ../panels/info/cc-info-panel.c:1320
+#: ../panels/info/cc-info-panel.c:1359
 msgid "Other Media"
 msgstr "Kitos laikmenos"
 
-#: ../panels/info/cc-info-panel.c:1351
+#: ../panels/info/cc-info-panel.c:1390
 msgid "Select an application for audio CDs"
 msgstr "Parinkite programą, kuria norėtumėte klausytis garso CD"
 
-#: ../panels/info/cc-info-panel.c:1352
+#: ../panels/info/cc-info-panel.c:1391
 msgid "Select an application for video DVDs"
 msgstr "Parinkite programą vaizdo DVD rodymui"
 
-#: ../panels/info/cc-info-panel.c:1353
+#: ../panels/info/cc-info-panel.c:1392
 msgid "Select an application to run when a music player is connected"
 msgstr "Pasirinkite paleistiną programą, kai muzikos grotuvas prijungiamas"
 
-#: ../panels/info/cc-info-panel.c:1354
+#: ../panels/info/cc-info-panel.c:1393
 msgid "Select an application to run when a camera is connected"
 msgstr "Pasirinkite paleistiną programą, kai prijungiamas fotoaparatas"
 
-#: ../panels/info/cc-info-panel.c:1355
+#: ../panels/info/cc-info-panel.c:1394
 msgid "Select an application for software CDs"
 msgstr "Parinkite programą programinės įrangos CD paleidimui"
 
@@ -1294,89 +1298,89 @@ msgstr "Parinkite programą programinės įrangos CD paleidimui"
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
 #.
-#: ../panels/info/cc-info-panel.c:1367
+#: ../panels/info/cc-info-panel.c:1406
 msgid "audio DVD"
 msgstr "garso DVD"
 
-#: ../panels/info/cc-info-panel.c:1368
+#: ../panels/info/cc-info-panel.c:1407
 msgid "blank Blu-ray disc"
 msgstr "tuščias Blu-ray diskas"
 
-#: ../panels/info/cc-info-panel.c:1369
+#: ../panels/info/cc-info-panel.c:1408
 msgid "blank CD disc"
 msgstr "tuščias CD diskas"
 
-#: ../panels/info/cc-info-panel.c:1370
+#: ../panels/info/cc-info-panel.c:1409
 msgid "blank DVD disc"
 msgstr "tuščias DVD diskas"
 
-#: ../panels/info/cc-info-panel.c:1371
+#: ../panels/info/cc-info-panel.c:1410
 msgid "blank HD DVD disc"
 msgstr "tuščias HD DVD diskas"
 
-#: ../panels/info/cc-info-panel.c:1372
+#: ../panels/info/cc-info-panel.c:1411
 msgid "Blu-ray video disc"
 msgstr "Blu-ray vaizdo diskas"
 
-#: ../panels/info/cc-info-panel.c:1373
+#: ../panels/info/cc-info-panel.c:1412
 msgid "e-book reader"
 msgstr "el. knygų skaitytuvas"
 
-#: ../panels/info/cc-info-panel.c:1374
+#: ../panels/info/cc-info-panel.c:1413
 msgid "HD DVD video disc"
 msgstr "HD DVD vaizdo diskas"
 
-#: ../panels/info/cc-info-panel.c:1375
+#: ../panels/info/cc-info-panel.c:1414
 msgid "Picture CD"
 msgstr "Paveikslėlių CD"
 
-#: ../panels/info/cc-info-panel.c:1376
+#: ../panels/info/cc-info-panel.c:1415
 msgid "Super Video CD"
 msgstr "Super vaizdo CD"
 
-#: ../panels/info/cc-info-panel.c:1377
+#: ../panels/info/cc-info-panel.c:1416
 msgid "Video CD"
 msgstr "Vaizdo CD"
 
-#: ../panels/info/cc-info-panel.c:1378
+#: ../panels/info/cc-info-panel.c:1417
 msgid "Windows software"
 msgstr "Windows programinė įranga"
 
-#: ../panels/info/cc-info-panel.c:1379
+#: ../panels/info/cc-info-panel.c:1418
 msgid "Software"
 msgstr "Programinė įranga"
 
-#: ../panels/info/cc-info-panel.c:1502
+#: ../panels/info/cc-info-panel.c:1541
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "Skyrius"
 
-#: ../panels/info/cc-info-panel.c:1511 ../panels/info/info.ui.h:13
+#: ../panels/info/cc-info-panel.c:1550 ../panels/info/info.ui.h:13
 msgid "Overview"
 msgstr "Apžvalga"
 
-#: ../panels/info/cc-info-panel.c:1517 ../panels/info/info.ui.h:20
+#: ../panels/info/cc-info-panel.c:1556 ../panels/info/info.ui.h:20
 msgid "Default Applications"
 msgstr "Numatytosios programos"
 
-#: ../panels/info/cc-info-panel.c:1522 ../panels/info/info.ui.h:28
+#: ../panels/info/cc-info-panel.c:1561 ../panels/info/info.ui.h:28
 msgid "Removable Media"
 msgstr "Išimamos laikmenos"
 
-#: ../panels/info/cc-info-panel.c:1547
+#: ../panels/info/cc-info-panel.c:1586
 #, c-format
 msgid "Version %s"
 msgstr "Versija %s"
 
-#: ../panels/info/cc-info-panel.c:1597
+#: ../panels/info/cc-info-panel.c:1653
 msgid "Install Updates"
 msgstr "Įdiegti atnaujinimus"
 
-#: ../panels/info/cc-info-panel.c:1601
+#: ../panels/info/cc-info-panel.c:1657
 msgid "System Up-To-Date"
 msgstr "Sistema yra atnaujinta"
 
-#: ../panels/info/cc-info-panel.c:1605
+#: ../panels/info/cc-info-panel.c:1661
 msgid "Checking for Updates"
 msgstr "Ieškoma atnaujinimų"
 
@@ -1417,17 +1421,22 @@ msgid "Device name"
 msgstr "Įrenginio pavadinimas"
 
 #: ../panels/info/info.ui.h:5
+#, fuzzy
+msgid "Version"
+msgstr "Versija 0"
+
+#: ../panels/info/info.ui.h:6
 msgid "Memory"
 msgstr "Atmintis"
 
-#: ../panels/info/info.ui.h:6
+#: ../panels/info/info.ui.h:7
 msgid "Processor"
 msgstr "Procesorius"
 
-#. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-msgid "Base system"
-msgstr "Bazinė sistema"
+#, fuzzy
+msgid "OS Type"
+msgstr "Tipas"
 
 #: ../panels/info/info.ui.h:9
 msgid "Disk"
@@ -1783,7 +1792,6 @@ msgid "Cursor blink speed"
 msgstr "Žymeklio mirksėjimo greitis"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/region.ui.h:5
 msgid "Input Sources"
 msgstr "Įvesties šaltiniai"
 
@@ -1992,11 +2000,11 @@ msgstr "Vienas paspaudimas, antraeilis mygtukas"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:358
+#: ../panels/network/cc-network-panel.c:361
 msgid "Air_plane Mode"
 msgstr "_Skrydžio veiksena"
 
-#: ../panels/network/cc-network-panel.c:930
+#: ../panels/network/cc-network-panel.c:933
 msgid "Network proxy"
 msgstr "Tarpinis tinklo serveris"
 
@@ -2004,14 +2012,14 @@ msgstr "Tarpinis tinklo serveris"
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: ../panels/network/cc-network-panel.c:1109 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1244
+#: ../panels/network/cc-network-panel.c:1247
 msgid "The system network services are not compatible with this version."
 msgstr "Sistemos tinklo tarnybos nesuderinamos su šia versija."
 
@@ -2208,7 +2216,7 @@ msgstr "Rankinis"
 msgid "Link-Local Only"
 msgstr "Tik vietinis susiejimas"
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:942
+#: ../panels/network/connection-editor/ce-page-ip4.c:934
 #: ../panels/network/network-wifi.ui.h:46
 msgid "IPv4"
 msgstr "IPv4"
@@ -2230,7 +2238,7 @@ msgstr "Automatinis"
 msgid "Automatic, DHCP only"
 msgstr "A_utomatinis, tik DHCP"
 
-#: ../panels/network/connection-editor/ce-page-ip6.c:902
+#: ../panels/network/connection-editor/ce-page-ip6.c:894
 #: ../panels/network/network-wifi.ui.h:47
 msgid "IPv6"
 msgstr "IPv6"
@@ -2455,7 +2463,7 @@ msgstr "Nauja profilis"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1471
+#: ../panels/user-accounts/um-account-dialog.c:1470
 msgid "_Add"
 msgstr "_Pridėti"
 
@@ -2468,27 +2476,23 @@ msgstr "VPN"
 msgid "Bond"
 msgstr "Bond"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:597
-msgid "Team"
-msgstr "Team"
-
-#: ../panels/network/connection-editor/net-connection-editor.c:598
+#: ../panels/network/connection-editor/net-connection-editor.c:600
 msgid "Bridge"
 msgstr "Bridge"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:599
+#: ../panels/network/connection-editor/net-connection-editor.c:601
 msgid "VLAN"
 msgstr "VLAN"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:750
+#: ../panels/network/connection-editor/net-connection-editor.c:752
 msgid "Could not load VPN plugins"
 msgstr "Nepavyko įkelti VPN įskiepių"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:819
+#: ../panels/network/connection-editor/net-connection-editor.c:821
 msgid "Import from file…"
 msgstr "Importuoti iš failo…"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:890
+#: ../panels/network/connection-editor/net-connection-editor.c:892
 msgid "Add Network Connection"
 msgstr "Pridėti tinklo ryšį"
 
@@ -2524,11 +2528,11 @@ msgstr ""
 msgid "S_ecurity"
 msgstr "S_auga"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:205
+#: ../panels/network/connection-editor/vpn-helpers.c:210
 msgid "Cannot import VPN connection"
 msgstr "Nepavyko importuoti PVN ryšio"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:207
+#: ../panels/network/connection-editor/vpn-helpers.c:212
 #, c-format
 msgid ""
 "The file '%s' could not be read or does not contain recognized VPN "
@@ -2541,36 +2545,36 @@ msgstr ""
 "\n"
 "Klaida: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:242
+#: ../panels/network/connection-editor/vpn-helpers.c:247
 msgid "Select file to import"
 msgstr "Pasirinkite failą importavimui"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:246
+#: ../panels/network/connection-editor/vpn-helpers.c:251
 #: ../panels/printers/cc-printers-panel.c:1947
 #: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
 msgstr "_Atverti"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:294
+#: ../panels/network/connection-editor/vpn-helpers.c:299
 #, c-format
 msgid "A file named \"%s\" already exists."
 msgstr "Failas pavadinimu „%s“ jau yra."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:296
+#: ../panels/network/connection-editor/vpn-helpers.c:301
 msgid "_Replace"
 msgstr "_Pakeisti"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:298
+#: ../panels/network/connection-editor/vpn-helpers.c:303
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr "Ar norite pakeisti %s įrašomu VPN ryšiu?"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:334
+#: ../panels/network/connection-editor/vpn-helpers.c:339
 msgid "Cannot export VPN connection"
 msgstr "Nepavyko eksportuoti VPN ryšio"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:336
+#: ../panels/network/connection-editor/vpn-helpers.c:341
 #, c-format
 msgid ""
 "The VPN connection '%s' could not be exported to %s.\n"
@@ -2581,7 +2585,7 @@ msgstr ""
 "\n"
 "Klaida: %s."
 
-#: ../panels/network/connection-editor/vpn-helpers.c:371
+#: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection..."
 msgstr "Eksportuoti VPN ryšį..."
 
@@ -2691,7 +2695,6 @@ msgid "Add new connection"
 msgstr "Pridėti naują ryšį"
 
 #: ../panels/network/net-device-team.c:77
-#| msgid "Bridge slaves"
 msgid "Team slaves"
 msgstr "Team antraeiliai"
 
@@ -3586,10 +3589,11 @@ msgctxt "notifications"
 msgid "Show Details in Lock Screen"
 msgstr "Rodyti detales užrakinimo ekrano"
 
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1744 ../panels/power/cc-power-panel.c:1751
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1749 ../panels/power/cc-power-panel.c:1756
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -3793,171 +3797,171 @@ msgstr "Įkraunama"
 msgid "Discharging"
 msgstr "Įšsikrauna"
 
-#: ../panels/power/cc-power-panel.c:395
+#: ../panels/power/cc-power-panel.c:400
 msgctxt "Battery name"
 msgid "Main"
 msgstr "Pagrindinė"
 
-#: ../panels/power/cc-power-panel.c:397
+#: ../panels/power/cc-power-panel.c:402
 msgctxt "Battery name"
 msgid "Extra"
 msgstr "Papildoma"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:469
+#: ../panels/power/cc-power-panel.c:474
 msgid "Wireless mouse"
 msgstr "Belaidė pelė"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:472
+#: ../panels/power/cc-power-panel.c:477
 msgid "Wireless keyboard"
 msgstr "Belaidė klaviatūra"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:475
+#: ../panels/power/cc-power-panel.c:480
 msgid "Uninterruptible power supply"
 msgstr "Nenutrūkstamos srovės šaltinis"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:478
+#: ../panels/power/cc-power-panel.c:483
 msgid "Personal digital assistant"
 msgstr "Asmeninis skaitmeninis pagalbininkas"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:481
+#: ../panels/power/cc-power-panel.c:486
 msgid "Cellphone"
 msgstr "Mobilusis telefonas"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:484
+#: ../panels/power/cc-power-panel.c:489
 msgid "Media player"
 msgstr "Daugialypės terpės grotuvas"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:487
+#: ../panels/power/cc-power-panel.c:492
 msgid "Tablet"
 msgstr "Planšetė"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:490
+#: ../panels/power/cc-power-panel.c:495
 msgid "Computer"
 msgstr "Kompiuteris"
 
 #. TRANSLATORS: secondary battery, misc
-#: ../panels/power/cc-power-panel.c:493 ../panels/power/cc-power-panel.c:740
-#: ../panels/power/cc-power-panel.c:2075
+#: ../panels/power/cc-power-panel.c:498 ../panels/power/cc-power-panel.c:745
+#: ../panels/power/cc-power-panel.c:2080
 msgid "Battery"
 msgstr "Akumuliatorius"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:539
+#: ../panels/power/cc-power-panel.c:544
 msgctxt "Battery power"
 msgid "Charging"
 msgstr "Įkraunama"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:546
+#: ../panels/power/cc-power-panel.c:551
 msgctxt "Battery power"
 msgid "Caution"
 msgstr "Įspėjimas"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:551
+#: ../panels/power/cc-power-panel.c:556
 msgctxt "Battery power"
 msgid "Low"
 msgstr "Žemas"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:556
+#: ../panels/power/cc-power-panel.c:561
 msgctxt "Battery power"
 msgid "Good"
 msgstr "Geras"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:561
+#: ../panels/power/cc-power-panel.c:566
 msgctxt "Battery power"
 msgid "Fully charged"
 msgstr "Pilnai įkrautas"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:565
+#: ../panels/power/cc-power-panel.c:570
 msgctxt "Battery power"
 msgid "Empty"
 msgstr "Tuščia"
 
-#: ../panels/power/cc-power-panel.c:738
+#: ../panels/power/cc-power-panel.c:743
 msgid "Batteries"
 msgstr "Baterijos"
 
-#: ../panels/power/cc-power-panel.c:1144
+#: ../panels/power/cc-power-panel.c:1149
 msgid "When _idle"
 msgstr "Kai la_isva"
 
-#: ../panels/power/cc-power-panel.c:1513
+#: ../panels/power/cc-power-panel.c:1518
 msgid "Power Saving"
 msgstr "Energijos taupymas"
 
-#: ../panels/power/cc-power-panel.c:1541
+#: ../panels/power/cc-power-panel.c:1546
 msgid "_Screen brightness"
 msgstr "_Ekrano ryškumas"
 
-#: ../panels/power/cc-power-panel.c:1547
+#: ../panels/power/cc-power-panel.c:1552
 msgid "_Keyboard brightness"
 msgstr "_Klaviatūros ryškumas"
 
-#: ../panels/power/cc-power-panel.c:1557
+#: ../panels/power/cc-power-panel.c:1562
 msgid "_Dim screen when inactive"
 msgstr "_Pritemdyti ekraną, kai kompiuteris nenaudojamas"
 
-#: ../panels/power/cc-power-panel.c:1582
+#: ../panels/power/cc-power-panel.c:1587
 msgid "_Blank screen"
 msgstr "_Tuščias ekranas"
 
-#: ../panels/power/cc-power-panel.c:1619
+#: ../panels/power/cc-power-panel.c:1624
 msgid "_Wi-Fi"
 msgstr "_Wi-Fi"
 
-#: ../panels/power/cc-power-panel.c:1624
+#: ../panels/power/cc-power-panel.c:1629
 msgid "Turns off wireless devices"
 msgstr "Išjungia visus belaidžius įrenginius"
 
-#: ../panels/power/cc-power-panel.c:1649
+#: ../panels/power/cc-power-panel.c:1654
 msgid "_Mobile broadband"
 msgstr "_Mobilus plačiajuostis"
 
-#: ../panels/power/cc-power-panel.c:1654
+#: ../panels/power/cc-power-panel.c:1659
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr "Išjungia mobilius plačiajuosčius (3G, 4G, WiMax, ir kt.) įrenginius"
 
-#: ../panels/power/cc-power-panel.c:1689
+#: ../panels/power/cc-power-panel.c:1694
 msgid "_Bluetooth"
 msgstr "_Bluetooth"
 
-#: ../panels/power/cc-power-panel.c:1740
+#: ../panels/power/cc-power-panel.c:1745
 msgid "When on battery power"
 msgstr "Naudojant baterijos energiją"
 
-#: ../panels/power/cc-power-panel.c:1742
+#: ../panels/power/cc-power-panel.c:1747
 msgid "When plugged in"
 msgstr "Prijungus prie elektros tinklo"
 
-#: ../panels/power/cc-power-panel.c:1871
+#: ../panels/power/cc-power-panel.c:1876
 msgid "Suspend & Power Off"
 msgstr "Užmigdyti ir išjungti"
 
-#: ../panels/power/cc-power-panel.c:1904
+#: ../panels/power/cc-power-panel.c:1909
 msgid "_Automatic suspend"
 msgstr "_Automatinis užmigdymas"
 
-#: ../panels/power/cc-power-panel.c:1928
+#: ../panels/power/cc-power-panel.c:1933
 msgid "When battery power is _critical"
 msgstr "Kai baterijos įkrovos lygis _kritiškai žemas"
 
-#: ../panels/power/cc-power-panel.c:1985
+#: ../panels/power/cc-power-panel.c:1990
 msgid "Power Off"
 msgstr "Išjungti"
 
-#: ../panels/power/cc-power-panel.c:2122
+#: ../panels/power/cc-power-panel.c:2127
 msgid "Devices"
 msgstr "Įrenginiai"
 
@@ -4648,39 +4652,45 @@ msgstr ""
 "Atleiskite! Sistemos spausdinimo tarnyba\n"
 "atrodo nėra pasiekiama."
 
-#: ../panels/privacy/cc-privacy-panel.c:248 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "Ekrano užrakinimas"
 
-#: ../panels/privacy/cc-privacy-panel.c:361 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#, fuzzy
+msgid "Metrics"
+msgstr "Metrinė"
+
+#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "Naudojimas ir istorija"
 
-#: ../panels/privacy/cc-privacy-panel.c:489
+#: ../panels/privacy/cc-privacy-panel.c:635
 msgid "Empty all items from Trash?"
 msgstr "Išvalyti visus elementus iš šiukšlinės?"
 
-#: ../panels/privacy/cc-privacy-panel.c:490
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Visi šiukšlinės elementai bus negrįžtamai ištrinti."
 
-#: ../panels/privacy/cc-privacy-panel.c:491 ../panels/privacy/privacy.ui.h:32
+#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "Iš_valyti šiukšlinę"
 
-#: ../panels/privacy/cc-privacy-panel.c:514
+#: ../panels/privacy/cc-privacy-panel.c:660
 msgid "Delete all the temporary files?"
 msgstr "Ištrinti visus laikinuosius failus?"
 
-#: ../panels/privacy/cc-privacy-panel.c:515
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "All the temporary files will be permanently deleted."
 msgstr "Visi laikinieji failai bus negrįžtamai ištrinti."
 
-#: ../panels/privacy/cc-privacy-panel.c:516 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "Išvalyti laikinuosius _failus"
 
-#: ../panels/privacy/cc-privacy-panel.c:538 ../panels/privacy/privacy.ui.h:31
+#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "Išvalyti šiukšlinę ir laikinuosius failus"
 
@@ -4774,22 +4784,32 @@ msgid "Retain _History"
 msgstr "Išlaikyti _istoriją"
 
 #: ../panels/privacy/privacy.ui.h:27
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:28
+msgid "Enable Metrics Collection"
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:30
 msgid "The Screen Lock protects your privacy when you are away."
 msgstr "Ekrano užrakinimas apsaugo jūsų privatumą, kai esate atsitraukęs."
 
-#: ../panels/privacy/privacy.ui.h:28
+#: ../panels/privacy/privacy.ui.h:31
 msgid "Automatic Screen _Lock"
 msgstr "Automatinis ekrano už_rakinimas"
 
-#: ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/privacy.ui.h:32
 msgid "Lock screen _after blank for"
 msgstr "Užr_akinti ekraną po tuščio praėjus"
 
-#: ../panels/privacy/privacy.ui.h:30
+#: ../panels/privacy/privacy.ui.h:33
 msgid "Show _Notifications"
 msgstr "Rodyti pra_nešimus"
 
-#: ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/privacy.ui.h:37
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
@@ -4797,15 +4817,15 @@ msgstr ""
 "Automatiškai išvalyti šiukšlinę ir laikinuosius failus, siekiant nelaikyti "
 "kompiuteryje nereikalingos ir jautrios informacijos."
 
-#: ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/privacy.ui.h:38
 msgid "Automatically empty _Trash"
 msgstr "Automatiškai išvalyti _šiukšlinę"
 
-#: ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/privacy.ui.h:39
 msgid "Automatically purge Temporary _Files"
 msgstr "Automatiškai išvalyti laikinuosius _failus"
 
-#: ../panels/privacy/privacy.ui.h:37
+#: ../panels/privacy/privacy.ui.h:40
 msgid "Purge _After"
 msgstr "Išv_alyti po"
 
@@ -4828,40 +4848,37 @@ msgid "No input sources found"
 msgstr "Nerasta įvesties šaltinių"
 
 #: ../panels/region/cc-input-chooser.c:1070
-msgctxt "Input Source"
+#, fuzzy
+msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Kita"
 
-#: ../panels/region/cc-region-panel.c:239
+#: ../panels/region/cc-region-panel.c:230
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr "Pakeitimams pritaikyti reikia perleisti seansą"
 
-#: ../panels/region/cc-region-panel.c:240
+#: ../panels/region/cc-region-panel.c:231
 msgid "Restart Now"
 msgstr "Perleisti dabar"
 
-#: ../panels/region/cc-region-panel.c:569
+#: ../panels/region/cc-region-panel.c:560
 msgctxt "Language"
 msgid "None"
 msgstr "Nėra"
 
-#: ../panels/region/cc-region-panel.c:853
+#: ../panels/region/cc-region-panel.c:844
 msgid "No input source selected"
 msgstr "Nepasirinktas įvesties šaltinis"
 
-#: ../panels/region/cc-region-panel.c:1084
+#: ../panels/region/cc-region-panel.c:1075
 msgid "Sorry"
 msgstr "Atleiskite"
 
-#: ../panels/region/cc-region-panel.c:1086
+#: ../panels/region/cc-region-panel.c:1077
 msgid "Input methods can't be used on the login screen"
 msgstr "Įvesties metodų negalima naudoti prisijungimo ekrane"
 
-#: ../panels/region/cc-region-panel.c:1716
-msgid "Login Screen"
-msgstr "Prisijungimo ekranas"
-
-#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:3
+#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:5
 msgid "Formats"
 msgstr "Formatai"
 
@@ -4906,12 +4923,14 @@ msgid "Language;Layout;Keyboard;Input;"
 msgstr "Kalba;Išdėstymas;Klaviatūra;Įvestis;"
 
 #: ../panels/region/input-chooser.ui.h:1
-msgid "Add an Input Source"
-msgstr "Pridėti įvesties šaltinį"
+#, fuzzy
+msgid "Add a Keyboard Layout"
+msgstr "Klaviatūros trumpiniai"
 
 #: ../panels/region/input-options.ui.h:1
-msgid "Input Source Options"
-msgstr "Įvesties šaltinio nustatymai"
+#, fuzzy
+msgid "Keyboard Layout Options"
+msgstr "Klaviatūros nustatymai"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -4953,19 +4972,32 @@ msgstr "Alternatyvus perjungimas į kitą šaltinį"
 msgid "Left+Right Alt"
 msgstr "Kairėn+dešinysis alt"
 
+#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1298
+msgid "My Account"
+msgstr "Mano paskyra"
+
 #: ../panels/region/region.ui.h:2
+msgid "Login Screen"
+msgstr "Prisijungimo ekranas"
+
+#: ../panels/region/region.ui.h:4
 msgid "English (United Kingdom)"
 msgstr "Anglų (Jungtinė Karalystė)"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "United Kingdom"
 msgstr "Jungtinė Karalystė"
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:7
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "Klaviatūros trumpiniai"
+
+#: ../panels/region/region.ui.h:8
 msgid "Options"
 msgstr "Parinktys"
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Login settings are used by all users when logging into the system"
 msgstr ""
 "Prisijungimo nustatymai yra naudojami visų naudotojų prisijungiant prie "
@@ -4998,7 +5030,7 @@ msgstr "Pasirinkite vietą"
 msgid "_OK"
 msgstr "_Gerai"
 
-#: ../panels/search/cc-search-panel.c:177
+#: ../panels/search/cc-search-panel.c:178
 msgid "No applications found"
 msgstr "Nerasta programų"
 
@@ -6278,28 +6310,28 @@ msgstr "Turi atitikti jūsų paskyros teikėjo žiniatinklio adresą."
 msgid "Failed to add account"
 msgstr "Nepavyko pridėti Pasirinkite paskyros"
 
-#: ../panels/user-accounts/um-account-dialog.c:316
+#: ../panels/user-accounts/um-account-dialog.c:315
 msgid "This will be used to name your home folder and can't be changed."
 msgstr "Tai bus naudojama kaip jūsų namų aplankas ir negalės būti pakeista."
 
-#: ../panels/user-accounts/um-account-dialog.c:449
+#: ../panels/user-accounts/um-account-dialog.c:448
 msgid "Passwords do not match."
 msgstr "Slaptažodžiai nesutampa."
 
-#: ../panels/user-accounts/um-account-dialog.c:719
-#: ../panels/user-accounts/um-account-dialog.c:765
+#: ../panels/user-accounts/um-account-dialog.c:718
+#: ../panels/user-accounts/um-account-dialog.c:764
 msgid "Failed to register account"
 msgstr "Nepavyko priregistruoti paskyros"
 
-#: ../panels/user-accounts/um-account-dialog.c:903
+#: ../panels/user-accounts/um-account-dialog.c:902
 msgid "No supported way to authenticate with this domain"
 msgstr "Nėra palaikomo būdo patvirtinti tapatybę šiame serveryje"
 
-#: ../panels/user-accounts/um-account-dialog.c:962
+#: ../panels/user-accounts/um-account-dialog.c:961
 msgid "Failed to join domain"
 msgstr "Nepavyko prisijungti prie srities"
 
-#: ../panels/user-accounts/um-account-dialog.c:1023
+#: ../panels/user-accounts/um-account-dialog.c:1022
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
@@ -6307,7 +6339,7 @@ msgstr ""
 "Šis prisijungimo vardas neveikė.\n"
 "Bandykite dar kartą."
 
-#: ../panels/user-accounts/um-account-dialog.c:1030
+#: ../panels/user-accounts/um-account-dialog.c:1029
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
@@ -6315,20 +6347,20 @@ msgstr ""
 "Šis prisijungimo slaptažodis neveikė.\n"
 "Bandykite dar kartą."
 
-#: ../panels/user-accounts/um-account-dialog.c:1038
+#: ../panels/user-accounts/um-account-dialog.c:1037
 msgid "Failed to log into domain"
 msgstr "Nepavyko prisijungti prie srities"
 
-#: ../panels/user-accounts/um-account-dialog.c:1096
+#: ../panels/user-accounts/um-account-dialog.c:1095
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr "Nepavyksta rasti domeno. Gal suklydote?"
 
-#: ../panels/user-accounts/um-account-dialog.c:1446
+#: ../panels/user-accounts/um-account-dialog.c:1445
 msgid "Add User"
 msgstr "Pridėti naudotojo paskyrą"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1459
+#: ../panels/user-accounts/um-account-dialog.c:1458
 msgid "_Enterprise Login"
 msgstr "_Kompanijos prisijungimas"
 
@@ -6477,19 +6509,19 @@ msgstr "Seansas įjungtas"
 msgid "Session Started"
 msgstr "Seansas paleistas"
 
-#: ../panels/user-accounts/um-password-dialog.c:146
+#: ../panels/user-accounts/um-password-dialog.c:145
 msgid "Please choose another password."
 msgstr "Pasirinkite kitą slaptažodį."
 
-#: ../panels/user-accounts/um-password-dialog.c:155
+#: ../panels/user-accounts/um-password-dialog.c:154
 msgid "Please type your current password again."
 msgstr "Įveskite savo slaptažodį dar kartą."
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:160
 msgid "Password could not be changed"
 msgstr "Nepavyko pakeisti slaptažodžio"
 
-#: ../panels/user-accounts/um-password-dialog.c:287
+#: ../panels/user-accounts/um-password-dialog.c:285
 msgid "The passwords do not match."
 msgstr "Slaptažodžiai nesutampa."
 
@@ -6618,12 +6650,12 @@ msgstr ""
 "Pakeitimams atlikti,\n"
 "pirma paspauskite * piktogramą"
 
-#: ../panels/user-accounts/um-user-panel.c:1080
+#: ../panels/user-accounts/um-user-panel.c:1082
 msgid "Create a user account"
 msgstr "Sukurti naują paskyrą"
 
-#: ../panels/user-accounts/um-user-panel.c:1091
-#: ../panels/user-accounts/um-user-panel.c:1380
+#: ../panels/user-accounts/um-user-panel.c:1093
+#: ../panels/user-accounts/um-user-panel.c:1383
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
@@ -6631,22 +6663,18 @@ msgstr ""
 "Naudotojui sukurti,\n"
 "pirma paspauskite * piktogramą"
 
-#: ../panels/user-accounts/um-user-panel.c:1101
+#: ../panels/user-accounts/um-user-panel.c:1103
 msgid "Delete the selected user account"
 msgstr "Ištrinti pasirinktą naudotoją"
 
-#: ../panels/user-accounts/um-user-panel.c:1113
-#: ../panels/user-accounts/um-user-panel.c:1385
+#: ../panels/user-accounts/um-user-panel.c:1115
+#: ../panels/user-accounts/um-user-panel.c:1388
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr ""
 "Pasirinktam naudotojui ištrinti,\n"
 "pirma paspauskite * piktogramą"
-
-#: ../panels/user-accounts/um-user-panel.c:1295
-msgid "My Account"
-msgstr "Mano paskyra"
 
 #: ../panels/user-accounts/um-utils.c:551
 #, c-format
@@ -7016,11 +7044,11 @@ msgstr "Rodomas skydelis"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[SKYDELIS] [ARGUMENTAS…]"
 
-#: ../shell/cc-application.c:142
+#: ../shell/cc-application.c:145
 msgid "- Settings"
 msgstr "- nustatymai"
 
-#: ../shell/cc-application.c:160
+#: ../shell/cc-application.c:163
 #, c-format
 msgid ""
 "%s\n"
@@ -7029,15 +7057,15 @@ msgstr ""
 "%s\n"
 "Paleiskite „%s --help“ visam komandų eilutės parinkčių sąrašui gauti.\n"
 
-#: ../shell/cc-application.c:190
+#: ../shell/cc-application.c:193
 msgid "Available panels:"
 msgstr "Prieinami skydeliai:"
 
-#: ../shell/cc-application.c:325
+#: ../shell/cc-application.c:328
 msgid "Help"
 msgstr "Žinynas"
 
-#: ../shell/cc-application.c:326
+#: ../shell/cc-application.c:329
 msgid "Quit"
 msgstr "Išeiti"
 
@@ -7068,6 +7096,28 @@ msgstr "Nustatymai"
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Nustatymai;Parinktys;"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Užrakinti ekraną"
+
+#~ msgid "%s %d-bit"
+#~ msgstr "%s %d-bitų"
+
+#~ msgid "Base system"
+#~ msgstr "Bazinė sistema"
+
+#~ msgid "Team"
+#~ msgstr "Team"
+
+#~ msgctxt "Input Source"
+#~ msgid "Other"
+#~ msgstr "Kita"
+
+#~ msgid "Add an Input Source"
+#~ msgstr "Pridėti įvesties šaltinį"
+
+#~ msgid "Input Source Options"
+#~ msgstr "Įvesties šaltinio nustatymai"
 
 #~ msgid "Device type:"
 #~ msgstr "Įrenginio tipas:"

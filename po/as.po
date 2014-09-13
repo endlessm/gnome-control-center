@@ -9,9 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"control-center&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-20 22:41+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-12 16:09-0700\n"
 "PO-Revision-Date: 2014-01-22 19:45+0630\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
 "Language-Team: Assamese <kde-i18n-doc@kde.org>\n"
@@ -33,35 +32,31 @@ msgid "Changes throughout the day"
 msgstr "দিনটোত কৰা পৰিবৰ্তনসমূহ"
 
 #: ../panels/background/background.ui.h:4
-msgid "Lock Screen"
-msgstr "পৰ্দা লক কৰক"
-
-#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Tile"
 msgstr "টাইল"
 
-#: ../panels/background/background.ui.h:6
+#: ../panels/background/background.ui.h:5
 msgctxt "background, style"
 msgid "Zoom"
 msgstr "জুম"
 
-#: ../panels/background/background.ui.h:7
+#: ../panels/background/background.ui.h:6
 msgctxt "background, style"
 msgid "Center"
 msgstr "কেন্দ্ৰ"
 
-#: ../panels/background/background.ui.h:8
+#: ../panels/background/background.ui.h:7
 msgctxt "background, style"
 msgid "Scale"
 msgstr "স্কেইল"
 
-#: ../panels/background/background.ui.h:9
+#: ../panels/background/background.ui.h:8
 msgctxt "background, style"
 msgid "Fill"
 msgstr "পূৰ্ণ কৰক"
 
-#: ../panels/background/background.ui.h:10
+#: ../panels/background/background.ui.h:9
 msgctxt "background, style"
 msgid "Span"
 msgstr "বিস্তাৰ"
@@ -72,6 +67,7 @@ msgid "Select Background"
 msgstr "পটভূমি বাছক"
 
 #: ../panels/background/cc-background-chooser-dialog.c:312
+#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "ৱালপেপাৰসমূহ"
 
@@ -101,17 +97,17 @@ msgstr "আপুনি আপোনাৰ %s ফোল্ডাৰলৈ ছব
 
 #: ../panels/background/cc-background-chooser-dialog.c:429
 #: ../panels/bluetooth/cc-bluetooth-panel.c:640
-#: ../panels/color/cc-color-panel.c:221 ../panels/color/cc-color-panel.c:958
-#: ../panels/display/cc-display-panel.c:1510
-#: ../panels/display/cc-display-panel.c:1952
-#: ../panels/network/connection-editor/vpn-helpers.c:245
-#: ../panels/network/connection-editor/vpn-helpers.c:374
+#: ../panels/color/cc-color-panel.c:222 ../panels/color/cc-color-panel.c:959
+#: ../panels/display/cc-display-panel.c:1505
+#: ../panels/display/cc-display-panel.c:2086
+#: ../panels/network/connection-editor/vpn-helpers.c:250
+#: ../panels/network/connection-editor/vpn-helpers.c:379
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:470
+#: ../panels/privacy/cc-privacy-panel.c:616
 #: ../panels/search/cc-search-locations-dialog.c:682
 #: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
@@ -142,7 +138,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "কোনো ডেস্কটপ পটভূমি নাই"
 
-#: ../panels/background/cc-background-panel.c:493
+#: ../panels/background/cc-background-panel.c:504
 msgid "Current background"
 msgstr "বৰ্তমান পটভূমী"
 
@@ -253,8 +249,7 @@ msgstr "'%s' ক ডিভাইচসমূহৰ তালিকাৰ পৰ�
 msgid ""
 "If you remove the device, you will have to set it up again before next use."
 msgstr ""
-"যদি আপুনি ডিভাইচ আতৰায়, আপুনি ইয়াক পৰৱৰ্তী ব্যৱহাৰৰ আগত আকৌ সংস্থাপন কৰিব "
-"লাগিব।"
+"যদি আপুনি ডিভাইচ আতৰায়, আপুনি ইয়াক পৰৱৰ্তী ব্যৱহাৰৰ আগত আকৌ সংস্থাপন কৰিব লাগিব।"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:641
 #: ../panels/online-accounts/cc-online-accounts-panel.c:844
@@ -402,48 +397,48 @@ msgstr "মানাংকিত নহয়"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
-#: ../panels/color/cc-color-panel.c:137
+#: ../panels/color/cc-color-panel.c:138
 msgid "Default: "
 msgstr "অবিকল্পিত: "
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile his a standard space like AdobeRGB
-#: ../panels/color/cc-color-panel.c:145
+#: ../panels/color/cc-color-panel.c:146
 msgid "Colorspace: "
 msgstr "ৰঙস্থান: "
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile is a test profile
-#: ../panels/color/cc-color-panel.c:152
+#: ../panels/color/cc-color-panel.c:153
 msgid "Test profile: "
 msgstr "আলেখ্য পৰিক্ষা কৰক: "
 
 #. TRANSLATORS: an ICC profile is a file containing colorspace data
-#: ../panels/color/cc-color-panel.c:219
+#: ../panels/color/cc-color-panel.c:220
 msgid "Select ICC Profile File"
 msgstr "ICC আলেখ্য ফাইল বাছক"
 
-#: ../panels/color/cc-color-panel.c:222
+#: ../panels/color/cc-color-panel.c:223
 msgid "_Import"
 msgstr "ইমপোৰ্ট কৰক (_I)"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:233
+#: ../panels/color/cc-color-panel.c:234
 msgid "Supported ICC profiles"
 msgstr "সমৰ্থিত ICC আলেখ্যসমূহ"
 
 #. TRANSLATORS: filter name on the file->open dialog
-#: ../panels/color/cc-color-panel.c:240
+#: ../panels/color/cc-color-panel.c:241
 #: ../panels/network/wireless-security/eap-method-fast.c:410
 msgid "All files"
 msgstr "সৰ্বধৰণৰ ফাইল"
 
-#: ../panels/color/cc-color-panel.c:579
+#: ../panels/color/cc-color-panel.c:580
 msgid "Screen"
 msgstr "পৰ্দা"
 
 #. TRANSLATORS: this is when the upload of the profile failed
-#: ../panels/color/cc-color-panel.c:903
+#: ../panels/color/cc-color-panel.c:904
 #, c-format
 msgid "Failed to upload file: %s"
 msgstr "ফাইল আপল'ড কৰিবলে ব্যৰ্থ: %s"
@@ -451,40 +446,39 @@ msgstr "ফাইল আপল'ড কৰিবলে ব্যৰ্থ: %s"
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
 #. * only shown when the user uses a LiveCD to calibrate
-#: ../panels/color/cc-color-panel.c:917
+#: ../panels/color/cc-color-panel.c:918
 msgid "The profile has been uploaded to:"
 msgstr "আলেখ্যক চিহ্নিত স্থানলৈ আপল'ড কৰা হৈছে:"
 
-#: ../panels/color/cc-color-panel.c:919
+#: ../panels/color/cc-color-panel.c:920
 msgid "Write down this URL."
 msgstr "এই URL লিখি ৰাখক।"
 
-#: ../panels/color/cc-color-panel.c:920
-msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"এই কমপিউটাৰ পুনৰাম্ভ কৰক আৰু আপোনাৰ স্বাভাৱিক অপাৰেটিং চিস্টেম বুট কৰক।"
-
 #: ../panels/color/cc-color-panel.c:921
+msgid "Restart this computer and boot your normal operating system."
+msgstr "এই কমপিউটাৰ পুনৰাম্ভ কৰক আৰু আপোনাৰ স্বাভাৱিক অপাৰেটিং চিস্টেম বুট কৰক।"
+
+#: ../panels/color/cc-color-panel.c:922
 msgid "Type the URL into your browser to download and install the profile."
 msgstr "আলেখ্যক ডাউনল'ড কৰি ইনস্টল কৰিবলে URL ক আপোনাৰ ব্ৰাউছাৰত টাইপ কৰক।"
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
-#: ../panels/color/cc-color-panel.c:955
+#: ../panels/color/cc-color-panel.c:956
 msgid "Save Profile"
 msgstr "আলেখ্য সংৰক্ষণ কৰক"
 
-#: ../panels/color/cc-color-panel.c:959
-#: ../panels/network/connection-editor/vpn-helpers.c:375
+#: ../panels/color/cc-color-panel.c:960
+#: ../panels/network/connection-editor/vpn-helpers.c:380
 msgid "_Save"
 msgstr "সংৰক্ষণ (_S)"
 
 #. TRANSLATORS: this is when the button is sensitive
-#: ../panels/color/cc-color-panel.c:1315
+#: ../panels/color/cc-color-panel.c:1316
 msgid "Create a color profile for the selected device"
 msgstr "নিৰ্বাচিত ডিভাইচৰ বাবে এটা ৰঙ আলেখ্য সৃষ্টি কৰক"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1330 ../panels/color/cc-color-panel.c:1354
+#: ../panels/color/cc-color-panel.c:1331 ../panels/color/cc-color-panel.c:1355
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
@@ -493,12 +487,12 @@ msgstr ""
 "সঠিকভাৱে সংযুক্ত।"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1364
+#: ../panels/color/cc-color-panel.c:1365
 msgid "The measuring instrument does not support printer profiling."
 msgstr "মাপ লোৱা ডিভাইচয় প্ৰিন্টাৰ আলেখ্যকৰণ সমৰ্থন নকৰে।"
 
 #. TRANSLATORS: this is when the button is insensitive
-#: ../panels/color/cc-color-panel.c:1375
+#: ../panels/color/cc-color-panel.c:1376
 msgid "The device type is not currently supported."
 msgstr "ডিভাইচ ধৰণ বৰ্তমানে সমৰ্থিত নহয়।"
 
@@ -585,7 +579,7 @@ msgstr "মানাংকন প্ৰদৰ্শন কৰক"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "Cancel"
 msgstr "বাতিল কৰক"
 
@@ -618,8 +612,7 @@ msgid ""
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
 msgstr ""
-"মানাংকনে এটা আলেখ্য উৎপন্ন কৰিব যি আপুনি আপোনাৰ পৰ্দাৰ ৰঙ ব্যৱস্থাপনা কৰাৰ "
-"বাবে "
+"মানাংকনে এটা আলেখ্য উৎপন্ন কৰিব যি আপুনি আপোনাৰ পৰ্দাৰ ৰঙ ব্যৱস্থাপনা কৰাৰ বাবে "
 "ব্যৱহাৰ কৰিব পাৰিব। মানাংকনত যিমান অধিক সময় ব্যয় হব, ৰঙৰ আলেখ্য তিমান ভাল হব।"
 
 #: ../panels/color/color.ui.h:3
@@ -674,8 +667,7 @@ msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
 msgstr ""
-"অনুগ্ৰহ কৰি আপোনাৰ বাবে অনুকূলিত এটা উজ্জ্বলতালে প্ৰদৰ্শন সংহতি কৰক। ৰঙ "
-"ব্যৱস্থাপনা এই "
+"অনুগ্ৰহ কৰি আপোনাৰ বাবে অনুকূলিত এটা উজ্জ্বলতালে প্ৰদৰ্শন সংহতি কৰক। ৰঙ ব্যৱস্থাপনা এই "
 "উজ্জ্বলতা স্তৰত সঠিক হব।"
 
 #: ../panels/color/color.ui.h:16
@@ -683,8 +675,7 @@ msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
 msgstr ""
-"বিকল্পভাৱে, আপুনি এই ডিভাইচৰ বাবে অন্য আলেখ্যসমূহৰ এটাৰ সৈতে ব্যৱহাৰ কৰা "
-"উজ্জ্বলতা "
+"বিকল্পভাৱে, আপুনি এই ডিভাইচৰ বাবে অন্য আলেখ্যসমূহৰ এটাৰ সৈতে ব্যৱহাৰ কৰা উজ্জ্বলতা "
 "স্তৰ ব্যৱহাৰ কৰিব পাৰিব।"
 
 #: ../panels/color/color.ui.h:17
@@ -751,15 +742,13 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"সমস্যা দেখা দিছে। আলেখ্য সঠিকভাৱে কাম নকৰিব পাৰে। <a href=\"\">বিৱৰণ "
-"দেখুৱাওক।</"
+"সমস্যা দেখা দিছে। আলেখ্য সঠিকভাৱে কাম নকৰিব পাৰে। <a href=\"\">বিৱৰণ দেখুৱাওক।</"
 "a>"
 
 #: ../panels/color/color.ui.h:30
 msgid "Each device needs an up to date color profile to be color managed."
 msgstr ""
-"প্ৰতিটো ডিভাইচ ব্যৱস্থাপনা কৰিবলে এটা বৰ্তমান তাৰিখলে উন্নত এটা ৰঙ আলেখ্যৰ "
-"প্ৰয়োজন।"
+"প্ৰতিটো ডিভাইচ ব্যৱস্থাপনা কৰিবলে এটা বৰ্তমান তাৰিখলে উন্নত এটা ৰঙ আলেখ্যৰ প্ৰয়োজন।"
 
 #: ../panels/color/color.ui.h:31
 msgid "Learn more"
@@ -902,8 +891,7 @@ msgstr "ৰঙ"
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
 msgstr ""
-"আপোনাৰ ডিভাইচসমূহৰ ৰঙ মানাংকন কৰক, যেনে প্ৰদৰ্শনসমূহ, কেমেৰাসমূহ অথবা "
-"প্ৰিন্টাৰসমূহ"
+"আপোনাৰ ডিভাইচসমূহৰ ৰঙ মানাংকন কৰক, যেনে প্ৰদৰ্শনসমূহ, কেমেৰাসমূহ অথবা প্ৰিন্টাৰসমূহ"
 
 #. Translators: those are keywords for the color control-center panel
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:4
@@ -945,7 +933,7 @@ msgstr "অধিক…"
 msgid "No languages found"
 msgstr "কোনো ভাষা পোৱা নগল"
 
-#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:1
+#: ../panels/common/language-chooser.ui.h:1 ../panels/region/region.ui.h:3
 msgid "Language"
 msgstr "ভাষা"
 
@@ -1115,25 +1103,27 @@ msgstr "চিস্টেম সময় আৰু তাৰিখ সংহত�
 msgid "To change time or date settings, you need to authenticate."
 msgstr "সময় আৰু তাৰিখ সংহতিসমূহ পৰিবৰ্তন কৰিবলে, আপুনি প্ৰমাণীত হব লাগিব।"
 
-#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
 msgstr "লিড বন্ধ"
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:489
+#: ../panels/display/cc-display-panel.c:484
 msgid "Mirrored"
 msgstr "মিৰৰড্"
 
-#: ../panels/display/cc-display-panel.c:491
-#: ../panels/display/cc-display-panel.c:2101
+#: ../panels/display/cc-display-panel.c:486
+#: ../panels/display/cc-display-panel.c:2255
 msgid "Primary"
 msgstr "প্ৰাথমিক"
 
-#: ../panels/display/cc-display-panel.c:493
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1738 ../panels/power/cc-power-panel.c:1749
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/display/cc-display-panel.c:488
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1743 ../panels/power/cc-power-panel.c:1754
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1141,80 +1131,90 @@ msgstr "প্ৰাথমিক"
 msgid "Off"
 msgstr "অফ"
 
-#: ../panels/display/cc-display-panel.c:496
+#: ../panels/display/cc-display-panel.c:491
 msgid "Secondary"
 msgstr "দ্বিতীয়"
 
-#: ../panels/display/cc-display-panel.c:1506
+#: ../panels/display/cc-display-panel.c:1501
 msgid "Arrange Combined Displays"
 msgstr "সংযুক্ত প্ৰদৰ্শনসমূহ সঁজাওক"
 
-#: ../panels/display/cc-display-panel.c:1512
-#: ../panels/display/cc-display-panel.c:1955
+#: ../panels/display/cc-display-panel.c:1507
+#: ../panels/display/cc-display-panel.c:2089
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Apply"
 msgstr "প্ৰয়োগ কৰক (_A)"
 
-#: ../panels/display/cc-display-panel.c:1533
+#: ../panels/display/cc-display-panel.c:1528
 msgid "Drag displays to rearrange them"
 msgstr "প্ৰদৰ্শনসমূহক পুনৰ সংঘঠিত কৰিবলৈ সিহতক সঁজাওক"
 
-#: ../panels/display/cc-display-panel.c:2037
+#: ../panels/display/cc-display-panel.c:2191
 msgid "Size"
 msgstr "আকাৰ"
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:2050
+#: ../panels/display/cc-display-panel.c:2204
 msgid "Aspect Ratio"
 msgstr "অনুপাত হাৰ"
 
-#: ../panels/display/cc-display-panel.c:2071
+#: ../panels/display/cc-display-panel.c:2225
 #: ../panels/printers/pp-options-dialog.c:86
 msgid "Resolution"
 msgstr "বিভেদন"
 
-#: ../panels/display/cc-display-panel.c:2102
+#: ../panels/display/cc-display-panel.c:2256
 msgid "Show the top bar and Activities Overview on this display"
 msgstr "এই প্ৰদৰ্শনত ওপৰ বাৰ আৰু কাৰ্য্যসমূহ অভাৰভিউ দেখুৱাওক"
 
-#: ../panels/display/cc-display-panel.c:2108
+#: ../panels/display/cc-display-panel.c:2262
 msgid "Secondary Display"
 msgstr "দ্বিতীয় প্ৰদৰ্শন"
 
-#: ../panels/display/cc-display-panel.c:2109
+#: ../panels/display/cc-display-panel.c:2263
 msgid "Join this display with another to create an extra workspace"
 msgstr "এটা অতিৰিক্ত কৰ্মস্থান সৃষ্টি কৰিবলৈ এই প্ৰদৰ্শনক অন্যৰ সৈতে লগ লগাওক"
 
-#: ../panels/display/cc-display-panel.c:2116
+#: ../panels/display/cc-display-panel.c:2270
 msgid "Presentation"
 msgstr "পৰিৱেশন"
 
-#: ../panels/display/cc-display-panel.c:2117
+#: ../panels/display/cc-display-panel.c:2271
 msgid "Show slideshows and media only"
 msgstr "কেৱল স্লাইডশ্ব আৰু মাধ্যম দেখুৱাওক"
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2122
+#: ../panels/display/cc-display-panel.c:2276
 msgid "Mirror"
 msgstr "মিৰৰ"
 
-#: ../panels/display/cc-display-panel.c:2123
+#: ../panels/display/cc-display-panel.c:2277
 msgid "Show your existing view on both displays"
 msgstr "দুয়োটা প্ৰদৰ্শনত আপোনাৰ স্থায়ী দৰ্শন দেখুৱাওক"
 
-#: ../panels/display/cc-display-panel.c:2129
+#: ../panels/display/cc-display-panel.c:2283
 msgid "Turn Off"
 msgstr "বন্ধ কৰক"
 
-#: ../panels/display/cc-display-panel.c:2130
+#: ../panels/display/cc-display-panel.c:2284
 msgid "Don't use this display"
 msgstr "এই প্ৰদৰ্শন ব্যৱহাৰ নকৰিব"
 
-#: ../panels/display/cc-display-panel.c:2345
+#. overscan
+#: ../panels/display/cc-display-panel.c:2301
+msgid "Shrink screen to fit TV"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2307
+#, fuzzy
+msgid "Scaling"
+msgstr "স্ক্রোল ব্যবস্থা"
+
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Could not get screen information"
 msgstr "পৰ্দা পৰিবৰ্তন প্ৰাপ্ত কৰিবলৈ ব্যৰ্থ"
 
-#: ../panels/display/cc-display-panel.c:2376
+#: ../panels/display/cc-display-panel.c:2463
 msgid "_Arrange Combined Displays"
 msgstr "সংযুক্ত প্ৰদৰ্শনসমূহ সঁজাওক (_A)"
 
@@ -1232,53 +1232,49 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "পেনেল;প্ৰজেক্টৰ;xrandr;পৰ্দা;বিভেদন;সতেজ কৰক;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:452 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:454 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "অজ্ঞাত"
 
-#: ../panels/info/cc-info-panel.c:539
-#, c-format
-msgid "%s %d-bit"
-msgstr "%s %d-bit"
-
-#: ../panels/info/cc-info-panel.c:541
+#. translators: This is the the type of OS architecture, eg: "64-bit" or "32-bit"
+#: ../panels/info/cc-info-panel.c:582
 #, c-format
 msgid "%d-bit"
 msgstr "%d-bit"
 
-#: ../panels/info/cc-info-panel.c:1221
+#: ../panels/info/cc-info-panel.c:1260
 msgid "Ask what to do"
 msgstr "কি কৰা হব সোধক"
 
-#: ../panels/info/cc-info-panel.c:1225
+#: ../panels/info/cc-info-panel.c:1264
 msgid "Do nothing"
 msgstr "একো নকৰিব"
 
-#: ../panels/info/cc-info-panel.c:1229
+#: ../panels/info/cc-info-panel.c:1268
 msgid "Open folder"
 msgstr "ফোল্ডাৰ খোলক"
 
-#: ../panels/info/cc-info-panel.c:1320
+#: ../panels/info/cc-info-panel.c:1359
 msgid "Other Media"
 msgstr "অন্য মাধ্যম"
 
-#: ../panels/info/cc-info-panel.c:1351
+#: ../panels/info/cc-info-panel.c:1390
 msgid "Select an application for audio CDs"
 msgstr "অডিঅ' CDসমূহৰ বাবে এটা এপ্লিকেচন বাছক"
 
-#: ../panels/info/cc-info-panel.c:1352
+#: ../panels/info/cc-info-panel.c:1391
 msgid "Select an application for video DVDs"
 msgstr "ভিডিঅ' DVDসমূহৰ বাবে এটা এপ্লিকেচন বাছক"
 
-#: ../panels/info/cc-info-panel.c:1353
+#: ../panels/info/cc-info-panel.c:1392
 msgid "Select an application to run when a music player is connected"
 msgstr "যেতিয়া এটা সংগীত প্লেয়াৰ সংযুক্ত থাকে চলাবলে এটা এপ্লিকেচন বাছক"
 
-#: ../panels/info/cc-info-panel.c:1354
+#: ../panels/info/cc-info-panel.c:1393
 msgid "Select an application to run when a camera is connected"
 msgstr "যেতিয়া এটা কেমেৰা সংযুক্ত তেতিয়া চলিবলে এটা এপ্লিকেচন বাছক"
 
-#: ../panels/info/cc-info-panel.c:1355
+#: ../panels/info/cc-info-panel.c:1394
 msgid "Select an application for software CDs"
 msgstr "চফ্টৱেৰ CDসমূহৰ বাবে এটা এপ্লিকেচন বাছক"
 
@@ -1287,89 +1283,89 @@ msgstr "চফ্টৱেৰ CDসমূহৰ বাবে এটা এপ্
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
 #.
-#: ../panels/info/cc-info-panel.c:1367
+#: ../panels/info/cc-info-panel.c:1406
 msgid "audio DVD"
 msgstr "অডিঅ' DVD"
 
-#: ../panels/info/cc-info-panel.c:1368
+#: ../panels/info/cc-info-panel.c:1407
 msgid "blank Blu-ray disc"
 msgstr "ৰিক্ত Blu-ray ডিস্ক"
 
-#: ../panels/info/cc-info-panel.c:1369
+#: ../panels/info/cc-info-panel.c:1408
 msgid "blank CD disc"
 msgstr "ৰিক্ত CD ডিস্ক"
 
-#: ../panels/info/cc-info-panel.c:1370
+#: ../panels/info/cc-info-panel.c:1409
 msgid "blank DVD disc"
 msgstr "ৰিক্ত DVD ডিস্ক"
 
-#: ../panels/info/cc-info-panel.c:1371
+#: ../panels/info/cc-info-panel.c:1410
 msgid "blank HD DVD disc"
 msgstr "ৰিক্ত HD DVD ডিস্ক"
 
-#: ../panels/info/cc-info-panel.c:1372
+#: ../panels/info/cc-info-panel.c:1411
 msgid "Blu-ray video disc"
 msgstr "Blu-ray ভিডিঅ' ডিস্ক"
 
-#: ../panels/info/cc-info-panel.c:1373
+#: ../panels/info/cc-info-panel.c:1412
 msgid "e-book reader"
 msgstr "e-book ৰিডাৰ"
 
-#: ../panels/info/cc-info-panel.c:1374
+#: ../panels/info/cc-info-panel.c:1413
 msgid "HD DVD video disc"
 msgstr "HD DVD ভিডিঅ' ডিস্ক"
 
-#: ../panels/info/cc-info-panel.c:1375
+#: ../panels/info/cc-info-panel.c:1414
 msgid "Picture CD"
 msgstr "ছবি CD"
 
-#: ../panels/info/cc-info-panel.c:1376
+#: ../panels/info/cc-info-panel.c:1415
 msgid "Super Video CD"
 msgstr "চুপাৰ ভিডিঅ' CD"
 
-#: ../panels/info/cc-info-panel.c:1377
+#: ../panels/info/cc-info-panel.c:1416
 msgid "Video CD"
 msgstr "ভিডিঅ' CD"
 
-#: ../panels/info/cc-info-panel.c:1378
+#: ../panels/info/cc-info-panel.c:1417
 msgid "Windows software"
 msgstr "Windows চফ্টৱেৰ"
 
-#: ../panels/info/cc-info-panel.c:1379
+#: ../panels/info/cc-info-panel.c:1418
 msgid "Software"
 msgstr "চফ্টৱেৰ"
 
-#: ../panels/info/cc-info-panel.c:1502
+#: ../panels/info/cc-info-panel.c:1541
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "অংশ"
 
-#: ../panels/info/cc-info-panel.c:1511 ../panels/info/info.ui.h:13
+#: ../panels/info/cc-info-panel.c:1550 ../panels/info/info.ui.h:13
 msgid "Overview"
 msgstr "অভাৰভিউ"
 
-#: ../panels/info/cc-info-panel.c:1517 ../panels/info/info.ui.h:20
+#: ../panels/info/cc-info-panel.c:1556 ../panels/info/info.ui.h:20
 msgid "Default Applications"
 msgstr "অবিকল্পিত এপ্লিকেচনসমূহ"
 
-#: ../panels/info/cc-info-panel.c:1522 ../panels/info/info.ui.h:28
+#: ../panels/info/cc-info-panel.c:1561 ../panels/info/info.ui.h:28
 msgid "Removable Media"
 msgstr "আতৰাব পৰা মাধ্যম"
 
-#: ../panels/info/cc-info-panel.c:1547
+#: ../panels/info/cc-info-panel.c:1586
 #, c-format
 msgid "Version %s"
 msgstr "সংস্কৰণ %s"
 
-#: ../panels/info/cc-info-panel.c:1597
+#: ../panels/info/cc-info-panel.c:1653
 msgid "Install Updates"
 msgstr "আপডেইটসমূহ ইনস্টল কৰক"
 
-#: ../panels/info/cc-info-panel.c:1601
+#: ../panels/info/cc-info-panel.c:1657
 msgid "System Up-To-Date"
 msgstr "চিস্টেম বৰ্তমান-তাৰিখলে-উন্নত"
 
-#: ../panels/info/cc-info-panel.c:1605
+#: ../panels/info/cc-info-panel.c:1661
 msgid "Checking for Updates"
 msgstr "আপডেইটসমূহৰ বাবে নীৰিক্ষণ কৰা হৈ আছে"
 
@@ -1389,8 +1385,7 @@ msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgstr ""
-"ডিভাইচ;চিস্টেম;তথ্য;মেমৰি;প্ৰচেছৰ;সংস্কৰণ;অবিকল্পিত;এপ্লিকেচন;পছন্দ;cd;dvd;usb"
-";"
+"ডিভাইচ;চিস্টেম;তথ্য;মেমৰি;প্ৰচেছৰ;সংস্কৰণ;অবিকল্পিত;এপ্লিকেচন;পছন্দ;cd;dvd;usb;"
 "অডিঅ';ভিডিঅ';ডিস্ক;আতৰাব পৰা;মাধ্যম;স্বচলন;"
 
 #: ../panels/info/info.ui.h:1
@@ -1410,17 +1405,22 @@ msgid "Device name"
 msgstr "ডিভাইচ নাম"
 
 #: ../panels/info/info.ui.h:5
+#, fuzzy
+msgid "Version"
+msgstr "সংস্কৰণ ০"
+
+#: ../panels/info/info.ui.h:6
 msgid "Memory"
 msgstr "মেমৰি"
 
-#: ../panels/info/info.ui.h:6
+#: ../panels/info/info.ui.h:7
 msgid "Processor"
 msgstr "প্ৰচেছৰ"
 
-#. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-msgid "Base system"
-msgstr "ভিত্তি চিস্টেম"
+#, fuzzy
+msgid "OS Type"
+msgstr "ধৰণ"
 
 #: ../panels/info/info.ui.h:9
 msgid "Disk"
@@ -1700,8 +1700,7 @@ msgstr "কিবৰ্ড"
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
 msgid "View and change keyboard shortcuts and set your typing preferences"
 msgstr ""
-"কিবৰ্ড চৰ্টকাটসমূহ দৰ্শন কৰক আৰু পৰিবৰ্তন কৰক আৰু আপোনাৰ টাইপিং পছন্দসমূহ "
-"সংহতি কৰক"
+"কিবৰ্ড চৰ্টকাটসমূহ দৰ্শন কৰক আৰু পৰিবৰ্তন কৰক আৰু আপোনাৰ টাইপিং পছন্দসমূহ সংহতি কৰক"
 
 #. Translators: those are keywords for the keyboard control-center panel
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
@@ -1777,7 +1776,6 @@ msgid "Cursor blink speed"
 msgstr "কাৰ্চাৰৰ পিৰিকিয়া গতি"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/region.ui.h:5
 msgid "Input Sources"
 msgstr "ইনপুট উৎসসমূহ"
 
@@ -1794,8 +1792,7 @@ msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
 "Backspace to clear."
 msgstr ""
-"এটা চৰ্টকাট সম্পাদন কৰিবলে, শাৰীত ক্লিক কৰক আৰু নতুন কিসমূহ ধৰি ৰাখক অথবা "
-"পৰিষ্কাৰ "
+"এটা চৰ্টকাট সম্পাদন কৰিবলে, শাৰীত ক্লিক কৰক আৰু নতুন কিসমূহ ধৰি ৰাখক অথবা পৰিষ্কাৰ "
 "কৰিবলে Backspace টিপক।"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:22
@@ -1818,8 +1815,7 @@ msgid ""
 "using this key.\n"
 "Please try with a key such as Control, Alt or Shift at the same time."
 msgstr ""
-"চৰ্টকাট-কি হিচাপে \"%s\" ব্যবহাৰ কৰা নাযাব কাৰণ ইয়াৰ ফলস্বৰূপ এই কি ব্যবহাৰ "
-"কৰি "
+"চৰ্টকাট-কি হিচাপে \"%s\" ব্যবহাৰ কৰা নাযাব কাৰণ ইয়াৰ ফলস্বৰূপ এই কি ব্যবহাৰ কৰি "
 "একো টাইপ কৰা নাযাব।\n"
 "অনুগ্ৰহ কৰি Control, Alt বা Shift কিৰ একত্ৰিক ব্যবহাৰৰ প্ৰচেষ্টা কৰক।"
 
@@ -1985,11 +1981,11 @@ msgstr "এবাৰ ক্লিক, দ্বিতীয় বুটাম"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:358
+#: ../panels/network/cc-network-panel.c:361
 msgid "Air_plane Mode"
 msgstr "বিমান অৱস্থা (_p)"
 
-#: ../panels/network/cc-network-panel.c:930
+#: ../panels/network/cc-network-panel.c:933
 msgid "Network proxy"
 msgstr "নেটৱাৰ্ক প্ৰক্সি"
 
@@ -1997,14 +1993,14 @@ msgstr "নেটৱাৰ্ক প্ৰক্সি"
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: ../panels/network/cc-network-panel.c:1109 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1244
+#: ../panels/network/cc-network-panel.c:1247
 msgid "The system network services are not compatible with this version."
 msgstr "চিস্টেম নেটৱাৰ্ক সেৱাসমূহ এই সংস্কৰণৰ সৈতে সংগত নহয়।"
 
@@ -2200,7 +2196,7 @@ msgstr "হস্তচালিত"
 msgid "Link-Local Only"
 msgstr "কেৱল স্থানীয়-সংযোগ"
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:942
+#: ../panels/network/connection-editor/ce-page-ip4.c:934
 #: ../panels/network/network-wifi.ui.h:46
 msgid "IPv4"
 msgstr "IPv4"
@@ -2222,7 +2218,7 @@ msgstr "স্বচালিত"
 msgid "Automatic, DHCP only"
 msgstr "স্বচালিত, কেৱল DHCP"
 
-#: ../panels/network/connection-editor/ce-page-ip6.c:902
+#: ../panels/network/connection-editor/ce-page-ip6.c:894
 #: ../panels/network/network-wifi.ui.h:47
 msgid "IPv6"
 msgstr "IPv6"
@@ -2447,7 +2443,7 @@ msgstr "নতুন আলেখ্য"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1471
+#: ../panels/user-accounts/um-account-dialog.c:1470
 msgid "_Add"
 msgstr "যোগ কৰক (_A)"
 
@@ -2460,23 +2456,23 @@ msgstr "VPN"
 msgid "Bond"
 msgstr "বান্ধনী"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:598
+#: ../panels/network/connection-editor/net-connection-editor.c:600
 msgid "Bridge"
 msgstr "ব্ৰিজ"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:599
+#: ../panels/network/connection-editor/net-connection-editor.c:601
 msgid "VLAN"
 msgstr "VLAN"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:750
+#: ../panels/network/connection-editor/net-connection-editor.c:752
 msgid "Could not load VPN plugins"
 msgstr "VPN প্লাগিনসমূহ ল'ড কৰিব পৰা নগল"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:819
+#: ../panels/network/connection-editor/net-connection-editor.c:821
 msgid "Import from file…"
 msgstr "ফাইলৰ পৰা ইমপোৰ্ট কৰক…"
 
-#: ../panels/network/connection-editor/net-connection-editor.c:890
+#: ../panels/network/connection-editor/net-connection-editor.c:892
 msgid "Add Network Connection"
 msgstr "নেটৱাৰ্ক সংযোগ যোগ কৰক"
 
@@ -2496,8 +2492,7 @@ msgid ""
 "Reset the settings for this network, including passwords, but remember it as "
 "a preferred network"
 msgstr ""
-"এই নেটৱাৰ্কৰ বাবে সংহতিসমূহ পুনৰ সংহতি কৰক, পাছৱাৰ্ডসমূহ অন্তৰ্ভুক্ত কৰাকৈ, "
-"কিন্তু ইয়াক "
+"এই নেটৱাৰ্কৰ বাবে সংহতিসমূহ পুনৰ সংহতি কৰক, পাছৱাৰ্ডসমূহ অন্তৰ্ভুক্ত কৰাকৈ, কিন্তু ইয়াক "
 "এটা পছন্দৰ নেটৱাৰ্ক হিচাপে মনত ৰাখক"
 
 #: ../panels/network/connection-editor/reset-page.ui.h:4
@@ -2505,8 +2500,7 @@ msgid ""
 "Remove all details relating to this network and do not try to automatically "
 "connect"
 msgstr ""
-"এই নেটৱাৰ্কৰ সৈতে প্ৰসংগ কৰা সকলো বিৱৰণ আতৰাওক আৰু স্বচালিতভাৱে সংযোগ কৰাৰ "
-"চেষ্টা "
+"এই নেটৱাৰ্কৰ সৈতে প্ৰসংগ কৰা সকলো বিৱৰণ আতৰাওক আৰু স্বচালিতভাৱে সংযোগ কৰাৰ চেষ্টা "
 "নকৰিব"
 
 #: ../panels/network/connection-editor/security-page.ui.h:1
@@ -2514,11 +2508,11 @@ msgstr ""
 msgid "S_ecurity"
 msgstr "সুৰক্ষা (_e)"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:205
+#: ../panels/network/connection-editor/vpn-helpers.c:210
 msgid "Cannot import VPN connection"
 msgstr "VPN সংযোগ ইমপোৰ্ট কৰিব নোৱাৰি"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:207
+#: ../panels/network/connection-editor/vpn-helpers.c:212
 #, c-format
 msgid ""
 "The file '%s' could not be read or does not contain recognized VPN "
@@ -2530,37 +2524,37 @@ msgstr ""
 "\n"
 "ত্ৰুটি: %s।"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:242
+#: ../panels/network/connection-editor/vpn-helpers.c:247
 msgid "Select file to import"
 msgstr "ইমপোৰ্ট কৰিবলে ফাইল বাছক"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:246
+#: ../panels/network/connection-editor/vpn-helpers.c:251
 #: ../panels/printers/cc-printers-panel.c:1947
 #: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
 msgstr "খোলক (_O)"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:294
+#: ../panels/network/connection-editor/vpn-helpers.c:299
 #, c-format
 msgid "A file named \"%s\" already exists."
 msgstr "'\"%s\" নামৰ এটা ফাইল ইতিমধ্যে অস্তিত্ববান।"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:296
+#: ../panels/network/connection-editor/vpn-helpers.c:301
 msgid "_Replace"
 msgstr "প্ৰতিস্থাপন কৰক (_R)"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:298
+#: ../panels/network/connection-editor/vpn-helpers.c:303
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr ""
 "আপুনি %s ক আপুনি সংৰক্ষণ কৰি থকা VPN সংযোগৰ সৈতে প্ৰতিস্থাপন কৰিব বিচাৰে নে?"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:334
+#: ../panels/network/connection-editor/vpn-helpers.c:339
 msgid "Cannot export VPN connection"
 msgstr "VPN সংযোগ এক্সপোৰ্ট কৰিব নোৱাৰি"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:336
+#: ../panels/network/connection-editor/vpn-helpers.c:341
 #, c-format
 msgid ""
 "The VPN connection '%s' could not be exported to %s.\n"
@@ -2571,7 +2565,7 @@ msgstr ""
 "\n"
 "ত্ৰুটি: %s।"
 
-#: ../panels/network/connection-editor/vpn-helpers.c:371
+#: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection..."
 msgstr "VPN সংযোগ এক্সপোৰ্ট কৰক..."
 
@@ -2613,8 +2607,7 @@ msgid ""
 "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;"
 "vlan;bridge;bond;"
 msgstr ""
-"নেটৱাৰ্ক;বেতাঁৰ;Wi-Fi;Wifi;IP;LAN;প্ৰক্সি;WAN;ব্ৰডবেণ্ড;মডেম;ব্লুটুথ;vpn;vlan;"
-"bridge;"
+"নেটৱাৰ্ক;বেতাঁৰ;Wi-Fi;Wifi;IP;LAN;প্ৰক্সি;WAN;ব্ৰডবেণ্ড;মডেম;ব্লুটুথ;vpn;vlan;bridge;"
 "বান্ধনী;"
 
 #: ../panels/network/net-device-bond.c:77
@@ -2682,7 +2675,6 @@ msgid "Add new connection"
 msgstr "নতুন সংযোগ যোগ কৰক"
 
 #: ../panels/network/net-device-team.c:77
-#| msgid "Bridge slaves"
 msgid "Team slaves"
 msgstr "দলৰ স্লেইভবোৰ"
 
@@ -2691,8 +2683,7 @@ msgid ""
 "If you have a connection to the Internet other than wireless, you can set up "
 "a wireless hotspot to share the connection with others."
 msgstr ""
-"যদি আপোনাৰ ইন্টাৰনেটলে বেতাঁৰৰ বাহিৰে অন্য সংযোগ উপলব্ধ আছে, আপুনি ইয়াক অন্যৰ "
-"সৈতে "
+"যদি আপোনাৰ ইন্টাৰনেটলে বেতাঁৰৰ বাহিৰে অন্য সংযোগ উপলব্ধ আছে, আপুনি ইয়াক অন্যৰ সৈতে "
 "অংশীদাৰী কৰিবলে এটা বেতাঁৰ হটস্পট সংস্থাপন কৰিব পাৰে।"
 
 #: ../panels/network/net-device-wifi.c:1114
@@ -2705,8 +2696,7 @@ msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
 msgstr ""
-"হটস্পট সক্ৰিয় থকা অৱস্থাত আপোনাৰ বেতাঁৰৰ সহায়ত ইন্টাৰনেট অভিগম কৰাটো সম্ভব "
-"নহয়।"
+"হটস্পট সক্ৰিয় থকা অৱস্থাত আপোনাৰ বেতাঁৰৰ সহায়ত ইন্টাৰনেট অভিগম কৰাটো সম্ভব নহয়।"
 
 #: ../panels/network/net-device-wifi.c:1192
 msgid "Stop hotspot and disconnect any users?"
@@ -2938,8 +2928,7 @@ msgid ""
 "Reset the settings for this connection to their defaults, but remember as a "
 "preferred connection."
 msgstr ""
-"এই সংযোগৰ বাবে সংহতিসমূহক তাৰ অবিকল্পিতলে পুনৰসংহতি কৰক, কিন্তু এটা পছন্দৰ "
-"সংযোগ "
+"এই সংযোগৰ বাবে সংহতিসমূহক তাৰ অবিকল্পিতলে পুনৰসংহতি কৰক, কিন্তু এটা পছন্দৰ সংযোগ "
 "হিচাপে মনত ৰাখক।"
 
 #: ../panels/network/network-wifi.ui.h:42
@@ -2947,8 +2936,7 @@ msgid ""
 "Remove all details relating to this network and do not try to automatically "
 "connect to it."
 msgstr ""
-"এই নেটৱাৰ্কৰ সৈতে প্ৰসংগ কৰা সকলো বিৱৰণ আতৰাওক আৰু স্বচালিতভাৱে ইয়াৰ সৈতে "
-"সংযোগ "
+"এই নেটৱাৰ্কৰ সৈতে প্ৰসংগ কৰা সকলো বিৱৰণ আতৰাওক আৰু স্বচালিতভাৱে ইয়াৰ সৈতে সংযোগ "
 "কৰাৰ চেষ্টা নকৰিব।"
 
 #: ../panels/network/network-wifi.ui.h:43
@@ -3304,8 +3292,7 @@ msgid ""
 "Authority certificate?"
 msgstr ""
 "প্ৰমাণপত্ৰ কতৃপক্ষ (CA) প্ৰমাণপত্ৰ ব্যৱহাৰ নকৰিলে সুৰক্ষাবিহীন, বিপদজনক Wi-Fi "
-"নেটৱাৰ্কৰ সৈতে সংযোগ স্থাপন কৰা হ'ব পাৰে। আপুনি এটা প্ৰমাণপত্ৰ কতৃপক্ষ "
-"প্ৰমাণপত্ৰ "
+"নেটৱাৰ্কৰ সৈতে সংযোগ স্থাপন কৰা হ'ব পাৰে। আপুনি এটা প্ৰমাণপত্ৰ কতৃপক্ষ প্ৰমাণপত্ৰ "
 "নিৰ্বাচন কৰিব বিচাৰে নেকি?"
 
 #: ../panels/network/wireless-security/eap-method.c:281
@@ -3438,10 +3425,8 @@ msgid ""
 "\n"
 "(You can password-protect your private key with openssl)"
 msgstr ""
-"নিৰ্বাচিত ব্যক্তিগত কি' এটা পাছৱাৰ্ড দ্বাৰা সুৰক্ষিত যেন নালাগে। ইয়াৰ বাবে "
-"আপোনাৰ "
-"সুৰক্ষা তথ্যসমূহ আপোচ হব পাৰে। অনুগ্ৰহ কৰি এটা পাছৱাৰ্ড-সুৰক্ষিত ব্যক্তিগত "
-"কি' বাছক।\n"
+"নিৰ্বাচিত ব্যক্তিগত কি' এটা পাছৱাৰ্ড দ্বাৰা সুৰক্ষিত যেন নালাগে। ইয়াৰ বাবে আপোনাৰ "
+"সুৰক্ষা তথ্যসমূহ আপোচ হব পাৰে। অনুগ্ৰহ কৰি এটা পাছৱাৰ্ড-সুৰক্ষিত ব্যক্তিগত কি' বাছক।\n"
 "\n"
 "(আপুনি openssl ৰ সৈতে আপোনাৰ ব্যক্তিগত কি' পাছৱাৰ্ড-সুৰক্ষিত কৰিব পাৰিব)"
 
@@ -3580,10 +3565,11 @@ msgctxt "notifications"
 msgid "Show Details in Lock Screen"
 msgstr "পৰ্দা লক কৰাত বিৱৰণসমূহ দেখুৱাওক"
 
-#: ../panels/notifications/cc-notifications-panel.c:205
-#: ../panels/power/cc-power-panel.c:1744 ../panels/power/cc-power-panel.c:1751
-#: ../panels/privacy/cc-privacy-panel.c:80
-#: ../panels/privacy/cc-privacy-panel.c:120
+#: ../panels/notifications/cc-notifications-panel.c:206
+#: ../panels/power/cc-power-panel.c:1749 ../panels/power/cc-power-panel.c:1756
+#: ../panels/privacy/cc-privacy-panel.c:86
+#: ../panels/privacy/cc-privacy-panel.c:126
+#: ../panels/privacy/cc-privacy-panel.c:313
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -3784,171 +3770,171 @@ msgstr "চাৰ্জ কৰা হৈ আছে"
 msgid "Discharging"
 msgstr "চাৰ্জ শেষ হৈ আছে"
 
-#: ../panels/power/cc-power-panel.c:395
+#: ../panels/power/cc-power-panel.c:400
 msgctxt "Battery name"
 msgid "Main"
 msgstr "মূখ্য"
 
-#: ../panels/power/cc-power-panel.c:397
+#: ../panels/power/cc-power-panel.c:402
 msgctxt "Battery name"
 msgid "Extra"
 msgstr "অতিৰিক্ত"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:469
+#: ../panels/power/cc-power-panel.c:474
 msgid "Wireless mouse"
 msgstr "বেতাঁৰ মাউছ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:472
+#: ../panels/power/cc-power-panel.c:477
 msgid "Wireless keyboard"
 msgstr "বেতাঁৰ কিবৰ্ড"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:475
+#: ../panels/power/cc-power-panel.c:480
 msgid "Uninterruptible power supply"
 msgstr "ব্যাঘাতহিন শক্তিৰ যোগান"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:478
+#: ../panels/power/cc-power-panel.c:483
 msgid "Personal digital assistant"
 msgstr "ব্যক্তিগত অঙ্কীয় সহায়ক"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:481
+#: ../panels/power/cc-power-panel.c:486
 msgid "Cellphone"
 msgstr "চেলফোন"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:484
+#: ../panels/power/cc-power-panel.c:489
 msgid "Media player"
 msgstr "মিডিয়া প্লেয়াৰ"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:487
+#: ../panels/power/cc-power-panel.c:492
 msgid "Tablet"
 msgstr "টেবলেট"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:490
+#: ../panels/power/cc-power-panel.c:495
 msgid "Computer"
 msgstr "কমপিউটাৰ"
 
 #. TRANSLATORS: secondary battery, misc
-#: ../panels/power/cc-power-panel.c:493 ../panels/power/cc-power-panel.c:740
-#: ../panels/power/cc-power-panel.c:2075
+#: ../panels/power/cc-power-panel.c:498 ../panels/power/cc-power-panel.c:745
+#: ../panels/power/cc-power-panel.c:2080
 msgid "Battery"
 msgstr "বেটাৰি"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:539
+#: ../panels/power/cc-power-panel.c:544
 msgctxt "Battery power"
 msgid "Charging"
 msgstr "চাৰ্জ কৰা হৈ আছে"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:546
+#: ../panels/power/cc-power-panel.c:551
 msgctxt "Battery power"
 msgid "Caution"
 msgstr "সাৱধানী"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:551
+#: ../panels/power/cc-power-panel.c:556
 msgctxt "Battery power"
 msgid "Low"
 msgstr "নিম্ন"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:556
+#: ../panels/power/cc-power-panel.c:561
 msgctxt "Battery power"
 msgid "Good"
 msgstr "ভাল"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:561
+#: ../panels/power/cc-power-panel.c:566
 msgctxt "Battery power"
 msgid "Fully charged"
 msgstr "সম্পূৰ্ণ চাৰ্জ হৈছে"
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:565
+#: ../panels/power/cc-power-panel.c:570
 msgctxt "Battery power"
 msgid "Empty"
 msgstr "ৰিক্ত"
 
-#: ../panels/power/cc-power-panel.c:738
+#: ../panels/power/cc-power-panel.c:743
 msgid "Batteries"
 msgstr "বেটাৰিসমূহ"
 
-#: ../panels/power/cc-power-panel.c:1144
+#: ../panels/power/cc-power-panel.c:1149
 msgid "When _idle"
 msgstr "যেতিয়া অলস (_i)"
 
-#: ../panels/power/cc-power-panel.c:1513
+#: ../panels/power/cc-power-panel.c:1518
 msgid "Power Saving"
 msgstr "শক্তি সংৰক্ষণ কৰা"
 
-#: ../panels/power/cc-power-panel.c:1541
+#: ../panels/power/cc-power-panel.c:1546
 msgid "_Screen brightness"
 msgstr "পৰ্দাৰ উজ্জ্বলতা (_S)"
 
-#: ../panels/power/cc-power-panel.c:1547
+#: ../panels/power/cc-power-panel.c:1552
 msgid "_Keyboard brightness"
 msgstr "কিবৰ্ডৰ উজ্জ্বলতা (_K)"
 
-#: ../panels/power/cc-power-panel.c:1557
+#: ../panels/power/cc-power-panel.c:1562
 msgid "_Dim screen when inactive"
 msgstr "যেতিয়া নিষ্ক্ৰিয় তেতিয়া পৰ্দা স্লান কৰিব (_D)"
 
-#: ../panels/power/cc-power-panel.c:1582
+#: ../panels/power/cc-power-panel.c:1587
 msgid "_Blank screen"
 msgstr "ৰিক্ত পৰ্দা (_B)"
 
-#: ../panels/power/cc-power-panel.c:1619
+#: ../panels/power/cc-power-panel.c:1624
 msgid "_Wi-Fi"
 msgstr "Wi-Fi (_W)"
 
-#: ../panels/power/cc-power-panel.c:1624
+#: ../panels/power/cc-power-panel.c:1629
 msgid "Turns off wireless devices"
 msgstr "বেতাঁৰ ডিভাইচসমূহ বন্ধ কৰে"
 
-#: ../panels/power/cc-power-panel.c:1649
+#: ../panels/power/cc-power-panel.c:1654
 msgid "_Mobile broadband"
 msgstr "মবাইল ব্ৰডবেণ্ড (_M)"
 
-#: ../panels/power/cc-power-panel.c:1654
+#: ../panels/power/cc-power-panel.c:1659
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr "মবাইল ব্ৰডবেণ্ড (3G, 4G, WiMax, ইত্যাদি) ডিভাইচসমূহ বন্ধ কৰে"
 
-#: ../panels/power/cc-power-panel.c:1689
+#: ../panels/power/cc-power-panel.c:1694
 msgid "_Bluetooth"
 msgstr "ব্লুটুথ (_B)"
 
-#: ../panels/power/cc-power-panel.c:1740
+#: ../panels/power/cc-power-panel.c:1745
 msgid "When on battery power"
 msgstr "যেতিয়া বেটাৰি শক্তিত চলি থাকে"
 
-#: ../panels/power/cc-power-panel.c:1742
+#: ../panels/power/cc-power-panel.c:1747
 msgid "When plugged in"
 msgstr "যেতিয়া প্লাগ ইন কৰা আছে"
 
-#: ../panels/power/cc-power-panel.c:1871
+#: ../panels/power/cc-power-panel.c:1876
 msgid "Suspend & Power Off"
 msgstr "স্থগিত কৰি বন্ধ কৰক"
 
-#: ../panels/power/cc-power-panel.c:1904
+#: ../panels/power/cc-power-panel.c:1909
 msgid "_Automatic suspend"
 msgstr "স্বচালিতভাৱে স্থগিত কৰা (_A)"
 
-#: ../panels/power/cc-power-panel.c:1928
+#: ../panels/power/cc-power-panel.c:1933
 msgid "When battery power is _critical"
 msgstr "যেতিয়া বেটাৰি শক্তি মাৰাত্মকভাৱে কম (_c)"
 
-#: ../panels/power/cc-power-panel.c:1985
+#: ../panels/power/cc-power-panel.c:1990
 msgid "Power Off"
 msgstr "বন্ধ কৰক"
 
-#: ../panels/power/cc-power-panel.c:2122
+#: ../panels/power/cc-power-panel.c:2127
 msgid "Devices"
 msgstr "ডিভাইচ"
 
@@ -4219,8 +4205,7 @@ msgid ""
 "PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
 "PPD.GZ)"
 msgstr ""
-"পস্টস্ক্ৰিপ্ট প্ৰিন্টাৰ বিৱৰণ ফাইলসমূহ (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
-"*.PPD.GZ)"
+"পস্টস্ক্ৰিপ্ট প্ৰিন্টাৰ বিৱৰণ ফাইলসমূহ (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
 #: ../panels/printers/cc-printers-panel.c:2257
 msgid "No suitable driver found"
@@ -4257,8 +4242,7 @@ msgstr "প্ৰিন্টাৰসমূহ"
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
 msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr ""
-"প্ৰিন্টাৰসমূহ যোগ কৰক, প্ৰিন্টাৰ কাৰ্য্যসমূহ চাওক আৰু আপুনি কেনেধৰণে প্ৰিন্ট "
-"কৰিব বিচাৰে "
+"প্ৰিন্টাৰসমূহ যোগ কৰক, প্ৰিন্টাৰ কাৰ্য্যসমূহ চাওক আৰু আপুনি কেনেধৰণে প্ৰিন্ট কৰিব বিচাৰে "
 "নিৰ্ধাৰণ কৰক"
 
 #. Translators: those are keywords for the printing control-center panel
@@ -4562,8 +4546,7 @@ msgstr "ড্ৰাইভাৰ"
 #: ../panels/printers/pp-samba.c:254
 #, c-format
 msgid "Enter your username and password to view printers available on %s."
-msgstr ""
-"%s ত উপলব্ধ প্ৰিন্টাৰসমূহ চাবলে আপোনাৰ ব্যৱহাৰকাৰীনাম আৰু পাছৱাৰ্ড সুমুৱাওক।"
+msgstr "%s ত উপলব্ধ প্ৰিন্টাৰসমূহ চাবলে আপোনাৰ ব্যৱহাৰকাৰীনাম আৰু পাছৱাৰ্ড সুমুৱাওক।"
 
 #: ../panels/printers/printers.ui.h:1
 msgid "Add Printer"
@@ -4637,39 +4620,45 @@ msgstr ""
 "ক্ষমা কৰিব! চিস্টেম প্ৰিন্টিং সেৱা\n"
 "উপলব্ধ নাই যেন লাগিছে।"
 
-#: ../panels/privacy/cc-privacy-panel.c:248 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:261
+#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "পৰ্দাৰ লক"
 
-#: ../panels/privacy/cc-privacy-panel.c:361 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#, fuzzy
+msgid "Metrics"
+msgstr "মেট্ৰিক"
+
+#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "ব্যৱহাৰ আৰু ইতিহাস"
 
-#: ../panels/privacy/cc-privacy-panel.c:489
+#: ../panels/privacy/cc-privacy-panel.c:635
 msgid "Empty all items from Trash?"
 msgstr "আবৰ্জনাৰ পৰা সকলো বস্তু আতৰাব নে?"
 
-#: ../panels/privacy/cc-privacy-panel.c:490
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "All items in the Trash will be permanently deleted."
 msgstr "আবৰ্জনাৰ সকলো বস্তু স্থায়ীভাৱে মচি পেলোৱা হব।"
 
-#: ../panels/privacy/cc-privacy-panel.c:491 ../panels/privacy/privacy.ui.h:32
+#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "আবৰ্জনা খালি কৰক (_E)"
 
-#: ../panels/privacy/cc-privacy-panel.c:514
+#: ../panels/privacy/cc-privacy-panel.c:660
 msgid "Delete all the temporary files?"
 msgstr "সকলো অস্থায়ী ফাইল মচি পেলাব নে?"
 
-#: ../panels/privacy/cc-privacy-panel.c:515
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "All the temporary files will be permanently deleted."
 msgstr "সকলো অস্থায়ী ফাইল স্থায়ীভাৱে মচি পেলোৱা হব।"
 
-#: ../panels/privacy/cc-privacy-panel.c:516 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "অস্থায়ী ফাইলসমূহ শোধন কৰক (_P)"
 
-#: ../panels/privacy/cc-privacy-panel.c:538 ../panels/privacy/privacy.ui.h:31
+#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "আবৰ্জনা শোধন আৰু অস্থায়ী ফাইলসমূহ"
 
@@ -4763,39 +4752,49 @@ msgid "Retain _History"
 msgstr "ইতিহাস অব্যাহত ৰাখক (_H)"
 
 #: ../panels/privacy/privacy.ui.h:27
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:28
+#, fuzzy
+msgid "Enable Metrics Collection"
+msgstr "এই একাওন্ট সামৰ্থবান কৰক"
+
+#: ../panels/privacy/privacy.ui.h:30
 msgid "The Screen Lock protects your privacy when you are away."
 msgstr "যেতিয়া আপুনি আতৰ হয় পৰ্দা লকে আপোনাৰ গোপনীয়তা সুৰক্ষিত ৰাখে।"
 
-#: ../panels/privacy/privacy.ui.h:28
+#: ../panels/privacy/privacy.ui.h:31
 msgid "Automatic Screen _Lock"
 msgstr "স্বচালিত পৰ্দা লক (_L)"
 
-#: ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/privacy.ui.h:32
 msgid "Lock screen _after blank for"
 msgstr "উল্লেখিত সময় খালি থকাৰ পিছত পৰ্দা লক কৰিব (_A)"
 
-#: ../panels/privacy/privacy.ui.h:30
+#: ../panels/privacy/privacy.ui.h:33
 msgid "Show _Notifications"
 msgstr "অধিসূচনাসমূহ দেখুৱাওক (_N)"
 
-#: ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/privacy.ui.h:37
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
 msgstr ""
-"আপোনাৰ কমপিউটাৰক অপ্ৰয়োজনীয় সংবেদ্য তথ্যৰ পৰা মুক্ত ৰাখিবলে আবৰ্জনা আৰু "
-"অস্থায়ী "
+"আপোনাৰ কমপিউটাৰক অপ্ৰয়োজনীয় সংবেদ্য তথ্যৰ পৰা মুক্ত ৰাখিবলে আবৰ্জনা আৰু অস্থায়ী "
 "ফাইলসমূহ স্বচালিতভাৱে শোধন কৰক।"
 
-#: ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/privacy.ui.h:38
 msgid "Automatically empty _Trash"
 msgstr "আবৰ্জনা স্বচালিতভাৱে খালি কৰক (_T)"
 
-#: ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/privacy.ui.h:39
 msgid "Automatically purge Temporary _Files"
 msgstr "অস্থায়ী ফাইলসমূহ স্বচালিতভাৱে শোধন কৰক (_F)"
 
-#: ../panels/privacy/privacy.ui.h:37
+#: ../panels/privacy/privacy.ui.h:40
 msgid "Purge _After"
 msgstr "উল্লেখিত সময়ৰ পিছত শোধন কৰক (_A)"
 
@@ -4818,40 +4817,37 @@ msgid "No input sources found"
 msgstr "কোনো ইনপুট উৎস পোৱা নগল"
 
 #: ../panels/region/cc-input-chooser.c:1070
-msgctxt "Input Source"
+#, fuzzy
+msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "অন্য"
 
-#: ../panels/region/cc-region-panel.c:239
+#: ../panels/region/cc-region-panel.c:230
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr "পৰিবৰ্তনসমূহ প্ৰভাৱশালী হবলে আপোনাৰ অধিবেশন পুনৰাম্ভ কৰিব লাগিব"
 
-#: ../panels/region/cc-region-panel.c:240
+#: ../panels/region/cc-region-panel.c:231
 msgid "Restart Now"
 msgstr "এতিয়া পুনৰাম্ভ কৰক"
 
-#: ../panels/region/cc-region-panel.c:569
+#: ../panels/region/cc-region-panel.c:560
 msgctxt "Language"
 msgid "None"
 msgstr "কোনো নহয়"
 
-#: ../panels/region/cc-region-panel.c:853
+#: ../panels/region/cc-region-panel.c:844
 msgid "No input source selected"
 msgstr "কোনো ইনপুট উৎস নিৰ্বাচন কৰা হোৱা নাই"
 
-#: ../panels/region/cc-region-panel.c:1084
+#: ../panels/region/cc-region-panel.c:1075
 msgid "Sorry"
 msgstr "ক্ষমা কৰিব"
 
-#: ../panels/region/cc-region-panel.c:1086
+#: ../panels/region/cc-region-panel.c:1077
 msgid "Input methods can't be used on the login screen"
 msgstr "ইনপুট পদ্ধতিসমূহ লগিন পৰ্দাত ব্যৱহাৰ কৰিব নোৱাৰি"
 
-#: ../panels/region/cc-region-panel.c:1716
-msgid "Login Screen"
-msgstr "লগিন পৰ্দা"
-
-#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:3
+#: ../panels/region/format-chooser.ui.h:1 ../panels/region/region.ui.h:5
 msgid "Formats"
 msgstr "বিন্যাসসমূহ"
 
@@ -4886,8 +4882,7 @@ msgstr "অঞ্চল & ভাষা"
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:2
 msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
-msgstr ""
-"আপোনাৰ প্ৰদৰ্শন ভাষা, বিন্যাসসমূহ, কিবৰ্ড বিন্যাসসমূহ আৰু ইনপুট উৎসসমূহ বাছক"
+msgstr "আপোনাৰ প্ৰদৰ্শন ভাষা, বিন্যাসসমূহ, কিবৰ্ড বিন্যাসসমূহ আৰু ইনপুট উৎসসমূহ বাছক"
 
 #. Translators: those are keywords for the region control-center panel
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:4
@@ -4895,12 +4890,14 @@ msgid "Language;Layout;Keyboard;Input;"
 msgstr "Language;Layout;Keyboard;Input;"
 
 #: ../panels/region/input-chooser.ui.h:1
-msgid "Add an Input Source"
-msgstr "এটা ইনপুট উৎস যোগ কৰক"
+#, fuzzy
+msgid "Add a Keyboard Layout"
+msgstr "কিবৰ্ড বিন্যাস দেখুৱাওক"
 
 #: ../panels/region/input-options.ui.h:1
-msgid "Input Source Options"
-msgstr "ইনপুট উৎস বিকল্পসমূহ"
+#, fuzzy
+msgid "Keyboard Layout Options"
+msgstr "কিবৰ্ড সংহতিসমূহ"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -4942,22 +4939,34 @@ msgstr "পৰৱৰ্তী উৎসলে বৈকল্পিক চুই
 msgid "Left+Right Alt"
 msgstr "Left+Right Alt"
 
+#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1298
+msgid "My Account"
+msgstr "মোৰ একাওন্ট"
+
 #: ../panels/region/region.ui.h:2
+msgid "Login Screen"
+msgstr "লগিন পৰ্দা"
+
+#: ../panels/region/region.ui.h:4
 msgid "English (United Kingdom)"
 msgstr "ইংৰাজী (ইংলেণ্ড)"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "United Kingdom"
 msgstr "সংযুক্তৰাজ্য"
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:7
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "কিবৰ্ড বিন্যাস দেখুৱাওক"
+
+#: ../panels/region/region.ui.h:8
 msgid "Options"
 msgstr "বিকল্পসমূহ"
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"চিস্টেমত লগিন কৰোতে লগিন সংহতিসমূহ সকলো ব্যৱহাৰকাৰী দ্বাৰা ব্যৱহাৰ কৰা হয়"
+msgstr "চিস্টেমত লগিন কৰোতে লগিন সংহতিসমূহ সকলো ব্যৱহাৰকাৰী দ্বাৰা ব্যৱহাৰ কৰা হয়"
 
 #: ../panels/search/cc-search-locations-dialog.c:275
 msgid "Home"
@@ -4986,7 +4995,7 @@ msgstr "অবস্থান বাছক"
 msgid "_OK"
 msgstr "ঠিক আছে (_O)"
 
-#: ../panels/search/cc-search-panel.c:177
+#: ../panels/search/cc-search-panel.c:178
 msgid "No applications found"
 msgstr "কোনো এপ্লিকেচন পোৱা নগল"
 
@@ -5072,8 +5081,7 @@ msgid ""
 "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
 "devices"
 msgstr ""
-"ব্লুটুথ অংশীদাৰীয়ে আপোনাক অন্য ব্লুটুথ সামৰ্থবান ডিভাইচসমূহৰ সৈতে ফাইলসমূহ "
-"অংশীদাৰী "
+"ব্লুটুথ অংশীদাৰীয়ে আপোনাক অন্য ব্লুটুথ সামৰ্থবান ডিভাইচসমূহৰ সৈতে ফাইলসমূহ অংশীদাৰী "
 "কৰাৰ অনুমতি দিয়ে"
 
 #: ../panels/sharing/sharing.ui.h:3
@@ -5110,8 +5118,7 @@ msgstr "কোনো নেটৱাৰ্ক অভিগম নথকা ব�
 
 #: ../panels/sharing/sharing.ui.h:11
 msgid "Share Music, Photos and Videos with others on the current network."
-msgstr ""
-"বৰ্তমান নেটৱাৰ্কত অন্যৰ সৈতে সংগীত, ফ'টোসমূহ আৰু ভিডিঅ'সমূহ অংশীদাৰী কৰক।"
+msgstr "বৰ্তমান নেটৱাৰ্কত অন্যৰ সৈতে সংগীত, ফ'টোসমূহ আৰু ভিডিঅ'সমূহ অংশীদাৰী কৰক।"
 
 #: ../panels/sharing/sharing.ui.h:12
 msgid "Share Media On This Network"
@@ -5157,8 +5164,7 @@ msgid ""
 "Allow remote users to connect using the Secure Shell command:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
 msgstr ""
-"Secure Shell কমান্ড ব্যৱহাৰ কৰি দূৰৱৰ্তী ব্যৱহাৰকাৰীসকলৰ সৈতে সংযোগ কৰাৰ "
-"অনুমতি "
+"Secure Shell কমান্ড ব্যৱহাৰ কৰি দূৰৱৰ্তী ব্যৱহাৰকাৰীসকলৰ সৈতে সংযোগ কৰাৰ অনুমতি "
 "দিয়ক:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
 
@@ -5193,8 +5199,7 @@ msgstr "শব্দ"
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
 msgid "Change sound levels, inputs, outputs, and alert sounds"
-msgstr ""
-"শব্দৰ স্তৰসমূহ, ইনপুটসমূহ, আউটপুটসমূহ, আৰু সতৰ্কতা শব্দসমূহ পৰিবৰ্তন কৰক"
+msgstr "শব্দৰ স্তৰসমূহ, ইনপুটসমূহ, আউটপুটসমূহ, আৰু সতৰ্কতা শব্দসমূহ পৰিবৰ্তন কৰক"
 
 #. Translators: those are keywords for the sound control-center panel
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
@@ -5429,8 +5434,7 @@ msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
 "AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
 msgstr ""
-"কিবৰ্ড;মাউছ;a11y;অভিগম্যতা;কনট্ৰাস্ট;জুম;পৰ্দা "
-"ৰিডাৰ;লিখনী;ফন্ট;আকাৰ;AccessX;স্টিকি "
+"কিবৰ্ড;মাউছ;a11y;অভিগম্যতা;কনট্ৰাস্ট;জুম;পৰ্দা ৰিডাৰ;লিখনী;ফন্ট;আকাৰ;AccessX;স্টিকি "
 "কিসমূহ;লেহেম কিসমূহ;বাউন্স কিসমূহ;মাউছ কিসমূহ;"
 
 #: ../panels/universal-access/uap.ui.h:1
@@ -5901,8 +5905,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device."
 msgstr ""
-"এন্টাৰপ্ৰাইজ লগিনে এটা স্থায়ী কেন্দ্ৰীয়ভাৱে ব্যৱস্থিত ব্যৱহাৰকাৰী একাওন্টক এই "
-"ডিভাইচত "
+"এন্টাৰপ্ৰাইজ লগিনে এটা স্থায়ী কেন্দ্ৰীয়ভাৱে ব্যৱস্থিত ব্যৱহাৰকাৰী একাওন্টক এই ডিভাইচত "
 "ব্যৱহাৰ কৰাৰ অনুমতি দিয়ে।"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:12
@@ -5998,8 +6001,7 @@ msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
 msgstr ""
-"সাফল্যেৰ সৈতে আপোনাৰ আঙ্গুলিৰ ছাপ সংৰক্ষিত হৈছে। আঙ্গুলিৰ ছাপ পাঠৰ ব্যবস্থা "
-"(ৰিডাৰ) "
+"সাফল্যেৰ সৈতে আপোনাৰ আঙ্গুলিৰ ছাপ সংৰক্ষিত হৈছে। আঙ্গুলিৰ ছাপ পাঠৰ ব্যবস্থা (ৰিডাৰ) "
 "সহযোগে আপুনি এতিয়া লগিন কৰিবলৈ সক্ষম হ'ব।"
 
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
@@ -6151,8 +6153,7 @@ msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
 msgstr ""
-"একেধৰণ আখৰ পুনৰাবৃত্তি নকৰাৰ চেষ্টা কৰিব: আপুনি আখৰ, সংখ্যা আৰু বিৰাম চিহ্ন "
-"সংমিশ্ৰণ "
+"একেধৰণ আখৰ পুনৰাবৃত্তি নকৰাৰ চেষ্টা কৰিব: আপুনি আখৰ, সংখ্যা আৰু বিৰাম চিহ্ন সংমিশ্ৰণ "
 "কৰিব লাগিব।"
 
 #: ../panels/user-accounts/pw-utils.c:114
@@ -6176,8 +6177,7 @@ msgid ""
 "Good password! Adding more letters, numbers and punctuation will make it "
 "stronger."
 msgstr ""
-"ভাল পাছৱাৰ্ড! অধিক আখৰ, সংখ্যা আৰু বিৰাম চিহ্ন যোগ কৰিলে ই আৰু অধিক শক্তিশালী "
-"হব।"
+"ভাল পাছৱাৰ্ড! অধিক আখৰ, সংখ্যা আৰু বিৰাম চিহ্ন যোগ কৰিলে ই আৰু অধিক শক্তিশালী হব।"
 
 #: ../panels/user-accounts/pw-utils.c:142
 #: ../panels/user-accounts/pw-utils.c:172
@@ -6266,30 +6266,29 @@ msgstr "আপোনাৰ একাওন্ট প্ৰদানকাৰী�
 msgid "Failed to add account"
 msgstr "একাওন্ট যোগ কৰিবলে ব্যৰ্থ হল"
 
-#: ../panels/user-accounts/um-account-dialog.c:316
+#: ../panels/user-accounts/um-account-dialog.c:315
 msgid "This will be used to name your home folder and can't be changed."
 msgstr ""
-"ইয়াক আপোনাৰ ঘৰ ফোল্ডাৰ নামকৰণৰ বাবে ব্যৱহাৰ কৰা হব আৰু ইয়াক পৰিবৰ্তন কৰিব "
-"নোৱাৰি।"
+"ইয়াক আপোনাৰ ঘৰ ফোল্ডাৰ নামকৰণৰ বাবে ব্যৱহাৰ কৰা হব আৰু ইয়াক পৰিবৰ্তন কৰিব নোৱাৰি।"
 
-#: ../panels/user-accounts/um-account-dialog.c:449
+#: ../panels/user-accounts/um-account-dialog.c:448
 msgid "Passwords do not match."
 msgstr "পাছৱাৰ্ডসমূহ মিল নাখায়।"
 
-#: ../panels/user-accounts/um-account-dialog.c:719
-#: ../panels/user-accounts/um-account-dialog.c:765
+#: ../panels/user-accounts/um-account-dialog.c:718
+#: ../panels/user-accounts/um-account-dialog.c:764
 msgid "Failed to register account"
 msgstr "একাওন্ট ৰেজিস্টাৰ কৰিবলে ব্যৰ্থ হল"
 
-#: ../panels/user-accounts/um-account-dialog.c:903
+#: ../panels/user-accounts/um-account-dialog.c:902
 msgid "No supported way to authenticate with this domain"
 msgstr "এই ডমেইনৰ সৈতে প্ৰমাণীত কৰিবলে কোনো সমৰ্থিত পদ্ধতি নাই"
 
-#: ../panels/user-accounts/um-account-dialog.c:962
+#: ../panels/user-accounts/um-account-dialog.c:961
 msgid "Failed to join domain"
 msgstr "ডমেইনত অংশগ্ৰহণ কৰিবলে ব্যৰ্থ হল"
 
-#: ../panels/user-accounts/um-account-dialog.c:1023
+#: ../panels/user-accounts/um-account-dialog.c:1022
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
@@ -6297,7 +6296,7 @@ msgstr ""
 "সেই লগিন নাম কাম নকৰিলে।\n"
 "অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।"
 
-#: ../panels/user-accounts/um-account-dialog.c:1030
+#: ../panels/user-accounts/um-account-dialog.c:1029
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
@@ -6305,20 +6304,20 @@ msgstr ""
 "সেই লগিন পাছৱাৰ্ড কাম নকৰিলে।\n"
 "অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।"
 
-#: ../panels/user-accounts/um-account-dialog.c:1038
+#: ../panels/user-accounts/um-account-dialog.c:1037
 msgid "Failed to log into domain"
 msgstr "ডমেইনত লগিন কৰিবলে ব্যৰ্থ হল"
 
-#: ../panels/user-accounts/um-account-dialog.c:1096
+#: ../panels/user-accounts/um-account-dialog.c:1095
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr "ডমেইন সন্ধান কৰিবলৈ অক্ষম। হয়তো আপুনি ইয়াক ভুলকৈ বানান কৰিছে?"
 
-#: ../panels/user-accounts/um-account-dialog.c:1446
+#: ../panels/user-accounts/um-account-dialog.c:1445
 msgid "Add User"
 msgstr "ব্যৱহাৰকাৰী যোগ কৰক"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1459
+#: ../panels/user-accounts/um-account-dialog.c:1458
 msgid "_Enterprise Login"
 msgstr "এন্টাৰপ্ৰাইজ লগিন (_E)"
 
@@ -6326,8 +6325,7 @@ msgstr "এন্টাৰপ্ৰাইজ লগিন (_E)"
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
 msgstr ""
-"আপুনি এই ডিভাইচ ব্যবহাৰ কৰিবলৈ অনুমোদিত নহয়। অনুগ্ৰহ কৰি প্ৰণালী প্ৰশাসকৰ "
-"সৈতে "
+"আপুনি এই ডিভাইচ ব্যবহাৰ কৰিবলৈ অনুমোদিত নহয়। অনুগ্ৰহ কৰি প্ৰণালী প্ৰশাসকৰ সৈতে "
 "যোগাযোগ কৰক।"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:141
@@ -6356,8 +6354,7 @@ msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr ""
-"আঙ্গুলিৰ ছাপ লগিন ব্যবস্থা নিষ্ক্ৰিয় কৰাৰ উদ্দেশ্যে নিবন্ধিত আঙ্গুলিৰ ছাপসমূহ "
-"আঁতৰুৱা হ'ব "
+"আঙ্গুলিৰ ছাপ লগিন ব্যবস্থা নিষ্ক্ৰিয় কৰাৰ উদ্দেশ্যে নিবন্ধিত আঙ্গুলিৰ ছাপসমূহ আঁতৰুৱা হ'ব "
 "নেকি ?"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:454
@@ -6400,8 +6397,7 @@ msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the '%s' device."
 msgstr ""
-"আঙ্গুলিৰ ছাপ লগিন ব্যবস্থা সামৰ্থবান কৰাৰ বাবে, '%s' সহযোগে অন্তত এটা "
-"আঙ্গুলিৰ ছাপ "
+"আঙ্গুলিৰ ছাপ লগিন ব্যবস্থা সামৰ্থবান কৰাৰ বাবে, '%s' সহযোগে অন্তত এটা আঙ্গুলিৰ ছাপ "
 "সংৰক্ষণ কৰা আবশ্যক।"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:740
@@ -6470,19 +6466,19 @@ msgstr "অধিবেশন সমাপ্ত হল"
 msgid "Session Started"
 msgstr "অধিবেশন আৰম্ভ হল"
 
-#: ../panels/user-accounts/um-password-dialog.c:146
+#: ../panels/user-accounts/um-password-dialog.c:145
 msgid "Please choose another password."
 msgstr "অনুগ্ৰহ কৰি অন্য পাছৱাৰ্ড বাছক।"
 
-#: ../panels/user-accounts/um-password-dialog.c:155
+#: ../panels/user-accounts/um-password-dialog.c:154
 msgid "Please type your current password again."
 msgstr "অনুগ্ৰহ কৰি আপোনাৰ বৰ্তমান পাছৱাৰ্ড পুনৰ টাইপ কৰক।"
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:160
 msgid "Password could not be changed"
 msgstr "পাছৱাৰ্ড সলনি কৰিব পৰা নগল"
 
-#: ../panels/user-accounts/um-password-dialog.c:287
+#: ../panels/user-accounts/um-password-dialog.c:285
 msgid "The passwords do not match."
 msgstr "পাছৱাৰ্ডসমূহ মিল নাখায়।"
 
@@ -6565,8 +6561,7 @@ msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr ""
-"এজন ব্যৱহাৰকাৰীৰ একাওন্ট মচোতে ঘৰ ডাইৰেকটৰি, মেইল স্পুল আৰু অস্থায়ী ফাইলসমূহ "
-"ৰখাটো "
+"এজন ব্যৱহাৰকাৰীৰ একাওন্ট মচোতে ঘৰ ডাইৰেকটৰি, মেইল স্পুল আৰু অস্থায়ী ফাইলসমূহ ৰখাটো "
 "সম্ভব।"
 
 #: ../panels/user-accounts/um-user-panel.c:506
@@ -6602,8 +6597,7 @@ msgstr "একাওন্ট সেৱাৰ সৈতে সংযোগ ক�
 
 #: ../panels/user-accounts/um-user-panel.c:1001
 msgid "Please make sure that the AccountService is installed and enabled."
-msgstr ""
-"অনুগ্ৰহ কৰি AccountService ইনস্টল আৰু সামৰ্থবান আছে বুলি সুনিশ্চিত কৰক।"
+msgstr "অনুগ্ৰহ কৰি AccountService ইনস্টল আৰু সামৰ্থবান আছে বুলি সুনিশ্চিত কৰক।"
 
 #: ../panels/user-accounts/um-user-panel.c:1042
 msgid ""
@@ -6613,12 +6607,12 @@ msgstr ""
 "পৰিবৰ্তনসমূহ কৰিবলে,\n"
 "* আইকন প্ৰথমতে ক্লিক কৰক"
 
-#: ../panels/user-accounts/um-user-panel.c:1080
+#: ../panels/user-accounts/um-user-panel.c:1082
 msgid "Create a user account"
 msgstr "এজন ব্যৱহাৰকাৰীৰ একাওন্ট সৃষ্টি কৰক"
 
-#: ../panels/user-accounts/um-user-panel.c:1091
-#: ../panels/user-accounts/um-user-panel.c:1380
+#: ../panels/user-accounts/um-user-panel.c:1093
+#: ../panels/user-accounts/um-user-panel.c:1383
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
@@ -6626,22 +6620,18 @@ msgstr ""
 "এজন ব্যৱহাৰকাৰী সৃষ্টি কৰিবলে,\n"
 "* আইকন প্ৰথমতে ক্লিক কৰক"
 
-#: ../panels/user-accounts/um-user-panel.c:1101
+#: ../panels/user-accounts/um-user-panel.c:1103
 msgid "Delete the selected user account"
 msgstr "নিৰ্বাচিত ব্যৱহাৰকাৰী একাওন্ট মচি পেলাওক"
 
-#: ../panels/user-accounts/um-user-panel.c:1113
-#: ../panels/user-accounts/um-user-panel.c:1385
+#: ../panels/user-accounts/um-user-panel.c:1115
+#: ../panels/user-accounts/um-user-panel.c:1388
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr ""
 "নিৰ্বাচিত ব্যৱহাৰকাৰী একাওন্ট মচিবলে,\n"
 "* আইকন প্ৰথমতে ক্লিক কৰক"
-
-#: ../panels/user-accounts/um-user-panel.c:1295
-msgid "My Account"
-msgstr "মোৰ একাওন্ট"
 
 #: ../panels/user-accounts/um-utils.c:551
 #, c-format
@@ -6662,8 +6652,7 @@ msgid ""
 "The username should only consist of lower and upper case letters from a-z, "
 "digits and any of characters '.', '-' and '_'"
 msgstr ""
-"ব্যৱহাৰকাৰীনামত কেৱল a-z ডিজিটৰ পৰা তলৰ আৰু ওপৰ ফলা আখৰ আৰু আখৰসমূহ '.', '-' "
-"আৰু "
+"ব্যৱহাৰকাৰীনামত কেৱল a-z ডিজিটৰ পৰা তলৰ আৰু ওপৰ ফলা আখৰ আৰু আখৰসমূহ '.', '-' আৰু "
 "'_' ৰ পৰা যিকোনো আখৰ থাকিব পাৰিব"
 
 #. Translators: This is a date format string in the style of "Feb 24".
@@ -6689,8 +6678,7 @@ msgid ""
 "To edit a shortcut, choose the \"Send Keystroke\" action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
 msgstr ""
-"এটা চৰ্টকাট সম্পাদন কৰিবলে, \"কিস্ট্ৰৌক পঠাওক\" বুটাম বাছক, কিবৰ্ড চৰ্টকাট "
-"বুটাম "
+"এটা চৰ্টকাট সম্পাদন কৰিবলে, \"কিস্ট্ৰৌক পঠাওক\" বুটাম বাছক, কিবৰ্ড চৰ্টকাট বুটাম "
 "টিপক আৰু নতুন কি'সমূহ টিপি ধৰক অথবা পৰিষ্কাৰ কৰিবলৈ Backspace টিপক।"
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:84
@@ -6698,8 +6686,7 @@ msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
 msgstr ""
-"টেবলেট মানাংকন কৰিবলে লক্ষ্য চিহ্নকসমূহক সিহত পৰ্দাত উপস্থিত হোৱা নিচিনা টেপ "
-"কৰক।"
+"টেবলেট মানাংকন কৰিবলে লক্ষ্য চিহ্নকসমূহক সিহত পৰ্দাত উপস্থিত হোৱা নিচিনা টেপ কৰক।"
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:88
 msgid "Mis-click detected, restarting..."
@@ -6770,8 +6757,7 @@ msgstr "Wacom টেবলেট"
 #: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:2
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr ""
-"বুটাম মেপিংসমূহ চাওক আৰু গ্ৰাফিক্স টেবলেটসমূহৰ বাবে স্টাইলাচ সংবেদনশীলতা "
-"নিয়ন্ত্ৰণ কৰক"
+"বুটাম মেপিংসমূহ চাওক আৰু গ্ৰাফিক্স টেবলেটসমূহৰ বাবে স্টাইলাচ সংবেদনশীলতা নিয়ন্ত্ৰণ কৰক"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
 #: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:4
@@ -7064,6 +7050,25 @@ msgstr "সংহতিসমূহ"
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "পছন্দসমূহ;সংহতিসমূহ;"
+
+#~ msgid "Lock Screen"
+#~ msgstr "পৰ্দা লক কৰক"
+
+#~ msgid "%s %d-bit"
+#~ msgstr "%s %d-bit"
+
+#~ msgid "Base system"
+#~ msgstr "ভিত্তি চিস্টেম"
+
+#~ msgctxt "Input Source"
+#~ msgid "Other"
+#~ msgstr "অন্য"
+
+#~ msgid "Add an Input Source"
+#~ msgstr "এটা ইনপুট উৎস যোগ কৰক"
+
+#~ msgid "Input Source Options"
+#~ msgstr "ইনপুট উৎস বিকল্পসমূহ"
 
 #~ msgid "Device type:"
 #~ msgstr "ডিভাইচৰ ধৰণ:"
@@ -7438,9 +7443,6 @@ msgstr "পছন্দসমূহ;সংহতিসমূহ;"
 #~ msgid "Disable this account"
 #~ msgstr "এই একাওন্ট অসামৰ্থবান কৰক"
 
-#~ msgid "Enable this account"
-#~ msgstr "এই একাওন্ট সামৰ্থবান কৰক"
-
 #~ msgid "C_onfirm password"
 #~ msgstr "পাছৱাৰ্ড সুনিশ্চিত কৰক (_o)"
 
@@ -7734,9 +7736,6 @@ msgstr "পছন্দসমূহ;সংহতিসমূহ;"
 
 #~ msgid "Move Input Source Up"
 #~ msgstr "ইনপুট উৎসক উপৰত স্থানান্তৰ কৰক"
-
-#~ msgid "Show Keyboard Layout"
-#~ msgstr "কিবৰ্ড বিন্যাস দেখুৱাওক"
 
 #~ msgid "Ctrl+Alt+Space"
 #~ msgstr "Ctrl+Alt+Space"
@@ -8221,9 +8220,6 @@ msgstr "পছন্দসমূহ;সংহতিসমূহ;"
 
 #~ msgid "Enable _mouse clicks with touchpad"
 #~ msgstr "টাচপেডৰ সৈতে মাউছ ক্লিকসমূহ সামৰ্থবান কৰক (_m)"
-
-#~ msgid "Scrolling"
-#~ msgstr "স্ক্রোল ব্যবস্থা"
 
 #~ msgid "_Disabled"
 #~ msgstr "নিষ্ক্ৰিয় (_D)"
