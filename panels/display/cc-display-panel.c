@@ -2298,7 +2298,7 @@ show_setup_dialog (CcDisplayPanel *panel)
     }
 
   /* overscan */
-  priv->scaling_check = gtk_check_button_new_with_label (_("Shrink screen to fit TV"));
+  priv->scaling_check = gtk_check_button_new_with_label (_("Adjust screen for TV"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->scaling_check),
                                 gnome_rr_output_info_get_underscanning (priv->current_output));
   g_signal_connect (G_OBJECT (priv->scaling_check), "toggled",
