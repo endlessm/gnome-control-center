@@ -100,8 +100,6 @@ struct _CcInfoPanelPrivate
   GSettings     *media_settings;
   GtkWidget     *other_application_combo;
 
-  GDBusConnection     *session_bus;
-
   GraphicsData  *graphics_data;
 };
 
@@ -1497,45 +1495,6 @@ on_attribution_label_link (GtkLabel *label,
   return TRUE;
 }
 
-static gboolean
-does_gnome_software_exist (void)
-{
-  return g_file_test (BINDIR "/gnome-software", G_FILE_TEST_EXISTS);
-}
-
-static gboolean
-does_gpk_update_viewer_exist (void)
-{
-  return g_file_test (BINDIR "/gpk-update-viewer", G_FILE_TEST_EXISTS);
-}
-
-static void
-on_updates_button_clicked (GtkWidget   *widget,
-                           CcInfoPanel *self)
-{
-  GError *error = NULL;
-  gboolean ret;
-  gchar **argv;
-
-  argv = g_new0 (gchar *, 3);
-  if (does_gnome_software_exist ())
-    {
-      argv[0] = g_build_filename (BINDIR, "gnome-software", NULL);
-      argv[1] = g_strdup_printf ("--mode=updates");
-    }
-  else
-    {
-      argv[0] = g_build_filename (BINDIR, "gpk-update-viewer", NULL);
-    }
-  ret = g_spawn_async (NULL, argv, NULL, 0, NULL, NULL, NULL, &error);
-  if (!ret)
-    {
-      g_warning ("Failed to spawn %s: %s", argv[0], error->message);
-      g_error_free (error);
-    }
-  g_strfreev (argv);
-}
-
 static void
 cc_info_panel_init (CcInfoPanel *self)
 {
@@ -1549,10 +1508,6 @@ cc_info_panel_init (CcInfoPanel *self)
 
   self->priv->media_settings = g_settings_new (MEDIA_HANDLING_SCHEMA);
 
-  self->priv->session_bus = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, NULL);
-
-  g_assert (self->priv->session_bus);
-
   if (gtk_builder_add_from_resource (self->priv->builder,
                                      "/org/gnome/control-center/info/info.ui",
                                      &error) == 0)
@@ -1565,16 +1520,6 @@ cc_info_panel_init (CcInfoPanel *self)
   self->priv->extra_options_dialog = WID ("extra_options_dialog");
 
   self->priv->graphics_data = get_graphics_data ();
-
-  widget = WID ("updates_button");
-  if (does_gnome_software_exist () || does_gpk_update_viewer_exist ())
-    {
-      g_signal_connect (widget, "clicked", G_CALLBACK (on_updates_button_clicked), self);
-    }
-  else
-    {
-      gtk_widget_destroy (widget);
-    }
 
   widget = WID ("attribution_label");
   g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
