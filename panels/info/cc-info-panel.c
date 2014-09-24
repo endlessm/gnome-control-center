@@ -1439,6 +1439,115 @@ info_panel_setup_selector (CcInfoPanel  *self)
   gtk_widget_show_all (GTK_WIDGET (view));
 }
 
+/* This represents the ostree daemon state, and matches the definition
+ * inside ostree.  Ideally ostree would expose it in a header.
+ */
+typedef enum {
+  OTD_STATE_NONE = 0,
+  OTD_STATE_READY,
+  OTD_STATE_ERROR,
+  OTD_STATE_POLLING,
+  OTD_STATE_UPDATE_AVAILABLE,
+  OTD_STATE_FETCHING,
+  OTD_STATE_UPDATE_READY,
+  OTD_STATE_APPLYING_UPDATE,
+  OTD_STATE_UPDATE_APPLIED,
+} OTDState;
+
+static const char *
+otd_state_to_status_string (OTDState status)
+{
+  switch (status)
+    {
+    case OTD_STATE_NONE:
+    case OTD_STATE_READY:
+      return _("Checking for updates to Endless…");
+    case OTD_STATE_ERROR:
+      return _("Error while updating Endless.");
+    case OTD_STATE_POLLING:
+      return _("Checking for updates to Endless…");
+    case OTD_STATE_UPDATE_AVAILABLE:
+      return _("New update for Endless found, installing…");
+    case OTD_STATE_FETCHING:
+      return _("Downloading update for Endless…");
+    case OTD_STATE_UPDATE_READY:
+    case OTD_STATE_APPLYING_UPDATE:
+      return _("Updating Endless…");
+    case OTD_STATE_UPDATE_APPLIED:
+      return _("Endless is up to date.");
+    default:
+      return _("Internal error while updating.");
+    }
+}
+
+static void
+set_update_status (CcInfoPanel *self,
+                   OTDState     status)
+{
+  const char *status_str = otd_state_to_status_string (status);
+  gtk_label_set_text (GTK_LABEL (WID ("os_version_update_status")), status_str);
+}
+
+static void
+read_line (CcInfoPanel      *self,
+           GDataInputStream *stdout_data);
+
+static void
+updater_line_read_cb (GObject      *source,
+                      GAsyncResult *res,
+                      gpointer      user_data)
+{
+  CcInfoPanel *self = user_data;
+  GDataInputStream *stdout_data = G_DATA_INPUT_STREAM (source);
+  char *line = g_data_input_stream_read_line_finish_utf8 (stdout_data, res, NULL, NULL);
+  int new_state;
+
+  if (!line)
+    return;
+
+  /* Update state */
+  if (sscanf (line, "UPDATER STATE: %d", &new_state) == 1)
+    set_update_status (self, (OTDState) new_state);
+
+  read_line (self, stdout_data);
+}
+
+static void
+read_line (CcInfoPanel      *self,
+           GDataInputStream *stdout_data)
+{
+  g_data_input_stream_read_line_async (stdout_data, G_PRIORITY_DEFAULT,
+                                       NULL, updater_line_read_cb, self);
+}
+
+static gboolean
+update_activated_cb (GtkLinkButton *button,
+                     gpointer       user_data)
+{
+  CcInfoPanel *self = user_data;
+  GSubprocess *process;
+  GInputStream *stdout;
+  GDataInputStream *stdout_data;
+
+  gtk_stack_set_visible_child (GTK_STACK (WID ("os_version_update_stack")),
+                               WID ("os_version_update_status"));
+
+  set_update_status (self, OTD_STATE_NONE);
+
+  process = g_subprocess_new (G_SUBPROCESS_FLAGS_STDOUT_PIPE,
+                              NULL, /* error */
+                              "/usr/lib/eos-updater/eos-updater", "--force-update", "--print-status",
+                              NULL);
+  stdout = g_subprocess_get_stdout_pipe (process);
+  stdout_data = g_data_input_stream_new (stdout);
+  g_object_unref (stdout);
+
+  read_line (self, stdout_data);
+  g_object_unref (process);
+
+  return TRUE;
+}
+
 static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
@@ -1469,6 +1578,10 @@ info_panel_setup_overview (CcInfoPanel  *self)
   text = get_os_description ();
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
+
+  widget = WID ("os_version_update_link");
+  g_signal_connect (widget, "activate-link",
+                    G_CALLBACK (update_activated_cb), self);
 
   get_primary_disc_info (self);
 
