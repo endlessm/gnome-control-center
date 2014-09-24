@@ -65,7 +65,6 @@ typedef struct
   GtkWidget      *disk_label;
   GtkWidget      *graphics_label;
   GtkWidget      *virt_type_label;
-  GtkWidget      *updates_button;
 
   /* Virtualisation labels */
   GtkWidget      *label8;
@@ -903,45 +902,6 @@ info_overview_panel_setup_overview (CcInfoOverviewPanel *self)
   gtk_label_set_markup (GTK_LABEL (priv->graphics_label), priv->graphics_data->hardware_string);
 }
 
-static gboolean
-does_gnome_software_exist (void)
-{
-  return g_file_test (BINDIR "/gnome-software", G_FILE_TEST_EXISTS);
-}
-
-static gboolean
-does_gpk_update_viewer_exist (void)
-{
-  return g_file_test (BINDIR "/gpk-update-viewer", G_FILE_TEST_EXISTS);
-}
-
-static void
-on_updates_button_clicked (GtkWidget           *widget,
-                           CcInfoOverviewPanel *self)
-{
-  GError *error = NULL;
-  gboolean ret;
-  gchar **argv;
-
-  argv = g_new0 (gchar *, 3);
-  if (does_gnome_software_exist ())
-    {
-      argv[0] = g_build_filename (BINDIR, "gnome-software", NULL);
-      argv[1] = g_strdup_printf ("--mode=updates");
-    }
-  else
-    {
-      argv[0] = g_build_filename (BINDIR, "gpk-update-viewer", NULL);
-    }
-  ret = g_spawn_async (NULL, argv, NULL, 0, NULL, NULL, NULL, &error);
-  if (!ret)
-    {
-      g_warning ("Failed to spawn %s: %s", argv[0], error->message);
-      g_error_free (error);
-    }
-  g_strfreev (argv);
-}
-
 static void
 cc_info_overview_panel_dispose (GObject *object)
 {
@@ -994,7 +954,6 @@ cc_info_overview_panel_class_init (CcInfoOverviewPanelClass *klass)
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, disk_label);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, graphics_label);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, virt_type_label);
-  gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, updates_button);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, label8);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, grid1);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, label18);
@@ -1009,15 +968,6 @@ cc_info_overview_panel_init (CcInfoOverviewPanel *self)
   gtk_widget_init_template (GTK_WIDGET (self));
 
   priv->graphics_data = get_graphics_data ();
-
-  if (does_gnome_software_exist () || does_gpk_update_viewer_exist ())
-    {
-      g_signal_connect (priv->updates_button, "clicked", G_CALLBACK (on_updates_button_clicked), self);
-    }
-  else
-    {
-      gtk_widget_destroy (priv->updates_button);
-    }
 
   info_overview_panel_setup_overview (self);
   info_overview_panel_setup_virt (self);
