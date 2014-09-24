@@ -359,12 +359,39 @@
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="os_type_label">
+                                  <object class="GtkBox" id="os_version_box">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="xalign">0</property>
-                                    <property name="label">Unknown</property>
-                                    <property name="selectable">True</property>
+                                    <property name="spacing">10</property>
+                                    <child>
+                                      <object class="GtkLabel" id="os_type_label">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="xalign">0</property>
+                                        <property name="label">Unknown</property>
+                                        <property name="selectable">True</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkStack" id="os_version_update_stack">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <child>
+                                          <object class="GtkLinkButton" id="os_version_update_link">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="label" translatable="yes">Check for updates…</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="os_version_update_status">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="halign">start</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
