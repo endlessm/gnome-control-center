@@ -22,6 +22,7 @@
 
 #include "cc-info-panel.h"
 #include "cc-info-resources.h"
+#include "eos-updater-generated.h"
 #include "info-cleanup.h"
 
 #include <glib.h>
@@ -78,6 +79,22 @@ typedef struct
   const char *extra_type_filter;
 } DefaultAppData;
 
+typedef enum {
+  EOS_UPDATER_STATE_NONE = 0,
+  EOS_UPDATER_STATE_READY,
+  EOS_UPDATER_STATE_ERROR,
+  EOS_UPDATER_STATE_POLLING,
+  EOS_UPDATER_STATE_UPDATE_AVAILABLE,
+  EOS_UPDATER_STATE_FETCHING,
+  EOS_UPDATER_STATE_UPDATE_READY,
+  EOS_UPDATER_STATE_APPLYING_UPDATE,
+  EOS_UPDATER_STATE_UPDATE_APPLIED,
+  EOS_UPDATER_N_STATES,
+} EosUpdaterState;
+
+#define EOS_UPDATER_ERROR_LIVE_BOOT_STR "com.endlessm.Updater.Error.LiveBoot"
+#define EOS_UPDATER_ERROR_NON_OSTREE_STR "com.endlessm.Updater.Error.NotOstreeSystem"
+
 struct _CcInfoPanelPrivate
 {
   GtkBuilder    *builder;
@@ -100,9 +117,20 @@ struct _CcInfoPanelPrivate
   GtkWidget     *other_application_combo;
 
   GraphicsData  *graphics_data;
+
+  EosUpdater *updater_proxy;
+  GDBusProxy *session_proxy;
+  GCancellable *updater_cancellable;
+  gboolean updater_activated;
 };
 
 static void get_primary_disc_info_start (CcInfoPanel *self);
+static void sync_state_from_updater     (CcInfoPanel *self,
+                                         gboolean is_initial_state);
+static void sync_initial_state_from_updater (CcInfoPanel *self);
+static gboolean updates_link_activated (GtkLabel *label,
+                                        gchar *uri,
+                                        CcInfoPanel *self);
 
 typedef struct
 {
@@ -415,7 +443,15 @@ cc_info_panel_finalize (GObject *object)
   g_free (priv->gnome_date);
   g_free (priv->gnome_distributor);
 
+  if (priv->updater_cancellable)
+    {
+      g_cancellable_cancel (priv->updater_cancellable);
+      g_clear_object (&priv->updater_cancellable);
+    }
+
   g_clear_object (&priv->media_settings);
+  g_clear_object (&priv->updater_proxy);
+  g_clear_object (&priv->session_proxy);
 
   G_OBJECT_CLASS (cc_info_panel_parent_class)->finalize (object);
 }
@@ -1549,6 +1585,11 @@ info_panel_setup_overview (CcInfoPanel  *self)
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
 
+  widget = WID ("os_description_label");
+  text = get_os_description ();
+  gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
+  g_free (text);
+
   get_primary_disc_info (self);
 
   widget = WID ("graphics_label");
@@ -1556,6 +1597,279 @@ info_panel_setup_overview (CcInfoPanel  *self)
 
   widget = WID ("info_vbox");
   gtk_container_add (GTK_CONTAINER (self), widget);
+
+  if (self->priv->updater_proxy == NULL ||
+      self->priv->session_proxy == NULL)
+    {
+      widget = WID ("os_updates_box");
+      gtk_widget_set_visible (widget, FALSE);
+    }
+  else
+    {
+      widget = WID ("os_updates_label");
+      g_signal_connect (widget, "activate-link",
+                        G_CALLBACK (updates_link_activated), self);
+      sync_initial_state_from_updater (self);
+    }
+}
+
+static gboolean
+is_updater_state_spinning (CcInfoPanel *self,
+                           EosUpdaterState state)
+{
+  switch (state)
+    {
+    case EOS_UPDATER_STATE_POLLING:
+    case EOS_UPDATER_STATE_FETCHING:
+    case EOS_UPDATER_STATE_APPLYING_UPDATE:
+      return TRUE;
+    default:
+      return FALSE;
+    }
+}
+
+static gboolean
+is_updater_state_interactive (CcInfoPanel *self,
+                              EosUpdaterState state)
+{
+  switch (state)
+    {
+    case EOS_UPDATER_STATE_READY:
+    case EOS_UPDATER_STATE_ERROR:
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      return (!self->priv->updater_activated);
+    case EOS_UPDATER_STATE_UPDATE_APPLIED:
+      return TRUE;
+    default:
+      return FALSE;
+    }
+}
+
+static const gchar *
+get_message_for_updater_state (CcInfoPanel *self,
+                               EosUpdaterState state)
+{
+  switch (state)
+    {
+    case EOS_UPDATER_STATE_NONE:
+    case EOS_UPDATER_STATE_READY:
+      if (self->priv->updater_activated)
+        return _("No updates available");
+      else
+        return _("Check for updates now");
+    case EOS_UPDATER_STATE_ERROR:
+      return _("Update failed");
+    case EOS_UPDATER_STATE_POLLING:
+      return _("Checking for updates…");
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      return _("Install updates now");
+    case EOS_UPDATER_STATE_FETCHING:
+    case EOS_UPDATER_STATE_APPLYING_UPDATE:
+      return _("Installing updates…");
+    case EOS_UPDATER_STATE_UPDATE_APPLIED:
+      return _("Restart to complete update");
+    default:
+      return NULL;
+    }
+}
+
+static void
+updates_apply_completed (GObject *object,
+                         GAsyncResult *res,
+                         gpointer user_data)
+{
+  EosUpdater *proxy = (EosUpdater *) object;
+  GError *error = NULL;
+
+  eos_updater_call_apply_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        {
+          CcInfoPanel *self = user_data;
+          g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
+          sync_state_from_updater (self, FALSE);
+        }
+
+      g_error_free (error);
+    }
+}
+
+static void
+updates_fetch_completed (GObject *object,
+                         GAsyncResult *res,
+                         gpointer user_data)
+{
+  EosUpdater *proxy = (EosUpdater *) object;
+  GError *error = NULL;
+
+  eos_updater_call_fetch_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        {
+          CcInfoPanel *self = user_data;
+          g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
+          sync_state_from_updater (self, FALSE);
+        }
+
+      g_error_free (error);
+    }
+}
+
+static void
+updates_poll_completed (GObject *object,
+                        GAsyncResult *res,
+                        gpointer user_data)
+{
+  EosUpdater *proxy = (EosUpdater *) object;
+  GError *error = NULL;
+
+  eos_updater_call_poll_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        {
+          CcInfoPanel *self = user_data;
+          g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
+          sync_state_from_updater (self, FALSE);
+        }
+
+      g_error_free (error);
+    }
+}
+
+static gboolean
+updates_link_activated (GtkLabel *label,
+                        gchar *uri,
+                        CcInfoPanel *self)
+{
+  EosUpdaterState state;
+
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  g_assert (is_updater_state_interactive (self, state));
+  self->priv->updater_activated = TRUE;
+
+  switch (state)
+    {
+    case EOS_UPDATER_STATE_ERROR:
+    case EOS_UPDATER_STATE_READY:
+      eos_updater_call_poll (self->priv->updater_proxy,
+                             self->priv->updater_cancellable,
+                             updates_poll_completed, self);
+      break;
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+      eos_updater_call_fetch (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
+                              updates_fetch_completed, self);
+      break;
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      eos_updater_call_apply (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
+                              updates_apply_completed, self);
+      break;
+    case EOS_UPDATER_STATE_UPDATE_APPLIED:
+      g_dbus_proxy_call (self->priv->session_proxy,
+                         "Reboot",
+                         NULL,
+                         G_DBUS_CALL_FLAGS_NONE,
+                         -1, NULL, NULL, NULL);
+      break;
+    default:
+      g_assert_not_reached ();
+    }
+
+  return TRUE;
+}
+
+static void
+updates_maybe_do_automatic_step (CcInfoPanel *self)
+{
+  EosUpdaterState state;
+
+  if (!self->priv->updater_activated)
+    return;
+
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  switch (state)
+    {
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+      eos_updater_call_fetch (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
+                              updates_fetch_completed, self);
+      break;
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      eos_updater_call_apply (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
+                              updates_apply_completed, self);
+      break;
+    default:
+      break;
+    }
+}
+
+static void
+sync_state_from_updater (CcInfoPanel *self,
+                         gboolean is_initial_state)
+{
+  EosUpdaterState state;
+  gboolean is_live_boot, is_non_ostree;
+  GtkWidget *widget;
+  gboolean state_spinning, state_interactive;
+  const gchar *message, *error_name;
+  gchar *markup;
+
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  error_name = eos_updater_get_error_name (self->priv->updater_proxy);
+  is_live_boot = state == EOS_UPDATER_STATE_ERROR &&
+    g_strcmp0 (error_name, EOS_UPDATER_ERROR_LIVE_BOOT_STR) == 0;
+  is_non_ostree = state == EOS_UPDATER_STATE_ERROR &&
+    g_strcmp0 (error_name, EOS_UPDATER_ERROR_NON_OSTREE_STR) == 0;
+
+  /* Attempt to clear the error by pretending to be ready, which will
+   * trigger a poll
+   */
+  if (state == EOS_UPDATER_STATE_ERROR && is_initial_state)
+    state = EOS_UPDATER_STATE_READY;
+
+  state_spinning = is_updater_state_spinning (self, state);
+  state_interactive = is_updater_state_interactive (self, state);
+  message = get_message_for_updater_state (self, state);
+
+  widget = WID ("os_updates_spinner");
+  gtk_widget_set_visible (widget, state_spinning);
+  g_object_set (widget, "active", state_spinning, NULL);
+
+  widget = WID ("os_updates_label");
+  gtk_widget_set_visible (widget, !is_live_boot && !is_non_ostree);
+  if (state_interactive)
+    markup = g_strdup_printf ("<a href='updates-link'>%s</a>", message);
+  else
+    markup = g_strdup (message);
+
+  gtk_label_set_markup (GTK_LABEL (widget), markup);
+  g_free (markup);
+
+  updates_maybe_do_automatic_step (self);
+}
+
+static void
+updater_state_changed (EosUpdater *proxy,
+                       GParamSpec *pspec,
+                       CcInfoPanel *self)
+{
+  sync_state_from_updater (self, FALSE);
+}
+
+static void
+sync_initial_state_from_updater (CcInfoPanel *self)
+{
+  self->priv->updater_cancellable = g_cancellable_new ();
+  sync_state_from_updater (self, TRUE);
+  g_signal_connect (self->priv->updater_proxy, "notify::state",
+                    G_CALLBACK (updater_state_changed), self);
 }
 
 static gboolean
@@ -1667,6 +1981,36 @@ cc_info_panel_init (CcInfoPanel *self)
 
   widget = WID ("attribution_label");
   g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
+
+  self->priv->updater_proxy = eos_updater_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                                  G_DBUS_PROXY_FLAGS_NONE,
+                                                                  "com.endlessm.Updater",
+                                                                  "/com/endlessm/Updater",
+                                                                  NULL,
+                                                                  &error);
+
+  if (error != NULL)
+    {
+      g_critical ("Unable to get a proxy to the EOS updater: %s. Updates will not be available.",
+                  error->message);
+      g_clear_error (&error);
+    }
+
+  self->priv->session_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+                                                             G_DBUS_PROXY_FLAGS_NONE,
+                                                             NULL,
+                                                             "org.gnome.SessionManager",
+                                                             "/org/gnome/SessionManager",
+                                                             "org.gnome.SessionManager",
+                                                             NULL,
+                                                             &error);
+
+  if (error != NULL)
+    {
+      g_critical ("Unable to get a proxy to gnome-session: %s. Updates will not be available.",
+                  error->message);
+      g_error_free (error);
+    }
 
   info_panel_setup_selector (self);
   info_panel_setup_overview (self);

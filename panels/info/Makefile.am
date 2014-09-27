@@ -15,7 +15,9 @@ noinst_LTLIBRARIES = libinfo.la
 
 BUILT_SOURCES =			\
 	cc-info-resources.c	\
-	cc-info-resources.h
+	cc-info-resources.h	\
+	eos-updater-generated.c \
+	eos-updater-generated.h
 
 libinfo_la_SOURCES =		\
 	$(BUILT_SOURCES)	\
@@ -43,6 +45,13 @@ cc-info-resources.c: info.gresource.xml $(resource_files)
 cc-info-resources.h: info.gresource.xml $(resource_files)
 	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-header --c-name cc_info $<
 
+eos-updater-generated.c: eos-updater-generated.h
+eos-updater-generated.h: $(srcdir)/eos-updater.xml
+	gdbus-codegen $<				\
+	--interface-prefix com.endlessm.		\
+	--generate-c-code eos-updater-generated		\
+	--c-namespace Eos
+
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
@@ -56,6 +65,6 @@ update-from-gsd:
 	git commit -m "info: Update from gnome-settings-daemon" $(SPACEFILES)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES)
-EXTRA_DIST = $(resource_files) info.gresource.xml info-cleanup-test.txt
+EXTRA_DIST = $(resource_files) info.gresource.xml info-cleanup-test.txt $(srcdir)/eos-updater.xml
 
 -include $(top_srcdir)/git.mk
