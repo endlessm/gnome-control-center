@@ -12,7 +12,11 @@ noinst_LTLIBRARIES = libinfo.la
 
 BUILT_SOURCES =			\
 	cc-info-resources.c	\
-	cc-info-resources.h
+	cc-info-resources.h	\
+	eos-updater-generated.c \
+	eos-updater-generated.h \
+	ostree-daemon-generated.c \
+	ostree-daemon-generated.h
 
 libinfo_la_SOURCES =		\
 	$(BUILT_SOURCES)	\
@@ -28,6 +32,20 @@ cc-info-resources.c: info.gresource.xml $(resource_files)
 	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-source --c-name cc_info $<
 cc-info-resources.h: info.gresource.xml $(resource_files)
 	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-header --c-name cc_info $<
+
+ostree-daemon-generated.c: ostree-daemon-generated.h
+ostree-daemon-generated.h: $(srcdir)/ostree-daemon.xml
+	gdbus-codegen $<				\
+	--interface-prefix org.gnome.OSTree		\
+	--generate-c-code ostree-daemon-generated	\
+	--c-namespace OTD
+
+eos-updater-generated.c: eos-updater-generated.h
+eos-updater-generated.h: $(srcdir)/com.endlessm.SystemUpdater.xml
+	gdbus-codegen $<				\
+	--interface-prefix com.endlessm.SystemUpdater	\
+	--generate-c-code eos-updater-generated		\
+	--c-namespace SystemUpdater
 
 @INTLTOOL_DESKTOP_RULE@
 

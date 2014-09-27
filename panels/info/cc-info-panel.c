@@ -23,6 +23,8 @@
 
 #include "cc-info-panel.h"
 #include "cc-info-resources.h"
+#include "eos-updater-generated.h"
+#include "ostree-daemon-generated.h"
 
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -82,6 +84,18 @@ typedef struct
   const char *extra_type_filter;
 } DefaultAppData;
 
+typedef enum {
+  OTD_STATE_NONE = 0,
+  OTD_STATE_READY,
+  OTD_STATE_ERROR,
+  OTD_STATE_POLLING,
+  OTD_STATE_UPDATE_AVAILABLE,
+  OTD_STATE_FETCHING,
+  OTD_STATE_UPDATE_READY,
+  OTD_STATE_APPLYING_UPDATE,
+  OTD_STATE_UPDATE_APPLIED,
+} OTDState;
+
 struct _CcInfoPanelPrivate
 {
   GtkBuilder    *builder;
@@ -98,6 +112,10 @@ struct _CcInfoPanelPrivate
   GtkWidget     *other_application_combo;
 
   GraphicsData  *graphics_data;
+
+  OTD *ostree_proxy;
+  SystemUpdater *updater_proxy;
+  GDBusProxy *session_proxy;
 };
 
 static void get_primary_disc_info_start (CcInfoPanel *self);
@@ -350,6 +368,9 @@ cc_info_panel_finalize (GObject *object)
     }
 
   g_clear_object (&priv->media_settings);
+  g_clear_object (&priv->ostree_proxy);
+  g_clear_object (&priv->updater_proxy);
+  g_clear_object (&priv->session_proxy);
 
   G_OBJECT_CLASS (cc_info_panel_parent_class)->finalize (object);
 }
@@ -1433,6 +1454,171 @@ info_panel_setup_selector (CcInfoPanel  *self)
   gtk_widget_show_all (GTK_WIDGET (view));
 }
 
+static gboolean
+is_otd_state_spinning (OTDState state)
+{
+  switch (state)
+    {
+    case OTD_STATE_POLLING:
+    case OTD_STATE_FETCHING:
+    case OTD_STATE_APPLYING_UPDATE:
+      return TRUE;
+    default:
+      return FALSE;
+    }
+}
+
+static gboolean
+is_otd_state_interactive (OTDState state)
+{
+  switch (state)
+    {
+    case OTD_STATE_READY:
+    case OTD_STATE_UPDATE_AVAILABLE:
+    case OTD_STATE_UPDATE_APPLIED:
+      return TRUE;
+    default:
+      return FALSE;
+    }
+}
+
+static const gchar *
+get_message_for_otd_state (OTDState state)
+{
+  switch (state)
+    {
+    case OTD_STATE_NONE:
+    case OTD_STATE_READY:
+      return _("Check for updates now");
+    case OTD_STATE_POLLING:
+      return _("Checking for updates…");
+    case OTD_STATE_UPDATE_AVAILABLE:
+      return _("Install updates now");
+    case OTD_STATE_FETCHING:
+    case OTD_STATE_UPDATE_READY:
+    case OTD_STATE_APPLYING_UPDATE:
+      return _("Installing updates…");
+    case OTD_STATE_UPDATE_APPLIED:
+      return _("Restart to complete update");
+    default:
+      return NULL;
+    }
+}
+
+static void
+updates_completed (GObject *object,
+                   GAsyncResult *res,
+                   gpointer user_data)
+{
+  SystemUpdater *proxy = (SystemUpdater *) object;
+  GError *error = NULL;
+
+  system_updater__call_force_update_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      g_warning ("Failed to call ForceUpdate() on eos-updater daemon: %s", error->message);
+      g_error_free (error);
+    }
+}
+
+static void
+updates_poll_completed (GObject *object,
+                        GAsyncResult *res,
+                        gpointer user_data)
+{
+  OTD *proxy = (OTD *) object;
+  GError *error = NULL;
+
+  otd__call_poll_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      g_warning ("Failed to call Poll() on OSTree daemon: %s", error->message);
+      g_error_free (error);
+    }
+}
+
+static gboolean
+updates_link_activated (GtkLabel *label,
+                        gchar *uri,
+                        CcInfoPanel *self)
+{
+  OTDState state;
+
+  state = otd__get_state (self->priv->ostree_proxy);
+  g_assert (is_otd_state_interactive (state));
+
+  switch (state)
+    {
+    case OTD_STATE_READY:
+      otd__call_poll (self->priv->ostree_proxy, NULL,
+                      updates_poll_completed, self);
+      break;
+    case OTD_STATE_UPDATE_AVAILABLE:
+      system_updater__call_force_update (self->priv->updater_proxy, NULL,
+                                         updates_completed, self);
+      break;
+    case OTD_STATE_UPDATE_APPLIED:
+        g_dbus_proxy_call (self->priv->session_proxy,
+                           "Reboot",
+                           NULL,
+                           G_DBUS_CALL_FLAGS_NONE,
+                           -1, NULL, NULL, NULL);
+      break;
+    default:
+      g_assert_not_reached ();
+    }
+
+  return TRUE;
+}
+
+static void
+sync_state_from_ostree (CcInfoPanel *self)
+{
+  GtkWidget *widget;
+  OTDState state;
+  gboolean state_spinning, state_interactive;
+  const gchar *message;
+  gchar *markup;
+
+  widget = WID ("os_updates_box");
+  state = otd__get_state (self->priv->ostree_proxy);
+  if (state == OTD_STATE_ERROR)
+    {
+      gtk_widget_set_visible (widget, FALSE);
+      return;
+    }
+
+  gtk_widget_set_visible (widget, TRUE);
+  state_spinning = is_otd_state_spinning (state);
+  state_interactive = is_otd_state_interactive (state);
+  message = get_message_for_otd_state (state);
+
+  widget = WID ("os_updates_spinner");
+  gtk_widget_set_visible (widget, state_spinning);
+  g_object_set (widget, "active", state_spinning, NULL);
+
+  widget = WID ("os_updates_label");
+  if (state_interactive)
+    markup = g_strdup_printf ("<a href='updates-link'>%s</a>", message);
+  else
+    markup = g_strdup (message);
+
+  gtk_label_set_markup (GTK_LABEL (widget), markup);
+  g_free (markup);
+}
+
+static gboolean
+on_attribution_label_link (GtkLabel *label,
+                           gchar *uri,
+                           CcInfoPanel *self)
+{
+  if (g_strcmp0 (uri, "attribution-link") != 0)
+    return FALSE;
+
+  gtk_show_uri (NULL, "http://localhost:3010", gtk_get_current_event_time (), NULL);
+  return TRUE;
+}
+
 static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
@@ -1471,25 +1657,32 @@ info_panel_setup_overview (CcInfoPanel  *self)
 
   widget = WID ("info_vbox");
   gtk_container_add (GTK_CONTAINER (self), widget);
-}
 
-static gboolean
-on_attribution_label_link (GtkLabel *label,
-                           gchar *uri,
-                           CcInfoPanel *self)
-{
-  if (g_strcmp0 (uri, "attribution-link") != 0)
-    return FALSE;
+  widget = WID ("attribution_label");
+  g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
 
-  gtk_show_uri (NULL, "http://localhost:3010", gtk_get_current_event_time (), NULL);
-  return TRUE;
+  if (self->priv->ostree_proxy == NULL ||
+      self->priv->updater_proxy == NULL ||
+      self->priv->session_proxy == NULL)
+    {
+      widget = WID ("os_updates_box");
+      gtk_widget_set_visible (widget, FALSE);
+    }
+  else
+    {
+      widget = WID ("os_updates_label");
+      g_signal_connect (widget, "activate-link",
+                        G_CALLBACK (updates_link_activated), self);
+      g_signal_connect_swapped (self->priv->ostree_proxy, "notify::state",
+                                G_CALLBACK (sync_state_from_ostree), self);
+      sync_state_from_ostree (self);
+    }
 }
 
 static void
 cc_info_panel_init (CcInfoPanel *self)
 {
   GError *error = NULL;
-  GtkWidget *widget;
 
   self->priv = INFO_PANEL_PRIVATE (self);
   g_resources_register (cc_info_get_resource ());
@@ -1507,12 +1700,49 @@ cc_info_panel_init (CcInfoPanel *self)
       return;
     }
 
+  self->priv->ostree_proxy = otd__proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                          G_DBUS_PROXY_FLAGS_NONE,
+                                                          "org.gnome.OSTree",
+                                                          "/org/gnome/OSTree",
+                                                          NULL,
+                                                          &error);
+
+  if (error != NULL) {
+    g_critical ("Unable to get a proxy to the OSTree daemon: %s. Updates will not be available.",
+                error->message);
+    g_error_free (error);
+  }
+
+  self->priv->updater_proxy = system_updater__proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                                      G_DBUS_PROXY_FLAGS_NONE,
+                                                                      "com.endlessm.SystemUpdater",
+                                                                      "/com/endlessm/SystemUpdater",
+                                                                      NULL,
+                                                                      &error);
+
+  if (error != NULL) {
+    g_critical ("Unable to get a proxy to the eos-updater daemon: %s. Updates will not be available.",
+                error->message);
+    g_error_free (error);
+  }
+
+  self->priv->session_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+                                                             G_DBUS_PROXY_FLAGS_NONE,
+                                                             NULL,
+                                                             "org.gnome.SessionManager",
+                                                             "/org/gnome/SessionManager",
+                                                             "org.gnome.SessionManager",
+                                                             NULL,
+                                                             &error);
+
+  if (error != NULL) {
+    g_critical ("Unable to get a proxy to GNOME Session: %s. Updates will not be available.",
+                error->message);
+    g_error_free (error);
+  }
+
   self->priv->extra_options_dialog = WID ("extra_options_dialog");
-
   self->priv->graphics_data = get_graphics_data ();
-
-  widget = WID ("attribution_label");
-  g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
 
   info_panel_setup_selector (self);
   info_panel_setup_overview (self);
