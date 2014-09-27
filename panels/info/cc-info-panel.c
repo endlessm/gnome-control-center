@@ -116,6 +116,7 @@ struct _CcInfoPanelPrivate
   OTD *ostree_proxy;
   SystemUpdater *updater_proxy;
   GDBusProxy *session_proxy;
+  gboolean ostree_polled;
 };
 
 static void get_primary_disc_info_start (CcInfoPanel *self);
@@ -1455,7 +1456,8 @@ info_panel_setup_selector (CcInfoPanel  *self)
 }
 
 static gboolean
-is_otd_state_spinning (OTDState state)
+is_otd_state_spinning (CcInfoPanel *self,
+                       OTDState state)
 {
   switch (state)
     {
@@ -1469,11 +1471,13 @@ is_otd_state_spinning (OTDState state)
 }
 
 static gboolean
-is_otd_state_interactive (OTDState state)
+is_otd_state_interactive (CcInfoPanel *self,
+                          OTDState state)
 {
   switch (state)
     {
     case OTD_STATE_READY:
+      return (!self->priv->ostree_polled);
     case OTD_STATE_UPDATE_AVAILABLE:
     case OTD_STATE_UPDATE_APPLIED:
       return TRUE;
@@ -1483,13 +1487,17 @@ is_otd_state_interactive (OTDState state)
 }
 
 static const gchar *
-get_message_for_otd_state (OTDState state)
+get_message_for_otd_state (CcInfoPanel *self,
+                           OTDState state)
 {
   switch (state)
     {
     case OTD_STATE_NONE:
     case OTD_STATE_READY:
-      return _("Check for updates now");
+      if (self->priv->ostree_polled)
+        return _("No updates available");
+      else
+        return _("Check for updates now");
     case OTD_STATE_POLLING:
       return _("Checking for updates…");
     case OTD_STATE_UPDATE_AVAILABLE:
@@ -1545,13 +1553,14 @@ updates_link_activated (GtkLabel *label,
   OTDState state;
 
   state = otd__get_state (self->priv->ostree_proxy);
-  g_assert (is_otd_state_interactive (state));
+  g_assert (is_otd_state_interactive (self, state));
 
   switch (state)
     {
     case OTD_STATE_READY:
       otd__call_poll (self->priv->ostree_proxy, NULL,
                       updates_poll_completed, self);
+      self->priv->ostree_polled = TRUE;
       break;
     case OTD_STATE_UPDATE_AVAILABLE:
       system_updater__call_force_update (self->priv->updater_proxy, NULL,
@@ -1589,9 +1598,9 @@ sync_state_from_ostree (CcInfoPanel *self)
     }
 
   gtk_widget_set_visible (widget, TRUE);
-  state_spinning = is_otd_state_spinning (state);
-  state_interactive = is_otd_state_interactive (state);
-  message = get_message_for_otd_state (state);
+  state_spinning = is_otd_state_spinning (self, state);
+  state_interactive = is_otd_state_interactive (self, state);
+  message = get_message_for_otd_state (self, state);
 
   widget = WID ("os_updates_spinner");
   gtk_widget_set_visible (widget, state_spinning);
