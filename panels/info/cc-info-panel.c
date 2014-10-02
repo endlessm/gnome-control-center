@@ -23,6 +23,7 @@
 
 #include "cc-info-panel.h"
 #include "cc-info-resources.h"
+#include "ostree-daemon-generated.h"
 
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -72,13 +73,6 @@ typedef struct {
   char *glx_renderer;
 } GraphicsData;
 
-typedef enum {
-	PK_NOT_AVAILABLE,
-	UPDATES_AVAILABLE,
-	UPDATES_NOT_AVAILABLE,
-	CHECKING_UPDATES
-} UpdatesState;
-
 typedef struct 
 {
   const char *content_type;
@@ -89,11 +83,22 @@ typedef struct
   const char *extra_type_filter;
 } DefaultAppData;
 
+typedef enum {
+  OTD_STATE_NONE = 0,
+  OTD_STATE_READY,
+  OTD_STATE_ERROR,
+  OTD_STATE_POLLING,
+  OTD_STATE_UPDATE_AVAILABLE,
+  OTD_STATE_FETCHING,
+  OTD_STATE_UPDATE_READY,
+  OTD_STATE_APPLYING_UPDATE,
+  OTD_STATE_UPDATE_APPLIED,
+} OTDState;
+
 struct _CcInfoPanelPrivate
 {
   GtkBuilder    *builder;
   GtkWidget     *extra_options_dialog;
-  UpdatesState   updates_state;
 
   GCancellable  *cancellable;
 
@@ -105,70 +110,15 @@ struct _CcInfoPanelPrivate
   GSettings     *media_settings;
   GtkWidget     *other_application_combo;
 
-  GDBusConnection     *session_bus;
-  GDBusProxy          *pk_proxy;
-  GDBusProxy          *pk_transaction_proxy;
-
   GraphicsData  *graphics_data;
+
+  OTD *ostree_proxy;
+  GDBusProxy *session_proxy;
+  gboolean ostree_polled;
+  gboolean ostree_activated;
 };
 
 static void get_primary_disc_info_start (CcInfoPanel *self);
-static void refresh_update_button (CcInfoPanel *self);
-
-typedef struct
-{
-  char *major;
-  char *minor;
-  char *micro;
-  char *distributor;
-  char *date;
-  char **current;
-} VersionData;
-
-static void
-version_start_element_handler (GMarkupParseContext      *ctx,
-                               const char               *element_name,
-                               const char              **attr_names,
-                               const char              **attr_values,
-                               gpointer                  user_data,
-                               GError                  **error)
-{
-  VersionData *data = user_data;
-  if (g_str_equal (element_name, "platform"))
-    data->current = &data->major;
-  else if (g_str_equal (element_name, "minor"))
-    data->current = &data->minor;
-  else if (g_str_equal (element_name, "micro"))
-    data->current = &data->micro;
-  else if (g_str_equal (element_name, "distributor"))
-    data->current = &data->distributor;
-  else if (g_str_equal (element_name, "date"))
-    data->current = &data->date;
-  else
-    data->current = NULL;
-}
-
-static void
-version_end_element_handler (GMarkupParseContext      *ctx,
-                             const char               *element_name,
-                             gpointer                  user_data,
-                             GError                  **error)
-{
-  VersionData *data = user_data;
-  data->current = NULL;
-}
-
-static void
-version_text_handler (GMarkupParseContext *ctx,
-                      const char          *text,
-                      gsize                text_len,
-                      gpointer             user_data,
-                      GError             **error)
-{
-  VersionData *data = user_data;
-  if (data->current != NULL)
-    *data->current = g_strstrip (g_strdup (text));
-}
 
 typedef struct
 {
@@ -400,8 +350,6 @@ cc_info_panel_dispose (GObject *object)
   CcInfoPanelPrivate *priv = CC_INFO_PANEL (object)->priv;
 
   g_clear_object (&priv->builder);
-  g_clear_object (&priv->pk_proxy);
-  g_clear_object (&priv->pk_transaction_proxy);
   g_clear_pointer (&priv->graphics_data, graphics_data_free);
   g_clear_pointer (&priv->extra_options_dialog, gtk_widget_destroy);
 
@@ -420,6 +368,8 @@ cc_info_panel_finalize (GObject *object)
     }
 
   g_clear_object (&priv->media_settings);
+  g_clear_object (&priv->ostree_proxy);
+  g_clear_object (&priv->session_proxy);
 
   G_OBJECT_CLASS (cc_info_panel_parent_class)->finalize (object);
 }
@@ -1503,6 +1453,227 @@ info_panel_setup_selector (CcInfoPanel  *self)
   gtk_widget_show_all (GTK_WIDGET (view));
 }
 
+static gboolean
+is_otd_state_spinning (CcInfoPanel *self,
+                       OTDState state)
+{
+  switch (state)
+    {
+    case OTD_STATE_POLLING:
+    case OTD_STATE_FETCHING:
+    case OTD_STATE_APPLYING_UPDATE:
+      return TRUE;
+    default:
+      return FALSE;
+    }
+}
+
+static gboolean
+is_otd_state_interactive (CcInfoPanel *self,
+                          OTDState state)
+{
+  switch (state)
+    {
+    case OTD_STATE_READY:
+    case OTD_STATE_UPDATE_AVAILABLE:
+    case OTD_STATE_UPDATE_READY:
+      return (!self->priv->ostree_activated);
+    case OTD_STATE_UPDATE_APPLIED:
+      return TRUE;
+    default:
+      return FALSE;
+    }
+}
+
+static const gchar *
+get_message_for_otd_state (CcInfoPanel *self,
+                           OTDState state)
+{
+  switch (state)
+    {
+    case OTD_STATE_NONE:
+    case OTD_STATE_READY:
+      if (self->priv->ostree_activated)
+        return _("No updates available");
+      else
+        return _("Check for updates now");
+    case OTD_STATE_POLLING:
+      return _("Checking for updates…");
+    case OTD_STATE_UPDATE_AVAILABLE:
+    case OTD_STATE_UPDATE_READY:
+      return _("Install updates now");
+    case OTD_STATE_FETCHING:
+    case OTD_STATE_APPLYING_UPDATE:
+      return _("Installing updates…");
+    case OTD_STATE_UPDATE_APPLIED:
+      return _("Restart to complete update");
+    default:
+      return NULL;
+    }
+}
+
+static void
+updates_apply_completed (GObject *object,
+                         GAsyncResult *res,
+                         gpointer user_data)
+{
+  OTD *proxy = (OTD *) object;
+  GError *error = NULL;
+
+  otd__call_apply_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      g_warning ("Failed to call Apply() on OSTree daemon: %s", error->message);
+      g_error_free (error);
+    }
+}
+
+static void
+updates_fetch_completed (GObject *object,
+                         GAsyncResult *res,
+                         gpointer user_data)
+{
+  OTD *proxy = (OTD *) object;
+  GError *error = NULL;
+
+  otd__call_fetch_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      g_warning ("Failed to call Fetch() on OSTree daemon: %s", error->message);
+      g_error_free (error);
+    }
+}
+
+static void
+updates_poll_completed (GObject *object,
+                        GAsyncResult *res,
+                        gpointer user_data)
+{
+  OTD *proxy = (OTD *) object;
+  GError *error = NULL;
+
+  otd__call_poll_finish (proxy, res, &error);
+  if (error != NULL)
+    {
+      g_warning ("Failed to call Poll() on OSTree daemon: %s", error->message);
+      g_error_free (error);
+    }
+}
+
+static gboolean
+updates_link_activated (GtkLabel *label,
+                        gchar *uri,
+                        CcInfoPanel *self)
+{
+  OTDState state;
+
+  self->priv->ostree_activated = TRUE;
+  state = otd__get_state (self->priv->ostree_proxy);
+  g_assert (is_otd_state_interactive (self, state));
+
+  switch (state)
+    {
+    case OTD_STATE_READY:
+      otd__call_poll (self->priv->ostree_proxy, NULL,
+                      updates_poll_completed, self);
+      self->priv->ostree_polled = TRUE;
+      break;
+    case OTD_STATE_UPDATE_AVAILABLE:
+      otd__call_fetch (self->priv->ostree_proxy, NULL,
+                       updates_fetch_completed, self);
+      break;
+    case OTD_STATE_UPDATE_READY:
+      otd__call_apply (self->priv->ostree_proxy, NULL,
+                       updates_apply_completed, self);
+      break;
+    case OTD_STATE_UPDATE_APPLIED:
+      g_dbus_proxy_call (self->priv->session_proxy,
+                         "Reboot",
+                         NULL,
+                         G_DBUS_CALL_FLAGS_NONE,
+                         -1, NULL, NULL, NULL);
+      break;
+    default:
+      g_assert_not_reached ();
+    }
+
+  return TRUE;
+}
+
+static void
+updates_maybe_do_automatic_step (CcInfoPanel *self)
+{
+  OTDState state;
+
+  if (!self->priv->ostree_activated)
+    return;
+
+  state = otd__get_state (self->priv->ostree_proxy);
+  switch (state)
+    {
+    case OTD_STATE_UPDATE_AVAILABLE:
+      otd__call_fetch (self->priv->ostree_proxy, NULL,
+                       updates_fetch_completed, self);
+      break;
+    case OTD_STATE_UPDATE_READY:
+      otd__call_apply (self->priv->ostree_proxy, NULL,
+                       updates_apply_completed, self);
+      break;
+    default:
+      break;
+    }
+}
+
+static void
+sync_state_from_ostree (CcInfoPanel *self)
+{
+  GtkWidget *widget;
+  OTDState state;
+  gboolean state_spinning, state_interactive;
+  const gchar *message;
+  gchar *markup;
+
+  widget = WID ("os_updates_box");
+  state = otd__get_state (self->priv->ostree_proxy);
+  if (state == OTD_STATE_ERROR)
+    {
+      gtk_widget_set_visible (widget, FALSE);
+      return;
+    }
+
+  gtk_widget_set_visible (widget, TRUE);
+  state_spinning = is_otd_state_spinning (self, state);
+  state_interactive = is_otd_state_interactive (self, state);
+  message = get_message_for_otd_state (self, state);
+
+  widget = WID ("os_updates_spinner");
+  gtk_widget_set_visible (widget, state_spinning);
+  g_object_set (widget, "active", state_spinning, NULL);
+
+  widget = WID ("os_updates_label");
+  if (state_interactive)
+    markup = g_strdup_printf ("<a href='updates-link'>%s</a>", message);
+  else
+    markup = g_strdup (message);
+
+  gtk_label_set_markup (GTK_LABEL (widget), markup);
+  g_free (markup);
+
+  updates_maybe_do_automatic_step (self);
+}
+
+static gboolean
+on_attribution_label_link (GtkLabel *label,
+                           gchar *uri,
+                           CcInfoPanel *self)
+{
+  if (g_strcmp0 (uri, "attribution-link") != 0)
+    return FALSE;
+
+  gtk_show_uri (NULL, "http://localhost:3010", gtk_get_current_event_time (), NULL);
+  return TRUE;
+}
+
 static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
@@ -1542,319 +1713,30 @@ info_panel_setup_overview (CcInfoPanel  *self)
   widget = WID ("info_vbox");
   gtk_container_add (GTK_CONTAINER (self), widget);
 
-  refresh_update_button (self);
-}
+  widget = WID ("attribution_label");
+  g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
 
-static gboolean
-on_attribution_label_link (GtkLabel *label,
-                           gchar *uri,
-                           CcInfoPanel *self)
-{
-  if (g_strcmp0 (uri, "attribution-link") != 0)
-    return FALSE;
-
-  gtk_show_uri (NULL, "http://localhost:3010", gtk_get_current_event_time (), NULL);
-  return TRUE;
-}
-
-static void
-refresh_update_button (CcInfoPanel  *self)
-{
-  GtkWidget *widget;
-
-  widget = WID ("updates_button");
-  if (widget == NULL)
-    return;
-
-  switch (self->priv->updates_state)
+  if (self->priv->ostree_proxy == NULL ||
+      self->priv->session_proxy == NULL)
     {
-      case PK_NOT_AVAILABLE:
-        gtk_widget_set_visible (widget, FALSE);
-        break;
-      case UPDATES_AVAILABLE:
-        gtk_widget_set_sensitive (widget, TRUE);
-        gtk_button_set_label (GTK_BUTTON (widget), _("Install Updates"));
-        break;
-      case UPDATES_NOT_AVAILABLE:
-        gtk_widget_set_sensitive (widget, FALSE);
-        gtk_button_set_label (GTK_BUTTON (widget), _("System Up-To-Date"));
-        break;
-      case CHECKING_UPDATES:
-        gtk_widget_set_sensitive (widget, FALSE);
-        gtk_button_set_label (GTK_BUTTON (widget), _("Checking for Updates"));
-        break;
-    }
-}
-
-static void
-on_pk_transaction_signal (GDBusProxy *proxy,
-                          char *sender_name,
-                          char *signal_name,
-                          GVariant *parameters,
-                          CcInfoPanel *self)
-{
-  if (g_strcmp0 (signal_name, "Package") == 0)
-    {
-      self->priv->updates_state = UPDATES_AVAILABLE;
-    }
-  else if (g_strcmp0 (signal_name, "Finished") == 0)
-    {
-      if (self->priv->updates_state == CHECKING_UPDATES)
-        self->priv->updates_state = UPDATES_NOT_AVAILABLE;
-      refresh_update_button (self);
-    }
-  else if (g_strcmp0 (signal_name, "ErrorCode") == 0)
-    {
-      self->priv->updates_state = PK_NOT_AVAILABLE;
-      refresh_update_button (self);
-    }
-  else if (g_strcmp0 (signal_name, "Destroy") == 0)
-    {
-      g_clear_object (&self->priv->pk_transaction_proxy);
-    }
-}
-
-static void
-on_pk_get_updates_ready (GObject      *source,
-                         GAsyncResult *res,
-                         CcInfoPanel  *self)
-{
-  GError     *error;
-  GVariant   *result;
-
-  error = NULL;
-  result = g_dbus_proxy_call_finish (G_DBUS_PROXY (source), res, &error);
-  if (result == NULL)
-    {
-      g_warning ("Error getting PackageKit updates list: %s", error->message);
-      g_error_free (error);
-      return;
-    }
-}
-
-static void
-on_pk_get_tid_ready (GObject      *source,
-                     GAsyncResult *res,
-                     CcInfoPanel  *self)
-{
-  GError     *error;
-  GVariant   *result;
-  char       *tid;
-
-  error = NULL;
-  result = g_dbus_proxy_call_finish (G_DBUS_PROXY (source), res, &error);
-  if (result == NULL)
-    {
-      if (g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_SERVICE_UNKNOWN) == FALSE)
-        g_warning ("Error getting PackageKit transaction ID: %s", error->message);
-      g_error_free (error);
-      return;
-    }
-
-  g_variant_get (result, "(o)", &tid);
-
-  self->priv->pk_transaction_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-                                                                    G_DBUS_PROXY_FLAGS_NONE,
-                                                                    NULL,
-                                                                    "org.freedesktop.PackageKit",
-                                                                    tid,
-                                                                    "org.freedesktop.PackageKit.Transaction",
-                                                                    NULL,
-                                                                    NULL);
-  g_free (tid);
-  g_variant_unref (result);
-
-  if (self->priv->pk_transaction_proxy == NULL)
-    {
-      g_warning ("Unable to get PackageKit transaction proxy object");
-      return;
-    }
-
-  g_signal_connect (self->priv->pk_transaction_proxy,
-                    "g-signal",
-                    G_CALLBACK (on_pk_transaction_signal),
-                    self);
-
-  g_dbus_proxy_call (self->priv->pk_transaction_proxy,
-                     "GetUpdates",
-                     g_variant_new ("(t)", 1), /* PK_FILTER_ENUM_NONE */
-                     G_DBUS_CALL_FLAGS_NONE,
-                     -1,
-                     NULL,
-                     (GAsyncReadyCallback) on_pk_get_updates_ready,
-                     self);
-}
-
-static void
-refresh_updates (CcInfoPanel *self)
-{
-  self->priv->updates_state = CHECKING_UPDATES;
-  refresh_update_button (self);
-
-  g_assert (self->priv->pk_proxy != NULL);
-  g_dbus_proxy_call (self->priv->pk_proxy,
-                     "CreateTransaction",
-                     NULL,
-                     G_DBUS_CALL_FLAGS_NONE,
-                     -1,
-                     NULL,
-                     (GAsyncReadyCallback) on_pk_get_tid_ready,
-                     self);
-}
-
-static void
-on_pk_signal (GDBusProxy *proxy,
-              char *sender_name,
-              char *signal_name,
-              GVariant *parameters,
-              CcInfoPanel *self)
-{
-  if (g_strcmp0 (signal_name, "UpdatesChanged") == 0)
-    {
-      refresh_updates (self);
-    }
-}
-
-static gboolean
-does_gnome_software_exist (void)
-{
-  return g_file_test (BINDIR "/gnome-software", G_FILE_TEST_EXISTS);
-}
-
-static void
-on_updates_button_clicked (GtkWidget   *widget,
-                           CcInfoPanel *self)
-{
-  GError *error = NULL;
-  gboolean ret;
-  gchar **argv;
-
-  argv = g_new0 (gchar *, 3);
-  if (does_gnome_software_exist ())
-    {
-      argv[0] = g_build_filename (BINDIR, "gnome-software", NULL);
-      argv[1] = g_strdup_printf ("--mode=updates");
+      widget = WID ("os_updates_box");
+      gtk_widget_set_visible (widget, FALSE);
     }
   else
     {
-      argv[0] = g_build_filename (BINDIR, "gpk-update-viewer", NULL);
+      widget = WID ("os_updates_label");
+      g_signal_connect (widget, "activate-link",
+                        G_CALLBACK (updates_link_activated), self);
+      g_signal_connect_swapped (self->priv->ostree_proxy, "notify::state",
+                                G_CALLBACK (sync_state_from_ostree), self);
+      sync_state_from_ostree (self);
     }
-  ret = g_spawn_async (NULL, argv, NULL, 0, NULL, NULL, NULL, &error);
-  if (!ret)
-    {
-      g_warning ("Failed to spawn %s: %s", argv[0], error->message);
-      g_error_free (error);
-    }
-  g_strfreev (argv);
-}
-
-static gboolean
-get_pk_version_property (GDBusProxy *pk_proxy,
-                         const char *property,
-                         guint32 *retval)
-{
-  GVariant *v;
-
-  v = g_dbus_proxy_get_cached_property (pk_proxy, property);
-  if (!v)
-    return FALSE;
-
-  g_variant_get (v, "u", retval);
-  g_variant_unref (v);
-  return TRUE;
-}
-
-static void
-got_pk_proxy_cb (GObject *source_object,
-		 GAsyncResult *res,
-		 CcInfoPanel *self)
-{
-  GError *error = NULL;
-  guint32 major, minor, micro;
-  GDBusProxy *proxy;
-
-  proxy = g_dbus_proxy_new_for_bus_finish (res, &error);
-
-  if (proxy == NULL)
-    {
-      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-        {
-          g_warning ("Unable to get PackageKit proxy object: %s", error->message);
-          self->priv->updates_state = PK_NOT_AVAILABLE;
-          refresh_update_button (self);
-        }
-      g_error_free (error);
-      return;
-    }
-
-  self->priv->pk_proxy = proxy;
-
-  if (!get_pk_version_property(self->priv->pk_proxy, "VersionMajor", &major) ||
-      !get_pk_version_property(self->priv->pk_proxy, "VersionMinor", &minor) ||
-      !get_pk_version_property(self->priv->pk_proxy, "VersionMicro", &micro))
-    {
-      g_warning ("Unable to get PackageKit version");
-      g_clear_object (&self->priv->pk_proxy);
-      self->priv->updates_state = PK_NOT_AVAILABLE;
-      refresh_update_button (self);
-      return;
-    }
-
-  if (major != 0 || minor != 8)
-    {
-      g_warning ("PackageKit version %u.%u.%u not supported", major, minor, micro);
-      g_clear_object (&self->priv->pk_proxy);
-      self->priv->updates_state = PK_NOT_AVAILABLE;
-      refresh_update_button (self);
-    }
-  else
-    {
-      g_signal_connect (self->priv->pk_proxy,
-                        "g-signal",
-                        G_CALLBACK (on_pk_signal),
-                        self);
-      refresh_updates (self);
-    }
-}
-
-static gboolean
-does_prepared_update_exist (void)
-{
-  return g_file_test ("/var/lib/PackageKit/prepared-update", G_FILE_TEST_EXISTS);
-}
-
-static void
-info_panel_setup_updates (CcInfoPanel *self)
-{
-  if (does_gnome_software_exist ())
-    {
-      if (does_prepared_update_exist ())
-        self->priv->updates_state = UPDATES_AVAILABLE;
-      else
-        self->priv->updates_state = UPDATES_NOT_AVAILABLE;
-      refresh_update_button (self);
-      return;
-    }
-
-  self->priv->updates_state = CHECKING_UPDATES;
-  refresh_update_button (self);
-
-  g_dbus_proxy_new_for_bus (G_BUS_TYPE_SYSTEM,
-                            G_DBUS_PROXY_FLAGS_NONE,
-                            NULL,
-                            "org.freedesktop.PackageKit",
-                            "/org/freedesktop/PackageKit",
-                            "org.freedesktop.PackageKit",
-                            self->priv->cancellable,
-                            (GAsyncReadyCallback) got_pk_proxy_cb,
-                            self);
 }
 
 static void
 cc_info_panel_init (CcInfoPanel *self)
 {
   GError *error = NULL;
-  GtkWidget *widget;
 
   self->priv = INFO_PANEL_PRIVATE (self);
   g_resources_register (cc_info_get_resource ());
@@ -1862,10 +1744,6 @@ cc_info_panel_init (CcInfoPanel *self)
   self->priv->builder = gtk_builder_new ();
 
   self->priv->media_settings = g_settings_new (MEDIA_HANDLING_SCHEMA);
-
-  self->priv->session_bus = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, NULL);
-
-  g_assert (self->priv->session_bus);
 
   if (gtk_builder_add_from_resource (self->priv->builder,
                                      "/org/gnome/control-center/info/info.ui",
@@ -1876,17 +1754,39 @@ cc_info_panel_init (CcInfoPanel *self)
       return;
     }
 
-  self->priv->extra_options_dialog = WID ("extra_options_dialog");
+  self->priv->ostree_proxy = otd__proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                          G_DBUS_PROXY_FLAGS_NONE,
+                                                          "org.gnome.OSTree",
+                                                          "/org/gnome/OSTree",
+                                                          NULL,
+                                                          &error);
 
+  if (error != NULL)
+    {
+      g_critical ("Unable to get a proxy to the OSTree daemon: %s. Updates will not be available.",
+                  error->message);
+      g_error_free (error);
+    }
+
+  self->priv->session_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+                                                             G_DBUS_PROXY_FLAGS_NONE,
+                                                             NULL,
+                                                             "org.gnome.SessionManager",
+                                                             "/org/gnome/SessionManager",
+                                                             "org.gnome.SessionManager",
+                                                             NULL,
+                                                             &error);
+
+  if (error != NULL)
+    {
+      g_critical ("Unable to get a proxy to gnome-session: %s. Updates will not be available.",
+                  error->message);
+      g_error_free (error);
+    }
+
+  self->priv->extra_options_dialog = WID ("extra_options_dialog");
   self->priv->graphics_data = get_graphics_data ();
 
-  widget = WID ("updates_button");
-  g_signal_connect (widget, "clicked", G_CALLBACK (on_updates_button_clicked), self);
-
-  widget = WID ("attribution_label");
-  g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
-
-  info_panel_setup_updates (self);
   info_panel_setup_selector (self);
   info_panel_setup_overview (self);
   info_panel_setup_default_apps (self);
