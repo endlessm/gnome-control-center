@@ -51,6 +51,6 @@ update-from-gsd:
 	git commit -m "info: Update from gnome-settings-daemon" $(SPACEFILES)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES)
-EXTRA_DIST = $(resource_files) info.gresource.xml
+EXTRA_DIST = $(resource_files) info.gresource.xml $(srcdir)/ostree-daemon.xml
 
 -include $(top_srcdir)/git.mk
