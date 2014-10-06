@@ -1567,9 +1567,9 @@ updates_link_activated (GtkLabel *label,
 {
   OTDState state;
 
-  self->priv->ostree_activated = TRUE;
   state = otd__get_state (self->priv->ostree_proxy);
   g_assert (is_otd_state_interactive (self, state));
+  self->priv->ostree_activated = TRUE;
 
   switch (state)
     {
