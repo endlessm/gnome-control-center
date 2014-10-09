@@ -1670,7 +1670,9 @@ on_attribution_label_link (GtkLabel *label,
   if (g_strcmp0 (uri, "attribution-link") != 0)
     return FALSE;
 
-  gtk_show_uri (NULL, "http://localhost:3010", gtk_get_current_event_time (), NULL);
+  gtk_show_uri (NULL,
+                "file:///usr/share/eos-license-service/EndlessOS-terms-conditions.pdf",
+                gtk_get_current_event_time (), NULL);
   return TRUE;
 }
 
