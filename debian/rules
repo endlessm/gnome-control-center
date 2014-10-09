@@ -14,5 +14,7 @@ include /usr/share/dpkg/buildflags.mk
 DEB_CONFIGURE_EXTRA_FLAGS += --disable-update-mimedb
 
 DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
+# do not strip panel translations, they're used in the search provide
+DEB_DH_TRANSLATIONS_ARGS = -Ngnome-control-center -Ngnome-control-center-data -Ngnome-control-center-dev
 
 common-binary-post-install-arch:: list-missing
