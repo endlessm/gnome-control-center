@@ -1016,7 +1016,11 @@ get_locale_infos (GtkWidget *chooser)
       if (!gnome_parse_locale (*locale, &lang_code, &country_code, NULL, NULL))
         continue;
 
-      simple_locale = g_strdup_printf ("%s_%s.utf8", lang_code, country_code);
+      if (country_code != NULL)
+	simple_locale = g_strdup_printf ("%s_%s.utf8", lang_code, country_code);
+      else
+	simple_locale = g_strdup_printf ("%s.utf8", lang_code);
+
       if (g_hash_table_contains (priv->locales, simple_locale))
         {
           g_free (simple_locale);
