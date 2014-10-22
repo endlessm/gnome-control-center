@@ -1017,9 +1017,9 @@ get_locale_infos (GtkWidget *chooser)
         continue;
 
       if (country_code != NULL)
-	simple_locale = g_strdup_printf ("%s_%s.utf8", lang_code, country_code);
+        simple_locale = g_strdup_printf ("%s_%s.utf8", lang_code, country_code);
       else
-	simple_locale = g_strdup_printf ("%s.utf8", lang_code);
+        simple_locale = g_strdup_printf ("%s.utf8", lang_code);
 
       if (g_hash_table_contains (priv->locales, simple_locale))
         {
