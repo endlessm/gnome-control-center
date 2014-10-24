@@ -497,95 +497,104 @@ search_panel_add_one_provider (CcSearchPanel *self,
 }
 
 static void
-next_search_provider_ready (GObject *source,
-                            GAsyncResult *res,
-                            gpointer user_data)
+search_providers_discover_ready (GObject *source,
+                                 GAsyncResult *result,
+                                 gpointer user_data)
 {
-  CcSearchPanel *self = user_data;
-  GFile *providers_location, *provider;
-  GList *files;
-  GError *error = NULL;
-  gchar *path;
+  GList *providers, *l;
+  GFile *provider;
+  CcSearchPanel *self = CC_SEARCH_PANEL (source);
 
-  files = g_file_enumerator_next_files_finish (G_FILE_ENUMERATOR (source),
-                                               res, &error);
-  providers_location = g_file_enumerator_get_container (G_FILE_ENUMERATOR (source));
+  providers = g_task_propagate_pointer (G_TASK (result), NULL);
 
-  if (error != NULL)
+  if (providers == NULL)
     {
-      path = g_file_get_path (providers_location);
-
-      g_warning ("Error reading from %s: %s - search providers might be missing from the panel",
-                 path, error->message);
-
-      g_error_free (error);
-      g_free (path);
-    }
-
-  if (files != NULL)
-    {
-      provider = g_file_get_child (providers_location, g_file_info_get_name (files->data));
-      search_panel_add_one_provider (self, provider);
-      g_object_unref (provider);
-
-      g_file_enumerator_next_files_async (G_FILE_ENUMERATOR (source), 1,
-                                          G_PRIORITY_DEFAULT, NULL,
-                                          next_search_provider_ready, self);
-    }
-  else
-    {
-      /* propagate a write to GSettings, to make sure we always have
-       * all the providers in the list.
-       */
-      search_panel_propagate_sort_order (self);
-    }
-
-  g_list_free_full (files, g_object_unref);
-}
-
-static void
-enumerate_search_providers_ready (GObject *source,
-                                  GAsyncResult *res,
-                                  gpointer user_data)
-{
-  CcSearchPanel *self = user_data;
-  GFileEnumerator *enumerator;
-  GError *error = NULL;
-  gchar *path;
-
-  enumerator = g_file_enumerate_children_finish (G_FILE (source), res, &error);
-  if (error != NULL)
-    {
-      path = g_file_get_path (G_FILE (source));
-
-      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_NOT_FOUND))
-        g_warning ("Error opening %s: %s - search provider configuration won't be possible",
-                   path, error->message);
-
       search_panel_set_no_providers (self);
-      g_error_free (error);
       return;
     }
 
-  g_file_enumerator_next_files_async (enumerator, 1,
-                                      G_PRIORITY_DEFAULT, NULL,
-                                      next_search_provider_ready, self);
-  g_object_unref (enumerator);
+  for (l = providers; l != NULL; l = l->next)
+    {
+      provider = l->data;
+      search_panel_add_one_provider (self, provider);
+    }
+
+  /* propagate a write to GSettings, to make sure we always have
+   * all the providers in the list.
+   */
+  search_panel_propagate_sort_order (self);
+  g_list_free_full (providers, g_object_unref);
+}
+
+static void
+search_providers_discover_thread (GTask *task,
+                                  gpointer source_object,
+                                  gpointer task_data,
+                                  GCancellable *cancellable)
+{
+  GList *providers = NULL;
+  const gchar * const *system_data_dirs;
+  const gchar *dir;
+  gchar *providers_path;
+  GFile *providers_location, *provider;
+  GFileEnumerator *enumerator;
+  GError *error = NULL;
+  GFileInfo *info;
+  int idx;
+
+  system_data_dirs = g_get_system_data_dirs ();
+  for (idx = 0; system_data_dirs[idx] != NULL; idx++)
+    {
+      dir = system_data_dirs[idx];
+      providers_path = g_build_filename (dir, "gnome-shell", "search-providers", NULL);
+      providers_location = g_file_new_for_path (providers_path);
+
+      enumerator = g_file_enumerate_children (providers_location,
+                                              "standard::type,standard::name,standard::content-type",
+                                              G_FILE_QUERY_INFO_NONE,
+                                              cancellable, &error);
+
+      if (error != NULL)
+        {
+          if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_NOT_FOUND))
+            g_warning ("Error opening %s: %s - search provider configuration won't be possible",
+                       providers_path, error->message);
+          g_clear_error (&error);
+
+          goto cleanup;
+        }
+
+      while ((info = g_file_enumerator_next_file (enumerator, cancellable, &error)) != NULL)
+        {
+          provider = g_file_get_child (providers_location, g_file_info_get_name (info));
+          providers = g_list_prepend (providers, provider);
+          g_object_unref (info);
+        }
+
+      if (error != NULL)
+        {
+          g_warning ("Error reading from %s: %s - search providers might be missing from the panel",
+                     providers_path, error->message);
+          g_clear_error (&error);
+        }
+
+    cleanup:
+      g_clear_object (&enumerator);
+      g_clear_object (&providers_location);
+      g_free (providers_path);
+    }
+
+  g_task_return_pointer (task, providers, NULL);
 }
 
 static void
 populate_search_providers (CcSearchPanel *self)
 {
-  GFile *providers_location;
+  GTask *task;
 
-  providers_location = g_file_new_for_path (DATADIR "/gnome-shell/search-providers");
-  g_file_enumerate_children_async (providers_location,
-                                   "standard::type,standard::name,standard::content-type",
-                                   G_FILE_QUERY_INFO_NONE,
-                                   G_PRIORITY_DEFAULT,
-                                   NULL,
-                                   enumerate_search_providers_ready, self);
-  g_object_unref (providers_location);
+  task = g_task_new (self, NULL, search_providers_discover_ready, self);
+  g_task_run_in_thread (task, search_providers_discover_thread);
+  g_object_unref (task);
 }
 
 static void
