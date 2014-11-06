@@ -1667,12 +1667,76 @@ on_attribution_label_link (GtkLabel *label,
                            gchar *uri,
                            CcInfoPanel *self)
 {
+  const gchar * const * languages;
+  const gchar * const * data_dirs;
+  const gchar *language;
+  gchar *path, *pdf_uri;
+  gint i, j;
+  gboolean found = FALSE;
+  GError *error = NULL;
+
   if (g_strcmp0 (uri, "attribution-link") != 0)
     return FALSE;
 
-  gtk_show_uri (NULL,
-                "file:///usr/share/eos-license-service/EndlessOS-terms-conditions.pdf",
-                gtk_get_current_event_time (), NULL);
+  data_dirs = g_get_system_data_dirs ();
+  languages = g_get_language_names ();
+  path = NULL;
+
+  for (i = 0; languages[i] != NULL; i++)
+    {
+      language = languages[i];
+
+      for (j = 0; data_dirs[j] != NULL; j++)
+        {
+          path = g_build_filename (data_dirs[j],
+                                   "eos-license-service",
+                                   "terms",
+                                   language,
+                                   "Endless-Mobile-Terms-of-Use.pdf",
+                                   NULL);
+
+          if (g_file_test (path, G_FILE_TEST_EXISTS))
+            {
+              found = TRUE;
+              break;
+            }
+
+          g_free (path);
+          path = NULL;
+        }
+
+      if (found)
+        break;
+    }
+
+  if (!found)
+    {
+      g_warning ("Unable to find terms and conditions PDF on the system");
+      return TRUE;
+    }
+
+  pdf_uri = g_filename_to_uri (path, NULL, &error);
+  g_free (path);
+
+  if (error != NULL)
+    {
+      g_warning ("Unable to construct terms and conditions PDF uri: %s\n",
+                 error->message);
+      g_error_free (error);
+      return TRUE;
+    }
+
+  gtk_show_uri (NULL, pdf_uri,
+                gtk_get_current_event_time (), &error);
+  g_free (pdf_uri);
+
+  if (error != NULL)
+    {
+      g_warning ("Unable to display terms and conditions PDF: %s\n",
+                 error->message);
+      g_error_free (error);
+    }
+
   return TRUE;
 }
 
