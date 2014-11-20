@@ -1498,7 +1498,7 @@ get_message_for_otd_state (CcInfoPanel *self,
       else
         return _("Check for updates now");
     case OTD_STATE_ERROR:
-      return _("Error checking for updates");
+      return _("Update failed");
     case OTD_STATE_POLLING:
       return _("Checking for updates…");
     case OTD_STATE_UPDATE_AVAILABLE:
