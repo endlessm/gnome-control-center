@@ -1474,6 +1474,7 @@ is_otd_state_interactive (CcInfoPanel *self,
   switch (state)
     {
     case OTD_STATE_READY:
+    case OTD_STATE_ERROR:
     case OTD_STATE_UPDATE_AVAILABLE:
     case OTD_STATE_UPDATE_READY:
       return (!self->priv->ostree_activated);
@@ -1572,6 +1573,7 @@ updates_link_activated (GtkLabel *label,
 
   switch (state)
     {
+    case OTD_STATE_ERROR:
     case OTD_STATE_READY:
       otd__call_poll (self->priv->ostree_proxy, NULL,
                       updates_poll_completed, self);
@@ -1623,16 +1625,15 @@ updates_maybe_do_automatic_step (CcInfoPanel *self)
 }
 
 static void
-sync_state_from_ostree (CcInfoPanel *self)
+sync_state_from_ostree (CcInfoPanel *self,
+                        OTDState state)
 {
   GtkWidget *widget;
-  OTDState state;
   gboolean state_spinning, state_interactive;
   const gchar *message;
   gchar *markup;
 
   widget = WID ("os_updates_box");
-  state = otd__get_state (self->priv->ostree_proxy);
   if (state == OTD_STATE_ERROR)
     {
       gtk_widget_set_visible (widget, FALSE);
@@ -1658,6 +1659,34 @@ sync_state_from_ostree (CcInfoPanel *self)
   g_free (markup);
 
   updates_maybe_do_automatic_step (self);
+}
+
+static void
+ostree_state_changed (OTD *proxy,
+                      GParamSpec *pspec,
+                      CcInfoPanel *self)
+{
+  OTDState state;
+
+  state = otd__get_state (self->priv->ostree_proxy);
+  sync_state_from_ostree (self, state);
+}
+
+static void
+sync_initial_state_from_ostree (CcInfoPanel *self)
+{
+  OTDState state;
+
+  /* Attempt to clear the error by pretending to be ready, which will
+   * trigger a poll
+   */
+  state = otd__get_state (self->priv->ostree_proxy);
+  if (state == OTD_STATE_ERROR)
+    state = OTD_STATE_READY;
+
+  sync_state_from_ostree (self, state);
+  g_signal_connect (self->priv->ostree_proxy, "notify::state",
+                    G_CALLBACK (ostree_state_changed), self);
 }
 
 static gboolean
@@ -1791,9 +1820,7 @@ info_panel_setup_overview (CcInfoPanel  *self)
       widget = WID ("os_updates_label");
       g_signal_connect (widget, "activate-link",
                         G_CALLBACK (updates_link_activated), self);
-      g_signal_connect_swapped (self->priv->ostree_proxy, "notify::state",
-                                G_CALLBACK (sync_state_from_ostree), self);
-      sync_state_from_ostree (self);
+      sync_initial_state_from_ostree (self);
     }
 }
 
