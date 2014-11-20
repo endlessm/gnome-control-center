@@ -114,7 +114,6 @@ struct _CcInfoPanelPrivate
 
   OTD *ostree_proxy;
   GDBusProxy *session_proxy;
-  gboolean ostree_polled;
   gboolean ostree_activated;
 };
 
@@ -1576,7 +1575,6 @@ updates_link_activated (GtkLabel *label,
     case OTD_STATE_READY:
       otd__call_poll (self->priv->ostree_proxy, NULL,
                       updates_poll_completed, self);
-      self->priv->ostree_polled = TRUE;
       break;
     case OTD_STATE_UPDATE_AVAILABLE:
       otd__call_fetch (self->priv->ostree_proxy, NULL,
