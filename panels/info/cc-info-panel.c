@@ -1497,6 +1497,8 @@ get_message_for_otd_state (CcInfoPanel *self,
         return _("No updates available");
       else
         return _("Check for updates now");
+    case OTD_STATE_ERROR:
+      return _("Error checking for updates");
     case OTD_STATE_POLLING:
       return _("Checking for updates…");
     case OTD_STATE_UPDATE_AVAILABLE:
@@ -1633,14 +1635,6 @@ sync_state_from_ostree (CcInfoPanel *self,
   const gchar *message;
   gchar *markup;
 
-  widget = WID ("os_updates_box");
-  if (state == OTD_STATE_ERROR)
-    {
-      gtk_widget_set_visible (widget, FALSE);
-      return;
-    }
-
-  gtk_widget_set_visible (widget, TRUE);
   state_spinning = is_otd_state_spinning (self, state);
   state_interactive = is_otd_state_interactive (self, state);
   message = get_message_for_otd_state (self, state);
