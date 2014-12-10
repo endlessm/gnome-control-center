@@ -70,7 +70,7 @@ cc_sound_panel_set_property (GObject      *object,
 static const char *
 cc_sound_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/media#sound";
+  return "help:gnome-help/hardware#sound";
 }
 
 static void

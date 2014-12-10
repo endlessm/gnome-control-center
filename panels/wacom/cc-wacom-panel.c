@@ -424,12 +424,6 @@ cc_wacom_panel_constructed (GObject *object)
 				 G_CALLBACK (on_shell_event_cb), self, 0);
 }
 
-static const char *
-cc_wacom_panel_get_help_uri (CcPanel *panel)
-{
-  return "help:gnome-help/wacom";
-}
-
 static GtkWidget *
 cc_wacom_panel_get_title_widget (CcPanel *panel)
 {
@@ -451,7 +445,6 @@ cc_wacom_panel_class_init (CcWacomPanelClass *klass)
 	object_class->dispose = cc_wacom_panel_dispose;
 	object_class->constructed = cc_wacom_panel_constructed;
 
-	panel_class->get_help_uri = cc_wacom_panel_get_help_uri;
 	panel_class->get_title_widget = cc_wacom_panel_get_title_widget;
 
 	g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
