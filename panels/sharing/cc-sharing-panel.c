@@ -178,7 +178,7 @@ cc_sharing_panel_dispose (GObject *object)
 static const char *
 cc_sharing_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/settings-sharing";
+  return "help:gnome-help/sharing-bluetooth";
 }
 
 static void
