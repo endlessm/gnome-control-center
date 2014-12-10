@@ -179,7 +179,7 @@ cc_region_panel_finalize (GObject *object)
 static const char *
 cc_region_panel_get_help_uri (CcPanel *panel)
 {
-        return "help:gnome-help/prefs-language";
+        return "help:gnome-help/session-language";
 }
 
 static void

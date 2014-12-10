@@ -159,12 +159,6 @@ cc_power_panel_dispose (GObject *object)
   G_OBJECT_CLASS (cc_power_panel_parent_class)->dispose (object);
 }
 
-static const char *
-cc_power_panel_get_help_uri (CcPanel *panel)
-{
-  return "help:gnome-help/power";
-}
-
 static void
 cc_power_panel_class_init (CcPowerPanelClass *klass)
 {
@@ -174,8 +168,6 @@ cc_power_panel_class_init (CcPowerPanelClass *klass)
   g_type_class_add_private (klass, sizeof (CcPowerPanelPrivate));
 
   object_class->dispose = cc_power_panel_dispose;
-
-  panel_class->get_help_uri = cc_power_panel_get_help_uri;
 }
 
 static GtkWidget *
