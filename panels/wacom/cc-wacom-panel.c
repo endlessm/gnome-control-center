@@ -229,25 +229,16 @@ cc_wacom_panel_dispose (GObject *object)
 	G_OBJECT_CLASS (cc_wacom_panel_parent_class)->dispose (object);
 }
 
-static const char *
-cc_wacom_panel_get_help_uri (CcPanel *panel)
-{
-  return "help:gnome-help/wacom";
-}
-
 static void
 cc_wacom_panel_class_init (CcWacomPanelClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	CcPanelClass *panel_class = CC_PANEL_CLASS (klass);
 
 	g_type_class_add_private (klass, sizeof (CcWacomPanelPrivate));
 
 	object_class->get_property = cc_wacom_panel_get_property;
 	object_class->set_property = cc_wacom_panel_set_property;
 	object_class->dispose = cc_wacom_panel_dispose;
-
-	panel_class->get_help_uri = cc_wacom_panel_get_help_uri;
 
 	g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
 }
