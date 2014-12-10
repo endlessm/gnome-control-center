@@ -155,7 +155,7 @@ cc_date_time_panel_get_permission (CcPanel *panel)
 static const char *
 cc_date_time_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/clock";
+  return "help:gnome-help/shell-overview#time";
 }
 
 static void
