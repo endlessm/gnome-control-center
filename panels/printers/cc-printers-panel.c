@@ -249,7 +249,7 @@ cc_printers_panel_get_permission (CcPanel *panel)
 static const char *
 cc_printers_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/printing";
+  return "help:gnome-help/hardware#printers";
 }
 
 static void
