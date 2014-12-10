@@ -267,7 +267,7 @@ cc_display_panel_dispose (GObject *object)
 static const char *
 cc_display_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/prefs-display";
+  return "help:gnome-help/hardware#displays";
 }
 
 static void

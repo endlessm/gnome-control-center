@@ -1276,7 +1276,7 @@ cc_privacy_panel_finalize (GObject *object)
 static const char *
 cc_privacy_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/privacy";
+  return "help:gnome-help/shell-overview#lock";
 }
 
 static void
