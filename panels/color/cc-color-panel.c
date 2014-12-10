@@ -1004,16 +1004,6 @@ out:
 }
 
 static void
-gcm_prefs_calib_export_link_cb (GtkLabel *widget,
-                                const gchar *url,
-                                CcColorPanel *prefs)
-{
-  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (prefs->priv->main_window)),
-                "help:gnome-help/color-howtoimport",
-                GDK_CURRENT_TIME, NULL);
-}
-
-static void
 gcm_prefs_profile_add_cb (GtkWidget *widget, CcColorPanel *prefs)
 {
   GPtrArray *profiles;
@@ -2557,9 +2547,6 @@ cc_color_panel_init (CcColorPanel *prefs)
                     G_CALLBACK (gcm_prefs_calib_upload_cb), prefs);
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "label_calib_summary_message"));
-  g_signal_connect (widget, "activate-link",
-                    G_CALLBACK (gcm_prefs_calib_export_link_cb), prefs);
-
 
   widget = WID (priv->builder, "dialog-vbox1");
   gtk_container_add (GTK_CONTAINER (prefs), widget);
