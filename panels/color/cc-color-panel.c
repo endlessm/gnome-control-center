@@ -1000,16 +1000,6 @@ out:
 }
 
 static void
-gcm_prefs_calib_export_link_cb (GtkLabel *widget,
-                                const gchar *url,
-                                CcColorPanel *prefs)
-{
-  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (prefs->priv->main_window)),
-                "help:gnome-help/color-howtoimport",
-                GDK_CURRENT_TIME, NULL);
-}
-
-static void
 gcm_prefs_profile_add_cb (GtkWidget *widget, CcColorPanel *prefs)
 {
   GPtrArray *profiles;
@@ -2050,12 +2040,6 @@ gcm_prefs_window_realize_cb (GtkWidget *widget, CcColorPanel *prefs)
   prefs->priv->main_window = gtk_widget_get_toplevel (widget);
 }
 
-static const char *
-cc_color_panel_get_help_uri (CcPanel *panel)
-{
-  return "help:gnome-help/color";
-}
-
 static void
 cc_color_panel_get_property (GObject    *object,
                               guint       property_id,
@@ -2141,8 +2125,6 @@ cc_color_panel_class_init (CcColorPanelClass *klass)
   CcPanelClass *panel_class = CC_PANEL_CLASS (klass);
 
   g_type_class_add_private (klass, sizeof (CcColorPanelPrivate));
-
-  panel_class->get_help_uri = cc_color_panel_get_help_uri;
 
   object_class->get_property = cc_color_panel_get_property;
   object_class->set_property = cc_color_panel_set_property;
@@ -2541,9 +2523,6 @@ cc_color_panel_init (CcColorPanel *prefs)
                     G_CALLBACK (gcm_prefs_calib_upload_cb), prefs);
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "label_calib_summary_message"));
-  g_signal_connect (widget, "activate-link",
-                    G_CALLBACK (gcm_prefs_calib_export_link_cb), prefs);
-
 
   widget = WID (priv->builder, "dialog-vbox1");
   gtk_container_add (GTK_CONTAINER (prefs), widget);
