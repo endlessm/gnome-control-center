@@ -235,7 +235,6 @@ static void
 cc_wacom_panel_class_init (CcWacomPanelClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	CcPanelClass *panel_class = CC_PANEL_CLASS (klass);
 
 	g_type_class_add_private (klass, sizeof (CcWacomPanelPrivate));
 
