@@ -2122,7 +2122,6 @@ static void
 cc_color_panel_class_init (CcColorPanelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
-  CcPanelClass *panel_class = CC_PANEL_CLASS (klass);
 
   g_type_class_add_private (klass, sizeof (CcColorPanelPrivate));
 
