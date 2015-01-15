@@ -129,6 +129,8 @@ struct _CcRegionPanelPrivate {
 #endif
 };
 
+static void add_input (CcRegionPanel *self);
+
 static void
 cc_region_panel_finalize (GObject *object)
 {
@@ -515,6 +517,8 @@ activate_language_row (CcRegionPanel *self,
                 }
         } else if (row == priv->formats_row) {
                 show_format_chooser (self);
+        } else if (row == priv->layouts_row) {
+                add_input (self);
         }
 }
 
@@ -543,6 +547,39 @@ update_region_from_setting (CcRegionPanel *self)
         g_free (priv->region);
         priv->region = g_settings_get_string (priv->locale_settings, KEY_REGION);
         update_region_label (self);
+}
+
+
+static void
+update_layouts_label (CcRegionPanel *self)
+{
+        CcRegionPanelPrivate *priv = self->priv;
+        GVariant *sources;
+        guint current;
+        const gchar *type;
+        const gchar *id;
+        gchar *display_name = NULL;
+
+        sources = g_settings_get_value (priv->input_settings, KEY_INPUT_SOURCES);
+        current = g_settings_get_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE);
+        g_variant_get_child (sources, current, "(&s&s)", &type, &id);
+        if (g_str_equal (type, INPUT_SOURCE_TYPE_XKB)) {
+                const gchar *name = NULL;
+                gnome_xkb_info_get_layout_info (priv->xkb_info, id, &name, NULL, NULL, NULL);
+                if (name)
+                        display_name = g_strdup (name);
+#ifdef HAVE_IBUS
+        } else if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
+                IBusEngineDesc *engine_desc = NULL;
+                if (priv->ibus_engines)
+                        engine_desc = g_hash_table_lookup (priv->ibus_engines, id);
+                if (engine_desc)
+                        display_name = engine_get_display_name (engine_desc);
+        }
+#endif
+
+        gtk_label_set_label (GTK_LABEL (priv->layouts_label), display_name);
+        g_free (display_name);
 }
 
 static void
@@ -1134,9 +1171,10 @@ input_response (GtkWidget *chooser, gint response_id, gpointer data)
                         if (priv->login && g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
                                 apologize_for_no_ibus_login (self);
                         } else {
+                                clear_input_sources (self);
                                 add_input_row (self, type, id, name, app_info);
-                                update_buttons (self);
                                 update_input (self);
+                                update_buttons (self);
                         }
                         g_free (id);
                         g_free (name);
