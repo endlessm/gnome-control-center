@@ -53,7 +53,7 @@ typedef enum {
 
 typedef struct {
   /* Not owned */
-  GtkWidget *add_button;
+  GtkWidget *select_button;
   GtkWidget *filter_entry;
   GtkWidget *list;
   GtkWidget *scrolledwindow;
@@ -771,7 +771,7 @@ row_selected (GtkListBox *box,
 {
   CcInputChooserPrivate *priv = GET_PRIVATE (chooser);
 
-  gtk_widget_set_sensitive (priv->add_button, row != NULL);
+  gtk_widget_set_sensitive (priv->select_button, row != NULL);
 }
 
 static void
@@ -1133,7 +1133,7 @@ cc_input_chooser_new (GtkWindow    *main_window,
   priv->xkb_info = xkb_info;
   priv->ibus_engines = ibus_engines;
 
-  priv->add_button = WID ("add-button");
+  priv->select_button = WID ("apply-button");
   priv->filter_entry = WID ("filter-entry");
   priv->list = WID ("list");
   priv->scrolledwindow = WID ("scrolledwindow");
