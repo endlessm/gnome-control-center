@@ -244,6 +244,7 @@ get_graphics_data_glx_renderer ()
 
   glXMakeContextCurrent (display, glxwin, glxwin, context);
   renderer = (char *) glGetString (GL_RENDERER);
+  g_debug ("Got GL_RENDERER: '%s'", renderer);
   renderer = renderer ? prettify_info (renderer) : NULL;
 
   glXMakeContextCurrent (display, None, None, NULL);
