@@ -98,6 +98,8 @@ struct _CcRegionPanelPrivate {
         GtkWidget     *language_label;
         GtkListBoxRow *formats_row;
         GtkWidget     *formats_label;
+        GtkListBoxRow *layouts_row;
+        GtkWidget     *layouts_label;
 
         ActUserManager *user_manager;
         ActUser        *user;
@@ -602,6 +604,8 @@ setup_language_section (CcRegionPanel *self)
         priv->language_label = WID ("language_label");
         priv->formats_row = GTK_LIST_BOX_ROW (WID ("formats_row"));
         priv->formats_label = WID ("formats_label");
+        priv->layouts_row = GTK_LIST_BOX_ROW (WID ("layouts_row"));
+        priv->layouts_label = WID ("layouts_label");
 
         widget = WID ("language_list");
         gtk_list_box_set_selection_mode (GTK_LIST_BOX (widget),
