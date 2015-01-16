@@ -107,8 +107,14 @@ struct _CcRegionPanelPrivate {
 
         gchar *language;
         gchar *region;
+        gchar *layout_type;
+        gchar *layout_id;
+        gchar *layout_name;
         gchar *system_language;
         gchar *system_region;
+        gchar *system_layout_type;
+        gchar *system_layout_id;
+        gchar *system_layout_name;
 
         GtkWidget *input_section;
         GtkWidget *options_button;
@@ -166,8 +172,12 @@ cc_region_panel_finalize (GObject *object)
 #endif
         g_free (priv->language);
         g_free (priv->region);
+        g_free (priv->layout_id);
+        g_free (priv->layout_name);
         g_free (priv->system_language);
         g_free (priv->system_region);
+        g_free (priv->system_layout_id);
+        g_free (priv->system_layout_name);
 
 	G_OBJECT_CLASS (cc_region_panel_parent_class)->finalize (object);
 }
@@ -554,32 +564,9 @@ static void
 update_layouts_label (CcRegionPanel *self)
 {
         CcRegionPanelPrivate *priv = self->priv;
-        GVariant *sources;
-        guint current;
-        const gchar *type;
-        const gchar *id;
-        gchar *display_name = NULL;
 
-        sources = g_settings_get_value (priv->input_settings, KEY_INPUT_SOURCES);
-        current = g_settings_get_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE);
-        g_variant_get_child (sources, current, "(&s&s)", &type, &id);
-        if (g_str_equal (type, INPUT_SOURCE_TYPE_XKB)) {
-                const gchar *name = NULL;
-                gnome_xkb_info_get_layout_info (priv->xkb_info, id, &name, NULL, NULL, NULL);
-                if (name)
-                        display_name = g_strdup (name);
-#ifdef HAVE_IBUS
-        } else if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
-                IBusEngineDesc *engine_desc = NULL;
-                if (priv->ibus_engines)
-                        engine_desc = g_hash_table_lookup (priv->ibus_engines, id);
-                if (engine_desc)
-                        display_name = engine_get_display_name (engine_desc);
-        }
-#endif
-
-        gtk_label_set_label (GTK_LABEL (priv->layouts_label), display_name);
-        g_free (display_name);
+        gtk_label_set_label (GTK_LABEL (priv->layouts_label),
+                             priv->login? priv->system_layout_name : priv->layout_name);
 }
 
 static void
@@ -988,19 +975,39 @@ input_sources_changed (GSettings     *settings,
                        const gchar   *key,
                        CcRegionPanel *self)
 {
-	CcRegionPanelPrivate *priv = self->priv;
-        GtkListBoxRow *selected;
-        gchar *id = NULL;
+        CcRegionPanelPrivate *priv = self->priv;
+        GVariant *sources;
+        guint current;
+        gchar *id;
 
-        selected = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->input_list));
-        if (selected)
-                id = g_strdup (g_object_get_data (G_OBJECT (selected), "id"));
-        clear_input_sources (self);
-        add_input_sources_from_settings (self);
-        if (id) {
-                select_input (self, id);
-                g_free (id);
+        sources = g_settings_get_value (priv->input_settings, KEY_INPUT_SOURCES);
+        current = g_settings_get_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE);
+        g_free (priv->layout_id);
+        g_free (priv->layout_name);
+        g_variant_get_child (sources, current, "(&s&s)", &priv->layout_type, &id);
+        priv->layout_id = g_strdup (id);
+        if (g_str_equal (priv->layout_type, INPUT_SOURCE_TYPE_XKB)) {
+                const gchar *name = NULL;
+                gnome_xkb_info_get_layout_info (priv->xkb_info, priv->layout_id, &name, NULL, NULL, NULL);
+                if (name)
+                        priv->layout_name = g_strdup (name);
+                else
+                        priv->layout_name = g_strdup ("");
+#ifdef HAVE_IBUS
+        } else if (g_str_equal (priv->layout_type, INPUT_SOURCE_TYPE_IBUS)) {
+                IBusEngineDesc *engine_desc = NULL;
+                if (priv->ibus_engines)
+                  engine_desc = g_hash_table_lookup (priv->ibus_engines, priv->layout_id);
+                if (engine_desc)
+                        priv->layout_name = engine_get_display_name (engine_desc);
+                else
+                        priv->layout_name = g_strdup ("");
+#endif
+        } else {
+                priv->layout_name = g_strdup ("");
         }
+
+        update_layouts_label (self);
 }
 
 
@@ -1039,49 +1046,13 @@ static void
 set_input_settings (CcRegionPanel *self)
 {
 	CcRegionPanelPrivate *priv = self->priv;
-        const gchar *type;
-        const gchar *id;
         GVariantBuilder builder;
-        GVariant *old_sources;
-        const gchar *old_current_type;
-        const gchar *old_current_id;
-        guint old_current;
-        guint old_n_sources;
-        guint index;
-        GList *list, *l;
-
-        old_sources = g_settings_get_value (priv->input_settings, KEY_INPUT_SOURCES);
-        old_current = g_settings_get_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE);
-        old_n_sources = g_variant_n_children (old_sources);
-
-        if (old_n_sources > 0 && old_current < old_n_sources) {
-                g_variant_get_child (old_sources, old_current,
-                                     "(&s&s)", &old_current_type, &old_current_id);
-        } else {
-                old_current_type = "";
-                old_current_id = "";
-        }
 
         g_variant_builder_init (&builder, G_VARIANT_TYPE ("a(ss)"));
-        index = 0;
-        list = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (l = list; l; l = l->next) {
-                type = (const gchar *)g_object_get_data (G_OBJECT (l->data), "type");
-                id = (const gchar *)g_object_get_data (G_OBJECT (l->data), "id");
-                if (index != old_current &&
-                    g_str_equal (type, old_current_type) &&
-                    g_str_equal (id, old_current_id)) {
-                        g_settings_set_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE, index);
-                }
-                g_variant_builder_add (&builder, "(ss)", type, id);
-                index += 1;
-        }
-        g_list_free (list);
-
+        g_variant_builder_add (&builder, "(ss)", priv->layout_type, priv->layout_id);
         g_settings_set_value (priv->input_settings, KEY_INPUT_SOURCES, g_variant_builder_end (&builder));
+        g_settings_set_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE, 0);
         g_settings_apply (priv->input_settings);
-
-        g_variant_unref (old_sources);
 }
 
 static void set_localed_input (CcRegionPanel *self);
@@ -1170,7 +1141,18 @@ input_response (GtkWidget *chooser, gint response_id, gpointer data)
 
                         if (priv->login && g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
                                 apologize_for_no_ibus_login (self);
+                                priv->system_layout_type = INPUT_SOURCE_TYPE_IBUS;
                         } else {
+                                if (priv->login) {
+                                        priv->system_layout_type = type;
+                                        priv->system_layout_id = g_strdup (id);
+                                        priv->system_layout_name = g_strdup (name);
+                                } else {
+                                        priv->layout_type = type;
+                                        priv->layout_id = g_strdup (id);
+                                        priv->layout_name = g_strdup (name);
+                                }
+
                                 clear_input_sources (self);
                                 add_input_row (self, type, id, name, app_info);
                                 update_input (self);
@@ -1463,7 +1445,7 @@ setup_input_section (CcRegionPanel *self)
         g_signal_connect (priv->input_settings, "changed::" KEY_INPUT_SOURCES,
                           G_CALLBACK (input_sources_changed), self);
 
-        add_input_sources_from_settings (self);
+        input_sources_changed (priv->input_settings, KEY_INPUT_SOURCES, self);
         update_buttons (self);
 }
 
@@ -1475,6 +1457,9 @@ on_localed_properties_changed (GDBusProxy     *proxy,
 {
 	CcRegionPanelPrivate *priv = self->priv;
         GVariant *v;
+        const gchar *s;
+        gchar **layouts = NULL;
+        gchar **variants = NULL;
 
         v = g_dbus_proxy_get_cached_property (proxy, "Locale");
         if (v) {
@@ -1512,6 +1497,46 @@ on_localed_properties_changed (GDBusProxy     *proxy,
 
                 update_language_label (self);
         }
+
+        v = g_dbus_proxy_get_cached_property (priv->localed, "X11Layout");
+        if (v) {
+                s = g_variant_get_string (v, NULL);
+                layouts = g_strsplit (s, ",", -1);
+                g_variant_unref (v);
+        }
+
+        v = g_dbus_proxy_get_cached_property (priv->localed, "X11Variant");
+        if (v) {
+                s = g_variant_get_string (v, NULL);
+                if (s && *s)
+                        variants = g_strsplit (s, ",", -1);
+                g_variant_unref (v);
+        }
+
+        g_free (priv->system_layout_id);
+        g_free (priv->system_layout_name);
+        if (layouts && layouts[0] && layouts[0][0]) {
+          const gchar *name;
+          gchar *id;
+          if (variants && variants[0] && variants[0][0])
+            id = g_strdup_printf("%s+%s", layouts[0], variants[0]);
+          else
+            id = g_strdup (layouts[0]);
+
+          gnome_xkb_info_get_layout_info (priv->xkb_info, id, &name, NULL, NULL, NULL);
+          priv->system_layout_type = INPUT_SOURCE_TYPE_XKB;
+          priv->system_layout_id = id;
+          priv->system_layout_name = name ? g_strdup (name) : g_strdup (id);
+        } else {
+          priv->system_layout_type = "none";
+          priv->system_layout_id = g_strdup ("none");
+          priv->system_layout_name = g_strdup (_("No input source selected"));
+        }
+
+        g_strfreev (variants);
+        g_strfreev (layouts);
+
+        update_layouts_label (self);
 }
 
 static void
@@ -1615,30 +1640,17 @@ set_localed_input (CcRegionPanel *self)
 	CcRegionPanelPrivate *priv = self->priv;
         GString *layouts;
         GString *variants;
-        const gchar *type, *id;
-        GList *list, *li;
         const gchar *l, *v;
 
         layouts = g_string_new ("");
         variants = g_string_new ("");
 
-        list = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (li = list; li; li = li->next) {
-                type = (const gchar *)g_object_get_data (G_OBJECT (li->data), "type");
-                id = (const gchar *)g_object_get_data (G_OBJECT (li->data), "id");
-                if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS))
-                        continue;
-
-                if (gnome_xkb_info_get_layout_info (priv->xkb_info, id, NULL, NULL, &l, &v)) {
-                        if (layouts->str[0]) {
-                                g_string_append_c (layouts, ',');
-                                g_string_append_c (variants, ',');
-                        }
-                        g_string_append (layouts, l);
-                        g_string_append (variants, v);
-                }
+        if (!g_str_equal (priv->system_layout_type, INPUT_SOURCE_TYPE_IBUS)) {
+          if (gnome_xkb_info_get_layout_info (priv->xkb_info, priv->system_layout_id, NULL, NULL, &l, &v)) {
+            g_string_append (layouts, l);
+            g_string_append (variants, v);
+          }
         }
-        g_list_free (list);
 
         g_dbus_proxy_call (priv->localed,
                            "SetX11Keyboard",
