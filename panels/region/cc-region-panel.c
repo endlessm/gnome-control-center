@@ -67,8 +67,7 @@ CC_PANEL_REGISTER (CcRegionPanel, cc_region_panel)
 
 typedef enum {
         CHOOSE_LANGUAGE,
-        ADD_INPUT,
-        REMOVE_INPUT
+        SET_INPUT
 } SystemOp;
 
 struct _CcRegionPanelPrivate {
@@ -123,7 +122,7 @@ struct _CcRegionPanelPrivate {
 #endif
 };
 
-static void add_input (CcRegionPanel *self);
+static void set_input (CcRegionPanel *self);
 
 static void
 cc_region_panel_finalize (GObject *object)
@@ -466,7 +465,7 @@ permission_acquired (GObject      *source,
                 case CHOOSE_LANGUAGE:
                         show_language_chooser (self, priv->system_language);
                         break;
-                case ADD_INPUT:
+                case SET_INPUT:
                         show_input_chooser (self);
                         break;
                 default:
@@ -512,7 +511,7 @@ activate_language_row (CcRegionPanel *self,
         } else if (row == priv->formats_row) {
                 show_format_chooser (self);
         } else if (row == priv->layouts_row) {
-                add_input (self);
+                set_input (self);
         }
 }
 
@@ -873,7 +872,7 @@ show_input_chooser (CcRegionPanel *self)
 }
 
 static void
-add_input (CcRegionPanel *self)
+set_input (CcRegionPanel *self)
 {
 	CcRegionPanelPrivate *priv = self->priv;
 
@@ -882,7 +881,7 @@ add_input (CcRegionPanel *self)
         } else if (g_permission_get_allowed (priv->permission)) {
                 show_input_chooser (self);
         } else if (g_permission_get_can_acquire (priv->permission)) {
-                priv->op = ADD_INPUT;
+                priv->op = SET_INPUT;
                 g_permission_acquire_async (priv->permission,
                                             NULL,
                                             permission_acquired,
