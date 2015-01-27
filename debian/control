@@ -134,3 +134,12 @@ Breaks: gdm (<< 3.0),
 Description: configuration applets for GNOME - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the gnome-control-center package.
+
+Package: gnome-control-center-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: ${misc:Depends},
+         gnome-control-center (= ${binary:Version})
+Description: utilities to configure the GNOME desktop - debugging symbols
+ This package contains the debugging symbols for gnome-control-center.
