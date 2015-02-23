@@ -2223,7 +2223,9 @@ cc_power_panel_init (CcPowerPanel *self)
   add_battery_section (self);
   add_device_section (self);
   add_power_saving_section (self);
-  add_automatic_suspend_section (self);
+
+  // XXX: Removed from UI until product design dictates otherwise
+  // add_automatic_suspend_section (self);
 
   priv->boxes = g_list_copy (priv->boxes_reverse);
   priv->boxes = g_list_reverse (priv->boxes);
