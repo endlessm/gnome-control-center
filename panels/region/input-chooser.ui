@@ -2,7 +2,7 @@
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
   <object class="GtkDialog" id="input-dialog">
-    <property name="title" translatable="yes">Add a Keyboard Layout</property>
+    <property name="title" translatable="yes">Select a Keyboard Layout</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
     <property name="destroy_with_parent">True</property>
@@ -61,10 +61,10 @@
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="add-button">
+              <object class="GtkButton" id="apply-button">
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
-                <property name="label">gtk-add</property>
+                <property name="label">gtk-apply</property>
                 <property name="use_stock">True</property>
                 <property name="use_underline" >True</property>
               </object>
@@ -74,7 +74,7 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-5">add-button</action-widget>
+      <action-widget response="-5">apply-button</action-widget>
       <action-widget response="-6">cancel-button</action-widget>
     </action-widgets>
   </object>

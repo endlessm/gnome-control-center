@@ -59,8 +59,6 @@
 #define INPUT_SOURCE_TYPE_XKB "xkb"
 #define INPUT_SOURCE_TYPE_IBUS "ibus"
 
-#define MAX_INPUT_ROWS_VISIBLE 5
-
 CC_PANEL_REGISTER (CcRegionPanel, cc_region_panel)
 
 #define WID(s) GTK_WIDGET (gtk_builder_get_object (self->priv->builder, s))
@@ -69,8 +67,7 @@ CC_PANEL_REGISTER (CcRegionPanel, cc_region_panel)
 
 typedef enum {
         CHOOSE_LANGUAGE,
-        ADD_INPUT,
-        REMOVE_INPUT
+        SET_INPUT
 } SystemOp;
 
 struct _CcRegionPanelPrivate {
@@ -98,6 +95,8 @@ struct _CcRegionPanelPrivate {
         GtkWidget     *language_label;
         GtkListBoxRow *formats_row;
         GtkWidget     *formats_label;
+        GtkListBoxRow *layouts_row;
+        GtkWidget     *layouts_label;
 
         ActUserManager *user_manager;
         ActUser        *user;
@@ -105,18 +104,14 @@ struct _CcRegionPanelPrivate {
 
         gchar *language;
         gchar *region;
+        gchar *layout_type;
+        gchar *layout_id;
+        gchar *layout_name;
         gchar *system_language;
         gchar *system_region;
-
-        GtkWidget *input_section;
-        GtkWidget *options_button;
-        GtkWidget *input_list;
-        GtkWidget *add_input;
-        GtkWidget *remove_input;
-        GtkWidget *show_config;
-        GtkWidget *show_layout;
-        GtkWidget *input_scrolledwindow;
-        guint n_input_rows;
+        gchar *system_layout_type;
+        gchar *system_layout_id;
+        gchar *system_layout_name;
 
         GSettings *input_settings;
         GnomeXkbInfo *xkb_info;
@@ -126,6 +121,8 @@ struct _CcRegionPanelPrivate {
         GCancellable *ibus_cancellable;
 #endif
 };
+
+static void set_input (CcRegionPanel *self);
 
 static void
 cc_region_panel_finalize (GObject *object)
@@ -162,8 +159,12 @@ cc_region_panel_finalize (GObject *object)
 #endif
         g_free (priv->language);
         g_free (priv->region);
+        g_free (priv->layout_id);
+        g_free (priv->layout_name);
         g_free (priv->system_language);
         g_free (priv->system_region);
+        g_free (priv->system_layout_id);
+        g_free (priv->system_layout_name);
 
 	G_OBJECT_CLASS (cc_region_panel_parent_class)->finalize (object);
 }
@@ -440,7 +441,6 @@ show_language_chooser (CcRegionPanel *self,
 }
 
 static void show_input_chooser (CcRegionPanel *self);
-static void remove_selected_input (CcRegionPanel *self);
 
 static void
 permission_acquired (GObject      *source,
@@ -465,11 +465,8 @@ permission_acquired (GObject      *source,
                 case CHOOSE_LANGUAGE:
                         show_language_chooser (self, priv->system_language);
                         break;
-                case ADD_INPUT:
+                case SET_INPUT:
                         show_input_chooser (self);
-                        break;
-                case REMOVE_INPUT:
-                        remove_selected_input (self);
                         break;
                 default:
                         g_warning ("Unknown privileged operation: %d\n", priv->op);
@@ -513,6 +510,8 @@ activate_language_row (CcRegionPanel *self,
                 }
         } else if (row == priv->formats_row) {
                 show_format_chooser (self);
+        } else if (row == priv->layouts_row) {
+                set_input (self);
         }
 }
 
@@ -541,6 +540,16 @@ update_region_from_setting (CcRegionPanel *self)
         g_free (priv->region);
         priv->region = g_settings_get_string (priv->locale_settings, KEY_REGION);
         update_region_label (self);
+}
+
+
+static void
+update_layouts_label (CcRegionPanel *self)
+{
+        CcRegionPanelPrivate *priv = self->priv;
+
+        gtk_label_set_label (GTK_LABEL (priv->layouts_label),
+                             priv->login? priv->system_layout_name : priv->layout_name);
 }
 
 static void
@@ -602,6 +611,8 @@ setup_language_section (CcRegionPanel *self)
         priv->language_label = WID ("language_label");
         priv->formats_row = GTK_LIST_BOX_ROW (WID ("formats_row"));
         priv->formats_label = WID ("formats_label");
+        priv->layouts_row = GTK_LIST_BOX_ROW (WID ("layouts_row"));
+        priv->layouts_label = WID ("layouts_label");
 
         widget = WID ("language_list");
         gtk_list_box_set_selection_mode (GTK_LIST_BOX (widget),
@@ -617,37 +628,6 @@ setup_language_section (CcRegionPanel *self)
 }
 
 #ifdef HAVE_IBUS
-static void
-update_ibus_active_sources (CcRegionPanel *self)
-{
-        CcRegionPanelPrivate *priv = self->priv;
-        GList *rows, *l;
-        GtkWidget *row;
-        const gchar *type;
-        const gchar *id;
-        IBusEngineDesc *engine_desc;
-        gchar *display_name;
-        GtkWidget *label;
-
-        rows = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (l = rows; l; l = l->next) {
-                row = l->data;
-                type = g_object_get_data (G_OBJECT (row), "type");
-                id = g_object_get_data (G_OBJECT (row), "id");
-                if (g_strcmp0 (type, INPUT_SOURCE_TYPE_IBUS) != 0)
-                        continue;
-
-                engine_desc = g_hash_table_lookup (priv->ibus_engines, id);
-                if (engine_desc) {
-                        display_name = engine_get_display_name (engine_desc);
-                        label = GTK_WIDGET (g_object_get_data (G_OBJECT (row), "label"));
-                        gtk_label_set_text (GTK_LABEL (label), display_name);
-                        g_free (display_name);
-                }
-        }
-        g_list_free (rows);
-}
-
 static void
 update_input_chooser (CcRegionPanel *self)
 {
@@ -693,7 +673,6 @@ fetch_ibus_engines_result (GObject       *object,
         }
         g_list_free (list);
 
-        update_ibus_active_sources (self);
         update_input_chooser (self);
 }
 
@@ -729,318 +708,59 @@ maybe_start_ibus (void)
                                               NULL,
                                               NULL));
 }
-
-static GDesktopAppInfo *
-setup_app_info_for_id (const gchar *id)
-{
-  GDesktopAppInfo *app_info;
-  gchar *desktop_file_name;
-  gchar **strv;
-
-  strv = g_strsplit (id, ":", 2);
-  desktop_file_name = g_strdup_printf ("ibus-setup-%s.desktop", strv[0]);
-  g_strfreev (strv);
-
-  app_info = g_desktop_app_info_new (desktop_file_name);
-  g_free (desktop_file_name);
-
-  return app_info;
-}
 #endif
-
-static void
-adjust_input_list_scrolling (CcRegionPanel *self)
-{
-        CcRegionPanelPrivate *priv = self->priv;
-
-        if (priv->n_input_rows >= MAX_INPUT_ROWS_VISIBLE) {
-                GtkWidget *parent;
-                gint height;
-
-                parent = gtk_widget_get_parent (priv->input_scrolledwindow);
-                gtk_widget_get_preferred_height (parent, NULL, &height);
-                gtk_widget_set_size_request (parent, -1, height);
-
-                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->input_scrolledwindow),
-                                                GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-        } else {
-                gtk_widget_set_size_request (gtk_widget_get_parent (priv->input_scrolledwindow), -1, -1);
-                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->input_scrolledwindow),
-                                                GTK_POLICY_NEVER, GTK_POLICY_NEVER);
-        }
-}
-
-static void
-remove_no_input_row (GtkContainer *list)
-{
-        GList *l;
-
-        l = gtk_container_get_children (list);
-        if (!l)
-                return;
-        if (l->next != NULL)
-                goto out;
-        if (g_strcmp0 (g_object_get_data (G_OBJECT (l->data), "type"), "none") == 0)
-                gtk_container_remove (list, GTK_WIDGET (l->data));
-out:
-        g_list_free (l);
-}
-
-static GtkWidget *
-add_input_row (CcRegionPanel   *self,
-               const gchar     *type,
-               const gchar     *id,
-               const gchar     *name,
-               GDesktopAppInfo *app_info)
-{
-        CcRegionPanelPrivate *priv = self->priv;
-        GtkWidget *row;
-        GtkWidget *box;
-        GtkWidget *label;
-        GtkWidget *image;
-
-        remove_no_input_row (GTK_CONTAINER (priv->input_list));
-
-        row = gtk_list_box_row_new ();
-        box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-        gtk_container_add (GTK_CONTAINER (row), box);
-        label = gtk_label_new (name);
-        gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
-        gtk_widget_set_margin_left (label, 20);
-        gtk_widget_set_margin_right (label, 20);
-        gtk_widget_set_margin_top (label, 6);
-        gtk_widget_set_margin_bottom (label, 6);
-        gtk_box_pack_start (GTK_BOX (box), label, TRUE, TRUE, 0);
-
-        if (strcmp (type, INPUT_SOURCE_TYPE_IBUS) == 0) {
-                image = gtk_image_new_from_icon_name ("system-run-symbolic", GTK_ICON_SIZE_BUTTON);
-                gtk_widget_set_margin_left (image, 20);
-                gtk_widget_set_margin_right (image, 20);
-                gtk_widget_set_margin_top (image, 6);
-                gtk_widget_set_margin_bottom (image, 6);
-                gtk_style_context_add_class (gtk_widget_get_style_context (image), "dim-label");
-                gtk_box_pack_start (GTK_BOX (box), image, FALSE, TRUE, 0);
-        }
-
-        gtk_widget_show_all (row);
-        gtk_container_add (GTK_CONTAINER (self->priv->input_list), row);
-
-        g_object_set_data (G_OBJECT (row), "label", label);
-        g_object_set_data (G_OBJECT (row), "type", (gpointer)type);
-        g_object_set_data_full (G_OBJECT (row), "id", g_strdup (id), g_free);
-        if (app_info) {
-                g_object_set_data_full (G_OBJECT (row), "app-info", g_object_ref (app_info), g_object_unref);
-        }
-
-        priv->n_input_rows += 1;
-        adjust_input_list_scrolling (self);
-
-        return row;
-}
-
-static void
-add_no_input_row (CcRegionPanel *self)
-{
-        add_input_row (self, "none", "none", _("No input source selected"), NULL);
-}
-
-static void
-add_input_sources (CcRegionPanel *self,
-                   GVariant      *sources)
-{
-        CcRegionPanelPrivate *priv = self->priv;
-        GVariantIter iter;
-        const gchar *type;
-        const gchar *id;
-        const gchar *name;
-        gchar *display_name;
-        GDesktopAppInfo *app_info;
-
-        if (g_variant_n_children (sources) < 1) {
-                add_no_input_row (self);
-                return;
-        }
-
-        g_variant_iter_init (&iter, sources);
-        while (g_variant_iter_next (&iter, "(&s&s)", &type, &id)) {
-                display_name = NULL;
-                app_info = NULL;
-
-                if (g_str_equal (type, INPUT_SOURCE_TYPE_XKB)) {
-                        gnome_xkb_info_get_layout_info (priv->xkb_info, id, &name, NULL, NULL, NULL);
-                        if (!name) {
-                                g_warning ("Couldn't find XKB input source '%s'", id);
-                                continue;
-                        }
-                        display_name = g_strdup (name);
-                        type = INPUT_SOURCE_TYPE_XKB;
-#ifdef HAVE_IBUS
-                } else if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
-                        IBusEngineDesc *engine_desc = NULL;
-
-                        if (priv->ibus_engines)
-                                engine_desc = g_hash_table_lookup (priv->ibus_engines, id);
-                        if (engine_desc)
-                                display_name = engine_get_display_name (engine_desc);
-
-                        app_info = setup_app_info_for_id (id);
-                        type = INPUT_SOURCE_TYPE_IBUS;
-#endif
-                } else {
-                        g_warning ("Unhandled input source type '%s'", type);
-                        continue;
-                }
-
-                add_input_row (self, type, id, display_name ? display_name : id, app_info);
-                g_free (display_name);
-                g_clear_object (&app_info);
-        }
-}
-
-static void
-add_input_sources_from_settings (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GVariant *sources;
-        sources = g_settings_get_value (priv->input_settings, "sources");
-        add_input_sources (self, sources);
-        g_variant_unref (sources);
-}
-
-static void
-clear_input_sources (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GList *list, *l;
-        list = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (l = list; l; l = l->next) {
-                gtk_container_remove (GTK_CONTAINER (priv->input_list), GTK_WIDGET (l->data));
-        }
-        g_list_free (list);
-
-        priv->n_input_rows = 0;
-        adjust_input_list_scrolling (self);
-}
-
-static void
-select_by_id (GtkWidget   *row,
-              gpointer     data)
-{
-        const gchar *id = data;
-        const gchar *row_id;
-
-        row_id = (const gchar *)g_object_get_data (G_OBJECT (row), "id");
-        if (g_strcmp0 (row_id, id) == 0)
-                gtk_list_box_select_row (GTK_LIST_BOX (gtk_widget_get_parent (row)), GTK_LIST_BOX_ROW (row));
-}
-
-static void
-select_input (CcRegionPanel *self,
-              const gchar   *id)
-{
-        gtk_container_foreach (GTK_CONTAINER (self->priv->input_list),
-                               select_by_id, (gpointer)id);
-}
 
 static void
 input_sources_changed (GSettings     *settings,
                        const gchar   *key,
                        CcRegionPanel *self)
 {
-	CcRegionPanelPrivate *priv = self->priv;
-        GtkListBoxRow *selected;
-        gchar *id = NULL;
+        CcRegionPanelPrivate *priv = self->priv;
+        GVariant *sources;
+        guint current;
+        gchar *id;
 
-        selected = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->input_list));
-        if (selected)
-                id = g_strdup (g_object_get_data (G_OBJECT (selected), "id"));
-        clear_input_sources (self);
-        add_input_sources_from_settings (self);
-        if (id) {
-                select_input (self, id);
-                g_free (id);
-        }
-}
-
-
-static void
-update_buttons (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GtkListBoxRow *selected;
-        GList *children;
-        gboolean multiple_sources;
-
-        children = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        multiple_sources = g_list_next (children) != NULL;
-        g_list_free (children);
-
-        selected = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->input_list));
-        if (selected == NULL) {
-                gtk_widget_set_visible (priv->show_config, FALSE);
-                gtk_widget_set_sensitive (priv->remove_input, FALSE);
-                gtk_widget_set_sensitive (priv->show_layout, FALSE);
+        sources = g_settings_get_value (priv->input_settings, KEY_INPUT_SOURCES);
+        current = g_settings_get_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE);
+        g_free (priv->layout_id);
+        g_free (priv->layout_name);
+        g_variant_get_child (sources, current, "(&s&s)", &priv->layout_type, &id);
+        priv->layout_id = g_strdup (id);
+        if (g_str_equal (priv->layout_type, INPUT_SOURCE_TYPE_XKB)) {
+                const gchar *name = NULL;
+                gnome_xkb_info_get_layout_info (priv->xkb_info, priv->layout_id, &name, NULL, NULL, NULL);
+                if (name)
+                        priv->layout_name = g_strdup (name);
+                else
+                        priv->layout_name = g_strdup ("");
+#ifdef HAVE_IBUS
+        } else if (g_str_equal (priv->layout_type, INPUT_SOURCE_TYPE_IBUS)) {
+                IBusEngineDesc *engine_desc = NULL;
+                if (priv->ibus_engines)
+                  engine_desc = g_hash_table_lookup (priv->ibus_engines, priv->layout_id);
+                if (engine_desc)
+                        priv->layout_name = engine_get_display_name (engine_desc);
+                else
+                        priv->layout_name = g_strdup ("");
+#endif
         } else {
-                GDesktopAppInfo *app_info;
-
-                app_info = (GDesktopAppInfo *)g_object_get_data (G_OBJECT (selected), "app-info");
-
-                gtk_widget_set_visible (priv->show_config, app_info != NULL);
-                gtk_widget_set_sensitive (priv->show_layout, TRUE);
-                gtk_widget_set_sensitive (priv->remove_input, multiple_sources);
+                priv->layout_name = g_strdup ("");
         }
 
-        gtk_widget_set_visible (priv->options_button,
-                                multiple_sources && !priv->login);
+        update_layouts_label (self);
 }
 
 static void
 set_input_settings (CcRegionPanel *self)
 {
 	CcRegionPanelPrivate *priv = self->priv;
-        const gchar *type;
-        const gchar *id;
         GVariantBuilder builder;
-        GVariant *old_sources;
-        const gchar *old_current_type;
-        const gchar *old_current_id;
-        guint old_current;
-        guint old_n_sources;
-        guint index;
-        GList *list, *l;
-
-        old_sources = g_settings_get_value (priv->input_settings, KEY_INPUT_SOURCES);
-        old_current = g_settings_get_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE);
-        old_n_sources = g_variant_n_children (old_sources);
-
-        if (old_n_sources > 0 && old_current < old_n_sources) {
-                g_variant_get_child (old_sources, old_current,
-                                     "(&s&s)", &old_current_type, &old_current_id);
-        } else {
-                old_current_type = "";
-                old_current_id = "";
-        }
 
         g_variant_builder_init (&builder, G_VARIANT_TYPE ("a(ss)"));
-        index = 0;
-        list = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (l = list; l; l = l->next) {
-                type = (const gchar *)g_object_get_data (G_OBJECT (l->data), "type");
-                id = (const gchar *)g_object_get_data (G_OBJECT (l->data), "id");
-                if (index != old_current &&
-                    g_str_equal (type, old_current_type) &&
-                    g_str_equal (id, old_current_id)) {
-                        g_settings_set_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE, index);
-                }
-                g_variant_builder_add (&builder, "(ss)", type, id);
-                index += 1;
-        }
-        g_list_free (list);
-
+        g_variant_builder_add (&builder, "(ss)", priv->layout_type, priv->layout_id);
         g_settings_set_value (priv->input_settings, KEY_INPUT_SOURCES, g_variant_builder_end (&builder));
+        g_settings_set_uint (priv->input_settings, KEY_CURRENT_INPUT_SOURCE, 0);
         g_settings_apply (priv->input_settings);
-
-        g_variant_unref (old_sources);
 }
 
 static void set_localed_input (CcRegionPanel *self);
@@ -1084,25 +804,6 @@ apologize_for_no_ibus_login (CcRegionPanel *self)
         gtk_widget_destroy (dialog);
 }
 
-static gboolean
-input_source_already_added (CcRegionPanel *self,
-                            const gchar   *id)
-{
-        CcRegionPanelPrivate *priv = self->priv;
-        GList *list, *l;
-        gboolean retval = FALSE;
-
-        list = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (l = list; l; l = l->next)
-                if (g_str_equal (id, (const gchar *) g_object_get_data (G_OBJECT (l->data), "id"))) {
-                        retval = TRUE;
-                        break;
-                }
-        g_list_free (list);
-
-        return retval;
-}
-
 static void
 input_response (GtkWidget *chooser, gint response_id, gpointer data)
 {
@@ -1114,14 +815,10 @@ input_response (GtkWidget *chooser, gint response_id, gpointer data)
         GDesktopAppInfo *app_info = NULL;
 
         if (response_id == GTK_RESPONSE_OK) {
-                if (cc_input_chooser_get_selected (chooser, &type, &id, &name) &&
-                    !input_source_already_added (self, id)) {
+                if (cc_input_chooser_get_selected (chooser, &type, &id, &name)) {
                         if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
                                 g_free (type);
                                 type = INPUT_SOURCE_TYPE_IBUS;
-#ifdef HAVE_IBUS
-                                app_info = setup_app_info_for_id (id);
-#endif
                         } else {
                                 g_free (type);
                                 type = INPUT_SOURCE_TYPE_XKB;
@@ -1129,9 +826,17 @@ input_response (GtkWidget *chooser, gint response_id, gpointer data)
 
                         if (priv->login && g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
                                 apologize_for_no_ibus_login (self);
+                                priv->system_layout_type = INPUT_SOURCE_TYPE_IBUS;
                         } else {
-                                add_input_row (self, type, id, name, app_info);
-                                update_buttons (self);
+                                if (priv->login) {
+                                        priv->system_layout_type = type;
+                                        priv->system_layout_id = g_strdup (id);
+                                        priv->system_layout_name = g_strdup (name);
+                                } else {
+                                        priv->layout_type = type;
+                                        priv->layout_id = g_strdup (id);
+                                        priv->layout_name = g_strdup (name);
+                                }
                                 update_input (self);
                         }
                         g_free (id);
@@ -1167,7 +872,7 @@ show_input_chooser (CcRegionPanel *self)
 }
 
 static void
-add_input (CcRegionPanel *self)
+set_input (CcRegionPanel *self)
 {
 	CcRegionPanelPrivate *priv = self->priv;
 
@@ -1176,195 +881,12 @@ add_input (CcRegionPanel *self)
         } else if (g_permission_get_allowed (priv->permission)) {
                 show_input_chooser (self);
         } else if (g_permission_get_can_acquire (priv->permission)) {
-                priv->op = ADD_INPUT;
+                priv->op = SET_INPUT;
                 g_permission_acquire_async (priv->permission,
                                             NULL,
                                             permission_acquired,
                                             self);
         }
-}
-
-static GtkWidget *
-find_sibling (GtkContainer *container, GtkWidget *child)
-{
-        GList *list, *c;
-        GList *l;
-        GtkWidget *sibling;
-
-        list = gtk_container_get_children (container);
-        c = g_list_find (list, child);
-
-        for (l = c->next; l; l = l->next) {
-                sibling = l->data;
-                if (gtk_widget_get_visible (sibling) && gtk_widget_get_child_visible (sibling))
-                        goto out;
-        }
-
-        for (l = c->prev; l; l = l->prev) {
-                sibling = l->data;
-                if (gtk_widget_get_visible (sibling) && gtk_widget_get_child_visible (sibling))
-                        goto out;
-        }
-
-        sibling = NULL;
-
-out:
-        g_list_free (list);
-
-        return sibling;
-}
-
-static void
-do_remove_selected_input (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GtkListBoxRow *selected;
-        GtkWidget *sibling;
-
-        selected = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->input_list));
-        if (selected == NULL)
-                return;
-
-        sibling = find_sibling (GTK_CONTAINER (priv->input_list), GTK_WIDGET (selected));
-        gtk_container_remove (GTK_CONTAINER (priv->input_list), GTK_WIDGET (selected));
-        gtk_list_box_select_row (GTK_LIST_BOX (priv->input_list), GTK_LIST_BOX_ROW (sibling));
-
-        priv->n_input_rows -= 1;
-        adjust_input_list_scrolling (self);
-
-        update_buttons (self);
-        update_input (self);
-}
-
-static void
-remove_selected_input (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-
-        if (!priv->login) {
-                do_remove_selected_input (self);
-        } else if (g_permission_get_allowed (priv->permission)) {
-                do_remove_selected_input (self);
-        } else if (g_permission_get_can_acquire (priv->permission)) {
-                priv->op = REMOVE_INPUT;
-                g_permission_acquire_async (priv->permission,
-                                            NULL,
-                                            permission_acquired,
-                                            self);
-        }
-}
-
-static void
-show_selected_settings (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GtkListBoxRow *selected;
-        GdkAppLaunchContext *ctx;
-        GDesktopAppInfo *app_info;
-        const gchar *id;
-        GError *error = NULL;
-
-        selected = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->input_list));
-        if (selected == NULL)
-                return;
-
-        app_info = (GDesktopAppInfo *)g_object_get_data (G_OBJECT (selected), "app-info");
-        if  (app_info == NULL)
-                return;
-
-        ctx = gdk_display_get_app_launch_context (gdk_display_get_default ());
-        gdk_app_launch_context_set_timestamp (ctx, gtk_get_current_event_time ());
-
-        id = (const gchar *)g_object_get_data (G_OBJECT (selected), "id");
-        g_app_launch_context_setenv (G_APP_LAUNCH_CONTEXT (ctx),
-                                     "IBUS_ENGINE_NAME", id);
-
-        if (!g_app_info_launch (G_APP_INFO (app_info), NULL, G_APP_LAUNCH_CONTEXT (ctx), &error)) {
-                g_warning ("Failed to launch input source setup: %s", error->message);
-                g_error_free (error);
-        }
-
-        g_object_unref (ctx);
-}
-
-static void
-show_selected_layout (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GtkListBoxRow *selected;
-        const gchar *type;
-        const gchar *id;
-        const gchar *layout;
-        const gchar *variant;
-        gchar *commandline;
-
-        selected = gtk_list_box_get_selected_row (GTK_LIST_BOX (priv->input_list));
-        if (selected == NULL)
-                return;
-
-        type = (const gchar *)g_object_get_data (G_OBJECT (selected), "type");
-        id = (const gchar *)g_object_get_data (G_OBJECT (selected), "id");
-
-        if (g_str_equal (type, INPUT_SOURCE_TYPE_XKB)) {
-                gnome_xkb_info_get_layout_info (priv->xkb_info,
-                                                id, NULL, NULL,
-                                                &layout, &variant);
-
-                if (!layout || !layout[0]) {
-                        g_warning ("Couldn't find XKB input source '%s'", id);
-                        return;
-                }
-#ifdef HAVE_IBUS
-        } else if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS)) {
-                IBusEngineDesc *engine_desc = NULL;
-
-                if (priv->ibus_engines)
-                        engine_desc = g_hash_table_lookup (priv->ibus_engines, id);
-
-                if (engine_desc) {
-                        layout = ibus_engine_desc_get_layout (engine_desc);
-                        variant = "";
-                } else {
-                        g_warning ("Couldn't find IBus input source '%s'", id);
-                        return;
-                }
-#endif
-        } else {
-                g_warning ("Unhandled input source type '%s'", type);
-                return;
-        }
-
-        if (variant[0])
-                commandline = g_strdup_printf ("gkbd-keyboard-display -l \"%s\t%s\"",
-                                               layout, variant);
-        else
-                commandline = g_strdup_printf ("gkbd-keyboard-display -l %s",
-                                               layout);
-
-        g_spawn_command_line_async (commandline, NULL);
-        g_free (commandline);
-}
-
-static void
-options_response (GtkDialog     *options,
-                  gint           response_id,
-                  CcRegionPanel *self)
-{
-        gtk_widget_destroy (GTK_WIDGET (options));
-}
-
-
-static void
-show_input_options (CcRegionPanel *self)
-{
-        GtkWidget *toplevel;
-        GtkWidget *options;
-
-        toplevel = gtk_widget_get_toplevel (GTK_WIDGET (self));
-        options = cc_input_options_new (toplevel);
-        g_signal_connect (options, "response",
-                          G_CALLBACK (options_response), self);
-        gtk_window_present (GTK_WINDOW (options));
 }
 
 static void
@@ -1390,39 +912,10 @@ setup_input_section (CcRegionPanel *self)
         maybe_start_ibus ();
 #endif
 
-        priv->input_section = WID ("input_section");
-        priv->options_button = WID ("input_options");
-        priv->input_list = WID ("input_list");
-        priv->add_input = WID ("input_source_add");
-        priv->remove_input = WID ("input_source_remove");
-        priv->show_config = WID ("input_source_config");
-        priv->show_layout = WID ("input_source_layout");
-        priv->input_scrolledwindow = WID ("input_scrolledwindow");
-
-        g_signal_connect_swapped (priv->options_button, "clicked",
-                                  G_CALLBACK (show_input_options), self);
-        g_signal_connect_swapped (priv->add_input, "clicked",
-                                  G_CALLBACK (add_input), self);
-        g_signal_connect_swapped (priv->remove_input, "clicked",
-                                  G_CALLBACK (remove_selected_input), self);
-        g_signal_connect_swapped (priv->show_config, "clicked",
-                                  G_CALLBACK (show_selected_settings), self);
-        g_signal_connect_swapped (priv->show_layout, "clicked",
-                                  G_CALLBACK (show_selected_layout), self);
-
-        gtk_list_box_set_selection_mode (GTK_LIST_BOX (priv->input_list),
-                                         GTK_SELECTION_SINGLE);
-        gtk_list_box_set_header_func (GTK_LIST_BOX (priv->input_list),
-                                      update_header_func,
-                                      NULL, NULL);
-        g_signal_connect_swapped (priv->input_list, "row-selected",
-                                  G_CALLBACK (update_buttons), self);
-
         g_signal_connect (priv->input_settings, "changed::" KEY_INPUT_SOURCES,
                           G_CALLBACK (input_sources_changed), self);
 
-        add_input_sources_from_settings (self);
-        update_buttons (self);
+        input_sources_changed (priv->input_settings, KEY_INPUT_SOURCES, self);
 }
 
 static void
@@ -1433,6 +926,9 @@ on_localed_properties_changed (GDBusProxy     *proxy,
 {
 	CcRegionPanelPrivate *priv = self->priv;
         GVariant *v;
+        const gchar *s;
+        gchar **layouts = NULL;
+        gchar **variants = NULL;
 
         v = g_dbus_proxy_get_cached_property (proxy, "Locale");
         if (v) {
@@ -1470,20 +966,6 @@ on_localed_properties_changed (GDBusProxy     *proxy,
 
                 update_language_label (self);
         }
-}
-
-static void
-add_input_sources_from_localed (CcRegionPanel *self)
-{
-	CcRegionPanelPrivate *priv = self->priv;
-        GVariant *v;
-        const gchar *s;
-        gchar **layouts = NULL;
-        gchar **variants = NULL;
-        gint i, n;
-
-        if (!priv->localed)
-                return;
 
         v = g_dbus_proxy_get_cached_property (priv->localed, "X11Layout");
         if (v) {
@@ -1500,34 +982,30 @@ add_input_sources_from_localed (CcRegionPanel *self)
                 g_variant_unref (v);
         }
 
-        if (variants && variants[0])
-                n = MIN (g_strv_length (layouts), g_strv_length (variants));
-        else if (layouts && layouts[0])
-                n = g_strv_length (layouts);
-        else
-                n = 0;
+        g_free (priv->system_layout_id);
+        g_free (priv->system_layout_name);
+        if (layouts && layouts[0] && layouts[0][0]) {
+          const gchar *name;
+          gchar *id;
+          if (variants && variants[0] && variants[0][0])
+            id = g_strdup_printf("%s+%s", layouts[0], variants[0]);
+          else
+            id = g_strdup (layouts[0]);
 
-        for (i = 0; i < n && layouts[i][0]; i++) {
-                const gchar *name;
-                gchar *id;
-
-                if (variants && variants[i] && variants[i][0])
-                        id = g_strdup_printf ("%s+%s", layouts[i], variants[i]);
-                else
-                        id = g_strdup (layouts[i]);
-
-                gnome_xkb_info_get_layout_info (priv->xkb_info, id, &name, NULL, NULL, NULL);
-
-                add_input_row (self, INPUT_SOURCE_TYPE_XKB, id, name ? name : id, NULL);
-
-                g_free (id);
-        }
-        if (n == 0) {
-                add_no_input_row (self);
+          gnome_xkb_info_get_layout_info (priv->xkb_info, id, &name, NULL, NULL, NULL);
+          priv->system_layout_type = INPUT_SOURCE_TYPE_XKB;
+          priv->system_layout_id = id;
+          priv->system_layout_name = name ? g_strdup (name) : g_strdup (id);
+        } else {
+          priv->system_layout_type = "none";
+          priv->system_layout_id = g_strdup ("none");
+          priv->system_layout_name = g_strdup (_("No input source selected"));
         }
 
         g_strfreev (variants);
         g_strfreev (layouts);
+
+        update_layouts_label (self);
 }
 
 static void
@@ -1573,30 +1051,17 @@ set_localed_input (CcRegionPanel *self)
 	CcRegionPanelPrivate *priv = self->priv;
         GString *layouts;
         GString *variants;
-        const gchar *type, *id;
-        GList *list, *li;
         const gchar *l, *v;
 
         layouts = g_string_new ("");
         variants = g_string_new ("");
 
-        list = gtk_container_get_children (GTK_CONTAINER (priv->input_list));
-        for (li = list; li; li = li->next) {
-                type = (const gchar *)g_object_get_data (G_OBJECT (li->data), "type");
-                id = (const gchar *)g_object_get_data (G_OBJECT (li->data), "id");
-                if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS))
-                        continue;
-
-                if (gnome_xkb_info_get_layout_info (priv->xkb_info, id, NULL, NULL, &l, &v)) {
-                        if (layouts->str[0]) {
-                                g_string_append_c (layouts, ',');
-                                g_string_append_c (variants, ',');
-                        }
-                        g_string_append (layouts, l);
-                        g_string_append (variants, v);
-                }
+        if (!g_str_equal (priv->system_layout_type, INPUT_SOURCE_TYPE_IBUS)) {
+          if (gnome_xkb_info_get_layout_info (priv->xkb_info, priv->system_layout_id, NULL, NULL, &l, &v)) {
+            g_string_append (layouts, l);
+            g_string_append (variants, v);
+          }
         }
-        g_list_free (list);
 
         g_dbus_proxy_call (priv->localed,
                            "SetX11Keyboard",
@@ -1650,16 +1115,9 @@ login_changed (CcRegionPanel *self)
                  g_permission_get_can_acquire (priv->permission));
         /* FIXME: insensitive doesn't look quite right for this */
         gtk_widget_set_sensitive (priv->language_section, !priv->login || can_acquire);
-        gtk_widget_set_sensitive (priv->input_section, !priv->login || can_acquire);
-
-        clear_input_sources (self);
-        if (priv->login)
-                add_input_sources_from_localed (self);
-        else
-                add_input_sources_from_settings (self);
 
         update_language_label (self);
-        update_buttons (self);
+        update_layouts_label (self);
 }
 
 static void
