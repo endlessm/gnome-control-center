@@ -381,6 +381,8 @@ update_language (CcRegionPanel *self,
         }
 }
 
+static void update_region (CcRegionPanel *self, const gchar *region);
+
 static void
 language_response (GtkDialog     *chooser,
                    gint           response_id,
@@ -391,6 +393,10 @@ language_response (GtkDialog     *chooser,
         if (response_id == GTK_RESPONSE_OK) {
                 language = cc_language_chooser_get_language (GTK_WIDGET (chooser));
                 update_language (self, language);
+
+                /* Update the format too to keep it consistent with the language
+                   when it changes, as it's probably the right thing to do. */
+                update_region (self, language);
         }
 
         gtk_widget_destroy (GTK_WIDGET (chooser));
