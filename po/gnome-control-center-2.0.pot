@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 01:31+0000\n"
+"POT-Creation-Date: 2015-03-19 06:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,7 +128,7 @@ msgstr ""
 #. * Note that this is not an "x", but U+00D7 MULTIPLICATION SIGN
 #: ../panels/background/cc-background-item.c:153
 #, c-format
-msgid "%d × %d"
+msgid "%d ے %d"
 msgstr ""
 
 #: ../panels/background/cc-background-item.c:281
@@ -573,7 +573,7 @@ msgstr ""
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1469
+#: ../panels/user-accounts/um-account-dialog.c:1479
 msgid "Cancel"
 msgstr ""
 
@@ -893,7 +893,7 @@ msgid "Other…"
 msgstr ""
 
 #: ../panels/common/cc-language-chooser.c:123
-#: ../panels/region/cc-format-chooser.c:268
+#: ../panels/region/cc-format-chooser.c:271
 #: ../panels/region/cc-input-chooser.c:172
 msgid "More…"
 msgstr ""
@@ -1088,7 +1088,7 @@ msgstr ""
 
 #: ../panels/display/cc-display-panel.c:488
 #: ../panels/notifications/cc-notifications-panel.c:206
-#: ../panels/power/cc-power-panel.c:1735 ../panels/power/cc-power-panel.c:1746
+#: ../panels/power/cc-power-panel.c:1734 ../panels/power/cc-power-panel.c:1745
 #: ../panels/privacy/cc-privacy-panel.c:86
 #: ../panels/privacy/cc-privacy-panel.c:126
 #: ../panels/privacy/cc-privacy-panel.c:261
@@ -2413,7 +2413,7 @@ msgstr ""
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1470
+#: ../panels/user-accounts/um-account-dialog.c:1480
 msgid "_Add"
 msgstr ""
 
@@ -2822,7 +2822,7 @@ msgstr ""
 #: ../panels/network/wireless-security/eap-method-simple.ui.h:2
 #: ../panels/network/wireless-security/ws-leap.ui.h:2
 #: ../panels/network/wireless-security/ws-wpa-psk.ui.h:1
-#: ../panels/user-accounts/data/account-dialog.ui.h:9
+#: ../panels/user-accounts/data/account-dialog.ui.h:18
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:7
 msgid "_Password"
 msgstr ""
@@ -3313,7 +3313,7 @@ msgstr ""
 #: ../panels/network/wireless-security/eap-method-leap.ui.h:1
 #: ../panels/network/wireless-security/eap-method-simple.ui.h:1
 #: ../panels/network/wireless-security/ws-leap.ui.h:1
-#: ../panels/user-accounts/data/account-dialog.ui.h:3
+#: ../panels/user-accounts/data/account-dialog.ui.h:12
 msgid "_Username"
 msgstr ""
 
@@ -3507,7 +3507,7 @@ msgid "Show Details in Lock Screen"
 msgstr ""
 
 #: ../panels/notifications/cc-notifications-panel.c:206
-#: ../panels/power/cc-power-panel.c:1741 ../panels/power/cc-power-panel.c:1748
+#: ../panels/power/cc-power-panel.c:1740 ../panels/power/cc-power-panel.c:1747
 #: ../panels/privacy/cc-privacy-panel.c:86
 #: ../panels/privacy/cc-privacy-panel.c:126
 #: ../panels/privacy/cc-privacy-panel.c:313
@@ -3630,18 +3630,18 @@ msgid ""
 "contacts, calendar, chat and more."
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:181
+#: ../panels/power/cc-power-panel.c:180
 msgid "Unknown time"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:187
+#: ../panels/power/cc-power-panel.c:186
 #, c-format
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../panels/power/cc-power-panel.c:199
+#: ../panels/power/cc-power-panel.c:198
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
@@ -3650,226 +3650,226 @@ msgstr[1] ""
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
-#: ../panels/power/cc-power-panel.c:207
+#: ../panels/power/cc-power-panel.c:206
 #, c-format
 msgid "%i %s %i %s"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:208
+#: ../panels/power/cc-power-panel.c:207
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../panels/power/cc-power-panel.c:209
+#: ../panels/power/cc-power-panel.c:208
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
-#: ../panels/power/cc-power-panel.c:228
+#: ../panels/power/cc-power-panel.c:227
 #, c-format
 msgid "%s until fully charged"
 msgstr ""
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
-#: ../panels/power/cc-power-panel.c:235
+#: ../panels/power/cc-power-panel.c:234
 #, c-format
 msgid "Caution: %s remaining"
 msgstr ""
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
-#: ../panels/power/cc-power-panel.c:240
+#: ../panels/power/cc-power-panel.c:239
 #, c-format
 msgid "%s remaining"
 msgstr ""
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:245 ../panels/power/cc-power-panel.c:273
+#: ../panels/power/cc-power-panel.c:244 ../panels/power/cc-power-panel.c:272
 msgid "Fully charged"
 msgstr ""
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:249 ../panels/power/cc-power-panel.c:277
+#: ../panels/power/cc-power-panel.c:248 ../panels/power/cc-power-panel.c:276
 msgid "Empty"
 msgstr ""
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:264
+#: ../panels/power/cc-power-panel.c:263
 msgid "Charging"
 msgstr ""
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:269
+#: ../panels/power/cc-power-panel.c:268
 msgid "Discharging"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:392
+#: ../panels/power/cc-power-panel.c:391
 msgctxt "Battery name"
 msgid "Main"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:394
+#: ../panels/power/cc-power-panel.c:393
 msgctxt "Battery name"
 msgid "Extra"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:466
+#: ../panels/power/cc-power-panel.c:465
 msgid "Wireless mouse"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:469
+#: ../panels/power/cc-power-panel.c:468
 msgid "Wireless keyboard"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:472
+#: ../panels/power/cc-power-panel.c:471
 msgid "Uninterruptible power supply"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:475
+#: ../panels/power/cc-power-panel.c:474
 msgid "Personal digital assistant"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:478
+#: ../panels/power/cc-power-panel.c:477
 msgid "Cellphone"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:481
+#: ../panels/power/cc-power-panel.c:480
 msgid "Media player"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:484
+#: ../panels/power/cc-power-panel.c:483
 msgid "Tablet"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:487
+#: ../panels/power/cc-power-panel.c:486
 msgid "Computer"
 msgstr ""
 
 #. TRANSLATORS: secondary battery, misc
-#: ../panels/power/cc-power-panel.c:490 ../panels/power/cc-power-panel.c:737
-#: ../panels/power/cc-power-panel.c:2072
+#: ../panels/power/cc-power-panel.c:489 ../panels/power/cc-power-panel.c:736
+#: ../panels/power/cc-power-panel.c:2071
 msgid "Battery"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:536
+#: ../panels/power/cc-power-panel.c:535
 msgctxt "Battery power"
 msgid "Charging"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:543
+#: ../panels/power/cc-power-panel.c:542
 msgctxt "Battery power"
 msgid "Caution"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:548
+#: ../panels/power/cc-power-panel.c:547
 msgctxt "Battery power"
 msgid "Low"
 msgstr ""
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:553
+#: ../panels/power/cc-power-panel.c:552
 msgctxt "Battery power"
 msgid "Good"
 msgstr ""
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:558
+#: ../panels/power/cc-power-panel.c:557
 msgctxt "Battery power"
 msgid "Fully charged"
 msgstr ""
 
 #. TRANSLATORS: primary battery
-#: ../panels/power/cc-power-panel.c:562
+#: ../panels/power/cc-power-panel.c:561
 msgctxt "Battery power"
 msgid "Empty"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:735
+#: ../panels/power/cc-power-panel.c:734
 msgid "Batteries"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1141
+#: ../panels/power/cc-power-panel.c:1140
 msgid "When _idle"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1510
+#: ../panels/power/cc-power-panel.c:1509
 msgid "Power Saving"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1538
+#: ../panels/power/cc-power-panel.c:1537
 msgid "_Screen brightness"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1544
+#: ../panels/power/cc-power-panel.c:1543
 msgid "_Keyboard brightness"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1554
+#: ../panels/power/cc-power-panel.c:1553
 msgid "_Dim screen when inactive"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1579
+#: ../panels/power/cc-power-panel.c:1578
 msgid "_Blank screen"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1616
+#: ../panels/power/cc-power-panel.c:1615
 msgid "_Wi-Fi"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1621
+#: ../panels/power/cc-power-panel.c:1620
 msgid "Turns off wireless devices"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1646
+#: ../panels/power/cc-power-panel.c:1645
 msgid "_Mobile broadband"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1651
+#: ../panels/power/cc-power-panel.c:1650
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1686
+#: ../panels/power/cc-power-panel.c:1685
 msgid "_Bluetooth"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1737
+#: ../panels/power/cc-power-panel.c:1736
 msgid "When on battery power"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1739
+#: ../panels/power/cc-power-panel.c:1738
 msgid "When plugged in"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1868
+#: ../panels/power/cc-power-panel.c:1867
 msgid "Suspend & Power Off"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1901
+#: ../panels/power/cc-power-panel.c:1900
 msgid "_Automatic suspend"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1925
+#: ../panels/power/cc-power-panel.c:1924
 msgid "When battery power is _critical"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1982
+#: ../panels/power/cc-power-panel.c:1981
 msgid "Power Off"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2119
+#: ../panels/power/cc-power-panel.c:2118
 msgid "Devices"
 msgstr ""
 
@@ -3973,7 +3973,7 @@ msgstr ""
 
 #: ../panels/printers/authentication-dialog.ui.h:5
 #: ../panels/sharing/sharing.ui.h:21
-#: ../panels/user-accounts/data/account-dialog.ui.h:6
+#: ../panels/user-accounts/data/account-dialog.ui.h:15
 msgid "Password"
 msgstr ""
 
@@ -4729,7 +4729,7 @@ msgctxt "measurement format"
 msgid "Metric"
 msgstr ""
 
-#: ../panels/region/cc-format-chooser.c:285
+#: ../panels/region/cc-format-chooser.c:288
 msgid "No regions found"
 msgstr ""
 
@@ -5780,67 +5780,72 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:4
-msgid "_Full Name"
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:5
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:5
-msgid "Account _Type"
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:7
-#: ../panels/user-accounts/data/password-dialog.ui.h:4
-msgid "Allow user to set a password when they next login"
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:8
-#: ../panels/user-accounts/data/password-dialog.ui.h:5
-msgid "Set a password now"
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:10
-msgid "_Verify"
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:11
-msgid ""
-"Enterprise login allows an existing centrally managed user account to be "
-"used on this device."
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:12
-msgid "_Domain"
-msgstr ""
-
-#: ../panels/user-accounts/data/account-dialog.ui.h:13
-msgid ""
-"Go online to add\n"
-"enterprise login accounts."
-msgstr ""
-
 #. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
-#: ../panels/user-accounts/data/account-dialog.ui.h:16
+#: ../panels/user-accounts/data/account-dialog.ui.h:4
 msgid "_Enroll"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:17
+#: ../panels/user-accounts/data/account-dialog.ui.h:5
 msgid "Domain Administrator Login"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:18
+#: ../panels/user-accounts/data/account-dialog.ui.h:6
 msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:21
+#: ../panels/user-accounts/data/account-dialog.ui.h:9
+msgid "_Domain"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:10
 msgid "Administrator _Name"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:22
+#: ../panels/user-accounts/data/account-dialog.ui.h:11
 msgid "Administrator Password"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:13
+msgid "_Full Name"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:14
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:5
+msgid "Account _Type"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:16
+#: ../panels/user-accounts/data/password-dialog.ui.h:5
+msgid "Allow user to set a password when they next login"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:17
+#: ../panels/user-accounts/data/password-dialog.ui.h:6
+msgid "Set a password now"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:19
+msgid "_Verify"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:20
+#: ../panels/user-accounts/data/password-dialog.ui.h:7
+msgid "Password _Reminder"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:21
+msgid ""
+"Enterprise login allows an existing centrally managed user account to be "
+"used on this device."
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:22
+msgid ""
+"Go online to add\n"
+"enterprise login accounts."
 msgstr ""
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:1
@@ -5916,19 +5921,19 @@ msgid "Login History"
 msgstr ""
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:1
-msgid "_Verify New Password"
+msgid "Ch_ange"
 msgstr ""
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:2
-msgid "_New Password"
+msgid "_Verify New Password"
 msgstr ""
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:3
-msgid "Current _Password"
+msgid "_New Password"
 msgstr ""
 
-#: ../panels/user-accounts/data/password-dialog.ui.h:6
-msgid "Ch_ange"
+#: ../panels/user-accounts/data/password-dialog.ui.h:4
+msgid "Current _Password"
 msgstr ""
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:3
@@ -6153,57 +6158,57 @@ msgstr ""
 msgid "Should match the web address of your account provider."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:222
+#: ../panels/user-accounts/um-account-dialog.c:228
 msgid "Failed to add account"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:315
+#: ../panels/user-accounts/um-account-dialog.c:321
 msgid "This will be used to name your home folder and can't be changed."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:448
+#: ../panels/user-accounts/um-account-dialog.c:454
 msgid "Passwords do not match."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:718
-#: ../panels/user-accounts/um-account-dialog.c:764
+#: ../panels/user-accounts/um-account-dialog.c:728
+#: ../panels/user-accounts/um-account-dialog.c:774
 msgid "Failed to register account"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:902
+#: ../panels/user-accounts/um-account-dialog.c:912
 msgid "No supported way to authenticate with this domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:961
+#: ../panels/user-accounts/um-account-dialog.c:971
 msgid "Failed to join domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1022
+#: ../panels/user-accounts/um-account-dialog.c:1032
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1029
+#: ../panels/user-accounts/um-account-dialog.c:1039
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1037
+#: ../panels/user-accounts/um-account-dialog.c:1047
 msgid "Failed to log into domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1095
+#: ../panels/user-accounts/um-account-dialog.c:1105
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1445
+#: ../panels/user-accounts/um-account-dialog.c:1455
 msgid "Add User"
 msgstr ""
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1458
+#: ../panels/user-accounts/um-account-dialog.c:1468
 msgid "_Enterprise Login"
 msgstr ""
 
@@ -6346,19 +6351,19 @@ msgstr ""
 msgid "Session Started"
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:145
+#: ../panels/user-accounts/um-password-dialog.c:153
 msgid "Please choose another password."
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:154
+#: ../panels/user-accounts/um-password-dialog.c:162
 msgid "Please type your current password again."
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:160
+#: ../panels/user-accounts/um-password-dialog.c:168
 msgid "Password could not be changed"
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:285
+#: ../panels/user-accounts/um-password-dialog.c:298
 msgid "The passwords do not match."
 msgstr ""
 
