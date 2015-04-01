@@ -2298,20 +2298,23 @@ show_setup_dialog (CcDisplayPanel *panel)
     }
 
   /* overscan */
-  priv->scaling_check = gtk_check_button_new_with_label (_("Adjust screen for TV"));
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->scaling_check),
-                                gnome_rr_output_info_get_underscanning (priv->current_output));
-  g_signal_connect (G_OBJECT (priv->scaling_check), "toggled",
-                    G_CALLBACK (checkbutton_toggled), panel);
+  if (!gnome_rr_output_is_builtin_display (output))
+    {
+      priv->scaling_check = gtk_check_button_new_with_label (_("Adjust screen for TV"));
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->scaling_check),
+                                    gnome_rr_output_info_get_underscanning (priv->current_output));
+      g_signal_connect (G_OBJECT (priv->scaling_check), "toggled",
+                        G_CALLBACK (checkbutton_toggled), panel);
 
-  label = gtk_label_new (_("Scaling"));
-  gtk_style_context_add_class (gtk_widget_get_style_context (label),
-                               GTK_STYLE_CLASS_DIM_LABEL);
-  gtk_grid_attach (GTK_GRID (priv->config_grid), label, 0, 5, 1, 1);
-  gtk_grid_attach (GTK_GRID (priv->config_grid), priv->scaling_check, 1, 5, 1, 1);
+      label = gtk_label_new (_("Scaling"));
+      gtk_style_context_add_class (gtk_widget_get_style_context (label),
+                                   GTK_STYLE_CLASS_DIM_LABEL);
+      gtk_grid_attach (GTK_GRID (priv->config_grid), label, 0, 5, 1, 1);
+      gtk_grid_attach (GTK_GRID (priv->config_grid), priv->scaling_check, 1, 5, 1, 1);
 
-  gtk_widget_set_halign (label, GTK_ALIGN_END);
-  gtk_widget_set_halign (priv->scaling_check, GTK_ALIGN_START);
+      gtk_widget_set_halign (label, GTK_ALIGN_END);
+      gtk_widget_set_halign (priv->scaling_check, GTK_ALIGN_START);
+    }
 
   content_area = gtk_dialog_get_content_area (GTK_DIALOG (priv->dialog));
   gtk_container_add (GTK_CONTAINER (box), priv->config_grid);
