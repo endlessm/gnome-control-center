@@ -21,7 +21,7 @@
 #include "cc-remote-login.h"
 #include <gio/gio.h>
 
-#define SSHD_SERVICE "sshd.service"
+#define SSHD_SERVICE "ssh.service"
 
 typedef struct
 {
