@@ -84,7 +84,7 @@ struct _CcDateTimePanelPrivate
   GSettings *clock_settings;
   GSettings *datetime_settings;
   GDesktopClockFormat clock_format;
-  gboolean ampm_available;
+  gboolean fallback_ampm;
   GtkWidget *am_label;
   GtkWidget *pm_label;
   GtkWidget *am_pm_stack;
@@ -291,6 +291,8 @@ am_pm_button_clicked (GtkWidget *button,
   return TRUE;
 }
 
+static char *format_ampm_label (CcDateTimePanel *self);
+
 /* Update the widgets based on the system time */
 static void
 update_time (CcDateTimePanel *self)
@@ -312,7 +314,7 @@ update_time (CcDateTimePanel *self)
   g_signal_handlers_block_by_func (m_spinbutton, change_time, self);
   g_signal_handlers_block_by_func (am_pm_button, am_pm_button_clicked, self);
 
-  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H && priv->ampm_available)
+  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H)
     use_ampm = TRUE;
   else
     use_ampm = FALSE;
@@ -359,8 +361,13 @@ update_time (CcDateTimePanel *self)
   /* Update the time on the listbow row */
   if (use_ampm)
     {
+      gchar *format_string =
+        g_strdup_printf ("%s%s", _("%e %B %Y, %l:%M %p"),
+                         priv->fallback_ampm ? format_ampm_label (self) : "");
+
       /* Translators: This is the full date and time format used in 12-hour mode. */
-      label = g_date_time_format (priv->date, _("%e %B %Y, %l:%M %p"));
+      label = g_date_time_format (priv->date, format_string);
+      g_free (format_string);
     }
   else
     {
@@ -565,7 +572,7 @@ update_timezone (CcDateTimePanel *self)
   char *utc_label;
   gboolean use_ampm;
 
-  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H && priv->ampm_available)
+  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H)
     use_ampm = TRUE;
   else
     use_ampm = FALSE;
@@ -585,8 +592,13 @@ update_timezone (CcDateTimePanel *self)
 
   if (use_ampm)
     {
+      gchar *format_string =
+        g_strdup_printf ("%s%s", _("%l:%M %p"),
+                         priv->fallback_ampm ? format_ampm_label (self) : "");
+
       /* Translators: This is the time format used in 12-hour mode. */
-      time_label = g_date_time_format (priv->date, _("%l:%M %p"));
+      time_label = g_date_time_format (priv->date, format_string);
+      g_free (format_string);
     }
   else
     {
@@ -734,7 +746,7 @@ change_time (CcDateTimePanel *panel)
   h = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (W ("h_spinbutton")));
   m = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (W ("m_spinbutton")));
 
-  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H && priv->ampm_available)
+  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H)
     {
       gboolean is_pm_time;
       GtkWidget *visible_child;
@@ -1036,7 +1048,7 @@ format_hours_combobox (GtkSpinButton   *spin,
   int hour;
   gboolean use_ampm;
 
-  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H && priv->ampm_available)
+  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H)
     use_ampm = TRUE;
   else
     use_ampm = FALSE;
@@ -1091,10 +1103,13 @@ setup_timezone_dialog (CcDateTimePanel *self)
 }
 
 static char *
-format_am_label ()
+format_am_label (CcDateTimePanel *self)
 {
   GDateTime *date;
   char *text;
+
+  if (self->priv->fallback_ampm)
+    return g_strdup ("AM");
 
   /* Construct a time at midnight, and use it to get localized AM identifier */
   date = g_date_time_new_utc (1, 1, 1, 0, 0, 0);
@@ -1105,10 +1120,13 @@ format_am_label ()
 }
 
 static char *
-format_pm_label ()
+format_pm_label (CcDateTimePanel *self)
 {
   GDateTime *date;
   char *text;
+
+  if (self->priv->fallback_ampm)
+    return g_strdup ("PM");
 
   /* Construct a time at noon, and use it to get localized PM identifier */
   date = g_date_time_new_utc (1, 1, 1, 12, 0, 0);
@@ -1116,6 +1134,16 @@ format_pm_label ()
   g_date_time_unref (date);
 
   return text;
+}
+
+static char *
+format_ampm_label (CcDateTimePanel *self)
+{
+  gint hour = g_date_time_get_hour (self->priv->date);
+  if (hour >= 12)
+    return format_pm_label (self);
+  else
+    return format_am_label (self);
 }
 
 static void
@@ -1127,11 +1155,11 @@ setup_am_pm_button (CcDateTimePanel *self)
   GtkWidget *am_pm_button;
   char *text;
 
-  text = format_am_label ();
+  text = format_am_label (self);
   priv->am_label = gtk_label_new (text);
   g_free (text);
 
-  text = format_pm_label ();
+  text = format_pm_label (self);
   priv->pm_label = gtk_label_new (text);
   g_free (text);
 
@@ -1300,6 +1328,10 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   priv->toplevels = g_list_append (priv->toplevels, W ("datetime-dialog"));
   priv->toplevels = g_list_append (priv->toplevels, W ("timezone-dialog"));
 
+  /* We will fallback to AM/PM in EOS if no localized string is found */
+  ampm = nl_langinfo (AM_STR);
+  priv->fallback_ampm = (ampm == NULL || ampm[0] == '\0');
+
   setup_timezone_dialog (self);
   setup_datetime_dialog (self);
 
@@ -1328,19 +1360,6 @@ cc_date_time_panel_init (CcDateTimePanel *self)
 
   /* Clock settings */
   priv->clock_settings = g_settings_new (CLOCK_SCHEMA);
-
-  ampm = nl_langinfo (AM_STR);
-  /* There are no AM/PM indicators for this locale, so
-   * offer the 24 hr clock as the only option */
-  if (ampm == NULL || ampm[0] == '\0')
-    {
-      gtk_widget_set_visible (W("timeformat-frame"), FALSE);
-      priv->ampm_available = FALSE;
-    }
-  else
-    {
-      priv->ampm_available = TRUE;
-    }
 
   widget = W ("vbox_datetime");
   gtk_container_add (GTK_CONTAINER (self), widget);
