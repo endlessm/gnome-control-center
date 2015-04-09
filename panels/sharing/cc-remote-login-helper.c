@@ -20,7 +20,7 @@
  */
 
 #include <gio/gio.h>
-#define SSHD_SERVICE "sshd.service"
+#define SSHD_SERVICE "ssh.service"
 
 static const gchar *service_list[] = { SSHD_SERVICE, NULL };
 
