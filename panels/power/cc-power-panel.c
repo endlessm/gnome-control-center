@@ -1128,7 +1128,8 @@ set_ac_battery_ui_mode (CcPowerPanel *self)
 out:
   self->priv->has_batteries = has_batteries;
 
-  gtk_widget_set_visible (self->priv->critical_battery_row, has_batteries);
+  if (self->priv->critical_battery_row)
+    gtk_widget_set_visible (self->priv->critical_battery_row, has_batteries);
 
   if (!has_batteries)
     {
@@ -1747,7 +1748,8 @@ update_automatic_suspend_label (CcPowerPanel *self)
         s = _("On");
     }
 
-  gtk_label_set_label (GTK_LABEL (priv->automatic_suspend_label), s);
+  if (priv->automatic_suspend_label)
+    gtk_label_set_label (GTK_LABEL (priv->automatic_suspend_label), s);
 }
 
 static void
