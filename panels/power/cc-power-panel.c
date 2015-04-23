@@ -2338,6 +2338,40 @@ add_device_section (CcPowerPanel *self)
   gtk_widget_show_all (box);
 }
 
+static gboolean
+can_suspend ()
+{
+  GDBusConnection *connection;
+  GVariant *reply;
+  gboolean result;
+
+  connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, NULL);
+  reply = g_dbus_connection_call_sync (connection,
+                                       "org.freedesktop.login1",
+                                       "/org/freedesktop/login1",
+                                       "org.freedesktop.login1.Manager",
+                                       "CanSuspend",
+                                       NULL,
+                                       NULL,
+                                       G_DBUS_CALL_FLAGS_NONE,
+                                       -1,
+                                       NULL,
+                                       NULL);
+  g_object_unref (connection);
+
+  result = FALSE;
+  if (reply)
+    {
+      gchar *s;
+      g_variant_get (reply, "(&s)", &s);
+      if (g_strcmp0 (s, "yes") == 0)
+        result = TRUE;
+      g_variant_unref(reply);
+    }
+
+  return result;
+}
+
 static void
 on_content_size_changed (GtkWidget *widget, GtkAllocation *allocation, gpointer data)
 {
@@ -2421,7 +2455,9 @@ cc_power_panel_init (CcPowerPanel *self)
   add_battery_section (self);
   add_device_section (self);
   add_power_saving_section (self);
-  add_suspend_and_power_off_section (self);
+
+  if (can_suspend ())
+    add_suspend_and_power_off_section (self);
 
   priv->boxes = g_list_copy (priv->boxes_reverse);
   priv->boxes = g_list_reverse (priv->boxes);
