@@ -1940,7 +1940,8 @@ update_automatic_suspend_label (CcPowerPanel *self)
         s = _("On");
     }
 
-  gtk_label_set_label (GTK_LABEL (priv->automatic_suspend_label), s);
+  if (priv->automatic_suspend_label)
+    gtk_label_set_label (GTK_LABEL (priv->automatic_suspend_label), s);
 }
 
 static void
