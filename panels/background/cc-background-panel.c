@@ -21,7 +21,6 @@
 
 #include <config.h>
 
-#include <endless/endless.h>
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n-lib.h>
@@ -420,41 +419,40 @@ on_preview_draw (GtkWidget         *widget,
 }
 
 static gchar *
-get_personality_default_bg_uri (void)
+get_endless_default_bg_uri (void)
 {
-  const gchar ** personalities;
-  const gchar *personality;
+  const gchar * const *language_names;
+  const gchar *language_name;
   gchar *path, *filename, *uri;
   GFile *file;
   gint idx;
 
-  uri = NULL;
+  language_names = g_get_language_names ();
 
-  personalities = g_malloc0 (3 * sizeof (gchar *));
-  personalities[0] = eos_get_system_personality ();
-  personalities[1] = "default";
-
-  for (idx = 0; personalities[idx] != NULL; idx++)
+  for (idx = 0; language_names[idx] != NULL; idx++)
     {
-      personality = personalities[idx];
-      filename = g_strdup_printf ("desktop-background-%s.jpg", personality);
-      path = g_build_filename (DATADIR "/EndlessOS/personality-defaults",
-                               filename,
-                               NULL);
+      language_name = language_names[idx];
+
+      /* discard language names with encodings */
+      if (strchr (language_name, '.') != NULL)
+	continue;
+
+      filename = g_strdup_printf ("desktop-background-%s.jpg", language_name);
+      path = g_build_filename (DATADIR "/EndlessOS/language-defaults",
+			       filename,
+			       NULL);
       file = g_file_new_for_path (path);
 
       if (g_file_query_exists (file, NULL))
-        uri = g_file_get_uri (file);
+	uri = g_file_get_uri (file);
 
       g_free (filename);
       g_free (path);
       g_object_unref (file);
 
       if (uri != NULL)
-        break;
+	break;
     }
-
-  g_free (personalities);
 
   return uri;
 }
@@ -476,11 +474,11 @@ reload_current_bg (CcBackgroundPanel *self)
   /* initalise the current background information from settings */
   uri = g_settings_get_string (priv->settings, WP_URI_KEY);
 
-  /* initialise from personality if required */
+  /* initialise from language if required */
   if (g_strcmp0 (uri, EOS_DEFAULT_BG_URI) == 0)
     {
       g_free (uri);
-      uri = get_personality_default_bg_uri ();
+      uri = get_endless_default_bg_uri ();
     }
 
   /* fall through the former logic otherwise */
