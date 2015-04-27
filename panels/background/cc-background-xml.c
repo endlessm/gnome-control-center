@@ -20,7 +20,6 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#include <endless/endless.h>
 #include <gio/gio.h>
 #include <string.h>
 #include <libxml/parser.h>
@@ -153,33 +152,6 @@ emit_added_in_idle (CcBackgroundXml *xml,
 #define UNSET_FLAG(flag) G_STMT_START{ (flags&=~(flag)); }G_STMT_END
 #define SET_FLAG(flag) G_STMT_START{ (flags|=flag); }G_STMT_END
 
-#define EOS_BG_XML_FILE_PREFIX "endlessos-backgrounds"
-
-static gboolean
-xml_item_valid_for_eos_personality (const gchar *filename)
-{
-  gchar *basename, *str;
-  gboolean retval;
-  const gchar *eos_personality;
-
-  basename = g_path_get_basename (filename);
-  retval = TRUE;
-
-  /* We're not looking at an EndlessOS bg catalog, assume it's fine. */
-  if (!g_str_has_prefix (basename, EOS_BG_XML_FILE_PREFIX))
-    goto out;
-
-  eos_personality = eos_get_system_personality ();
-  str = g_strdup_printf (EOS_BG_XML_FILE_PREFIX "-%s", eos_personality);
-
-  retval = g_str_has_prefix (basename, str);
-  g_free (str);
-
- out:
-  g_free (basename);
-  return retval;
-}
-
 static gboolean
 cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
 				     const gchar     *filename,
@@ -193,9 +165,6 @@ cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
   gboolean retval;
 
   retval = FALSE;
-
-  if (!xml_item_valid_for_eos_personality (filename))
-    return retval;
 
   wplist = xmlParseFile (filename);
 
