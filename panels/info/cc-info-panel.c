@@ -23,7 +23,7 @@
 
 #include "cc-info-panel.h"
 #include "cc-info-resources.h"
-#include "ostree-daemon-generated.h"
+#include "eos-updater-generated.h"
 
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -84,16 +84,17 @@ typedef struct
 } DefaultAppData;
 
 typedef enum {
-  OTD_STATE_NONE = 0,
-  OTD_STATE_READY,
-  OTD_STATE_ERROR,
-  OTD_STATE_POLLING,
-  OTD_STATE_UPDATE_AVAILABLE,
-  OTD_STATE_FETCHING,
-  OTD_STATE_UPDATE_READY,
-  OTD_STATE_APPLYING_UPDATE,
-  OTD_STATE_UPDATE_APPLIED,
-} OTDState;
+  EOS_UPDATER_STATE_NONE = 0,
+  EOS_UPDATER_STATE_READY,
+  EOS_UPDATER_STATE_ERROR,
+  EOS_UPDATER_STATE_POLLING,
+  EOS_UPDATER_STATE_UPDATE_AVAILABLE,
+  EOS_UPDATER_STATE_FETCHING,
+  EOS_UPDATER_STATE_UPDATE_READY,
+  EOS_UPDATER_STATE_APPLYING_UPDATE,
+  EOS_UPDATER_STATE_UPDATE_APPLIED,
+  EOS_UPDATER_N_STATES,
+} EosUpdaterState;
 
 struct _CcInfoPanelPrivate
 {
@@ -112,9 +113,9 @@ struct _CcInfoPanelPrivate
 
   GraphicsData  *graphics_data;
 
-  OTD *ostree_proxy;
+  EosUpdater *updater_proxy;
   GDBusProxy *session_proxy;
-  gboolean ostree_activated;
+  gboolean updater_activated;
 };
 
 static void get_primary_disc_info_start (CcInfoPanel *self);
@@ -367,7 +368,7 @@ cc_info_panel_finalize (GObject *object)
     }
 
   g_clear_object (&priv->media_settings);
-  g_clear_object (&priv->ostree_proxy);
+  g_clear_object (&priv->updater_proxy);
   g_clear_object (&priv->session_proxy);
 
   G_OBJECT_CLASS (cc_info_panel_parent_class)->finalize (object);
@@ -1453,14 +1454,14 @@ info_panel_setup_selector (CcInfoPanel  *self)
 }
 
 static gboolean
-is_otd_state_spinning (CcInfoPanel *self,
-                       OTDState state)
+is_updater_state_spinning (CcInfoPanel *self,
+                           EosUpdaterState state)
 {
   switch (state)
     {
-    case OTD_STATE_POLLING:
-    case OTD_STATE_FETCHING:
-    case OTD_STATE_APPLYING_UPDATE:
+    case EOS_UPDATER_STATE_POLLING:
+    case EOS_UPDATER_STATE_FETCHING:
+    case EOS_UPDATER_STATE_APPLYING_UPDATE:
       return TRUE;
     default:
       return FALSE;
@@ -1468,17 +1469,17 @@ is_otd_state_spinning (CcInfoPanel *self,
 }
 
 static gboolean
-is_otd_state_interactive (CcInfoPanel *self,
-                          OTDState state)
+is_updater_state_interactive (CcInfoPanel *self,
+                              EosUpdaterState state)
 {
   switch (state)
     {
-    case OTD_STATE_READY:
-    case OTD_STATE_ERROR:
-    case OTD_STATE_UPDATE_AVAILABLE:
-    case OTD_STATE_UPDATE_READY:
-      return (!self->priv->ostree_activated);
-    case OTD_STATE_UPDATE_APPLIED:
+    case EOS_UPDATER_STATE_READY:
+    case EOS_UPDATER_STATE_ERROR:
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      return (!self->priv->updater_activated);
+    case EOS_UPDATER_STATE_UPDATE_APPLIED:
       return TRUE;
     default:
       return FALSE;
@@ -1486,28 +1487,28 @@ is_otd_state_interactive (CcInfoPanel *self,
 }
 
 static const gchar *
-get_message_for_otd_state (CcInfoPanel *self,
-                           OTDState state)
+get_message_for_updater_state (CcInfoPanel *self,
+                               EosUpdaterState state)
 {
   switch (state)
     {
-    case OTD_STATE_NONE:
-    case OTD_STATE_READY:
-      if (self->priv->ostree_activated)
+    case EOS_UPDATER_STATE_NONE:
+    case EOS_UPDATER_STATE_READY:
+      if (self->priv->updater_activated)
         return _("No updates available");
       else
         return _("Check for updates now");
-    case OTD_STATE_ERROR:
+    case EOS_UPDATER_STATE_ERROR:
       return _("Update failed");
-    case OTD_STATE_POLLING:
+    case EOS_UPDATER_STATE_POLLING:
       return _("Checking for updates…");
-    case OTD_STATE_UPDATE_AVAILABLE:
-    case OTD_STATE_UPDATE_READY:
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+    case EOS_UPDATER_STATE_UPDATE_READY:
       return _("Install updates now");
-    case OTD_STATE_FETCHING:
-    case OTD_STATE_APPLYING_UPDATE:
+    case EOS_UPDATER_STATE_FETCHING:
+    case EOS_UPDATER_STATE_APPLYING_UPDATE:
       return _("Installing updates…");
-    case OTD_STATE_UPDATE_APPLIED:
+    case EOS_UPDATER_STATE_UPDATE_APPLIED:
       return _("Restart to complete update");
     default:
       return NULL;
@@ -1519,13 +1520,13 @@ updates_apply_completed (GObject *object,
                          GAsyncResult *res,
                          gpointer user_data)
 {
-  OTD *proxy = (OTD *) object;
+  EosUpdater *proxy = (EosUpdater *) object;
   GError *error = NULL;
 
-  otd__call_apply_finish (proxy, res, &error);
+  eos_updater_call_apply_finish (proxy, res, &error);
   if (error != NULL)
     {
-      g_warning ("Failed to call Apply() on OSTree daemon: %s", error->message);
+      g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
       g_error_free (error);
     }
 }
@@ -1535,13 +1536,13 @@ updates_fetch_completed (GObject *object,
                          GAsyncResult *res,
                          gpointer user_data)
 {
-  OTD *proxy = (OTD *) object;
+  EosUpdater *proxy = (EosUpdater *) object;
   GError *error = NULL;
 
-  otd__call_fetch_finish (proxy, res, &error);
+  eos_updater_call_fetch_finish (proxy, res, &error);
   if (error != NULL)
     {
-      g_warning ("Failed to call Fetch() on OSTree daemon: %s", error->message);
+      g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
       g_error_free (error);
     }
 }
@@ -1551,13 +1552,13 @@ updates_poll_completed (GObject *object,
                         GAsyncResult *res,
                         gpointer user_data)
 {
-  OTD *proxy = (OTD *) object;
+  EosUpdater *proxy = (EosUpdater *) object;
   GError *error = NULL;
 
-  otd__call_poll_finish (proxy, res, &error);
+  eos_updater_call_poll_finish (proxy, res, &error);
   if (error != NULL)
     {
-      g_warning ("Failed to call Poll() on OSTree daemon: %s", error->message);
+      g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
       g_error_free (error);
     }
 }
@@ -1567,28 +1568,28 @@ updates_link_activated (GtkLabel *label,
                         gchar *uri,
                         CcInfoPanel *self)
 {
-  OTDState state;
+  EosUpdaterState state;
 
-  state = otd__get_state (self->priv->ostree_proxy);
-  g_assert (is_otd_state_interactive (self, state));
-  self->priv->ostree_activated = TRUE;
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  g_assert (is_updater_state_interactive (self, state));
+  self->priv->updater_activated = TRUE;
 
   switch (state)
     {
-    case OTD_STATE_ERROR:
-    case OTD_STATE_READY:
-      otd__call_poll (self->priv->ostree_proxy, NULL,
-                      updates_poll_completed, self);
+    case EOS_UPDATER_STATE_ERROR:
+    case EOS_UPDATER_STATE_READY:
+      eos_updater_call_poll (self->priv->updater_proxy, NULL,
+                             updates_poll_completed, self);
       break;
-    case OTD_STATE_UPDATE_AVAILABLE:
-      otd__call_fetch (self->priv->ostree_proxy, NULL,
-                       updates_fetch_completed, self);
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+      eos_updater_call_fetch (self->priv->updater_proxy, NULL,
+                              updates_fetch_completed, self);
       break;
-    case OTD_STATE_UPDATE_READY:
-      otd__call_apply (self->priv->ostree_proxy, NULL,
-                       updates_apply_completed, self);
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      eos_updater_call_apply (self->priv->updater_proxy, NULL,
+                              updates_apply_completed, self);
       break;
-    case OTD_STATE_UPDATE_APPLIED:
+    case EOS_UPDATER_STATE_UPDATE_APPLIED:
       g_dbus_proxy_call (self->priv->session_proxy,
                          "Reboot",
                          NULL,
@@ -1605,21 +1606,21 @@ updates_link_activated (GtkLabel *label,
 static void
 updates_maybe_do_automatic_step (CcInfoPanel *self)
 {
-  OTDState state;
+  EosUpdaterState state;
 
-  if (!self->priv->ostree_activated)
+  if (!self->priv->updater_activated)
     return;
 
-  state = otd__get_state (self->priv->ostree_proxy);
+  state = eos_updater_get_state (self->priv->updater_proxy);
   switch (state)
     {
-    case OTD_STATE_UPDATE_AVAILABLE:
-      otd__call_fetch (self->priv->ostree_proxy, NULL,
-                       updates_fetch_completed, self);
+    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
+      eos_updater_call_fetch (self->priv->updater_proxy, NULL,
+                              updates_fetch_completed, self);
       break;
-    case OTD_STATE_UPDATE_READY:
-      otd__call_apply (self->priv->ostree_proxy, NULL,
-                       updates_apply_completed, self);
+    case EOS_UPDATER_STATE_UPDATE_READY:
+      eos_updater_call_apply (self->priv->updater_proxy, NULL,
+                              updates_apply_completed, self);
       break;
     default:
       break;
@@ -1627,17 +1628,17 @@ updates_maybe_do_automatic_step (CcInfoPanel *self)
 }
 
 static void
-sync_state_from_ostree (CcInfoPanel *self,
-                        OTDState state)
+sync_state_from_updater (CcInfoPanel *self,
+                         EosUpdaterState state)
 {
   GtkWidget *widget;
   gboolean state_spinning, state_interactive;
   const gchar *message;
   gchar *markup;
 
-  state_spinning = is_otd_state_spinning (self, state);
-  state_interactive = is_otd_state_interactive (self, state);
-  message = get_message_for_otd_state (self, state);
+  state_spinning = is_updater_state_spinning (self, state);
+  state_interactive = is_updater_state_interactive (self, state);
+  message = get_message_for_updater_state (self, state);
 
   widget = WID ("os_updates_spinner");
   gtk_widget_set_visible (widget, state_spinning);
@@ -1656,31 +1657,31 @@ sync_state_from_ostree (CcInfoPanel *self,
 }
 
 static void
-ostree_state_changed (OTD *proxy,
-                      GParamSpec *pspec,
-                      CcInfoPanel *self)
+updater_state_changed (EosUpdater *proxy,
+                       GParamSpec *pspec,
+                       CcInfoPanel *self)
 {
-  OTDState state;
+  EosUpdaterState state;
 
-  state = otd__get_state (self->priv->ostree_proxy);
-  sync_state_from_ostree (self, state);
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  sync_state_from_updater (self, state);
 }
 
 static void
-sync_initial_state_from_ostree (CcInfoPanel *self)
+sync_initial_state_from_updater (CcInfoPanel *self)
 {
-  OTDState state;
+  EosUpdaterState state;
 
   /* Attempt to clear the error by pretending to be ready, which will
    * trigger a poll
    */
-  state = otd__get_state (self->priv->ostree_proxy);
-  if (state == OTD_STATE_ERROR)
-    state = OTD_STATE_READY;
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  if (state == EOS_UPDATER_STATE_ERROR)
+    state = EOS_UPDATER_STATE_READY;
 
-  sync_state_from_ostree (self, state);
-  g_signal_connect (self->priv->ostree_proxy, "notify::state",
-                    G_CALLBACK (ostree_state_changed), self);
+  sync_state_from_updater (self, state);
+  g_signal_connect (self->priv->updater_proxy, "notfy::state",
+                    G_CALLBACK (updater_state_changed), self);
 }
 
 static gboolean
@@ -1803,7 +1804,7 @@ info_panel_setup_overview (CcInfoPanel  *self)
   widget = WID ("attribution_label");
   g_signal_connect (widget, "activate-link", G_CALLBACK (on_attribution_label_link), self);
 
-  if (self->priv->ostree_proxy == NULL ||
+  if (self->priv->updater_proxy == NULL ||
       self->priv->session_proxy == NULL)
     {
       widget = WID ("os_updates_box");
@@ -1814,7 +1815,7 @@ info_panel_setup_overview (CcInfoPanel  *self)
       widget = WID ("os_updates_label");
       g_signal_connect (widget, "activate-link",
                         G_CALLBACK (updates_link_activated), self);
-      sync_initial_state_from_ostree (self);
+      sync_initial_state_from_updater (self);
     }
 }
 
@@ -1839,16 +1840,16 @@ cc_info_panel_init (CcInfoPanel *self)
       return;
     }
 
-  self->priv->ostree_proxy = otd__proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-                                                          G_DBUS_PROXY_FLAGS_NONE,
-                                                          "org.gnome.OSTree",
-                                                          "/org/gnome/OSTree",
-                                                          NULL,
-                                                          &error);
+  self->priv->updater_proxy = eos_updater_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                                  G_DBUS_PROXY_FLAGS_NONE,
+                                                                  "com.endlessm.Updater",
+                                                                  "/com/endlessm/Updater",
+                                                                  NULL,
+                                                                  &error);
 
   if (error != NULL)
     {
-      g_critical ("Unable to get a proxy to the OSTree daemon: %s. Updates will not be available.",
+      g_critical ("Unable to get a proxy to the EOS updater: %s. Updates will not be available.",
                   error->message);
       g_error_free (error);
     }

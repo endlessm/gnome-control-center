@@ -13,8 +13,8 @@ noinst_LTLIBRARIES = libinfo.la
 BUILT_SOURCES =			\
 	cc-info-resources.c	\
 	cc-info-resources.h	\
-	ostree-daemon-generated.c \
-	ostree-daemon-generated.h
+	eos-updater-generated.c \
+	eos-updater-generated.h
 
 libinfo_la_SOURCES =		\
 	$(BUILT_SOURCES)	\
@@ -31,12 +31,12 @@ cc-info-resources.c: info.gresource.xml $(resource_files)
 cc-info-resources.h: info.gresource.xml $(resource_files)
 	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-header --c-name cc_info $<
 
-ostree-daemon-generated.c: ostree-daemon-generated.h
-ostree-daemon-generated.h: $(srcdir)/ostree-daemon.xml
+eos-updater-generated.c: eos-updater-generated.h
+eos-updater-generated.h: $(srcdir)/eos-updater.xml
 	gdbus-codegen $<				\
-	--interface-prefix org.gnome.OSTree		\
-	--generate-c-code ostree-daemon-generated	\
-	--c-namespace OTD
+	--interface-prefix com.endlessm.		\
+	--generate-c-code eos-updater-generated		\
+	--c-namespace Eos
 
 @INTLTOOL_DESKTOP_RULE@
 
@@ -51,6 +51,6 @@ update-from-gsd:
 	git commit -m "info: Update from gnome-settings-daemon" $(SPACEFILES)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES)
-EXTRA_DIST = $(resource_files) info.gresource.xml $(srcdir)/ostree-daemon.xml
+EXTRA_DIST = $(resource_files) info.gresource.xml $(srcdir)/eos-updater.xml
 
 -include $(top_srcdir)/git.mk
