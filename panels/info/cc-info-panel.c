@@ -1680,7 +1680,7 @@ sync_initial_state_from_updater (CcInfoPanel *self)
     state = EOS_UPDATER_STATE_READY;
 
   sync_state_from_updater (self, state);
-  g_signal_connect (self->priv->updater_proxy, "notfy::state",
+  g_signal_connect (self->priv->updater_proxy, "notify::state",
                     G_CALLBACK (updater_state_changed), self);
 }
 
