@@ -191,7 +191,6 @@ update_display_preview (CcBackgroundPanel *panel)
   const gint preview_width = 416;
   const gint preview_height = 248;
   GdkPixbuf *pixbuf;
-  GIcon *icon;
   cairo_t *cr;
 
   widget = WID ("background-desktop-drawingarea");
@@ -200,12 +199,11 @@ update_display_preview (CcBackgroundPanel *panel)
   if (!priv->current_background)
     return;
 
-  icon = cc_background_item_get_frame_thumbnail (priv->current_background,
-                                                 priv->thumb_factory,
-                                                 preview_width,
-                                                 preview_height,
-                                                 -2, TRUE);
-  pixbuf = GDK_PIXBUF (icon);
+  pixbuf = cc_background_item_get_frame_thumbnail (priv->current_background,
+                                                   priv->thumb_factory,
+                                                   preview_width,
+                                                   preview_height,
+                                                   -2, TRUE);
 
   cr = gdk_cairo_create (gtk_widget_get_window (widget));
   gdk_cairo_set_source_pixbuf (cr,

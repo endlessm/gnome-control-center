@@ -75,7 +75,7 @@ bg_colors_source_init (BgColorsSource *self)
     {
       CcBackgroundItemFlags flags;
       CcBackgroundItem *item;
-      GIcon *pixbuf;
+      GdkPixbuf *pixbuf;
 
       item = cc_background_item_new (NULL);
       flags = CC_BACKGROUND_ITEM_HAS_PCOLOR |

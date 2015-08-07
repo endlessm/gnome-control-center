@@ -97,7 +97,7 @@ load_wallpapers (gchar              *key,
 {
   BgWallpapersSourcePrivate *priv = source->priv;
   GtkTreeIter iter;
-  GIcon *pixbuf;
+  GdkPixbuf *pixbuf;
   GtkListStore *store = bg_source_get_liststore (BG_SOURCE (source));
   gboolean deleted;
 
