@@ -71,11 +71,11 @@ gboolean           cc_background_item_load                (CcBackgroundItem     
 							   GFileInfo                    *info);
 gboolean           cc_background_item_changes_with_time   (CcBackgroundItem             *item);
 
-GIcon     *        cc_background_item_get_thumbnail       (CcBackgroundItem             *item,
+GdkPixbuf *        cc_background_item_get_thumbnail       (CcBackgroundItem             *item,
                                                            GnomeDesktopThumbnailFactory *thumbs,
                                                            int                           width,
                                                            int                           height);
-GIcon     *        cc_background_item_get_frame_thumbnail (CcBackgroundItem             *item,
+GdkPixbuf *        cc_background_item_get_frame_thumbnail (CcBackgroundItem             *item,
                                                            GnomeDesktopThumbnailFactory *thumbs,
                                                            int                           width,
                                                            int                           height,
