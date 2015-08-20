@@ -697,7 +697,39 @@ set_background (CcBackgroundPanel *panel,
     }
   else
     {
-      g_settings_set_string (priv->settings, WP_URI_KEY, uri);
+      GFile *source, *dest;
+      char *cache_path, *dest_path, *dest_file, *dest_uri;
+
+      source = g_file_new_for_uri (uri);
+
+      cache_path = bg_pictures_source_get_cache_path ();
+      if (g_mkdir_with_parents (cache_path, USER_DIR_MODE) < 0)
+        {
+          g_warning ("Failed to create directory '%s'", cache_path);
+          g_free (cache_path);
+          return;
+        }
+
+      dest_file = g_strdup_printf ("wallpaper-%d", cc_background_item_get_placement (item));
+
+      dest_path = g_build_filename (cache_path, dest_file, NULL);
+      g_free (dest_file);
+      g_free (cache_path);
+
+      dest = g_file_new_for_path (dest_path);
+      g_free (dest_path);
+
+      g_file_copy_async (source, dest, G_FILE_COPY_OVERWRITE,
+                         G_PRIORITY_DEFAULT, priv->copy_cancellable,
+                         NULL, NULL,
+                         copy_finished_cb, panel);
+      g_object_unref (source);
+
+      dest_uri = g_file_get_uri (dest);
+      g_object_unref (dest);
+
+      g_settings_set_string (priv->settings, WP_URI_KEY, dest_uri);
+      g_free (dest_uri);
     }
 
   /* Also set the placement if we have a URI and the previous value was none */
