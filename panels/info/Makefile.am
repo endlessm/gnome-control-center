@@ -6,6 +6,7 @@ INCLUDES = 						\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
 	-DDATADIR="\"$(datadir)\""			\
 	-DBINDIR="\"$(bindir)\""			\
+	-DLIBEXECDIR="\"$(libexecdir)\""		\
 	$(NULL)
 
 noinst_LTLIBRARIES = libinfo.la
@@ -24,6 +25,19 @@ libinfo_la_SOURCES =		\
 	gsd-disk-space-helper.c
 
 libinfo_la_LIBADD = $(PANEL_LIBS) $(INFO_PANEL_LIBS)
+
+libexec_PROGRAMS = \
+	cc-info-panel-gl-helper \
+	cc-info-panel-gles-helper \
+	$(NULL)
+
+cc_info_panel_gl_helper_SOURCES = cc-info-panel-gl-helper.c
+cc_info_panel_gl_helper_LDADD = $(INFO_PANEL_GL_HELPER_LIBS)
+cc_info_panel_gl_helper_CFLAGS = $(INFO_PANEL_GL_HELPER_CFLAGS)
+
+cc_info_panel_gles_helper_SOURCES = cc-info-panel-gles-helper.c
+cc_info_panel_gles_helper_LDADD = $(INFO_PANEL_GLES_HELPER_LIBS)
+cc_info_panel_gles_helper_CFLAGS = $(INFO_PANEL_GLES_HELPER_CFLAGS)
 
 resource_files = $(shell glib-compile-resources --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/info.gresource.xml)
 cc-info-resources.c: info.gresource.xml $(resource_files)

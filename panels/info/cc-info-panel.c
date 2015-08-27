@@ -41,8 +41,6 @@
 #endif
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
-#include <GL/gl.h>
-#include <GL/glx.h>
 #endif
 
 #include "gsd-disk-space-helper.h"
@@ -71,9 +69,9 @@ CC_PANEL_REGISTER (CcInfoPanel, cc_info_panel)
   (G_TYPE_INSTANCE_GET_PRIVATE ((o), CC_TYPE_INFO_PANEL, CcInfoPanelPrivate))
 
 typedef struct {
-  /* Will be the string below, or "Unknown" */
-  const char *hardware_string;
+  char *hardware_string;
 
+  char *gles_renderer;
   char *glx_renderer;
 } GraphicsData;
 
@@ -188,79 +186,72 @@ prettify_info (const char *info)
 static void
 graphics_data_free (GraphicsData *gdata)
 {
+  g_free (gdata->gles_renderer);
   g_free (gdata->glx_renderer);
+  g_free (gdata->hardware_string);
+
   g_slice_free (GraphicsData, gdata);
 }
 
-#ifdef GDK_WINDOWING_X11
+static char *
+run_graphics_data_helper (const char *path,
+                          GError    **error_out)
+{
+  char *retval = NULL;
+  GError *error = NULL;
+  GSubprocess *subprocess = g_subprocess_new (G_SUBPROCESS_FLAGS_STDOUT_PIPE,
+                                              &error, path,
+                                              NULL);
+  if (error != NULL)
+    goto out;
+
+  g_subprocess_wait (subprocess, NULL, &error);
+  if (error != NULL)
+    goto out;
+
+  GInputStream *output = g_subprocess_get_stdout_pipe (subprocess);
+  GDataInputStream *data_stream = g_data_input_stream_new (output);
+
+  retval = g_data_input_stream_read_line (data_stream, NULL, NULL, &error);
+  g_object_unref (data_stream);
+
+ out:
+  g_object_unref (subprocess);
+  if (error != NULL)
+    g_propagate_error (error_out, error);
+
+  return retval;
+}
+
 static char *
 get_graphics_data_glx_renderer ()
 {
-  Display *display;
-  int attributes[] = {
-    GLX_DRAWABLE_TYPE, GLX_WINDOW_BIT,
-    GLX_X_VISUAL_TYPE, GLX_TRUE_COLOR,
-    GLX_RENDER_TYPE, GLX_RGBA_BIT,
-    None
-  };
-  int nconfigs;
-  int major, minor;
-  Window window;
-  GLXFBConfig *config;
-  GLXWindow glxwin;
-  GLXContext context;
-  XSetWindowAttributes win_attributes;
-  XVisualInfo *visualInfo;
-  char *renderer;
+  GError *error = NULL;
+  char *retval = run_graphics_data_helper (LIBEXECDIR "/cc-info-panel-gl-helper", &error);
 
-  gdk_error_trap_push ();
+  if (error != NULL)
+    {
+      g_warning ("Failed to spawn GL helper: %s\n", error->message);
+      g_error_free (error);
+    }
 
-  display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
-
-  glXQueryVersion (display, &major, &minor);
-  config = glXChooseFBConfig (display, DefaultScreen (display),
-                              attributes, &nconfigs);
-  if (config == NULL) {
-    g_warning ("Failed to get OpenGL configuration");
-
-    gdk_error_trap_pop_ignored ();
-    return NULL;
-  }
-  visualInfo = glXGetVisualFromFBConfig (display, *config);
-  win_attributes.colormap = XCreateColormap (display, DefaultRootWindow(display),
-                                        visualInfo->visual, AllocNone );
-
-  window = XCreateWindow (display, DefaultRootWindow (display),
-                                0, 0, /* x, y */
-                                1, 1, /* width, height */
-                                0,   /* border_width */
-                                visualInfo->depth, InputOutput,
-                                visualInfo->visual, CWColormap, &win_attributes);
-  glxwin = glXCreateWindow (display, *config, window, NULL);
-
-  context = glXCreateNewContext (display, *config, GLX_RGBA_TYPE,
-                                 NULL, TRUE);
-  XFree (config);
-
-  glXMakeContextCurrent (display, glxwin, glxwin, context);
-  renderer = (char *) glGetString (GL_RENDERER);
-  g_debug ("Got GL_RENDERER: '%s'", renderer);
-  renderer = renderer ? prettify_info (renderer) : NULL;
-
-  glXMakeContextCurrent (display, None, None, NULL);
-  glXDestroyContext (display, context);
-  glXDestroyWindow (display, glxwin);
-  XDestroyWindow (display, window);
-  XFree (visualInfo);
-
-  if (gdk_error_trap_pop () != Success) {
-    g_warning ("Failed to get OpenGL driver info");
-    return NULL;
-  }
-
-  return renderer;
+  return retval;
 }
-#endif
+
+static char *
+get_graphics_data_gles_renderer (void)
+{
+  GError *error = NULL;
+  char *retval = run_graphics_data_helper (LIBEXECDIR "/cc-info-panel-gles-helper", &error);
+
+  if (error != NULL)
+    {
+      g_warning ("Failed to spawn GLES helper: %s\n", error->message);
+      g_error_free (error);
+    }
+
+  return retval;
+}
 
 static GraphicsData *
 get_graphics_data (void)
@@ -276,16 +267,22 @@ get_graphics_data (void)
   if (GDK_IS_X11_DISPLAY (display))
     {
       result->glx_renderer = get_graphics_data_glx_renderer ();
-      result->hardware_string = result->glx_renderer;
+      result->gles_renderer = get_graphics_data_gles_renderer ();
+
+      if (result->gles_renderer != NULL && result->gles_renderer[0] != '\0' &&
+          g_strcmp0 (result->glx_renderer, "Software Rasterizer") == 0)
+        result->hardware_string = prettify_info (result->gles_renderer);
+      else
+        result->hardware_string = prettify_info (result->glx_renderer);
     }
   else
 #endif
 #ifdef GDK_WINDOWING_WAYLAND
   if (GDK_IS_WAYLAND_DISPLAY (display))
-    result->hardware_string = _("Wayland");
+    result->hardware_string = g_strdup (_("Wayland"));
   else
 #endif
-    result->hardware_string = _("Unknown");
+    result->hardware_string = g_strdup (_("Unknown"));
 
   return result;
 }
