@@ -394,9 +394,8 @@ language_response (GtkDialog     *chooser,
                 language = cc_language_chooser_get_language (GTK_WIDGET (chooser));
                 update_language (self, language);
 
-                /* Update the format too to keep it consistent with the language
-                   when it changes, as it's probably the right thing to do. */
-                update_region (self, language);
+                /* Keep format strings consistent with the user's language */
+                update_region (self, NULL);
         }
 
         gtk_widget_destroy (GTK_WIDGET (chooser));
@@ -411,7 +410,11 @@ update_region (CcRegionPanel *self,
         if (g_strcmp0 (region, priv->region) == 0)
                 return;
 
-        g_settings_set_string (priv->locale_settings, KEY_REGION, region);
+        if (region == NULL || region[0] == '\0')
+          g_settings_reset (priv->locale_settings, KEY_REGION);
+        else
+          g_settings_set_string (priv->locale_settings, KEY_REGION, region);
+
         maybe_notify (self, LC_TIME, region);
 }
 
