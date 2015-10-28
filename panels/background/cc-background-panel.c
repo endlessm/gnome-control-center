@@ -436,7 +436,7 @@ get_endless_default_bg_uri (void)
 	continue;
 
       filename = g_strdup_printf ("desktop-background-%s.jpg", language_name);
-      path = g_build_filename (DATADIR "/EndlessOS/language-defaults",
+      path = g_build_filename (DATADIR "/eos-media",
 			       filename,
 			       NULL);
       file = g_file_new_for_path (path);
