@@ -192,6 +192,7 @@ user_loaded_cb (ActUser         *user,
 {
         const gchar *password;
         const gchar *reminder;
+        const gchar *locale;
         gchar *sanitized_reminder;
 
         finish_action (self);
@@ -205,6 +206,9 @@ user_loaded_cb (ActUser         *user,
                 act_user_set_password (user, password, sanitized_reminder);
                 g_free (sanitized_reminder);
         }
+
+        locale = setlocale (LC_ALL, NULL);
+        act_user_set_language (user, locale);
 
         complete_dialog (self, user);
 }
