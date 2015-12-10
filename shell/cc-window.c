@@ -50,7 +50,7 @@ G_DEFINE_TYPE_WITH_CODE (CcWindow, cc_window, GTK_TYPE_APPLICATION_WINDOW,
 /* Use a fixed width for the shell, since resizing horizontally is more awkward
  * for the user than resizing vertically
  * Both sizes are defined in https://live.gnome.org/Design/SystemSettings/ */
-#define FIXED_WIDTH 740
+#define FIXED_WIDTH 640
 #define FIXED_HEIGHT 636
 #define SMALL_SCREEN_FIXED_HEIGHT 400
 
