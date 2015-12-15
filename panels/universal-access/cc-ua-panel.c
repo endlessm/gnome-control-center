@@ -86,7 +86,7 @@
 #define KEY_DWELL_TIME               "dwell-time"
 #define KEY_DWELL_THRESHOLD          "dwell-threshold"
 
-#define SCROLL_HEIGHT 490
+#define SCROLL_HEIGHT 400
 
 CC_PANEL_REGISTER (CcUaPanel, cc_ua_panel)
 
