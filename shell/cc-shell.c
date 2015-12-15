@@ -171,3 +171,26 @@ cc_shell_embed_widget_in_header (CcShell *shell, GtkWidget *widget)
       iface->embed_widget_in_header (shell, widget);
     }
 }
+
+gboolean
+cc_shell_is_small_screen (CcShell *shell)
+{
+  CcShellInterface *iface;
+
+  g_return_val_if_fail (CC_IS_SHELL (shell), FALSE);
+
+  iface = CC_SHELL_GET_IFACE (shell);
+
+  if (!iface->is_small_screen)
+    {
+      g_warning ("Object of type \"%s\" does not implement required interface"
+                 " method \"is_small_screen\",",
+                 G_OBJECT_TYPE_NAME (shell));
+    }
+  else
+    {
+      return iface->is_small_screen (shell);
+    }
+
+  return FALSE;
+}

@@ -43,7 +43,7 @@
  * for the user than resizing vertically
  * Both sizes are defined in https://live.gnome.org/Design/SystemSettings/ */
 #define FIXED_WIDTH 640
-#define FIXED_HEIGHT 636
+#define FIXED_HEIGHT 600
 #define SMALL_SCREEN_FIXED_HEIGHT 400
 
 #define MIN_ICON_VIEW_HEIGHT 300
@@ -1171,12 +1171,19 @@ cc_window_finalize (GObject *object)
   G_OBJECT_CLASS (cc_window_parent_class)->finalize (object);
 }
 
+static gboolean
+_shell_is_small_screen (CcShell *shell)
+{
+  return CC_WINDOW (shell)->small_screen == SMALL_SCREEN_TRUE;
+}
+
 static void
 cc_shell_iface_init (CcShellInterface *iface)
 {
   iface->set_active_panel_from_id = _shell_set_active_panel_from_id;
   iface->embed_widget_in_header = _shell_embed_widget_in_header;
   iface->get_toplevel = _shell_get_toplevel;
+  iface->is_small_screen = _shell_is_small_screen;
 }
 
 static void
