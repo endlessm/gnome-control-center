@@ -41,9 +41,19 @@
 #include "cc-panel-loader.h"
 #include "cc-util.h"
 
+#define SMALL_SCREEN_WIDTH  800
+#define SMALL_SCREEN_HEIGHT 600
+
 #define MOUSE_BACK_BUTTON 8
 
 #define DEFAULT_WINDOW_ICON_NAME "preferences-system"
+
+typedef enum
+{
+  SMALL_SCREEN_UNSET,
+  SMALL_SCREEN_TRUE,
+  SMALL_SCREEN_FALSE
+} CcSmallScreen;
 
 struct _CcWindow
 {
@@ -74,6 +84,9 @@ struct _CcWindow
   GtkListStore *store;
 
   CcPanel *active_panel;
+
+  gint          monitor_num;
+  CcSmallScreen small_screen;
 };
 
 static void     cc_shell_iface_init         (CcShellInterface      *iface);
@@ -91,6 +104,72 @@ static gboolean cc_window_set_active_panel_from_id (CcShell      *shell,
                                                     const gchar  *start_id,
                                                     GVariant     *parameters,
                                                     GError      **err);
+
+static GdkRectangle
+get_monitor_rect (CcWindow *self)
+{
+  GdkScreen *screen;
+  GdkRectangle rect = { 0, };
+
+  if (self->monitor_num < 0)
+    return rect;
+
+  /* We cannot use workarea here, as this wouldn't
+   * be updated when we read it after a monitors-changed signal */
+  screen = gtk_widget_get_screen (GTK_WIDGET (self));
+
+  if (!screen)
+    return rect;
+
+  gdk_screen_get_monitor_geometry (screen, self->monitor_num, &rect);
+
+  return rect;
+}
+
+static void
+update_monitor_number (CcWindow *self)
+{
+  GtkWidget *widget;
+  GdkScreen *screen;
+  GdkWindow *window;
+
+  widget = GTK_WIDGET (self);
+
+  window = gtk_widget_get_window (widget);
+  screen = gtk_widget_get_screen (widget);
+
+  self->monitor_num = screen ? gdk_screen_get_monitor_at_window (screen, window) : -1;
+}
+
+static CcSmallScreen
+is_small (CcWindow *self)
+{
+  GdkRectangle monitor_rect = get_monitor_rect (self);
+
+  if (monitor_rect.width <= SMALL_SCREEN_WIDTH && monitor_rect.height <= SMALL_SCREEN_HEIGHT)
+    return SMALL_SCREEN_TRUE;
+
+  return SMALL_SCREEN_FALSE;
+}
+
+static void
+update_small_screen_settings (CcWindow *self)
+{
+  CcSmallScreen small;
+
+  update_monitor_number (self);
+  small = is_small (self);
+
+  if (self->small_screen != small)
+    {
+      if (small == SMALL_SCREEN_TRUE)
+        gtk_window_maximize (GTK_WINDOW (self));
+      else
+        gtk_window_unmaximize (GTK_WINDOW (self));
+    }
+
+  self->small_screen = small;
+}
 
 static const gchar *
 get_icon_name_from_g_icon (GIcon *gicon)
@@ -474,6 +553,12 @@ _shell_get_toplevel (CcShell *shell)
   return GTK_WIDGET (shell);
 }
 
+static gboolean
+_shell_is_small_screen (CcShell *shell)
+{
+  return CC_WINDOW (shell)->small_screen == SMALL_SCREEN_TRUE;
+}
+
 static void
 gdk_window_set_cb (GObject    *object,
                    GParamSpec *pspec,
@@ -609,6 +694,16 @@ cc_shell_iface_init (CcShellInterface *iface)
   iface->set_active_panel_from_id = _shell_set_active_panel_from_id;
   iface->embed_widget_in_header = _shell_embed_widget_in_header;
   iface->get_toplevel = _shell_get_toplevel;
+  iface->is_small_screen = _shell_is_small_screen;
+}
+
+static gboolean
+cc_window_configure_event (GtkWidget         *widget,
+                           GdkEventConfigure *event)
+{
+  update_small_screen_settings (CC_WINDOW (widget));
+
+  return GDK_EVENT_PROPAGATE;
 }
 
 static void
@@ -621,6 +716,8 @@ cc_window_class_init (CcWindowClass *klass)
   object_class->set_property = cc_window_set_property;
   object_class->dispose = cc_window_dispose;
   object_class->finalize = cc_window_finalize;
+
+  widget_class->configure_event = cc_window_configure_event;
 
   g_object_class_override_property (object_class, PROP_ACTIVE_PANEL, "active-panel");
 
@@ -815,6 +912,7 @@ cc_window_init (CcWindow *self)
 
   create_window (self);
 
+  self->monitor_num = -1;
   self->previous_panels = g_queue_new ();
 
   /* keep a list of custom widgets to unload on panel change */
