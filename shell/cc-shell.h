@@ -57,6 +57,7 @@ struct _CcShellInterface
   GtkWidget * (*get_toplevel)             (CcShell      *shell);
   void        (*embed_widget_in_header)   (CcShell      *shell,
                                            GtkWidget    *widget);
+  gboolean    (*is_small_screen)          (CcShell      *shell);
 };
 
 GType           cc_shell_get_type                 (void) G_GNUC_CONST;
@@ -72,6 +73,7 @@ GtkWidget *     cc_shell_get_toplevel             (CcShell      *shell);
 
 void            cc_shell_embed_widget_in_header   (CcShell      *shell,
                                                    GtkWidget    *widget);
+gboolean        cc_shell_is_small_screen          (CcShell      *shell);
 
 G_END_DECLS
 
