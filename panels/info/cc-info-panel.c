@@ -85,6 +85,9 @@ struct _CcInfoPanelPrivate
   char          *gnome_version;
   char          *gnome_distributor;
   char          *gnome_date;
+  GtkWidget     *scrolled_window;
+  GtkWidget     *detail_vbox;
+  GtkWidget     *hbox1;
 
   GCancellable  *cancellable;
 
@@ -418,6 +421,31 @@ cc_info_panel_finalize (GObject *object)
 }
 
 static void
+cc_info_panel_constructed (GObject *object)
+{
+  CcInfoPanel *self = CC_INFO_PANEL (object);
+  CcShell *shell;
+
+  G_OBJECT_CLASS (cc_info_panel_parent_class)->constructed (object);
+
+  shell = cc_panel_get_shell (CC_PANEL (object));
+
+  if (cc_shell_is_small_screen (shell))
+    {
+      GtkWidget *sw;
+
+      sw = gtk_scrolled_window_new (NULL, NULL);
+      gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (sw), 380);
+
+      gtk_container_remove (GTK_CONTAINER (self->priv->hbox1), self->priv->detail_vbox);
+      gtk_container_add (GTK_CONTAINER (sw), self->priv->detail_vbox);
+      gtk_container_add (GTK_CONTAINER (self->priv->hbox1), sw);
+
+      gtk_widget_show (sw);
+    }
+}
+
+static void
 cc_info_panel_class_init (CcInfoPanelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
@@ -426,6 +454,7 @@ cc_info_panel_class_init (CcInfoPanelClass *klass)
 
   object_class->dispose = cc_info_panel_dispose;
   object_class->finalize = cc_info_panel_finalize;
+  object_class->constructed = cc_info_panel_constructed;
 }
 
 static GHashTable*
@@ -1591,6 +1620,9 @@ cc_info_panel_init (CcInfoPanel *self)
     }
 
   self->priv->extra_options_dialog = WID ("extra_options_dialog");
+
+  self->priv->hbox1 = WID ("hbox1");
+  self->priv->detail_vbox = WID ("detail_vbox");
 
   self->priv->graphics_data = get_graphics_data ();
 

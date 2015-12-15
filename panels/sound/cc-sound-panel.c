@@ -67,6 +67,33 @@ cc_sound_panel_set_property (GObject      *object,
         }
 }
 
+static void
+cc_sound_panel_constructed (GObject *object)
+{
+        CcSoundPanel *self = CC_SOUND_PANEL (object);
+        CcShell *shell;
+
+        shell = cc_panel_get_shell (CC_PANEL (self));
+
+        G_OBJECT_CLASS (cc_sound_panel_parent_class)->constructed (object);
+
+        if (cc_shell_is_small_screen (shell)) {
+                GtkWidget *sw;
+
+                g_object_ref (self->dialog);
+                gtk_container_remove (GTK_CONTAINER (self), GTK_WIDGET (self->dialog));
+
+                sw = gtk_scrolled_window_new (NULL, NULL);
+                gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (sw), 400);
+                gtk_widget_show (sw);
+
+                gtk_container_add (GTK_CONTAINER (sw), GTK_WIDGET (self->dialog));
+                gtk_container_add (GTK_CONTAINER (self), sw);
+
+                g_object_unref (self->dialog);
+        }
+}
+
 static const char *
 cc_sound_panel_get_help_uri (CcPanel *panel)
 {
@@ -83,6 +110,7 @@ cc_sound_panel_class_init (CcSoundPanelClass *klass)
 
         object_class->finalize = cc_sound_panel_finalize;
         object_class->set_property = cc_sound_panel_set_property;
+        object_class->constructed = cc_sound_panel_constructed;
 
         g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
 }

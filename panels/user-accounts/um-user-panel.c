@@ -1438,6 +1438,24 @@ cc_user_panel_constructed (GObject *object)
 
         button = get_widget (d, "lock-button");
         gtk_lock_button_set_permission (GTK_LOCK_BUTTON (button), d->permission);
+
+        shell = cc_panel_get_shell (CC_PANEL (object));
+
+        /* Add scrollbars when screen is too small */
+        if (cc_shell_is_small_screen (shell)) {
+                GtkWidget *main_user_vbox, *hbox2, *sw;
+
+                sw = gtk_scrolled_window_new (NULL, NULL);
+                gtk_scrolled_window_set_min_content_width (GTK_SCROLLED_WINDOW (sw), 400);
+
+                main_user_vbox = get_widget (self->priv, "main-user-vbox");
+                hbox2 = get_widget (self->priv, "hbox2");
+                gtk_container_remove (GTK_CONTAINER (hbox2), main_user_vbox);
+                gtk_container_add (GTK_CONTAINER (sw), main_user_vbox);
+                gtk_container_add (GTK_CONTAINER (hbox2), sw);
+
+                gtk_widget_show (sw);
+        }
 }
 
 static void
