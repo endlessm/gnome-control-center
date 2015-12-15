@@ -1833,12 +1833,40 @@ cc_user_panel_get_help_uri (CcPanel *panel)
 }
 
 static void
+um_user_panel_constructed (GObject *object)
+{
+        CcUserPanel *self = UM_USER_PANEL (object);
+        CcShell *shell;
+
+        G_OBJECT_CLASS (cc_user_panel_parent_class)->constructed (object);
+
+        shell = cc_panel_get_shell (CC_PANEL (object));
+
+        /* Add scrollbars when screen is too small */
+        if (cc_shell_is_small_screen (shell)) {
+                GtkWidget *main_user_vbox, *hbox2, *sw;
+
+                sw = gtk_scrolled_window_new (NULL, NULL);
+                gtk_scrolled_window_set_min_content_width (GTK_SCROLLED_WINDOW (sw), 400);
+
+                main_user_vbox = get_widget (self->priv, "main-user-vbox");
+                hbox2 = get_widget (self->priv, "hbox2");
+                gtk_container_remove (GTK_CONTAINER (hbox2), main_user_vbox);
+                gtk_container_add (GTK_CONTAINER (sw), main_user_vbox);
+                gtk_container_add (GTK_CONTAINER (hbox2), sw);
+
+                gtk_widget_show (sw);
+        }
+}
+
+static void
 cc_user_panel_class_init (CcUserPanelClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
         CcPanelClass *panel_class = CC_PANEL_CLASS (klass);
 
         object_class->dispose = cc_user_panel_dispose;
+        object_class->constructed = um_user_panel_constructed;
 
         panel_class->get_permission = cc_user_panel_get_permission;
         panel_class->get_help_uri = cc_user_panel_get_help_uri;

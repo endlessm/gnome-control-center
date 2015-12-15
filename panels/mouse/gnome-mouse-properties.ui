@@ -47,7 +47,7 @@
                             </attributes>
                           </object>
                           <packing>
-                            <property name="expand">True</property>
+                            <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">0</property>
                           </packing>
@@ -57,17 +57,17 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="n_rows">2</property>
-                            <property name="n_columns">3</property>
+                            <property name="n_columns">2</property>
                             <property name="column_spacing">40</property>
                             <property name="row_spacing">10</property>
                             <property name="margin_top">5</property>
                             <property name="margin_start">20</property>
-                            <property name="margin_end">240</property>
                             <child>
                               <object class="GtkHBox" id="hbox5">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="spacing">5</property>
+				<property name="halign">start</property>
                                 <child>
                                   <object class="GtkLabel" id="double_click_slow_label">
                                     <property name="visible">True</property>
@@ -91,6 +91,7 @@
                                     <property name="adjustment">adjustment4</property>
                                     <property name="inverted">True</property>
                                     <property name="draw_value">False</property>
+				    <property name="width_request">100</property>
                                     <child internal-child="accessible">
                                       <object class="AtkObject" id="double_click_scale-atkobject">
                                         <property name="AtkObject::accessible-description" translatable="yes">Double-click timeout</property>
@@ -212,14 +213,14 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">True</property>
+                            <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">1</property>
                           </packing>
                         </child>
                       </object>
                       <packing>
-                        <property name="expand">True</property>
+                        <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">0</property>
                       </packing>
@@ -264,12 +265,11 @@
                           <object class="GtkTable" id="table2">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="n_columns">3</property>
+                            <property name="n_columns">2</property>
                             <property name="column_spacing">40</property>
                             <property name="row_spacing">5</property>
                             <property name="margin_top">5</property>
                             <property name="margin_start">20</property>
-                            <property name="margin_end">240</property>
                             <child>
                               <object class="GtkLabel" id="pointer_speed_label">
                                 <property name="visible">True</property>
@@ -318,9 +318,10 @@
                                     <property name="adjustment">adjustment1</property>
                                     <property name="draw_value">False</property>
                                     <property name="has_origin">False</property>
+				    <property name="width_request">100</property>
                                   </object>
                                   <packing>
-                                    <property name="expand">True</property>
+                                    <property name="expand">False</property>
                                     <property name="fill">True</property>
                                     <property name="position">1</property>
                                   </packing>

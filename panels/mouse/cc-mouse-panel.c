@@ -83,7 +83,7 @@ cc_mouse_panel_constructed (GObject *object)
 {
   CcMousePanel *self = CC_MOUSE_PANEL (object);
   CcMousePanelPrivate *priv = self->priv;
-  GtkWidget *button, *container, *toplevel;
+  GtkWidget *button, *container, *toplevel, *label;
   CcShell *shell;
 
   G_OBJECT_CLASS (cc_mouse_panel_parent_class)->constructed (object);
@@ -91,7 +91,12 @@ cc_mouse_panel_constructed (GObject *object)
   /* Add test area button to shell header. */
   shell = cc_panel_get_shell (CC_PANEL (self));
 
-  button = gtk_button_new_with_mnemonic (_("Test Your _Settings"));
+  label = gtk_label_new_with_mnemonic (_("Test Your _Settings"));
+  gtk_label_set_ellipsize (GTK_LABEL (label), PANGO_ELLIPSIZE_END);
+  gtk_widget_show (label);
+
+  button = gtk_button_new ();
+  gtk_container_add (GTK_CONTAINER (button), label);
   gtk_style_context_add_class (gtk_widget_get_style_context (button),
                                "text-button");
   gtk_widget_set_valign (button, GTK_ALIGN_CENTER);
