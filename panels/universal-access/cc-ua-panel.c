@@ -97,7 +97,7 @@
 #define GSD_MOUSE_SETTINGS           "org.gnome.settings-daemon.peripherals.mouse"
 #define KEY_DOUBLE_CLICK_DELAY       "double-click"
 
-#define SCROLL_HEIGHT 490
+#define SCROLL_HEIGHT 400
 
 CC_PANEL_REGISTER (CcUaPanel, cc_ua_panel)
 
