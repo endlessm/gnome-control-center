@@ -2304,7 +2304,7 @@ cc_color_panel_init (CcColorPanel *prefs)
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "scrolledwindow_devices"));
   gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (widget),
-                                              300);
+                                              250);
 
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "toolbutton_device_default"));
