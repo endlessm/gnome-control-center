@@ -162,6 +162,7 @@ add_row (CcPrivacyPanel *self,
   gtk_container_add (GTK_CONTAINER (self->priv->list_box), row);
 
   w = gtk_label_new (label);
+  gtk_label_set_line_wrap (GTK_LABEL (w), TRUE);
   gtk_misc_set_alignment (GTK_MISC (w), 0.0f, 0.5f);
   gtk_widget_set_margin_left (w, 20);
   gtk_widget_set_margin_right (w, 20);
