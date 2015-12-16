@@ -347,7 +347,7 @@ cc_info_panel_constructed (GObject *object)
       GtkWidget *sw;
 
       sw = gtk_scrolled_window_new (NULL, NULL);
-      gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (sw), 380);
+      gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (sw), 360);
 
       gtk_container_remove (GTK_CONTAINER (self->priv->hbox1), self->priv->detail_vbox);
       gtk_container_add (GTK_CONTAINER (sw), self->priv->detail_vbox);
