@@ -118,8 +118,6 @@ static gboolean cc_window_set_active_panel_from_id (CcShell      *shell,
 
 static gint get_monitor_height (CcWindow *self);
 
-static void update_small_screen_settings (CcWindow *self);
-
 static const gchar *
 get_icon_name_from_g_icon (GIcon *gicon)
 {
