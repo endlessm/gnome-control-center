@@ -190,22 +190,27 @@ user_loaded_cb (ActUser         *user,
                 GParamSpec      *pspec,
                 UmAccountDialog *self)
 {
-  const gchar *password, *reminder;
-  gchar *sanitized_reminder;
+        const gchar *password;
+        const gchar *reminder;
+        const gchar *locale;
+        gchar *sanitized_reminder;
 
-  finish_action (self);
+        finish_action (self);
 
-  /* Set a password and reminder for the user */
-  password = gtk_entry_get_text (GTK_ENTRY (self->local_password));
-  reminder = gtk_entry_get_text (GTK_ENTRY (self->local_reminder));
-  act_user_set_password_mode (user, self->local_password_mode);
-  if (self->local_password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
-          sanitized_reminder = g_strstrip (g_strdup (reminder));
-          act_user_set_password (user, password, sanitized_reminder);
-          g_free (sanitized_reminder);
-  }
+        password = gtk_entry_get_text (GTK_ENTRY (self->local_password));
+        reminder = gtk_entry_get_text (GTK_ENTRY (self->local_reminder));
+        act_user_set_password_mode (user, self->local_password_mode);
 
-  complete_dialog (self, user);
+        if (self->local_password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
+                sanitized_reminder = g_strstrip (g_strdup (reminder));
+                act_user_set_password (user, password, sanitized_reminder);
+                g_free (sanitized_reminder);
+        }
+
+        locale = setlocale (LC_ALL, NULL);
+        act_user_set_language (user, locale);
+
+        complete_dialog (self, user);
 }
 
 static void
