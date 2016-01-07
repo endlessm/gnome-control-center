@@ -71,6 +71,7 @@ struct _CcBackgroundChooserDialogPrivate
   GCancellable *copy_cancellable;
 
   GtkWidget *spinner;
+  GtkWidget *grid;
 
   gulong row_inserted_id;
   gulong row_deleted_id;
@@ -299,7 +300,8 @@ cc_background_chooser_dialog_init (CcBackgroundChooserDialog *chooser)
   gtk_grid_set_row_spacing (GTK_GRID (grid), 12);
   gtk_grid_set_column_spacing (GTK_GRID (grid), 0);
   gtk_container_add (GTK_CONTAINER (vbox), grid);
-  gtk_widget_set_size_request (grid, 860, 550);
+  gtk_widget_set_size_request (priv->grid, 860, 550);
+  priv->grid = grid;
 
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   gtk_box_set_homogeneous (GTK_BOX (hbox), TRUE);
@@ -476,4 +478,21 @@ bail:
   g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
 
   return item;
+}
+
+void
+cc_background_chooser_dialog_set_is_small_screen (CcBackgroundChooserDialog *chooser,
+                                                  gboolean                   is_small_screen)
+{
+  CcBackgroundChooserDialogPrivate *priv;
+
+  g_return_if_fail (CC_IS_BACKGROUND_CHOOSER_DIALOG (chooser));
+
+  priv = chooser->priv;
+
+  if (is_small_screen)
+    {
+      gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->icon_view), -1);
+      gtk_widget_set_size_request (priv->grid, 650, 400);
+    }
 }
