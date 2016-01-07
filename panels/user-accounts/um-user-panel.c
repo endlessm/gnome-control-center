@@ -386,11 +386,18 @@ select_created_user (GObject *object,
 }
 
 static void
-add_user (GtkButton *button, CcUserPanelPrivate *d)
+add_user (GtkButton *button, CcUserPanel *self)
 {
+        CcUserPanelPrivate *d;
+        CcShell *shell;
+
+        d = self->priv;
+        shell = cc_panel_get_shell (CC_PANEL (self));
+
         d->account_dialog = um_account_dialog_new ();
         um_account_dialog_show (d->account_dialog, GTK_WINDOW (gtk_widget_get_toplevel (d->main_box)),
                                 d->permission, select_created_user, d);
+        um_account_dialog_set_is_small_screen (d->account_dialog, cc_shell_is_small_screen (shell));
 }
 
 static void
@@ -1257,8 +1264,9 @@ match_user (GtkTreeModel *model,
 }
 
 static void
-setup_main_window (CcUserPanelPrivate *d)
+setup_main_window (CcUserPanel *self)
 {
+        CcUserPanelPrivate *d;
         GtkWidget *userlist;
         GtkTreeModel *model;
         GtkListStore *store;
@@ -1274,6 +1282,7 @@ setup_main_window (CcUserPanelPrivate *d)
         gchar *names[3];
         gboolean loaded;
 
+        d = self->priv;
         userlist = get_widget (d, "list-treeview");
         store = gtk_list_store_new (NUM_USER_LIST_COLS,
                                     ACT_TYPE_USER,
@@ -1333,7 +1342,7 @@ setup_main_window (CcUserPanelPrivate *d)
         gtk_widget_set_size_request (get_widget (d, "list-scrolledwindow"), 200, -1);
 
         button = get_widget (d, "add-user-toolbutton");
-        g_signal_connect (button, "clicked", G_CALLBACK (add_user), d);
+        g_signal_connect (button, "clicked", G_CALLBACK (add_user), self);
 
         button = get_widget (d, "remove-user-toolbutton");
         g_signal_connect (button, "clicked", G_CALLBACK (delete_user), d);
@@ -1434,7 +1443,7 @@ cc_user_panel_init (CcUserPanel *self)
         d->main_box = get_widget (d, "accounts-vbox");
         gtk_container_add (GTK_CONTAINER (self), d->main_box);
         d->history_dialog = um_history_dialog_new ();
-        setup_main_window (d);
+        setup_main_window (self);
 
         context = gtk_widget_get_style_context (get_widget (d, "list-scrolledwindow"));
         gtk_style_context_set_junction_sides (context, GTK_JUNCTION_BOTTOM);
