@@ -38,6 +38,8 @@ gboolean     cc_input_chooser_get_selected (GtkWidget    *chooser,
                                             gchar       **name);
 
 void         cc_input_chooser_reset (GtkWidget *chooser);
+void         cc_input_chooser_set_is_small_screen (GtkWidget *chooser,
+                                                   gboolean   is_small_screen);
 
 G_END_DECLS
 
