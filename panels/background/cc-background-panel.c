@@ -757,8 +757,13 @@ on_background_button_clicked (GtkButton         *button,
 {
   CcBackgroundPanelPrivate *priv = self->priv;
   GtkWidget *dialog;
+  CcShell *shell;
+
+  shell = cc_panel_get_shell (CC_PANEL (self));
 
   dialog = cc_background_chooser_dialog_new ();
+  cc_background_chooser_dialog_set_is_small_screen (CC_BACKGROUND_CHOOSER_DIALOG (dialog),
+                                                    cc_shell_is_small_screen (shell));
   gtk_window_set_transient_for (GTK_WINDOW (dialog),
                                 GTK_WINDOW (gtk_widget_get_toplevel (WID ("background-panel"))));
   gtk_widget_show (dialog);
