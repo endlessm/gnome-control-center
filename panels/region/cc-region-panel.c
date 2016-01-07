@@ -437,10 +437,13 @@ show_language_chooser (CcRegionPanel *self)
 {
         GtkWidget *toplevel;
         GtkWidget *chooser;
+        CcShell *shell;
 
+        shell = cc_panel_get_shell (CC_PANEL (self));
         toplevel = gtk_widget_get_toplevel (GTK_WIDGET (self));
         chooser = cc_language_chooser_new (toplevel);
         cc_language_chooser_set_language (chooser, get_effective_language (self));
+        cc_language_chooser_set_is_small_screen (chooser, cc_shell_is_small_screen (shell));
         g_signal_connect (chooser, "response",
                           G_CALLBACK (language_response), self);
         gtk_window_present (GTK_WINDOW (chooser));
@@ -471,10 +474,13 @@ show_region_chooser (CcRegionPanel *self)
 {
         GtkWidget *toplevel;
         GtkWidget *chooser;
+        CcShell *shell;
 
+        shell = cc_panel_get_shell (CC_PANEL (self));
         toplevel = gtk_widget_get_toplevel (GTK_WIDGET (self));
         chooser = cc_format_chooser_new (toplevel);
         cc_format_chooser_set_region (chooser, get_effective_region (self));
+	cc_format_chooser_set_is_small_screen (chooser, cc_shell_is_small_screen (shell));
         g_signal_connect (chooser, "response",
                           G_CALLBACK (format_response), self);
         gtk_window_present (GTK_WINDOW (chooser));
@@ -1114,10 +1120,12 @@ show_input_chooser (CcRegionPanel *self)
 	CcRegionPanelPrivate *priv = self->priv;
         GtkWidget *chooser;
         GtkWidget *toplevel;
+        CcShell *shell;
 
         chooser = g_object_get_data (G_OBJECT (self), "input-chooser");
 
         if (!chooser) {
+                shell = cc_panel_get_shell (CC_PANEL (self));
                 toplevel = gtk_widget_get_toplevel (GTK_WIDGET (self));
                 chooser = cc_input_chooser_new (GTK_WINDOW (toplevel),
                                                 priv->login,
@@ -1128,6 +1136,7 @@ show_input_chooser (CcRegionPanel *self)
                                                 NULL
 #endif
                                                 );
+                cc_input_chooser_set_is_small_screen (chooser, cc_shell_is_small_screen (shell));
                 g_object_ref (chooser);
                 g_object_set_data_full (G_OBJECT (self), "input-chooser",
                                         chooser, g_object_unref);
