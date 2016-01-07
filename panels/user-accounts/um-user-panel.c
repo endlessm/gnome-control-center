@@ -369,11 +369,18 @@ select_created_user (GObject *object,
 }
 
 static void
-add_user (GtkButton *button, CcUserPanelPrivate *d)
+add_user (GtkButton *button, CcUserPanel *self)
 {
+        CcUserPanelPrivate *d;
+        CcShell *shell;
+
+        d = self->priv;
+        shell = cc_panel_get_shell (CC_PANEL (self));
+
         d->account_dialog = um_account_dialog_new ();
         um_account_dialog_show (d->account_dialog, GTK_WINDOW (gtk_widget_get_toplevel (d->main_box)),
                                 d->permission, select_created_user, d);
+        um_account_dialog_set_is_small_screen (d->account_dialog, cc_shell_is_small_screen (shell));
 }
 
 static void
@@ -1336,7 +1343,7 @@ setup_main_window (CcUserPanel *self)
         g_signal_connect (d->carousel, "item-activated", G_CALLBACK (set_selected_user), d);
 
         button = get_widget (d, "add-user-toolbutton");
-        g_signal_connect (button, "clicked", G_CALLBACK (add_user), d);
+        g_signal_connect (button, "clicked", G_CALLBACK (add_user), self);
 
         button = get_widget (d, "remove-user-toolbutton");
         g_signal_connect (button, "clicked", G_CALLBACK (delete_user), self);
