@@ -70,6 +70,7 @@ static void   um_account_dialog_response  (GtkDialog *dialog,
 struct _UmAccountDialog {
         GtkDialog parent;
         GtkWidget *stack;
+        GtkWidget *scrolledwindow;
         GSimpleAsyncResult *async;
         GCancellable *cancellable;
         GPermission *permission;
@@ -1569,6 +1570,7 @@ um_account_dialog_class_init (UmAccountDialogClass *klass)
                                                      "/org/gnome/control-center/user-accounts/account-dialog.ui");
 
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, stack);
+        gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, scrolledwindow);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_username);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_username_entry);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_name);
@@ -1645,4 +1647,22 @@ um_account_dialog_finish (UmAccountDialog     *self,
 
         g_clear_object (&self->async);
         return user;
+}
+
+void
+um_account_dialog_set_is_small_screen (UmAccountDialog *self,
+                                       gboolean         is_small_screen)
+{
+        if (is_small_screen) {
+                GtkWindow *transient;
+                gint width, height;
+
+                transient = gtk_window_get_transient_for (GTK_WINDOW (self));
+
+                gtk_window_get_size (transient, &width, &height);
+                gtk_widget_set_size_request (GTK_WIDGET (self), width, height);
+                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (self->scrolledwindow),
+                                                GTK_POLICY_NEVER,
+                                                GTK_POLICY_AUTOMATIC);
+        }
 }
