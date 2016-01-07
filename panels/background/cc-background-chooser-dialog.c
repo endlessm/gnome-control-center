@@ -636,3 +636,17 @@ bail:
 
   return item;
 }
+
+void
+cc_background_chooser_dialog_set_is_small_screen (CcBackgroundChooserDialog *chooser,
+                                                  gboolean                   is_small_screen)
+{
+  GtkWidget *icon_view;
+
+  g_return_if_fail (CC_IS_BACKGROUND_CHOOSER_DIALOG (chooser));
+
+  icon_view = get_visible_view (chooser);
+
+  if (is_small_screen)
+    gtk_icon_view_set_columns (GTK_ICON_VIEW (icon_view), -1);
+}

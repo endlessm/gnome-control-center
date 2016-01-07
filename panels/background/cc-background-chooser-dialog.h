@@ -51,6 +51,9 @@ struct _CcBackgroundChooserDialogClass
 GType                  cc_background_chooser_dialog_get_type               (void) G_GNUC_CONST;
 GtkWidget *            cc_background_chooser_dialog_new                    (GtkWindow *transient_for);
 
+void                   cc_background_chooser_dialog_set_is_small_screen    (CcBackgroundChooserDialog *chooser,
+                                                                            gboolean                   is_small_screen);
+
 CcBackgroundItem *     cc_background_chooser_dialog_get_item               (CcBackgroundChooserDialog *chooser);
 
 G_END_DECLS
