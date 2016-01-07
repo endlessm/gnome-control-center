@@ -1141,3 +1141,21 @@ cc_input_chooser_reset (GtkWidget *chooser)
 {
   show_locale_rows (chooser);
 }
+
+void
+cc_input_chooser_set_is_small_screen (GtkWidget *chooser,
+                                      gboolean   is_small_screen)
+{
+        CcInputChooserPrivate *priv = GET_PRIVATE (chooser);
+
+        if (is_small_screen) {
+                gint width, height;
+
+                gtk_window_get_size (gtk_window_get_transient_for (GTK_WINDOW (chooser)), &width, &height);
+                gtk_widget_set_size_request (GTK_WIDGET (chooser), width * MAIN_WINDOW_WIDTH_RATIO, height);
+
+                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->scrolledwindow),
+                                                GTK_POLICY_AUTOMATIC,
+                                                GTK_POLICY_AUTOMATIC);
+        }
+}
