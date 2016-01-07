@@ -31,6 +31,8 @@ void         cc_language_chooser_clear_filter (GtkWidget   *chooser);
 const gchar *cc_language_chooser_get_language (GtkWidget   *chooser);
 void         cc_language_chooser_set_language (GtkWidget   *chooser,
                                                const gchar *language);
+void         cc_language_chooser_set_is_small_screen (GtkWidget *chooser,
+                                                      gboolean   is_small_screen);
 
 G_END_DECLS
 

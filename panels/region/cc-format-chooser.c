@@ -197,7 +197,7 @@ sort_regions (gconstpointer a,
 }
 
 static GtkWidget *
-padded_label_new (char *text, gboolean narrow)
+padded_label_new (char *text)
 {
         GtkWidget *widget;
 
@@ -205,8 +205,6 @@ padded_label_new (char *text, gboolean narrow)
         gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
         gtk_widget_set_margin_top (widget, 10);
         gtk_widget_set_margin_bottom (widget, 10);
-        gtk_widget_set_margin_start (widget, narrow ? 10 : 80);
-        gtk_widget_set_margin_end (widget, narrow ? 10 : 80);
         gtk_box_pack_start (GTK_BOX (widget), gtk_label_new (text), FALSE, FALSE, 0);
 
         return widget;
@@ -230,7 +228,7 @@ region_widget_new (const gchar *locale_id,
         locale_untranslated_name = gnome_get_country_from_locale (locale_id, "C");
 
         row = gtk_list_box_row_new ();
-        box = padded_label_new (locale_name, is_extra);
+        box = padded_label_new (locale_name);
         gtk_container_add (GTK_CONTAINER (row), box);
 
         /* We add a check on each side of the label to keep it centered. */
@@ -282,7 +280,7 @@ no_results_widget_new (void)
 {
         GtkWidget *widget;
 
-        widget = padded_label_new (_("No regions found"), TRUE);
+        widget = padded_label_new (_("No regions found"));
         gtk_widget_set_sensitive (widget, FALSE);
         return widget;
 }
@@ -590,4 +588,22 @@ cc_format_chooser_set_region (GtkWidget   *chooser,
                               const gchar *region)
 {
         set_locale_id (GTK_DIALOG (chooser), region);
+}
+
+void
+cc_format_chooser_set_is_small_screen (GtkWidget *chooser,
+                                       gboolean   is_small_screen)
+{
+        CcFormatChooserPrivate *priv = GET_PRIVATE (chooser);
+
+        if (is_small_screen) {
+                gint width, height;
+
+                gtk_window_get_size (gtk_window_get_transient_for (GTK_WINDOW (chooser)), &width, &height);
+                gtk_widget_set_size_request (GTK_WIDGET (chooser), width, height);
+
+                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->scrolledwindow),
+                                                GTK_POLICY_NEVER,
+                                                GTK_POLICY_AUTOMATIC);
+        }
 }
