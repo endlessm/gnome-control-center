@@ -33,6 +33,8 @@ void         cc_format_chooser_clear_filter (GtkWidget   *chooser);
 const gchar *cc_format_chooser_get_region   (GtkWidget   *chooser);
 void         cc_format_chooser_set_region   (GtkWidget   *chooser,
                                              const gchar *region);
+void         cc_format_chooser_set_is_small_screen (GtkWidget *chooser,
+                                                    gboolean   is_small_screen);
 
 G_END_DECLS
 
