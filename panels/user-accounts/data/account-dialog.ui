@@ -39,6 +39,16 @@
             <property name="border_width">6</property>
             <property name="margin_bottom">6</property>
             <child>
+              <object class="GtkScrolledWindow" id="account-dialog-scrolledwindow">
+		<property name="visible">True</property>
+		<property name="can_focus">False</property>
+		<property name="hscrollbar_policy">never</property>
+		<property name="vscrollbar_policy">never</property>
+		<child>
+		  <object class="GtkViewport" id="viewport">
+		    <property name="visible">True</property>
+		    <property name="can_focus">False</property>
+                    <child>
               <object class="GtkGrid" id="local-area">
                 <property name="visible">True</property>
                 <property name="hexpand">True</property>
@@ -392,6 +402,10 @@
 		    <property name="top_attach">11</property>
 		  </packing>
 		</child>
+              </object>
+	            </child>
+	          </object>
+	        </child>
               </object>
               <packing>
                 <property name="name">_local</property>
