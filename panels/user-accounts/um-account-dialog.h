@@ -44,6 +44,9 @@ void             um_account_dialog_show     (UmAccountDialog     *self,
 ActUser *        um_account_dialog_finish   (UmAccountDialog     *self,
                                              GAsyncResult        *result);
 
+void             um_account_dialog_set_is_small_screen (UmAccountDialog *self,
+                                                        gboolean         is_small_screen);
+
 G_END_DECLS
 
 #endif
