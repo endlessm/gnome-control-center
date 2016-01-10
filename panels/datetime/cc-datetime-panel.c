@@ -71,6 +71,8 @@ enum {
 struct _CcDateTimePanelPrivate
 {
   GtkBuilder *builder;
+  GtkWidget *timezone_dialog;
+  GtkWidget *scrolled_window;
   GtkWidget *map;
 
   GList *listboxes;
@@ -159,6 +161,30 @@ cc_date_time_panel_get_help_uri (CcPanel *panel)
 }
 
 static void
+cc_date_time_panel_constructed (GObject *object)
+{
+  CcDateTimePanelPrivate *priv;
+  CcShell *shell;
+
+  G_OBJECT_CLASS (cc_date_time_panel_parent_class)->constructed (object);
+
+  priv = CC_DATE_TIME_PANEL (object)->priv;
+  shell = cc_panel_get_shell (CC_PANEL (object));
+
+  if (cc_shell_is_small_screen (shell))
+    {
+      gint width, height;
+
+      gtk_window_get_size (GTK_WINDOW (cc_shell_get_toplevel (shell)), &width, &height);
+      gtk_widget_set_size_request (priv->timezone_dialog, width, height);
+
+      gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->scrolled_window),
+                                      GTK_POLICY_AUTOMATIC,
+                                      GTK_POLICY_AUTOMATIC);
+    }
+}
+
+static void
 cc_date_time_panel_class_init (CcDateTimePanelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
@@ -166,6 +192,7 @@ cc_date_time_panel_class_init (CcDateTimePanelClass *klass)
 
   g_type_class_add_private (klass, sizeof (CcDateTimePanelPrivate));
 
+  object_class->constructed = cc_date_time_panel_constructed;
   object_class->dispose = cc_date_time_panel_dispose;
 
   panel_class->get_permission = cc_date_time_panel_get_permission;
@@ -1033,6 +1060,9 @@ setup_timezone_dialog (CcDateTimePanel *self)
   gtk_widget_show (priv->map);
   gtk_container_add (GTK_CONTAINER (gtk_builder_get_object (priv->builder, "aspectmap")),
                      priv->map);
+
+  priv->timezone_dialog = W ("timezone-dialog");
+  priv->scrolled_window = W ("timezone-scrolledwindow");
 
   dialog = W ("timezone-dialog");
   entry = W ("timezone-searchentry");
