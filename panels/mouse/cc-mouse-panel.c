@@ -35,6 +35,8 @@ CC_PANEL_REGISTER (CcMousePanel, cc_mouse_panel)
 #define MOUSE_PANEL_PRIVATE(o) \
   (G_TYPE_INSTANCE_GET_PRIVATE ((o), CC_TYPE_MOUSE_PANEL, CcMousePanelPrivate))
 
+#define TEST_WIDGET_DEFAULT_HEIGHT 540
+
 struct _CcMousePanelPrivate
 {
   GtkWidget  *test_dialog;
@@ -71,6 +73,24 @@ static void
 shell_test_button_clicked (GtkButton *button, CcMousePanel *panel)
 {
   CcMousePanelPrivate *priv = panel->priv;
+  CcShell *shell;
+
+  shell = cc_panel_get_shell (CC_PANEL (panel));
+
+  /* When running on a small screen, make the test dialog
+   * the same height of the toplevel. */
+  if (cc_shell_is_small_screen (shell))
+    {
+      gint height;
+
+      gtk_window_get_size (GTK_WINDOW (cc_shell_get_toplevel (shell)), NULL, &height);
+
+      gtk_widget_set_size_request (priv->test_dialog, -1, height);
+    }
+  else
+    {
+      gtk_widget_set_size_request (priv->test_widget, -1, TEST_WIDGET_DEFAULT_HEIGHT);
+    }
 
   /* GTK_RESPONSE_NONE is returned if the dialog is being destroyed, so only
    * hide the dialog if it is not being destroyed */
