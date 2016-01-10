@@ -121,6 +121,9 @@ struct _CcUaPanelPrivate
   GList *sections_reverse;
 
   GSList *toplevels;
+
+  GtkWidget *typing_dialog;
+  GtkWidget *scrolled_window;
 };
 
 static void
@@ -154,6 +157,30 @@ cc_ua_panel_get_help_uri (CcPanel *panel)
 }
 
 static void
+cc_ua_panel_constructed (GObject *object)
+{
+  CcUaPanelPrivate *priv;
+  CcShell *shell;
+
+  G_OBJECT_CLASS (cc_ua_panel_parent_class)->constructed (object);
+
+  priv = CC_UA_PANEL (object)->priv;
+  shell = cc_panel_get_shell (CC_PANEL (object));
+
+  if (cc_shell_is_small_screen (shell))
+    {
+      gint width, height;
+
+      gtk_window_get_size (GTK_WINDOW (cc_shell_get_toplevel (shell)), &width, &height);
+      gtk_widget_set_size_request (GTK_WIDGET (priv->typing_dialog), width, height);
+
+      gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->scrolled_window),
+                                      GTK_POLICY_AUTOMATIC,
+                                      GTK_POLICY_AUTOMATIC);
+    }
+}
+
+static void
 cc_ua_panel_class_init (CcUaPanelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
@@ -163,6 +190,7 @@ cc_ua_panel_class_init (CcUaPanelClass *klass)
 
   panel_class->get_help_uri = cc_ua_panel_get_help_uri;
 
+  object_class->constructed = cc_ua_panel_constructed;
   object_class->dispose = cc_ua_panel_dispose;
 }
 
@@ -765,12 +793,13 @@ cc_ua_panel_init_keyboard (CcUaPanel *self)
                    G_SETTINGS_BIND_NO_SENSITIVITY);
   g_object_bind_property (sw, "active", w, "sensitive", G_BINDING_SYNC_CREATE);
 
-  dialog = WID ("typing_dialog");
-  priv->toplevels = g_slist_prepend (priv->toplevels, dialog);
+  priv->typing_dialog = WID ("typing_dialog");
+  priv->toplevels = g_slist_prepend (priv->toplevels, priv->typing_dialog);
+  priv->scrolled_window = WID ("typing-scrolledwindow");
 
-  g_object_set_data (G_OBJECT (WID ("row_accessx")), "dialog", dialog);
+  g_object_set_data (G_OBJECT (WID ("row_accessx")), "dialog", priv->typing_dialog);
 
-  g_signal_connect (dialog, "delete-event",
+  g_signal_connect (priv->typing_dialog, "delete-event",
                     G_CALLBACK (gtk_widget_hide_on_delete), NULL);
 }
 
