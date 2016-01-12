@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-15 03:45+0000\n"
+"POT-Creation-Date: 2016-01-06 21:21+0000\n"
 "PO-Revision-Date: 2015-04-10 05:14+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/es/)\n"
@@ -118,7 +118,7 @@ msgstr "Puede añadir imágenes a su carpeta %s y se mostrarán aquí"
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
 #: ../panels/printers/cc-printers-panel.c:1946
 #: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:616
+#: ../panels/privacy/cc-privacy-panel.c:617
 #: ../panels/search/cc-search-locations-dialog.c:682
 #: ../panels/sharing/cc-sharing-panel.c:425
 #: ../panels/user-accounts/um-fingerprint-dialog.c:269
@@ -587,7 +587,7 @@ msgstr "Calibración de la pantalla"
 #: ../panels/color/color-calibrate.ui.h:2
 #: ../panels/printers/authentication-dialog.ui.h:2
 #: ../panels/printers/ppd-selection-dialog.ui.h:2
-#: ../panels/user-accounts/um-account-dialog.c:1479
+#: ../panels/user-accounts/um-account-dialog.c:1480
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -921,7 +921,7 @@ msgid "Language"
 msgstr "Idioma"
 
 #: ../panels/common/language-chooser.ui.h:2
-#: ../panels/mouse/cc-mouse-panel.c:111 ../panels/region/format-chooser.ui.h:2
+#: ../panels/mouse/cc-mouse-panel.c:116 ../panels/region/format-chooser.ui.h:2
 msgid "_Done"
 msgstr "_Hecho"
 
@@ -1103,8 +1103,8 @@ msgstr "Primaria"
 #: ../panels/power/cc-power-panel.c:1735 ../panels/power/cc-power-panel.c:1746
 #: ../panels/privacy/cc-privacy-panel.c:86
 #: ../panels/privacy/cc-privacy-panel.c:126
-#: ../panels/privacy/cc-privacy-panel.c:261
-#: ../panels/privacy/cc-privacy-panel.c:313
+#: ../panels/privacy/cc-privacy-panel.c:262
+#: ../panels/privacy/cc-privacy-panel.c:314
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -1211,50 +1211,50 @@ msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "Panel;Proyector;xranrd;Pantalla;Resolución;Actualizar;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:342 ../panels/network/panel-common.c:127
+#: ../panels/info/cc-info-panel.c:345 ../panels/network/panel-common.c:127
 msgid "Unknown"
 msgstr "Desconocido"
 
 #. translators: This is the the type of OS architecture, eg: "64-bit" or
 #. "32-bit"
-#: ../panels/info/cc-info-panel.c:467
+#: ../panels/info/cc-info-panel.c:496
 #, c-format
 msgid "%d-bit"
 msgstr "%d-bit"
 
-#: ../panels/info/cc-info-panel.c:1145
+#: ../panels/info/cc-info-panel.c:1174
 msgid "Ask what to do"
 msgstr "Preguntar qué hacer"
 
-#: ../panels/info/cc-info-panel.c:1149
+#: ../panels/info/cc-info-panel.c:1178
 msgid "Do nothing"
 msgstr "No hacer nada"
 
-#: ../panels/info/cc-info-panel.c:1153
+#: ../panels/info/cc-info-panel.c:1182
 msgid "Open folder"
 msgstr "Abrir carpeta"
 
-#: ../panels/info/cc-info-panel.c:1244
+#: ../panels/info/cc-info-panel.c:1273
 msgid "Other Media"
 msgstr "Otros soportes"
 
-#: ../panels/info/cc-info-panel.c:1275
+#: ../panels/info/cc-info-panel.c:1304
 msgid "Select an application for audio CDs"
 msgstr "Seleccionar una aplicación para CD de sonido"
 
-#: ../panels/info/cc-info-panel.c:1276
+#: ../panels/info/cc-info-panel.c:1305
 msgid "Select an application for video DVDs"
 msgstr "Seleccionar una aplicación para DVD de vídeo"
 
-#: ../panels/info/cc-info-panel.c:1277
+#: ../panels/info/cc-info-panel.c:1306
 msgid "Select an application to run when a music player is connected"
 msgstr "Seleccionar una aplicación que ejecutar cuando se conecta un reproductor de música"
 
-#: ../panels/info/cc-info-panel.c:1278
+#: ../panels/info/cc-info-panel.c:1307
 msgid "Select an application to run when a camera is connected"
 msgstr "Seleccionar una aplicación que ejecutar cuando se conecta una cámara"
 
-#: ../panels/info/cc-info-panel.c:1279
+#: ../panels/info/cc-info-panel.c:1308
 msgid "Select an application for software CDs"
 msgstr "Seleccionar una aplicación para CD de software"
 
@@ -1262,100 +1262,100 @@ msgstr "Seleccionar una aplicación para CD de software"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#: ../panels/info/cc-info-panel.c:1291
+#: ../panels/info/cc-info-panel.c:1320
 msgid "audio DVD"
 msgstr "DVD de sonido"
 
-#: ../panels/info/cc-info-panel.c:1292
+#: ../panels/info/cc-info-panel.c:1321
 msgid "blank Blu-ray disc"
 msgstr "disco Blu-ray virgen"
 
-#: ../panels/info/cc-info-panel.c:1293
+#: ../panels/info/cc-info-panel.c:1322
 msgid "blank CD disc"
 msgstr "CD virgen"
 
-#: ../panels/info/cc-info-panel.c:1294
+#: ../panels/info/cc-info-panel.c:1323
 msgid "blank DVD disc"
 msgstr "DVD virgen"
 
-#: ../panels/info/cc-info-panel.c:1295
+#: ../panels/info/cc-info-panel.c:1324
 msgid "blank HD DVD disc"
 msgstr "disco HD DVD virgen"
 
-#: ../panels/info/cc-info-panel.c:1296
+#: ../panels/info/cc-info-panel.c:1325
 msgid "Blu-ray video disc"
 msgstr "Disco Blu-ray de vídeo"
 
-#: ../panels/info/cc-info-panel.c:1297
+#: ../panels/info/cc-info-panel.c:1326
 msgid "e-book reader"
 msgstr "lector de libros electrónicos"
 
-#: ../panels/info/cc-info-panel.c:1298
+#: ../panels/info/cc-info-panel.c:1327
 msgid "HD DVD video disc"
 msgstr "Disco HD DVD de vídeo"
 
-#: ../panels/info/cc-info-panel.c:1299
+#: ../panels/info/cc-info-panel.c:1328
 msgid "Picture CD"
 msgstr "CD de imágenes"
 
-#: ../panels/info/cc-info-panel.c:1300
+#: ../panels/info/cc-info-panel.c:1329
 msgid "Super Video CD"
 msgstr "Super Video CD"
 
-#: ../panels/info/cc-info-panel.c:1301
+#: ../panels/info/cc-info-panel.c:1330
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../panels/info/cc-info-panel.c:1302
+#: ../panels/info/cc-info-panel.c:1331
 msgid "Windows software"
 msgstr "Software de Windows"
 
-#: ../panels/info/cc-info-panel.c:1303
+#: ../panels/info/cc-info-panel.c:1332
 msgid "Software"
 msgstr "Software"
 
-#: ../panels/info/cc-info-panel.c:1426
+#: ../panels/info/cc-info-panel.c:1455
 #: ../panels/keyboard/keyboard-shortcuts.c:1696
 msgid "Section"
 msgstr "Sección"
 
-#: ../panels/info/cc-info-panel.c:1435 ../panels/info/info.ui.h:14
+#: ../panels/info/cc-info-panel.c:1464 ../panels/info/info.ui.h:14
 msgid "Overview"
 msgstr "Visión general"
 
-#: ../panels/info/cc-info-panel.c:1441 ../panels/info/info.ui.h:21
+#: ../panels/info/cc-info-panel.c:1470 ../panels/info/info.ui.h:21
 msgid "Default Applications"
 msgstr "Aplicaciones predeterminadas"
 
-#: ../panels/info/cc-info-panel.c:1446 ../panels/info/info.ui.h:29
+#: ../panels/info/cc-info-panel.c:1475 ../panels/info/info.ui.h:29
 msgid "Removable Media"
 msgstr "Soportes extraíbles"
 
-#: ../panels/info/cc-info-panel.c:1498
+#: ../panels/info/cc-info-panel.c:1527
 msgid "No updates available"
 msgstr "No hay actualizaciones disponibles"
 
-#: ../panels/info/cc-info-panel.c:1500
+#: ../panels/info/cc-info-panel.c:1529
 msgid "Check for updates now"
 msgstr "Buscar actualizaciones ahora"
 
-#: ../panels/info/cc-info-panel.c:1502
+#: ../panels/info/cc-info-panel.c:1531
 msgid "Update failed"
 msgstr "Hubo un error durante la actualización"
 
-#: ../panels/info/cc-info-panel.c:1504
+#: ../panels/info/cc-info-panel.c:1533
 msgid "Checking for updates…"
 msgstr "Buscando actualizaciones..."
 
-#: ../panels/info/cc-info-panel.c:1507
+#: ../panels/info/cc-info-panel.c:1536
 msgid "Install updates now"
 msgstr "Instalar actualizaciones ahora"
 
-#: ../panels/info/cc-info-panel.c:1510
+#: ../panels/info/cc-info-panel.c:1539
 msgid "Installing updates…"
 msgstr "Instalando actualizaciones..."
 
-#: ../panels/info/cc-info-panel.c:1512
+#: ../panels/info/cc-info-panel.c:1541
 msgid "Restart to complete update"
 msgstr "Reiniciar para completar la actualización"
 
@@ -1822,7 +1822,7 @@ msgstr "_Reasignar"
 msgid "Test Your _Settings"
 msgstr "_Probar su configuración"
 
-#: ../panels/mouse/cc-mouse-panel.c:108
+#: ../panels/mouse/cc-mouse-panel.c:113
 msgid "Test Your Settings"
 msgstr "Probar su configuración"
 
@@ -2423,7 +2423,7 @@ msgstr "Perfil nuevo"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:511
 #: ../panels/printers/new-printer-dialog.ui.h:3
-#: ../panels/user-accounts/um-account-dialog.c:1480
+#: ../panels/user-accounts/um-account-dialog.c:1481
 msgid "_Add"
 msgstr "_Añadir"
 
@@ -2688,7 +2688,7 @@ msgid "History"
 msgstr "Histórico"
 
 #: ../panels/network/net-device-wifi.c:1730 ../panels/power/power.ui.h:21
-#: ../panels/privacy/privacy.ui.h:23 ../panels/sound/gvc-mixer-dialog.c:1596
+#: ../panels/privacy/privacy.ui.h:23 ../panels/sound/gvc-mixer-dialog.c:1603
 #: ../panels/wacom/cc-wacom-page.c:534
 msgid "_Close"
 msgstr "_Cerrar"
@@ -3519,7 +3519,7 @@ msgstr "Mostrar detalles en la pantalla de bloqueo"
 #: ../panels/power/cc-power-panel.c:1741 ../panels/power/cc-power-panel.c:1748
 #: ../panels/privacy/cc-privacy-panel.c:86
 #: ../panels/privacy/cc-privacy-panel.c:126
-#: ../panels/privacy/cc-privacy-panel.c:313
+#: ../panels/privacy/cc-privacy-panel.c:314
 #: ../panels/universal-access/cc-ua-panel.c:257
 #: ../panels/universal-access/cc-ua-panel.c:597
 #: ../panels/universal-access/cc-ua-panel.c:722
@@ -4567,44 +4567,44 @@ msgid ""
 "doesn't seem to be available."
 msgstr "El servicio del sistema de impresión\nparece no estar disponible."
 
-#: ../panels/privacy/cc-privacy-panel.c:261
-#: ../panels/privacy/cc-privacy-panel.c:264 ../panels/privacy/privacy.ui.h:29
+#: ../panels/privacy/cc-privacy-panel.c:262
+#: ../panels/privacy/cc-privacy-panel.c:265 ../panels/privacy/privacy.ui.h:29
 msgid "Screen Lock"
 msgstr "Bloqueo de pantalla"
 
-#: ../panels/privacy/cc-privacy-panel.c:410 ../panels/privacy/privacy.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:411 ../panels/privacy/privacy.ui.h:26
 msgid "Metrics"
 msgstr "Métricas"
 
-#: ../panels/privacy/cc-privacy-panel.c:507 ../panels/privacy/privacy.ui.h:20
+#: ../panels/privacy/cc-privacy-panel.c:508 ../panels/privacy/privacy.ui.h:20
 msgid "Usage & History"
 msgstr "Uso e histórico"
 
-#: ../panels/privacy/cc-privacy-panel.c:635
+#: ../panels/privacy/cc-privacy-panel.c:636
 msgid "Empty all items from Trash?"
 msgstr "¿Quiere vaciar todos los elementos de la papelera?"
 
-#: ../panels/privacy/cc-privacy-panel.c:636
+#: ../panels/privacy/cc-privacy-panel.c:637
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Todos los elementos de la papelera se eliminarán de manera permanente."
 
-#: ../panels/privacy/cc-privacy-panel.c:637 ../panels/privacy/privacy.ui.h:35
+#: ../panels/privacy/cc-privacy-panel.c:638 ../panels/privacy/privacy.ui.h:35
 msgid "_Empty Trash"
 msgstr "_Vaciar papelera"
 
-#: ../panels/privacy/cc-privacy-panel.c:660
+#: ../panels/privacy/cc-privacy-panel.c:661
 msgid "Delete all the temporary files?"
 msgstr "¿Quiere eliminar todos los archivos temporales?"
 
-#: ../panels/privacy/cc-privacy-panel.c:661
+#: ../panels/privacy/cc-privacy-panel.c:662
 msgid "All the temporary files will be permanently deleted."
 msgstr "Todos los archivos temporales se eliminarán de manera permanente."
 
-#: ../panels/privacy/cc-privacy-panel.c:662 ../panels/privacy/privacy.ui.h:36
+#: ../panels/privacy/cc-privacy-panel.c:663 ../panels/privacy/privacy.ui.h:36
 msgid "_Purge Temporary Files"
 msgstr "_Limpiar archivos temporales"
 
-#: ../panels/privacy/cc-privacy-panel.c:684 ../panels/privacy/privacy.ui.h:34
+#: ../panels/privacy/cc-privacy-panel.c:685 ../panels/privacy/privacy.ui.h:34
 msgid "Purge Trash & Temporary Files"
 msgstr "Vaciar papelera y archivos temporales"
 
@@ -5242,65 +5242,65 @@ msgstr "_Probar los altavoces"
 msgid "Peak detect"
 msgstr "Detección de picos"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1510
+#: ../panels/sound/gvc-mixer-dialog.c:1517
 #: ../panels/sound/gvc-sound-theme-chooser.c:595
 msgid "Name"
 msgstr "Nombre"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1529
+#: ../panels/sound/gvc-mixer-dialog.c:1536
 msgid "Device"
 msgstr "Dispositivo"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1592
+#: ../panels/sound/gvc-mixer-dialog.c:1599
 #, c-format
 msgid "Speaker Testing for %s"
 msgstr "Prueba de altavoces para %s"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1649
+#: ../panels/sound/gvc-mixer-dialog.c:1656
 msgid "_Output volume:"
 msgstr "Volumen de sali_da:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1663
+#: ../panels/sound/gvc-mixer-dialog.c:1670
 msgid "Output"
 msgstr "Salida"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1668
+#: ../panels/sound/gvc-mixer-dialog.c:1675
 msgid "C_hoose a device for sound output:"
 msgstr "_Elegir un dispositivo para la salida de sonido:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1693
+#: ../panels/sound/gvc-mixer-dialog.c:1700
 msgid "Settings for the selected device:"
 msgstr "Configuración para el dispositivo seleccionado:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1704
+#: ../panels/sound/gvc-mixer-dialog.c:1711
 msgid "Input"
 msgstr "Entrada"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1711
+#: ../panels/sound/gvc-mixer-dialog.c:1718
 msgid "_Input volume:"
 msgstr "Volumen de _entrada:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1734
+#: ../panels/sound/gvc-mixer-dialog.c:1741
 msgid "Input level:"
 msgstr "Nivel de entrada:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1762
+#: ../panels/sound/gvc-mixer-dialog.c:1769
 msgid "C_hoose a device for sound input:"
 msgstr "_Elegir un dispositivo para la entrada de sonido:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1789
+#: ../panels/sound/gvc-mixer-dialog.c:1796
 msgid "Sound Effects"
 msgstr "Efectos de sonido"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1796
+#: ../panels/sound/gvc-mixer-dialog.c:1803
 msgid "_Alert volume:"
 msgstr "Volumen de _alerta:"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1809
+#: ../panels/sound/gvc-mixer-dialog.c:1816
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: ../panels/sound/gvc-mixer-dialog.c:1813
+#: ../panels/sound/gvc-mixer-dialog.c:1820
 msgid "No application is currently playing or recording audio."
 msgstr "Actualmente ninguna aplicación está reproduciendo o grabando sonido."
 
@@ -6180,57 +6180,57 @@ msgstr "Error desconocido"
 msgid "Should match the web address of your account provider."
 msgstr "Debe coincidir con la dirección web del proveedor de la cuenta."
 
-#: ../panels/user-accounts/um-account-dialog.c:228
+#: ../panels/user-accounts/um-account-dialog.c:229
 msgid "Failed to add account"
 msgstr "Falló al añadir la cuenta"
 
-#: ../panels/user-accounts/um-account-dialog.c:321
+#: ../panels/user-accounts/um-account-dialog.c:322
 msgid "This will be used to name your home folder and can't be changed."
 msgstr "Esto se usará para nombrar tu carpeta personal y no se puede cambiar."
 
-#: ../panels/user-accounts/um-account-dialog.c:454
+#: ../panels/user-accounts/um-account-dialog.c:455
 msgid "Passwords do not match."
 msgstr "Las contraseñas no coinciden."
 
-#: ../panels/user-accounts/um-account-dialog.c:728
-#: ../panels/user-accounts/um-account-dialog.c:774
+#: ../panels/user-accounts/um-account-dialog.c:729
+#: ../panels/user-accounts/um-account-dialog.c:775
 msgid "Failed to register account"
 msgstr "Falló al registrar la cuenta"
 
-#: ../panels/user-accounts/um-account-dialog.c:912
+#: ../panels/user-accounts/um-account-dialog.c:913
 msgid "No supported way to authenticate with this domain"
 msgstr "No hay una manera soportada de autenticar con este dominio"
 
-#: ../panels/user-accounts/um-account-dialog.c:971
+#: ../panels/user-accounts/um-account-dialog.c:972
 msgid "Failed to join domain"
 msgstr "Falló al unirse al dominio"
 
-#: ../panels/user-accounts/um-account-dialog.c:1032
+#: ../panels/user-accounts/um-account-dialog.c:1033
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
 msgstr "El nombre de inicio de sesión no ha funcionado.\nInténtelo de nuevo."
 
-#: ../panels/user-accounts/um-account-dialog.c:1039
+#: ../panels/user-accounts/um-account-dialog.c:1040
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
 msgstr "La contraseña de inicio de sesión no ha funcionado.\nInténtelo de nuevo."
 
-#: ../panels/user-accounts/um-account-dialog.c:1047
+#: ../panels/user-accounts/um-account-dialog.c:1048
 msgid "Failed to log into domain"
 msgstr "Falló al iniciar sesión en el dominio"
 
-#: ../panels/user-accounts/um-account-dialog.c:1105
+#: ../panels/user-accounts/um-account-dialog.c:1106
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr "No se pudo encontrar el dominio. ¿Está bien escrito?"
 
-#: ../panels/user-accounts/um-account-dialog.c:1455
+#: ../panels/user-accounts/um-account-dialog.c:1456
 msgid "Add User"
 msgstr "Añadir usuario"
 
 #. Create enterprise toggle button.
-#: ../panels/user-accounts/um-account-dialog.c:1468
+#: ../panels/user-accounts/um-account-dialog.c:1469
 msgid "_Enterprise Login"
 msgstr "Inicio de s_esión corporativo"
 
@@ -6913,7 +6913,7 @@ msgstr "Ayuda"
 msgid "Quit"
 msgstr "Salir"
 
-#: ../shell/cc-window.c:61 ../shell/cc-window.c:1486
+#: ../shell/cc-window.c:61 ../shell/cc-window.c:1505
 msgid "All Settings"
 msgstr "Todas las configuraciones"
 
@@ -6933,7 +6933,7 @@ msgctxt "category"
 msgid "System"
 msgstr "Sistema"
 
-#: ../shell/cc-window.c:1597 ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cc-window.c:1616 ../shell/gnome-control-center.desktop.in.in.h:1
 msgid "Settings"
 msgstr "Configuración"
 
