@@ -36,6 +36,17 @@
         <property name="spacing">0</property>
         <property name="border_width">0</property>
         <child>
+          <object class="GtkScrolledWindow" id="toplevel_scrolled_window">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="hscrollbar_policy">never</property>
+            <property name="vscrollbar_policy">never</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="shadow_type">none</property>
+        <child>
           <object class="GtkNotebook" id="details_toplevel_notebook">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -112,6 +123,10 @@
                 <property name="position">1</property>
                 <property name="tab_fill">False</property>
               </packing>
+            </child>
+          </object>
+        </child>
+              </object>
             </child>
           </object>
           <packing>

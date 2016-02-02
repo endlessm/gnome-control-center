@@ -21,6 +21,8 @@
 
 #include "config.h"
 
+#include <shell/cc-panel.h>
+
 #include <glib-object.h>
 #include <glib/gi18n.h>
 
@@ -159,6 +161,7 @@ net_connection_editor_init (NetConnectionEditor *editor)
         }
 
         editor->window = GTK_WIDGET (gtk_builder_get_object (editor->builder, "details_dialog"));
+        editor->scrolled_window = GTK_WIDGET (gtk_builder_get_object (editor->builder, "toplevel_scrolled_window"));
 }
 
 void
@@ -832,6 +835,18 @@ net_connection_editor_new (GtkWindow        *parent_window,
                 net_connection_editor_set_connection (editor, connection);
         else
                 net_connection_editor_add_connection (editor);
+
+        /* Show scrollbars when on low resolution displays */
+        if (CC_IS_SHELL (parent_window) && cc_shell_is_small_screen (CC_SHELL (parent_window))) {
+                gint width, height;
+
+                gtk_window_get_size (parent_window, &width, &height);
+                gtk_widget_set_size_request (editor->window, width, height);
+
+                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (editor->scrolled_window),
+                                                GTK_POLICY_AUTOMATIC,
+                                                GTK_POLICY_AUTOMATIC);
+            }
 
         return editor;
 }
