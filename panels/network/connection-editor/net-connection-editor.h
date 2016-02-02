@@ -45,6 +45,8 @@ struct _NetConnectionEditor
 {
          GObject parent;
 
+        GtkWidget        *scrolled_window;
+
         GtkWidget        *parent_window;
         NMClient         *client;
         NMDevice         *device;
