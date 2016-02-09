@@ -109,6 +109,8 @@ struct _CcPrintersPanelPrivate
   GCancellable *subscription_renew_cancellable;
   GCancellable *actualize_printers_list_cancellable;
 
+  GtkWidget    *scrolled_window;
+
   gchar    *new_printer_name;
   gchar    *new_printer_location;
   gchar    *new_printer_make_and_model;
@@ -269,6 +271,24 @@ cc_printers_panel_get_help_uri (CcPanel *panel)
 }
 
 static void
+cc_printers_panel_constructed (GObject *object)
+{
+  CcPrintersPanelPrivate *priv = CC_PRINTERS_PANEL (object)->priv;
+  CcShell *shell;
+
+  G_OBJECT_CLASS (cc_printers_panel_parent_class)->constructed (object);
+
+  shell = cc_panel_get_shell (CC_PANEL (object));
+
+  if (cc_shell_is_small_screen (shell))
+    {
+      gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (priv->scrolled_window),
+                                      GTK_POLICY_AUTOMATIC,
+                                      GTK_POLICY_AUTOMATIC);
+    }
+}
+
+static void
 cc_printers_panel_class_init (CcPrintersPanelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
@@ -278,6 +298,7 @@ cc_printers_panel_class_init (CcPrintersPanelClass *klass)
 
   object_class->get_property = cc_printers_panel_get_property;
   object_class->set_property = cc_printers_panel_set_property;
+  object_class->constructed = cc_printers_panel_constructed;
   object_class->dispose = cc_printers_panel_dispose;
   object_class->finalize = cc_printers_panel_finalize;
 
@@ -3223,6 +3244,9 @@ cc_printers_panel_init (CcPrintersPanel *self)
     gtk_builder_get_object (priv->builder, "printer-ip-address-label");
   cc_editable_entry_set_selectable (CC_EDITABLE_ENTRY (widget), TRUE);
 
+  /* Scrolled window */
+  priv->scrolled_window = (GtkWidget*)
+    gtk_builder_get_object (priv->builder, "scrolled-window");
 
   /* Add unlock button */
   priv->permission = (GPermission *)polkit_permission_new_sync (
