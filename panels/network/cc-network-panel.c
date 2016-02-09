@@ -66,6 +66,8 @@ struct _CcNetworkPanelPrivate
         MMManager        *modem_manager;
         gboolean          updating_device;
 
+        GtkWidget        *scrolled_window;
+
         /* Killswitch stuff */
         GDBusProxy       *rfkill_proxy;
         GtkWidget        *kill_switch_header;
@@ -337,6 +339,7 @@ cc_network_panel_constructed (GObject *object)
         GtkWidget *box;
         GtkWidget *label;
         GtkWidget *widget;
+        CcShell *shell;
 
         G_OBJECT_CLASS (cc_network_panel_parent_class)->constructed (object);
 
@@ -369,6 +372,15 @@ cc_network_panel_constructed (GObject *object)
         g_signal_connect (panel->priv->rfkill_switch, "notify::active",
                           G_CALLBACK (cc_network_panel_notify_enable_active_cb),
                           panel);
+
+        /* Add scrollbars on small screens */
+        shell = cc_panel_get_shell (CC_PANEL (object));
+
+        if (cc_shell_is_small_screen (shell)) {
+                gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (panel->priv->scrolled_window),
+                                                GTK_POLICY_AUTOMATIC,
+                                                GTK_POLICY_AUTOMATIC);
+        }
 }
 
 static void
@@ -1352,6 +1364,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
         }
 
         panel->priv->cancellable = g_cancellable_new ();
+
+        panel->priv->scrolled_window = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder,
+                                                                           "content_scrolled_window"));
 
         panel->priv->treeview = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder,
                                                                     "treeview_devices"));
