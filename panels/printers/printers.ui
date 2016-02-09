@@ -85,6 +85,17 @@
           </packing>
         </child>
         <child>
+          <object class="GtkScrolledWindow" id="scrolled-window">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="hscrollbar_policy">never</property>
+            <property name="vscrollbar_policy">never</property>
+            <child>
+              <object class="GtkViewport" id="viewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="shadow_type">none</property>
+        <child>
           <object class="GtkNotebook" id="notebook">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -616,6 +627,10 @@ doesn't seem to be available.</property>
               </packing>
             </child>
           </object>
+          </child>
+        </object>
+      </child>
+    </object>
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
