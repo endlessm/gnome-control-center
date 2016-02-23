@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-09 03:44+0000\n"
+"POT-Creation-Date: 2016-02-16 03:39+0000\n"
 "PO-Revision-Date: 2015-05-20 06:28+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/pt_BR/)\n"
@@ -120,7 +120,7 @@ msgstr "Você pode adicionar imagens para a pasta %s e elas aparecerão aqui."
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
-#: ../panels/printers/cc-printers-panel.c:1946
+#: ../panels/printers/cc-printers-panel.c:1967
 #: ../panels/printers/new-printer-dialog.ui.h:2
 #: ../panels/privacy/cc-privacy-panel.c:617
 #: ../panels/search/cc-search-locations-dialog.c:682
@@ -1966,25 +1966,25 @@ msgstr "Clique único, botão secundário"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:361
+#: ../panels/network/cc-network-panel.c:364
 msgid "Air_plane Mode"
 msgstr "Modo a_vião"
 
-#: ../panels/network/cc-network-panel.c:933
+#: ../panels/network/cc-network-panel.c:945
 msgid "Network proxy"
 msgstr "Proxy da rede"
 
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1124 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1247
+#: ../panels/network/cc-network-panel.c:1259
 msgid "The system network services are not compatible with this version."
 msgstr "Os serviços de rede do sistema não são compatíveis com esta versão."
 
@@ -2505,7 +2505,7 @@ msgid "Select file to import"
 msgstr "Selecione um arquivo para importar"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:251
-#: ../panels/printers/cc-printers-panel.c:1947
+#: ../panels/printers/cc-printers-panel.c:1968
 #: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
@@ -3995,144 +3995,144 @@ msgid "Authentication Required"
 msgstr "Autenticação necessária"
 
 #. Translators: The printer is low on toner
-#: ../panels/printers/cc-printers-panel.c:591
+#: ../panels/printers/cc-printers-panel.c:612
 msgid "Low on toner"
 msgstr "Com pouco toner"
 
 #. Translators: The printer has no toner left
-#: ../panels/printers/cc-printers-panel.c:593
+#: ../panels/printers/cc-printers-panel.c:614
 msgid "Out of toner"
 msgstr "Sem toner"
 
 #. Translators: "Developer" is a chemical for photo development,
 #. * http://en.wikipedia.org/wiki/Photographic_developer
-#: ../panels/printers/cc-printers-panel.c:596
+#: ../panels/printers/cc-printers-panel.c:617
 msgid "Low on developer"
 msgstr "Com pouco revelador"
 
 #. Translators: "Developer" is a chemical for photo development,
 #. * http://en.wikipedia.org/wiki/Photographic_developer
-#: ../panels/printers/cc-printers-panel.c:599
+#: ../panels/printers/cc-printers-panel.c:620
 msgid "Out of developer"
 msgstr "Sem revelador"
 
 #. Translators: "marker" is one color bin of the printer
-#: ../panels/printers/cc-printers-panel.c:601
+#: ../panels/printers/cc-printers-panel.c:622
 msgid "Low on a marker supply"
 msgstr "Pouco suprimento de marcador"
 
 #. Translators: "marker" is one color bin of the printer
-#: ../panels/printers/cc-printers-panel.c:603
+#: ../panels/printers/cc-printers-panel.c:624
 msgid "Out of a marker supply"
 msgstr "Sem suprimento de marcador"
 
 #. Translators: One or more covers on the printer are open
-#: ../panels/printers/cc-printers-panel.c:605
+#: ../panels/printers/cc-printers-panel.c:626
 msgid "Open cover"
 msgstr "Abrir capa"
 
 #. Translators: One or more doors on the printer are open
-#: ../panels/printers/cc-printers-panel.c:607
+#: ../panels/printers/cc-printers-panel.c:628
 msgid "Open door"
 msgstr "Abrir porta"
 
 #. Translators: At least one input tray is low on media
-#: ../panels/printers/cc-printers-panel.c:609
+#: ../panels/printers/cc-printers-panel.c:630
 msgid "Low on paper"
 msgstr "Com pouco papel"
 
 #. Translators: At least one input tray is empty
-#: ../panels/printers/cc-printers-panel.c:611
+#: ../panels/printers/cc-printers-panel.c:632
 msgid "Out of paper"
 msgstr "Sem papel"
 
 #. Translators: The printer is offline
-#: ../panels/printers/cc-printers-panel.c:613
+#: ../panels/printers/cc-printers-panel.c:634
 msgctxt "printer state"
 msgid "Offline"
 msgstr "Desconectado"
 
 #. Translators: Someone has stopped the Printer
 #. Translators: Printer's state (no jobs can be processed)
-#: ../panels/printers/cc-printers-panel.c:615
-#: ../panels/printers/cc-printers-panel.c:806
+#: ../panels/printers/cc-printers-panel.c:636
+#: ../panels/printers/cc-printers-panel.c:827
 msgctxt "printer state"
 msgid "Stopped"
 msgstr "Parado"
 
 #. Translators: The printer marker supply waste receptacle is almost full
-#: ../panels/printers/cc-printers-panel.c:617
+#: ../panels/printers/cc-printers-panel.c:638
 msgid "Waste receptacle almost full"
 msgstr "Recipiente de descarte quase cheio"
 
 #. Translators: The printer marker supply waste receptacle is full
-#: ../panels/printers/cc-printers-panel.c:619
+#: ../panels/printers/cc-printers-panel.c:640
 msgid "Waste receptacle full"
 msgstr "Recipiente de descarte cheio"
 
 #. Translators: Optical photo conductors are used in laser printers
-#: ../panels/printers/cc-printers-panel.c:621
+#: ../panels/printers/cc-printers-panel.c:642
 msgid "The optical photo conductor is near end of life"
 msgstr "O condutor de foto ótica está quase no fim da vida"
 
 #. Translators: Optical photo conductors are used in laser printers
-#: ../panels/printers/cc-printers-panel.c:623
+#: ../panels/printers/cc-printers-panel.c:644
 msgid "The optical photo conductor is no longer functioning"
 msgstr "O condutor de foto ótica não está funcionando"
 
 #. Translators: Printer's state (printer is being configured right now)
-#: ../panels/printers/cc-printers-panel.c:733
+#: ../panels/printers/cc-printers-panel.c:754
 msgctxt "printer state"
 msgid "Configuring"
 msgstr "Configurando"
 
 #. Translators: Printer's state (can start new job without waiting)
-#: ../panels/printers/cc-printers-panel.c:792
+#: ../panels/printers/cc-printers-panel.c:813
 msgctxt "printer state"
 msgid "Ready"
 msgstr "Pronto"
 
 #. Translators: Printer's state (printer is ready but doesn't accept new jobs)
-#: ../panels/printers/cc-printers-panel.c:797
+#: ../panels/printers/cc-printers-panel.c:818
 msgctxt "printer state"
 msgid "Does not accept jobs"
 msgstr "Não aceitar trabalhos"
 
 #. Translators: Printer's state (jobs are processing)
-#: ../panels/printers/cc-printers-panel.c:802
+#: ../panels/printers/cc-printers-panel.c:823
 msgctxt "printer state"
 msgid "Processing"
 msgstr "Processando"
 
 #. Translators: Toner supply
-#: ../panels/printers/cc-printers-panel.c:923
+#: ../panels/printers/cc-printers-panel.c:944
 msgid "Toner Level"
 msgstr "Nível do toner"
 
 #. Translators: Ink supply
-#: ../panels/printers/cc-printers-panel.c:926
+#: ../panels/printers/cc-printers-panel.c:947
 msgid "Ink Level"
 msgstr "Nível de tinta"
 
 #. Translators: By supply we mean ink, toner, staples, water, ...
-#: ../panels/printers/cc-printers-panel.c:929
+#: ../panels/printers/cc-printers-panel.c:950
 msgid "Supply Level"
 msgstr "Nível de suprimento"
 
 #. Translators: Printer's state (printer is being installed right now)
-#: ../panels/printers/cc-printers-panel.c:947
+#: ../panels/printers/cc-printers-panel.c:968
 msgctxt "printer state"
 msgid "Installing"
 msgstr "Instalando"
 
 #. Translators: There are no printers available (none is configured or CUPS is
 #. not running)
-#: ../panels/printers/cc-printers-panel.c:1124
+#: ../panels/printers/cc-printers-panel.c:1145
 msgid "No printers available"
 msgstr "Nenhuma impressora disponível"
 
 #. Translators: there is n active print jobs on this printer
-#: ../panels/printers/cc-printers-panel.c:1432
+#: ../panels/printers/cc-printers-panel.c:1453
 #, c-format
 msgid "%u active"
 msgid_plural "%u active"
@@ -4140,44 +4140,44 @@ msgstr[0] "%u ativo"
 msgstr[1] "%u ativos"
 
 #. Translators: Addition of the new printer failed.
-#: ../panels/printers/cc-printers-panel.c:1776
+#: ../panels/printers/cc-printers-panel.c:1797
 msgid "Failed to add new printer."
 msgstr "Falha ao adicionar nova impressora."
 
-#: ../panels/printers/cc-printers-panel.c:1943
+#: ../panels/printers/cc-printers-panel.c:1964
 msgid "Select PPD File"
 msgstr "Selecionar um arquivo PPD"
 
-#: ../panels/printers/cc-printers-panel.c:1952
+#: ../panels/printers/cc-printers-panel.c:1973
 msgid ""
 "PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
 "*.PPD.GZ)"
 msgstr "Arquivos de descrição de impressora PostScript (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: ../panels/printers/cc-printers-panel.c:2257
+#: ../panels/printers/cc-printers-panel.c:2278
 msgid "No suitable driver found"
 msgstr "Não foi encontrado um driver adequado"
 
-#: ../panels/printers/cc-printers-panel.c:2326
+#: ../panels/printers/cc-printers-panel.c:2347
 msgid "Searching for preferred drivers…"
 msgstr "Pesquisando por drivers preferidos…"
 
-#: ../panels/printers/cc-printers-panel.c:2341
+#: ../panels/printers/cc-printers-panel.c:2362
 msgid "Select from database…"
 msgstr "Selecionar do banco de dados…"
 
-#: ../panels/printers/cc-printers-panel.c:2350
+#: ../panels/printers/cc-printers-panel.c:2371
 msgid "Provide PPD File…"
 msgstr "Forneça um arquivo PPD…"
 
 #. Translators: Name of job which makes printer to print test page
-#: ../panels/printers/cc-printers-panel.c:2501
-#: ../panels/printers/cc-printers-panel.c:2524
+#: ../panels/printers/cc-printers-panel.c:2522
+#: ../panels/printers/cc-printers-panel.c:2545
 msgid "Test page"
 msgstr "Página de teste"
 
 #. Translators: The XML file containing user interface can not be loaded
-#: ../panels/printers/cc-printers-panel.c:2932
+#: ../panels/printers/cc-printers-panel.c:2953
 #, c-format
 msgid "Could not load ui: %s"
 msgstr "Não foi possível carregar a interface: %s"

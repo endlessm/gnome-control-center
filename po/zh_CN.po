@@ -27,8 +27,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-09 03:44+0000\n"
-"PO-Revision-Date: 2016-02-01 11:18+0000\n"
+"POT-Creation-Date: 2016-02-16 03:39+0000\n"
+"PO-Revision-Date: 2016-02-22 13:56+0000\n"
 "Last-Translator: zhifeng peng <jnufeng@126.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -123,7 +123,7 @@ msgstr "您添加到 %s 文件夹的图片将在此显示"
 #: ../panels/network/net-device-wifi.c:1194
 #: ../panels/network/net-device-wifi.c:1402
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:379
-#: ../panels/printers/cc-printers-panel.c:1946
+#: ../panels/printers/cc-printers-panel.c:1967
 #: ../panels/printers/new-printer-dialog.ui.h:2
 #: ../panels/privacy/cc-privacy-panel.c:617
 #: ../panels/search/cc-search-locations-dialog.c:682
@@ -167,7 +167,7 @@ msgstr "将您的背景图片改为一张壁纸或照片"
 #. Translators: those are keywords for the background control-center panel
 #: ../panels/background/gnome-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
-msgstr "Wallpaper;Screen;Desktop;壁纸;墙纸;屏幕;桌面;背景;"
+msgstr "壁纸;屏幕;桌面;"
 
 #: ../panels/bluetooth/bluetooth.ui.h:1
 msgid "Set Up New Device"
@@ -225,7 +225,7 @@ msgstr "键盘设置"
 
 #: ../panels/bluetooth/bluetooth.ui.h:12
 msgid "Send Files…"
-msgstr "发送文件…"
+msgstr "发送文件……"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:366
 #: ../panels/network/wireless-security/nag-user-dialog.ui.h:3
@@ -713,7 +713,7 @@ msgstr "复制配置"
 
 #: ../panels/color/color.ui.h:23
 msgid "Requires writable media"
-msgstr "需要有可写的媒体"
+msgstr "需要有可写入的媒体"
 
 #: ../panels/color/color.ui.h:24
 msgid "Upload profile"
@@ -728,7 +728,7 @@ msgid ""
 "You may find these instructions on how to use the profile on <a "
 "href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
 "href=\"windows\">Microsoft Windows</a> systems useful."
-msgstr "有关如何在 <a href=\"linux\">GNU/Linux</a>、<a href=\"osx\">Apple OS X</a> 和 <a href=\"windows\">Microsoft Windows</a> 系统中使用个人资料的这些说明可能对您有所帮助。"
+msgstr "有关如何在 <a href=\"linux\">GNU/Linux</a>、<a href=\"osx\">Apple OS X</a> 和 <a href=\"windows\">Microsoft Windows</a> 系统中使用个人资料的这些说明，可能对您有所帮助。"
 
 #: ../panels/color/color.ui.h:27
 #: ../panels/user-accounts/um-fingerprint-dialog.c:742
@@ -737,13 +737,13 @@ msgstr "摘要"
 
 #: ../panels/color/color.ui.h:28
 msgid "Import File…"
-msgstr "导入文件…"
+msgstr "导入文件……"
 
 #: ../panels/color/color.ui.h:29
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr "探测到问题。此配置可能无法正常工作。<a href=\"\">显示详细信息。</a>"
+msgstr "检测到问题。此配置可能无法正常工作。<a href=\"\">显示详细信息。</a>"
 
 #: ../panels/color/color.ui.h:30
 msgid "Each device needs an up to date color profile to be color managed."
@@ -768,7 +768,7 @@ msgstr "添加配置"
 #: ../panels/color/color.ui.h:35
 #: ../panels/wacom/gnome-wacom-properties.ui.h:10
 msgid "Calibrate…"
-msgstr "校准..."
+msgstr "校准……"
 
 #: ../panels/color/color.ui.h:36
 msgid "Calibrate the device"
@@ -886,7 +886,7 @@ msgstr "校准设备的色彩，例如显示器、相机或打印机"
 #. Translators: those are keywords for the color control-center panel
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:4
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
-msgstr "颜色;色彩;配置;校准;打印机;显示;Color;ICC;Profile;Calibrate;Printer;Display;"
+msgstr "颜色;色彩;配置;校准;打印机;显示;"
 
 #. Add some common regions
 #: ../panels/common/cc-common-language.c:685
@@ -911,13 +911,13 @@ msgstr "中国"
 
 #: ../panels/common/cc-common-language.c:759
 msgid "Other…"
-msgstr "其他…"
+msgstr "其他……"
 
 #: ../panels/common/cc-language-chooser.c:123
 #: ../panels/region/cc-format-chooser.c:269
 #: ../panels/region/cc-input-chooser.c:172
 msgid "More…"
-msgstr "更多…"
+msgstr "更多……"
 
 #: ../panels/common/cc-language-chooser.c:140
 msgid "No languages found"
@@ -934,12 +934,12 @@ msgstr "完成(_D)"
 
 #: ../panels/datetime/cc-datetime-panel.c:392
 msgid "%e %B %Y, %l:%M %p"
-msgstr "%Y%B，%p%l%M"
+msgstr "%e %B %Y, %l:%M %p"
 
 #. Translators: This is the full date and time format used in 24-hour mode.
 #: ../panels/datetime/cc-datetime-panel.c:402
 msgid "%e %B %Y, %R"
-msgstr "%Y%B，%R"
+msgstr "%e %B %Y, %R"
 
 #. Translators: UTC here means the Coordinated Universal Time.
 #. * %:::z will be replaced by the offset from UTC e.g. UTC+02
@@ -1044,7 +1044,7 @@ msgstr "搜索城市"
 
 #: ../panels/datetime/datetime.ui.h:23
 msgid "Automatic _Date & Time"
-msgstr "自动日期和时间(_D)"
+msgstr "自动调整日期和时间(_D)"
 
 #: ../panels/datetime/datetime.ui.h:24
 msgid "Requires internet access"
@@ -1052,7 +1052,7 @@ msgstr "需要互联网连接"
 
 #: ../panels/datetime/datetime.ui.h:25
 msgid "Automatic Time _Zone"
-msgstr "自动时区(_Z)"
+msgstr "自动调整时区(_Z)"
 
 #: ../panels/datetime/datetime.ui.h:26
 msgid "Date & _Time"
@@ -1076,12 +1076,12 @@ msgstr "上午/下午"
 
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
 msgid "Change the date and time, including time zone"
-msgstr "改变日期和时间，以及时区"
+msgstr "改变日期和时间以及时区"
 
 #. Translators: those are keywords for the date and time control-center panel
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
 msgid "Clock;Timezone;Location;"
-msgstr "Clock;Timezone;Location;时钟;时区;位置;"
+msgstr "时钟;时区;位置;"
 
 #: ../panels/datetime/org.gnome.controlcenter.datetime.policy.in.h:1
 msgid "Change system time and date settings"
@@ -1089,7 +1089,7 @@ msgstr "更改系统时间和日期设置"
 
 #: ../panels/datetime/org.gnome.controlcenter.datetime.policy.in.h:2
 msgid "To change time or date settings, you need to authenticate."
-msgstr "修改时间或日期设置，您需要获得管理员权限。"
+msgstr "要修改时间或日期设置，您需要获得管理员权限。"
 
 #: ../panels/display/cc-display-panel.c:481
 msgid "Lid Closed"
@@ -1215,7 +1215,7 @@ msgstr "选择如何使用连接的显示器和投影仪"
 #. Translators: those are keywords for the display control-center panel
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
-msgstr "Panel;Projector;xrandr;Screen;Resolution;Refresh;面板;投影仪;屏幕;分辨率;刷新;"
+msgstr "面板;投影仪;xrandr;屏幕;分辨率;刷新;"
 
 #. TRANSLATORS: AP type
 #: ../panels/info/cc-info-panel.c:345 ../panels/network/panel-common.c:127
@@ -1969,25 +1969,25 @@ msgstr "单击，次键"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:361
+#: ../panels/network/cc-network-panel.c:364
 msgid "Air_plane Mode"
 msgstr "飞行模式(_P)"
 
-#: ../panels/network/cc-network-panel.c:933
+#: ../panels/network/cc-network-panel.c:945
 msgid "Network proxy"
 msgstr "网络代理"
 
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#: ../panels/network/cc-network-panel.c:1112 ../panels/network/net-vpn.c:278
+#: ../panels/network/cc-network-panel.c:1124 ../panels/network/net-vpn.c:278
 #: ../panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
 #. TRANSLATORS: the user is running a NM that is not API compatible
-#: ../panels/network/cc-network-panel.c:1247
+#: ../panels/network/cc-network-panel.c:1259
 msgid "The system network services are not compatible with this version."
 msgstr "系统的网络服务与此版本的网络管理器不兼容。"
 
@@ -2507,7 +2507,7 @@ msgid "Select file to import"
 msgstr "选择要导入的文件"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:251
-#: ../panels/printers/cc-printers-panel.c:1947
+#: ../panels/printers/cc-printers-panel.c:1968
 #: ../panels/sharing/cc-sharing-panel.c:426
 #: ../panels/user-accounts/um-photo-dialog.c:222
 msgid "_Open"
@@ -3993,188 +3993,188 @@ msgid "Authentication Required"
 msgstr "需要认证"
 
 #. Translators: The printer is low on toner
-#: ../panels/printers/cc-printers-panel.c:591
+#: ../panels/printers/cc-printers-panel.c:612
 msgid "Low on toner"
 msgstr "墨粉不足"
 
 #. Translators: The printer has no toner left
-#: ../panels/printers/cc-printers-panel.c:593
+#: ../panels/printers/cc-printers-panel.c:614
 msgid "Out of toner"
 msgstr "墨粉用尽"
 
 #. Translators: "Developer" is a chemical for photo development,
 #. * http://en.wikipedia.org/wiki/Photographic_developer
-#: ../panels/printers/cc-printers-panel.c:596
+#: ../panels/printers/cc-printers-panel.c:617
 msgid "Low on developer"
 msgstr "显影剂不足"
 
 #. Translators: "Developer" is a chemical for photo development,
 #. * http://en.wikipedia.org/wiki/Photographic_developer
-#: ../panels/printers/cc-printers-panel.c:599
+#: ../panels/printers/cc-printers-panel.c:620
 msgid "Out of developer"
 msgstr "显影剂用尽"
 
 #. Translators: "marker" is one color bin of the printer
-#: ../panels/printers/cc-printers-panel.c:601
+#: ../panels/printers/cc-printers-panel.c:622
 msgid "Low on a marker supply"
 msgstr "标记墨水不足"
 
 #. Translators: "marker" is one color bin of the printer
-#: ../panels/printers/cc-printers-panel.c:603
+#: ../panels/printers/cc-printers-panel.c:624
 msgid "Out of a marker supply"
 msgstr "标记墨水用尽"
 
 #. Translators: One or more covers on the printer are open
-#: ../panels/printers/cc-printers-panel.c:605
+#: ../panels/printers/cc-printers-panel.c:626
 msgid "Open cover"
 msgstr "打开上盖"
 
 #. Translators: One or more doors on the printer are open
-#: ../panels/printers/cc-printers-panel.c:607
+#: ../panels/printers/cc-printers-panel.c:628
 msgid "Open door"
 msgstr "打开后门"
 
 #. Translators: At least one input tray is low on media
-#: ../panels/printers/cc-printers-panel.c:609
+#: ../panels/printers/cc-printers-panel.c:630
 msgid "Low on paper"
 msgstr "纸张不足"
 
 #. Translators: At least one input tray is empty
-#: ../panels/printers/cc-printers-panel.c:611
+#: ../panels/printers/cc-printers-panel.c:632
 msgid "Out of paper"
 msgstr "纸张用尽"
 
 #. Translators: The printer is offline
-#: ../panels/printers/cc-printers-panel.c:613
+#: ../panels/printers/cc-printers-panel.c:634
 msgctxt "printer state"
 msgid "Offline"
 msgstr "离线"
 
 #. Translators: Someone has stopped the Printer
 #. Translators: Printer's state (no jobs can be processed)
-#: ../panels/printers/cc-printers-panel.c:615
-#: ../panels/printers/cc-printers-panel.c:806
+#: ../panels/printers/cc-printers-panel.c:636
+#: ../panels/printers/cc-printers-panel.c:827
 msgctxt "printer state"
 msgid "Stopped"
 msgstr "已停止"
 
 #. Translators: The printer marker supply waste receptacle is almost full
-#: ../panels/printers/cc-printers-panel.c:617
+#: ../panels/printers/cc-printers-panel.c:638
 msgid "Waste receptacle almost full"
 msgstr "废粉仓将满"
 
 #. Translators: The printer marker supply waste receptacle is full
-#: ../panels/printers/cc-printers-panel.c:619
+#: ../panels/printers/cc-printers-panel.c:640
 msgid "Waste receptacle full"
 msgstr "废粉仓已满"
 
 #. Translators: Optical photo conductors are used in laser printers
-#: ../panels/printers/cc-printers-panel.c:621
+#: ../panels/printers/cc-printers-panel.c:642
 msgid "The optical photo conductor is near end of life"
 msgstr "感光鼓接近使用寿命"
 
 #. Translators: Optical photo conductors are used in laser printers
-#: ../panels/printers/cc-printers-panel.c:623
+#: ../panels/printers/cc-printers-panel.c:644
 msgid "The optical photo conductor is no longer functioning"
 msgstr "感光鼓无法工作"
 
 #. Translators: Printer's state (printer is being configured right now)
-#: ../panels/printers/cc-printers-panel.c:733
+#: ../panels/printers/cc-printers-panel.c:754
 msgctxt "printer state"
 msgid "Configuring"
 msgstr "正在配置"
 
 #. Translators: Printer's state (can start new job without waiting)
-#: ../panels/printers/cc-printers-panel.c:792
+#: ../panels/printers/cc-printers-panel.c:813
 msgctxt "printer state"
 msgid "Ready"
 msgstr "就绪"
 
 #. Translators: Printer's state (printer is ready but doesn't accept new jobs)
-#: ../panels/printers/cc-printers-panel.c:797
+#: ../panels/printers/cc-printers-panel.c:818
 msgctxt "printer state"
 msgid "Does not accept jobs"
 msgstr "不接收任务"
 
 #. Translators: Printer's state (jobs are processing)
-#: ../panels/printers/cc-printers-panel.c:802
+#: ../panels/printers/cc-printers-panel.c:823
 msgctxt "printer state"
 msgid "Processing"
 msgstr "正在处理"
 
 #. Translators: Toner supply
-#: ../panels/printers/cc-printers-panel.c:923
+#: ../panels/printers/cc-printers-panel.c:944
 msgid "Toner Level"
 msgstr "碳粉量"
 
 #. Translators: Ink supply
-#: ../panels/printers/cc-printers-panel.c:926
+#: ../panels/printers/cc-printers-panel.c:947
 msgid "Ink Level"
 msgstr "墨水量"
 
 #. Translators: By supply we mean ink, toner, staples, water, ...
-#: ../panels/printers/cc-printers-panel.c:929
+#: ../panels/printers/cc-printers-panel.c:950
 msgid "Supply Level"
 msgstr "耗材量"
 
 #. Translators: Printer's state (printer is being installed right now)
-#: ../panels/printers/cc-printers-panel.c:947
+#: ../panels/printers/cc-printers-panel.c:968
 msgctxt "printer state"
 msgid "Installing"
 msgstr "正在安装"
 
 #. Translators: There are no printers available (none is configured or CUPS is
 #. not running)
-#: ../panels/printers/cc-printers-panel.c:1124
+#: ../panels/printers/cc-printers-panel.c:1145
 msgid "No printers available"
 msgstr "无可用打印机"
 
 #. Translators: there is n active print jobs on this printer
-#: ../panels/printers/cc-printers-panel.c:1432
+#: ../panels/printers/cc-printers-panel.c:1453
 #, c-format
 msgid "%u active"
 msgid_plural "%u active"
 msgstr[0] "%u 项活动任务"
 
 #. Translators: Addition of the new printer failed.
-#: ../panels/printers/cc-printers-panel.c:1776
+#: ../panels/printers/cc-printers-panel.c:1797
 msgid "Failed to add new printer."
 msgstr "添加新打印机失败。"
 
-#: ../panels/printers/cc-printers-panel.c:1943
+#: ../panels/printers/cc-printers-panel.c:1964
 msgid "Select PPD File"
 msgstr "选择 PPD 文件"
 
-#: ../panels/printers/cc-printers-panel.c:1952
+#: ../panels/printers/cc-printers-panel.c:1973
 msgid ""
 "PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
 "*.PPD.GZ)"
 msgstr "PostScript 打印机描述文件(*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: ../panels/printers/cc-printers-panel.c:2257
+#: ../panels/printers/cc-printers-panel.c:2278
 msgid "No suitable driver found"
 msgstr "未找到合适的驱动"
 
-#: ../panels/printers/cc-printers-panel.c:2326
+#: ../panels/printers/cc-printers-panel.c:2347
 msgid "Searching for preferred drivers…"
 msgstr "正在搜索首选的驱动…"
 
-#: ../panels/printers/cc-printers-panel.c:2341
+#: ../panels/printers/cc-printers-panel.c:2362
 msgid "Select from database…"
 msgstr "从数据库选择…"
 
-#: ../panels/printers/cc-printers-panel.c:2350
+#: ../panels/printers/cc-printers-panel.c:2371
 msgid "Provide PPD File…"
 msgstr "提供 PPD 文件…"
 
 #. Translators: Name of job which makes printer to print test page
-#: ../panels/printers/cc-printers-panel.c:2501
-#: ../panels/printers/cc-printers-panel.c:2524
+#: ../panels/printers/cc-printers-panel.c:2522
+#: ../panels/printers/cc-printers-panel.c:2545
 msgid "Test page"
 msgstr "测试页"
 
 #. Translators: The XML file containing user interface can not be loaded
-#: ../panels/printers/cc-printers-panel.c:2932
+#: ../panels/printers/cc-printers-panel.c:2953
 #, c-format
 msgid "Could not load ui: %s"
 msgstr "无法装入界面：%s"
@@ -6790,7 +6790,7 @@ msgstr "底键 #%d"
 
 #: ../panels/wacom/gsd-wacom-key-shortcut-button.c:264
 msgid "New shortcut…"
-msgstr "新建快捷键..."
+msgstr "新建快捷键……"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:1
 msgid "No Action"
@@ -6887,7 +6887,7 @@ msgstr "显示面板"
 
 #: ../shell/cc-application.c:76
 msgid "[PANEL] [ARGUMENT…]"
-msgstr "[面板] [参数…]"
+msgstr "[面板] [参数……]"
 
 #: ../shell/cc-application.c:145
 msgid "- Settings"
@@ -6902,7 +6902,7 @@ msgstr "%s\n运行 “%s --help” 查看所有可用的命令行选项。\n"
 
 #: ../shell/cc-application.c:193
 msgid "Available panels:"
-msgstr "可用面板"
+msgstr "可用面板："
 
 #: ../shell/cc-application.c:328
 msgid "Help"
@@ -6938,4 +6938,4 @@ msgstr "设置"
 
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
-msgstr "Preferences;Settings;首选项;设置;"
+msgstr "参数;设置;"
