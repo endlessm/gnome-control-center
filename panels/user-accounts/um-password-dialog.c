@@ -49,6 +49,7 @@ struct _UmPasswordDialog {
         GtkWidget *ok_button;
         GtkWidget *password_hint;
         GtkWidget *verify_hint;
+        GtkWidget *password_reminder;
 
         ActUser *user;
         ActUserPasswordMode password_mode;
@@ -102,6 +103,7 @@ finish_password_change (UmPasswordDialog *um)
         gtk_entry_set_text (GTK_ENTRY (um->password_entry), " ");
         gtk_entry_set_text (GTK_ENTRY (um->verify_entry), "");
         gtk_entry_set_text (GTK_ENTRY (um->old_password_entry), "");
+        gtk_entry_set_text (GTK_ENTRY (um->password_reminder), "");
 
         um_password_dialog_set_user (um, NULL);
 }
@@ -134,6 +136,12 @@ password_changed_cb (PasswdHandler    *handler,
         gdk_window_set_cursor (gtk_widget_get_window (um->dialog), NULL);
 
         if (!error) {
+                g_autofree gchar *sanitized_reminder = NULL;
+                const gchar *reminder;
+
+                reminder = gtk_entry_get_text (GTK_ENTRY (um->password_reminder));
+                sanitized_reminder = g_strstrip (g_strdup (reminder));
+                act_user_set_password_hint (um->user, sanitized_reminder);
                 finish_password_change (um);
                 return;
         }
@@ -176,7 +184,8 @@ static void
 accept_password_dialog (GtkButton        *button,
                         UmPasswordDialog *um)
 {
-        const gchar *password;
+        const gchar *password, *reminder;
+        gchar *sanitized_reminder;
 
         password = gtk_entry_get_text (GTK_ENTRY (um->password_entry));
 
@@ -201,8 +210,11 @@ accept_password_dialog (GtkButton        *button,
                                 return;
                         }
 
+                        reminder = gtk_entry_get_text (GTK_ENTRY (um->password_reminder));
+                        sanitized_reminder = g_strstrip (g_strdup (reminder));
                         act_user_set_password_mode (um->user, ACT_USER_PASSWORD_MODE_REGULAR);
-                        act_user_set_password (um->user, password, "");
+                        act_user_set_password (um->user, password, sanitized_reminder);
+                        g_free (sanitized_reminder);
                         break;
 
                 case ACT_USER_PASSWORD_MODE_SET_AT_LOGIN:
@@ -249,6 +261,7 @@ mode_change (UmPasswordDialog *um,
         gtk_widget_set_sensitive (um->verify_entry, active);
         gtk_widget_set_sensitive (um->old_password_entry, active);
         gtk_widget_set_sensitive (um->password_hint, active);
+        gtk_widget_set_sensitive (um->password_reminder, active);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_now_radio), active);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_login_radio), !active);
 
@@ -503,6 +516,9 @@ um_password_dialog_new (void)
         widget = (GtkWidget *)gtk_builder_get_object (builder, "verify-hint");
         um->verify_hint = widget;
 
+        widget = (GtkWidget *)gtk_builder_get_object (builder, "password-reminder-entry");
+        um->password_reminder = widget;
+
         g_object_unref (builder);
 
         return um;
@@ -547,6 +563,7 @@ um_password_dialog_set_user (UmPasswordDialog *um,
                 gtk_entry_set_text (GTK_ENTRY (um->password_entry), "");
                 gtk_entry_set_text (GTK_ENTRY (um->verify_entry), "");
                 gtk_entry_set_text (GTK_ENTRY (um->old_password_entry), "");
+                gtk_entry_set_text (GTK_ENTRY (um->password_reminder), "");
 
                 gtk_entry_set_visibility (GTK_ENTRY (um->password_entry), FALSE);
                 gtk_entry_set_visibility (GTK_ENTRY (um->verify_entry), FALSE);
@@ -558,6 +575,7 @@ um_password_dialog_set_user (UmPasswordDialog *um,
                         visible = (act_user_get_password_mode (user) != ACT_USER_PASSWORD_MODE_NONE);
                         gtk_widget_set_visible (um->old_password_label, visible);
                         gtk_widget_set_visible (um->old_password_entry, visible);
+                        gtk_entry_set_text (GTK_ENTRY (um->password_reminder), act_user_get_password_hint (user));
                         um->old_password_ok = !visible;
                 }
                 else {
