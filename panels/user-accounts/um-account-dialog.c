@@ -93,6 +93,7 @@ struct _UmAccountDialog {
         GtkWidget *local_strength_indicator;
         GtkWidget *local_hint;
         GtkWidget *local_verify_hint;
+        GtkWidget *local_reminder;
 
         /* Enterprise widgets */
         guint realmd_watch;
@@ -196,17 +197,21 @@ user_loaded_cb (ActUser         *user,
                 GParamSpec      *pspec,
                 UmAccountDialog *self)
 {
-  const gchar *password;
+        const gchar *password;
+        const gchar *reminder;
 
-  finish_action (self);
+        finish_action (self);
 
-  /* Set a password for the user */
-  password = gtk_entry_get_text (GTK_ENTRY (self->local_password));
-  act_user_set_password_mode (user, self->local_password_mode);
-  if (self->local_password_mode == ACT_USER_PASSWORD_MODE_REGULAR)
-        act_user_set_password (user, password, "");
+        password = gtk_entry_get_text (GTK_ENTRY (self->local_password));
+        reminder = gtk_entry_get_text (GTK_ENTRY (self->local_reminder));
+        act_user_set_password_mode (user, self->local_password_mode);
 
-  complete_dialog (self, user);
+        if (self->local_password_mode == ACT_USER_PASSWORD_MODE_REGULAR) {
+                g_autofree gchar *sanitized_reminder = g_strstrip (g_strdup (reminder));
+                act_user_set_password (user, password, sanitized_reminder);
+        }
+
+        complete_dialog (self, user);
 }
 
 static void
@@ -550,6 +555,7 @@ on_password_radio_changed (GtkRadioButton *radio,
         gtk_widget_set_sensitive (self->local_verify, active);
         gtk_widget_set_sensitive (self->local_strength_indicator, active);
         gtk_widget_set_sensitive (self->local_hint, active);
+        gtk_widget_set_sensitive (self->local_reminder, active);
 
         dialog_validate (self);
 }
@@ -1574,6 +1580,7 @@ um_account_dialog_class_init (UmAccountDialogClass *klass)
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_strength_indicator);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_hint);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_verify_hint);
+        gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_reminder);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, enterprise_button);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, spinner);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, enterprise_domain);
