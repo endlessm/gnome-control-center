@@ -135,14 +135,13 @@ cc_bluetooth_panel_update_power (CcBluetoothPanel *self)
 {
 	GtkAlign valign;
 	GObject *toggle;
-	gboolean sensitive, powered, change_powered;
+	gboolean sensitive, powered;
 	const char *page;
 
 	g_debug ("Updating airplane mode: BluetoothHasAirplaneMode %d, BluetoothHardwareAirplaneMode %d, BluetoothAirplaneMode %d, AirplaneMode %d",
 		 self->priv->has_airplane_mode, self->priv->hardware_airplane_mode, self->priv->bt_airplane_mode, self->priv->airplane_mode);
 
-	change_powered = TRUE;
-  valign = GTK_ALIGN_CENTER;
+	valign = GTK_ALIGN_CENTER;
 
 	if (self->priv->has_airplane_mode == FALSE) {
 		g_debug ("No Bluetooth available");
@@ -163,7 +162,7 @@ cc_bluetooth_panel_update_power (CcBluetoothPanel *self)
 		   !bluetooth_settings_widget_get_default_adapter_powered (BLUETOOTH_SETTINGS_WIDGET (self->priv->widget))) {
 		g_debug ("Default adapter is unpowered, but should be available");
 		sensitive = TRUE;
-		change_powered = FALSE;
+		powered = FALSE;
 		page = BLUETOOTH_DISABLED_PAGE;
 	} else {
 		g_debug ("Bluetooth is available and powered");
@@ -177,11 +176,9 @@ cc_bluetooth_panel_update_power (CcBluetoothPanel *self)
 	gtk_widget_set_sensitive (WID ("box_power") , sensitive);
 
 	toggle = G_OBJECT (WID ("switch_bluetooth"));
-	if (change_powered) {
-		g_signal_handlers_block_by_func (toggle, power_callback, self);
-		gtk_switch_set_active (GTK_SWITCH (toggle), powered);
-		g_signal_handlers_unblock_by_func (toggle, power_callback, self);
-	}
+	g_signal_handlers_block_by_func (toggle, power_callback, self);
+	gtk_switch_set_active (GTK_SWITCH (toggle), powered);
+	g_signal_handlers_unblock_by_func (toggle, power_callback, self);
 
 	gtk_stack_set_visible_child_name (GTK_STACK (self->priv->stack), page);
 }
