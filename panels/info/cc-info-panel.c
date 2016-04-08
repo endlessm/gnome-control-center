@@ -58,10 +58,6 @@
 
 #define MEDIA_HANDLING_SCHEMA "org.gnome.desktop.media-handling"
 
-/* Session */
-#define GNOME_SESSION_MANAGER_SCHEMA        "org.gnome.desktop.session"
-#define KEY_SESSION_NAME          "session-name"
-
 #define WID(w) (GtkWidget *) gtk_builder_get_object (self->priv->builder, w)
 
 CC_PANEL_REGISTER (CcInfoPanel, cc_info_panel)
