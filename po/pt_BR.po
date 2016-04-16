@@ -8,13 +8,19 @@
 # André Gondim <andregondim@ubuntu.com>, 2009
 # Antonio Fernandes C. Neto <fernandes@pelivre.org>, 2010,2013
 # Djavan Fagundes <djavan@comum.org>, 2012
+# Djavan Fagundes <djavanf@gnome.org>, 2008-2009,2011
+# Enrico Nicoletto <liverig@gmail.com>, 2012-2015
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2004,2006
+# skarllotbr <skarllot@gmail.com>, 2008
 # Georges Basile Stavracas Neto <georges.stavracas@gmail.com>, 2013
 # Hugo Vaz Sampaio <hvazsampaio@gmail.com>, 2010
 # Ivan Passos <ivan@cyclades.com>, 1999
+# Jonh Wendell <wendell@bani.com.br>, 2008-2009
 # Krix Apolinário <krixapolinario@gmail.com>, 2009,2011
 # leonardof <leonardof@gnome.org>, 2006,2008
+# leonardof <leonardof@gnome.org>, 2006,2008
 # Philip Chimento <philip.chimento@gmail.com>, 2014
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2012-2014
 # Raul Pereira <contato@raulpereira.com>, 2007
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999
 # skarllotbr <skarllot@gmail.com>, 2008
@@ -24,9 +30,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 02:38+0000\n"
-"PO-Revision-Date: 2016-04-05 02:38+0000\n"
-"Last-Translator: endlessmobile_build <philip@endlessm.com>\n"
+"POT-Creation-Date: 2016-04-12 02:34+0000\n"
+"PO-Revision-Date: 2016-04-16 05:42+0000\n"
+"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -179,39 +185,39 @@ msgstr "Papel de parede;Tela;Área de trabalho;"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:264
 msgid "Turn Off Airplane Mode"
-msgstr ""
+msgstr "Desligar modo avião"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:330
 msgid "No Bluetooth Found"
-msgstr ""
+msgstr "Não foi encontrado Bluetooth"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:330
 msgid "Plug in a dongle to use Bluetooth."
-msgstr ""
+msgstr "Plugue em um dongle para usar Bluetooth."
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:331
 msgid "Bluetooth Turned Off"
-msgstr ""
+msgstr "Bluetooth desligado"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:331
 msgid "Turn on to connect devices and receive file transfers."
-msgstr ""
+msgstr "Ligue para conectar dispositivos e receber transferência de arquivos."
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:332
 msgid "Airplane Mode is on"
-msgstr ""
+msgstr "Modo avião ligado"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:332
 msgid "Bluetooth is disabled when airplane mode is on."
-msgstr ""
+msgstr "Ao ligar o modo avião, o Bluetooth é desativado."
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:333
 msgid "Hardware Airplane Mode is on"
-msgstr ""
+msgstr "Modo avião via hardware ligado"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:333
 msgid "Turn off the Airplane mode switch to enable Bluetooth."
-msgstr ""
+msgstr "Desligue o alternador do modo avião para habilitar o Bluetooth."
 
 #. Translators: The found device is a printer connected via Bluetooth
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:1
@@ -226,7 +232,7 @@ msgstr "Ligue e desligue o Bluetooth e conecte seus dispositivos"
 #. Translators: those are keywords for the bluetooth control-center panel
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:4
 msgid "share;sharing;bluetooth;obex;"
-msgstr ""
+msgstr "compartilhar;compartilhamento;bluetooth;obex;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: ../panels/color/cc-color-calibrate.c:361
@@ -528,7 +534,7 @@ msgstr "Dados de calibração de fábrica fornecidos pelo fabricante"
 
 #: ../panels/color/cc-color-profile.c:203
 msgid "Full-screen display correction not possible with this profile"
-msgstr "Correção de tela em tela chia não é possível com este perfil"
+msgstr "Correção de tela em tela cheia não é possível com este perfil"
 
 #: ../panels/color/cc-color-profile.c:225
 msgid "This profile may no longer be accurate"
@@ -896,7 +902,7 @@ msgstr "%e de %B de %Y, %R"
 #, c-format
 msgctxt "timezone loc"
 msgid "%s, %s"
-msgstr ""
+msgstr "%s, %s"
 
 #. Update the timezone on the listbow row
 #. Translators: "timezone (details)"
@@ -904,7 +910,7 @@ msgstr ""
 #, c-format
 msgctxt "timezone desc"
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #. Translators: UTC here means the Coordinated Universal Time.
 #. * %:::z will be replaced by the offset from UTC e.g. UTC+02
@@ -927,7 +933,7 @@ msgstr "%R"
 #, c-format
 msgctxt "timezone map"
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../panels/datetime/datetime.ui.h:1
 msgid "January"
@@ -1102,15 +1108,15 @@ msgstr "Arraste as telas para organizá-las"
 
 #: ../panels/display/cc-display-panel.c:2201
 msgid "Rotate counterclockwise by 90°"
-msgstr ""
+msgstr "Girar em 90° no sentido anti-horário"
 
 #: ../panels/display/cc-display-panel.c:2219
 msgid "Rotate by 180°"
-msgstr ""
+msgstr "Girar em 180°"
 
 #: ../panels/display/cc-display-panel.c:2237
 msgid "Rotate clockwise by 90°"
-msgstr ""
+msgstr "Girar em 90° no sentido horário"
 
 #: ../panels/display/cc-display-panel.c:2258
 msgid "Size"
@@ -1190,11 +1196,11 @@ msgstr "Escolha como usar os monitores e projetores conectados"
 #. Translators: those are keywords for the display control-center panel
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;"
-msgstr ""
+msgstr "Painel;Projetor;xrandr;Tela;Resolução;Atualizar;Atualização;Monitor;"
 
 #: ../panels/info/cc-info-panel.c:287
 msgid "Wayland"
-msgstr ""
+msgstr "Wayland"
 
 #. TRANSLATORS: AP type
 #: ../panels/info/cc-info-panel.c:290 ../panels/network/panel-common.c:127
@@ -1307,7 +1313,7 @@ msgstr "Visão geral"
 
 #: ../panels/info/cc-info-panel.c:1414 ../panels/info/info.ui.h:21
 msgid "Default Applications"
-msgstr "Aplicativos padrões"
+msgstr "Aplicativos padrão"
 
 #: ../panels/info/cc-info-panel.c:1419 ../panels/info/info.ui.h:29
 msgid "Removable Media"
@@ -1809,18 +1815,18 @@ msgstr "_Reatribuir"
 msgid ""
 "The \"%s\" shortcut has an associated \"%s\" shortcut. Do you want to "
 "automatically set it to \"%s\"?"
-msgstr ""
+msgstr "O atalho \"%s\" possui um atalho \"%s\" associado. Você deseja defini-lo automaticamente para \"%s\"?"
 
 #: ../panels/keyboard/keyboard-shortcuts.c:1451
 #, c-format
 msgid ""
 "\"%s\" is currently associated with \"%s\", this shortcut will be disabled "
 "if you move forward."
-msgstr ""
+msgstr "\"%s\" está atualmente associado a \"%s\", este atalho será desativado caso você prossiga."
 
 #: ../panels/keyboard/keyboard-shortcuts.c:1458
 msgid "_Assign"
-msgstr ""
+msgstr "A_tribuir"
 
 #: ../panels/mouse/cc-mouse-panel.c:114
 msgid "Test Your _Settings"
@@ -1950,7 +1956,7 @@ msgstr "Duplo clique, botão do meio"
 
 #: ../panels/mouse/gnome-mouse-test.c:143
 msgid "Single click, middle button"
-msgstr "Clique único, botão do méio"
+msgstr "Clique único, botão do meio"
 
 #: ../panels/mouse/gnome-mouse-test.c:146
 msgid "Double click, secondary button"
@@ -1981,11 +1987,11 @@ msgstr "%s VPN"
 
 #: ../panels/network/cc-network-panel.c:1312
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr ""
+msgstr "Oops, algo deu errado. Por favor contate o seu fornecedor de software."
 
 #: ../panels/network/cc-network-panel.c:1318
 msgid "NetworkManager needs to be running."
-msgstr ""
+msgstr "O NetworkManager precisa estar em execução."
 
 #: ../panels/network/connection-editor/8021x-security-page.ui.h:1
 msgid "802.1x _Security"
@@ -2197,7 +2203,7 @@ msgstr "Manual"
 #: ../panels/network/connection-editor/ce-page-ip4.c:623
 #: ../panels/network/connection-editor/ce-page-ip6.c:625
 msgid "Link-Local Only"
-msgstr "Link-Local somente"
+msgstr "Apenas conexão local"
 
 #: ../panels/network/connection-editor/ce-page-ip4.c:967
 #: ../panels/network/network-wifi.ui.h:48
@@ -2455,7 +2461,7 @@ msgstr "Vínculo"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:584
 msgid "Team"
-msgstr ""
+msgstr "União"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:586
 msgid "Bridge"
@@ -2556,7 +2562,7 @@ msgstr "A conexão VPN \"%s\" não pode ser exportada para %s.\n\nErro: %s."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:376
 msgid "Export VPN connection"
-msgstr ""
+msgstr "Exportar conexão VPN"
 
 #: ../panels/network/connection-editor/vpn-page.ui.h:4
 msgid "(Error: unable to load VPN connection editor)"
@@ -2595,7 +2601,7 @@ msgstr "Controle como você conecta à Internet"
 msgid ""
 "Network;Wireless;Wi-"
 "Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;vlan;bridge;bond;DNS;"
-msgstr ""
+msgstr "Rede;Network;Sem fio;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Banda larga;Modem;Bluetooth;vpn;vlan;ponte;bridge;bond;vinculo;DNS;"
 
 #: ../panels/network/net-device-bond.c:77
 msgid "Bond slaves"
@@ -2605,7 +2611,7 @@ msgstr "Vínculos escravos"
 #: ../panels/network/net-device-bridge.c:102
 #: ../panels/network/net-device-team.c:102
 msgid "(none)"
-msgstr ""
+msgstr "(nenhum)"
 
 #: ../panels/network/net-device-bridge.c:77
 msgid "Bridge slaves"
@@ -2886,15 +2892,15 @@ msgstr "identidade"
 
 #: ../panels/network/network-wifi.ui.h:28
 msgid "Automatic (DHCP) addresses only"
-msgstr "Endereços (DHCP) automáticos apenas"
+msgstr "Apenas endereços (DHCP) automáticos"
 
 #: ../panels/network/network-wifi.ui.h:29
 msgid "Link-local only"
-msgstr "Link-local apenas"
+msgstr "Apenas conexão local"
 
 #: ../panels/network/network-wifi.ui.h:30
 msgid "Shared with other computers"
-msgstr "Comparilhado com outros computadores"
+msgstr "Compartilhado com outros computadores"
 
 #: ../panels/network/network-wifi.ui.h:33
 msgid "_Ignore automatically obtained routes"
@@ -3313,7 +3319,7 @@ msgstr "MSCHAPv2"
 
 #: ../panels/network/wireless-security/eap-method-fast.c:409
 msgid "Choose a PAC file"
-msgstr ""
+msgstr "Escolha um arquivo PAC"
 
 #: ../panels/network/wireless-security/eap-method-fast.c:416
 msgid "PAC files (*.pac)"
@@ -3378,7 +3384,7 @@ msgstr "MD5"
 #: ../panels/network/wireless-security/eap-method-tls.c:456
 #: ../panels/network/wireless-security/eap-method-ttls.c:350
 msgid "Choose a Certificate Authority certificate"
-msgstr ""
+msgstr "Escolha um certificado da autoridade certificadora"
 
 #: ../panels/network/wireless-security/eap-method-peap.ui.h:3
 msgid "Version 0"
@@ -3415,11 +3421,11 @@ msgstr "A chave privada selecionada não aparenta estar protegida por uma senha.
 
 #: ../panels/network/wireless-security/eap-method-tls.c:450
 msgid "Choose your personal certificate"
-msgstr ""
+msgstr "Escolha seu certificado pessoal"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:462
 msgid "Choose your private key"
-msgstr ""
+msgstr "Escolha sua chave privada"
 
 #: ../panels/network/wireless-security/eap-method-tls.ui.h:1
 msgid "I_dentity"
@@ -3549,24 +3555,24 @@ msgstr "Alertas de som"
 #: ../panels/notifications/edit-dialog.ui.h:5
 msgctxt "notifications"
 msgid "Notification Banners"
-msgstr ""
+msgstr "Banners de notificação"
 
 #. Banners here refers to message tray notifications in the middle of the
 #. screen.
 #: ../panels/notifications/edit-dialog.ui.h:7
 msgctxt "notifications"
 msgid "Show Message Content in Banners"
-msgstr ""
+msgstr "Mostrar o conteúdo da mensagem nos banners"
 
 #: ../panels/notifications/edit-dialog.ui.h:8
 msgctxt "notifications"
 msgid "Lock Screen Notifications"
-msgstr ""
+msgstr "Notificações na tela de bloqueio"
 
 #: ../panels/notifications/edit-dialog.ui.h:9
 msgctxt "notifications"
 msgid "Show Message Content on Lock Screen"
-msgstr ""
+msgstr "Mostrar conteúdo da mensagem na tela de bloqueio"
 
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:1
 msgid "Notifications"
@@ -3583,11 +3589,11 @@ msgstr "Notificações;Banner;Mensagem;Bandeja;Janelas instantâneas;"
 
 #: ../panels/notifications/notifications.ui.h:1
 msgid "Notification Banners"
-msgstr ""
+msgstr "Banners de notificação"
 
 #: ../panels/notifications/notifications.ui.h:2
 msgid "Lock Screen Notifications"
-msgstr ""
+msgstr "Notificações da tela de bloqueio"
 
 #. List of applications.
 #: ../panels/notifications/notifications.ui.h:4
@@ -3636,7 +3642,7 @@ msgstr "Autentique para habilitar esta conta."
 
 #: ../panels/online-accounts/cc-online-accounts-panel.c:501
 msgid "_Sign In"
-msgstr "_Autenticação"
+msgstr "_Autenticar"
 
 #: ../panels/online-accounts/cc-online-accounts-panel.c:748
 msgid "Error creating account"
@@ -3671,7 +3677,7 @@ msgstr "Conecte-se às suas contas on-line e decida para que usá-las"
 #: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
+msgstr "Google;Facebook;Twitter;Yahoo;Web;Conectado;Online;Bate-papo;Chat;Calendário;Agenda;E-mail;Correio;Contato;Contatos;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 
 #: ../panels/online-accounts/online-accounts.ui.h:1
 msgid "No online accounts configured"
@@ -3876,7 +3882,7 @@ msgstr "_Brilho da tela"
 
 #: ../panels/power/cc-power-panel.c:1605
 msgid "Automatic brightness"
-msgstr ""
+msgstr "Brilho automático"
 
 #: ../panels/power/cc-power-panel.c:1625
 msgid "_Keyboard brightness"
@@ -3896,7 +3902,7 @@ msgstr "_Wi-Fi"
 
 #: ../panels/power/cc-power-panel.c:1702
 msgid "Turn off Wi-Fi to save power."
-msgstr ""
+msgstr "Desligue o Wi-Fi para poupar energia."
 
 #: ../panels/power/cc-power-panel.c:1727
 msgid "_Mobile broadband"
@@ -3904,7 +3910,7 @@ msgstr "Banda larga _móvel"
 
 #: ../panels/power/cc-power-panel.c:1732
 msgid "Turn off mobile broadband (3G, 4G, LTE, etc.) to save power."
-msgstr ""
+msgstr "Desliga a banda larga móvel (3G, 4G, LTE, etc.) para poupar energia."
 
 #: ../panels/power/cc-power-panel.c:1784
 msgid "_Bluetooth"
@@ -3928,7 +3934,7 @@ msgstr "Suspensão _automática"
 
 #: ../panels/power/cc-power-panel.c:2001
 msgid "Automatic suspend"
-msgstr ""
+msgstr "Suspensão automática"
 
 #: ../panels/power/cc-power-panel.c:2155
 msgid "Devices"
@@ -4270,7 +4276,7 @@ msgstr "Nenhuma impressora detectada."
 #. or a text which will filter found devices (their names and locations)
 #: ../panels/printers/new-printer-dialog.ui.h:9
 msgid "Enter a network address or search for a printer"
-msgstr ""
+msgstr "Digite um endereço de rede ou procure por uma impressora"
 
 #: ../panels/printers/options-dialog.ui.h:1
 msgid "Loading options…"
@@ -4287,12 +4293,12 @@ msgstr "Carregando banco de dados de drivers..."
 #. Translators: The found device is a JetDirect printer
 #: ../panels/printers/pp-host.c:526
 msgid "JetDirect Printer"
-msgstr ""
+msgstr "Impressora JetDirect"
 
 #. Translators: The found device is a Line Printer Daemon printer
 #: ../panels/printers/pp-host.c:782
 msgid "LPD Printer"
-msgstr ""
+msgstr "Impressora LPD"
 
 #. Translators: this is an option of "Two Sided"
 #: ../panels/printers/pp-ipp-option-widget.c:66
@@ -4397,29 +4403,29 @@ msgstr "%s trabalhos ativos"
 #. Translators: The found device is a printer connected via USB
 #: ../panels/printers/pp-new-printer-dialog.c:1659
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #. Translators: The found device is a printer connected via serial port
 #: ../panels/printers/pp-new-printer-dialog.c:1664
 msgid "Serial Port"
-msgstr ""
+msgstr "Porta serial"
 
 #. Translators: The found device is a printer connected via parallel port
 #: ../panels/printers/pp-new-printer-dialog.c:1671
 msgid "Parallel Port"
-msgstr ""
+msgstr "Porta paralela"
 
 #. Translators: Location of found network printer (e.g. Kitchen, Reception)
 #: ../panels/printers/pp-new-printer-dialog.c:1713
 #, c-format
 msgid "Location: %s"
-msgstr ""
+msgstr "Localização: %s"
 
 #. Translators: Network address of found printer
 #: ../panels/printers/pp-new-printer-dialog.c:1718
 #, c-format
 msgid "Address: %s"
-msgstr ""
+msgstr "Endereço: %s"
 
 #. Translators: This item is a server which needs authentication to show its
 #. printers
@@ -4533,7 +4539,7 @@ msgstr "Padrão da impressora"
 #. Translators: this is an option of "GhostScript"
 #: ../panels/printers/pp-ppd-option-widget.c:90
 msgid "Embed GhostScript fonts only"
-msgstr "Somente fontes embutidas do GhostScript"
+msgstr "Apenas fontes embutidas do GhostScript"
 
 #. Translators: this is an option of "GhostScript"
 #: ../panels/printers/pp-ppd-option-widget.c:92
@@ -4588,7 +4594,7 @@ msgstr "Localização"
 #. Translators: This checkbox is checked when the default printer is selected.
 #: ../panels/printers/printers.ui.h:8
 msgid "_Default printer"
-msgstr ""
+msgstr "Im_pressora padrão"
 
 #: ../panels/printers/printers.ui.h:9
 msgid "Jobs"
@@ -4680,11 +4686,11 @@ msgstr "Excluir permanentemente arquivos da lixeira e temporários"
 
 #: ../panels/privacy/cc-privacy-panel.c:823 ../panels/privacy/privacy.ui.h:40
 msgid "Software Usage"
-msgstr ""
+msgstr "Utilização do software"
 
 #: ../panels/privacy/cc-privacy-panel.c:864 ../panels/privacy/privacy.ui.h:48
 msgid "Problem Reporting"
-msgstr ""
+msgstr "Relatório de Problema"
 
 #. translators: '%s' is the distributor's name, such as 'Fedora'
 #: ../panels/privacy/cc-privacy-panel.c:878
@@ -4692,11 +4698,11 @@ msgstr ""
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data."
-msgstr ""
+msgstr "Enviar relatórios de problemas técnicos nos ajuda a melhorar o %s. Os relatórios são enviados anonimamente e não contém dados pessoais."
 
 #: ../panels/privacy/cc-privacy-panel.c:890 ../panels/privacy/privacy.ui.h:45
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Política de privacidade"
 
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:1
 msgid "Privacy"
@@ -4798,7 +4804,7 @@ msgstr "B_loqueio de tela automático"
 
 #: ../panels/privacy/privacy.ui.h:31
 msgid "Lock screen _after blank for"
-msgstr "Bloquear tela _após tela branca"
+msgstr "Bloquear a tela _após apagada por"
 
 #: ../panels/privacy/privacy.ui.h:32
 msgid "Show _Notifications"
@@ -4827,23 +4833,23 @@ msgid ""
 "Sending us information about which software you use helps us provide you with more accurate recommendations. It also helps us to improve our software.\n"
 "\n"
 "All the information we collect is made anonymous, and we will never share your data with third parties."
-msgstr ""
+msgstr "Ao nos enviar informações sobre qual software você utiliza, você irá nos ajudar a oferecer-lhe recomendações mais precisas. Isto também nos auxilia a melhorar nosso software.\n\nTodas as informações que coletamos é tornada anônima e jamais iremos compartilhar seus dados com terceiros."
 
 #: ../panels/privacy/privacy.ui.h:44
 msgid "_Send software usage statistics"
-msgstr ""
+msgstr "En_viar estatísticas de utilização do software"
 
 #: ../panels/privacy/privacy.ui.h:46
 msgid "_Location Services"
-msgstr ""
+msgstr "Serviços de _localização"
 
 #: ../panels/privacy/privacy.ui.h:47
 msgid "Used to determine your geographical location"
-msgstr ""
+msgstr "É usado para determinar sua localização geográfica"
 
 #: ../panels/privacy/privacy.ui.h:49
 msgid "_Automatic Problem Reporting"
-msgstr ""
+msgstr "Relatório _automático de problemas"
 
 #: ../panels/region/cc-format-chooser.c:120
 msgctxt "measurement format"
@@ -5002,27 +5008,27 @@ msgstr "Opções"
 
 #: ../panels/region/region.ui.h:9
 msgid "Add input source"
-msgstr ""
+msgstr "Adicionar fonte de entrada"
 
 #: ../panels/region/region.ui.h:10
 msgid "Remove input source"
-msgstr ""
+msgstr "Remover fonte de entrada"
 
 #: ../panels/region/region.ui.h:11
 msgid "Move input source up"
-msgstr ""
+msgstr "Mover fonte de entrada para cima"
 
 #: ../panels/region/region.ui.h:12
 msgid "Move input source down"
-msgstr ""
+msgstr "Mover fonte de entrada para baixo"
 
 #: ../panels/region/region.ui.h:13
 msgid "Configure input source"
-msgstr ""
+msgstr "Configurar fonte de entrada"
 
 #: ../panels/region/region.ui.h:14
 msgid "Show input source keyboard layout"
-msgstr ""
+msgstr "Mostrar layout de teclado da fonte de entrada"
 
 #: ../panels/region/region.ui.h:15
 msgid "Login settings are used by all users when logging into the system"
@@ -5099,12 +5105,12 @@ msgstr "Off"
 #: ../panels/sharing/cc-sharing-panel.c:295
 msgctxt "service is enabled"
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 #: ../panels/sharing/cc-sharing-panel.c:298
 msgctxt "service is active"
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 #: ../panels/sharing/cc-sharing-panel.c:369
 msgid "Choose a Folder"
@@ -5127,7 +5133,7 @@ msgstr "Controle o que você quer compartilhar com outros"
 #: ../panels/sharing/gnome-sharing-panel.desktop.in.in.h:4
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
-msgstr ""
+msgstr "compartilhar;compartilhamento;ssh;máquina;host;nome;remoto;desktop;área de trabalho;mídia;áudio;vídeo;imagens;fotos;filmes;servidor;renderizador;"
 
 #: ../panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in.h:1
 msgid "Enable or disable remote login"
@@ -5140,12 +5146,12 @@ msgstr "É necessário autenticação para habilitar ou desabilitar sessão remo
 #. Label
 #: ../panels/sharing/cc-sharing-networks.c:303
 msgid "No networks selected for sharing"
-msgstr ""
+msgstr "Sem redes selecionadas para compartilhamento"
 
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #: ../panels/sharing/networks.ui.h:1
 msgid "Networks"
-msgstr ""
+msgstr "Redes"
 
 #: ../panels/sharing/sharing.ui.h:1
 msgid "Computer Name"
@@ -5198,11 +5204,11 @@ msgstr "Permita que usuários remotos vejam e controlem sua tela conectando a: <
 
 #: ../panels/sharing/sharing.ui.h:16
 msgid "Allow Remote Control"
-msgstr ""
+msgstr "Permitir acesso remoto"
 
 #: ../panels/sharing/sharing.ui.h:17
 msgid "Password:"
-msgstr ""
+msgstr "Senha:"
 
 #: ../panels/sharing/sharing.ui.h:18
 msgid "Show Password"
@@ -5210,24 +5216,24 @@ msgstr "Mostrar senha"
 
 #: ../panels/sharing/sharing.ui.h:19
 msgid "Access Options"
-msgstr ""
+msgstr "Opções de acesso"
 
 #: ../panels/sharing/sharing.ui.h:20
 msgid "New connections must ask for access"
-msgstr ""
+msgstr "Novas conexões devem solicitar acesso"
 
 #: ../panels/sharing/sharing.ui.h:21
 msgid "Require a password"
-msgstr ""
+msgstr "Exigir uma senha"
 
 #: ../panels/sharing/sharing.ui.h:22
 msgid ""
 "Media sharing allows you to share music, photos and videos over the network."
-msgstr ""
+msgstr "O compartilhamento de mídia permite que você compartilhe músicas, fotos e vídeos através da rede."
 
 #: ../panels/sharing/sharing.ui.h:23
 msgid "Folders"
-msgstr ""
+msgstr "Pastas"
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -5469,7 +5475,7 @@ msgstr "Torna mais fácil ver, ouvir, digitar, apontar e clicar"
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;"
-msgstr ""
+msgstr "Teclado;Mouse;a11y;Acessibilidade;Contraste;Zoom;Ampliação;Leitor de tela;texto;fonte;tamanho;AccessX;Teclas;Lentas;Repercussão;Mouse;"
 
 #: ../panels/universal-access/uap.ui.h:1
 msgid "_Always Show Universal Access Menu"
@@ -5517,7 +5523,7 @@ msgstr "Assistência de _digitação (AccessX)"
 
 #: ../panels/universal-access/uap.ui.h:14
 msgid "Pointing & Clicking"
-msgstr ""
+msgstr "Apontando & clicando"
 
 #: ../panels/universal-access/uap.ui.h:15
 msgid "_Mouse Keys"
@@ -5585,7 +5591,7 @@ msgstr "_Desabilitar se duas teclas forem pressionadas juntas"
 
 #: ../panels/universal-access/uap.ui.h:31
 msgid "Beep when a _modifier key is pressed"
-msgstr ""
+msgstr "Soar um bip quando uma tecla _modificadora for pressionada"
 
 #: ../panels/universal-access/uap.ui.h:32
 msgid "S_low Keys"
@@ -6055,7 +6061,7 @@ msgstr "Adicionar ou remover usuários e alterar sua senha"
 #. Translators: those are keywords for the user accounts control-center panel
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr "Iniciar sessão;Nome;Impressão digital;Avatar;Logotipo;Face;Senha;"
+msgstr "Iniciar sessão;Sessão;Nome;Impressão digital;Avatar;Logotipo;Face;Senha;"
 
 #: ../panels/user-accounts/data/history-dialog.ui.h:1
 msgid "Login History"
@@ -6063,7 +6069,7 @@ msgstr "Histórico de início de sessão"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:1
 msgid "Change Password"
-msgstr ""
+msgstr "Alterar senha"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:3
 msgid "Ch_ange"
@@ -6556,7 +6562,7 @@ msgstr "Falha ao excluir usuário"
 #: ../panels/user-accounts/um-user-panel.c:576
 #: ../panels/user-accounts/um-user-panel.c:628
 msgid "Failed to revoke remotely managed user"
-msgstr ""
+msgstr "Falha ao revogar usuário gerenciado remotamente"
 
 #: ../panels/user-accounts/um-user-panel.c:684
 msgid "You cannot delete your own account."
@@ -6595,11 +6601,11 @@ msgstr "_Manter arquivos"
 #: ../panels/user-accounts/um-user-panel.c:728
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s's account?"
-msgstr ""
+msgstr "Tem certeza de que deseja revogar a conta gerenciada remotamente do %s?"
 
 #: ../panels/user-accounts/um-user-panel.c:732
 msgid "_Delete"
-msgstr ""
+msgstr "_Excluir"
 
 #: ../panels/user-accounts/um-user-panel.c:784
 msgctxt "Password mode"
@@ -6659,22 +6665,22 @@ msgstr "Para excluir a conta de usuário selecionada,\nclique primeiro no ícone
 #: ../panels/user-accounts/um-utils.c:563
 #, c-format
 msgid "A user with the username '%s' already exists."
-msgstr ""
+msgstr "Já existe uma conta com o nome de usuário \"%s\"."
 
 #: ../panels/user-accounts/um-utils.c:567
 #, c-format
 msgid "The username is too long."
-msgstr ""
+msgstr "O nome de usuário é muito longo."
 
 #: ../panels/user-accounts/um-utils.c:570
 msgid "The username cannot start with a '-'."
-msgstr ""
+msgstr "O nome de usuário não pode começar com um '-'."
 
 #: ../panels/user-accounts/um-utils.c:573
 msgid ""
 "The username should only consist of lower and upper case letters from a-z, "
 "digits and any of characters '.', '-' and '_'."
-msgstr ""
+msgstr "O nome de usuário deve consistir apenas de letras maiúsculas e minúsculas de a à z, dígitos e qualquer um dos caracteres '.', '-' e '_'."
 
 #: ../panels/user-accounts/um-utils.c:577
 msgid "This will be used to name your home folder and can't be changed."
@@ -6799,7 +6805,7 @@ msgstr "Preferências do tablet"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:4
 msgid "_Help"
-msgstr ""
+msgstr "Aj_uda"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:6
 msgid "No tablet detected"
@@ -6996,21 +7002,21 @@ msgstr "Sensação de pressão da ponta"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:1
 msgid "GNOME Control Center"
-msgstr ""
+msgstr "Centro de controle GNOME"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:2
 msgid "Utilities to configure the GNOME desktop"
-msgstr ""
+msgstr "Utilitários para configura o ambiente GNOME"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:3
 msgid ""
 "The control center is GNOME's main interface for configuration of various "
 "aspects of your desktop."
-msgstr ""
+msgstr "O centro de controle é a interface principal do GNOME para configuração de vários aspectos de seu ambiente."
 
 #: ../shell/cc-application.c:45
 msgid "Display version number"
-msgstr ""
+msgstr "Exibir número da versão"
 
 #: ../shell/cc-application.c:46
 msgid "Enable verbose mode"
@@ -7050,7 +7056,7 @@ msgstr "Sair"
 
 #: ../shell/cc-window.c:61 ../shell/cc-window.c:1513
 msgid "All Settings"
-msgstr "Todas as configurações"
+msgstr "Todas configurações"
 
 #. Add categories
 #: ../shell/cc-window.c:880
