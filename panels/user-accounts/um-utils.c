@@ -25,6 +25,7 @@
 #include <sys/types.h>
 #include <limits.h>
 #include <unistd.h>
+#include <utmpx.h>
 #include <pwd.h>
 
 #include <gio/gio.h>
@@ -460,24 +461,11 @@ down_arrow (GtkStyleContext *context,
         cairo_restore (cr);
 }
 
-static guint
-get_login_name_max (void)
-{
-#ifdef LOGIN_NAME_MAX
-        return LOGIN_NAME_MAX;
-#else
-        static gint length;
-
-        if (!length) {
-                length = sysconf (_SC_LOGIN_NAME_MAX);
-                g_assert_cmpint (length, >=, 0);
-        }
-
-        return length;
-#endif
-}
-
-#define MAXNAMELEN  get_login_name_max ()
+/* Taken from defines.h in shadow-utils. On Linux, this value is much smaller
+ * than the sysconf limit LOGIN_NAME_MAX, and values larger than this will
+ * result in failure when running useradd.
+ */
+#define MAXNAMELEN  (sizeof (((struct utmpx *)NULL)->ut_user))
 
 static gboolean
 is_username_used (const gchar *username)
@@ -718,9 +706,19 @@ generate_username_choices (const gchar  *name,
 
                 g_strfreev (words2);
         }
+
+        g_string_truncate (first_word, MAXNAMELEN);
+        g_string_truncate (last_word, MAXNAMELEN);
+
         item2 = g_string_append (item2, last_word->str);
         item3 = g_string_append (item3, first_word->str);
         item4 = g_string_prepend (item4, last_word->str);
+
+        g_string_truncate (item0, MAXNAMELEN);
+        g_string_truncate (item1, MAXNAMELEN);
+        g_string_truncate (item2, MAXNAMELEN);
+        g_string_truncate (item3, MAXNAMELEN);
+        g_string_truncate (item4, MAXNAMELEN);
 
         items = g_hash_table_new (g_str_hash, g_str_equal);
 
