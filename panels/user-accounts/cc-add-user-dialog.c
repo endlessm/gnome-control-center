@@ -32,6 +32,7 @@
 
 #define PASSWORD_CHECK_TIMEOUT 600
 #define DOMAIN_DEFAULT_HINT _("Should match the web address of your login provider.")
+#define DEFAULT_USERNAME "user"
 
 typedef enum {
         MODE_LOCAL,
@@ -455,7 +456,7 @@ generate_username_choices (const gchar  *name,
         }
 
         if (strlen (stripped_name) == 0) {
-                return;
+                goto bailout;
         }
 
         /* we split name on spaces, and then on dashes, so that we can treat
@@ -616,6 +617,20 @@ generate_username_choices (const gchar  *name,
                         gtk_list_store_set (store, &iter, 0, first_word->str, -1);
                         g_hash_table_insert (items, first_word->str, first_word->str);
                 }
+        }
+
+bailout:
+        if (items == NULL || g_hash_table_size (items) == 0) {
+                g_autofree char *default_username = NULL;
+
+                gtk_list_store_append (store, &iter);
+                default_username = g_strdup (DEFAULT_USERNAME);
+                i = 0;
+                while (is_username_used (default_username)) {
+                        g_clear_pointer (&default_username, g_free);
+                        default_username = g_strdup_printf (DEFAULT_USERNAME "%d", ++i);
+                }
+                gtk_list_store_set (store, &iter, 0, default_username, -1);
         }
 }
 
