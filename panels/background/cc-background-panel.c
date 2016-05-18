@@ -43,8 +43,6 @@
 #define WP_PCOLOR_KEY "primary-color"
 #define WP_SCOLOR_KEY "secondary-color"
 
-#define EOS_DEFAULT_BG_URI "eos:///default"
-
 CC_PANEL_REGISTER (CcBackgroundPanel, cc_background_panel)
 
 #define BACKGROUND_PANEL_PRIVATE(o) \
@@ -418,46 +416,6 @@ on_preview_draw (GtkWidget         *widget,
   return TRUE;
 }
 
-static gchar *
-get_endless_default_bg_uri (void)
-{
-  const gchar * const *language_names;
-  const gchar *language_name;
-  gchar *path, *filename, *uri;
-  GFile *file;
-  gint idx;
-
-  uri = NULL;
-  language_names = g_get_language_names ();
-
-  for (idx = 0; language_names[idx] != NULL; idx++)
-    {
-      language_name = language_names[idx];
-
-      /* discard language names with encodings */
-      if (strchr (language_name, '.') != NULL)
-	continue;
-
-      filename = g_strdup_printf ("desktop-background-%s.jpg", language_name);
-      path = g_build_filename (DATADIR "/eos-media",
-			       filename,
-			       NULL);
-      file = g_file_new_for_path (path);
-
-      if (g_file_query_exists (file, NULL))
-	uri = g_file_get_uri (file);
-
-      g_free (filename);
-      g_free (path);
-      g_object_unref (file);
-
-      if (uri != NULL)
-	break;
-    }
-
-  return uri;
-}
-
 static void
 reload_current_bg (CcBackgroundPanel *self)
 {
@@ -474,15 +432,6 @@ reload_current_bg (CcBackgroundPanel *self)
 
   /* initalise the current background information from settings */
   uri = g_settings_get_string (priv->settings, WP_URI_KEY);
-
-  /* initialise from language if required */
-  if (g_strcmp0 (uri, EOS_DEFAULT_BG_URI) == 0)
-    {
-      g_free (uri);
-      uri = get_endless_default_bg_uri ();
-    }
-
-  /* fall through the former logic otherwise */
   if (uri && *uri == '\0')
     {
       g_clear_pointer (&uri, g_free);
