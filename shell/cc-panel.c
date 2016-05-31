@@ -243,6 +243,8 @@ static void
 cc_panel_init (CcPanel *panel)
 {
   panel->priv = CC_PANEL_GET_PRIVATE (panel);
+
+  gtk_widget_set_vexpand (GTK_WIDGET (panel), TRUE);
 }
 
 /**
