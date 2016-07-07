@@ -1848,6 +1848,7 @@ add_power_saving_section (CcPowerPanel *self)
 
   w = gtk_label_new (_("Turn off mobile broadband (3G, 4G, LTE, etc.) to save power."));
   gtk_widget_set_halign (w, GTK_ALIGN_START);
+  gtk_label_set_ellipsize (GTK_LABEL (w), PANGO_ELLIPSIZE_END);
   gtk_style_context_add_class (gtk_widget_get_style_context (w), GTK_STYLE_CLASS_DIM_LABEL);
   gtk_box_pack_start (GTK_BOX (box2), w, TRUE, TRUE, 0);
 
@@ -2430,10 +2431,14 @@ add_device_section (CcPowerPanel *self)
 static void
 on_content_size_changed (GtkWidget *widget, GtkAllocation *allocation, gpointer data)
 {
+  CcPowerPanel *self = data;
   GtkWidget *box;
+  CcShell *shell;
 
+  shell = cc_panel_get_shell (CC_PANEL (self));
   box = gtk_widget_get_parent (gtk_widget_get_parent (widget));
-  if (allocation->height < 490)
+
+  if (cc_shell_is_small_screen (shell))
     {
       gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (box),
                                       GTK_POLICY_NEVER, GTK_POLICY_NEVER);
@@ -2442,7 +2447,7 @@ on_content_size_changed (GtkWidget *widget, GtkAllocation *allocation, gpointer 
     {
       gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (box),
                                       GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-      gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (box), 490);
+      gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (box), 360);
     }
 }
 
@@ -2532,7 +2537,7 @@ cc_power_panel_init (CcPowerPanel *self)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (box),
                                   GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
   g_signal_connect (widget, "size-allocate",
-                    G_CALLBACK (on_content_size_changed), NULL);
+                    G_CALLBACK (on_content_size_changed), self);
   gtk_widget_show (box);
   gtk_container_add (GTK_CONTAINER (self), box);
   gtk_container_add (GTK_CONTAINER (box), widget);
