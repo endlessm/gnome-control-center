@@ -118,8 +118,6 @@ static gboolean cc_window_set_active_panel_from_id (CcShell      *shell,
 
 static gint get_monitor_height (CcWindow *self);
 
-static void update_small_screen_settings (CcWindow *self);
-
 static const gchar *
 get_icon_name_from_g_icon (GIcon *gicon)
 {
@@ -1350,6 +1348,7 @@ static void
 update_small_screen_settings (CcWindow *self)
 {
   CcSmallScreen small;
+  GList *item_views, *l;
 
   update_monitor_number (self);
   small = is_small (self);
@@ -1370,6 +1369,17 @@ update_small_screen_settings (CcWindow *self)
     }
 
   self->priv->small_screen = small;
+
+  /* If we're on a big screen, the icon view shall
+   * limit the number of columns to 6. Otherwise,
+   * make it adapt to small screen sizes.
+   */
+  item_views = get_item_views (self);
+
+  for (l = item_views; l != NULL; l = l->next)
+    gtk_icon_view_set_columns (l->data, small == SMALL_SCREEN_TRUE ? -1 : 6);
+
+  g_list_free (item_views);
 
   /* And update the minimum sizes */
   stack_page_notify_cb (GTK_STACK (self->priv->stack), NULL, self);
