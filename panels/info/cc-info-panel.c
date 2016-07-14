@@ -321,69 +321,110 @@ cc_info_panel_class_init (CcInfoPanelClass *klass)
   object_class->constructed = cc_info_panel_constructed;
 }
 
-static char *
-get_item (const char *buffer, const char *name)
+static GHashTable*
+get_os_info (void)
 {
-  char *label, *start, *end, *result;
-  char end_char;
+  GHashTable *hashtable;
+  gchar *buffer;
 
-  result = NULL;
-  start = NULL;
-  end = NULL;
-  label = g_strconcat (name, "=", NULL);
-  if ((start = strstr (buffer, label)) != NULL)
+  hashtable = NULL;
+
+  if (g_file_get_contents ("/etc/os-release", &buffer, NULL, NULL))
     {
-      start += strlen (label);
-      end_char = '\n';
-      if (*start == '"')
+      gchar **lines;
+      gint i;
+
+      lines = g_strsplit (buffer, "\n", -1);
+
+      for (i = 0; lines[i] != NULL; i++)
         {
-          start++;
-          end_char = '"';
+          gchar *delimiter, *key, *value;
+
+          /* Initialize the hash table if needed */
+          if (!hashtable)
+            hashtable = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
+
+          delimiter = strstr (lines[i], "=");
+          value = NULL;
+          key = NULL;
+
+          if (delimiter != NULL)
+            {
+              gint size;
+
+              key = g_strndup (lines[i], delimiter - lines[i]);
+
+              /* Jump the '=' */
+              delimiter += strlen ("=");
+
+              /* Eventually jump the ' " ' character */
+              if (g_str_has_prefix (delimiter, "\""))
+                delimiter += strlen ("\"");
+
+              size = strlen (delimiter);
+
+              /* Don't consider the last ' " ' too */
+              if (g_str_has_suffix (delimiter, "\""))
+                size -= strlen ("\"");
+
+              value = g_strndup (delimiter, size);
+
+              g_hash_table_insert (hashtable, key, value);
+            }
         }
 
-      end = strchr (start, end_char);
+      g_strfreev (lines);
+      g_free (buffer);
     }
 
-    if (start != NULL && end != NULL)
-      {
-        result = g_strndup (start, end - start);
-      }
-
-  g_free (label);
-
-  return result;
+  return hashtable;
 }
 
 static char *
 get_os_type (void)
 {
-  char *buffer;
+  GHashTable *os_info;
   char *name;
   char *result;
   char *version;
+  char *build_id;
 
   result = NULL;
   name = NULL;
   version = NULL;
-  if (g_file_get_contents ("/etc/os-release", &buffer, NULL, NULL))
-    {
-      name = get_item (buffer, "NAME");
-      version = get_item (buffer, "VERSION_ID");
+  build_id = NULL;
 
-      g_free (buffer);
+  os_info = get_os_info ();
+
+  if (!os_info)
+    return NULL;
+
+  name = g_hash_table_lookup (os_info, "NAME");
+  version = g_hash_table_lookup (os_info, "VERSION_ID");
+  build_id = g_hash_table_lookup (os_info, "BUILD_ID");
+
+  if (build_id)
+    {
+      /* translators: This is the name of the OS, followed by the
+       * version and the build id, for example:
+       * "Endless OS 2.6 (Build ID: xyz)" */
+      if (name)
+        result = g_strdup_printf (_("%s %s (Build ID: %s)"), name, version, build_id);
+      else
+        result = g_strdup_printf (_("%s (Build ID: %s)"), name, build_id);
+    }
+  else
+    {
+      /* translators: This is the name of the OS, followed by the
+       * version, for example:
+       * "Endless OS 2.6" */
+      if (name)
+        result = g_strdup_printf (_("%s %s"), name, version);
+      else
+        result = g_strdup_printf (_("%s"), name);
     }
 
-  if (name && version)
-    {
-      result = g_strconcat (name, " ", version, NULL);
-    }
-  else if (name)
-    {
-      result = g_strdup (name);
-    }
-
-  g_free (name);
-  g_free (version);
+  g_clear_pointer (&os_info, g_hash_table_destroy);
 
   return result;
 }
