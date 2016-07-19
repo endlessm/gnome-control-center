@@ -32,9 +32,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-05 02:44+0000\n"
-"PO-Revision-Date: 2016-06-30 05:18+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
+"POT-Creation-Date: 2016-07-15 19:38+0000\n"
+"PO-Revision-Date: 2016-07-15 19:38+0000\n"
+"Last-Translator: endlessmobile_build <philip@endlessm.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1092,7 +1092,7 @@ msgstr "主"
 
 #: ../panels/display/cc-display-panel.c:577
 #: ../panels/notifications/cc-notifications-panel.c:257
-#: ../panels/power/cc-power-panel.c:1918 ../panels/power/cc-power-panel.c:1929
+#: ../panels/power/cc-power-panel.c:1919 ../panels/power/cc-power-panel.c:1930
 #: ../panels/privacy/cc-privacy-panel.c:178
 #: ../panels/privacy/cc-privacy-panel.c:245
 #: ../panels/privacy/cc-privacy-panel.c:383
@@ -1244,46 +1244,66 @@ msgstr "Wayland"
 msgid "Unknown"
 msgstr "未知"
 
+#: ../panels/info/cc-info-panel.c:412
+#, c-format
+msgid "%s %s (Build ID: %s)"
+msgstr ""
+
+#: ../panels/info/cc-info-panel.c:414
+#, c-format
+msgid "%s (Build ID: %s)"
+msgstr ""
+
+#: ../panels/info/cc-info-panel.c:422
+#, c-format
+msgid "%s %s"
+msgstr ""
+
+#: ../panels/info/cc-info-panel.c:424
+#, c-format
+msgid "%s"
+msgstr ""
+
 #. translators: This is the the type of OS architecture, eg: "64-bit" or
 #. "32-bit"
-#: ../panels/info/cc-info-panel.c:403
+#: ../panels/info/cc-info-panel.c:444
 #, c-format
 msgid "%d-bit"
 msgstr "%d 位"
 
-#: ../panels/info/cc-info-panel.c:1081
+#: ../panels/info/cc-info-panel.c:1122
 msgid "Ask what to do"
 msgstr "询问如何处理"
 
-#: ../panels/info/cc-info-panel.c:1085
+#: ../panels/info/cc-info-panel.c:1126
 msgid "Do nothing"
 msgstr "不处理"
 
-#: ../panels/info/cc-info-panel.c:1089
+#: ../panels/info/cc-info-panel.c:1130
 msgid "Open folder"
 msgstr "打开文件夹"
 
-#: ../panels/info/cc-info-panel.c:1180
+#: ../panels/info/cc-info-panel.c:1221
 msgid "Other Media"
 msgstr "其他媒体"
 
-#: ../panels/info/cc-info-panel.c:1211
+#: ../panels/info/cc-info-panel.c:1252
 msgid "Select an application for audio CDs"
 msgstr "选择播放音频 CD 的应用程序"
 
-#: ../panels/info/cc-info-panel.c:1212
+#: ../panels/info/cc-info-panel.c:1253
 msgid "Select an application for video DVDs"
 msgstr "选择播放视频 DVD 的应用程序"
 
-#: ../panels/info/cc-info-panel.c:1213
+#: ../panels/info/cc-info-panel.c:1254
 msgid "Select an application to run when a music player is connected"
 msgstr "选择要在连接音乐播放器后运行的应用程序"
 
-#: ../panels/info/cc-info-panel.c:1214
+#: ../panels/info/cc-info-panel.c:1255
 msgid "Select an application to run when a camera is connected"
 msgstr "选择要在连接相机后运行的应用程序"
 
-#: ../panels/info/cc-info-panel.c:1215
+#: ../panels/info/cc-info-panel.c:1256
 msgid "Select an application for software CDs"
 msgstr "选择要在插入软件 CD 时运行的应用程序"
 
@@ -1291,96 +1311,96 @@ msgstr "选择要在插入软件 CD 时运行的应用程序"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#: ../panels/info/cc-info-panel.c:1227
+#: ../panels/info/cc-info-panel.c:1268
 msgid "audio DVD"
 msgstr "音频 DVD"
 
-#: ../panels/info/cc-info-panel.c:1228
+#: ../panels/info/cc-info-panel.c:1269
 msgid "blank Blu-ray disc"
 msgstr "空白蓝光光盘"
 
-#: ../panels/info/cc-info-panel.c:1229
+#: ../panels/info/cc-info-panel.c:1270
 msgid "blank CD disc"
 msgstr "空白 CD 光盘"
 
-#: ../panels/info/cc-info-panel.c:1230
+#: ../panels/info/cc-info-panel.c:1271
 msgid "blank DVD disc"
 msgstr "空白 DVD 光盘"
 
-#: ../panels/info/cc-info-panel.c:1231
+#: ../panels/info/cc-info-panel.c:1272
 msgid "blank HD DVD disc"
 msgstr "空白 HD DVD 光盘"
 
-#: ../panels/info/cc-info-panel.c:1232
+#: ../panels/info/cc-info-panel.c:1273
 msgid "Blu-ray video disc"
 msgstr "蓝光视频光盘"
 
-#: ../panels/info/cc-info-panel.c:1233
+#: ../panels/info/cc-info-panel.c:1274
 msgid "e-book reader"
 msgstr "电子书阅读器"
 
-#: ../panels/info/cc-info-panel.c:1234
+#: ../panels/info/cc-info-panel.c:1275
 msgid "HD DVD video disc"
 msgstr "HD DVD 视频光盘"
 
-#: ../panels/info/cc-info-panel.c:1235
+#: ../panels/info/cc-info-panel.c:1276
 msgid "Picture CD"
 msgstr "图片 CD"
 
-#: ../panels/info/cc-info-panel.c:1236
+#: ../panels/info/cc-info-panel.c:1277
 msgid "Super Video CD"
 msgstr "SVCD"
 
-#: ../panels/info/cc-info-panel.c:1237
+#: ../panels/info/cc-info-panel.c:1278
 msgid "Video CD"
 msgstr "视频 CD"
 
-#: ../panels/info/cc-info-panel.c:1238
+#: ../panels/info/cc-info-panel.c:1279
 msgid "Windows software"
 msgstr "Windows 软件"
 
-#: ../panels/info/cc-info-panel.c:1361
+#: ../panels/info/cc-info-panel.c:1402
 #: ../panels/keyboard/keyboard-shortcuts.c:1949
 msgid "Section"
 msgstr "节"
 
-#: ../panels/info/cc-info-panel.c:1370 ../panels/info/info.ui.h:14
+#: ../panels/info/cc-info-panel.c:1411 ../panels/info/info.ui.h:14
 msgid "Overview"
 msgstr "总览"
 
-#: ../panels/info/cc-info-panel.c:1376 ../panels/info/info.ui.h:21
+#: ../panels/info/cc-info-panel.c:1417 ../panels/info/info.ui.h:21
 msgid "Default Applications"
 msgstr "默认应用程序"
 
-#: ../panels/info/cc-info-panel.c:1381 ../panels/info/info.ui.h:29
+#: ../panels/info/cc-info-panel.c:1422 ../panels/info/info.ui.h:29
 msgid "Removable Media"
 msgstr "可移动介质"
 
-#: ../panels/info/cc-info-panel.c:1433
+#: ../panels/info/cc-info-panel.c:1474
 msgid "No updates available"
 msgstr "没有可用的更新"
 
-#: ../panels/info/cc-info-panel.c:1435
+#: ../panels/info/cc-info-panel.c:1476
 msgid "Check for updates now"
 msgstr "检查更新"
 
-#: ../panels/info/cc-info-panel.c:1437
+#: ../panels/info/cc-info-panel.c:1478
 msgid "Update failed"
 msgstr "更新失败"
 
-#: ../panels/info/cc-info-panel.c:1439
+#: ../panels/info/cc-info-panel.c:1480
 msgid "Checking for updates…"
 msgstr "检查更新中……"
 
-#: ../panels/info/cc-info-panel.c:1442
+#: ../panels/info/cc-info-panel.c:1483
 msgid "Install updates now"
 msgstr "马上安装更新"
 
-#: ../panels/info/cc-info-panel.c:1445
+#: ../panels/info/cc-info-panel.c:1486
 msgid "Installing updates…"
 msgstr "安装更新……"
 
-#: ../panels/info/cc-info-panel.c:1447
+#: ../panels/info/cc-info-panel.c:1488
 msgid "Restart to complete update"
 msgstr "重启以完成更新"
 
@@ -1569,7 +1589,7 @@ msgstr "启动器"
 msgid "Launch help browser"
 msgstr "启动帮助浏览器"
 
-#: ../panels/keyboard/01-launchers.xml.in.h:3 ../shell/cc-window.c:1615
+#: ../panels/keyboard/01-launchers.xml.in.h:3 ../shell/cc-window.c:1625
 #: ../shell/gnome-control-center.desktop.in.in.h:1
 msgid "Settings"
 msgstr "设置"
@@ -3463,7 +3483,7 @@ msgid "_Type"
 msgstr "类型(_T)"
 
 #: ../panels/notifications/cc-notifications-panel.c:257
-#: ../panels/power/cc-power-panel.c:1924 ../panels/power/cc-power-panel.c:1931
+#: ../panels/power/cc-power-panel.c:1925 ../panels/power/cc-power-panel.c:1932
 #: ../panels/privacy/cc-privacy-panel.c:178
 #: ../panels/privacy/cc-privacy-panel.c:245
 #: ../panels/privacy/cc-privacy-panel.c:829
@@ -3755,7 +3775,7 @@ msgstr "计算机"
 
 #. TRANSLATORS: secondary battery, misc
 #: ../panels/power/cc-power-panel.c:552 ../panels/power/cc-power-panel.c:792
-#: ../panels/power/cc-power-panel.c:2244
+#: ../panels/power/cc-power-panel.c:2245
 msgid "Battery"
 msgstr "电池"
 
@@ -3843,48 +3863,48 @@ msgstr "移动宽带(_M)"
 msgid "Turn off mobile broadband (3G, 4G, LTE, etc.) to save power."
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:1864
+#: ../panels/power/cc-power-panel.c:1865
 msgid "_Bluetooth"
 msgstr "蓝牙(_B)"
 
-#: ../panels/power/cc-power-panel.c:1920
+#: ../panels/power/cc-power-panel.c:1921
 msgid "When on battery power"
 msgstr "电池供电时"
 
-#: ../panels/power/cc-power-panel.c:1922
+#: ../panels/power/cc-power-panel.c:1923
 msgid "When plugged in"
 msgstr "电源插入时"
 
-#: ../panels/power/cc-power-panel.c:2015
+#: ../panels/power/cc-power-panel.c:2016
 msgid "Suspend"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2016
+#: ../panels/power/cc-power-panel.c:2017
 msgid "Hibernate"
 msgstr "休眠"
 
-#: ../panels/power/cc-power-panel.c:2017
+#: ../panels/power/cc-power-panel.c:2018
 msgid "Nothing"
 msgstr ""
 
 #. Frame header
-#: ../panels/power/cc-power-panel.c:2066
+#: ../panels/power/cc-power-panel.c:2067
 msgid "Suspend & Power Button"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2107
+#: ../panels/power/cc-power-panel.c:2108
 msgid "_Automatic suspend"
 msgstr "自动挂起(_A)"
 
-#: ../panels/power/cc-power-panel.c:2108
+#: ../panels/power/cc-power-panel.c:2109
 msgid "Automatic suspend"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2172
+#: ../panels/power/cc-power-panel.c:2173
 msgid "_When the Power Button is pressed"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2298
+#: ../panels/power/cc-power-panel.c:2299
 msgid "Devices"
 msgstr "设备"
 
@@ -7066,22 +7086,22 @@ msgstr "帮助"
 msgid "Quit"
 msgstr "退出"
 
-#: ../shell/cc-window.c:61 ../shell/cc-window.c:1504
+#: ../shell/cc-window.c:61 ../shell/cc-window.c:1514
 msgid "All Settings"
 msgstr "全部设置"
 
 #. Add categories
-#: ../shell/cc-window.c:883
+#: ../shell/cc-window.c:881
 msgctxt "category"
 msgid "Personal"
 msgstr "个人"
 
-#: ../shell/cc-window.c:884
+#: ../shell/cc-window.c:882
 msgctxt "category"
 msgid "Hardware"
 msgstr "硬件"
 
-#: ../shell/cc-window.c:885
+#: ../shell/cc-window.c:883
 msgctxt "category"
 msgid "System"
 msgstr "系统"
