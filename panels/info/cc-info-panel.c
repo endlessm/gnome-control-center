@@ -652,24 +652,6 @@ on_section_changed (GtkTreeSelection  *selection,
   gtk_tree_path_free (path);
 }
 
-static void
-move_one_up (GtkWidget *table,
-	     GtkWidget *child)
-{
-  int top_attach, bottom_attach;
-
-  gtk_container_child_get (GTK_CONTAINER (table),
-                           child,
-                           "top-attach", &top_attach,
-                           "bottom-attach", &bottom_attach,
-                           NULL);
-  gtk_container_child_set (GTK_CONTAINER (table),
-                           child,
-                           "top-attach", top_attach - 1,
-                           "bottom-attach", bottom_attach - 1,
-                           NULL);
-}
-
 static struct {
   const char *id;
   const char *display;
@@ -700,8 +682,6 @@ set_virtualization_label (CcInfoPanel  *self,
   {
     gtk_widget_hide (WID ("virt_type_label"));
     gtk_widget_hide (WID ("label18"));
-    move_one_up (WID("table1"), WID("label8"));
-    move_one_up (WID("table1"), WID("disk_label"));
     return;
   }
 
