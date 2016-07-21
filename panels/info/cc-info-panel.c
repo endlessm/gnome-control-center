@@ -381,50 +381,34 @@ get_os_info (void)
 }
 
 static char *
-get_os_type (void)
+get_os_type (GHashTable       *os_info,
+             GtkTextDirection  direction)
 {
-  GHashTable *os_info;
   char *name;
   char *result;
   char *version;
-  char *build_id;
 
   result = NULL;
   name = NULL;
   version = NULL;
-  build_id = NULL;
-
-  os_info = get_os_info ();
 
   if (!os_info)
     return NULL;
 
   name = g_hash_table_lookup (os_info, "NAME");
   version = g_hash_table_lookup (os_info, "VERSION_ID");
-  build_id = g_hash_table_lookup (os_info, "BUILD_ID");
 
-  if (build_id)
+  if (name)
     {
-      /* translators: This is the name of the OS, followed by the
-       * version and the build id, for example:
-       * "Endless OS 2.6 (Build ID: xyz)" */
-      if (name)
-        result = g_strdup_printf (_("%s %s (Build ID: %s)"), name, version, build_id);
+      if (direction == GTK_TEXT_DIR_RTL)
+        result = g_strdup_printf ("%s %s", version, name);
       else
-        result = g_strdup_printf (_("%s (Build ID: %s)"), name, build_id);
+        result = g_strdup_printf ("%s %s", name, version);
     }
   else
     {
-      /* translators: This is the name of the OS, followed by the
-       * version, for example:
-       * "Endless OS 2.6" */
-      if (name)
-        result = g_strdup_printf (_("%s %s"), name, version);
-      else
-        result = g_strdup_printf (_("%s"), name);
+      result = g_strdup_printf ("%s", name);
     }
-
-  g_clear_pointer (&os_info, g_hash_table_destroy);
 
   return result;
 }
@@ -668,24 +652,6 @@ on_section_changed (GtkTreeSelection  *selection,
   gtk_tree_path_free (path);
 }
 
-static void
-move_one_up (GtkWidget *table,
-	     GtkWidget *child)
-{
-  int top_attach, bottom_attach;
-
-  gtk_container_child_get (GTK_CONTAINER (table),
-                           child,
-                           "top-attach", &top_attach,
-                           "bottom-attach", &bottom_attach,
-                           NULL);
-  gtk_container_child_set (GTK_CONTAINER (table),
-                           child,
-                           "top-attach", top_attach - 1,
-                           "bottom-attach", bottom_attach - 1,
-                           NULL);
-}
-
 static struct {
   const char *id;
   const char *display;
@@ -716,8 +682,6 @@ set_virtualization_label (CcInfoPanel  *self,
   {
     gtk_widget_hide (WID ("virt_type_label"));
     gtk_widget_hide (WID ("label18"));
-    move_one_up (WID("table1"), WID("label8"));
-    move_one_up (WID("table1"), WID("disk_label"));
     return;
   }
 
@@ -1741,6 +1705,8 @@ on_attribution_label_link (GtkLabel *label,
 static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
+  GtkTextDirection direction;
+  GHashTable *os_info;
   GtkWidget  *widget;
   glibtop_mem mem;
   const glibtop_sysinfo *info;
@@ -1752,6 +1718,8 @@ info_panel_setup_overview (CcInfoPanel  *self)
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
 
+  direction = gtk_widget_get_direction (GTK_WIDGET (self));
+  os_info = get_os_info ();
   info = glibtop_get_sysinfo ();
 
   widget = WID ("processor_label");
@@ -1760,9 +1728,15 @@ info_panel_setup_overview (CcInfoPanel  *self)
   g_free (text);
 
   widget = WID ("os_type_label");
-  text = get_os_type ();
+  text = get_os_type (os_info, direction);
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
+
+  widget = WID ("build_label");
+  text = g_hash_table_lookup (os_info, "BUILD_ID");
+  gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
+  gtk_widget_set_visible (widget, text != NULL);
+  gtk_widget_set_visible (WID ("build_dim_label"), text != NULL);
 
   widget = WID ("os_description_label");
   text = get_os_description ();
@@ -1793,6 +1767,8 @@ info_panel_setup_overview (CcInfoPanel  *self)
                         G_CALLBACK (updates_link_activated), self);
       sync_initial_state_from_updater (self);
     }
+
+  g_clear_pointer (&os_info, g_hash_table_destroy);
 }
 
 static void
