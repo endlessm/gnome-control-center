@@ -2572,8 +2572,8 @@ show_setup_dialog (CcDisplayPanel *panel)
       label = gtk_label_new (_("Scaling"));
       gtk_style_context_add_class (gtk_widget_get_style_context (label),
                                    GTK_STYLE_CLASS_DIM_LABEL);
-      gtk_grid_attach (GTK_GRID (priv->config_grid), label, 0, 5, 1, 1);
-      gtk_grid_attach (GTK_GRID (priv->config_grid), priv->scaling_check, 1, 5, 1, 1);
+      gtk_grid_attach (GTK_GRID (priv->config_grid), label, 0, 6, 1, 1);
+      gtk_grid_attach (GTK_GRID (priv->config_grid), priv->scaling_check, 1, 6, 1, 1);
 
       gtk_widget_set_halign (label, GTK_ALIGN_END);
       gtk_widget_set_halign (priv->scaling_check, GTK_ALIGN_START);
