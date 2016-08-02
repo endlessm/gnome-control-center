@@ -1805,7 +1805,7 @@ cc_info_panel_init (CcInfoPanel *self)
     {
       g_critical ("Unable to get a proxy to the EOS updater: %s. Updates will not be available.",
                   error->message);
-      g_error_free (error);
+      g_clear_error (&error);
     }
 
   self->priv->session_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
