@@ -500,6 +500,79 @@
                                     <property name="top_attach">6</property>
                                   </packing>
                                 </child>
+                                <child>
+                                  <object class="GtkBox" id="attribution_box">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">10</property>
+                                    <child>
+                                      <object class="GtkLabel" id="attribution_label">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="use_markup">True</property>
+                                        <property name="xalign">0</property>
+                                        <property name="margin_left">22</property>
+                                        <property name="label" translatable="yes">&lt;a href='attribution-link'&gt;Endless Terms of Use&lt;/a&gt;</property>
+                                        <attributes>
+                                          <attribute name="scale" value="0.83"/>
+                                        </attributes>
+                                        <style>
+                                          <class name="dim-label"/>
+                                        </style>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">False</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkBox" id="os_updates_box">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">10</property>
+                                        <child>
+                                          <object class="GtkSpinner" id="os_updates_spinner">
+                                            <property name="visible">False</property>
+                                            <property name="can_focus">False</property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">False</property>
+                                            <property name="position">0</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="os_updates_label">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <property name="xalign">0</property>
+                                            <property name="use_markup">True</property>
+                                            <property name="label"></property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">False</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">False</property>
+                                        <property name="pack_type">end</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">8</property>
+                                    <property name="width">2</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -507,77 +580,6 @@
                                 <property name="position">2</property>
                               </packing>
                             </child>
-                            <child>
-                              <object class="GtkBox" id="attribution_box">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="spacing">10</property>
-				<child>
-                                  <object class="GtkLabel" id="attribution_label">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-				    <property name="use_markup">True</property>
-                                    <property name="xalign">0</property>
-				    <property name="margin_left">22</property>
-				    <property name="label" translatable="yes">&lt;a href='attribution-link'&gt;Endless Terms of Use&lt;/a&gt;</property>
-				    <attributes>
-				      <attribute name="scale" value="0.83"/>
-				    </attributes>
-				    <style>
-				      <class name="dim-label"/>
-				    </style>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">False</property>
-                                    <property name="position">0</property>
-                                  </packing>
-                                </child>
-				<child>
-				  <object class="GtkBox" id="os_updates_box">
-				    <property name="visible">True</property>
-				    <property name="can_focus">False</property>
-				    <property name="orientation">horizontal</property>
-				    <property name="spacing">10</property>
-				    <child>
-				      <object class="GtkSpinner" id="os_updates_spinner">
-					<property name="visible">False</property>
-					<property name="can_focus">False</property>
-				      </object>
-				      <packing>
-					<property name="expand">False</property>
-					<property name="fill">False</property>
-					<property name="position">0</property>
-				      </packing>
-				    </child>
-				    <child>
-				      <object class="GtkLabel" id="os_updates_label">
-					<property name="visible">True</property>
-					<property name="can_focus">False</property>
-					<property name="xalign">0</property>
-					<property name="use_markup">True</property>
-					<property name="label"></property>
-				      </object>
-				      <packing>
-					<property name="expand">False</property>
-					<property name="fill">False</property>
-					<property name="position">1</property>
-				      </packing>
-				    </child>
-				  </object>
-				  <packing>
-				    <property name="expand">False</property>
-				    <property name="fill">False</property>
-                                    <property name="pack_type">end</property>
-				  </packing>
-				</child>
-			      </object>
-			      <packing>
-				<property name="left_attach">1</property>
-				<property name="top_attach">1</property>
-			      </packing>
-			    </child>
                           </object>
                         </child>
                       </object>
