@@ -386,16 +386,22 @@ get_os_type (GHashTable       *os_info,
 {
   char *result;
   char *version;
+  char *build_id;
 
   result = NULL;
   version = NULL;
+  build_id = NULL;
 
   if (!os_info)
     return NULL;
 
   version = g_hash_table_lookup (os_info, "VERSION_ID");
+  build_id = g_hash_table_lookup (os_info, "BUILD_ID");
 
-  result = g_strdup_printf ("%s", version);
+  if (build_id)
+    result = g_strdup_printf ("%s (%s)", version, build_id);
+  else
+    result = g_strdup_printf ("%s", version);
 
   return result;
 }
@@ -1718,12 +1724,6 @@ info_panel_setup_overview (CcInfoPanel  *self)
   text = get_os_type (os_info, direction);
   gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
   g_free (text);
-
-  widget = WID ("build_label");
-  text = g_hash_table_lookup (os_info, "BUILD_ID");
-  gtk_label_set_text (GTK_LABEL (widget), text ? text : "");
-  gtk_widget_set_visible (widget, text != NULL);
-  gtk_widget_set_visible (WID ("build_dim_label"), text != NULL);
 
   widget = WID ("os_description_label");
   text = get_os_description ();
