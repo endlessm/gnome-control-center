@@ -384,31 +384,18 @@ static char *
 get_os_type (GHashTable       *os_info,
              GtkTextDirection  direction)
 {
-  char *name;
   char *result;
   char *version;
 
   result = NULL;
-  name = NULL;
   version = NULL;
 
   if (!os_info)
     return NULL;
 
-  name = g_hash_table_lookup (os_info, "NAME");
   version = g_hash_table_lookup (os_info, "VERSION_ID");
 
-  if (name)
-    {
-      if (direction == GTK_TEXT_DIR_RTL)
-        result = g_strdup_printf ("%s %s", version, name);
-      else
-        result = g_strdup_printf ("%s %s", name, version);
-    }
-  else
-    {
-      result = g_strdup_printf ("%s", name);
-    }
+  result = g_strdup_printf ("%s", version);
 
   return result;
 }
