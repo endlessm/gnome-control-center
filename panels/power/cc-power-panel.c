@@ -2011,7 +2011,9 @@ set_sleep_type (const GValue       *value,
 }
 
 static void
-populate_power_button_model (GtkTreeModel *model)
+populate_power_button_model (GtkTreeModel *model,
+                             gboolean      can_suspend,
+                             gboolean      can_hibernate)
 {
   struct {
     char *name;
@@ -2025,12 +2027,70 @@ populate_power_button_model (GtkTreeModel *model)
 
   for (i = 0; i < G_N_ELEMENTS (actions); i++)
     {
+      if (!can_suspend && actions[i].value == GSD_POWER_BUTTON_ACTION_SUSPEND)
+        continue;
+
+      if (!can_hibernate && actions[i].value == GSD_POWER_BUTTON_ACTION_HIBERNATE)
+        continue;
+
       gtk_list_store_insert_with_values (GTK_LIST_STORE (model),
                                          NULL, -1,
                                          0, _(actions[i].name),
                                          1, actions[i].value,
                                          -1);
     }
+}
+
+static gboolean
+can_suspend_or_hibernate (CcPowerPanel *self,
+                          const char   *method_name)
+{
+  CcPowerPanelPrivate *priv = self->priv;
+  GDBusConnection *connection;
+  GVariant *variant;
+  gboolean result = FALSE;
+  GError *error = NULL;
+  const char *s;
+
+  connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM,
+                               priv->cancellable,
+                               &error);
+  if (!connection)
+    {
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        g_warning ("system bus not available: %s", error->message);
+      g_error_free (error);
+      goto out;
+    }
+
+  variant = g_dbus_connection_call_sync (connection,
+                                         "org.freedesktop.login1",
+                                         "/org/freedesktop/login1",
+                                         "org.freedesktop.login1.Manager",
+                                         method_name,
+                                         NULL,
+                                         NULL,
+                                         G_DBUS_CALL_FLAGS_NONE,
+                                         -1,
+                                         priv->cancellable,
+                                         &error);
+  g_object_unref (connection);
+
+  if (!variant)
+    {
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        g_debug ("Failed to call %s(): %s", method_name, error->message);
+      g_error_free (error);
+      goto out;
+    }
+
+  g_variant_get (variant, "(&s)", &s);
+  if (g_strcmp0 (s, "yes") == 0)
+    result = TRUE;
+  g_variant_unref (variant);
+
+ out:
+  return result;
 }
 
 static void
@@ -2046,6 +2106,14 @@ add_suspend_and_power_off_section (CcPowerPanel *self)
   GtkWidget *combo;
   GtkTreeModel *model;
   GsdPowerButtonActionType button_value;
+  gboolean can_suspend, can_hibernate;
+
+  can_suspend = can_suspend_or_hibernate (self, "CanSuspend");
+  can_hibernate = can_suspend_or_hibernate (self, "CanHibernate");
+
+  /* If the machine can neither suspend nor hibernate, we have nothing to do */
+  if (!can_suspend && !can_hibernate)
+    return;
 
   /* The default values for these settings are unfortunate for us;
    * timeout == 0, action == suspend means 'do nothing' - just
@@ -2063,7 +2131,6 @@ add_suspend_and_power_off_section (CcPowerPanel *self)
       g_settings_set_enum (priv->gsd_settings, "sleep-inactive-battery-type", GSD_POWER_ACTION_NOTHING);
       g_settings_set_int (priv->gsd_settings, "sleep-inactive-battery-timeout", 1800);
     }
-
 
   vbox = WID (priv->builder, "vbox_power");
 
@@ -2106,64 +2173,69 @@ add_suspend_and_power_off_section (CcPowerPanel *self)
   gtk_box_pack_start (GTK_BOX (vbox), box, FALSE, TRUE, 0);
 
   /* Automatic suspend row */
-  self->priv->automatic_suspend_row = row = gtk_list_box_row_new ();
-  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 50);
-  gtk_container_add (GTK_CONTAINER (row), box);
-  label = gtk_label_new (_("_Automatic suspend"));
-  atk_object_set_name (ATK_OBJECT (gtk_widget_get_accessible (self->priv->automatic_suspend_row)), _("Automatic suspend"));
-  gtk_widget_set_halign (label, GTK_ALIGN_START);
-  gtk_label_set_use_underline (GTK_LABEL (label), TRUE);
-  gtk_widget_set_margin_start (label, 20);
-  gtk_widget_set_margin_end (label, 20);
-  gtk_widget_set_margin_top (label, 6);
-  gtk_widget_set_margin_bottom (label, 6);
-  gtk_box_pack_start (GTK_BOX (box), label, TRUE, TRUE, 0);
+  if (can_suspend)
+    {
+      self->priv->automatic_suspend_row = row = gtk_list_box_row_new ();
+      box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 50);
+      gtk_container_add (GTK_CONTAINER (row), box);
+      label = gtk_label_new (_("_Automatic suspend"));
+      atk_object_set_name (ATK_OBJECT (gtk_widget_get_accessible (self->priv->automatic_suspend_row)), _("Automatic suspend"));
+      gtk_widget_set_halign (label, GTK_ALIGN_START);
+      gtk_label_set_use_underline (GTK_LABEL (label), TRUE);
+      gtk_widget_set_margin_start (label, 20);
+      gtk_widget_set_margin_end (label, 20);
+      gtk_widget_set_margin_top (label, 6);
+      gtk_widget_set_margin_bottom (label, 6);
+      gtk_box_pack_start (GTK_BOX (box), label, TRUE, TRUE, 0);
 
-  priv->automatic_suspend_label = sw = gtk_label_new ("");
-  gtk_label_set_mnemonic_widget (GTK_LABEL (label), sw);
-  g_signal_connect (sw, "mnemonic-activate",
-                    G_CALLBACK (automatic_suspend_activate), self);
-  gtk_widget_set_halign (sw, GTK_ALIGN_END);
-  gtk_widget_set_margin_start (sw, 24);
-  gtk_widget_set_margin_end (sw, 24);
-  gtk_box_pack_start (GTK_BOX (box), sw, FALSE, TRUE, 0);
-  gtk_container_add (GTK_CONTAINER (widget), row);
-  gtk_size_group_add_widget (priv->row_sizegroup, row);
-  update_automatic_suspend_label (self);
+      priv->automatic_suspend_label = sw = gtk_label_new ("");
+      gtk_label_set_mnemonic_widget (GTK_LABEL (label), sw);
+      g_signal_connect (sw, "mnemonic-activate",
+                        G_CALLBACK (automatic_suspend_activate), self);
+      gtk_widget_set_halign (sw, GTK_ALIGN_END);
+      gtk_widget_set_margin_start (sw, 24);
+      gtk_widget_set_margin_end (sw, 24);
+      gtk_box_pack_start (GTK_BOX (box), sw, FALSE, TRUE, 0);
+      gtk_container_add (GTK_CONTAINER (widget), row);
+      gtk_size_group_add_widget (priv->row_sizegroup, row);
+      update_automatic_suspend_label (self);
 
-  dialog = priv->automatic_suspend_dialog;
-  g_signal_connect (dialog, "delete-event", G_CALLBACK (gtk_widget_hide_on_delete), NULL);
-  g_signal_connect (priv->gsd_settings, "changed", G_CALLBACK (on_suspend_settings_changed), self);
+      dialog = priv->automatic_suspend_dialog;
+      g_signal_connect (dialog, "delete-event", G_CALLBACK (gtk_widget_hide_on_delete), NULL);
+      g_signal_connect (priv->gsd_settings, "changed", G_CALLBACK (on_suspend_settings_changed), self);
 
-  sw = WID (priv->builder, "suspend_on_battery_switch");
-  g_settings_bind_with_mapping (priv->gsd_settings, "sleep-inactive-battery-type",
-                                sw, "active",
-                                G_SETTINGS_BIND_DEFAULT,
-                                get_sleep_type, set_sleep_type, NULL, NULL);
+      sw = WID (priv->builder, "suspend_on_battery_switch");
+      g_settings_bind_with_mapping (priv->gsd_settings, "sleep-inactive-battery-type",
+                                    sw, "active",
+                                    G_SETTINGS_BIND_DEFAULT,
+                                    get_sleep_type, set_sleep_type, NULL, NULL);
 
-  combo = WID (priv->builder, "suspend_on_battery_delay_combo");
-  g_object_set_data (G_OBJECT (combo), "_gsettings_key", "sleep-inactive-battery-timeout");
-  value = g_settings_get_int (priv->gsd_settings, "sleep-inactive-battery-timeout");
-  set_value_for_combo (GTK_COMBO_BOX (combo), value);
-  g_signal_connect (combo, "changed",
-                    G_CALLBACK (combo_time_changed_cb), self);
-  g_object_bind_property (sw, "active", combo, "sensitive",
-                          G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE);
+      combo = WID (priv->builder, "suspend_on_battery_delay_combo");
+      g_object_set_data (G_OBJECT (combo), "_gsettings_key", "sleep-inactive-battery-timeout");
+      value = g_settings_get_int (priv->gsd_settings, "sleep-inactive-battery-timeout");
+      set_value_for_combo (GTK_COMBO_BOX (combo), value);
+      g_signal_connect (combo, "changed",
+                        G_CALLBACK (combo_time_changed_cb), self);
+      g_object_bind_property (sw, "active", combo, "sensitive",
+                              G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE);
 
-  sw = WID (priv->builder, "suspend_on_ac_switch");
-  g_settings_bind_with_mapping (priv->gsd_settings, "sleep-inactive-ac-type",
-                                sw, "active",
-                                G_SETTINGS_BIND_DEFAULT,
-                                get_sleep_type, set_sleep_type, NULL, NULL);
+      sw = WID (priv->builder, "suspend_on_ac_switch");
+      g_settings_bind_with_mapping (priv->gsd_settings, "sleep-inactive-ac-type",
+                                    sw, "active",
+                                    G_SETTINGS_BIND_DEFAULT,
+                                    get_sleep_type, set_sleep_type, NULL, NULL);
 
-  combo = WID (priv->builder, "suspend_on_ac_delay_combo");
-  g_object_set_data (G_OBJECT (combo), "_gsettings_key", "sleep-inactive-ac-timeout");
-  value = g_settings_get_int (priv->gsd_settings, "sleep-inactive-ac-timeout");
-  set_value_for_combo (GTK_COMBO_BOX (combo), value);
-  g_signal_connect (combo, "changed",
-                    G_CALLBACK (combo_time_changed_cb), self);
-  g_object_bind_property (sw, "active", combo, "sensitive",
-                          G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE);
+      combo = WID (priv->builder, "suspend_on_ac_delay_combo");
+      g_object_set_data (G_OBJECT (combo), "_gsettings_key", "sleep-inactive-ac-timeout");
+      value = g_settings_get_int (priv->gsd_settings, "sleep-inactive-ac-timeout");
+      set_value_for_combo (GTK_COMBO_BOX (combo), value);
+      g_signal_connect (combo, "changed",
+                        G_CALLBACK (combo_time_changed_cb), self);
+      g_object_bind_property (sw, "active", combo, "sensitive",
+                              G_BINDING_DEFAULT | G_BINDING_SYNC_CREATE);
+
+      set_ac_battery_ui_mode (self);
+    }
 
   if (g_strcmp0 (priv->chassis_type, "vm") == 0 ||
       g_strcmp0 (priv->chassis_type, "tablet") == 0)
@@ -2186,7 +2258,7 @@ add_suspend_and_power_off_section (CcPowerPanel *self)
   combo = gtk_combo_box_text_new ();
   gtk_combo_box_set_entry_text_column (GTK_COMBO_BOX (combo), 0);
   model = GTK_TREE_MODEL (gtk_builder_get_object (priv->builder, "liststore_power_button"));
-  populate_power_button_model (model);
+  populate_power_button_model (model, can_suspend, can_hibernate);
   gtk_combo_box_set_model (GTK_COMBO_BOX (combo), model);
   button_value = g_settings_get_enum (priv->gsd_settings, "power-button-action");
   set_value_for_combo (GTK_COMBO_BOX (combo), button_value);
@@ -2335,40 +2407,6 @@ add_device_section (CcPowerPanel *self)
   gtk_widget_show_all (box);
 }
 
-static gboolean
-can_suspend ()
-{
-  GDBusConnection *connection;
-  GVariant *reply;
-  gboolean result;
-
-  connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, NULL);
-  reply = g_dbus_connection_call_sync (connection,
-                                       "org.freedesktop.login1",
-                                       "/org/freedesktop/login1",
-                                       "org.freedesktop.login1.Manager",
-                                       "CanSuspend",
-                                       NULL,
-                                       NULL,
-                                       G_DBUS_CALL_FLAGS_NONE,
-                                       -1,
-                                       NULL,
-                                       NULL);
-  g_object_unref (connection);
-
-  result = FALSE;
-  if (reply)
-    {
-      gchar *s;
-      g_variant_get (reply, "(&s)", &s);
-      if (g_strcmp0 (s, "yes") == 0)
-        result = TRUE;
-      g_variant_unref(reply);
-    }
-
-  return result;
-}
-
 static void
 on_content_size_changed (GtkWidget *widget, GtkAllocation *allocation, gpointer data)
 {
@@ -2456,15 +2494,10 @@ cc_power_panel_init (CcPowerPanel *self)
   add_battery_section (self);
   add_device_section (self);
   add_power_saving_section (self);
-
-  if (can_suspend ())
-    add_suspend_and_power_off_section (self);
+  add_suspend_and_power_off_section (self);
 
   priv->boxes = g_list_copy (priv->boxes_reverse);
   priv->boxes = g_list_reverse (priv->boxes);
-
-  set_ac_battery_ui_mode (self);
-  update_automatic_suspend_label (self);
 
   /* populate batteries */
   g_signal_connect (priv->up_client, "device-added", G_CALLBACK (up_client_device_added), self);
