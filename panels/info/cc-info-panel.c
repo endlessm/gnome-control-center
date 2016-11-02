@@ -1562,12 +1562,21 @@ updates_maybe_do_automatic_step (CcInfoPanel *self)
 
 static void
 sync_state_from_updater (CcInfoPanel *self,
-                         EosUpdaterState state)
+                         gboolean is_initial_state)
 {
+  EosUpdaterState state;
   GtkWidget *widget;
   gboolean state_spinning, state_interactive;
   const gchar *message;
   gchar *markup;
+
+  state = eos_updater_get_state (self->priv->updater_proxy);
+
+  /* Attempt to clear the error by pretending to be ready, which will
+   * trigger a poll
+   */
+  if (state == EOS_UPDATER_STATE_ERROR && is_initial_state)
+    state = EOS_UPDATER_STATE_READY;
 
   state_spinning = is_updater_state_spinning (self, state);
   state_interactive = is_updater_state_interactive (self, state);
@@ -1594,25 +1603,13 @@ updater_state_changed (EosUpdater *proxy,
                        GParamSpec *pspec,
                        CcInfoPanel *self)
 {
-  EosUpdaterState state;
-
-  state = eos_updater_get_state (self->priv->updater_proxy);
-  sync_state_from_updater (self, state);
+  sync_state_from_updater (self, FALSE);
 }
 
 static void
 sync_initial_state_from_updater (CcInfoPanel *self)
 {
-  EosUpdaterState state;
-
-  /* Attempt to clear the error by pretending to be ready, which will
-   * trigger a poll
-   */
-  state = eos_updater_get_state (self->priv->updater_proxy);
-  if (state == EOS_UPDATER_STATE_ERROR)
-    state = EOS_UPDATER_STATE_READY;
-
-  sync_state_from_updater (self, state);
+  sync_state_from_updater (self, TRUE);
   g_signal_connect (self->priv->updater_proxy, "notify::state",
                     G_CALLBACK (updater_state_changed), self);
 }
