@@ -93,6 +93,8 @@ typedef enum {
   EOS_UPDATER_N_STATES,
 } EosUpdaterState;
 
+#define EOS_UPDATER_ERROR_LIVE_BOOT_STR "com.endlessm.Updater.Error.LiveBoot"
+
 struct _CcInfoPanelPrivate
 {
   GtkBuilder    *builder;
@@ -1562,12 +1564,25 @@ updates_maybe_do_automatic_step (CcInfoPanel *self)
 
 static void
 sync_state_from_updater (CcInfoPanel *self,
-                         EosUpdaterState state)
+                         gboolean is_initial_state)
 {
+  EosUpdaterState state;
+  gboolean is_live_boot;
   GtkWidget *widget;
   gboolean state_spinning, state_interactive;
-  const gchar *message;
+  const gchar *message, *error_name;
   gchar *markup;
+
+  state = eos_updater_get_state (self->priv->updater_proxy);
+  error_name = eos_updater_get_error_name (self->priv->updater_proxy);
+  is_live_boot = state == EOS_UPDATER_STATE_ERROR &&
+        g_strcmp0 (error_name, EOS_UPDATER_ERROR_LIVE_BOOT_STR) == 0;
+
+  /* Attempt to clear the error by pretending to be ready, which will
+   * trigger a poll
+   */
+  if (state == EOS_UPDATER_STATE_ERROR && is_initial_state)
+    state = EOS_UPDATER_STATE_READY;
 
   state_spinning = is_updater_state_spinning (self, state);
   state_interactive = is_updater_state_interactive (self, state);
@@ -1578,6 +1593,7 @@ sync_state_from_updater (CcInfoPanel *self,
   g_object_set (widget, "active", state_spinning, NULL);
 
   widget = WID ("os_updates_label");
+  gtk_widget_set_visible (widget, !is_live_boot);
   if (state_interactive)
     markup = g_strdup_printf ("<a href='updates-link'>%s</a>", message);
   else
@@ -1594,25 +1610,13 @@ updater_state_changed (EosUpdater *proxy,
                        GParamSpec *pspec,
                        CcInfoPanel *self)
 {
-  EosUpdaterState state;
-
-  state = eos_updater_get_state (self->priv->updater_proxy);
-  sync_state_from_updater (self, state);
+  sync_state_from_updater (self, FALSE);
 }
 
 static void
 sync_initial_state_from_updater (CcInfoPanel *self)
 {
-  EosUpdaterState state;
-
-  /* Attempt to clear the error by pretending to be ready, which will
-   * trigger a poll
-   */
-  state = eos_updater_get_state (self->priv->updater_proxy);
-  if (state == EOS_UPDATER_STATE_ERROR)
-    state = EOS_UPDATER_STATE_READY;
-
-  sync_state_from_updater (self, state);
+  sync_state_from_updater (self, TRUE);
   g_signal_connect (self->priv->updater_proxy, "notify::state",
                     G_CALLBACK (updater_state_changed), self);
 }
