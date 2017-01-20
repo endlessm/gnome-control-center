@@ -2561,7 +2561,8 @@ show_setup_dialog (CcDisplayPanel *panel)
     }
 
   /* overscan */
-  if (!gnome_rr_output_is_builtin_display (output))
+  if (!gnome_rr_output_is_builtin_display (output) &&
+      gnome_rr_output_supports_underscanning (output))
     {
       priv->scaling_check = gtk_check_button_new_with_label (_("Adjust screen for TV"));
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->scaling_check),
