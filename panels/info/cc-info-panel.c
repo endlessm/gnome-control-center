@@ -548,7 +548,9 @@ get_primary_disc_info (CcInfoPanel *self)
 {
   GList        *points;
   GList        *p;
+  GHashTable *hash;
 
+  hash = g_hash_table_new (g_str_hash, g_str_equal);
   points = g_unix_mount_points_get (NULL);
 
   /* If we do not have /etc/fstab around, try /etc/mtab */
@@ -559,21 +561,29 @@ get_primary_disc_info (CcInfoPanel *self)
     {
       GUnixMountEntry *mount = p->data;
       const char *mount_path;
+      const char *device_path;
 
       mount_path = g_unix_mount_get_mount_path (mount);
+      device_path = g_unix_mount_get_device_path (mount);
 
+      /* Do not count multiple mounts with same device_path, because it is
+       * probably something like btrfs subvolume. Use only the first one in
+       * order to count the real size. */
       if (gsd_should_ignore_unix_mount (mount) ||
           gsd_is_removable_mount (mount) ||
           g_str_has_prefix (mount_path, "/media/") ||
-          g_str_has_prefix (mount_path, g_get_home_dir ()))
+          g_str_has_prefix (mount_path, g_get_home_dir ()) ||
+          g_hash_table_lookup (hash, device_path) != NULL)
         {
           g_unix_mount_free (mount);
           continue;
         }
 
       self->priv->primary_mounts = g_list_prepend (self->priv->primary_mounts, mount);
+      g_hash_table_insert (hash, (gpointer) device_path, (gpointer) device_path);
     }
   g_list_free (points);
+  g_hash_table_destroy (hash);
 
   get_primary_disc_info_start (self);
 }
