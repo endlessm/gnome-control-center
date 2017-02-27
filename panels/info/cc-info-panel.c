@@ -117,6 +117,7 @@ struct _CcInfoPanelPrivate
 
   EosUpdater *updater_proxy;
   GDBusProxy *session_proxy;
+  GCancellable *updater_cancellable;
   gboolean updater_activated;
 };
 
@@ -277,6 +278,12 @@ cc_info_panel_finalize (GObject *object)
     {
       g_cancellable_cancel (priv->cancellable);
       g_clear_object (&priv->cancellable);
+    }
+
+  if (priv->updater_cancellable)
+    {
+      g_cancellable_cancel (priv->updater_cancellable);
+      g_clear_object (&priv->updater_cancellable);
     }
 
   g_clear_object (&priv->media_settings);
@@ -1461,7 +1468,8 @@ updates_apply_completed (GObject *object,
   eos_updater_call_apply_finish (proxy, res, &error);
   if (error != NULL)
     {
-      g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
       g_error_free (error);
     }
 }
@@ -1477,7 +1485,8 @@ updates_fetch_completed (GObject *object,
   eos_updater_call_fetch_finish (proxy, res, &error);
   if (error != NULL)
     {
-      g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
       g_error_free (error);
     }
 }
@@ -1493,7 +1502,8 @@ updates_poll_completed (GObject *object,
   eos_updater_call_poll_finish (proxy, res, &error);
   if (error != NULL)
     {
-      g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
       g_error_free (error);
     }
 }
@@ -1513,15 +1523,18 @@ updates_link_activated (GtkLabel *label,
     {
     case EOS_UPDATER_STATE_ERROR:
     case EOS_UPDATER_STATE_READY:
-      eos_updater_call_poll (self->priv->updater_proxy, NULL,
+      eos_updater_call_poll (self->priv->updater_proxy,
+                             self->priv->updater_cancellable,
                              updates_poll_completed, self);
       break;
     case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
-      eos_updater_call_fetch (self->priv->updater_proxy, NULL,
+      eos_updater_call_fetch (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
                               updates_fetch_completed, self);
       break;
     case EOS_UPDATER_STATE_UPDATE_READY:
-      eos_updater_call_apply (self->priv->updater_proxy, NULL,
+      eos_updater_call_apply (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
                               updates_apply_completed, self);
       break;
     case EOS_UPDATER_STATE_UPDATE_APPLIED:
@@ -1550,11 +1563,13 @@ updates_maybe_do_automatic_step (CcInfoPanel *self)
   switch (state)
     {
     case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
-      eos_updater_call_fetch (self->priv->updater_proxy, NULL,
+      eos_updater_call_fetch (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
                               updates_fetch_completed, self);
       break;
     case EOS_UPDATER_STATE_UPDATE_READY:
-      eos_updater_call_apply (self->priv->updater_proxy, NULL,
+      eos_updater_call_apply (self->priv->updater_proxy,
+                              self->priv->updater_cancellable,
                               updates_apply_completed, self);
       break;
     default:
@@ -1616,6 +1631,7 @@ updater_state_changed (EosUpdater *proxy,
 static void
 sync_initial_state_from_updater (CcInfoPanel *self)
 {
+  self->priv->updater_cancellable = g_cancellable_new ();
   sync_state_from_updater (self, TRUE);
   g_signal_connect (self->priv->updater_proxy, "notify::state",
                     G_CALLBACK (updater_state_changed), self);
