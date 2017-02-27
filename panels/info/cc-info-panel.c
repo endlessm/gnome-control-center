@@ -122,6 +122,8 @@ struct _CcInfoPanelPrivate
 };
 
 static void get_primary_disc_info_start (CcInfoPanel *self);
+static void sync_state_from_updater     (CcInfoPanel *self,
+                                         gboolean is_initial_state);
 
 typedef struct
 {
@@ -1469,7 +1471,12 @@ updates_apply_completed (GObject *object,
   if (error != NULL)
     {
       if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-        g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
+        {
+          CcInfoPanel *self = user_data;
+          g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
+          sync_state_from_updater (self, FALSE);
+        }
+
       g_error_free (error);
     }
 }
@@ -1486,7 +1493,12 @@ updates_fetch_completed (GObject *object,
   if (error != NULL)
     {
       if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-        g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
+        {
+          CcInfoPanel *self = user_data;
+          g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
+          sync_state_from_updater (self, FALSE);
+        }
+
       g_error_free (error);
     }
 }
@@ -1503,7 +1515,12 @@ updates_poll_completed (GObject *object,
   if (error != NULL)
     {
       if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-        g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
+        {
+          CcInfoPanel *self = user_data;
+          g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
+          sync_state_from_updater (self, FALSE);
+        }
+
       g_error_free (error);
     }
 }
