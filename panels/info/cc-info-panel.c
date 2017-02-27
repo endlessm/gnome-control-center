@@ -94,6 +94,7 @@ typedef enum {
 } EosUpdaterState;
 
 #define EOS_UPDATER_ERROR_LIVE_BOOT_STR "com.endlessm.Updater.Error.LiveBoot"
+#define EOS_UPDATER_ERROR_NON_OSTREE_STR "com.endlessm.Updater.Error.NotOstreeSystem"
 
 struct _CcInfoPanelPrivate
 {
@@ -1599,7 +1600,7 @@ sync_state_from_updater (CcInfoPanel *self,
                          gboolean is_initial_state)
 {
   EosUpdaterState state;
-  gboolean is_live_boot;
+  gboolean is_live_boot, is_non_ostree;
   GtkWidget *widget;
   gboolean state_spinning, state_interactive;
   const gchar *message, *error_name;
@@ -1608,7 +1609,9 @@ sync_state_from_updater (CcInfoPanel *self,
   state = eos_updater_get_state (self->priv->updater_proxy);
   error_name = eos_updater_get_error_name (self->priv->updater_proxy);
   is_live_boot = state == EOS_UPDATER_STATE_ERROR &&
-        g_strcmp0 (error_name, EOS_UPDATER_ERROR_LIVE_BOOT_STR) == 0;
+    g_strcmp0 (error_name, EOS_UPDATER_ERROR_LIVE_BOOT_STR) == 0;
+  is_non_ostree = state == EOS_UPDATER_STATE_ERROR &&
+    g_strcmp0 (error_name, EOS_UPDATER_ERROR_NON_OSTREE_STR) == 0;
 
   /* Attempt to clear the error by pretending to be ready, which will
    * trigger a poll
@@ -1625,7 +1628,7 @@ sync_state_from_updater (CcInfoPanel *self,
   g_object_set (widget, "active", state_spinning, NULL);
 
   widget = WID ("os_updates_label");
-  gtk_widget_set_visible (widget, !is_live_boot);
+  gtk_widget_set_visible (widget, !is_live_boot && !is_non_ostree);
   if (state_interactive)
     markup = g_strdup_printf ("<a href='updates-link'>%s</a>", message);
   else
