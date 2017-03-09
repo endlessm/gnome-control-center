@@ -5,6 +5,7 @@ cappletname = info
 AM_CPPFLAGS =							\
 	$(PANEL_CFLAGS)						\
 	$(INFO_PANEL_CFLAGS)					\
+	-DVENDOR_CONF_FILE="\"$(VENDOR_CONF_FILE)\""		\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""		\
 	-DDATADIR="\"$(datadir)\""				\
 	-DGNOME_SESSION_DIR="\"$(gnome_session_libexecdir)\""	\
