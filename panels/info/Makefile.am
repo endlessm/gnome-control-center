@@ -5,6 +5,7 @@ AM_CPPFLAGS = 						\
 	$(INFO_PANEL_CFLAGS)				\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
 	-DDATADIR="\"$(datadir)\""			\
+	-DCONFIGDIR=\"$(sysconfdir)/$(PACKAGE)\" 	\
 	-DBINDIR="\"$(bindir)\""			\
 	$(NULL)
 
