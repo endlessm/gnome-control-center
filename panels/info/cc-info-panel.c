@@ -1810,7 +1810,6 @@ read_config_file (CcInfoPanel *self)
 {
   GKeyFile *keyfile = NULL;
   GError *error = NULL;
-  int i;
 
   /* VENDOR_CONF_FILE points to a keyfile containing vendor customization
    * options. This panel will look for options under the "Info" group, and
