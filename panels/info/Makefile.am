@@ -3,6 +3,7 @@ cappletname = info
 AM_CPPFLAGS = 						\
 	$(PANEL_CFLAGS)					\
 	$(INFO_PANEL_CFLAGS)				\
+	-DVENDOR_CONF_FILE="\"$(VENDOR_CONF_FILE)\""	\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
 	-DDATADIR="\"$(datadir)\""			\
 	-DCONFIGDIR=\"$(sysconfdir)/$(PACKAGE)\" 	\
