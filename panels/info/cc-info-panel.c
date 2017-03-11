@@ -56,20 +56,8 @@
 
 #define MEDIA_HANDLING_SCHEMA "org.gnome.desktop.media-handling"
 
-/*
- * CONFIG_FILEPATH points to /etc/gnome-control-center/branding.conf, which
- * is a file containing groups of key-value pairs under a group called "Info", matching
- * the name of this panel.
- *
- * Fields:
- *   - logo (required): absolute path to the file with a logo for the brand.
- *
- * This is how this file would look on a branded image:.
- *
- *   [Info]
- *   logo=/path/to/the/image/with/the/logo.png
- */
-#define CONFIG_FILEPATH CONFIGDIR "/branding.conf"
+#define VENDOR_INFO_GROUP "Info"
+#define VENDOR_INFO_LOGO_KEY "logo"
 
 #define WID(w) (GtkWidget *) gtk_builder_get_object (self->priv->builder, w)
 
@@ -119,7 +107,7 @@ struct _CcInfoPanelPrivate
   GtkWidget     *detail_vbox;
   GtkWidget     *hbox1;
   GtkWidget     *logo_image;
-  gchar         *branding_logo_path;
+  gchar         *vendor_logo_path;
 
   GCancellable  *cancellable;
 
@@ -294,7 +282,7 @@ cc_info_panel_finalize (GObject *object)
 {
   CcInfoPanelPrivate *priv = CC_INFO_PANEL (object)->priv;
 
-  g_free (priv->branding_logo_path);
+  g_free (priv->vendor_logo_path);
 
   if (priv->cancellable)
     {
@@ -1822,21 +1810,32 @@ read_config_file (CcInfoPanel *self)
 {
   GKeyFile *keyfile = NULL;
   GError *error = NULL;
-  int i;
 
+  /* VENDOR_CONF_FILE points to a keyfile containing vendor customization
+   * options. This panel will look for options under the "Info" group, and
+   * supports the following keys:
+   *   - logo (required): absolute path to the file with a logo for the vendor.
+   *
+   * This is how this file would look on a vendor image:
+   *
+   *   [Info]
+   *   logo=/path/to/the/image/with/the/logo.png
+   */
   keyfile = g_key_file_new ();
-  if (!g_key_file_load_from_file (keyfile, CONFIG_FILEPATH, G_KEY_FILE_NONE, &error))
+  if (!g_key_file_load_from_file (keyfile, VENDOR_CONF_FILE, G_KEY_FILE_NONE, &error))
     {
       if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
-        g_warning ("Could not read file %s: %s", CONFIG_FILEPATH, error->message);
+        g_warning ("Could not read file %s: %s", VENDOR_CONF_FILE, error->message);
 
       g_error_free (error);
       goto out;
     }
 
-  self->priv->branding_logo_path = g_key_file_get_string (keyfile, "Info", "logo", NULL);
-  if (self->priv->branding_logo_path == NULL) {
-    g_warning ("Could not find 'logo' in %s", CONFIG_FILEPATH);
+  self->priv->vendor_logo_path =
+    g_key_file_get_string (keyfile, VENDOR_INFO_GROUP, VENDOR_INFO_LOGO_KEY, &error);
+  if (self->priv->vendor_logo_path == NULL) {
+    g_warning ("Could not read logo path from %s: %s", VENDOR_CONF_FILE, error->message);
+    g_error_free (error);
     goto out;
   }
 
@@ -1845,19 +1844,19 @@ read_config_file (CcInfoPanel *self)
 }
 
 static void
-update_branding_specific_info (CcInfoPanel *self)
+update_vendor_specific_info (CcInfoPanel *self)
 {
   read_config_file (self);
 
-  if (self->priv->branding_logo_path == NULL) {
-    g_debug ("No branding configuration found");
+  if (self->priv->vendor_logo_path == NULL) {
+    g_debug ("No vendor configuration found");
     return;
   }
 
-  /* Override the logo with the branded one if it exists */
-  if (g_file_test (self->priv->branding_logo_path, G_FILE_TEST_EXISTS)) {
+  /* Override the logo with the vendor one if it exists */
+  if (g_file_test (self->priv->vendor_logo_path, G_FILE_TEST_EXISTS)) {
     gtk_image_set_from_file (GTK_IMAGE (self->priv->logo_image),
-                             self->priv->branding_logo_path);
+                             self->priv->vendor_logo_path);
   }
 }
 
@@ -1886,7 +1885,7 @@ cc_info_panel_init (CcInfoPanel *self)
   self->priv->detail_vbox = WID ("detail_vbox");
   self->priv->logo_image = WID ("system_image");
 
-  update_branding_specific_info (self);
+  update_vendor_specific_info (self);
 
   self->priv->updater_proxy = eos_updater_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
                                                                   G_DBUS_PROXY_FLAGS_NONE,
