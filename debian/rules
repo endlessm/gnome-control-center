@@ -15,6 +15,7 @@ include /usr/share/dpkg/buildflags.mk
 CPPFLAGS += -DSSHD_SERVICE=\\\"ssh.service\\\"
 
 DEB_CONFIGURE_EXTRA_FLAGS += --disable-update-mimedb
+DEB_CONFIGURE_EXTRA_FLAGS += --with-vendor-conf-file=/var/eos-image-defaults/branding/gnome-control-center.conf
 
 DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
 
