@@ -6,7 +6,7 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 export DEB_CPPFLAGS_MAINT_APPEND = -DSSHD_SERVICE=\"ssh.service\"
 
 %:
-	dh $@ --with gnome
+	dh $@ --with gnome,eoscontent
 
 override_dh_autoreconf:
 	dh_autoreconf --as-needed
@@ -15,7 +15,8 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		--libexecdir=\$${prefix}/lib/gnome-control-center \
 		--with-gnome-session-libexecdir=\$${prefix}/lib/gnome-session \
-		--disable-update-mimedb
+		--disable-update-mimedb \
+		--with-vendor-conf-file=/var/eos-image-defaults/branding/gnome-control-center.conf
 
 override_dh_missing:
 	dh_missing --fail-missing
