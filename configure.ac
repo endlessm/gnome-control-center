@@ -402,7 +402,7 @@ if test "$GCC" = "yes" -a "$set_more_warnings" != "no"; then
         -Wuninitialized \
         -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
         -Wnested-externs -Wpointer-arith \
-        -Wcast-align -Wsign-compare \
+        -Wcast-align -Wsign-compare -Wno-deprecated-declarations \
         $CFLAGS"
 
 	# Only add this when optimizing is enabled (default)
