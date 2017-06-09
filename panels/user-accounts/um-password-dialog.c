@@ -619,7 +619,7 @@ um_password_dialog_set_user (UmPasswordDialog *um,
                         um->old_password_ok = !visible;
                 }
                 else {
-                        mode_change (um, ACT_USER_PASSWORD_MODE_SET_AT_LOGIN);
+                        mode_change (um, act_user_get_password_mode (user));
                         gtk_widget_show (um->action_radio_box);
 
                         gtk_widget_hide (um->old_password_label);
