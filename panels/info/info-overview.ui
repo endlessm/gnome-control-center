@@ -18,28 +18,12 @@
           <object class="GtkImage" id="system_image">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="resource">/org/gnome/control-center/info/GnomeLogoVerticalMedium.svg</property>
+            <property name="resource">/org/gnome/control-center/info/EndlessLogo.svg</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
             <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="version_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label">Version 3.0</property>
-            <property name="selectable">True</property>
-            <attributes>
-              <attribute name="scale" value="1.25"/>
-            </attributes>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">1</property>
           </packing>
         </child>
         <child>
@@ -67,6 +51,22 @@
               </packing>
             </child>
             <child>
+              <object class="GtkLabel" id="label7">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">1</property>
+                <property name="label" translatable="yes">Version</property>
+                <property name="mnemonic_widget">version_label</property>
+                <style>
+                 <class name="dim-label"/>
+                </style>
+              </object>
+              <packing>
+                <property name="top-attach">1</property>
+                <property name="left-attach">1</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkLabel" id="label5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -78,7 +78,7 @@
                 </style>
               </object>
               <packing>
-                <property name="top-attach">1</property>
+                <property name="top-attach">2</property>
                 <property name="left-attach">1</property>
               </packing>
             </child>
@@ -94,7 +94,7 @@
                 </style>
               </object>
               <packing>
-                <property name="top-attach">2</property>
+                <property name="top-attach">3</property>
                 <property name="left-attach">1</property>
               </packing>
             </child>
@@ -104,22 +104,6 @@
                 <property name="can_focus">False</property>
                 <property name="xalign">1</property>
                 <property name="label" translatable="yes">Graphics</property>
-                <style>
-                 <class name="dim-label"/>
-                </style>
-              </object>
-              <packing>
-                <property name="top-attach">3</property>
-                <property name="left-attach">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label7">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="xalign">1</property>
-                <property name="label" translatable="yes" comments="To translators: this field contains the distro name and version">OS name</property>
-                <property name="mnemonic_widget">os_name_label</property>
                 <style>
                  <class name="dim-label"/>
                 </style>
@@ -189,20 +173,20 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="memory_label">
+              <object class="GtkLabel" id="version_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
-                <property name="label">Unknown</property>
                 <property name="selectable">True</property>
               </object>
               <packing>
                 <property name="top-attach">1</property>
                 <property name="left-attach">2</property>
+                <property name="width">2</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="processor_label">
+              <object class="GtkLabel" id="memory_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
@@ -215,7 +199,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="graphics_label">
+              <object class="GtkLabel" id="processor_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
@@ -228,7 +212,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="os_name_label">
+              <object class="GtkLabel" id="graphics_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
