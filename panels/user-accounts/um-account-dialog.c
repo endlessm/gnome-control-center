@@ -87,6 +87,8 @@ struct _UmAccountDialog {
         gint       local_username_timeout_id;
         GtkWidget *account_type_standard;
         ActUserPasswordMode local_password_mode;
+        GtkWidget *local_password_login_radio;
+        GtkWidget *local_no_password_radio;
         GtkWidget *local_password_radio;
         GtkWidget *local_password;
         GtkWidget *local_verify;
@@ -550,13 +552,35 @@ on_password_radio_changed (GtkRadioButton *radio,
         gboolean active;
 
         active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio));
-        self->local_password_mode = active ? ACT_USER_PASSWORD_MODE_REGULAR : ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
 
         gtk_widget_set_sensitive (self->local_password, active);
         gtk_widget_set_sensitive (self->local_verify, active);
         gtk_widget_set_sensitive (self->local_strength_indicator, active);
         gtk_widget_set_sensitive (self->local_hint, active);
         gtk_widget_set_sensitive (self->local_reminder, active);
+
+        if (!active)
+                return;
+
+        self->local_password_mode = ACT_USER_PASSWORD_MODE_REGULAR;
+        dialog_validate (self);
+}
+
+static void
+on_no_password_radio_changed (GtkRadioButton *radio,
+                              gpointer user_data)
+{
+        UmAccountDialog *self = UM_ACCOUNT_DIALOG (user_data);
+        gboolean active;
+
+        active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio));
+        if (!active)
+                return;
+
+        if (radio == GTK_RADIO_BUTTON (self->local_no_password_radio))
+                self->local_password_mode = ACT_USER_PASSWORD_MODE_NONE;
+        else
+                self->local_password_mode = ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
 
         dialog_validate (self);
 }
@@ -574,6 +598,8 @@ local_init (UmAccountDialog *self)
         g_signal_connect_after (self->local_name, "focus-out-event", G_CALLBACK (on_name_focus_out), self);
         g_signal_connect_swapped (self->local_name, "activate", G_CALLBACK (dialog_validate), self);
 
+        g_signal_connect (self->local_password_login_radio, "toggled", G_CALLBACK (on_no_password_radio_changed), self);
+        g_signal_connect (self->local_no_password_radio, "toggled", G_CALLBACK (on_no_password_radio_changed), self);
         g_signal_connect (self->local_password_radio, "toggled", G_CALLBACK (on_password_radio_changed), self);
 
         self->local_password_mode = ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
@@ -1576,6 +1602,8 @@ um_account_dialog_class_init (UmAccountDialogClass *klass)
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_name);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_username_hint);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, account_type_standard);
+        gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_password_login_radio);
+        gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_no_password_radio);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_password_radio);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_password);
         gtk_widget_class_bind_template_child (widget_class, UmAccountDialog, local_verify);
