@@ -44,6 +44,7 @@ struct _CcPasswordDialog
         AdwWindow parent_instance;
 
         GtkCheckButton    *action_login_radio;
+        AdwActionRow      *action_login_row;
         GtkCheckButton    *action_none_radio;
         GtkCheckButton    *action_now_radio;
         GtkButton         *generate_password_button;
@@ -206,6 +207,9 @@ update_sensitivity (CcPasswordDialog *self)
                 can_change = password && password[0] != '\0' && strcmp (password, verify) == 0 &&
                              (self->old_password_ok || !gtk_widget_get_visible (GTK_WIDGET (self->old_password_entry)));
         }
+        else if (self->password_mode == ACT_USER_PASSWORD_MODE_NONE) {
+                can_change = self->old_password_ok || !gtk_widget_get_visible (GTK_WIDGET (self->old_password_entry));
+        }
         else {
                 can_change = TRUE;
         }
@@ -218,16 +222,21 @@ mode_change (CcPasswordDialog *self,
              ActUserPasswordMode mode)
 {
         gboolean active;
+        gboolean user_is_self = (act_user_get_uid (self->user) == getuid ());
 
         active = (mode == ACT_USER_PASSWORD_MODE_REGULAR);
         gtk_widget_set_sensitive (GTK_WIDGET (self->password_entry), active);
         gtk_widget_set_sensitive (GTK_WIDGET (self->verify_entry), active);
-        gtk_widget_set_sensitive (GTK_WIDGET (self->old_password_entry), active);
         gtk_check_button_set_active (GTK_CHECK_BUTTON (self->action_now_radio), active);
         gtk_check_button_set_active (GTK_CHECK_BUTTON (self->action_login_radio),
                                      (mode == ACT_USER_PASSWORD_MODE_SET_AT_LOGIN));
         gtk_check_button_set_active (GTK_CHECK_BUTTON (self->action_none_radio),
                                      (mode == ACT_USER_PASSWORD_MODE_NONE));
+
+        if (user_is_self) {
+                gtk_widget_set_sensitive (GTK_WIDGET (self->old_password_entry),
+                                          act_user_get_password_mode (self->user) == ACT_USER_PASSWORD_MODE_REGULAR);
+        }
 
         self->password_mode = mode;
         update_sensitivity (self);
@@ -467,6 +476,7 @@ cc_password_dialog_class_init (CcPasswordDialogClass *klass)
         gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/user-accounts/cc-password-dialog.ui");
 
         gtk_widget_class_bind_template_child (widget_class, CcPasswordDialog, action_login_radio);
+        gtk_widget_class_bind_template_child (widget_class, CcPasswordDialog, action_login_row);
         gtk_widget_class_bind_template_child (widget_class, CcPasswordDialog, action_none_radio);
         gtk_widget_class_bind_template_child (widget_class, CcPasswordDialog, action_now_radio);
         gtk_widget_class_bind_template_child (widget_class, CcPasswordDialog, generate_password_button);
@@ -521,9 +531,9 @@ cc_password_dialog_new (ActUser *user)
                         mode_change (self, mode);
                 else
                         mode_change (self, ACT_USER_PASSWORD_MODE_REGULAR);
-                gtk_widget_hide (GTK_WIDGET (self->password_on_next_login_group));
 
                 visible = (mode != ACT_USER_PASSWORD_MODE_NONE);
+                gtk_widget_hide (GTK_WIDGET (self->action_login_row));
                 gtk_widget_set_visible (GTK_WIDGET (self->old_password_entry), visible);
                 self->old_password_ok = !visible;
 
@@ -531,7 +541,6 @@ cc_password_dialog_new (ActUser *user)
         }
         else {
                 mode_change (self, mode);
-                gtk_widget_show (GTK_WIDGET (self->password_on_next_login_group));
 
                 gtk_widget_hide (GTK_WIDGET (self->old_password_entry));
                 self->old_password_ok = TRUE;
