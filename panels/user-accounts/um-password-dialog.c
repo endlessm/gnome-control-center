@@ -42,6 +42,7 @@ struct _UmPasswordDialog {
         GtkWidget *action_radio_box;
         GtkWidget *action_now_radio;
         GtkWidget *action_login_radio;
+        GtkWidget *action_no_password_radio;
         GtkWidget *password_entry;
         GtkWidget *verify_entry;
         gint       password_entry_timeout_id;
@@ -223,6 +224,14 @@ accept_password_dialog (GtkButton        *button,
                         act_user_set_automatic_login (um->user, FALSE);
                         break;
 
+                case ACT_USER_PASSWORD_MODE_NONE:
+                        /* When setting the user password mode to none, when it
+                         * was previously set-at-login, we need to reset the password,
+                         * otherwise the mode will be set back to set-at-login */
+                        act_user_set_password (um->user, "", "");
+                        act_user_set_password_mode (um->user,  um->password_mode);
+                        break;
+
                 default:
                         g_assert_not_reached ();
         }
@@ -264,22 +273,45 @@ mode_change (UmPasswordDialog *um,
         gtk_widget_set_sensitive (um->password_hint, active);
         gtk_widget_set_sensitive (um->password_reminder, active);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_now_radio), active);
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_login_radio), !active);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_login_radio),
+                                      (mode == ACT_USER_PASSWORD_MODE_SET_AT_LOGIN));
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_no_password_radio),
+                                      (mode == ACT_USER_PASSWORD_MODE_NONE));
 
         um->password_mode = mode;
         update_sensitivity (um);
 }
 
 static void
-action_changed (GtkRadioButton   *radio,
-                UmPasswordDialog *um)
+set_password_mode_from_radio_button (GtkRadioButton     *radio,
+                                     UmPasswordDialog   *um,
+                                     ActUserPasswordMode mode)
 {
-        gint active;
-        ActUserPasswordMode mode;
+        if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio)))
+                return;
 
-        active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio));
-        mode = active ? ACT_USER_PASSWORD_MODE_REGULAR : ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
         mode_change (um, mode);
+}
+
+static void
+password_now_radio_toggled_cb (GtkRadioButton   *radio,
+                               UmPasswordDialog *um)
+{
+        set_password_mode_from_radio_button (radio, um, ACT_USER_PASSWORD_MODE_REGULAR);
+}
+
+static void
+no_password_radio_toggled_cb (GtkRadioButton   *radio,
+                              UmPasswordDialog *um)
+{
+        set_password_mode_from_radio_button (radio, um, ACT_USER_PASSWORD_MODE_NONE);
+}
+
+static void
+password_login_radio_toggled_cb (GtkRadioButton   *radio,
+                                 UmPasswordDialog *um)
+{
+        set_password_mode_from_radio_button (radio, um, ACT_USER_PASSWORD_MODE_SET_AT_LOGIN);
 }
 
 static void
@@ -463,9 +495,16 @@ um_password_dialog_new (void)
 
         um->action_radio_box = (GtkWidget *) gtk_builder_get_object (builder, "action-radio-box");
         widget = (GtkWidget *) gtk_builder_get_object (builder, "action-now-radio");
-        g_signal_connect (widget, "toggled", G_CALLBACK (action_changed), um);
+        g_signal_connect (widget, "toggled", G_CALLBACK (password_now_radio_toggled_cb), um);
         um->action_now_radio = widget;
-        um->action_login_radio = (GtkWidget *) gtk_builder_get_object (builder, "action-login-radio");
+
+        widget = (GtkWidget *) gtk_builder_get_object (builder, "action-login-radio");
+        g_signal_connect (widget, "toggled", G_CALLBACK (password_login_radio_toggled_cb), um);
+        um->action_login_radio = widget;
+
+        widget = (GtkWidget *) gtk_builder_get_object (builder, "action-no-password-radio");
+        g_signal_connect (widget, "toggled", G_CALLBACK (no_password_radio_toggled_cb), um);
+        um->action_no_password_radio = widget;
 
         widget = (GtkWidget *) gtk_builder_get_object (builder, "dialog");
         g_signal_connect (widget, "delete-event",
