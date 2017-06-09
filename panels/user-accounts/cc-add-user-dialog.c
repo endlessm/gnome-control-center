@@ -85,6 +85,7 @@ struct _CcAddUserDialog {
         GtkListStore       *local_username_model;
         GtkPasswordEntry   *local_password_entry;
         GtkLabel           *local_password_hint;
+        GtkCheckButton     *local_no_password_radio;
         GtkCheckButton     *local_password_radio;
         GtkEntry           *local_username_entry;
         AdwActionRow       *local_username_row;
@@ -778,14 +779,25 @@ local_verify_entry_changed_cb (CcAddUserDialog *self)
 }
 
 static void
-local_password_radio_changed_cb (CcAddUserDialog *self)
+password_mode_changed_cb (GtkCheckButton *button,
+                          gpointer user_data)
 {
-        gboolean active;
+        CcAddUserDialog *self = CC_ADD_USER_DIALOG (user_data);
+        ActUserPasswordMode mode;
 
-        active = gtk_check_button_get_active (GTK_CHECK_BUTTON (self->local_password_radio));
-        self->local_password_mode = active ? ACT_USER_PASSWORD_MODE_REGULAR : ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
+        if (!gtk_check_button_get_active (button))
+                return;
 
-        gtk_widget_set_sensitive (GTK_WIDGET (self->password_group), active);
+        if (button == GTK_CHECK_BUTTON (self->local_no_password_radio))
+                mode = ACT_USER_PASSWORD_MODE_NONE;
+        else if (button == GTK_CHECK_BUTTON (self->local_password_radio))
+                mode = ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
+        else
+                mode = ACT_USER_PASSWORD_MODE_REGULAR;
+
+        self->local_password_mode = mode;
+        gtk_widget_set_sensitive (GTK_WIDGET (self->password_group),
+                                  (mode == ACT_USER_PASSWORD_MODE_REGULAR));
 
         dialog_validate (self);
 }
@@ -1678,6 +1690,7 @@ cc_add_user_dialog_class_init (CcAddUserDialogClass *klass)
         gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_username_combo);
         gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_username_model);
         gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_password_entry);
+        gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_no_password_radio);
         gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_password_radio);
         gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_username_entry);
         gtk_widget_class_bind_template_child (widget_class, CcAddUserDialog, local_username_row);
@@ -1703,7 +1716,7 @@ cc_add_user_dialog_class_init (CcAddUserDialogClass *klass)
         gtk_widget_class_bind_template_callback (widget_class, local_name_entry_focus_out_event_cb);
         gtk_widget_class_bind_template_callback (widget_class, local_password_entry_changed_cb);
         gtk_widget_class_bind_template_callback (widget_class, local_password_entry_key_press_event_cb);
-        gtk_widget_class_bind_template_callback (widget_class, local_password_radio_changed_cb);
+        gtk_widget_class_bind_template_callback (widget_class, password_mode_changed_cb);
         gtk_widget_class_bind_template_callback (widget_class, local_username_combo_changed_cb);
         gtk_widget_class_bind_template_callback (widget_class, local_username_combo_focus_out_event_cb);
         gtk_widget_class_bind_template_callback (widget_class, local_verify_entry_changed_cb);
