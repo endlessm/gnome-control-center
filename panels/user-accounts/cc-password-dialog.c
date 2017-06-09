@@ -503,6 +503,7 @@ CcPasswordDialog *
 cc_password_dialog_new (ActUser *user)
 {
         CcPasswordDialog *self;
+        ActUserPasswordMode mode;
         GtkWindow *window;
 
         g_return_val_if_fail (ACT_IS_USER (user), NULL);
@@ -512,20 +513,24 @@ cc_password_dialog_new (ActUser *user)
 
         self->user = g_object_ref (user);
 
+        mode = act_user_get_password_mode (user);
         if (act_user_get_uid (self->user) == getuid ()) {
                 gboolean visible;
 
-                mode_change (self, ACT_USER_PASSWORD_MODE_REGULAR);
+                if (mode != ACT_USER_PASSWORD_MODE_SET_AT_LOGIN)
+                        mode_change (self, mode);
+                else
+                        mode_change (self, ACT_USER_PASSWORD_MODE_REGULAR);
                 gtk_widget_hide (GTK_WIDGET (self->password_on_next_login_group));
 
-                visible = (act_user_get_password_mode (user) != ACT_USER_PASSWORD_MODE_NONE);
+                visible = (mode != ACT_USER_PASSWORD_MODE_NONE);
                 gtk_widget_set_visible (GTK_WIDGET (self->old_password_entry), visible);
                 self->old_password_ok = !visible;
 
                 self->passwd_handler = passwd_init ();
         }
         else {
-                mode_change (self, ACT_USER_PASSWORD_MODE_SET_AT_LOGIN);
+                mode_change (self, mode);
                 gtk_widget_show (GTK_WIDGET (self->password_on_next_login_group));
 
                 gtk_widget_hide (GTK_WIDGET (self->old_password_entry));
