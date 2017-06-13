@@ -42,6 +42,7 @@ struct _UmPasswordDialog {
         GtkWidget *action_radio_box;
         GtkWidget *action_now_radio;
         GtkWidget *action_login_radio;
+        GtkWidget *action_no_password_radio;
         GtkWidget *password_entry;
         GtkWidget *verify_entry;
         gint       password_entry_timeout_id;
@@ -223,6 +224,14 @@ accept_password_dialog (GtkButton        *button,
                         act_user_set_automatic_login (um->user, FALSE);
                         break;
 
+                case ACT_USER_PASSWORD_MODE_NONE:
+                        /* When setting the user password mode to none, when it
+                         * was previously set-at-login, we need to reset the password,
+                         * otherwise the mode will be set back to set-at-login */
+                        act_user_set_password (um->user, "", "");
+                        act_user_set_password_mode (um->user,  um->password_mode);
+                        break;
+
                 default:
                         g_assert_not_reached ();
         }
@@ -234,7 +243,7 @@ static void
 update_sensitivity (UmPasswordDialog *um)
 {
         const gchar *password, *verify;
-        gboolean can_change;
+        gboolean can_change = TRUE;
 
         password = gtk_entry_get_text (GTK_ENTRY (um->password_entry));
         verify = gtk_entry_get_text (GTK_ENTRY (um->verify_entry));
@@ -244,8 +253,8 @@ update_sensitivity (UmPasswordDialog *um)
                 can_change = password && password[0] != '\0' && strcmp (password, verify) == 0 &&
                              (um->old_password_ok || !gtk_widget_get_visible (um->old_password_entry));
         }
-        else {
-                can_change = TRUE;
+        else if (um->password_mode == ACT_USER_PASSWORD_MODE_NONE) {
+                can_change = um->old_password_ok || !gtk_widget_get_visible (um->old_password_entry);
         }
 
         gtk_widget_set_sensitive (um->ok_button, can_change);
@@ -256,30 +265,58 @@ mode_change (UmPasswordDialog *um,
              ActUserPasswordMode mode)
 {
         gboolean active;
+        gboolean user_is_self = (act_user_get_uid (um->user) == getuid ());
 
         active = (mode == ACT_USER_PASSWORD_MODE_REGULAR);
         gtk_widget_set_sensitive (um->password_entry, active);
         gtk_widget_set_sensitive (um->verify_entry, active);
-        gtk_widget_set_sensitive (um->old_password_entry, active);
         gtk_widget_set_sensitive (um->password_hint, active);
         gtk_widget_set_sensitive (um->password_reminder, active);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_now_radio), active);
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_login_radio), !active);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_login_radio),
+                                      (mode == ACT_USER_PASSWORD_MODE_SET_AT_LOGIN));
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (um->action_no_password_radio),
+                                      (mode == ACT_USER_PASSWORD_MODE_NONE));
+
+        if (user_is_self) {
+                gtk_widget_set_sensitive (um->old_password_entry,
+                                          act_user_get_password_mode (um->user) == ACT_USER_PASSWORD_MODE_REGULAR);
+        }
 
         um->password_mode = mode;
         update_sensitivity (um);
 }
 
 static void
-action_changed (GtkRadioButton   *radio,
-                UmPasswordDialog *um)
+set_password_mode_from_radio_button (GtkRadioButton     *radio,
+                                     UmPasswordDialog   *um,
+                                     ActUserPasswordMode mode)
 {
-        gint active;
-        ActUserPasswordMode mode;
+        if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio)))
+                return;
 
-        active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio));
-        mode = active ? ACT_USER_PASSWORD_MODE_REGULAR : ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
         mode_change (um, mode);
+}
+
+static void
+password_now_radio_toggled_cb (GtkRadioButton   *radio,
+                               UmPasswordDialog *um)
+{
+        set_password_mode_from_radio_button (radio, um, ACT_USER_PASSWORD_MODE_REGULAR);
+}
+
+static void
+no_password_radio_toggled_cb (GtkRadioButton   *radio,
+                              UmPasswordDialog *um)
+{
+        set_password_mode_from_radio_button (radio, um, ACT_USER_PASSWORD_MODE_NONE);
+}
+
+static void
+password_login_radio_toggled_cb (GtkRadioButton   *radio,
+                                 UmPasswordDialog *um)
+{
+        set_password_mode_from_radio_button (radio, um, ACT_USER_PASSWORD_MODE_SET_AT_LOGIN);
 }
 
 static void
@@ -463,9 +500,16 @@ um_password_dialog_new (void)
 
         um->action_radio_box = (GtkWidget *) gtk_builder_get_object (builder, "action-radio-box");
         widget = (GtkWidget *) gtk_builder_get_object (builder, "action-now-radio");
-        g_signal_connect (widget, "toggled", G_CALLBACK (action_changed), um);
+        g_signal_connect (widget, "toggled", G_CALLBACK (password_now_radio_toggled_cb), um);
         um->action_now_radio = widget;
-        um->action_login_radio = (GtkWidget *) gtk_builder_get_object (builder, "action-login-radio");
+
+        widget = (GtkWidget *) gtk_builder_get_object (builder, "action-login-radio");
+        g_signal_connect (widget, "toggled", G_CALLBACK (password_login_radio_toggled_cb), um);
+        um->action_login_radio = widget;
+
+        widget = (GtkWidget *) gtk_builder_get_object (builder, "action-no-password-radio");
+        g_signal_connect (widget, "toggled", G_CALLBACK (no_password_radio_toggled_cb), um);
+        um->action_no_password_radio = widget;
 
         widget = (GtkWidget *) gtk_builder_get_object (builder, "dialog");
         g_signal_connect (widget, "delete-event",
@@ -568,20 +612,20 @@ um_password_dialog_set_user (UmPasswordDialog *um,
 
                 gtk_entry_set_visibility (GTK_ENTRY (um->password_entry), FALSE);
                 gtk_entry_set_visibility (GTK_ENTRY (um->verify_entry), FALSE);
+                gtk_widget_show_all (um->action_radio_box);
 
                 if (act_user_get_uid (um->user) == getuid ()) {
                         mode_change (um, ACT_USER_PASSWORD_MODE_REGULAR);
-                        gtk_widget_hide (um->action_radio_box);
 
                         visible = (act_user_get_password_mode (user) != ACT_USER_PASSWORD_MODE_NONE);
+                        gtk_widget_hide (um->action_login_radio);
                         gtk_widget_set_visible (um->old_password_label, visible);
                         gtk_widget_set_visible (um->old_password_entry, visible);
                         gtk_entry_set_text (GTK_ENTRY (um->password_reminder), act_user_get_password_hint (user));
                         um->old_password_ok = !visible;
                 }
                 else {
-                        mode_change (um, ACT_USER_PASSWORD_MODE_SET_AT_LOGIN);
-                        gtk_widget_show (um->action_radio_box);
+                        mode_change (um, act_user_get_password_mode (user));
 
                         gtk_widget_hide (um->old_password_label);
                         gtk_widget_hide (um->old_password_entry);
