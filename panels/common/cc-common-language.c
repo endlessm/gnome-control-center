@@ -245,14 +245,13 @@ cc_common_language_get_initial_languages (void)
         ht = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
         insert_language (ht, "en_US.UTF-8");
-        insert_language (ht, "en_GB.UTF-8");
-        insert_language (ht, "de_DE.UTF-8");
+        insert_language (ht, "pt_BR.UTF-8");
+        insert_language (ht, "es_MX.UTF-8");
+        insert_language (ht, "id_ID.UTF-8");
+        insert_language (ht, "th_TH.UTF-8");
+        insert_language (ht, "vi_VN.UTF-8");
         insert_language (ht, "fr_FR.UTF-8");
-        insert_language (ht, "es_ES.UTF-8");
-        insert_language (ht, "zh_CN.UTF-8");
-        insert_language (ht, "ja_JP.UTF-8");
-        insert_language (ht, "ru_RU.UTF-8");
-        insert_language (ht, "ar_EG.UTF-8");
+        insert_language (ht, "ar_AE.UTF-8");
 
         return ht;
 }
