@@ -544,16 +544,9 @@ search_panel_add_one_provider (CcSearchPanel *self,
       goto out;
     }
 
-  /* Work around problem with all Endless flatpak apps accidentally
-     built with "DefaultDisabled=true" */
-  if (g_str_has_prefix (desktop_id, "com.endlessm."))
-    default_disabled = FALSE;
-  else
-    default_disabled = g_key_file_get_boolean (keyfile, SHELL_PROVIDER_GROUP,
-                                               "DefaultDisabled", NULL);
-
   g_free (desktop_id);
-
+  default_disabled = g_key_file_get_boolean (keyfile, SHELL_PROVIDER_GROUP,
+                                             "DefaultDisabled", NULL);
   search_panel_add_one_app_info (self, app_info, !default_disabled);
   g_object_unref (app_info);
 
