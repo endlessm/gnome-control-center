@@ -23,6 +23,7 @@
 
 #include "cc-window.h"
 
+#include <eosmetrics/eosmetrics.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gio/gdesktopappinfo.h>
@@ -117,6 +118,17 @@ static gboolean cc_window_set_active_panel_from_id (CcShell      *shell,
 
 static gint get_monitor_height (CcWindow *self);
 
+#define PANEL_OPENED_EVENT_ID "3c5d59d2-6c3f-474b-95f4-ac6fcc192655"
+
+static void
+send_setting_panel_metric (const gchar *id)
+{
+  EmtrEventRecorder *recorder = emtr_event_recorder_get_default ();
+  GVariant *payload = g_variant_new_string (id);
+
+  emtr_event_recorder_record_event (recorder, PANEL_OPENED_EVENT_ID, payload);
+}
+
 static const gchar *
 get_icon_name_from_g_icon (GIcon *gicon)
 {
@@ -179,6 +191,8 @@ activate_panel (CcWindow           *self,
   gtk_window_set_icon_name (GTK_WINDOW (self), icon_name);
 
   self->current_panel_box = box;
+
+  send_setting_panel_metric (id);
 
   return TRUE;
 }
