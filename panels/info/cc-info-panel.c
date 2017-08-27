@@ -499,11 +499,19 @@ query_done (GFile        *file,
     }
   else
     {
-      char *path;
-      path = g_file_get_path (file);
-      g_warning ("Failed to get filesystem free space for '%s': %s", path, error->message);
-      g_free (path);
-      g_error_free (error);
+      if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        {
+          g_error_free (error);
+          return;
+        }
+      else
+        {
+          char *path;
+          path = g_file_get_path (file);
+          g_warning ("Failed to get filesystem free space for '%s': %s", path, error->message);
+          g_free (path);
+          g_error_free (error);
+        }
     }
 
   /* And onto the next element */
