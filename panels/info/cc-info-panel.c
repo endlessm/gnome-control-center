@@ -336,6 +336,9 @@ cc_info_panel_finalize (GObject *object)
       g_clear_object (&priv->updater_cancellable);
     }
 
+  if (priv->primary_mounts)
+    g_list_free_full (priv->primary_mounts, (GDestroyNotify) g_unix_mount_free);
+
   g_clear_object (&priv->media_settings);
   g_clear_object (&priv->updater_proxy);
   g_clear_object (&priv->session_proxy);
