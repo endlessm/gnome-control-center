@@ -488,7 +488,6 @@ query_done (GFile        *file,
   GFileInfo *info;
   GError *error = NULL;
 
-  self->priv->cancellable = NULL;
   info = g_file_query_filesystem_info_finish (file, res, &error);
   if (info != NULL)
     {
@@ -531,8 +530,6 @@ get_primary_disc_info_start (CcInfoPanel *self)
   self->priv->primary_mounts = g_list_remove (self->priv->primary_mounts, mount);
   file = g_file_new_for_path (g_unix_mount_get_mount_path (mount));
   g_unix_mount_free (mount);
-
-  self->priv->cancellable = g_cancellable_new ();
 
   g_file_query_filesystem_info_async (file,
                                       G_FILE_ATTRIBUTE_FILESYSTEM_SIZE,
@@ -585,6 +582,7 @@ get_primary_disc_info (CcInfoPanel *self)
   g_list_free (points);
   g_hash_table_destroy (hash);
 
+  self->priv->cancellable = g_cancellable_new ();
   get_primary_disc_info_start (self);
 }
 
