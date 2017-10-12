@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 22:13-0700\n"
-"PO-Revision-Date: 2017-06-14 07:24+0000\n"
+"POT-Creation-Date: 2017-06-14 12:08-0700\n"
+"PO-Revision-Date: 2017-08-03 17:56+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Maori (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/mi/)\n"
 "MIME-Version: 1.0\n"
@@ -2793,7 +2793,7 @@ msgstr ""
 #: ../panels/network/wireless-security/ws-leap.ui.h:2
 #: ../panels/network/wireless-security/ws-wpa-psk.ui.h:1
 #: ../panels/sharing/sharing.ui.h:9
-#: ../panels/user-accounts/data/account-dialog.ui.h:12
+#: ../panels/user-accounts/data/account-dialog.ui.h:13
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:5
 msgid "_Password"
 msgstr ""
@@ -6053,43 +6053,50 @@ msgid "Account _Type"
 msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:10
+#: ../panels/user-accounts/data/password-dialog.ui.h:7
 msgid "Allow user to set a password when they next _login"
 msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:11
+#: ../panels/user-accounts/data/password-dialog.ui.h:8
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: ../panels/user-accounts/data/account-dialog.ui.h:12
+#: ../panels/user-accounts/data/password-dialog.ui.h:9
 msgid "Set a password _now"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:13
+#: ../panels/user-accounts/data/account-dialog.ui.h:14
 msgid "_Confirm"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:14
-#: ../panels/user-accounts/data/password-dialog.ui.h:9
+#: ../panels/user-accounts/data/account-dialog.ui.h:15
+#: ../panels/user-accounts/data/password-dialog.ui.h:10
 msgid "Password _Reminder"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:15
+#: ../panels/user-accounts/data/account-dialog.ui.h:16
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:16
+#: ../panels/user-accounts/data/account-dialog.ui.h:17
 #: ../panels/user-accounts/data/join-dialog.ui.h:9
 msgid "_Domain"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:17
+#: ../panels/user-accounts/data/account-dialog.ui.h:18
 msgid "You are Offline"
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:18
+#: ../panels/user-accounts/data/account-dialog.ui.h:19
 msgid "You must be online in order to add enterprise users."
 msgstr ""
 
-#: ../panels/user-accounts/data/account-dialog.ui.h:19
+#: ../panels/user-accounts/data/account-dialog.ui.h:20
 msgid "_Enterprise Login"
 msgstr ""
 
@@ -6204,14 +6211,6 @@ msgstr ""
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:6
 msgid "Current _Password"
-msgstr ""
-
-#: ../panels/user-accounts/data/password-dialog.ui.h:7
-msgid "Allow user to change their password on next login"
-msgstr ""
-
-#: ../panels/user-accounts/data/password-dialog.ui.h:8
-msgid "Set a password now"
 msgstr ""
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:1
@@ -6424,45 +6423,45 @@ msgstr ""
 msgid "Should match the web address of your login provider."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:236
+#: ../panels/user-accounts/um-account-dialog.c:238
 msgid "Failed to add account"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:460
+#: ../panels/user-accounts/um-account-dialog.c:462
 msgid "Passwords do not match."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:715
-#: ../panels/user-accounts/um-account-dialog.c:761
-#: ../panels/user-accounts/um-account-dialog.c:782
+#: ../panels/user-accounts/um-account-dialog.c:741
+#: ../panels/user-accounts/um-account-dialog.c:787
+#: ../panels/user-accounts/um-account-dialog.c:808
 msgid "Failed to register account"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:905
+#: ../panels/user-accounts/um-account-dialog.c:931
 msgid "No supported way to authenticate with this domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:978
+#: ../panels/user-accounts/um-account-dialog.c:1004
 msgid "Failed to join domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1039
+#: ../panels/user-accounts/um-account-dialog.c:1065
 msgid ""
 "That login name didn't work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1046
+#: ../panels/user-accounts/um-account-dialog.c:1072
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1054
+#: ../panels/user-accounts/um-account-dialog.c:1080
 msgid "Failed to log into domain"
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1112
+#: ../panels/user-accounts/um-account-dialog.c:1138
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr ""
 
@@ -6621,19 +6620,19 @@ msgstr ""
 msgid "%s - Account Activity"
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:152
+#: ../panels/user-accounts/um-password-dialog.c:153
 msgid "Please choose another password."
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:161
+#: ../panels/user-accounts/um-password-dialog.c:162
 msgid "Please type your current password again."
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:167
+#: ../panels/user-accounts/um-password-dialog.c:168
 msgid "Password could not be changed"
 msgstr ""
 
-#: ../panels/user-accounts/um-password-dialog.c:297
+#: ../panels/user-accounts/um-password-dialog.c:334
 msgid "The passwords do not match."
 msgstr ""
 
