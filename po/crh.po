@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-14 12:08-0700\n"
-"PO-Revision-Date: 2017-09-23 03:19+0000\n"
+"POT-Creation-Date: 2017-10-11 21:27-0700\n"
+"PO-Revision-Date: 2017-10-12 04:58+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Crimean Turkish (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/crh/)\n"
 "MIME-Version: 1.0\n"
@@ -106,29 +106,29 @@ msgstr ""
 #: ../panels/color/cc-color-panel.c:225 ../panels/color/cc-color-panel.c:963
 #: ../panels/color/color-calibrate.ui.h:2 ../panels/color/color.ui.h:30
 #: ../panels/common/language-chooser.ui.h:3
-#: ../panels/display/cc-display-panel.c:1558
-#: ../panels/display/cc-display-panel.c:2324
+#: ../panels/display/cc-display-panel.c:1577
+#: ../panels/display/cc-display-panel.c:2343
 #: ../panels/network/connection-editor/connection-editor.ui.h:1
 #: ../panels/network/connection-editor/vpn-helpers.c:181
 #: ../panels/network/connection-editor/vpn-helpers.c:310
 #: ../panels/network/net-device-wifi.c:1346
 #: ../panels/network/net-device-wifi.c:1585
 #: ../panels/network/network-wifi.ui.h:1
-#: ../panels/printers/cc-printers-panel.c:2121
-#: ../panels/printers/new-printer-dialog.ui.h:2
-#: ../panels/privacy/cc-privacy-panel.c:1195
+#: ../panels/printers/new-printer-dialog.ui.h:3
+#: ../panels/printers/pp-details-dialog.c:319
+#: ../panels/privacy/cc-privacy-panel.c:1196
 #: ../panels/region/format-chooser.ui.h:3
 #: ../panels/region/input-chooser.ui.h:2
-#: ../panels/search/cc-search-locations-dialog.c:637
+#: ../panels/search/cc-search-locations-dialog.c:642
 #: ../panels/sharing/cc-sharing-panel.c:375
 #: ../panels/user-accounts/data/account-dialog.ui.h:2
 #: ../panels/user-accounts/data/join-dialog.ui.h:2
 #: ../panels/user-accounts/data/password-dialog.ui.h:2
-#: ../panels/user-accounts/um-fingerprint-dialog.c:265
+#: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:94
-#: ../panels/user-accounts/um-photo-dialog.c:217
-#: ../panels/user-accounts/um-user-panel.c:712
-#: ../panels/user-accounts/um-user-panel.c:730
+#: ../panels/user-accounts/um-photo-dialog.c:218
+#: ../panels/user-accounts/um-user-panel.c:651
+#: ../panels/user-accounts/um-user-panel.c:669
 msgid "_Cancel"
 msgstr "_Vazgeç"
 
@@ -225,7 +225,7 @@ msgstr ""
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: ../panels/color/cc-color-calibrate.c:361
-msgid "Place your calibration device over the square and press 'Start'"
+msgid "Place your calibration device over the square and press “Start”"
 msgstr ""
 
 #. TRANSLATORS: Some calibration devices need the user to move a
@@ -233,7 +233,7 @@ msgstr ""
 #. * what to do...
 #: ../panels/color/cc-color-calibrate.c:367
 msgid ""
-"Move your calibration device to the calibrate position and press 'Continue'"
+"Move your calibration device to the calibrate position and press “Continue”"
 msgstr ""
 
 #. TRANSLATORS: Some calibration devices need the user to move a
@@ -241,7 +241,7 @@ msgstr ""
 #. * what to do...
 #: ../panels/color/cc-color-calibrate.c:373
 msgid ""
-"Move your calibration device to the surface position and press 'Continue'"
+"Move your calibration device to the surface position and press “Continue”"
 msgstr ""
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
@@ -668,13 +668,13 @@ msgid ""
 msgstr ""
 
 #: ../panels/color/color.ui.h:27
-#: ../panels/user-accounts/um-fingerprint-dialog.c:730
+#: ../panels/user-accounts/um-fingerprint-dialog.c:723
 msgid "Summary"
 msgstr "Hulâsa"
 
 #: ../panels/color/color.ui.h:28
-msgid "Add profile"
-msgstr "Profil ekle"
+msgid "Add Profile"
+msgstr ""
 
 #: ../panels/color/color.ui.h:29
 msgid "_Import File…"
@@ -682,7 +682,7 @@ msgstr ""
 
 #: ../panels/color/color.ui.h:31
 #: ../panels/network/connection-editor/net-connection-editor.c:550
-#: ../panels/printers/new-printer-dialog.ui.h:3
+#: ../panels/printers/new-printer-dialog.ui.h:4
 #: ../panels/region/input-chooser.ui.h:3
 #: ../panels/user-accounts/data/account-dialog.ui.h:3
 msgid "_Add"
@@ -839,7 +839,7 @@ msgstr ""
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Renk;ICC;Profil;Ayar;Yazıcı;Görünüm;"
 
-#: ../panels/common/cc-common-language.c:323
+#: ../panels/common/cc-common-language.c:322
 msgid "Other…"
 msgstr "Diger…"
 
@@ -1067,22 +1067,23 @@ msgstr "Sistem vaqtı ve tarih ayarlarını deñiştir"
 msgid "To change time or date settings, you need to authenticate."
 msgstr "Vaqıt yaki tarih ayarlarını deñiştirmek içün sahihlenmeñiz kerek."
 
-#: ../panels/display/cc-display-panel.c:570
+#: ../panels/display/cc-display-panel.c:589
 msgid "Lid Closed"
 msgstr ""
 
 #. translators: "Mirrored" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:573
+#: ../panels/display/cc-display-panel.c:592
 msgid "Mirrored"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:575
-#: ../panels/display/cc-display-panel.c:2547
+#: ../panels/display/cc-display-panel.c:594
+#: ../panels/display/cc-display-panel.c:2566
 msgid "Primary"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:577
-#: ../panels/notifications/cc-notifications-panel.c:257
+#: ../panels/display/cc-display-panel.c:596
+#: ../panels/display/cc-display-panel.c:2799
+#: ../panels/notifications/cc-notifications-panel.c:293
 #: ../panels/power/cc-power-panel.c:1960 ../panels/power/cc-power-panel.c:1971
 #: ../panels/privacy/cc-privacy-panel.c:196
 #: ../panels/privacy/cc-privacy-panel.c:263
@@ -1097,116 +1098,195 @@ msgstr ""
 msgid "Off"
 msgstr "Qapalı"
 
-#: ../panels/display/cc-display-panel.c:580
+#: ../panels/display/cc-display-panel.c:599
 msgid "Secondary"
 msgstr ""
 
 #. Title of displays dialog when multiple monitors are present.
-#: ../panels/display/cc-display-panel.c:1555
+#: ../panels/display/cc-display-panel.c:1574
 msgid "Arrange Combined Displays"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:1559
-#: ../panels/display/cc-display-panel.c:2325
+#: ../panels/display/cc-display-panel.c:1578
+#: ../panels/display/cc-display-panel.c:2344
 #: ../panels/network/connection-editor/connection-editor.ui.h:2
 #: ../panels/network/network-wifi.ui.h:2
 msgid "_Apply"
 msgstr "_Uyğula"
 
-#: ../panels/display/cc-display-panel.c:1583
+#: ../panels/display/cc-display-panel.c:1602
 msgid "Drag displays to rearrange them"
 msgstr ""
 
 #. translators: example string is "60 Hz (NTSC)"
 #. * NTSC is https://en.wikipedia.org/wiki/NTSC
-#: ../panels/display/cc-display-panel.c:1775
+#: ../panels/display/cc-display-panel.c:1794
 #, c-format
 msgid "%d Hz (NTSC)"
 msgstr ""
 
 #. translators: example string is "60 Hz"
-#: ../panels/display/cc-display-panel.c:1781
+#: ../panels/display/cc-display-panel.c:1800
 #, c-format
 msgid "%d Hz"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2377
+#: ../panels/display/cc-display-panel.c:2396
 msgid "Rotate counterclockwise by 90°"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2395
+#: ../panels/display/cc-display-panel.c:2414
 msgid "Rotate by 180°"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2413
+#: ../panels/display/cc-display-panel.c:2432
 msgid "Rotate clockwise by 90°"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2434
+#: ../panels/display/cc-display-panel.c:2453
 msgid "Size"
 msgstr ""
 
 #. aspect ratio
-#: ../panels/display/cc-display-panel.c:2449
+#: ../panels/display/cc-display-panel.c:2468
 msgid "Aspect Ratio"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2472
+#: ../panels/display/cc-display-panel.c:2491
 #: ../panels/printers/pp-options-dialog.c:85
 msgid "Resolution"
 msgstr "Çezinirlik"
 
-#: ../panels/display/cc-display-panel.c:2492
+#: ../panels/display/cc-display-panel.c:2511
 msgid "Adjust for TV"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2516
+#: ../panels/display/cc-display-panel.c:2535
 msgid "Refresh Rate"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2548
+#: ../panels/display/cc-display-panel.c:2567
 msgid "Show the top bar and Activities Overview on this display"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2554
+#: ../panels/display/cc-display-panel.c:2573
 msgid "Secondary Display"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2555
+#: ../panels/display/cc-display-panel.c:2574
 msgid "Join this display with another to create an extra workspace"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2562
+#: ../panels/display/cc-display-panel.c:2581
 msgid "Presentation"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2563
+#: ../panels/display/cc-display-panel.c:2582
 msgid "Show slideshows and media only"
 msgstr ""
 
 #. translators: "Mirror" describes when both displays show the same view
-#: ../panels/display/cc-display-panel.c:2568
+#: ../panels/display/cc-display-panel.c:2587
 msgid "Mirror"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2569
+#: ../panels/display/cc-display-panel.c:2588
 msgid "Show your existing view on both displays"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2575
+#: ../panels/display/cc-display-panel.c:2594
 msgid "Turn Off"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2576
-msgid "Don't use this display"
+#: ../panels/display/cc-display-panel.c:2595
+msgid "Don’t use this display"
 msgstr ""
 
-#: ../panels/display/cc-display-panel.c:2809
+#. TRANSLATORS: the state of the night light setting
+#: ../panels/display/cc-display-panel.c:2799
+#: ../panels/notifications/cc-notifications-panel.c:293
+#: ../panels/power/cc-power-panel.c:1966 ../panels/power/cc-power-panel.c:1973
+#: ../panels/privacy/cc-privacy-panel.c:196
+#: ../panels/privacy/cc-privacy-panel.c:263
+#: ../panels/privacy/cc-privacy-panel.c:895
+#: ../panels/universal-access/cc-ua-panel.c:297
+#: ../panels/universal-access/cc-ua-panel.c:618
+#: ../panels/universal-access/cc-ua-panel.c:631
+#: ../panels/universal-access/cc-ua-panel.c:643
+#: ../panels/universal-access/cc-ua-panel.c:815
+msgid "On"
+msgstr "Açıq"
+
+#: ../panels/display/cc-display-panel.c:2839
 msgid "Could not get screen information"
 msgstr "Ekran bilgisi alınamadı"
 
-#: ../panels/display/cc-display-panel.c:2840
+#: ../panels/display/cc-display-panel.c:2870
 msgid "_Arrange Combined Displays"
+msgstr ""
+
+#: ../panels/display/cc-display-panel.c:2891
+msgid "_Night Light"
+msgstr ""
+
+#. This cancels the redshift inhibit.
+#: ../panels/display/display.ui.h:2
+msgid "Restart Filter"
+msgstr ""
+
+#. Inhibit the redshift functionality until the next day starts
+#: ../panels/display/display.ui.h:4
+msgid "Temporarily Disabled Until Tomorrow"
+msgstr ""
+
+#: ../panels/display/display.ui.h:5
+msgid ""
+"Night light makes the screen color warmer. This can help to prevent eye "
+"strain and sleeplessness."
+msgstr ""
+
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
+#: ../panels/display/display.ui.h:7
+msgid "Night Light"
+msgstr ""
+
+#: ../panels/display/display.ui.h:8
+msgid "Schedule"
+msgstr ""
+
+#: ../panels/display/display.ui.h:9
+msgid "Sunset to Sunrise"
+msgstr ""
+
+#: ../panels/display/display.ui.h:10
+#: ../panels/network/connection-editor/ce-page-ip4.c:630
+#: ../panels/network/connection-editor/ce-page-ip6.c:592
+#: ../panels/network/network-wifi.ui.h:26
+#: ../panels/privacy/cc-privacy-panel.c:223
+msgid "Manual"
+msgstr "Elden"
+
+#: ../panels/display/display.ui.h:11
+msgid "From"
+msgstr ""
+
+#: ../panels/display/display.ui.h:12
+msgid ":"
+msgstr ":"
+
+#. This is the short form for the time period in the morning
+#: ../panels/display/display.ui.h:14
+msgid "AM"
+msgstr ""
+
+#. This is the short form for the time period in the afternoon
+#: ../panels/display/display.ui.h:16
+msgid "PM"
+msgstr ""
+
+#: ../panels/display/display.ui.h:17
+msgid "To"
 msgstr ""
 
 #. Translators: Add soft hyphens to your translations so that the icon view
@@ -1222,7 +1302,8 @@ msgstr "Bağlanğan monitorlar ve proyektorlarnıñ nasıl qullanılacağını s
 
 #. Translators: those are keywords for the display control-center panel
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:5
-msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;"
+msgid ""
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr ""
 
 #. TRANSLATORS: AP type
@@ -1555,8 +1636,8 @@ msgstr "Fırlatıcılar"
 msgid "Launch help browser"
 msgstr "Yardım kezicisini fırlat"
 
-#: ../panels/keyboard/01-launchers.xml.in.h:3 ../shell/alt/cc-window.c:274
-#: ../shell/alt/cc-window.c:829 ../shell/cc-window.c:1603
+#: ../panels/keyboard/01-launchers.xml.in.h:3 ../shell/alt/cc-window.c:277
+#: ../shell/alt/cc-window.c:830 ../shell/cc-window.c:1609
 #: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/window.ui.h:1
 msgid "Settings"
 msgstr "Ayarlar"
@@ -1684,7 +1765,7 @@ msgstr "Özel Qısqayollar"
 #: ../panels/keyboard/shortcut-editor.ui.h:2
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1830
-#: ../panels/user-accounts/um-fingerprint-dialog.c:213
+#: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Ğayrıqabilleştirilgen"
 
@@ -1706,33 +1787,53 @@ msgstr "Telif Tuşu"
 msgid "Modifiers-only switch to next source"
 msgstr "Soñraki menbağa faqat-başqalaştırıcılar almaştırıcısı"
 
-#: ../panels/keyboard/cc-keyboard-panel.c:217
+#: ../panels/keyboard/cc-keyboard-panel.c:181
+msgid "Reset All Shortcuts?"
+msgstr ""
+
+#: ../panels/keyboard/cc-keyboard-panel.c:184
+msgid ""
+"Resetting the shortcuts may affect your custom shortcuts. This cannot be "
+"undone."
+msgstr ""
+
+#: ../panels/keyboard/cc-keyboard-panel.c:188
+#: ../panels/keyboard/shortcut-editor.ui.h:10
+#: ../panels/printers/authentication-dialog.ui.h:2
+#: ../panels/printers/ppd-selection-dialog.ui.h:2
+msgid "Cancel"
+msgstr "Vazgeç"
+
+#: ../panels/keyboard/cc-keyboard-panel.c:189
+msgid "Reset All"
+msgstr ""
+
+#: ../panels/keyboard/cc-keyboard-panel.c:281
 msgid "Reset the shortcut to its default value"
 msgstr ""
 
-#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:357
+#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:433
 #, c-format
 msgid ""
 "%s is already being used for <b>%s</b>. If you replace it, %s will be "
 "disabled"
 msgstr ""
 
-#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:514
+#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:599
 msgid "Set Custom Shortcut"
 msgstr ""
 
-#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:514
-#: ../panels/keyboard/shortcut-editor.ui.h:7
+#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:599
 msgid "Set Shortcut"
 msgstr ""
 
 #. Setup the top label
-#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:523
+#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:608
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
 msgstr ""
 
-#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:949
+#: ../panels/keyboard/cc-keyboard-shortcut-editor.c:1036
 msgid "Add Custom Shortcut"
 msgstr ""
 
@@ -1753,10 +1854,23 @@ msgid "Shortcut;Repeat;Blink;"
 msgstr "Qısqayol;Tekrar;Qıpma;"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/region/input-options.ui.h:4 ../shell/cc-application.c:251
+msgid "Keyboard Shortcuts"
+msgstr "Klavye Qısqayolları"
+
+#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+msgid "Reset All…"
+msgstr ""
+
+#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+msgid "Reset all shortcuts to their default keybindings"
+msgstr ""
+
+#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
 msgid "No keyboard shortcut found"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2 ../shell/panel-list.ui.h:4
+#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5 ../shell/panel-list.ui.h:4
 msgid "Try a different search"
 msgstr ""
 
@@ -1765,6 +1879,7 @@ msgid "Press Esc to cancel."
 msgstr ""
 
 #: ../panels/keyboard/shortcut-editor.ui.h:3
+#: ../panels/printers/details-dialog.ui.h:1
 #: ../panels/sound/gvc-mixer-dialog.c:1493
 #: ../panels/sound/gvc-sound-theme-chooser.c:564
 msgid "Name"
@@ -1779,43 +1894,37 @@ msgid "Shortcut"
 msgstr ""
 
 #: ../panels/keyboard/shortcut-editor.ui.h:6
-msgid "Edit"
+msgid "Set Shortcut…"
 msgstr ""
 
-#: ../panels/keyboard/shortcut-editor.ui.h:8
+#: ../panels/keyboard/shortcut-editor.ui.h:7
 #: ../panels/network/network-wifi.ui.h:20
 msgid "None"
 msgstr "Hiç biri"
 
-#: ../panels/keyboard/shortcut-editor.ui.h:9
+#: ../panels/keyboard/shortcut-editor.ui.h:8
 msgid "Remove"
 msgstr ""
 
-#: ../panels/keyboard/shortcut-editor.ui.h:10
+#: ../panels/keyboard/shortcut-editor.ui.h:9
 msgid "Enter the new shortcut"
 msgstr ""
 
 #: ../panels/keyboard/shortcut-editor.ui.h:11
-#: ../panels/printers/authentication-dialog.ui.h:2
-#: ../panels/printers/ppd-selection-dialog.ui.h:2
-msgid "Cancel"
-msgstr "Vazgeç"
-
-#: ../panels/keyboard/shortcut-editor.ui.h:12
 #: ../panels/network/connection-editor/ce-page-ip4.c:305
 #: ../panels/network/connection-editor/ce-page-ip6.c:277
 msgid "Add"
 msgstr "Ekle"
 
-#: ../panels/keyboard/shortcut-editor.ui.h:13
+#: ../panels/keyboard/shortcut-editor.ui.h:12
 msgid "Replace"
 msgstr ""
 
-#: ../panels/keyboard/shortcut-editor.ui.h:14
+#: ../panels/keyboard/shortcut-editor.ui.h:13
 msgid "Set"
 msgstr ""
 
-#: ../panels/mouse/cc-mouse-panel.c:82
+#: ../panels/mouse/cc-mouse-panel.c:82 ../panels/wacom/cc-wacom-panel.c:402
 msgid "Test Your _Settings"
 msgstr "Ayarlarıñıznı _Sınañız"
 
@@ -1934,28 +2043,28 @@ msgstr "Tek çertme, ekilemci dögme"
 
 #. TRANSLATORS: this is to disable the radio hardware in the
 #. * network panel
-#: ../panels/network/cc-network-panel.c:352
+#: ../panels/network/cc-network-panel.c:350
 msgid "Air_plane Mode"
 msgstr "Uça_k Kipi"
 
-#: ../panels/network/cc-network-panel.c:965
+#: ../panels/network/cc-network-panel.c:1029
 msgid "Network proxy"
 msgstr "Şebekede proksisi"
 
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#: ../panels/network/cc-network-panel.c:1141 ../panels/network/net-vpn.c:283
+#: ../panels/network/cc-network-panel.c:1208 ../panels/network/net-vpn.c:283
 #: ../panels/network/net-vpn.c:440
 #, c-format
 msgid "%s VPN"
 msgstr "%s VPN"
 
-#: ../panels/network/cc-network-panel.c:1206
+#: ../panels/network/cc-network-panel.c:1275
 msgid "Oops, something has gone wrong. Please contact your software vendor."
 msgstr ""
 
-#: ../panels/network/cc-network-panel.c:1212
+#: ../panels/network/cc-network-panel.c:1281
 msgid "NetworkManager needs to be running."
 msgstr ""
 
@@ -1965,7 +2074,7 @@ msgstr "802.1x _Emniyet"
 
 #: ../panels/network/connection-editor/8021x-security-page.ui.h:2
 #: ../panels/network/connection-editor/security-page.ui.h:3
-#: ../panels/printers/printers.ui.h:14
+#: ../panels/wacom/wacom-stylus-page.ui.h:8
 msgid "page 1"
 msgstr "sahife 1"
 
@@ -1984,7 +2093,7 @@ msgstr "İç _sahihlenim"
 
 #: ../panels/network/connection-editor/8021x-security-page.ui.h:5
 #: ../panels/network/connection-editor/security-page.ui.h:6
-#: ../panels/printers/printers.ui.h:16
+#: ../panels/wacom/wacom-stylus-page.ui.h:16
 msgid "page 2"
 msgstr "sahife 2"
 
@@ -2090,7 +2199,7 @@ msgid "Excellent"
 msgstr "Mükemmel"
 
 #: ../panels/network/connection-editor/ce-page-details.c:225
-#: ../panels/network/network-wifi.ui.h:46 ../shell/alt/cc-window.c:266
+#: ../panels/network/network-wifi.ui.h:46 ../shell/alt/cc-window.c:269
 #: ../shell/panel-list.ui.h:2
 msgid "Details"
 msgstr "Tafsilât"
@@ -2106,6 +2215,7 @@ msgstr ""
 #: ../panels/network/connection-editor/ce-page-ip4.c:461
 #: ../panels/network/connection-editor/ce-page-ip6.c:180
 #: ../panels/network/connection-editor/ce-page-ip6.c:427
+#: ../panels/printers/details-dialog.ui.h:3
 msgid "Address"
 msgstr "Adres"
 
@@ -2154,19 +2264,12 @@ msgstr "Rotanı Sil"
 msgid "Automatic (DHCP)"
 msgstr "Avtomatik (DHCP)"
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:630
-#: ../panels/network/connection-editor/ce-page-ip6.c:592
-#: ../panels/network/network-wifi.ui.h:26
-#: ../panels/privacy/cc-privacy-panel.c:223
-msgid "Manual"
-msgstr "Elden"
-
 #: ../panels/network/connection-editor/ce-page-ip4.c:634
 #: ../panels/network/connection-editor/ce-page-ip6.c:596
 msgid "Link-Local Only"
 msgstr ""
 
-#: ../panels/network/connection-editor/ce-page-ip4.c:979
+#: ../panels/network/connection-editor/ce-page-ip4.c:980
 #: ../panels/network/network-wifi.ui.h:48
 msgid "IPv4"
 msgstr ""
@@ -2195,7 +2298,6 @@ msgid "IPv6"
 msgstr ""
 
 #: ../panels/network/connection-editor/ce-page-reset.c:78
-#: ../panels/network/network-wifi.ui.h:51
 msgid "Reset"
 msgstr "Sıfırla"
 
@@ -2459,7 +2561,7 @@ msgstr ""
 #: ../panels/network/connection-editor/vpn-helpers.c:143
 #, c-format
 msgid ""
-"The file '%s' could not be read or does not contain recognized VPN connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
 msgstr ""
@@ -2469,16 +2571,16 @@ msgid "Select file to import"
 msgstr "İthal etilecek dosye sayla"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:182
-#: ../panels/printers/cc-printers-panel.c:2122
+#: ../panels/printers/pp-details-dialog.c:320
 #: ../panels/sharing/cc-sharing-panel.c:376
-#: ../panels/user-accounts/um-photo-dialog.c:218
+#: ../panels/user-accounts/um-photo-dialog.c:219
 msgid "_Open"
 msgstr ""
 
 #: ../panels/network/connection-editor/vpn-helpers.c:230
 #, c-format
-msgid "A file named \"%s\" already exists."
-msgstr "Bir \"%s\" adlı dosye endi mevcuttır."
+msgid "A file named “%s” already exists."
+msgstr ""
 
 #: ../panels/network/connection-editor/vpn-helpers.c:232
 msgid "_Replace"
@@ -2496,7 +2598,7 @@ msgstr ""
 #: ../panels/network/connection-editor/vpn-helpers.c:272
 #, c-format
 msgid ""
-"The VPN connection '%s' could not be exported to %s.\n"
+"The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
 msgstr ""
@@ -2564,7 +2666,6 @@ msgstr "tünevin"
 #: ../panels/network/net-device-ethernet.c:156
 #: ../panels/network/network-mobile.ui.h:3
 #: ../panels/network/panel-common.c:647 ../panels/network/panel-common.c:649
-#: ../panels/printers/printers.ui.h:13
 msgid "IP Address"
 msgstr "İP Adresi"
 
@@ -2592,7 +2693,7 @@ msgstr "Kabelli"
 msgid "Options…"
 msgstr "Seçenekler…"
 
-#: ../panels/network/net-device-mobile.c:223
+#: ../panels/network/net-device-mobile.c:238
 msgid "Add new connection"
 msgstr "Yañı bağlantı ekle"
 
@@ -2641,7 +2742,7 @@ msgstr ""
 
 #: ../panels/network/net-device-wifi.c:1896
 #: ../panels/printers/options-dialog.ui.h:2 ../panels/privacy/privacy.ui.h:25
-#: ../panels/wacom/button-mapping.ui.h:2 ../panels/wacom/cc-wacom-page.c:525
+#: ../panels/wacom/button-mapping.ui.h:2 ../panels/wacom/cc-wacom-page.c:547
 #: ../panels/wacom/gnome-wacom-properties.ui.h:5
 msgid "_Close"
 msgstr "_Qapat"
@@ -2772,6 +2873,7 @@ msgstr "Grup Parolası"
 
 #: ../panels/network/network-vpn.ui.h:5
 #: ../panels/printers/authentication-dialog.ui.h:4
+#: ../panels/printers/new-printer-dialog.ui.h:13
 msgid "Username"
 msgstr "Qullanıcı Adı"
 
@@ -2794,7 +2896,7 @@ msgstr "tafsilât"
 #: ../panels/network/wireless-security/ws-wpa-psk.ui.h:1
 #: ../panels/sharing/sharing.ui.h:9
 #: ../panels/user-accounts/data/account-dialog.ui.h:13
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:5
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:7
 msgid "_Password"
 msgstr "_Parola"
 
@@ -2862,6 +2964,11 @@ msgstr "sıfırla"
 msgid "Hardware"
 msgstr "Donanım"
 
+#: ../panels/network/network-wifi.ui.h:51
+msgctxt "tab"
+msgid "Reset"
+msgstr ""
+
 #: ../panels/network/network-wifi.ui.h:52
 msgid "Wi-Fi Hotspot"
 msgstr "Telsiz-Vefa Sıcaqnoqtası"
@@ -2908,6 +3015,7 @@ msgstr "Emniyet türü"
 
 #: ../panels/network/network-wifi.ui.h:63
 #: ../panels/printers/authentication-dialog.ui.h:5
+#: ../panels/printers/new-printer-dialog.ui.h:14
 #: ../panels/user-accounts/data/account-dialog.ui.h:9
 msgid "Password"
 msgstr "Sır-söz"
@@ -3550,19 +3658,6 @@ msgstr ""
 msgid "_Type"
 msgstr "_Tür"
 
-#: ../panels/notifications/cc-notifications-panel.c:257
-#: ../panels/power/cc-power-panel.c:1966 ../panels/power/cc-power-panel.c:1973
-#: ../panels/privacy/cc-privacy-panel.c:196
-#: ../panels/privacy/cc-privacy-panel.c:263
-#: ../panels/privacy/cc-privacy-panel.c:895
-#: ../panels/universal-access/cc-ua-panel.c:297
-#: ../panels/universal-access/cc-ua-panel.c:618
-#: ../panels/universal-access/cc-ua-panel.c:631
-#: ../panels/universal-access/cc-ua-panel.c:643
-#: ../panels/universal-access/cc-ua-panel.c:815
-msgid "On"
-msgstr "Açıq"
-
 #. This is the per application switch for message tray usage.
 #: ../panels/notifications/edit-dialog.ui.h:2
 msgctxt "notifications"
@@ -3577,22 +3672,28 @@ msgstr ""
 
 #: ../panels/notifications/edit-dialog.ui.h:5
 msgctxt "notifications"
-msgid "Notification _Banners"
+msgid "Notification _Popups"
 msgstr ""
 
-#. Banners here refers to message tray notifications in the middle of the
+#: ../panels/notifications/edit-dialog.ui.h:6
+msgid ""
+"Notifications will continue to appear in the notification list when popups "
+"are disabled."
+msgstr ""
+
+#. Popups here refers to message tray notifications in the middle of the
 #. screen.
-#: ../panels/notifications/edit-dialog.ui.h:7
+#: ../panels/notifications/edit-dialog.ui.h:8
 msgctxt "notifications"
-msgid "Show Message _Content in Banners"
+msgid "Show Message _Content in Popups"
 msgstr ""
 
-#: ../panels/notifications/edit-dialog.ui.h:8
+#: ../panels/notifications/edit-dialog.ui.h:9
 msgctxt "notifications"
 msgid "_Lock Screen Notifications"
 msgstr ""
 
-#: ../panels/notifications/edit-dialog.ui.h:9
+#: ../panels/notifications/edit-dialog.ui.h:10
 msgctxt "notifications"
 msgid "Show Message C_ontent on Lock Screen"
 msgstr ""
@@ -3614,7 +3715,7 @@ msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr ""
 
 #: ../panels/notifications/notifications.ui.h:1
-msgid "Notification _Banners"
+msgid "Notification _Popups"
 msgstr ""
 
 #: ../panels/notifications/notifications.ui.h:2
@@ -3627,56 +3728,28 @@ msgstr ""
 msgid "Applications"
 msgstr "Uyğulamalar"
 
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:170
+#: ../panels/online-accounts/cc-online-accounts-panel.c:148
 msgctxt "Online Account"
 msgid "Other"
 msgstr "Diger"
 
-#. translators: This is the title of the "Add Account" dialog.
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:291
-#: ../panels/online-accounts/online-accounts.ui.h:2
-msgid "Add Account"
-msgstr "Hesap Ekle"
-
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:328
-msgid "Mail"
-msgstr "Poşta"
-
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:334
-msgid "Calendar"
+#. translators: This is the title of the "Show Account" dialog. The
+#. * %s is the name of the provider. e.g., 'Google'.
+#: ../panels/online-accounts/cc-online-accounts-panel.c:580
+#, c-format
+msgid "%s Account"
 msgstr ""
 
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:340
-msgid "Contacts"
-msgstr "Temaslar"
-
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:346
-msgid "Chat"
-msgstr ""
-
-#: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:352
-msgid "Resources"
-msgstr ""
-
-#: ../panels/online-accounts/cc-online-accounts-panel.c:640
-msgid "Error creating account"
-msgstr "Hesap oluşturulurken hata meydana geldi"
-
-#: ../panels/online-accounts/cc-online-accounts-panel.c:700
+#: ../panels/online-accounts/cc-online-accounts-panel.c:872
 msgid "Error removing account"
 msgstr "Hesap silinirken hata oluştu"
 
-#: ../panels/online-accounts/cc-online-accounts-panel.c:736
-msgid "Are you sure you want to remove the account?"
-msgstr "Hesabı silmek istediğinizden emin misiniz?"
-
-#: ../panels/online-accounts/cc-online-accounts-panel.c:738
-msgid "This will not remove the account on the server."
-msgstr "Bu işlem, sunucudaki hesabı silmeyecektir."
-
-#: ../panels/online-accounts/cc-online-accounts-panel.c:739
-msgid "_Remove"
-msgstr "_Çetleştir"
+#. Translators: The %s is the username (eg., debarshi.ray@gmail.com
+#. * or rishi).
+#: ../panels/online-accounts/cc-online-accounts-panel.c:937
+#, c-format
+msgid "<b>%s</b> removed"
+msgstr ""
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -3697,23 +3770,24 @@ msgid ""
 msgstr ""
 
 #: ../panels/online-accounts/online-accounts.ui.h:1
-msgid "No online accounts configured"
-msgstr "Endamlandırılğan devre-içi hesaplar yoq"
+msgid "Undo"
+msgstr ""
+
+#: ../panels/online-accounts/online-accounts.ui.h:2
+msgid "Connect to your data in the cloud"
+msgstr ""
 
 #: ../panels/online-accounts/online-accounts.ui.h:3
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:11
-msgid "Remove Account"
-msgstr "Hesabı Kaldır"
+msgid "No internet connection — connect to set up new online accounts"
+msgstr ""
 
 #: ../panels/online-accounts/online-accounts.ui.h:4
-msgid "Add an online account"
-msgstr "Bir devre-içi hesap ekle"
+msgid "Add an account"
+msgstr ""
 
 #: ../panels/online-accounts/online-accounts.ui.h:5
-msgid ""
-"Adding an account allows your applications to access it for documents, mail,"
-" contacts, calendar, chat and more."
-msgstr "Bir hesapnıñ eklenmesi uyğulamalarıñızğa onı vesiqalar, poçta, temaslar, taqvim, suhbet vs. içün oña irişmege imkân berir."
+msgid "Remove Account"
+msgstr "Hesabı Kaldır"
 
 #: ../panels/power/cc-power-panel.c:244
 msgid "Unknown time"
@@ -3827,7 +3901,7 @@ msgid "Media player"
 msgstr "Ortam yürütücüsü"
 
 #. TRANSLATORS: secondary battery
-#: ../panels/power/cc-power-panel.c:546
+#: ../panels/power/cc-power-panel.c:546 ../panels/wacom/cc-wacom-panel.c:786
 msgid "Tablet"
 msgstr "Tablet"
 
@@ -3838,7 +3912,7 @@ msgstr "Bilgisayar"
 
 #. TRANSLATORS: secondary battery, misc
 #: ../panels/power/cc-power-panel.c:552 ../panels/power/cc-power-panel.c:792
-#: ../panels/power/cc-power-panel.c:2358
+#: ../panels/power/cc-power-panel.c:2359
 msgid "Battery"
 msgstr "Pil"
 
@@ -3943,31 +4017,35 @@ msgid "Suspend"
 msgstr ""
 
 #: ../panels/power/cc-power-panel.c:2060
+msgid "Power Off"
+msgstr "Söndür"
+
+#: ../panels/power/cc-power-panel.c:2061
 msgid "Hibernate"
 msgstr "Derin Uyku"
 
-#: ../panels/power/cc-power-panel.c:2061
+#: ../panels/power/cc-power-panel.c:2062
 msgid "Nothing"
 msgstr ""
 
 #. Frame header
-#: ../panels/power/cc-power-panel.c:2175
+#: ../panels/power/cc-power-panel.c:2176
 msgid "Suspend & Power Button"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2218
+#: ../panels/power/cc-power-panel.c:2219
 msgid "_Automatic suspend"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2219
+#: ../panels/power/cc-power-panel.c:2220
 msgid "Automatic suspend"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2286
+#: ../panels/power/cc-power-panel.c:2287
 msgid "_When the Power Button is pressed"
 msgstr ""
 
-#: ../panels/power/cc-power-panel.c:2412 ../shell/alt/cc-window.c:270
+#: ../panels/power/cc-power-panel.c:2413 ../shell/alt/cc-window.c:273
 #: ../shell/panel-list.ui.h:1
 msgid "Devices"
 msgstr "Cihazlar"
@@ -4066,189 +4144,47 @@ msgid "Authenticate"
 msgstr "Sahihlen"
 
 #: ../panels/printers/authentication-dialog.ui.h:6
+#: ../panels/printers/new-printer-dialog.ui.h:11
 msgid "Authentication Required"
 msgstr "Sahihlenim Şart"
 
-#. Translators: The printer is low on toner
-#: ../panels/printers/cc-printers-panel.c:709
-msgid "Low on toner"
-msgstr "Toner düşük seviyede"
-
-#. Translators: The printer has no toner left
-#: ../panels/printers/cc-printers-panel.c:711
-msgid "Out of toner"
-msgstr "Toner tükendi"
-
-#. Translators: "Developer" is a chemical for photo development,
-#. * http://en.wikipedia.org/wiki/Photographic_developer
-#: ../panels/printers/cc-printers-panel.c:714
-msgid "Low on developer"
-msgstr "Film banyo kimyasalı az"
-
-#. Translators: "Developer" is a chemical for photo development,
-#. * http://en.wikipedia.org/wiki/Photographic_developer
-#: ../panels/printers/cc-printers-panel.c:717
-msgid "Out of developer"
-msgstr "Film banyo kimyasalı bitti"
-
-#. Translators: "marker" is one color bin of the printer
-#: ../panels/printers/cc-printers-panel.c:719
-msgid "Low on a marker supply"
-msgstr "Renk kartuşu az"
-
-#. Translators: "marker" is one color bin of the printer
-#: ../panels/printers/cc-printers-panel.c:721
-msgid "Out of a marker supply"
-msgstr "Renk kartuşu bitti"
-
-#. Translators: One or more covers on the printer are open
-#: ../panels/printers/cc-printers-panel.c:723
-msgid "Open cover"
-msgstr "Kapak açık"
-
-#. Translators: One or more doors on the printer are open
-#: ../panels/printers/cc-printers-panel.c:725
-msgid "Open door"
-msgstr "Kapı açık"
-
-#. Translators: At least one input tray is low on media
-#: ../panels/printers/cc-printers-panel.c:727
-msgid "Low on paper"
-msgstr "Kağıt az"
-
-#. Translators: At least one input tray is empty
-#: ../panels/printers/cc-printers-panel.c:729
-msgid "Out of paper"
-msgstr "Kağıt bitti"
-
-#. Translators: The printer is offline
-#: ../panels/printers/cc-printers-panel.c:731
-msgctxt "printer state"
-msgid "Offline"
-msgstr "Kapalı"
-
-#. Translators: Someone has stopped the Printer
-#. Translators: Printer's state (no jobs can be processed)
-#: ../panels/printers/cc-printers-panel.c:733
-#: ../panels/printers/cc-printers-panel.c:923
-msgctxt "printer state"
-msgid "Stopped"
-msgstr "Durduruldu"
-
-#. Translators: The printer marker supply waste receptacle is almost full
-#: ../panels/printers/cc-printers-panel.c:735
-msgid "Waste receptacle almost full"
-msgstr "Atık kutusu neredeyse dolu"
-
-#. Translators: The printer marker supply waste receptacle is full
-#: ../panels/printers/cc-printers-panel.c:737
-msgid "Waste receptacle full"
-msgstr "Atık kutusu dolu"
-
-#. Translators: Optical photo conductors are used in laser printers
-#: ../panels/printers/cc-printers-panel.c:739
-msgid "The optical photo conductor is near end of life"
-msgstr "Baskı silindiri ömrünü doldurmak üzere"
-
-#. Translators: Optical photo conductors are used in laser printers
-#: ../panels/printers/cc-printers-panel.c:741
-msgid "The optical photo conductor is no longer functioning"
-msgstr "Baskı silindiri artık çalışmıyor"
-
-#. Translators: Printer's state (printer is being configured right now)
-#: ../panels/printers/cc-printers-panel.c:850
-msgctxt "printer state"
-msgid "Configuring"
-msgstr "Endamlandırıla"
-
-#. Translators: Printer's state (can start new job without waiting)
-#: ../panels/printers/cc-printers-panel.c:909
-msgctxt "printer state"
-msgid "Ready"
-msgstr "Hazır"
-
-#. Translators: Printer's state (printer is ready but doesn't accept new jobs)
-#: ../panels/printers/cc-printers-panel.c:914
-msgctxt "printer state"
-msgid "Does not accept jobs"
-msgstr ""
-
-#. Translators: Printer's state (jobs are processing)
-#: ../panels/printers/cc-printers-panel.c:919
-msgctxt "printer state"
-msgid "Processing"
-msgstr "İşleniyor"
-
-#. Translators: Toner supply
-#: ../panels/printers/cc-printers-panel.c:1039
-msgid "Toner Level"
-msgstr "Toner Seviyesi"
-
-#. Translators: Ink supply
-#: ../panels/printers/cc-printers-panel.c:1042
-msgid "Ink Level"
-msgstr "Mürekkep Seviyesi"
-
-#. Translators: By supply we mean ink, toner, staples, water, ...
-#: ../panels/printers/cc-printers-panel.c:1045
-msgid "Supply Level"
-msgstr "Malzeme Seviyesi"
-
-#. Translators: Printer's state (printer is being installed right now)
-#: ../panels/printers/cc-printers-panel.c:1063
-msgctxt "printer state"
-msgid "Installing"
-msgstr "Qurula"
-
-#. Translators: there is n active print jobs on this printer
-#: ../panels/printers/cc-printers-panel.c:1596
-#, c-format
-msgid "%u active"
-msgid_plural "%u active"
-msgstr[0] "%u etkin"
-
 #. Translators: Addition of the new printer failed.
-#: ../panels/printers/cc-printers-panel.c:1937
+#: ../panels/printers/cc-printers-panel.c:735
 msgid "Failed to add new printer."
 msgstr "Yeni yazıcı eklenemedi."
 
-#: ../panels/printers/cc-printers-panel.c:2118
-msgid "Select PPD File"
-msgstr "PPD Dosyesini Sayla"
-
-#: ../panels/printers/cc-printers-panel.c:2127
-msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
-"*.PPD.GZ)"
-msgstr ""
-
-#: ../panels/printers/cc-printers-panel.c:2434
-msgid "No suitable driver found"
-msgstr "Kelişikli sürüci tapılamadı"
-
-#: ../panels/printers/cc-printers-panel.c:2505
-msgid "Searching for preferred drivers…"
-msgstr ""
-
-#: ../panels/printers/cc-printers-panel.c:2526
-msgid "Select from database…"
-msgstr ""
-
-#: ../panels/printers/cc-printers-panel.c:2535
-msgid "Provide PPD File…"
-msgstr "PPD Dosyesini Temin Et…"
-
-#. Translators: Name of job which makes printer to print test page
-#: ../panels/printers/cc-printers-panel.c:2682
-#: ../panels/printers/cc-printers-panel.c:2705
-msgid "Test page"
-msgstr "Deñeme sahifesi"
-
 #. Translators: The XML file containing user interface can not be loaded
-#: ../panels/printers/cc-printers-panel.c:3162
+#: ../panels/printers/cc-printers-panel.c:983
 #, c-format
 msgid "Could not load ui: %s"
 msgstr "Arayüz yüklenemedi: %s"
+
+#: ../panels/printers/details-dialog.ui.h:2
+#: ../panels/printers/printer-entry.ui.h:6
+msgid "Location"
+msgstr "Konum"
+
+#. Translators: Name of column showing printer drivers
+#: ../panels/printers/details-dialog.ui.h:4
+#: ../panels/printers/pp-ppd-selection-dialog.c:250
+msgid "Driver"
+msgstr "Sürüci"
+
+#: ../panels/printers/details-dialog.ui.h:5
+msgid "Searching for preferred drivers…"
+msgstr ""
+
+#: ../panels/printers/details-dialog.ui.h:6
+msgid "Search for Drivers"
+msgstr ""
+
+#: ../panels/printers/details-dialog.ui.h:7
+msgid "Select from Database…"
+msgstr ""
+
+#: ../panels/printers/details-dialog.ui.h:8
+msgid "Install PPD File…"
+msgstr ""
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -4278,29 +4214,57 @@ msgstr ""
 msgid "No Active Printer Jobs"
 msgstr ""
 
-#: ../panels/printers/new-printer-dialog.ui.h:1
-msgid "Add a New Printer"
-msgstr "Yeni Yazıcı Ekle"
+#. Translators: This is the title presented at top of the dialog.
+#: ../panels/printers/new-printer-dialog.ui.h:2
+#: ../panels/printers/pp-new-printer-dialog.c:384
+#: ../panels/printers/pp-new-printer-dialog.c:456
+msgid "Add Printer"
+msgstr "Yazıcı Ekle"
 
-#. Translators: This button opens authentication dialog for selected server.
-#: ../panels/printers/new-printer-dialog.ui.h:5
-msgid "A_uthenticate"
+#. Translators: This buttons submits the credentials for the selected server.
+#: ../panels/printers/new-printer-dialog.ui.h:6
+msgid "_Unlock"
 msgstr ""
 
-#. Translators: No printers were found
-#: ../panels/printers/new-printer-dialog.ui.h:7
-msgid "No printers detected."
-msgstr "Alğılanğan bastırıcılar yoq."
+#. Translators: No printers were detected
+#: ../panels/printers/new-printer-dialog.ui.h:8
+msgid "No Printers Found"
+msgstr ""
 
 #. Translators: The entered text should contain network address of a printer
 #. or a text which will filter found devices (their names and locations)
-#: ../panels/printers/new-printer-dialog.ui.h:9
+#: ../panels/printers/new-printer-dialog.ui.h:10
 msgid "Enter a network address or search for a printer"
+msgstr ""
+
+#: ../panels/printers/new-printer-dialog.ui.h:12
+msgid "Enter username and password to view printers on Print Server."
 msgstr ""
 
 #: ../panels/printers/options-dialog.ui.h:1
 msgid "Loading options…"
 msgstr "Yükleme seçenekleri…"
+
+#. Translators: This is the title of the dialog. %s is the printer name.
+#: ../panels/printers/pp-details-dialog.c:123
+#: ../panels/printers/pp-details-dialog.c:415
+#, c-format
+msgid "%s Details"
+msgstr ""
+
+#: ../panels/printers/pp-details-dialog.c:172
+msgid "No suitable driver found"
+msgstr "Kelişikli sürüci tapılamadı"
+
+#: ../panels/printers/pp-details-dialog.c:316
+msgid "Select PPD File"
+msgstr "PPD Dosyesini Sayla"
+
+#: ../panels/printers/pp-details-dialog.c:325
+msgid ""
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
+msgstr ""
 
 #: ../panels/printers/ppd-selection-dialog.ui.h:1
 msgid "Select Printer Driver"
@@ -4312,16 +4276,16 @@ msgid "Select"
 msgstr "Sayla"
 
 #: ../panels/printers/ppd-selection-dialog.ui.h:4
-msgid "Loading drivers database..."
+msgid "Loading drivers database…"
 msgstr ""
 
 #. Translators: The found device is a JetDirect printer
-#: ../panels/printers/pp-host.c:526
+#: ../panels/printers/pp-host.c:539
 msgid "JetDirect Printer"
 msgstr ""
 
 #. Translators: The found device is a Line Printer Daemon printer
-#: ../panels/printers/pp-host.c:782
+#: ../panels/printers/pp-host.c:795
 msgid "LPD Printer"
 msgstr ""
 
@@ -4364,90 +4328,112 @@ msgid "Reverse portrait"
 msgstr "Ters portret"
 
 #. Translators: Job's state (job is waiting to be printed)
-#: ../panels/printers/pp-jobs-dialog.c:103
+#: ../panels/printers/pp-jobs-dialog.c:104
 msgctxt "print job"
 msgid "Pending"
 msgstr "Sırada"
 
 #. Translators: Job's state (job is held for printing)
-#: ../panels/printers/pp-jobs-dialog.c:107
+#: ../panels/printers/pp-jobs-dialog.c:108
 msgctxt "print job"
 msgid "Paused"
 msgstr ""
 
 #. Translators: Job's state (job is currently printing)
-#: ../panels/printers/pp-jobs-dialog.c:111
+#: ../panels/printers/pp-jobs-dialog.c:112
 msgctxt "print job"
 msgid "Processing"
 msgstr "İşleniyor"
 
 #. Translators: Job's state (job has been stopped)
-#: ../panels/printers/pp-jobs-dialog.c:115
+#: ../panels/printers/pp-jobs-dialog.c:116
 msgctxt "print job"
 msgid "Stopped"
 msgstr "Durduruldu"
 
 #. Translators: Job's state (job has been canceled)
-#: ../panels/printers/pp-jobs-dialog.c:119
+#: ../panels/printers/pp-jobs-dialog.c:120
 msgctxt "print job"
 msgid "Canceled"
 msgstr "İptal edildi"
 
 #. Translators: Job's state (job has aborted due to error)
-#: ../panels/printers/pp-jobs-dialog.c:123
+#: ../panels/printers/pp-jobs-dialog.c:124
 msgctxt "print job"
 msgid "Aborted"
 msgstr "Hata nedeniyle iptal edildi"
 
 #. Translators: Job's state (job has completed successfully)
-#: ../panels/printers/pp-jobs-dialog.c:127
+#: ../panels/printers/pp-jobs-dialog.c:128
 msgctxt "print job"
 msgid "Completed"
 msgstr "Tamamlandı"
 
 #. Translators: This is the printer name for which we are showing the active
 #. jobs
-#: ../panels/printers/pp-jobs-dialog.c:289
+#: ../panels/printers/pp-jobs-dialog.c:310
 #, c-format
 msgctxt "Printer jobs dialog title"
-msgid "%s - Active Jobs"
+msgid "%s — Active Jobs"
+msgstr ""
+
+#: ../panels/printers/pp-new-printer-dialog.c:402
+msgid "Unlock Print Server"
+msgstr ""
+
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
+#: ../panels/printers/pp-new-printer-dialog.c:406
+#, c-format
+msgid "Unlock %s."
+msgstr ""
+
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
+#: ../panels/printers/pp-new-printer-dialog.c:411
+#, c-format
+msgid "Enter username and password to view printers on %s."
+msgstr ""
+
+#: ../panels/printers/pp-new-printer-dialog.c:876
+msgid "Searching for Printers"
 msgstr ""
 
 #. Translators: The found device is a printer connected via USB
-#: ../panels/printers/pp-new-printer-dialog.c:1659
+#: ../panels/printers/pp-new-printer-dialog.c:1799
 msgid "USB"
 msgstr ""
 
 #. Translators: The found device is a printer connected via serial port
-#: ../panels/printers/pp-new-printer-dialog.c:1664
+#: ../panels/printers/pp-new-printer-dialog.c:1804
 msgid "Serial Port"
 msgstr ""
 
 #. Translators: The found device is a printer connected via parallel port
-#: ../panels/printers/pp-new-printer-dialog.c:1671
+#: ../panels/printers/pp-new-printer-dialog.c:1811
 msgid "Parallel Port"
 msgstr ""
 
 #. Translators: The found device is a printer connected via Bluetooth
-#: ../panels/printers/pp-new-printer-dialog.c:1676
+#: ../panels/printers/pp-new-printer-dialog.c:1816
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
 #. Translators: Location of found network printer (e.g. Kitchen, Reception)
-#: ../panels/printers/pp-new-printer-dialog.c:1713
+#: ../panels/printers/pp-new-printer-dialog.c:1853
 #, c-format
 msgid "Location: %s"
 msgstr ""
 
 #. Translators: Network address of found printer
-#: ../panels/printers/pp-new-printer-dialog.c:1718
+#: ../panels/printers/pp-new-printer-dialog.c:1858
 #, c-format
 msgid "Address: %s"
 msgstr ""
 
 #. Translators: This item is a server which needs authentication to show its
 #. printers
-#: ../panels/printers/pp-new-printer-dialog.c:1747
+#: ../panels/printers/pp-new-printer-dialog.c:1887
 msgid "Server requires authentication"
 msgstr ""
 
@@ -4579,91 +4565,176 @@ msgstr "Ög-süzgüçleme yoq"
 msgid "Manufacturer"
 msgstr "İmalâtçı"
 
-#. Translators: Name of column showing printer drivers
-#: ../panels/printers/pp-ppd-selection-dialog.c:250
-msgid "Driver"
-msgstr "Sürüci"
-
-#. Translators: Samba server needs authentication of the user to show list of
-#. its printers.
-#: ../panels/printers/pp-samba.c:248
-#, c-format
-msgid "Enter your username and password to view printers available on %s."
+#. Translators: This is the label of the button that opens the Jobs Dialog.
+#: ../panels/printers/pp-printer-entry.c:443
+msgid "No Active Jobs"
 msgstr ""
 
-#: ../panels/printers/printers.ui.h:1
-msgid "Add Printer"
-msgstr "Yazıcı Ekle"
+#. Translators: This is the label of the button that opens the Jobs Dialog.
+#: ../panels/printers/pp-printer-entry.c:448
+#, c-format
+msgid "%u Job"
+msgid_plural "%u Jobs"
+msgstr[0] ""
 
-#: ../panels/printers/printers.ui.h:2
+#. Translators: The printer is low on toner
+#: ../panels/printers/pp-printer-entry.c:584
+msgid "Low on toner"
+msgstr "Toner düşük seviyede"
+
+#. Translators: The printer has no toner left
+#: ../panels/printers/pp-printer-entry.c:586
+msgid "Out of toner"
+msgstr "Toner tükendi"
+
+#. Translators: "Developer" is a chemical for photo development,
+#. * http://en.wikipedia.org/wiki/Photographic_developer
+#: ../panels/printers/pp-printer-entry.c:589
+msgid "Low on developer"
+msgstr "Film banyo kimyasalı az"
+
+#. Translators: "Developer" is a chemical for photo development,
+#. * http://en.wikipedia.org/wiki/Photographic_developer
+#: ../panels/printers/pp-printer-entry.c:592
+msgid "Out of developer"
+msgstr "Film banyo kimyasalı bitti"
+
+#. Translators: "marker" is one color bin of the printer
+#: ../panels/printers/pp-printer-entry.c:594
+msgid "Low on a marker supply"
+msgstr "Renk kartuşu az"
+
+#. Translators: "marker" is one color bin of the printer
+#: ../panels/printers/pp-printer-entry.c:596
+msgid "Out of a marker supply"
+msgstr "Renk kartuşu bitti"
+
+#. Translators: One or more covers on the printer are open
+#: ../panels/printers/pp-printer-entry.c:598
+msgid "Open cover"
+msgstr "Kapak açık"
+
+#. Translators: One or more doors on the printer are open
+#: ../panels/printers/pp-printer-entry.c:600
+msgid "Open door"
+msgstr "Kapı açık"
+
+#. Translators: At least one input tray is low on media
+#: ../panels/printers/pp-printer-entry.c:602
+msgid "Low on paper"
+msgstr "Kağıt az"
+
+#. Translators: At least one input tray is empty
+#: ../panels/printers/pp-printer-entry.c:604
+msgid "Out of paper"
+msgstr "Kağıt bitti"
+
+#. Translators: The printer is offline
+#: ../panels/printers/pp-printer-entry.c:606
+msgctxt "printer state"
+msgid "Offline"
+msgstr "Kapalı"
+
+#. Translators: Someone has stopped the Printer
+#. Translators: Printer's state (no jobs can be processed)
+#: ../panels/printers/pp-printer-entry.c:608
+#: ../panels/printers/pp-printer-entry.c:738
+msgctxt "printer state"
+msgid "Stopped"
+msgstr "Durduruldu"
+
+#. Translators: The printer marker supply waste receptacle is almost full
+#: ../panels/printers/pp-printer-entry.c:610
+msgid "Waste receptacle almost full"
+msgstr "Atık kutusu neredeyse dolu"
+
+#. Translators: The printer marker supply waste receptacle is full
+#: ../panels/printers/pp-printer-entry.c:612
+msgid "Waste receptacle full"
+msgstr "Atık kutusu dolu"
+
+#. Translators: Optical photo conductors are used in laser printers
+#: ../panels/printers/pp-printer-entry.c:614
+msgid "The optical photo conductor is near end of life"
+msgstr "Baskı silindiri ömrünü doldurmak üzere"
+
+#. Translators: Optical photo conductors are used in laser printers
+#: ../panels/printers/pp-printer-entry.c:616
+msgid "The optical photo conductor is no longer functioning"
+msgstr "Baskı silindiri artık çalışmıyor"
+
+#. Translators: Printer's state (can start new job without waiting)
+#: ../panels/printers/pp-printer-entry.c:724
+msgctxt "printer state"
+msgid "Ready"
+msgstr "Hazır"
+
+#. Translators: Printer's state (printer is ready but doesn't accept new jobs)
+#: ../panels/printers/pp-printer-entry.c:729
+msgctxt "printer state"
+msgid "Does not accept jobs"
+msgstr ""
+
+#. Translators: Printer's state (jobs are processing)
+#: ../panels/printers/pp-printer-entry.c:734
+msgctxt "printer state"
+msgid "Processing"
+msgstr "İşleniyor"
+
+#: ../panels/printers/printer-entry.ui.h:1
+msgid "Printing Options"
+msgstr ""
+
+#: ../panels/printers/printer-entry.ui.h:2
+msgid "Printer Details"
+msgstr ""
+
+#: ../panels/printers/printer-entry.ui.h:3
+msgid "Use Printer by Default"
+msgstr ""
+
+#: ../panels/printers/printer-entry.ui.h:4
 msgid "Remove Printer"
 msgstr "Yazıcıyı Kaldır"
 
-#. Translators: By supply we mean ink, toner, staples, water, ...
-#: ../panels/printers/printers.ui.h:4
-msgid "Supply"
-msgstr "Malzeme"
-
-#. Translators: Location of the printer (e.g. Lab, 1st floor,...).
-#: ../panels/printers/printers.ui.h:6
-msgid "Location"
-msgstr "Konum"
-
-#. Translators: This checkbox is checked when the default printer is selected.
-#: ../panels/printers/printers.ui.h:8
-msgid "_Default printer"
-msgstr ""
-
-#: ../panels/printers/printers.ui.h:9
-msgid "Jobs"
-msgstr "İşler"
-
-#. Translators: Opens a dialog containing printer's jobs
-#: ../panels/printers/printers.ui.h:11
-msgid "Show _Jobs"
-msgstr ""
-
-#: ../panels/printers/printers.ui.h:12
+#: ../panels/printers/printer-entry.ui.h:5
 msgid "Model"
 msgstr "Model"
 
-#: ../panels/printers/printers.ui.h:15
-msgid "label"
-msgstr "etiket"
+#: ../panels/printers/printer-entry.ui.h:7
+msgid "Ink Level"
+msgstr "Mürekkep Seviyesi"
 
-#: ../panels/printers/printers.ui.h:17
-msgid "Setting new driver…"
-msgstr "Yañı sürüci tesbit etile…"
+#. Translators: This is the message which follows the printer error.
+#: ../panels/printers/printer-entry.ui.h:9
+msgid "Please restart when the problem is resolved."
+msgstr ""
 
-#: ../panels/printers/printers.ui.h:18
-msgid "page 3"
-msgstr "sahife 3"
+#. Translators: This is the button which restarts the printer.
+#: ../panels/printers/printer-entry.ui.h:11
+msgid "Restart"
+msgstr ""
 
-#. Translators: This button executes command which prints test page.
-#: ../panels/printers/printers.ui.h:20
-msgid "Print _Test Page"
-msgstr "_Sınama Sayfası Yazdır"
+#. Translators: This button adds new printer.
+#: ../panels/printers/printers.ui.h:2
+msgid "Add…"
+msgstr ""
 
-#. Translators: This button opens printer's options tab
-#: ../panels/printers/printers.ui.h:22 ../panels/region/region.ui.h:8
-msgid "_Options"
-msgstr "_Seçenekler"
-
-#: ../panels/printers/printers.ui.h:23
+#: ../panels/printers/printers.ui.h:3
 msgid "No printers"
 msgstr ""
 
 #. Translators: This button adds new printer.
-#: ../panels/printers/printers.ui.h:25
-msgid "Add a Printer"
+#: ../panels/printers/printers.ui.h:5
+msgid "Add a Printer…"
 msgstr ""
 
 #. Translators: The CUPS server is not running (we can not connect to it).
-#: ../panels/printers/printers.ui.h:27
+#: ../panels/printers/printers.ui.h:7
 msgid ""
 "Sorry! The system printing service\n"
-"doesn't seem to be available."
-msgstr "Üzgünüm! Sistemin yazdırma hizmeti\nkullanılamıyor."
+"doesn’t seem to be available."
+msgstr ""
 
 #: ../panels/privacy/cc-privacy-panel.c:401
 #: ../panels/privacy/cc-privacy-panel.c:404 ../panels/privacy/privacy.ui.h:28
@@ -4696,51 +4767,51 @@ msgstr ""
 msgid "Usage & History"
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1214
+#: ../panels/privacy/cc-privacy-panel.c:1218
 msgid "Empty all items from Trash?"
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1215
+#: ../panels/privacy/cc-privacy-panel.c:1219
 msgid "All items in the Trash will be permanently deleted."
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1216 ../panels/privacy/privacy.ui.h:38
+#: ../panels/privacy/cc-privacy-panel.c:1220
 msgid "_Empty Trash"
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1239
+#: ../panels/privacy/cc-privacy-panel.c:1243
 msgid "Delete all the temporary files?"
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1240
+#: ../panels/privacy/cc-privacy-panel.c:1244
 msgid "All the temporary files will be permanently deleted."
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1241 ../panels/privacy/privacy.ui.h:39
+#: ../panels/privacy/cc-privacy-panel.c:1245
 msgid "_Purge Temporary Files"
 msgstr "Muvaqqat Dosyelerni _İzale Et"
 
-#: ../panels/privacy/cc-privacy-panel.c:1263 ../panels/privacy/privacy.ui.h:33
+#: ../panels/privacy/cc-privacy-panel.c:1267 ../panels/privacy/privacy.ui.h:33
 msgid "Purge Trash & Temporary Files"
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1303 ../panels/privacy/privacy.ui.h:40
+#: ../panels/privacy/cc-privacy-panel.c:1307 ../panels/privacy/privacy.ui.h:40
 msgid "Software Usage"
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1344 ../panels/privacy/privacy.ui.h:50
+#: ../panels/privacy/cc-privacy-panel.c:1348 ../panels/privacy/privacy.ui.h:50
 msgid "Problem Reporting"
 msgstr ""
 
 #. translators: '%s' is the distributor's name, such as 'Fedora'
-#: ../panels/privacy/cc-privacy-panel.c:1358
+#: ../panels/privacy/cc-privacy-panel.c:1362
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data."
 msgstr ""
 
-#: ../panels/privacy/cc-privacy-panel.c:1370 ../panels/privacy/privacy.ui.h:45
+#: ../panels/privacy/cc-privacy-panel.c:1374 ../panels/privacy/privacy.ui.h:45
 msgid "Privacy Policy"
 msgstr ""
 
@@ -4871,6 +4942,14 @@ msgstr ""
 msgid "Purge _After"
 msgstr ""
 
+#: ../panels/privacy/privacy.ui.h:38
+msgid "_Empty Trash…"
+msgstr ""
+
+#: ../panels/privacy/privacy.ui.h:39
+msgid "_Purge Temporary Files…"
+msgstr ""
+
 #: ../panels/privacy/privacy.ui.h:41
 msgid ""
 "Sending us information about which software you use helps us provide you with more accurate recommendations. It also helps us to improve our software.\n"
@@ -4919,17 +4998,7 @@ msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr ""
 
-#: ../panels/region/cc-region-panel.c:237
-#: ../panels/user-accounts/um-user-panel.c:1094
-msgid "Your session needs to be restarted for changes to take effect"
-msgstr ""
-
-#: ../panels/region/cc-region-panel.c:241
-#: ../panels/user-accounts/um-user-panel.c:1098
-msgid "Restart Now"
-msgstr ""
-
-#: ../panels/region/cc-region-panel.c:892
+#: ../panels/region/cc-region-panel.c:870
 msgid "No input source selected"
 msgstr "Saylanğan kirdi menbası yoq"
 
@@ -4983,7 +5052,7 @@ msgid "Add a Keyboard Layout"
 msgstr ""
 
 #: ../panels/region/input-chooser.ui.h:4
-msgid "Input methods can't be used on the login screen"
+msgid "Input methods can’t be used on the login screen"
 msgstr ""
 
 #: ../panels/region/input-options.ui.h:1
@@ -4997,10 +5066,6 @@ msgstr "Bütün pencereler içün _aynı menbani qullan"
 #: ../panels/region/input-options.ui.h:3
 msgid "Allow _different sources for each window"
 msgstr "Her pencere içün _farqlı menbalarğa izin ber"
-
-#: ../panels/region/input-options.ui.h:4 ../shell/cc-application.c:251
-msgid "Keyboard Shortcuts"
-msgstr "Klavye Qısqayolları"
 
 #: ../panels/region/input-options.ui.h:5
 msgid "Switch to previous source"
@@ -5030,68 +5095,82 @@ msgstr ""
 msgid "Left+Right Alt"
 msgstr ""
 
-#: ../panels/region/region.ui.h:1 ../panels/user-accounts/um-user-panel.c:1600
+#: ../panels/region/region.ui.h:1
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:2
+msgid "Your session needs to be restarted for changes to take effect"
+msgstr ""
+
+#: ../panels/region/region.ui.h:2
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:3
+msgid "Restart Now"
+msgstr ""
+
+#: ../panels/region/region.ui.h:3
 msgid "My Account"
 msgstr "Hesabım"
 
-#: ../panels/region/region.ui.h:2
+#: ../panels/region/region.ui.h:4
 msgid "Login Screen"
 msgstr "İçeri İmzalanım Ekranı"
 
-#: ../panels/region/region.ui.h:3
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:9
+#: ../panels/region/region.ui.h:5
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:11
 msgid "_Language"
 msgstr "_Til"
 
-#: ../panels/region/region.ui.h:4
+#: ../panels/region/region.ui.h:6
 msgid "English (United Kingdom)"
 msgstr ""
 
-#: ../panels/region/region.ui.h:5
+#: ../panels/region/region.ui.h:7
 msgid "_Formats"
 msgstr ""
 
-#: ../panels/region/region.ui.h:6
+#: ../panels/region/region.ui.h:8
 msgid "United Kingdom"
 msgstr ""
 
-#: ../panels/region/region.ui.h:7
+#: ../panels/region/region.ui.h:9
 msgid "Keyboard Layouts"
 msgstr ""
 
-#: ../panels/region/region.ui.h:9
+#: ../panels/region/region.ui.h:10
+msgid "_Options"
+msgstr "_Seçenekler"
+
+#: ../panels/region/region.ui.h:11
 msgid "Add input source"
 msgstr ""
 
-#: ../panels/region/region.ui.h:10
+#: ../panels/region/region.ui.h:12
 msgid "Remove input source"
 msgstr ""
 
-#: ../panels/region/region.ui.h:11
+#: ../panels/region/region.ui.h:13
 msgid "Move input source up"
 msgstr ""
 
-#: ../panels/region/region.ui.h:12
+#: ../panels/region/region.ui.h:14
 msgid "Move input source down"
 msgstr ""
 
-#: ../panels/region/region.ui.h:13
+#: ../panels/region/region.ui.h:15
 msgid "Configure input source"
 msgstr ""
 
-#: ../panels/region/region.ui.h:14
+#: ../panels/region/region.ui.h:16
 msgid "Show input source keyboard layout"
 msgstr ""
 
-#: ../panels/region/region.ui.h:15
+#: ../panels/region/region.ui.h:17
 msgid "Login settings are used by all users when logging into the system"
 msgstr ""
 
-#: ../panels/search/cc-search-locations-dialog.c:634
+#: ../panels/search/cc-search-locations-dialog.c:639
 msgid "Select Location"
 msgstr "Qonum Saylañız"
 
-#: ../panels/search/cc-search-locations-dialog.c:638
+#: ../panels/search/cc-search-locations-dialog.c:643
 msgid "_OK"
 msgstr ""
 
@@ -5504,6 +5583,7 @@ msgid "Testing event sound"
 msgstr "Olay sesi deneniyor"
 
 #: ../panels/sound/gvc-sound-theme-chooser.c:554
+#: ../panels/wacom/wacom-stylus-page.ui.h:1
 msgid "Default"
 msgstr "Ögbelgilengen"
 
@@ -5547,7 +5627,7 @@ msgstr ""
 #. panel
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:5
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;"
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Assist;"
 msgstr ""
 
 #: ../panels/universal-access/uap.ui.h:1
@@ -6031,17 +6111,17 @@ msgid "_Full Name"
 msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:6
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:2
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:4
 msgid "Standard"
 msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:7
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:3
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:5
 msgid "Administrator"
 msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:8
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:4
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:6
 msgid "Account _Type"
 msgstr "Hesap _Türü"
 
@@ -6126,7 +6206,7 @@ msgid "Right little finger"
 msgstr "Oñ çinatiy parmaq"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:9
-#: ../panels/user-accounts/um-fingerprint-dialog.c:687
+#: ../panels/user-accounts/um-fingerprint-dialog.c:680
 msgid "Enable Fingerprint Login"
 msgstr "Parmak İzi Girişi Etkinleştir"
 
@@ -6210,21 +6290,25 @@ msgstr ""
 msgid "_Add User…"
 msgstr ""
 
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:6
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:8
 msgid "A_utomatic Login"
 msgstr "_Otomatik Giriş"
 
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:7
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:9
 msgid "_Fingerprint Login"
 msgstr "_Parmak İziyle Giriş"
 
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:8
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:10
 msgid "User Icon"
 msgstr "Kullanıcı Simgesi"
 
-#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:10
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:12
 msgid "Last Login"
 msgstr "Soñki İçeri İmzalanma"
+
+#: ../panels/user-accounts/data/user-accounts-dialog.ui.h:13
+msgid "Remove User…"
+msgstr ""
 
 #: ../panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in.h:1
 msgid "Manage user accounts"
@@ -6416,45 +6500,45 @@ msgstr "Bilinmegen hata"
 msgid "Should match the web address of your login provider."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:238
+#: ../panels/user-accounts/um-account-dialog.c:239
 msgid "Failed to add account"
 msgstr "Hesap eklenamadı"
 
-#: ../panels/user-accounts/um-account-dialog.c:462
+#: ../panels/user-accounts/um-account-dialog.c:472
 msgid "Passwords do not match."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:741
-#: ../panels/user-accounts/um-account-dialog.c:787
-#: ../panels/user-accounts/um-account-dialog.c:808
+#: ../panels/user-accounts/um-account-dialog.c:752
+#: ../panels/user-accounts/um-account-dialog.c:798
+#: ../panels/user-accounts/um-account-dialog.c:819
 msgid "Failed to register account"
 msgstr "Hesap qayd etilamadı"
 
-#: ../panels/user-accounts/um-account-dialog.c:931
+#: ../panels/user-accounts/um-account-dialog.c:942
 msgid "No supported way to authenticate with this domain"
 msgstr "Bu saha ile sahihlenmek içün desteklengen yol yoq"
 
-#: ../panels/user-accounts/um-account-dialog.c:1004
+#: ../panels/user-accounts/um-account-dialog.c:1015
 msgid "Failed to join domain"
 msgstr "Sahağa qoşulınamadı"
 
-#: ../panels/user-accounts/um-account-dialog.c:1065
+#: ../panels/user-accounts/um-account-dialog.c:1076
 msgid ""
-"That login name didn't work.\n"
+"That login name didn’t work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1072
+#: ../panels/user-accounts/um-account-dialog.c:1083
 msgid ""
-"That login password didn't work.\n"
+"That login password didn’t work.\n"
 "Please try again."
 msgstr ""
 
-#: ../panels/user-accounts/um-account-dialog.c:1080
+#: ../panels/user-accounts/um-account-dialog.c:1091
 msgid "Failed to log into domain"
 msgstr "Sahağa içeri imzalanılamadı"
 
-#: ../panels/user-accounts/um-account-dialog.c:1138
+#: ../panels/user-accounts/um-account-dialog.c:1149
 msgid "Unable find the domain. Maybe you misspelled it?"
 msgstr ""
 
@@ -6468,63 +6552,63 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "Memur"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:138
+#: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
 msgstr "Aygıta erişiminize izin verilmedi. Sistem yöneticinizle bağlantıya geçin."
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:140
+#: ../panels/user-accounts/um-fingerprint-dialog.c:144
 msgid "The device is already in use."
 msgstr "Aygıt zaten kullanımda."
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:142
+#: ../panels/user-accounts/um-fingerprint-dialog.c:146
 msgid "An internal error occurred."
 msgstr "Dahiliy hata hasıl oldı."
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:216
+#: ../panels/user-accounts/um-fingerprint-dialog.c:217
 msgid "Enabled"
 msgstr "Qabilleştirilgen"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:264
+#: ../panels/user-accounts/um-fingerprint-dialog.c:263
 msgid "Delete registered fingerprints?"
 msgstr "Kayıtlı parmak izleri silinsin mi?"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:268
+#: ../panels/user-accounts/um-fingerprint-dialog.c:267
 msgid "_Delete Fingerprints"
 msgstr "_Parmak İzlerini Sil"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:274
+#: ../panels/user-accounts/um-fingerprint-dialog.c:273
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr "Kayıtlı parmak izlerini silerek parmak izi girişini kapatmak ister misiniz?"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:444
+#: ../panels/user-accounts/um-fingerprint-dialog.c:443
 msgid "Done!"
 msgstr "Tamamlandı!"
 
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../panels/user-accounts/um-fingerprint-dialog.c:505
-#: ../panels/user-accounts/um-fingerprint-dialog.c:547
+#: ../panels/user-accounts/um-fingerprint-dialog.c:504
+#: ../panels/user-accounts/um-fingerprint-dialog.c:546
 #, c-format
-msgid "Could not access '%s' device"
-msgstr "'%s' aygıtına erişilemedi"
+msgid "Could not access “%s” device"
+msgstr ""
 
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../panels/user-accounts/um-fingerprint-dialog.c:588
+#: ../panels/user-accounts/um-fingerprint-dialog.c:587
 #, c-format
-msgid "Could not start finger capture on '%s' device"
-msgstr "'%s' aygıtı üzerinde parmak yakalama başlatılamadı"
+msgid "Could not start finger capture on “%s” device"
+msgstr ""
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:638
+#: ../panels/user-accounts/um-fingerprint-dialog.c:631
 msgid "Could not access any fingerprint readers"
 msgstr "Hiç bir parmaq izi oquyıcısına irişilamadı"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:639
+#: ../panels/user-accounts/um-fingerprint-dialog.c:632
 msgid "Please contact your system administrator for help."
 msgstr "Lütfen yardım için sistem yöneticinizle bağlantıya geçin."
 
@@ -6533,18 +6617,18 @@ msgstr "Lütfen yardım için sistem yöneticinizle bağlantıya geçin."
 #. * "To enable fingerprint login, you need to save one of your fingerprints,
 #. using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#: ../panels/user-accounts/um-fingerprint-dialog.c:721
+#: ../panels/user-accounts/um-fingerprint-dialog.c:714
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
-"using the '%s' device."
-msgstr "Parmak izi girişin etkinleşebilmesi için parmak izlerinizden bir tanesini '%s' aygıtını kullanarak kaydetmelisiniz."
+"using the “%s” device."
+msgstr ""
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:728
+#: ../panels/user-accounts/um-fingerprint-dialog.c:721
 msgid "Selecting finger"
 msgstr "Parmak seçiliyor"
 
-#: ../panels/user-accounts/um-fingerprint-dialog.c:729
+#: ../panels/user-accounts/um-fingerprint-dialog.c:722
 msgid "Enrolling fingerprints"
 msgstr "Parmak izleri kaydediliyor"
 
@@ -6578,13 +6662,13 @@ msgstr ""
 #: ../panels/user-accounts/um-history-dialog.c:93
 #, c-format
 msgctxt "login history week label"
-msgid "%s - %s"
+msgid "%s — %s"
 msgstr ""
 
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:848
+#: ../panels/user-accounts/um-user-panel.c:783
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr ""
@@ -6592,7 +6676,7 @@ msgstr ""
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:852
+#: ../panels/user-accounts/um-user-panel.c:787
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -6610,7 +6694,7 @@ msgstr ""
 #. The %s is the user real name.
 #: ../panels/user-accounts/um-history-dialog.c:299
 #, c-format
-msgid "%s - Account Activity"
+msgid "%s — Account Activity"
 msgstr ""
 
 #: ../panels/user-accounts/um-password-dialog.c:153
@@ -6629,23 +6713,23 @@ msgstr "Parolanız değiştirilemedi"
 msgid "The passwords do not match."
 msgstr ""
 
-#: ../panels/user-accounts/um-photo-dialog.c:214
+#: ../panels/user-accounts/um-photo-dialog.c:215
 msgid "Browse for more pictures"
 msgstr "Daha fazla resim için göz at"
 
-#: ../panels/user-accounts/um-photo-dialog.c:448
+#: ../panels/user-accounts/um-photo-dialog.c:449
 msgid "Disable image"
 msgstr "Resmi etkisizleştir"
 
-#: ../panels/user-accounts/um-photo-dialog.c:466
+#: ../panels/user-accounts/um-photo-dialog.c:467
 msgid "Take a photo…"
 msgstr "Bir foto çıqar…"
 
-#: ../panels/user-accounts/um-photo-dialog.c:484
+#: ../panels/user-accounts/um-photo-dialog.c:485
 msgid "Browse for more pictures…"
 msgstr "Daha fazla resim içün kezin…"
 
-#: ../panels/user-accounts/um-photo-dialog.c:708
+#: ../panels/user-accounts/um-photo-dialog.c:703
 #, c-format
 msgid "Used by %s"
 msgstr "%s tarafından kullanılıyor"
@@ -6671,142 +6755,146 @@ msgstr "Keçersiz parol, lütfen yañıdan deñeñiz"
 
 #: ../panels/user-accounts/um-realm-manager.c:834
 #, c-format
-msgid "Couldn't connect to the %s domain: %s"
-msgstr "%s sahasına bağlanılamadı: %s"
+msgid "Couldn’t connect to the %s domain: %s"
+msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:239
-msgid "Other Accounts"
-msgstr "Diger Hesaplar"
+#: ../panels/user-accounts/um-user-panel.c:195
+msgid "Your account"
+msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:454
+#: ../panels/user-accounts/um-user-panel.c:397
 msgid "Failed to delete user"
 msgstr "Kullanıcı silinemedi"
 
+#: ../panels/user-accounts/um-user-panel.c:455
 #: ../panels/user-accounts/um-user-panel.c:514
-#: ../panels/user-accounts/um-user-panel.c:573
-#: ../panels/user-accounts/um-user-panel.c:625
+#: ../panels/user-accounts/um-user-panel.c:566
 msgid "Failed to revoke remotely managed user"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:681
+#: ../panels/user-accounts/um-user-panel.c:620
 msgid "You cannot delete your own account."
 msgstr "Kendi hesabınızı silemezsiniz."
 
-#: ../panels/user-accounts/um-user-panel.c:690
+#: ../panels/user-accounts/um-user-panel.c:629
 #, c-format
 msgid "%s is still logged in"
 msgstr "%s halen sisteme giriş yapmış durumda"
 
-#: ../panels/user-accounts/um-user-panel.c:694
+#: ../panels/user-accounts/um-user-panel.c:633
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr "Giriş yapmış bir kullanıcıyı silmek sistemi tutarsız bir duruma sokabilir."
 
-#: ../panels/user-accounts/um-user-panel.c:703
+#: ../panels/user-accounts/um-user-panel.c:642
 #, c-format
-msgid "Do you want to keep %s's files?"
-msgstr "%s' in dosyalarını bırakmak ister misiniz?"
+msgid "Do you want to keep %s’s files?"
+msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:707
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr "Kullanıcı silerken ev klasörünü, postalarını ve geçici dosyalarını bırakmak mümkün."
 
-#: ../panels/user-accounts/um-user-panel.c:710
+#: ../panels/user-accounts/um-user-panel.c:649
 msgid "_Delete Files"
 msgstr "Dosyelerni _Sil"
 
-#: ../panels/user-accounts/um-user-panel.c:711
+#: ../panels/user-accounts/um-user-panel.c:650
 msgid "_Keep Files"
 msgstr "Dosyelerni _Qoru"
 
-#: ../panels/user-accounts/um-user-panel.c:725
+#: ../panels/user-accounts/um-user-panel.c:664
 #, c-format
-msgid "Are you sure you want to revoke remotely managed %s's account?"
+msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:729
+#: ../panels/user-accounts/um-user-panel.c:668
 msgid "_Delete"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:781
+#: ../panels/user-accounts/um-user-panel.c:718
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Hesap devre dışı"
 
-#: ../panels/user-accounts/um-user-panel.c:789
+#: ../panels/user-accounts/um-user-panel.c:726
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "Bir sonraki girişte ayarlanacak"
 
-#: ../panels/user-accounts/um-user-panel.c:792
+#: ../panels/user-accounts/um-user-panel.c:729
 msgctxt "Password mode"
 msgid "None"
 msgstr "Hiç biri"
 
-#: ../panels/user-accounts/um-user-panel.c:841
+#: ../panels/user-accounts/um-user-panel.c:776
 msgid "Logged in"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1297
+#: ../panels/user-accounts/um-user-panel.c:1124
 msgid "Failed to contact the accounts service"
 msgstr "Hesap hizmetiyle bağlantı kurulamadı"
 
-#: ../panels/user-accounts/um-user-panel.c:1299
+#: ../panels/user-accounts/um-user-panel.c:1126
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Lütfen AccountService' in kurulu ve etkin olduğundan emin olun."
 
-#: ../panels/user-accounts/um-user-panel.c:1341
+#. Translator comments:
+#. * We split the line in 2 here to "make it look good", as there's
+#. * no good way to do this in GTK+ for tooltips. See:
+#. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
+#: ../panels/user-accounts/um-user-panel.c:1162
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "Değişiklik yapmak için,\nönce * simgesine tıklayın"
 
-#: ../panels/user-accounts/um-user-panel.c:1383
+#: ../panels/user-accounts/um-user-panel.c:1204
 msgid "Create a user account"
 msgstr "Kullanıcı hesabı oluştur"
 
+#: ../panels/user-accounts/um-user-panel.c:1215
 #: ../panels/user-accounts/um-user-panel.c:1394
-#: ../panels/user-accounts/um-user-panel.c:1686
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "Kullanıcı hesabı oluşturmak için,\nönce * simgesine tıklayın"
 
-#: ../panels/user-accounts/um-user-panel.c:1404
+#: ../panels/user-accounts/um-user-panel.c:1225
 msgid "Delete the selected user account"
 msgstr "Seçilen kullanıcı hesabını sil"
 
-#: ../panels/user-accounts/um-user-panel.c:1416
-#: ../panels/user-accounts/um-user-panel.c:1691
+#: ../panels/user-accounts/um-user-panel.c:1237
+#: ../panels/user-accounts/um-user-panel.c:1399
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
 msgstr "Seçilen kullanıcı hesabını silmek için,\nönce * simgesine tıklayın"
 
-#: ../panels/user-accounts/um-utils.c:553
-msgid "Sorry, that user name isn't available. Please try another."
+#: ../panels/user-accounts/um-utils.c:497
+msgid "Sorry, that user name isn’t available. Please try another."
 msgstr ""
 
-#: ../panels/user-accounts/um-utils.c:556
+#: ../panels/user-accounts/um-utils.c:500
 #, c-format
 msgid "The username is too long."
 msgstr ""
 
-#: ../panels/user-accounts/um-utils.c:559
-msgid "The username cannot start with a '-'."
+#: ../panels/user-accounts/um-utils.c:503
+msgid "The username cannot start with a “-”."
 msgstr ""
 
-#: ../panels/user-accounts/um-utils.c:562
+#: ../panels/user-accounts/um-utils.c:506
 msgid ""
 "The username should only consist of upper and lower case letters from a-z, "
 "digits and the following characters: . - _"
 msgstr ""
 
-#: ../panels/user-accounts/um-utils.c:566
-msgid "This will be used to name your home folder and can't be changed."
+#: ../panels/user-accounts/um-utils.c:510
+msgid "This will be used to name your home folder and can’t be changed."
 msgstr ""
 
 #: ../panels/wacom/button-mapping.ui.h:1
@@ -6819,8 +6907,8 @@ msgstr "Düğmeleri işlevlere eşleyin"
 
 #: ../panels/wacom/button-mapping.ui.h:4
 msgid ""
-"To edit a shortcut, choose the \"Send Keystroke\" action, press the keyboard"
-" shortcut button and hold down the new keys or press Backspace to clear."
+"To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
+"shortcut button and hold down the new keys or press Backspace to clear."
 msgstr ""
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:83
@@ -6830,63 +6918,63 @@ msgid ""
 msgstr "Tabletinizi kalibre etmek için lütfen hedef işaretçilerine ekranda göründükçe dokunun."
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:87
-msgid "Mis-click detected, restarting..."
-msgstr "Yanlış tıklama tespit edildi, yeniden başlatılıyor..."
+msgid "Mis-click detected, restarting…"
+msgstr ""
 
-#: ../panels/wacom/cc-wacom-button-row.c:442
-msgctxt "Wacom tablet button"
-msgid "Up"
-msgstr "Yuqarı"
+#: ../panels/wacom/cc-wacom-button-row.c:266
+#, c-format
+msgid "Button %d"
+msgstr ""
 
-#: ../panels/wacom/cc-wacom-button-row.c:443
-msgctxt "Wacom tablet button"
-msgid "Down"
-msgstr "Aşağı"
+#: ../panels/wacom/cc-wacom-button-row.h:53
+msgctxt "Wacom action-type"
+msgid "Application defined"
+msgstr ""
 
 #: ../panels/wacom/cc-wacom-button-row.h:54
-msgctxt "Wacom action-type"
-msgid "None"
-msgstr "Hiç biri"
-
-#: ../panels/wacom/cc-wacom-button-row.h:55
 msgctxt "Wacom action-type"
 msgid "Send Keystroke"
 msgstr "Tuş-çarpmanı Yiber"
 
-#: ../panels/wacom/cc-wacom-button-row.h:56
+#: ../panels/wacom/cc-wacom-button-row.h:55
 msgctxt "Wacom action-type"
 msgid "Switch Monitor"
 msgstr "Monitorlarnı Almaştır"
 
-#: ../panels/wacom/cc-wacom-button-row.h:57
+#: ../panels/wacom/cc-wacom-button-row.h:56
 msgctxt "Wacom action-type"
 msgid "Show On-Screen Help"
 msgstr ""
 
-#: ../panels/wacom/cc-wacom-mapping-panel.c:263
+#: ../panels/wacom/cc-wacom-mapping-panel.c:260
 msgid "Output:"
 msgstr "Çıqtı:"
 
 #. Keep ratio switch
-#: ../panels/wacom/cc-wacom-mapping-panel.c:275
+#: ../panels/wacom/cc-wacom-mapping-panel.c:272
 msgid "Keep aspect ratio (letterbox):"
 msgstr "Aspekt nisbetini qoru (mektüpqutusı):"
 
 #. Whole-desktop checkbox
-#: ../panels/wacom/cc-wacom-mapping-panel.c:286
+#: ../panels/wacom/cc-wacom-mapping-panel.c:283
 msgid "Map to single monitor"
 msgstr "Tek monitorğa haritala"
 
-#: ../panels/wacom/cc-wacom-nav-button.c:88
+#: ../panels/wacom/cc-wacom-nav-button.c:86
 #, c-format
 msgid "%d of %d"
 msgstr "%d / %d"
 
-#: ../panels/wacom/cc-wacom-page.c:522
+#: ../panels/wacom/cc-wacom-page.c:544
 msgid "Display Mapping"
 msgstr "Eşlemeyi görüntüle"
 
-#: ../panels/wacom/cc-wacom-stylus-page.c:377
+#: ../panels/wacom/cc-wacom-panel.c:783
+#: ../panels/wacom/wacom-stylus-page.ui.h:9
+msgid "Stylus"
+msgstr "Tablet Kalemi (Stylus)"
+
+#: ../panels/wacom/cc-wacom-stylus-page.c:347
 msgid "Button"
 msgstr "Dögme"
 
@@ -6966,165 +7054,64 @@ msgstr "İzleme Kipi"
 msgid "Left-Handed Orientation"
 msgstr "Sol Elle Kullanım Yerleşimi"
 
-#. If no mode is available, we use "left-ring-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1028
-msgid "Left Ring"
-msgstr "Sol Alqa"
-
-#: ../panels/wacom/gsd-wacom-device.c:1039
-#, c-format
-msgid "Left Ring Mode #%d"
-msgstr "Sol Alqa Tarzı #%d"
-
-#. If no mode is available, we use "right-ring-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1059
-msgid "Right Ring"
-msgstr "Oñ Alqa"
-
-#: ../panels/wacom/gsd-wacom-device.c:1070
-#, c-format
-msgid "Right Ring Mode #%d"
-msgstr "Oñ Alqa Tarzı #%d"
-
-#. If no mode is available, we use "left-strip-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1112
-msgid "Left Touchstrip"
-msgstr "Sol Tiyüv Şeriti"
-
-#: ../panels/wacom/gsd-wacom-device.c:1123
-#, c-format
-msgid "Left Touchstrip Mode #%d"
-msgstr "Sol Tiyüv Şeriti Tarzı #%d"
-
-#. If no mode is available, we use "right-strip-mode-1" for backward compat
-#: ../panels/wacom/gsd-wacom-device.c:1143
-msgid "Right Touchstrip"
-msgstr "Oñ Tiyüv Şeriti"
-
-#: ../panels/wacom/gsd-wacom-device.c:1154
-#, c-format
-msgid "Right Touchstrip Mode #%d"
-msgstr "Oñ Tiyüv Şeriti Tarzı #%d"
-
-#: ../panels/wacom/gsd-wacom-device.c:1180
-#, c-format
-msgid "Left Touchring Mode Switch"
-msgstr "Sol Tiyüv Alqası Tarzı Almaştırğıçı"
-
-#: ../panels/wacom/gsd-wacom-device.c:1182
-#, c-format
-msgid "Right Touchring Mode Switch"
-msgstr "Oñ Tiyüv Alqası Tarzı Almaştırğıçı"
-
-#: ../panels/wacom/gsd-wacom-device.c:1185
-#, c-format
-msgid "Left Touchstrip Mode Switch"
-msgstr "Sol Tiyüv Şeriti Tarzı Almaştırğıçı"
-
-#: ../panels/wacom/gsd-wacom-device.c:1187
-#, c-format
-msgid "Right Touchstrip Mode Switch"
-msgstr "Oñ Tiyüv Şeriti Tarzı Almaştırğıçı"
-
-#: ../panels/wacom/gsd-wacom-device.c:1192
-#, c-format
-msgid "Mode Switch #%d"
-msgstr "Tarz Almaştırğıçı #%d"
-
-#: ../panels/wacom/gsd-wacom-device.c:1238
-#, c-format
-msgid "Left Button #%d"
-msgstr "Sol Düğme #%d"
-
-#: ../panels/wacom/gsd-wacom-device.c:1241
-#, c-format
-msgid "Right Button #%d"
-msgstr "Sağ Düğme #%d"
-
-#: ../panels/wacom/gsd-wacom-device.c:1244
-#, c-format
-msgid "Top Button #%d"
-msgstr "Üst Düğme #%d"
-
-#: ../panels/wacom/gsd-wacom-device.c:1247
-#, c-format
-msgid "Bottom Button #%d"
-msgstr "Alt Düğme #%d"
-
 #: ../panels/wacom/gsd-wacom-key-shortcut-button.c:263
 msgid "New shortcut…"
 msgstr ""
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:1
-msgid "No Action"
-msgstr "Eylem Yok"
-
 #: ../panels/wacom/wacom-stylus-page.ui.h:2
-msgid "Left Mouse Button Click"
-msgstr "Sol Fare Düğmesi Tıklaması"
-
-#: ../panels/wacom/wacom-stylus-page.ui.h:3
 msgid "Middle Mouse Button Click"
 msgstr "Orta Fare Düğmesi Tıklaması"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:4
+#: ../panels/wacom/wacom-stylus-page.ui.h:3
 msgid "Right Mouse Button Click"
 msgstr "Sağ Fare Düğmesi Tıklaması"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:5
-msgid "Scroll Up"
-msgstr "Yukarı Kaydır"
-
-#: ../panels/wacom/wacom-stylus-page.ui.h:6
-msgid "Scroll Down"
-msgstr "Aşağı Kaydır"
-
-#: ../panels/wacom/wacom-stylus-page.ui.h:7
-msgid "Scroll Left"
-msgstr "Sola Kaydır"
-
-#: ../panels/wacom/wacom-stylus-page.ui.h:8
-msgid "Scroll Right"
-msgstr "Sağa Kaydır"
-
-#: ../panels/wacom/wacom-stylus-page.ui.h:9
+#: ../panels/wacom/wacom-stylus-page.ui.h:4
 msgid "Back"
 msgstr "Keri"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:10
+#: ../panels/wacom/wacom-stylus-page.ui.h:5
 msgid "Forward"
 msgstr "İleri"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:11
-msgid "Stylus"
-msgstr "Tablet Kalemi (Stylus)"
+#: ../panels/wacom/wacom-stylus-page.ui.h:6
+msgid "No stylus found"
+msgstr ""
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:12
+#: ../panels/wacom/wacom-stylus-page.ui.h:7
+msgid "Please move your stylus to the proximity of the tablet to configure it"
+msgstr ""
+
+#: ../panels/wacom/wacom-stylus-page.ui.h:10
 msgid "Eraser Pressure Feel"
 msgstr "Silgi Basım Sezilişi"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:13
+#: ../panels/wacom/wacom-stylus-page.ui.h:11
 msgid "Soft"
 msgstr "Yumuşak"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:14
+#: ../panels/wacom/wacom-stylus-page.ui.h:12
 msgid "Firm"
 msgstr "Sıkı"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:15
+#: ../panels/wacom/wacom-stylus-page.ui.h:13
 msgid "Top Button"
 msgstr "Üst Dögme"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:16
+#: ../panels/wacom/wacom-stylus-page.ui.h:14
 msgid "Lower Button"
 msgstr "Alt Dögme"
 
-#: ../panels/wacom/wacom-stylus-page.ui.h:17
+#: ../panels/wacom/wacom-stylus-page.ui.h:15
 msgid "Tip Pressure Feel"
 msgstr "Parmak Ucu Basınç Hissi"
 
-#: ../shell/alt/cc-window.c:765 ../shell/cc-window.c:53
-#: ../shell/cc-window.c:1497
+#: ../panels/wacom/wacom-stylus-page.ui.h:17
+msgid "page 3"
+msgstr "sahife 3"
+
+#: ../shell/alt/cc-window.c:766 ../shell/cc-window.c:53
+#: ../shell/cc-window.c:1503
 msgid "All Settings"
 msgstr "Hepsi Ayarlar"
 
@@ -7138,7 +7125,7 @@ msgstr ""
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:3
 msgid ""
-"The control center is GNOME's main interface for configuration of various "
+"The control center is GNOME’s main interface for configuration of various "
 "aspects of your desktop."
 msgstr ""
 
@@ -7183,17 +7170,17 @@ msgid "Quit"
 msgstr "Terk et"
 
 #. Add categories
-#: ../shell/cc-window.c:871
+#: ../shell/cc-window.c:875
 msgctxt "category"
 msgid "Personal"
 msgstr "Şahsiy"
 
-#: ../shell/cc-window.c:872
+#: ../shell/cc-window.c:876
 msgctxt "category"
 msgid "Hardware"
 msgstr "Donanım"
 
-#: ../shell/cc-window.c:873
+#: ../shell/cc-window.c:877
 msgctxt "category"
 msgid "System"
 msgstr "Sistem"
