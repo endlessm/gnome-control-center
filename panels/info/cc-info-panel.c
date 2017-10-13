@@ -336,6 +336,9 @@ cc_info_panel_finalize (GObject *object)
       g_clear_object (&priv->updater_cancellable);
     }
 
+  if (priv->primary_mounts)
+    g_list_free_full (priv->primary_mounts, (GDestroyNotify) g_unix_mount_free);
+
   g_clear_object (&priv->media_settings);
   g_clear_object (&priv->updater_proxy);
   g_clear_object (&priv->session_proxy);
@@ -488,7 +491,6 @@ query_done (GFile        *file,
   GFileInfo *info;
   GError *error = NULL;
 
-  self->priv->cancellable = NULL;
   info = g_file_query_filesystem_info_finish (file, res, &error);
   if (info != NULL)
     {
@@ -497,11 +499,19 @@ query_done (GFile        *file,
     }
   else
     {
-      char *path;
-      path = g_file_get_path (file);
-      g_warning ("Failed to get filesystem free space for '%s': %s", path, error->message);
-      g_free (path);
-      g_error_free (error);
+      if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        {
+          g_error_free (error);
+          return;
+        }
+      else
+        {
+          char *path;
+          path = g_file_get_path (file);
+          g_warning ("Failed to get filesystem free space for '%s': %s", path, error->message);
+          g_free (path);
+          g_error_free (error);
+        }
     }
 
   /* And onto the next element */
@@ -532,8 +542,6 @@ get_primary_disc_info_start (CcInfoPanel *self)
   file = g_file_new_for_path (g_unix_mount_get_mount_path (mount));
   g_unix_mount_free (mount);
 
-  self->priv->cancellable = g_cancellable_new ();
-
   g_file_query_filesystem_info_async (file,
                                       G_FILE_ATTRIBUTE_FILESYSTEM_SIZE,
                                       0,
@@ -548,7 +556,9 @@ get_primary_disc_info (CcInfoPanel *self)
 {
   GList        *points;
   GList        *p;
+  GHashTable *hash;
 
+  hash = g_hash_table_new (g_str_hash, g_str_equal);
   points = g_unix_mount_points_get (NULL);
 
   /* If we do not have /etc/fstab around, try /etc/mtab */
@@ -559,22 +569,31 @@ get_primary_disc_info (CcInfoPanel *self)
     {
       GUnixMountEntry *mount = p->data;
       const char *mount_path;
+      const char *device_path;
 
       mount_path = g_unix_mount_get_mount_path (mount);
+      device_path = g_unix_mount_get_device_path (mount);
 
+      /* Do not count multiple mounts with same device_path, because it is
+       * probably something like btrfs subvolume. Use only the first one in
+       * order to count the real size. */
       if (gsd_should_ignore_unix_mount (mount) ||
           gsd_is_removable_mount (mount) ||
           g_str_has_prefix (mount_path, "/media/") ||
-          g_str_has_prefix (mount_path, g_get_home_dir ()))
+          g_str_has_prefix (mount_path, g_get_home_dir ()) ||
+          g_hash_table_lookup (hash, device_path) != NULL)
         {
           g_unix_mount_free (mount);
           continue;
         }
 
       self->priv->primary_mounts = g_list_prepend (self->priv->primary_mounts, mount);
+      g_hash_table_insert (hash, (gpointer) device_path, (gpointer) device_path);
     }
   g_list_free (points);
+  g_hash_table_destroy (hash);
 
+  self->priv->cancellable = g_cancellable_new ();
   get_primary_disc_info_start (self);
 }
 
