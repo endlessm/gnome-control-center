@@ -143,7 +143,8 @@ PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES gnome-desktop-3.0 >= 3.1.0
                   colord >= $COLORD_REQUIRED_VERSION
                   upower-glib >= 0.99.0)
 PKG_CHECK_MODULES(INFO_PANEL, $COMMON_MODULES libgtop-2.0
-		  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
+		  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
+		  udisks2 >= 2.1.8)
 PKG_CHECK_MODULES(KEYBOARD_PANEL, $COMMON_MODULES
                   gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION
                   x11)
