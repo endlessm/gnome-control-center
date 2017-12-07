@@ -25,6 +25,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+#include <gio/gio.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
@@ -54,6 +55,8 @@ struct _UmPasswordDialog {
 
         ActUser *user;
         ActUserPasswordMode password_mode;
+
+        GDBusProxy *input_source_manager;
 
         GtkWidget *old_password_label;
         GtkWidget *old_password_entry;
@@ -98,8 +101,31 @@ update_password_strength (UmPasswordDialog *um)
 }
 
 static void
+shell_enable_password_mode (UmPasswordDialog *um,
+                            gboolean          enable)
+{
+        GError *error = NULL;
+
+        if (!um->input_source_manager)
+                return;
+
+        g_dbus_proxy_call_sync (um->input_source_manager,
+                                "Set",
+                                g_variant_new_parsed ("('org.gnome.Shell.InputSourceManager', 'PasswordModeEnabled', %v)",
+						      g_variant_new_boolean (enable)),
+                                G_DBUS_CALL_FLAGS_NONE, -1,
+                                NULL, &error);
+
+        if (error != NULL) {
+                g_critical ("Unable to set PasswordMode: %s", error->message);
+                g_error_free (error);
+        }
+}
+
+static void
 finish_password_change (UmPasswordDialog *um)
 {
+        shell_enable_password_mode (um, FALSE);
         gtk_widget_hide (um->dialog);
 
         gtk_entry_set_text (GTK_ENTRY (um->password_entry), " ");
@@ -117,11 +143,22 @@ cancel_password_dialog (GtkButton        *button,
         finish_password_change (um);
 }
 
+static gboolean
+hide_password_dialog (GtkWidget        *dialog,
+                      GdkEvent         *event,
+                      UmPasswordDialog *um)
+{
+        shell_enable_password_mode (um, FALSE);
+        gtk_widget_hide_on_delete (dialog);
+        return TRUE;
+}
+
 static void
 dialog_closed (GtkWidget        *dialog,
                gint              response_id,
                UmPasswordDialog *um)
 {
+        shell_enable_password_mode (um, FALSE);
         gtk_widget_destroy (dialog);
 }
 
@@ -513,7 +550,7 @@ um_password_dialog_new (void)
 
         widget = (GtkWidget *) gtk_builder_get_object (builder, "dialog");
         g_signal_connect (widget, "delete-event",
-                          G_CALLBACK (gtk_widget_hide_on_delete), NULL);
+                          G_CALLBACK (hide_password_dialog), um);
         um->dialog = widget;
 
         widget = (GtkWidget *) gtk_builder_get_object (builder, "cancel-button");
@@ -566,6 +603,13 @@ um_password_dialog_new (void)
 
         g_object_unref (builder);
 
+        um->input_source_manager = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+                                                                  G_DBUS_PROXY_FLAGS_NONE,
+                                                                  NULL,
+                                                                  "org.gnome.Shell.InputSourceManager",
+                                                                  "/org/gnome/Shell/InputSourceManager",
+                                                                  "org.freedesktop.DBus.Properties",
+                                                                  NULL, NULL);
         return um;
 }
 
@@ -575,6 +619,7 @@ um_password_dialog_free (UmPasswordDialog *um)
         gtk_widget_destroy (um->dialog);
 
         g_clear_object (&um->user);
+        g_clear_object (&um->input_source_manager);
 
         if (um->passwd_handler)
                 passwd_destroy (um->passwd_handler);
@@ -643,6 +688,8 @@ void
 um_password_dialog_show (UmPasswordDialog *um,
                          GtkWindow        *parent)
 {
+        shell_enable_password_mode (um, TRUE);
+
         gtk_window_set_transient_for (GTK_WINDOW (um->dialog), parent);
         gtk_window_present (GTK_WINDOW (um->dialog));
         if (um->old_password_ok == FALSE)
