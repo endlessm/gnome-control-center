@@ -508,9 +508,10 @@ get_primary_disc_info (CcInfoPanel *self)
 
       /* Skip removable devices */
       if (!drive ||
-          udisks_drive_get_removable (drive) ||
-          udisks_drive_get_ejectable (drive) ||
-          g_hash_table_contains (added_drives, udisks_drive_get_id (drive)))
+          g_hash_table_contains (added_drives, udisks_drive_get_id (drive)) ||
+          (udisks_drive_get_ejectable (drive) &&
+           udisks_drive_get_removable (drive) &&
+           udisks_drive_get_media_removable (drive)))
         {
           continue;
         }
