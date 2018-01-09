@@ -661,34 +661,70 @@ cc_sharing_panel_setup_media_sharing_dialog (CcSharingPanel *self)
 }
 
 static void
-content_sharing_switch_active_changed_cb (GtkSwitch *widget,
-                                          GParamSpec *pspec,
-                                          CcSharingPanel *self)
+enter_discoverable_mode_done_callback (GObject      *proxy,
+                                       GAsyncResult *result,
+                                       gpointer      user_data)
 {
+  CcSharingPanel *self = user_data;
   GError *error = NULL;
+  GVariant *return_tuple = g_dbus_proxy_call_finish (G_DBUS_PROXY (proxy), result, &error);
 
-  if (gtk_switch_get_active (widget))
+  if (!return_tuple)
     {
-      g_dbus_proxy_call_sync (self->priv->companion_app_avahi_helper_proxy,
-                              "EnterDiscoverableMode",
-                              g_variant_new ("(s)", "Endless Computer"),
-                              G_DBUS_CALL_FLAGS_NONE, -1,
-                              NULL, &error);
+      g_critical ("Error when calling EnterDiscoverableMode on Companion App Helper Proxy: %s",
+                  error->message);
+      g_clear_error (&error);
+      return;
     }
+
+  g_variant_unref (return_tuple);
+  gtk_switch_set_state (GTK_SWITCH (self->priv->content_sharing_switch), TRUE);
+}
+
+static void
+exit_discoverable_mode_done_callback (GObject      *proxy,
+                                      GAsyncResult *result,
+                                      gpointer      user_data)
+{
+  CcSharingPanel *self = user_data;
+  GError *error = NULL;
+  GVariant *return_tuple = g_dbus_proxy_call_finish (G_DBUS_PROXY (proxy), result, &error);
+
+  if (!return_tuple)
+    {
+      g_critical ("Error when calling ExitDiscoverableMode on Companion App Helper Proxy: %s",
+                  error->message);
+      g_clear_error (&error);
+      return;
+    }
+
+  g_variant_unref (return_tuple);
+  gtk_switch_set_state (GTK_SWITCH (self->priv->content_sharing_switch), FALSE);
+}
+
+static gboolean
+content_sharing_switch_state_set_cb (GtkSwitch *widget,
+                                     gboolean   state,
+                                     CcSharingPanel *self)
+{
+  if (state)
+    g_dbus_proxy_call (self->priv->companion_app_avahi_helper_proxy,
+                       "EnterDiscoverableMode",
+                       NULL,
+                       G_DBUS_CALL_FLAGS_NONE, -1,
+                       NULL,
+                       enter_discoverable_mode_done_callback,
+                       self);
   else
-    {
-      g_dbus_proxy_call_sync (self->priv->companion_app_avahi_helper_proxy,
-                              "ExitDiscoverableMode",
-                              NULL,
-                              G_DBUS_CALL_FLAGS_NONE, -1,
-                              NULL, &error);
-    }
+    g_dbus_proxy_call (self->priv->companion_app_avahi_helper_proxy,
+                       "ExitDiscoverableMode",
+                       NULL,
+                       G_DBUS_CALL_FLAGS_NONE, -1,
+                       NULL,
+                       exit_discoverable_mode_done_callback,
+                       self);
 
-  if (error != NULL)
-    {
-      g_critical ("Unable to set the enabled state of content sharing: %s", error->message);
-      g_error_free (error);
-    }
+  return TRUE;
 }
 
 static void
@@ -799,8 +835,8 @@ cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
   gtk_widget_show (content_sharing_button);
   gtk_switch_set_active (GTK_SWITCH (self->priv->content_sharing_switch),
                          content_sharing_enabled);
-  g_signal_connect (self->priv->content_sharing_switch, "notify::active",
-                    G_CALLBACK (content_sharing_switch_active_changed_cb), self);
+  g_signal_connect (self->priv->content_sharing_switch, "state-set",
+                    G_CALLBACK (content_sharing_switch_state_set_cb), self);
 }
 
 static gboolean
