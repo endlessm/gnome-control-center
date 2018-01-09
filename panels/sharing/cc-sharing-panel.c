@@ -32,6 +32,8 @@
 #include "cc-sharing-switch.h"
 #include "org.gnome.SettingsDaemon.Sharing.h"
 
+#include <flatpak.h>
+
 #ifdef GDK_WINDOWING_WAYLAND
 #include <gdk/gdkwayland.h>
 #endif
@@ -74,10 +76,12 @@ struct _CcSharingPanelPrivate
   GtkWidget *hostname_entry;
 
   GDBusProxy *sharing_proxy;
+  GDBusProxy *companion_app_avahi_helper_proxy;
 
   GtkWidget *media_sharing_switch;
   GtkWidget *personal_file_sharing_switch;
   GtkWidget *screen_sharing_switch;
+  GtkWidget *content_sharing_switch;
 
   GtkWidget *media_sharing_dialog;
   GtkWidget *personal_file_sharing_dialog;
@@ -85,6 +89,7 @@ struct _CcSharingPanelPrivate
   GCancellable *remote_login_cancellable;
   GCancellable *hostname_cancellable;
   GtkWidget *screen_sharing_dialog;
+  GtkWidget  *content_sharing_dialog;
 
   GDBusProxy *rfkill;
 };
@@ -107,6 +112,7 @@ cc_sharing_panel_master_switch_notify (GtkSwitch      *gtkswitch,
       OFF_IF_VISIBLE(priv->media_sharing_switch);
       OFF_IF_VISIBLE(priv->personal_file_sharing_switch);
       OFF_IF_VISIBLE(priv->screen_sharing_switch);
+      OFF_IF_VISIBLE(priv->content_sharing_switch);
 
       gtk_switch_set_active (GTK_SWITCH (WID ("remote-login-switch")), FALSE);
     }
@@ -170,7 +176,15 @@ cc_sharing_panel_dispose (GObject *object)
       priv->screen_sharing_dialog = NULL;
     }
 
+  if (priv->content_sharing_dialog)
+    {
+      gtk_widget_destroy (priv->content_sharing_dialog);
+      priv->content_sharing_dialog = NULL;
+    }
+
+
   g_clear_object (&priv->sharing_proxy);
+  g_clear_object (&priv->companion_app_avahi_helper_proxy);
 
   G_OBJECT_CLASS (cc_sharing_panel_parent_class)->dispose (object);
 }
@@ -646,6 +660,149 @@ cc_sharing_panel_setup_media_sharing_dialog (CcSharingPanel *self)
                                            WID ("media-sharing-status-label"));
 }
 
+static void
+content_sharing_switch_active_changed_cb (GtkSwitch *widget,
+                                          GParamSpec *pspec,
+                                          CcSharingPanel *self)
+{
+  GError *error = NULL;
+
+  if (gtk_switch_get_active (widget))
+    {
+      g_dbus_proxy_call_sync (self->priv->companion_app_avahi_helper_proxy,
+                              "EnterDiscoverableMode",
+                              g_variant_new ("(s)", "Endless Computer"),
+                              G_DBUS_CALL_FLAGS_NONE, -1,
+                              NULL, &error);
+    }
+  else
+    {
+      g_dbus_proxy_call_sync (self->priv->companion_app_avahi_helper_proxy,
+                              "ExitDiscoverableMode",
+                              NULL,
+                              G_DBUS_CALL_FLAGS_NONE, -1,
+                              NULL, &error);
+    }
+
+  if (error != NULL)
+    {
+      g_critical ("Unable to set the enabled state of content sharing: %s", error->message);
+      g_error_free (error);
+    }
+}
+
+static void
+on_content_sharing_proxy_properties_changed (GDBusProxy *proxy,
+                                             GVariant *changed_properties,
+                                             GStrv invalidated_properties,
+                                             CcSharingPanel *self)
+{
+  GVariant *discoverable_prop;
+  gboolean content_sharing_enabled;
+
+  discoverable_prop = g_variant_lookup_value (changed_properties, "Discoverable", G_VARIANT_TYPE_BOOLEAN);
+  if (!discoverable_prop)
+    return;
+
+  content_sharing_enabled = g_variant_get_boolean (discoverable_prop);
+  g_variant_unref (discoverable_prop);
+
+  gtk_switch_set_active (GTK_SWITCH (self->priv->content_sharing_switch), content_sharing_enabled);
+}
+
+static gboolean
+cc_sharing_panel_check_content_sharing_available (void)
+{
+  GError              *error = NULL;
+  FlatpakInstallation *installation = flatpak_installation_new_system (NULL, &error);
+  FlatpakInstalledRef *ref = NULL;
+  gboolean ret = TRUE; 
+
+  if (installation == NULL)
+    {
+      g_message ("Unexpected error occurred when loading flatpak installation: %s", error->message);
+      g_clear_error (&error);
+      return FALSE;
+    }
+
+  ref = flatpak_installation_get_installed_ref (installation,
+                                                FLATPAK_REF_KIND_APP,
+                                                "com.endlessm.CompanionAppService",
+                                                NULL,
+                                                NULL,
+                                                NULL,
+                                                &error);
+
+  if (ref == NULL)
+    {
+      if (!g_error_matches (error, FLATPAK_ERROR, FLATPAK_ERROR_NOT_INSTALLED))
+        {
+          g_message ("Unexpected error occurred when checking flatpak installation: %s", error->message);
+        }
+
+      ret = FALSE;
+      g_clear_error (&error);
+    }
+
+  g_object_unref (ref);
+  g_object_unref (installation);
+
+  return ret;
+}
+
+static void
+cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
+{
+  CcSharingPanelPrivate *priv = self->priv;
+  gboolean content_sharing_enabled;
+  GError *error = NULL;
+  GVariant *value;
+  GtkWidget *content_sharing_button = GTK_WIDGET (WID ("content-sharing-button"));
+
+  self->priv->companion_app_avahi_helper_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                                                G_DBUS_PROXY_FLAGS_NONE,
+                                                                                NULL,
+                                                                                "com.endlessm.CompanionAppServiceAvahiHelper",
+                                                                                "/com/endlessm/CompanionAppServiceAvahiHelper",
+                                                                                "com.endlessm.CompanionApp.AvahiHelper",
+                                                                                NULL, &error);
+  if (error != NULL)
+    {
+      g_critical ("Unable to create a DBus proxy for the companion app avahi helper: %s", error->message);
+      g_error_free (error);
+
+      /* Return early, since there's no way we can set up the dialog from here */
+      return;
+    }
+
+  g_signal_connect (self->priv->companion_app_avahi_helper_proxy, "g-properties-changed",
+                    G_CALLBACK (on_content_sharing_proxy_properties_changed), self);
+
+  value = g_dbus_proxy_get_cached_property (self->priv->companion_app_avahi_helper_proxy, "Discoverable");
+  content_sharing_enabled = g_variant_get_boolean (value);
+  g_variant_unref (value);
+
+  /* Set up the switch */
+  self->priv->content_sharing_switch = gtk_switch_new ();
+  gtk_widget_set_can_focus (self->priv->content_sharing_switch, TRUE);
+  gtk_widget_set_halign (self->priv->content_sharing_switch, GTK_ALIGN_END);
+  gtk_widget_set_valign (self->priv->content_sharing_switch, GTK_ALIGN_CENTER);
+  gtk_header_bar_pack_start (GTK_HEADER_BAR (WID ("content-sharing-headerbar")),
+                             self->priv->content_sharing_switch);
+  gtk_widget_show (self->priv->content_sharing_switch);
+
+  cc_sharing_panel_bind_switch_to_label (self,
+                                         self->priv->content_sharing_switch,
+                                         WID ("content-sharing-status-label"));
+
+  /* If everything was successful, show the row */
+  gtk_widget_show (content_sharing_button);
+  gtk_switch_set_active (GTK_SWITCH (self->priv->content_sharing_switch),
+                         content_sharing_enabled);
+  g_signal_connect (self->priv->content_sharing_switch, "notify::active",
+                    G_CALLBACK (content_sharing_switch_active_changed_cb), self);
+}
+
 static gboolean
 cc_sharing_panel_label_activate_link (GtkLabel *label,
                                       gchar    *uri,
@@ -1074,6 +1231,7 @@ cc_sharing_panel_init (CcSharingPanel *self)
       "personal-file-sharing-dialog",
       "remote-login-dialog",
       "screen-sharing-dialog",
+      "content-sharing-dialog",
       NULL };
   GError *error = NULL;
 
@@ -1102,6 +1260,7 @@ cc_sharing_panel_init (CcSharingPanel *self)
   priv->remote_login_dialog = WID ("remote-login-dialog");
   priv->remote_login_cancellable = g_cancellable_new ();
   priv->screen_sharing_dialog = WID ("screen-sharing-dialog");
+  priv->content_sharing_dialog = WID ("content-sharing-dialog");
 
   g_signal_connect (priv->media_sharing_dialog, "response",
                     G_CALLBACK (gtk_widget_hide), NULL);
@@ -1110,6 +1269,8 @@ cc_sharing_panel_init (CcSharingPanel *self)
   g_signal_connect (priv->remote_login_dialog, "response",
                     G_CALLBACK (gtk_widget_hide), NULL);
   g_signal_connect (priv->screen_sharing_dialog, "response",
+                    G_CALLBACK (gtk_widget_hide), NULL);
+  g_signal_connect (priv->content_sharing_dialog, "response",
                     G_CALLBACK (gtk_widget_hide), NULL);
 
   gtk_list_box_set_activate_on_single_click (GTK_LIST_BOX (WID ("main-list-box")),
@@ -1166,6 +1327,10 @@ cc_sharing_panel_init (CcSharingPanel *self)
     cc_sharing_panel_setup_screen_sharing_dialog (self);
   else
     gtk_widget_hide (WID ("screen-sharing-button"));
+
+  /* content sharing */
+  if (cc_sharing_panel_check_content_sharing_available ())
+    cc_sharing_panel_setup_content_sharing_dialog (self);
 
   /* make sure the hostname entry isn't focused by default */
   g_signal_connect_swapped (self, "map", G_CALLBACK (gtk_widget_grab_focus),
