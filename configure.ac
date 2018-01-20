@@ -118,6 +118,7 @@ COLORD_REQUIRED_VERSION=0.1.34
 COLORD_GTK_REQUIRED_VERSION=0.1.24
 PWQUALITY_REQUIRED_VERSION=1.2.2
 GRILO_REQUIRED_VERSION=0.3.0
+MOGWAI_REQUIRED_VERSION=0.1.0
 
 COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
  glib-2.0 >= $GLIB_REQUIRED_VERSION
@@ -350,6 +351,19 @@ else
 fi
 AM_CONDITIONAL(BUILD_WACOM, [test x${have_wacom} = xyes])
 
+# Automatic updates
+PKG_CHECK_MODULES(UPDATES_PANEL, $COMMON_MODULES
+                  libnm >= 1.8
+                  libnma >= 1.8
+                  mogwai-tariff-0 >= $MOGWAI_REQUIRED_VERSION)
+
+if test "x$have_networkmanager" = xno ; then
+        linux_error_or_warn "*** Automatic Updates panel will not be built (NetworkManager not found) ***"
+else
+	AC_DEFINE(BUILD_UPDATES, 1, [Define to 1 to build the Network panel])
+fi
+AM_CONDITIONAL(BUILD_UPDATES, [test x$have_networkmanager = xyes])
+
 # Kerberos kerberos support
 AC_PATH_PROG(KRB5_CONFIG, krb5-config, no)
 if test "$KRB5_CONFIG" = "no"; then
@@ -565,6 +579,8 @@ panels/notifications/Makefile
 panels/notifications/gnome-notifications-panel.desktop.in
 panels/universal-access/Makefile
 panels/universal-access/gnome-universal-access-panel.desktop.in
+panels/updates/Makefile
+panels/updates/gnome-updates-panel.desktop.in
 panels/user-accounts/Makefile
 panels/user-accounts/data/Makefile
 panels/user-accounts/data/gnome-user-accounts-panel.desktop.in
