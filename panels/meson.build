@@ -19,6 +19,7 @@ panels = [
   'sharing',
   'sound',
   'universal-access',
+  'updates',
   'user-accounts'
 ]
 

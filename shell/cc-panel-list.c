@@ -391,6 +391,7 @@ static const gchar * const panel_order[] = {
   "sound",
   "power",
   "network",
+  "updates",
 
   /* Devices page */
   "display",
