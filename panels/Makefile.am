@@ -19,6 +19,10 @@ SUBDIRS= \
 	sharing \
 	printers
 
+if BUILD_UPDATES
+SUBDIRS += updates
+endif
+
 if BUILD_WACOM
 SUBDIRS += wacom
 endif

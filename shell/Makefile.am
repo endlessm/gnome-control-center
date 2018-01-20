@@ -10,6 +10,7 @@ AM_CPPFLAGS =					\
 	$(SHELL_CFLAGS)				\
 	$(CHEESE_CFLAGS)			\
 	$(WACOM_PANEL_CFLAGS)			\
+	$(UPDATES_PANEL_CFLAGS)			\
 	-I$(top_srcdir)/panels/common/		\
 	-I$(top_srcdir)/shell/alt		\
 	-I$(top_srcdir)/libgd
@@ -108,6 +109,10 @@ endif
 
 if BUILD_BLUETOOTH
 gnome_control_center_LDADD += $(top_builddir)/panels/bluetooth/libbluetooth.la
+endif
+
+if BUILD_UPDATES
+gnome_control_center_LDADD += $(top_builddir)/panels/updates/libupdates.la
 endif
 
 gnome_control_center_alt_LDADD = 					\
