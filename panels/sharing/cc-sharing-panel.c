@@ -779,8 +779,11 @@ cc_sharing_panel_check_content_sharing_available (void)
       ret = FALSE;
       g_clear_error (&error);
     }
+  else
+    {
+      g_object_unref (ref);
+    }
 
-  g_object_unref (ref);
   g_object_unref (installation);
 
   return ret;
