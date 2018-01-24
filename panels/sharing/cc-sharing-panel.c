@@ -761,13 +761,10 @@ cc_sharing_panel_check_content_sharing_available (void)
       return FALSE;
     }
 
-  ref = flatpak_installation_get_installed_ref (installation,
-                                                FLATPAK_REF_KIND_APP,
-                                                "com.endlessm.CompanionAppService",
-                                                NULL,
-                                                NULL,
-                                                NULL,
-                                                &error);
+  ref = flatpak_installation_get_current_installed_app (installation,
+                                                        "com.endlessm.CompanionAppService",
+                                                        NULL,
+                                                        &error);
 
   if (ref == NULL)
     {
@@ -779,8 +776,11 @@ cc_sharing_panel_check_content_sharing_available (void)
       ret = FALSE;
       g_clear_error (&error);
     }
+  else
+    {
+      g_object_unref (ref);
+    }
 
-  g_object_unref (ref);
   g_object_unref (installation);
 
   return ret;
