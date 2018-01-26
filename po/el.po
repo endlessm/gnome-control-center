@@ -10,6 +10,7 @@
 # Kostas Papadimas <pkst@gnome.org>, 2002-2008,2010-2011
 # Michael Kotsarinis <mk73628@gmail.com>, 2011
 # Nikos Charonitakis <charosn@her.forthnet.gr>, 2002-2005
+# Roddy Shuler <roddy@endlessm.com>, 2018
 # Simos Xenitellis <simos@gnome.org>, 2000-2002,2004,2006,2011
 # Spiros Papadimitriou <spapadim+@cs.cmu.edu>, 2000
 # Theodore Dimitriadis <liakoni@gmail.com>, 2010
@@ -18,10 +19,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-11 21:27-0700\n"
-"PO-Revision-Date: 2017-10-12 04:58+0000\n"
+"POT-Creation-Date: 2018-01-25 21:21-0800\n"
+"PO-Revision-Date: 2018-01-26 05:37+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
-"Language-Team: Greek (http://www.transifex.com/endless-mobile-inc/gnome-control-center/language/el/)\n"
+"Language-Team: Greek (http://www.transifex.com/endless-os/gnome-control-center/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,7 +131,7 @@ msgstr "Μπορείτε να προσθέσετε εικόνες στον φά�
 #: ../panels/region/format-chooser.ui.h:3
 #: ../panels/region/input-chooser.ui.h:2
 #: ../panels/search/cc-search-locations-dialog.c:642
-#: ../panels/sharing/cc-sharing-panel.c:375
+#: ../panels/sharing/cc-sharing-panel.c:389
 #: ../panels/user-accounts/data/account-dialog.ui.h:2
 #: ../panels/user-accounts/data/join-dialog.ui.h:2
 #: ../panels/user-accounts/data/password-dialog.ui.h:2
@@ -798,7 +799,7 @@ msgctxt "Calibration quality"
 msgid "Medium"
 msgstr "Μεσαία"
 
-#: ../panels/color/color.ui.h:56 ../panels/power/power.ui.h:2
+#: ../panels/color/color.ui.h:56 ../panels/power/power.ui.h:4
 #: ../panels/privacy/privacy.ui.h:7
 msgid "30 minutes"
 msgstr "30 λεπτά"
@@ -1317,50 +1318,50 @@ msgid ""
 msgstr "Πάνελ;Προβολέας;xrandr;Οθόνη;Ανάλυση;Ανανέωση;Παρακολούθηση;νύχτα;νυχτός;ανατολή;χρώμα;δύση;Panel;Projector;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-panel.c:303 ../panels/network/panel-common.c:123
+#: ../panels/info/cc-info-panel.c:300 ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "Άγνωστο"
 
 #. translators: This is the the type of OS architecture, eg: "64-bit" or
 #. "32-bit"
-#: ../panels/info/cc-info-panel.c:478
+#: ../panels/info/cc-info-panel.c:476
 #, c-format
 msgid "%d-bit"
 msgstr "%d-bit"
 
-#: ../panels/info/cc-info-panel.c:1101
+#: ../panels/info/cc-info-panel.c:1056
 msgid "Ask what to do"
 msgstr "Ερώτηση για την ενέργεια"
 
-#: ../panels/info/cc-info-panel.c:1105
+#: ../panels/info/cc-info-panel.c:1060
 msgid "Do nothing"
 msgstr "Καμία ενέργεια"
 
-#: ../panels/info/cc-info-panel.c:1109
+#: ../panels/info/cc-info-panel.c:1064
 msgid "Open folder"
 msgstr "Άνοιγμα φακέλου"
 
-#: ../panels/info/cc-info-panel.c:1200
+#: ../panels/info/cc-info-panel.c:1155
 msgid "Other Media"
 msgstr "Άλλα μέσα"
 
-#: ../panels/info/cc-info-panel.c:1231
+#: ../panels/info/cc-info-panel.c:1186
 msgid "Select an application for audio CDs"
 msgstr "Επιλέξτε μια εφαρμογή για CD ήχου"
 
-#: ../panels/info/cc-info-panel.c:1232
+#: ../panels/info/cc-info-panel.c:1187
 msgid "Select an application for video DVDs"
 msgstr "Επιλέξτε μια εφαρμογή για DVD βίντεο"
 
-#: ../panels/info/cc-info-panel.c:1233
+#: ../panels/info/cc-info-panel.c:1188
 msgid "Select an application to run when a music player is connected"
 msgstr "Επιλέξτε την εφαρμογή που θα εκτελείται, όταν θα συνδέεται ένας αναπαραγωγέας μουσικής"
 
-#: ../panels/info/cc-info-panel.c:1234
+#: ../panels/info/cc-info-panel.c:1189
 msgid "Select an application to run when a camera is connected"
 msgstr "Επιλέξτε την εφαρμογή που θα εκτελείται, όταν θα συνδέεται μια φωτογραφική μηχανή"
 
-#: ../panels/info/cc-info-panel.c:1235
+#: ../panels/info/cc-info-panel.c:1190
 msgid "Select an application for software CDs"
 msgstr "Επιλέξτε μια εφαρμογή για τα CD λογισμικού"
 
@@ -1368,95 +1369,95 @@ msgstr "Επιλέξτε μια εφαρμογή για τα CD λογισμικ
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#: ../panels/info/cc-info-panel.c:1247
+#: ../panels/info/cc-info-panel.c:1202
 msgid "audio DVD"
 msgstr "DVD ήχου"
 
-#: ../panels/info/cc-info-panel.c:1248
+#: ../panels/info/cc-info-panel.c:1203
 msgid "blank Blu-ray disc"
 msgstr "Κενό Blu-ray"
 
-#: ../panels/info/cc-info-panel.c:1249
+#: ../panels/info/cc-info-panel.c:1204
 msgid "blank CD disc"
 msgstr "Κενό CD"
 
-#: ../panels/info/cc-info-panel.c:1250
+#: ../panels/info/cc-info-panel.c:1205
 msgid "blank DVD disc"
 msgstr "Κενό DVD"
 
-#: ../panels/info/cc-info-panel.c:1251
+#: ../panels/info/cc-info-panel.c:1206
 msgid "blank HD DVD disc"
 msgstr "Κενό HD DVD"
 
-#: ../panels/info/cc-info-panel.c:1252
+#: ../panels/info/cc-info-panel.c:1207
 msgid "Blu-ray video disc"
 msgstr "Δίσκος βίντεο Blu-ray"
 
-#: ../panels/info/cc-info-panel.c:1253
+#: ../panels/info/cc-info-panel.c:1208
 msgid "e-book reader"
 msgstr "Αναγνώστης ηλεκτρονικών βιβλίων"
 
-#: ../panels/info/cc-info-panel.c:1254
+#: ../panels/info/cc-info-panel.c:1209
 msgid "HD DVD video disc"
 msgstr "Δίσκος βίντεο HD DVD"
 
-#: ../panels/info/cc-info-panel.c:1255
+#: ../panels/info/cc-info-panel.c:1210
 msgid "Picture CD"
 msgstr "CD εικόνων"
 
-#: ../panels/info/cc-info-panel.c:1256
+#: ../panels/info/cc-info-panel.c:1211
 msgid "Super Video CD"
 msgstr "Super Video CD"
 
-#: ../panels/info/cc-info-panel.c:1257
+#: ../panels/info/cc-info-panel.c:1212
 msgid "Video CD"
 msgstr "Video CD"
 
-#: ../panels/info/cc-info-panel.c:1258
+#: ../panels/info/cc-info-panel.c:1213
 msgid "Windows software"
 msgstr "Λογισμικό Windows"
 
-#: ../panels/info/cc-info-panel.c:1381
+#: ../panels/info/cc-info-panel.c:1336
 msgid "Section"
 msgstr "Ενότητα"
 
-#: ../panels/info/cc-info-panel.c:1390 ../panels/info/info.ui.h:14
+#: ../panels/info/cc-info-panel.c:1345 ../panels/info/info.ui.h:14
 msgid "Overview"
 msgstr "Επισκόπηση"
 
-#: ../panels/info/cc-info-panel.c:1396 ../panels/info/info.ui.h:21
+#: ../panels/info/cc-info-panel.c:1351 ../panels/info/info.ui.h:21
 msgid "Default Applications"
 msgstr "Προεπιλεγμένες εφαρμογές"
 
-#: ../panels/info/cc-info-panel.c:1401 ../panels/info/info.ui.h:29
+#: ../panels/info/cc-info-panel.c:1356 ../panels/info/info.ui.h:29
 msgid "Removable Media"
 msgstr "Αφαιρούμενα μέσα"
 
-#: ../panels/info/cc-info-panel.c:1507
+#: ../panels/info/cc-info-panel.c:1462
 msgid "No updates available"
 msgstr ""
 
-#: ../panels/info/cc-info-panel.c:1509
+#: ../panels/info/cc-info-panel.c:1464
 msgid "Check for updates now"
 msgstr ""
 
-#: ../panels/info/cc-info-panel.c:1511
+#: ../panels/info/cc-info-panel.c:1466
 msgid "Update failed"
 msgstr ""
 
-#: ../panels/info/cc-info-panel.c:1513
+#: ../panels/info/cc-info-panel.c:1468
 msgid "Checking for updates…"
 msgstr ""
 
-#: ../panels/info/cc-info-panel.c:1516
+#: ../panels/info/cc-info-panel.c:1471
 msgid "Install updates now"
 msgstr ""
 
-#: ../panels/info/cc-info-panel.c:1519
+#: ../panels/info/cc-info-panel.c:1474
 msgid "Installing updates…"
 msgstr ""
 
-#: ../panels/info/cc-info-panel.c:1521
+#: ../panels/info/cc-info-panel.c:1476
 msgid "Restart to complete update"
 msgstr ""
 
@@ -2158,7 +2159,7 @@ msgid "None"
 msgstr "Καμία"
 
 #: ../panels/network/connection-editor/ce-page-details.c:89
-#: ../panels/power/power.ui.h:17
+#: ../panels/power/power.ui.h:19
 msgid "Never"
 msgstr "Ποτέ"
 
@@ -2583,7 +2584,7 @@ msgstr "Επιλογή αρχείου για εισαγωγή"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:182
 #: ../panels/printers/pp-details-dialog.c:320
-#: ../panels/sharing/cc-sharing-panel.c:376
+#: ../panels/sharing/cc-sharing-panel.c:390
 #: ../panels/user-accounts/um-photo-dialog.c:219
 msgid "_Open"
 msgstr "Άν_οιγμα"
@@ -2905,7 +2906,7 @@ msgstr "λεπτομέρειες"
 #: ../panels/network/wireless-security/eap-method-simple.ui.h:2
 #: ../panels/network/wireless-security/ws-leap.ui.h:2
 #: ../panels/network/wireless-security/ws-wpa-psk.ui.h:1
-#: ../panels/sharing/sharing.ui.h:9
+#: ../panels/sharing/sharing.ui.h:10
 #: ../panels/user-accounts/data/account-dialog.ui.h:13
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:7
 msgid "_Password"
@@ -4082,75 +4083,83 @@ msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 msgstr "Ισχύς;Ενέργεια;Ρεύμα;Ύπνωση;Αναστολή;Αδρανοποίηση;Μπαταρία;Φωτεινότητα;Αμυδρό;Κενό;Οθόνη;DPMS;Αδρανές;Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;Idle;"
 
+#: ../panels/power/power.ui.h:2
+msgid "20 minutes"
+msgstr "20 λεπτά"
+
 #: ../panels/power/power.ui.h:3
+msgid "25 minutes"
+msgstr "25 λεπτά"
+
+#: ../panels/power/power.ui.h:5
 msgid "45 minutes"
 msgstr "45 λεπτά"
 
-#: ../panels/power/power.ui.h:4 ../panels/privacy/privacy.ui.h:8
+#: ../panels/power/power.ui.h:6 ../panels/privacy/privacy.ui.h:8
 msgid "1 hour"
 msgstr "1 ώρα"
 
-#: ../panels/power/power.ui.h:5
+#: ../panels/power/power.ui.h:7
 msgid "80 minutes"
 msgstr "80 λεπτά"
 
-#: ../panels/power/power.ui.h:6
+#: ../panels/power/power.ui.h:8
 msgid "90 minutes"
 msgstr "90 λεπτά"
 
-#: ../panels/power/power.ui.h:7
+#: ../panels/power/power.ui.h:9
 msgid "100 minutes"
 msgstr "100 λεπτά"
 
-#: ../panels/power/power.ui.h:8
+#: ../panels/power/power.ui.h:10
 msgid "2 hours"
 msgstr "2 ώρες"
 
-#: ../panels/power/power.ui.h:9 ../panels/privacy/privacy.ui.h:3
+#: ../panels/power/power.ui.h:11 ../panels/privacy/privacy.ui.h:3
 msgid "1 minute"
 msgstr "1 λεπτό"
 
-#: ../panels/power/power.ui.h:10 ../panels/privacy/privacy.ui.h:4
+#: ../panels/power/power.ui.h:12 ../panels/privacy/privacy.ui.h:4
 msgid "2 minutes"
 msgstr "2 λεπτά"
 
-#: ../panels/power/power.ui.h:11 ../panels/privacy/privacy.ui.h:5
+#: ../panels/power/power.ui.h:13 ../panels/privacy/privacy.ui.h:5
 msgid "3 minutes"
 msgstr "3 λεπτά"
 
-#: ../panels/power/power.ui.h:12
+#: ../panels/power/power.ui.h:14
 msgid "4 minutes"
 msgstr "4 λεπτά"
 
-#: ../panels/power/power.ui.h:13 ../panels/privacy/privacy.ui.h:6
+#: ../panels/power/power.ui.h:15 ../panels/privacy/privacy.ui.h:6
 msgid "5 minutes"
 msgstr "5 λεπτά"
 
-#: ../panels/power/power.ui.h:14
+#: ../panels/power/power.ui.h:16
 msgid "8 minutes"
 msgstr "8 λεπτά"
 
-#: ../panels/power/power.ui.h:15
+#: ../panels/power/power.ui.h:17
 msgid "10 minutes"
 msgstr "10 λεπτά"
 
-#: ../panels/power/power.ui.h:16
+#: ../panels/power/power.ui.h:18
 msgid "12 minutes"
 msgstr "12 λεπτά"
 
-#: ../panels/power/power.ui.h:18
+#: ../panels/power/power.ui.h:20
 msgid "Automatic Suspend"
 msgstr "Αυτόματη αναστολή"
 
-#: ../panels/power/power.ui.h:19
+#: ../panels/power/power.ui.h:21
 msgid "_Plugged In"
 msgstr "_Συνδεμένο"
 
-#: ../panels/power/power.ui.h:20
+#: ../panels/power/power.ui.h:22
 msgid "On _Battery Power"
 msgstr "Με τροφοδοσία _μπαταρίας"
 
-#: ../panels/power/power.ui.h:21 ../panels/universal-access/uap.ui.h:33
+#: ../panels/power/power.ui.h:23 ../panels/universal-access/uap.ui.h:33
 msgid "Delay"
 msgstr "Καθυστέρηση"
 
@@ -5244,57 +5253,57 @@ msgstr "Προτιμήσεις"
 msgid "No networks selected for sharing"
 msgstr "Δεν έχουν επιλεγεί δίκτυα για κοινή χρήση"
 
-#: ../panels/sharing/cc-sharing-panel.c:266
+#: ../panels/sharing/cc-sharing-panel.c:280
 msgctxt "service is enabled"
 msgid "On"
 msgstr "Ενεργό"
 
-#: ../panels/sharing/cc-sharing-panel.c:268
-#: ../panels/sharing/cc-sharing-panel.c:295
+#: ../panels/sharing/cc-sharing-panel.c:282
+#: ../panels/sharing/cc-sharing-panel.c:309
 msgctxt "service is disabled"
 msgid "Off"
 msgstr "Ανενεργό"
 
-#: ../panels/sharing/cc-sharing-panel.c:298
+#: ../panels/sharing/cc-sharing-panel.c:312
 msgctxt "service is enabled"
 msgid "Enabled"
 msgstr "Ενεργοποιημένη"
 
-#: ../panels/sharing/cc-sharing-panel.c:301
+#: ../panels/sharing/cc-sharing-panel.c:315
 msgctxt "service is active"
 msgid "Active"
 msgstr "Ενεργή"
 
-#: ../panels/sharing/cc-sharing-panel.c:372
+#: ../panels/sharing/cc-sharing-panel.c:386
 msgid "Choose a Folder"
 msgstr "Επιλογή φακέλου"
 
-#: ../panels/sharing/cc-sharing-panel.c:683
+#: ../panels/sharing/cc-sharing-panel.c:876
 #, c-format
 msgid ""
 "Personal File Sharing allows you to share your Public folder with others on "
 "your current network using: <a href=\"dav://%s\">dav://%s</a>"
 msgstr "Η κοινή χρήση προσωπικών αρχείων επιτρέπει να μοιράζεστε τον δημόσιο φάκελό σας με άλλους, στο υπάρχον δίκτυό σας, χρησιμοποιώντας: <a href=\"dav://%s\">dav://%s</a>"
 
-#: ../panels/sharing/cc-sharing-panel.c:685
+#: ../panels/sharing/cc-sharing-panel.c:878
 #, c-format
 msgid ""
 "When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
 msgstr "Όταν είναι ενεργοποιημένη η απομακρυσμένη σύνδεση, οι απομακρυσμένοι χρήστες μπορούν να συνδεθούν χρησιμοποιώντας εντολή ασφαλούς κελύφους (SSH):\n<a href=\"ssh %s\">ssh %s</a>"
 
-#: ../panels/sharing/cc-sharing-panel.c:687
+#: ../panels/sharing/cc-sharing-panel.c:880
 #, c-format
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to <a href=\"vnc://%s\">vnc://%s</a>"
 msgstr "Η κοινή χρήση οθόνης επιτρέπει σε απομακρυσμένους χρήστες να προβάλουν ή να ελέγχουν την οθόνη σας συνδεόμενοι με: <a href=\"vnc://%s\">vnc://%s</a>"
 
-#: ../panels/sharing/cc-sharing-panel.c:799
+#: ../panels/sharing/cc-sharing-panel.c:992
 msgid "Copy"
 msgstr "Αντιγραφή"
 
-#: ../panels/sharing/cc-sharing-panel.c:1125
+#: ../panels/sharing/cc-sharing-panel.c:1322
 msgid "Sharing"
 msgstr "Κοινή χρήση"
 
@@ -5348,60 +5357,74 @@ msgid "_Remote Login"
 msgstr "_Απομακρυσμένη σύνδεση"
 
 #: ../panels/sharing/sharing.ui.h:6
+msgid "_Content Sharing"
+msgstr ""
+
+#: ../panels/sharing/sharing.ui.h:7
 msgid "Some services are disabled because of no network access."
 msgstr "Μερικές υπηρεσίες είναι ανενεργές λόγω έλλειψης πρόσβασης στο δίκτυο."
 
-#: ../panels/sharing/sharing.ui.h:7
+#: ../panels/sharing/sharing.ui.h:8
 msgid "File Sharing"
 msgstr "Κοινή χρήση αρχείων"
 
-#: ../panels/sharing/sharing.ui.h:8
+#: ../panels/sharing/sharing.ui.h:9
 msgid "_Require Password"
 msgstr "Απαιτείται _κωδικός πρόσβασης"
 
-#: ../panels/sharing/sharing.ui.h:10
+#: ../panels/sharing/sharing.ui.h:11
 msgid "Remote Login"
 msgstr "Απομακρυσμένη σύνδεση"
 
-#: ../panels/sharing/sharing.ui.h:11
+#: ../panels/sharing/sharing.ui.h:12
 msgid "Screen Sharing"
 msgstr "Κοινή χρήση οθόνης"
 
-#: ../panels/sharing/sharing.ui.h:12
+#: ../panels/sharing/sharing.ui.h:13
 msgid "_Allow connections to control the screen"
 msgstr "Να επιτ_ρέπεται στις συνδέσεις ο έλεγχος της οθόνης"
 
-#: ../panels/sharing/sharing.ui.h:13
+#: ../panels/sharing/sharing.ui.h:14
 msgid "_Password:"
 msgstr "Κω_δικός πρόσβασης:"
 
-#: ../panels/sharing/sharing.ui.h:14
+#: ../panels/sharing/sharing.ui.h:15
 msgid "_Show Password"
 msgstr "Ε_μφάνιση κωδικού πρόσβασης"
 
-#: ../panels/sharing/sharing.ui.h:15
+#: ../panels/sharing/sharing.ui.h:16
 msgid "Access Options"
 msgstr "Επιλογές πρόσβασης"
 
-#: ../panels/sharing/sharing.ui.h:16
+#: ../panels/sharing/sharing.ui.h:17
 msgid "_New connections must ask for access"
 msgstr "Οι _νέες συνδέσεις πρέπει να ζητούν πρόσβαση"
 
-#: ../panels/sharing/sharing.ui.h:17
+#: ../panels/sharing/sharing.ui.h:18
 msgid "_Require a password"
 msgstr "_Απαιτείται κωδικός πρόσβασης"
 
-#: ../panels/sharing/sharing.ui.h:18
+#: ../panels/sharing/sharing.ui.h:19
 msgid "Media Sharing"
 msgstr "Κοινή χρήση πολυμέσων"
 
-#: ../panels/sharing/sharing.ui.h:19
+#: ../panels/sharing/sharing.ui.h:20
 msgid "Share music, photos and videos over the network."
 msgstr "Κοινή χρήση μουσικής, φωτογραφιών και βίντεο μέσω δικτύου."
 
-#: ../panels/sharing/sharing.ui.h:20
+#: ../panels/sharing/sharing.ui.h:21
 msgid "Folders"
 msgstr "Φάκελοι"
+
+#: ../panels/sharing/sharing.ui.h:22
+msgid "Content Sharing"
+msgstr ""
+
+#: ../panels/sharing/sharing.ui.h:23
+msgid ""
+"Content Sharing allows users to view content installed on this computer on "
+"Android Devices on the same Network."
+msgstr ""
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -6715,19 +6738,19 @@ msgstr "Η συνεδρία άρχισε"
 msgid "%s — Account Activity"
 msgstr "%s — Δραστηριότητα λογαριασμού"
 
-#: ../panels/user-accounts/um-password-dialog.c:153
+#: ../panels/user-accounts/um-password-dialog.c:190
 msgid "Please choose another password."
 msgstr "Παρακαλούμε επιλέξτε άλλον κωδικό πρόσβασης."
 
-#: ../panels/user-accounts/um-password-dialog.c:162
+#: ../panels/user-accounts/um-password-dialog.c:199
 msgid "Please type your current password again."
 msgstr "Παρακαλούμε πληκτρολογήστε ξανά τον τρέχων κωδικό πρόσβασής σας."
 
-#: ../panels/user-accounts/um-password-dialog.c:168
+#: ../panels/user-accounts/um-password-dialog.c:205
 msgid "Password could not be changed"
 msgstr "Ο κωδικός πρόσβασής σας δεν μπορούσε να αλλαχθεί"
 
-#: ../panels/user-accounts/um-password-dialog.c:334
+#: ../panels/user-accounts/um-password-dialog.c:371
 msgid "The passwords do not match."
 msgstr "Δεν ταιριάζουν οι κωδικοί πρόσβασης."
 
