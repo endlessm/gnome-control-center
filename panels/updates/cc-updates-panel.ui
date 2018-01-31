@@ -193,7 +193,7 @@
 
                 <!-- Schedule Updates section -->
                 <child>
-                  <object class="GtkFrame">
+                  <object class="GtkFrame" id="scheduled_updates_container">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="sensitive" bind-source="automatic_updates_switch" bind-property="active" bind-flags="default|sync-create" />

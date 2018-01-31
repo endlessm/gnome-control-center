@@ -27,7 +27,8 @@
 #include <NetworkManager.h>
 
 #define NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED "connection.allow-downloads-when-metered"
-#define SYSTEM_TARIFF_FILENAME                  "system-tariff"
+#define NM_SETTING_TARIFF_ENABLED               "connection.tariff-enabled"
+#define NM_SETTING_TARIFF                       "connection.tariff"
 
 struct _CcUpdatesPanel
 {
@@ -39,6 +40,7 @@ struct _CcUpdatesPanel
   GtkWidget          *network_name_label;
   GtkWidget          *network_settings_label;
   GtkWidget          *network_status_icon;
+  GtkWidget          *scheduled_updates_container;
   GtkWidget          *scheduled_updates_switch;
   CcTariffEditor     *tariff_editor;
 
@@ -47,7 +49,7 @@ struct _CcUpdatesPanel
   NMDevice           *current_device;
 
   /* Signal handlers */
-  guint               changed_id;
+  gulong              changed_id;
   guint               save_tariff_timeout_id;
 
   GCancellable       *cancellable;
@@ -60,7 +62,7 @@ static void          on_automatic_updates_switch_changed_cb      (GtkSwitch     
 
 static void          on_network_changed_cb                       (CcUpdatesPanel *self);
 
-static void          on_network_changes_commited_cb              (GObject        *source,
+static void          on_network_changes_committed_cb             (GObject        *source,
                                                                   GAsyncResult   *result,
                                                                   gpointer        user_data);
 
@@ -69,10 +71,6 @@ static void          on_scheduled_updates_switch_changed_cb      (GtkSwitch     
                                                                   CcUpdatesPanel *self);
 
 static void          on_tariff_changed_cb                        (CcTariffEditor *tariff_editor,
-                                                                  CcUpdatesPanel *self);
-
-static void          on_tariff_file_deleted_cb                   (GFile          *file,
-                                                                  GAsyncResult   *result,
                                                                   CcUpdatesPanel *self);
 
 
@@ -90,19 +88,32 @@ enum
  */
 
 static void
-set_automatic_updates_setting (NMConnection   *connection,
-                               gboolean        enabled)
+cleanup_signals (CcUpdatesPanel *self)
+{
+  if (self->changed_id > 0)
+    {
+      g_signal_handler_disconnect (self->current_device, self->changed_id);
+      self->changed_id = 0;
+    }
+}
+
+static void
+store_automatic_updates_setting (NMConnection *connection,
+                                 gboolean      automatic_updates_enabled,
+                                 gboolean      tariff_enabled,
+                                 GVariant     *tariff_variant)
 {
   NMSettingUser *setting_user;
+  g_autofree gchar *tariff_string = NULL;
   g_autoptr(GError) error = NULL;
-
-  g_debug ("Setting "NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED" to %d", enabled);
 
   setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
 
+  g_debug ("Setting "NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED" to %d", automatic_updates_enabled);
+
   nm_setting_user_set_data (setting_user,
                             NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED,
-                            enabled ? "1" : "0",
+                            automatic_updates_enabled ? "1" : "0",
                             &error);
 
   if (error)
@@ -111,10 +122,33 @@ set_automatic_updates_setting (NMConnection   *connection,
       return;
     }
 
+  g_debug ("Setting "NM_SETTING_TARIFF_ENABLED" to %d", tariff_enabled);
+
+  nm_setting_user_set_data (setting_user,
+                            NM_SETTING_TARIFF_ENABLED,
+                            tariff_enabled ? "1" : "0",
+                            &error);
+  if (error)
+    {
+      g_warning ("Error storing "NM_SETTING_TARIFF_ENABLED": %s", error->message);
+      return;
+    }
+
+  tariff_string = tariff_variant ? g_variant_print (tariff_variant, TRUE) : NULL;
+
+  g_debug ("Setting "NM_SETTING_TARIFF" to %s", tariff_string);
+  nm_setting_user_set_data (setting_user, NM_SETTING_TARIFF, tariff_string, &error);
+
+  if (error)
+    {
+      g_warning ("Error storing "NM_SETTING_TARIFF": %s", error->message);
+      return;
+    }
+
   nm_remote_connection_commit_changes_async (NM_REMOTE_CONNECTION (connection),
                                              TRUE, /* save to disk */
                                              NULL,
-                                             on_network_changes_commited_cb,
+                                             on_network_changes_committed_cb,
                                              NULL);
 }
 
@@ -190,7 +224,7 @@ ensure_setting_user (CcUpdatesPanel *self,
       metered = nm_setting_connection_get_metered (setting);
       enabled = metered != NM_METERED_YES && metered != NM_METERED_GUESS_YES;
 
-      set_automatic_updates_setting (connection, enabled);
+      store_automatic_updates_setting (connection, enabled, FALSE, NULL);
 
       g_signal_handlers_block_by_func (self->automatic_updates_switch,
                                        on_automatic_updates_switch_changed_cb,
@@ -285,6 +319,118 @@ get_network_status_icon_name (CcUpdatesPanel *self,
 }
 
 static void
+load_tariff_from_connection (CcUpdatesPanel *self,
+                             NMConnection   *connection)
+{
+  g_autoptr(MwtTariff) tariff = NULL;
+  g_autoptr(GError) error = NULL;
+  const gchar *tariff_value = NULL;
+  gboolean tariff_enabled = FALSE;
+
+  g_debug ("Loading tariff from connection");
+
+  if (connection)
+    {
+      NMSettingUser *setting_user;
+      const gchar *tariff_enabled_value = NULL;
+
+      setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
+      tariff_value = nm_setting_user_get_data (setting_user, NM_SETTING_TARIFF);
+      tariff_enabled_value = nm_setting_user_get_data (setting_user, NM_SETTING_TARIFF_ENABLED);
+
+      if (tariff_enabled_value)
+        tariff_enabled = g_str_equal (tariff_enabled_value, "1");
+    }
+
+  /* Only load the tariff if there is a setting stored */
+  if (tariff_value && *tariff_value != '\0')
+    {
+      g_autoptr(MwtTariffLoader) tariff_loader = NULL;
+      g_autoptr(GVariant) variant = NULL;
+
+      variant = g_variant_parse (NULL, tariff_value, NULL, NULL, &error);
+      if (error)
+        {
+          g_warning ("Error loading tariff: %s", error->message);
+          return;
+        }
+
+      tariff_loader = mwt_tariff_loader_new ();
+      mwt_tariff_loader_load_from_variant (tariff_loader, variant, &error);
+      if (error)
+        {
+          g_warning ("Error loading tariff: %s", error->message);
+          return;
+        }
+
+      tariff = g_object_ref (mwt_tariff_loader_get_tariff (tariff_loader));
+    }
+
+  g_signal_handlers_block_by_func (self->tariff_editor, on_tariff_changed_cb, self);
+  g_signal_handlers_block_by_func (self->scheduled_updates_switch, on_scheduled_updates_switch_changed_cb, self);
+
+  cc_tariff_editor_load_tariff (self->tariff_editor, tariff, &error);
+
+  if (error)
+    g_warning ("Error loading tariff: %s", error->message);
+
+  gtk_widget_set_sensitive (self->scheduled_updates_container, connection != NULL);
+  gtk_switch_set_active (GTK_SWITCH (self->scheduled_updates_switch), tariff_enabled);
+
+  g_signal_handlers_unblock_by_func (self->scheduled_updates_switch, on_scheduled_updates_switch_changed_cb, self);
+  g_signal_handlers_unblock_by_func (self->tariff_editor, on_tariff_changed_cb, self);
+}
+
+static void
+load_automatic_updates_from_connection (CcUpdatesPanel *self,
+                                        NMConnection   *connection)
+{
+  gtk_widget_set_sensitive (self->automatic_updates_container, connection != NULL);
+
+  ensure_setting_user (self, connection);
+
+  g_signal_handlers_block_by_func (self->automatic_updates_switch, on_automatic_updates_switch_changed_cb, self);
+
+  if (connection)
+    {
+      NMSettingUser *setting_user;
+      const gchar *value;
+
+      setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
+      value = nm_setting_user_get_data (setting_user, NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED);
+
+      gtk_switch_set_active (GTK_SWITCH (self->automatic_updates_switch), g_strcmp0 (value, "1") == 0);
+    }
+  else
+    {
+      gtk_switch_set_active (GTK_SWITCH (self->automatic_updates_switch), FALSE);
+    }
+
+  g_signal_handlers_unblock_by_func (self->automatic_updates_switch, on_automatic_updates_switch_changed_cb, self);
+}
+
+static void
+load_metered_label_from_connection (CcUpdatesPanel *self,
+                                    NMConnection   *connection)
+{
+  gtk_widget_set_visible (self->metered_data_label, connection != NULL);
+
+  if (connection)
+    {
+      NMSettingConnection *setting;
+      NMMetered metered;
+
+      setting = nm_connection_get_setting_connection (connection);
+      metered = nm_setting_connection_get_metered (setting);
+
+      if (metered == NM_METERED_YES || metered == NM_METERED_GUESS_YES)
+        gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Limited data plan connection"));
+      else
+        gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Unlimited data plan connection"));
+    }
+}
+
+static void
 update_active_network (CcUpdatesPanel *self)
 {
   NMAccessPoint *ap;
@@ -295,15 +441,11 @@ update_active_network (CcUpdatesPanel *self)
   get_active_connection_and_device (self, &device, &connection, &ap);
 
   /* Setup the new device */
+  if (self->current_device != device)
+    cleanup_signals (self);
+
   if (g_set_object (&self->current_device, device) && device)
     {
-      /* Cleanup previous device handler */
-      if (self->changed_id > 0)
-        {
-          g_source_remove (self->changed_id);
-          self->changed_id = 0;
-        }
-
       self->changed_id = g_signal_connect_swapped (device,
                                                    "state-changed",
                                                    G_CALLBACK (on_network_changed_cb),
@@ -330,127 +472,28 @@ update_active_network (CcUpdatesPanel *self)
         gtk_label_set_label (GTK_LABEL (self->network_name_label), _("No active connection"));
     }
 
-  /* Metered status */
-  gtk_widget_set_visible (self->metered_data_label, connection != NULL);
-
-  if (connection)
-    {
-      NMSettingConnection *setting;
-      NMMetered metered;
-
-      setting = nm_connection_get_setting_connection (connection);
-      metered = nm_setting_connection_get_metered (setting);
-
-      if (metered == NM_METERED_YES || metered == NM_METERED_GUESS_YES)
-        gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Limited data plan connection"));
-      else
-        gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Unlimited data plan connection"));
-    }
-
-  /* Automatic Updates switch */
-  gtk_widget_set_sensitive (self->automatic_updates_container, connection != NULL);
-
-  ensure_setting_user (self, connection);
-
-  if (connection)
-    {
-      NMSettingUser *setting_user;
-      const gchar *value;
-
-      setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
-      value = nm_setting_user_get_data (setting_user, NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED);
-
-      g_signal_handlers_block_by_func (self->automatic_updates_switch,
-                                       on_automatic_updates_switch_changed_cb,
-                                       self);
-
-      gtk_switch_set_active (GTK_SWITCH (self->automatic_updates_switch), g_strcmp0 (value, "1") == 0);
-
-      g_signal_handlers_unblock_by_func (self->automatic_updates_switch,
-                                         on_automatic_updates_switch_changed_cb,
-                                         self);
-    }
+  load_metered_label_from_connection (self, connection);
+  load_automatic_updates_from_connection (self, connection);
+  load_tariff_from_connection (self, connection);
 }
 
 static void
-load_tariff (CcUpdatesPanel *self)
+save_connection_settings (CcUpdatesPanel *self)
 {
-  g_autoptr(MwtTariffLoader) tariff_loader = NULL;
-  g_autoptr(GBytes) bytes = NULL;
-  g_autoptr(GError) error = NULL;
-  g_autofree gchar *tariff_path = NULL;
-  gchar *contents = NULL;
-  gsize size = 0;
+  NMConnection *connection;
+  GVariant *tariff_variant;
+  gboolean automatic_updates_enabled;
+  gboolean tariff_enabled;
 
-  g_debug ("Loading tariff");
+  g_debug ("Saving connection settings");
 
-  tariff_path = g_build_filename (g_get_user_config_dir (), SYSTEM_TARIFF_FILENAME, NULL);
-  g_file_get_contents (tariff_path, &contents, &size, &error);
-  if (error)
-    {
-      if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
-        g_warning ("Error reading tariff file: %s", error->message);
-      return;
-    }
+  get_active_connection_and_device (self, NULL, &connection, NULL);
 
-  bytes = g_bytes_new_take (contents, size);
-  tariff_loader = mwt_tariff_loader_new ();
-  mwt_tariff_loader_load_from_bytes (tariff_loader, bytes, &error);
-  if (error)
-    {
-      g_warning ("Error loading tariff: %s", error->message);
-      return;
-    }
+  automatic_updates_enabled = gtk_switch_get_active (GTK_SWITCH (self->automatic_updates_switch));
+  tariff_enabled = gtk_switch_get_active (GTK_SWITCH (self->scheduled_updates_switch));
+  tariff_variant = cc_tariff_editor_get_tariff_as_variant (self->tariff_editor);
 
-  g_signal_handlers_block_by_func (self->tariff_editor, on_tariff_changed_cb, self);
-  g_signal_handlers_block_by_func (self->scheduled_updates_switch, on_scheduled_updates_switch_changed_cb, self);
-
-  cc_tariff_editor_load_tariff (self->tariff_editor,
-                                mwt_tariff_loader_get_tariff (tariff_loader),
-                                &error);
-
-  if (error)
-    g_warning ("Error loading tariff: %s", error->message);
-  else
-    gtk_switch_set_active (GTK_SWITCH (self->scheduled_updates_switch), TRUE);
-
-  g_signal_handlers_unblock_by_func (self->scheduled_updates_switch, on_scheduled_updates_switch_changed_cb, self);
-  g_signal_handlers_unblock_by_func (self->tariff_editor, on_tariff_changed_cb, self);
-}
-
-static void
-save_tariff (CcUpdatesPanel *self)
-{
-  g_autoptr(GError) error = NULL;
-  g_autofree gchar *tariff_path = NULL;
-  GBytes *tariff_bytes;
-
-  tariff_path = g_build_filename (g_get_user_config_dir (), SYSTEM_TARIFF_FILENAME, NULL);
-  tariff_bytes = cc_tariff_editor_get_tariff_as_bytes (self->tariff_editor);
-
-  if (!tariff_bytes || !gtk_switch_get_active (GTK_SWITCH (self->scheduled_updates_switch)))
-    {
-      g_autoptr(GFile) file = g_file_new_for_path (tariff_path);
-
-      g_debug ("Deleting tariff");
-
-      g_file_delete_async (file,
-                           G_PRIORITY_LOW,
-                           NULL,
-                           (GAsyncReadyCallback) on_tariff_file_deleted_cb,
-                           &error);
-      return;
-    }
-
-  g_debug ("Saving tariff");
-
-  g_file_set_contents (tariff_path,
-                       g_bytes_get_data (tariff_bytes, NULL),
-                       g_bytes_get_size (tariff_bytes),
-                       &error);
-
-  if (error)
-    g_critical ("Error saving tariff file: %s", error->message);
+  store_automatic_updates_setting (connection, automatic_updates_enabled, tariff_enabled, tariff_variant);
 }
 
 static gboolean
@@ -458,7 +501,7 @@ save_tariff_cb (gpointer user_data)
 {
   CcUpdatesPanel *self = CC_UPDATES_PANEL (user_data);
 
-  save_tariff (self);
+  save_connection_settings (self);
   self->save_tariff_timeout_id = 0;
 
   return G_SOURCE_REMOVE;
@@ -485,17 +528,7 @@ on_automatic_updates_switch_changed_cb (GtkSwitch      *sw,
                                         GParamSpec     *pspec,
                                         CcUpdatesPanel *self)
 {
-  NMConnection *connection;
-  gboolean active;
-
-  active = gtk_switch_get_active (sw);
-  get_active_connection_and_device (self, NULL, &connection, NULL);
-
-  set_automatic_updates_setting (connection, active);
-
-  /* Disable scheduled updates if automatic updates are disabled too */
-  if (!active)
-    gtk_switch_set_active (GTK_SWITCH (self->scheduled_updates_switch), FALSE);
+  save_connection_settings (self);
 }
 
 static gboolean
@@ -534,16 +567,16 @@ on_network_changed_cb (CcUpdatesPanel *self)
 }
 
 static void
-on_network_changes_commited_cb (GObject      *source,
-                                GAsyncResult *result,
-                                gpointer      user_data)
+on_network_changes_committed_cb (GObject      *source,
+                                 GAsyncResult *result,
+                                 gpointer      user_data)
 {
   g_autoptr(GError) error = NULL;
 
   nm_remote_connection_commit_changes_finish (NM_REMOTE_CONNECTION (source), result, &error);
 
   if (error)
-    g_warning ("Error storing "NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED": %s", error->message);
+    g_warning ("Error storing connection settings: %s", error->message);
 }
 
 static void
@@ -565,19 +598,6 @@ on_tariff_changed_cb (CcTariffEditor *tariff_editor,
   schedule_save_tariff (self);
 }
 
-static void
-on_tariff_file_deleted_cb (GFile          *file,
-                           GAsyncResult   *result,
-                           CcUpdatesPanel *self)
-{
-  g_autoptr(GError) error = NULL;
-
-  g_file_delete_finish (file, result, &error);
-
-  if (error && !g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
-    g_critical ("Error deleting tariff file: %s", error->message);
-}
-
 
 /*
  * GObject overrides
@@ -590,7 +610,7 @@ cc_updates_panel_dispose (GObject *object)
 
   if (self->save_tariff_timeout_id > 0)
     {
-      save_tariff (self);
+      save_connection_settings (self);
       g_source_remove (self->save_tariff_timeout_id);
       self->save_tariff_timeout_id = 0;
     }
@@ -602,6 +622,8 @@ static void
 cc_updates_panel_finalize (GObject *object)
 {
   CcUpdatesPanel *self = (CcUpdatesPanel *)object;
+
+  cleanup_signals (self);
 
   g_cancellable_cancel (self->cancellable);
   g_clear_object (&self->cancellable);
@@ -648,6 +670,7 @@ cc_updates_panel_class_init (CcUpdatesPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcUpdatesPanel, network_name_label);
   gtk_widget_class_bind_template_child (widget_class, CcUpdatesPanel, network_settings_label);
   gtk_widget_class_bind_template_child (widget_class, CcUpdatesPanel, network_status_icon);
+  gtk_widget_class_bind_template_child (widget_class, CcUpdatesPanel, scheduled_updates_container);
   gtk_widget_class_bind_template_child (widget_class, CcUpdatesPanel, scheduled_updates_switch);
   gtk_widget_class_bind_template_child (widget_class, CcUpdatesPanel, tariff_editor);
 
@@ -672,10 +695,8 @@ cc_updates_panel_init (CcUpdatesPanel *self)
   settings_text = g_strdup_printf ("<a href=\"\">%s</a>", _("Change Network Settings…"));
   gtk_label_set_markup (GTK_LABEL (self->network_settings_label), settings_text);
 
-  /* Load any saved tariff */
-  load_tariff (self);
-
-  /* Setup network manager */
+ /* FIXME: Rework this to be async. This will be done at the same time as
+  * reworking all the other panels to be async. */
   self->nm_client = nm_client_new (NULL, NULL);
 
   update_active_network (self);

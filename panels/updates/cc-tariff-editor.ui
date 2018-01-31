@@ -198,6 +198,7 @@
 
   <!-- Adjustments for the spinners -->
   <object class="GtkAdjustment" id="adjustment_from_hours">
+    <property name="value">22</property>
     <property name="upper">23</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
@@ -210,6 +211,7 @@
     <signal name="notify::value" handler="on_time_changed_cb" object="CcTariffEditor" swapped="yes" />
   </object>
   <object class="GtkAdjustment" id="adjustment_to_hours">
+    <property name="value">6</property>
     <property name="upper">23</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>

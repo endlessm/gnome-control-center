@@ -37,7 +37,7 @@ struct _CcTariffEditor
   GtkWidget          *stack_from;
   GtkWidget          *stack_to;
 
-  GBytes             *tariff_as_bytes;
+  GVariant           *tariff_as_variant;
 
   /* Clock format */
   GSettings          *settings_clock;
@@ -76,6 +76,15 @@ static guint signals[LAST_SIGNAL] = { 0, };
 /*
  * Auxiliary methods
  */
+
+static gint
+get_am_hour (GDateTime *dt)
+{
+  if (g_date_time_get_hour (dt) % 12 == 0)
+    return 12;
+
+  return g_date_time_get_hour (dt) % 12;
+}
 
 static void
 update_seconds_from_adjustments (CcTariffEditor *self)
@@ -118,7 +127,7 @@ setup_tariff (CcTariffEditor  *self,
     return FALSE;
 
   /*
-   * Right now, it only parsed the same kind of tariff it generates, a tariff
+   * Right now, it only parses the same kind of tariff it generates, a tariff
    * with these 2 periods:
    *
    *  1 → forbidden downloads period
@@ -187,17 +196,8 @@ setup_tariff (CcTariffEditor  *self,
       gtk_stack_set_visible_child_name (GTK_STACK (self->stack_from), self->time_period_from == AM ? "am" : "pm");
       gtk_stack_set_visible_child_name (GTK_STACK (self->stack_to), self->time_period_to == AM ? "am" : "pm");
 
-      /* Special-case: 12 AM/PM must show up as 12, not as 0 AM/PM */
-      if (g_date_time_get_hour (period_start) % 12 == 0)
-        gtk_adjustment_set_value (self->adjustment_from_hours, 12);
-      else
-        gtk_adjustment_set_value (self->adjustment_from_hours, g_date_time_get_hour (period_start) % 12);
-
-      if (g_date_time_get_hour (period_end) % 12 == 0)
-        gtk_adjustment_set_value (self->adjustment_to_hours, 12);
-      else
-        gtk_adjustment_set_value (self->adjustment_to_hours, g_date_time_get_hour (period_end) % 12);
-
+      gtk_adjustment_set_value (self->adjustment_from_hours, get_am_hour (period_start));
+      gtk_adjustment_set_value (self->adjustment_to_hours, get_am_hour (period_start));
       gtk_adjustment_set_value (self->adjustment_from_minutes, g_date_time_get_minute (period_start));
       gtk_adjustment_set_value (self->adjustment_to_minutes, g_date_time_get_minute (period_end));
     }
@@ -258,11 +258,11 @@ update_tariff (CcTariffEditor *self,
   mwt_tariff_builder_add_period (tariff_builder, allowed_period);
 
   /* Store the new tariff */
-  g_clear_pointer (&self->tariff_as_bytes, g_bytes_unref);
-  self->tariff_as_bytes = mwt_tariff_builder_get_tariff_as_bytes (tariff_builder);
+  g_clear_pointer (&self->tariff_as_variant, g_variant_unref);
+  self->tariff_as_variant = mwt_tariff_builder_get_tariff_as_variant (tariff_builder);
 
-  if (!self->tariff_as_bytes)
-    g_critical ("Error building tariff file");
+  if (!self->tariff_as_variant)
+    g_critical ("Error building tariff");
   else if (should_notify)
     g_signal_emit (self, signals[TARIFF_CHANGED], 0);
 }
@@ -270,7 +270,16 @@ update_tariff (CcTariffEditor *self,
 static void
 update_adjustments (CcTariffEditor *self)
 {
+  g_autoptr(GDateTime) start = NULL;
+  g_autoptr(GDateTime) end = NULL;
+
   g_debug ("Updating adjustments");
+
+  start = g_date_time_new_from_unix_utc (self->seconds_to_start);
+  end = g_date_time_new_from_unix_utc (self->seconds_to_end);
+
+  g_signal_handlers_block_by_func (self->adjustment_from_hours, on_time_changed_cb, self);
+  g_signal_handlers_block_by_func (self->adjustment_to_hours, on_time_changed_cb, self);
 
   /* From */
   if (self->clock_format == G_DESKTOP_CLOCK_FORMAT_24H)
@@ -279,6 +288,8 @@ update_adjustments (CcTariffEditor *self)
 
       gtk_adjustment_set_lower (self->adjustment_from_hours, 0);
       gtk_adjustment_set_upper (self->adjustment_from_hours, 23);
+
+      gtk_adjustment_set_value (self->adjustment_from_hours, g_date_time_get_hour (start));
     }
   else
     {
@@ -291,6 +302,8 @@ update_adjustments (CcTariffEditor *self)
 
       gtk_adjustment_set_lower (self->adjustment_from_hours, 1);
       gtk_adjustment_set_upper (self->adjustment_from_hours, 12);
+
+      gtk_adjustment_set_value (self->adjustment_from_hours, get_am_hour (start));
     }
 
   /* To */
@@ -300,6 +313,8 @@ update_adjustments (CcTariffEditor *self)
 
       gtk_adjustment_set_lower (self->adjustment_to_hours, 0);
       gtk_adjustment_set_upper (self->adjustment_to_hours, 23);
+
+      gtk_adjustment_set_value (self->adjustment_to_hours, g_date_time_get_hour (end));
     }
   else
     {
@@ -312,7 +327,12 @@ update_adjustments (CcTariffEditor *self)
 
       gtk_adjustment_set_lower (self->adjustment_to_hours, 1);
       gtk_adjustment_set_upper (self->adjustment_to_hours, 12);
+
+      gtk_adjustment_set_value (self->adjustment_to_hours, get_am_hour (end));
     }
+
+  g_signal_handlers_unblock_by_func (self->adjustment_from_hours, on_time_changed_cb, self);
+  g_signal_handlers_unblock_by_func (self->adjustment_to_hours, on_time_changed_cb, self);
 }
 
 
@@ -413,7 +433,7 @@ cc_tariff_editor_finalize (GObject *object)
   CcTariffEditor *self = (CcTariffEditor *)object;
 
   g_clear_object (&self->settings_clock);
-  g_clear_pointer (&self->tariff_as_bytes, g_bytes_unref);
+  g_clear_pointer (&self->tariff_as_variant, g_variant_unref);
 
   G_OBJECT_CLASS (cc_tariff_editor_parent_class)->finalize (object);
 }
@@ -455,6 +475,10 @@ cc_tariff_editor_init (CcTariffEditor *self)
 {
   gtk_widget_init_template (GTK_WIDGET (self));
 
+  /* Hardcode the default hours (22:00 and 6:00) */
+  self->seconds_to_start = 22 * 60 * 60;
+  self->seconds_to_end = (6 + 24) * 60 * 60;
+
   /* Clock settings */
   self->settings_clock = g_settings_new (CLOCK_SCHEMA);
   self->clock_format = g_settings_get_enum (self->settings_clock, CLOCK_FORMAT_KEY);
@@ -465,14 +489,16 @@ cc_tariff_editor_init (CcTariffEditor *self)
                     "changed::"CLOCK_FORMAT_KEY,
                     G_CALLBACK (on_clock_settings_changed_cb),
                     self);
+
+  update_tariff (self, FALSE);
 }
 
-GBytes*
-cc_tariff_editor_get_tariff_as_bytes (CcTariffEditor *self)
+GVariant*
+cc_tariff_editor_get_tariff_as_variant (CcTariffEditor *self)
 {
   g_return_val_if_fail (CC_IS_TARIFF_EDITOR (self), NULL);
 
-  return self->tariff_as_bytes;
+  return self->tariff_as_variant;
 }
 
 void

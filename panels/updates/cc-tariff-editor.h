@@ -35,12 +35,12 @@ typedef enum
 
 G_DECLARE_FINAL_TYPE (CcTariffEditor, cc_tariff_editor, CC, TARIFF_EDITOR, GtkGrid)
 
-GQuark     cc_tariff_editor_error_quark         (void);
+GQuark    cc_tariff_editor_error_quark           (void);
 
-GBytes*    cc_tariff_editor_get_tariff_as_bytes (CcTariffEditor  *self);
+GVariant* cc_tariff_editor_get_tariff_as_variant (CcTariffEditor  *self);
 
-void       cc_tariff_editor_load_tariff         (CcTariffEditor  *self,
-                                                 MwtTariff       *tariff,
-                                                 GError         **error);
+void      cc_tariff_editor_load_tariff           (CcTariffEditor  *self,
+                                                  MwtTariff       *tariff,
+                                                  GError         **error);
 
 G_END_DECLS
