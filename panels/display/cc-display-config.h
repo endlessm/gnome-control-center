@@ -78,6 +78,7 @@ struct _CcDisplayModeClass
 {
   GObjectClass parent_class;
 
+  const char * (*get_name) (CcDisplayMode *self);
   void (*get_resolution) (CcDisplayMode *self, int *w, int *h);
   const double * (*get_supported_scales) (CcDisplayMode *self);
   double (*get_preferred_scale) (CcDisplayMode *self);
@@ -184,6 +185,8 @@ void cc_display_monitor_set_mode (CcDisplayMonitor *monitor,
                                   CcDisplayMode    *mode);
 void cc_display_monitor_set_position (CcDisplayMonitor *monitor,
                                       int x, int y);
+
+const char * cc_display_mode_get_name (CcDisplayMode *mode);
 
 void cc_display_mode_get_resolution (CcDisplayMode *mode,
                                      int *width,
