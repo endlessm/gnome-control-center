@@ -199,27 +199,29 @@ get_active_connection_and_device (CcUpdatesPanel  *self,
     *out_ap = ap;
 }
 
-static void
-ensure_setting_connection (CcUpdatesPanel *self,
-                           NMConnection   *connection)
+static NMSettingConnection *
+ensure_setting_connection (NMConnection *connection)
 {
-  NMSettingConnection *setting;
+  NMSettingConnection *setting = nm_connection_get_setting_connection (connection);
 
-  if (!connection || nm_connection_get_setting_connection (connection) != NULL)
-    return;
+  g_assert (connection != NULL);
 
-  setting = NM_SETTING_CONNECTION (nm_setting_connection_new ());
-  nm_connection_add_setting (connection, NM_SETTING (setting));
+  if (!setting)
+    {
+      setting = NM_SETTING_CONNECTION (nm_setting_connection_new ());
+      nm_connection_add_setting (connection, NM_SETTING (setting));
+    }
+
+  return setting;
 }
 
-static void
+static NMSettingUser *
 ensure_setting_user (CcUpdatesPanel *self,
                      NMConnection   *connection)
 {
   NMSettingUser *setting_user;
 
-  if (!connection)
-    return;
+  g_assert (connection != NULL);
 
   setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
 
@@ -237,7 +239,7 @@ ensure_setting_user (CcUpdatesPanel *self,
       nm_connection_add_setting (connection, NM_SETTING (setting_user));
 
       /* The default value depends on the metered state of the connection */
-      setting = nm_connection_get_setting_connection (connection);
+      setting = ensure_setting_connection (connection);
       g_assert (setting != NULL);
 
       metered = nm_setting_connection_get_metered (setting);
@@ -258,6 +260,8 @@ ensure_setting_user (CcUpdatesPanel *self,
       if (error)
         g_warning ("Error creating custom config for connection: %s", error->message);
     }
+
+  return setting_user;
 }
 
 static const gchar *
@@ -353,7 +357,7 @@ load_tariff_from_connection (CcUpdatesPanel *self,
       NMSettingUser *setting_user;
       const gchar *tariff_enabled_value = NULL;
 
-      setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
+      setting_user = ensure_setting_user (self, connection);
       g_assert (setting_user != NULL);
 
       tariff_value = nm_setting_user_get_data (setting_user, NM_SETTING_TARIFF);
@@ -415,7 +419,7 @@ load_automatic_updates_from_connection (CcUpdatesPanel *self,
       NMSettingUser *setting_user;
       const gchar *value;
 
-      setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
+      setting_user = ensure_setting_user (self, connection);
       g_assert (setting_user != NULL);
 
       value = nm_setting_user_get_data (setting_user, NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED);
@@ -434,23 +438,23 @@ static void
 load_metered_label_from_connection (CcUpdatesPanel *self,
                                     NMConnection   *connection)
 {
+  NMSettingConnection *setting;
+  NMMetered metered;
+
   gtk_widget_set_visible (self->metered_data_label, connection != NULL);
 
-  if (connection)
-    {
-      NMSettingConnection *setting;
-      NMMetered metered;
+  if (!connection)
+    return;
 
-      setting = nm_connection_get_setting_connection (connection);
-      g_assert (setting != NULL);
+  setting = ensure_setting_connection (connection);
+  g_assert (setting != NULL);
 
-      metered = nm_setting_connection_get_metered (setting);
+  metered = nm_setting_connection_get_metered (setting);
 
-      if (metered == NM_METERED_YES || metered == NM_METERED_GUESS_YES)
-        gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Limited data plan connection"));
-      else
-        gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Unlimited data plan connection"));
-    }
+  if (metered == NM_METERED_YES || metered == NM_METERED_GUESS_YES)
+    gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Limited data plan connection"));
+  else
+    gtk_label_set_label (GTK_LABEL (self->metered_data_label), _("Unlimited data plan connection"));
 }
 
 static void
@@ -492,10 +496,6 @@ update_active_network (CcUpdatesPanel *self)
       gtk_label_set_label (GTK_LABEL (self->network_name_label),
                            connection ? _("Connected") : _("No active connection"));
     }
-
-  /* This makes sure we never return NULL to 'nm_connection_get_setting (c, NM_TYPE_SETTING_USER)' */
-  ensure_setting_connection (self, connection);
-  ensure_setting_user (self, connection);
 
   load_metered_label_from_connection (self, connection);
   load_automatic_updates_from_connection (self, connection);
