@@ -107,7 +107,7 @@ store_automatic_updates_setting (NMConnection *connection,
   g_autofree gchar *tariff_string = NULL;
   g_autoptr(GError) error = NULL;
 
-  setting_user = NM_SETTING_USER (nm_connection_get_setting (connection, NM_TYPE_SETTING_USER));
+  setting_user = ensure_setting_user (connection);
   g_assert (setting_user != NULL);
 
   g_debug ("Setting "NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED" to %d", automatic_updates_enabled);
@@ -216,8 +216,7 @@ ensure_setting_connection (NMConnection *connection)
 }
 
 static NMSettingUser *
-ensure_setting_user (CcUpdatesPanel *self,
-                     NMConnection   *connection)
+ensure_setting_user (NMConnection *connection)
 {
   NMSettingUser *setting_user;
 
@@ -227,38 +226,8 @@ ensure_setting_user (CcUpdatesPanel *self,
 
   if (!setting_user)
     {
-      g_autoptr(GError) error = NULL;
-      NMSettingConnection *setting;
-      NMMetered metered;
-      gboolean enabled;
-
-      g_debug ("Creating a new custom config file for the current connection…");
-
-      /* Add a new NMSettingUser to this connection */
       setting_user = NM_SETTING_USER (nm_setting_user_new ());
       nm_connection_add_setting (connection, NM_SETTING (setting_user));
-
-      /* The default value depends on the metered state of the connection */
-      setting = ensure_setting_connection (connection);
-      g_assert (setting != NULL);
-
-      metered = nm_setting_connection_get_metered (setting);
-      enabled = metered != NM_METERED_YES && metered != NM_METERED_GUESS_YES;
-
-      store_automatic_updates_setting (connection, enabled, FALSE, NULL);
-
-      g_signal_handlers_block_by_func (self->automatic_updates_switch,
-                                       on_automatic_updates_switch_changed_cb,
-                                       self);
-
-      gtk_switch_set_active (GTK_SWITCH (self->automatic_updates_switch), enabled);
-
-      g_signal_handlers_unblock_by_func (self->automatic_updates_switch,
-                                         on_automatic_updates_switch_changed_cb,
-                                         self);
-
-      if (error)
-        g_warning ("Error creating custom config for connection: %s", error->message);
     }
 
   return setting_user;
@@ -418,13 +387,28 @@ load_automatic_updates_from_connection (CcUpdatesPanel *self,
     {
       NMSettingUser *setting_user;
       const gchar *value;
+      gboolean enabled;
 
       setting_user = ensure_setting_user (self, connection);
       g_assert (setting_user != NULL);
 
       value = nm_setting_user_get_data (setting_user, NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED);
 
-      gtk_switch_set_active (GTK_SWITCH (self->automatic_updates_switch), g_strcmp0 (value, "1") == 0);
+      if (value != NULL)
+        {
+          enabled = g_strcmp0 (value, "1") == 0;
+        }
+      else
+        {
+          /* The default value depends on the metered state of the connection */
+          setting = ensure_setting_connection (connection);
+          g_assert (setting != NULL);
+
+          metered = nm_setting_connection_get_metered (setting);
+          enabled = metered != NM_METERED_YES && metered != NM_METERED_GUESS_YES;
+        }
+
+      gtk_switch_set_active (GTK_SWITCH (self->automatic_updates_switch), enabled);
     }
   else
     {
