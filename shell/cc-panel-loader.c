@@ -56,6 +56,7 @@ extern GType cc_search_panel_get_type (void);
 extern GType cc_sharing_panel_get_type (void);
 extern GType cc_sound_panel_get_type (void);
 extern GType cc_ua_panel_get_type (void);
+extern GType cc_updates_panel_get_type (void);
 extern GType cc_user_panel_get_type (void);
 #ifdef BUILD_WACOM
 extern GType cc_wacom_panel_get_type (void);
@@ -102,6 +103,7 @@ static struct {
   PANEL_TYPE("sharing",          cc_sharing_panel_get_type      ),
   PANEL_TYPE("sound",            cc_sound_panel_get_type        ),
   PANEL_TYPE("universal-access", cc_ua_panel_get_type           ),
+  PANEL_TYPE("updates",          cc_updates_panel_get_type      ),
   PANEL_TYPE("user-accounts",    cc_user_panel_get_type         ),
 #ifdef BUILD_WACOM
   PANEL_TYPE("wacom",            cc_wacom_panel_get_type        ),
