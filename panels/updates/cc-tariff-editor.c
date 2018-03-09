@@ -219,8 +219,11 @@ update_tariff (CcTariffEditor *self,
   g_autoptr(GDateTime) forbidden_start = NULL;
   g_autoptr(GDateTime) forbidden_end = NULL;
   g_autoptr(MwtPeriod) allowed_period = NULL;
+  g_autoptr(GDateTime) allowed_start_utc = NULL;
+  g_autoptr(GDateTime) allowed_end_utc = NULL;
   g_autoptr(GDateTime) allowed_start = NULL;
   g_autoptr(GDateTime) allowed_end = NULL;
+  g_autoptr(GTimeZone) local_tz = g_time_zone_new_local ();
 
   /*
    *  This is the a very simple implementation of a tariff, with 2 defined
@@ -228,6 +231,11 @@ update_tariff (CcTariffEditor *self,
    *
    *  1. Forbidden: [0, forever), downloads are forbidden.
    *  2. Allowed: [start hour, end hour) daily, downloads are allowed.
+   *
+   * Period 1 is in UTC because it covers all time, so we don’t need to worry
+   * about the timezone of the start and end, or recurrences. Period 2 is in
+   * the local timezone, so that the recurrences which fall within daylight
+   * savings still happen at the same hour of the day for the user.
    */
 
   tariff_builder = mwt_tariff_builder_new ();
@@ -247,8 +255,10 @@ update_tariff (CcTariffEditor *self,
   mwt_tariff_builder_add_period (tariff_builder, forbidden_period);
 
   /* 2. Allowed downloads period */
-  allowed_start = g_date_time_new_from_unix_utc (self->seconds_to_start);
-  allowed_end = g_date_time_new_from_unix_utc (self->seconds_to_end);
+  allowed_start_utc = g_date_time_new_from_unix_utc (self->seconds_to_start);
+  allowed_end_utc = g_date_time_new_from_unix_utc (self->seconds_to_end);
+  allowed_start = g_date_time_to_timezone (allowed_start_utc, local_tz);
+  allowed_end = g_date_time_to_timezone (allowed_end_utc, local_tz);
   allowed_period = mwt_period_new (allowed_start,
                                    allowed_end,
                                    MWT_PERIOD_REPEAT_DAY, 1,
