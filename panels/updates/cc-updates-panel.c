@@ -47,9 +47,11 @@ struct _CcUpdatesPanel
   /* Network Manager */
   NMClient           *nm_client;
   NMDevice           *current_device;
+  NMConnection       *current_connection;
 
   /* Signal handlers */
   gulong              changed_id;
+  gulong              connection_changed_id;
   guint               save_tariff_timeout_id;
 
   GCancellable       *cancellable;
@@ -95,6 +97,15 @@ cleanup_signals (CcUpdatesPanel *self)
       g_signal_handler_disconnect (self->current_device, self->changed_id);
       self->changed_id = 0;
     }
+
+  if (self->connection_changed_id > 0)
+    {
+      g_signal_handler_disconnect (self->current_connection, self->connection_changed_id);
+      self->connection_changed_id = 0;
+    }
+
+  g_clear_object (&self->current_device);
+  g_clear_object (&self->current_connection);
 }
 
 static NMSettingConnection *
@@ -453,8 +464,8 @@ update_active_network (CcUpdatesPanel *self)
 
   get_active_connection_and_device (self, &device, &connection, &ap);
 
-  /* Setup the new device */
-  if (self->current_device != device)
+  /* Setup the new device... */
+  if (self->current_device != device || self->current_connection != connection)
     cleanup_signals (self);
 
   if (g_set_object (&self->current_device, device) && device)
@@ -463,6 +474,15 @@ update_active_network (CcUpdatesPanel *self)
                                                    "state-changed",
                                                    G_CALLBACK (on_network_changed_cb),
                                                    self);
+    }
+
+  /* ... and the new connection */
+  if (g_set_object (&self->current_connection, connection) && connection)
+    {
+      self->connection_changed_id = g_signal_connect_swapped (connection,
+                                                              "changed",
+                                                              G_CALLBACK (on_network_changed_cb),
+                                                              self);
     }
 
   /* Icon */
@@ -640,7 +660,6 @@ cc_updates_panel_finalize (GObject *object)
 
   g_cancellable_cancel (self->cancellable);
   g_clear_object (&self->cancellable);
-  g_clear_object (&self->current_device);
   g_clear_object (&self->nm_client);
 
   G_OBJECT_CLASS (cc_updates_panel_parent_class)->finalize (object);
