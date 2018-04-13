@@ -151,6 +151,7 @@ store_automatic_updates_setting (NMConnection *connection,
   NMSettingUser *setting_user;
   g_autofree gchar *tariff_string = NULL;
   g_autoptr(GError) error = NULL;
+  gboolean errored = FALSE;
 
   setting_user = ensure_setting_user (connection);
   g_assert (setting_user != NULL);
@@ -165,7 +166,8 @@ store_automatic_updates_setting (NMConnection *connection,
   if (error)
     {
       g_warning ("Error storing "NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED": %s", error->message);
-      return;
+      g_clear_error (&error);
+      errored = TRUE;
     }
 
   g_debug ("Setting "NM_SETTING_TARIFF_ENABLED" to %d", tariff_enabled);
@@ -177,7 +179,8 @@ store_automatic_updates_setting (NMConnection *connection,
   if (error)
     {
       g_warning ("Error storing "NM_SETTING_TARIFF_ENABLED": %s", error->message);
-      return;
+      g_clear_error (&error);
+      errored = TRUE;
     }
 
   tariff_string = tariff_variant ? g_variant_print (tariff_variant, TRUE) : NULL;
@@ -188,8 +191,14 @@ store_automatic_updates_setting (NMConnection *connection,
   if (error)
     {
       g_warning ("Error storing "NM_SETTING_TARIFF": %s", error->message);
-      return;
+      g_clear_error (&error);
+      errored = TRUE;
     }
+
+
+  /* Only commit the changes if there were no errors. */
+  if (errored)
+    return;
 
   /* Make sure the application does not exit before the callback is called */
   g_application_hold (g_application_get_default ());
