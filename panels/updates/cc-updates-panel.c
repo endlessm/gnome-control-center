@@ -143,10 +143,11 @@ ensure_setting_user (NMConnection *connection)
 }
 
 static void
-store_automatic_updates_setting (NMConnection *connection,
-                                 gboolean      automatic_updates_enabled,
-                                 gboolean      tariff_enabled,
-                                 GVariant     *tariff_variant)
+store_automatic_updates_setting (CcUpdatesPanel *self,
+                                 NMConnection   *connection,
+                                 gboolean        automatic_updates_enabled,
+                                 gboolean        tariff_enabled,
+                                 GVariant       *tariff_variant)
 {
   NMSettingUser *setting_user;
   g_autofree gchar *tariff_string = NULL;
@@ -155,6 +156,12 @@ store_automatic_updates_setting (NMConnection *connection,
 
   setting_user = ensure_setting_user (connection);
   g_assert (setting_user != NULL);
+
+  /* Calling nm_setting_user_set_data() causes notifications from NM. */
+  if (self->current_device && self->changed_id)
+    g_signal_handler_block (self->current_device, self->changed_id);
+  if (self->current_connection && self->connection_changed_id)
+    g_signal_handler_block (self->current_connection, self->connection_changed_id);
 
   g_debug ("Setting "NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED" to %d", automatic_updates_enabled);
 
@@ -195,6 +202,10 @@ store_automatic_updates_setting (NMConnection *connection,
       errored = TRUE;
     }
 
+  if (self->current_device && self->changed_id)
+    g_signal_handler_unblock (self->current_device, self->changed_id);
+  if (self->current_connection && self->connection_changed_id)
+    g_signal_handler_unblock (self->current_connection, self->connection_changed_id);
 
   /* Only commit the changes if there were no errors. */
   if (errored)
@@ -533,7 +544,7 @@ save_connection_settings (CcUpdatesPanel *self)
   tariff_enabled = gtk_switch_get_active (GTK_SWITCH (self->scheduled_updates_switch));
   tariff_variant = cc_tariff_editor_get_tariff_as_variant (self->tariff_editor);
 
-  store_automatic_updates_setting (connection, automatic_updates_enabled, tariff_enabled, tariff_variant);
+  store_automatic_updates_setting (self, connection, automatic_updates_enabled, tariff_enabled, tariff_variant);
 }
 
 static gboolean
