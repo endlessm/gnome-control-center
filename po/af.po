@@ -4,6 +4,7 @@
 # 
 # Translators:
 # F Wolff <friedel@translate.org.za>, 2009,2011,2013-2014,2016
+# Pieter Schalk Schoeman <pieter@sonbesie.co.za>, 2017
 # Roddy Shuler <roddy@endlessm.com>, 2018
 # Zuza Software Foundation <info@translate.org.za>, 2004
 msgid ""
@@ -11,7 +12,7 @@ msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:35+0000\n"
+"PO-Revision-Date: 2018-04-18 22:47+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Afrikaans (http://www.transifex.com/endless-os/gnome-control-center/language/af/)\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +33,7 @@ msgstr "Verander regdeur die dag"
 #. To translators: This is a noun, not a verb
 #: ../panels/background/background.ui.h:5
 msgid "_Lock Screen"
-msgstr ""
+msgstr "Ges_lote skerm"
 
 #: ../panels/background/background.ui.h:6
 msgctxt "background, style"
@@ -62,12 +63,12 @@ msgstr "Opvul"
 #: ../panels/background/background.ui.h:11
 msgctxt "background, style"
 msgid "Span"
-msgstr ""
+msgstr "Span"
 
 #: ../panels/background/cc-background-chooser-dialog.c:430
 #: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
-msgstr "Geen muurpapier"
+msgstr "Muurpapier"
 
 #: ../panels/background/cc-background-chooser-dialog.c:439
 msgid "Colors"
@@ -76,7 +77,7 @@ msgstr "Kleure"
 #. translators: This is the title of the wallpaper chooser dialog.
 #: ../panels/background/cc-background-chooser-dialog.c:476
 msgid "Select Background"
-msgstr "Kies agtergrond"
+msgstr "Kies Agtergrond"
 
 #: ../panels/background/cc-background-chooser-dialog.c:504
 msgid "Pictures"
@@ -162,16 +163,16 @@ msgstr "Huidige agtergrond"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/background/gnome-background-panel.desktop.in.in.h:2
 msgid "Back­ground"
-msgstr ""
+msgstr "Agtergrond"
 
 #: ../panels/background/gnome-background-panel.desktop.in.in.h:3
 msgid "Change your background image to a wallpaper or photo"
-msgstr "Verander die agtergrondbeeld na muurpapier of 'n foto"
+msgstr "Verander die agtergrondbeeld na 'n muurpapier of foto"
 
 #. Translators: those are keywords for the background control-center panel
 #: ../panels/background/gnome-background-panel.desktop.in.in.h:5
 msgid "Wallpaper;Screen;Desktop;"
-msgstr "Wallpaper;Screen;Desktop;agtergrond;werkskerm;muurpapier;"
+msgstr "Muurpapier;Skerm;Werkskerm;"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:265
 msgid "Turn Off Airplane Mode"
@@ -214,7 +215,7 @@ msgstr "Skakel die vlugmodusskakelaar af om Bluetooth te aktiveer."
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:2
 msgid "Blue­tooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:3
 msgid "Turn Bluetooth on and off and connect your devices"
@@ -223,12 +224,12 @@ msgstr "Skakel Bluetooth aan en af en koppel toestelle"
 #. Translators: those are keywords for the bluetooth control-center panel
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:5
 msgid "share;sharing;bluetooth;obex;"
-msgstr "share;sharing;bluetooth;obex;deel;deling;"
+msgstr "deel;deling;bluetooth;obex;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: ../panels/color/cc-color-calibrate.c:361
 msgid "Place your calibration device over the square and press “Start”"
-msgstr ""
+msgstr "Plaas die kalibreertoestel oor die vierkant en druk \"Begin\""
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -236,7 +237,7 @@ msgstr ""
 #: ../panels/color/cc-color-calibrate.c:367
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
+msgstr "Skuif die kalibreertoestel na die kalibreerposisie en druk \"Gaan voort\""
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -244,7 +245,7 @@ msgstr ""
 #: ../panels/color/cc-color-calibrate.c:373
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr ""
+msgstr "Skuif die kalibreertoestel na die oppervlakposisie en druk \"Gaan voort\""
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -257,7 +258,7 @@ msgstr "Vou die skootrekenaar toe"
 #. * good idea why or any suggestions
 #: ../panels/color/cc-color-calibrate.c:410
 msgid "An internal error occurred that could not be recovered."
-msgstr "'n Interne fout het voorgekom waarvan nie herstel kon word nie."
+msgstr "'n Interne fout het voorgekom waarvan daar nie herstel kon word nie."
 
 #. TRANSLATORS: Some required-at-runtime tools were not
 #. * installed, which should only affect insane distros
@@ -596,17 +597,17 @@ msgstr "Kalibreertoestel"
 
 #: ../panels/color/color.ui.h:11
 msgid "Select the type of display that is connected."
-msgstr "Kies die tipe vertoon wat ingeprop is."
+msgstr "Kies die tipe skerm wat ingeprop is."
 
 #: ../panels/color/color.ui.h:12
 msgid "Display Type"
-msgstr "Vertoontipe"
+msgstr "Skermtipe"
 
 #: ../panels/color/color.ui.h:13
 msgid ""
 "Select a display target white point. Most displays should be calibrated to a"
 " D65 illuminant."
-msgstr ""
+msgstr "Selekteer 'n skerm teiken witpunt. Meeste skerms moet gekalibreer word na 'n D65 verligting."
 
 #: ../panels/color/color.ui.h:14
 msgid "Profile Whitepoint"
@@ -626,7 +627,7 @@ msgstr "Of u kan die helderheidsvlak gebruik wat met een van die ander profiele 
 
 #: ../panels/color/color.ui.h:17
 msgid "Display Brightness"
-msgstr "Vertoonhelderheid"
+msgstr "Skermhelderheid"
 
 #: ../panels/color/color.ui.h:18
 msgid ""
@@ -676,7 +677,7 @@ msgstr "Opsomming"
 
 #: ../panels/color/color.ui.h:28
 msgid "Add Profile"
-msgstr ""
+msgstr "Voeg profiel by"
 
 #: ../panels/color/color.ui.h:29
 msgid "_Import File…"
@@ -770,11 +771,11 @@ msgstr "LCD (wit LED-agterlig)"
 
 #: ../panels/color/color.ui.h:51
 msgid "Wide gamut LCD (CCFL backlight)"
-msgstr ""
+msgstr "Wye spektrum LCD (CCFL-agterlig)"
 
 #: ../panels/color/color.ui.h:52
 msgid "Wide gamut LCD (RGB LED backlight)"
-msgstr ""
+msgstr "Wye spektrum LCD (RGB LED-agterlig)"
 
 #: ../panels/color/color.ui.h:53
 msgctxt "Calibration quality"
@@ -806,7 +807,7 @@ msgstr "15 minute"
 
 #: ../panels/color/color.ui.h:59
 msgid "Native to display"
-msgstr ""
+msgstr "Ingebou in die skerm"
 
 #: ../panels/color/color.ui.h:60
 msgid "D50 (Printing and publishing)"
@@ -829,7 +830,7 @@ msgstr "D75"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:2
 msgid "Co­lor"
-msgstr ""
+msgstr "Kleur"
 
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:3
 msgid ""
@@ -839,7 +840,7 @@ msgstr "Kalibreer die kleur van toestelle, bv. skerms, kameras of drukkers"
 #. Translators: those are keywords for the color control-center panel
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:5
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
-msgstr "Color;ICC;Profile;Calibrate;Printer;Display;kleur;profiel;kalibreer;drukker;skerm;"
+msgstr "kleur;ICC;profiel;kalibreer;drukker;skerm;"
 
 #: ../panels/common/cc-common-language.c:322
 msgid "Other…"
@@ -1050,7 +1051,7 @@ msgstr "24-uur"
 
 #: ../panels/datetime/datetime.ui.h:27
 msgid "AM / PM"
-msgstr "v.m. / n.m."
+msgstr "VM / NM"
 
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:3
 msgid "Change the date and time, including time zone"
@@ -1059,7 +1060,7 @@ msgstr "Verander die datum en tyd, asook tydsone"
 #. Translators: those are keywords for the date and time control-center panel
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:5
 msgid "Clock;Timezone;Location;"
-msgstr "Clock;Timezone;Location;horlosie;tydsone;ligging;"
+msgstr "horlosie;tydsone;ligging;"
 
 #: ../panels/datetime/org.gnome.controlcenter.datetime.policy.in.h:1
 msgid "Change system time and date settings"
@@ -1067,27 +1068,27 @@ msgstr "Verander instellings vir datum en tyd"
 
 #: ../panels/datetime/org.gnome.controlcenter.datetime.policy.in.h:2
 msgid "To change time or date settings, you need to authenticate."
-msgstr ""
+msgstr "Om datum of tyd verstellings te maak moet jy eers aanteken."
 
 #: ../panels/display/cc-display-panel.c:746
 msgctxt "Display rotation"
 msgid "Landscape"
-msgstr ""
+msgstr "Landskap"
 
 #: ../panels/display/cc-display-panel.c:749
 msgctxt "Display rotation"
 msgid "Portrait Right"
-msgstr ""
+msgstr "Portret Regs"
 
 #: ../panels/display/cc-display-panel.c:752
 msgctxt "Display rotation"
 msgid "Portrait Left"
-msgstr ""
+msgstr "Portret Links"
 
 #: ../panels/display/cc-display-panel.c:755
 msgctxt "Display rotation"
 msgid "Landscape (flipped)"
-msgstr ""
+msgstr "Landskap (omgedraai)"
 
 #. Translators: This option sets orientation of print (portrait, landscape...)
 #: ../panels/display/cc-display-panel.c:796
@@ -1107,38 +1108,38 @@ msgstr "Resolusie"
 #: ../panels/display/cc-display-panel.c:986
 #: ../panels/display/cc-display-panel.c:1057
 msgid "Refresh Rate"
-msgstr ""
+msgstr "Verfristempo"
 
 #: ../panels/display/cc-display-panel.c:1194
 msgid "Scale"
-msgstr ""
+msgstr "Skaleer"
 
 #: ../panels/display/cc-display-panel.c:1247
 msgid "Adjust for TV"
-msgstr ""
+msgstr "Verstel vir televisie"
 
 #: ../panels/display/cc-display-panel.c:1485
 #: ../panels/display/cc-display-panel.c:1534
 msgid "Primary Display"
-msgstr ""
+msgstr "Primêre skerm"
 
 #: ../panels/display/cc-display-panel.c:1563
 msgid "Display Arrangement"
-msgstr ""
+msgstr "Skerm uitleg"
 
 #: ../panels/display/cc-display-panel.c:1564
 msgid ""
 "Drag displays to match your setup. The top bar is placed on the primary "
 "display."
-msgstr ""
+msgstr "Trek die skerms om te lyk soos jou werklike skerm uitleg. Die balk bo aan die skerm word slegs vertoon op die primere skerm."
 
 #: ../panels/display/cc-display-panel.c:2004
 msgid "Display Mode"
-msgstr ""
+msgstr "Skermmodus"
 
 #: ../panels/display/cc-display-panel.c:2020
 msgid "Join Displays"
-msgstr ""
+msgstr "Koppel skerms"
 
 #: ../panels/display/cc-display-panel.c:2023
 msgid "Mirror"
@@ -1146,11 +1147,11 @@ msgstr "Dupliseer"
 
 #: ../panels/display/cc-display-panel.c:2026
 msgid "Single Display"
-msgstr ""
+msgstr "Enkel skerm"
 
 #: ../panels/display/cc-display-panel.c:2739
 msgid "Apply Changes?"
-msgstr ""
+msgstr "Pas veranderinge toe?"
 
 #: ../panels/display/cc-display-panel.c:2753
 #: ../panels/network/connection-editor/connection-editor.ui.h:2
@@ -1161,7 +1162,7 @@ msgstr "P_as toe"
 #: ../panels/display/cc-display-panel.c:3134
 #, c-format
 msgid "%.2lf Hz"
-msgstr ""
+msgstr "%.2lf Hz"
 
 #. TRANSLATORS: the state of the night light setting
 #: ../panels/display/cc-display-panel.c:3350
@@ -1196,7 +1197,7 @@ msgstr "Af"
 
 #: ../panels/display/cc-display-panel.c:3371
 msgid "_Night Light"
-msgstr ""
+msgstr "_Naglig"
 
 #: ../panels/display/cc-display-panel.c:3436
 msgid "Could not get screen information"
@@ -1205,32 +1206,32 @@ msgstr "Kon nie skerminligting kry nie"
 #. This cancels the redshift inhibit.
 #: ../panels/display/display.ui.h:2
 msgid "Restart Filter"
-msgstr ""
+msgstr "Herbegin filter"
 
 #. Inhibit the redshift functionality until the next day starts
 #: ../panels/display/display.ui.h:4
 msgid "Temporarily Disabled Until Tomorrow"
-msgstr ""
+msgstr "Tydelik gestop tot die volgende dag"
 
 #: ../panels/display/display.ui.h:5
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
+msgstr "Naglig maak die skermkleur warmer. Dit kan help om oog stremming en slapeloosheid te voorkom."
 
 #. This is the redshift functionality where we suppress blue light when the
 #. sun has gone down
 #: ../panels/display/display.ui.h:7
 msgid "Night Light"
-msgstr ""
+msgstr "Naglig"
 
 #: ../panels/display/display.ui.h:8
 msgid "Schedule"
-msgstr ""
+msgstr "Skeduleer"
 
 #: ../panels/display/display.ui.h:9
 msgid "Sunset to Sunrise"
-msgstr ""
+msgstr "Sonsondergang tot Sonsopkoms"
 
 #: ../panels/display/display.ui.h:10
 #: ../panels/network/connection-editor/ip4-page.ui.h:4
@@ -1243,32 +1244,32 @@ msgstr "Handmatig"
 
 #: ../panels/display/display.ui.h:11 ../panels/updates/cc-tariff-editor.ui.h:1
 msgid "From"
-msgstr ""
+msgstr "Van"
 
 #: ../panels/display/display.ui.h:12
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #. This is the short form for the time period in the morning
 #: ../panels/display/display.ui.h:14 ../panels/updates/cc-tariff-editor.ui.h:3
 msgid "AM"
-msgstr ""
+msgstr "VM"
 
 #. This is the short form for the time period in the afternoon
 #: ../panels/display/display.ui.h:16 ../panels/updates/cc-tariff-editor.ui.h:5
 msgid "PM"
-msgstr ""
+msgstr "NM"
 
 #: ../panels/display/display.ui.h:17 ../panels/updates/cc-tariff-editor.ui.h:6
 msgid "To"
-msgstr ""
+msgstr "Tot"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:2
 msgid "Dis­plays"
-msgstr ""
+msgstr "Skerms"
 
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:3
 msgid "Choose how to use connected monitors and projectors"
@@ -1278,7 +1279,7 @@ msgstr "Kies hoe om ingepropte monitors en projektors te gebruik"
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:5
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
-msgstr ""
+msgstr "paneel;projektor;xrandr;skerm;resolusie;verfris;monitor;nag;lig;blou;rooiverskuiwing;kleur;sonsondergang;sonsopkoms;"
 
 #: ../panels/info/cc-info-overview-panel.c:234
 msgid "No updates available"
@@ -1318,13 +1319,13 @@ msgstr "Onbekend"
 #: ../panels/info/cc-info-overview-panel.c:813
 #, c-format
 msgid "64-bit"
-msgstr ""
+msgstr "64-bis"
 
 #. translators: This is the type of architecture for the OS
 #: ../panels/info/cc-info-overview-panel.c:816
 #, c-format
 msgid "32-bit"
-msgstr ""
+msgstr "32-bis"
 
 #: ../panels/info/cc-info-panel.c:138
 msgid "Section"
@@ -1435,59 +1436,59 @@ msgstr "Windows-sagteware"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:2
 msgid "Defa­ult Applications"
-msgstr ""
+msgstr "Verstektoepassings"
 
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:3
 msgid "Configure Default Applications"
-msgstr ""
+msgstr "Stel verstektoepassings in"
 
 #. Translators: those are keywords for the Default Applications panel
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:5
 msgid "default;application;preferred;media;"
-msgstr ""
+msgstr "verstek;toepassing;voorkeur;media;"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:2
 msgid "Ab­out"
-msgstr ""
+msgstr "Aangaande"
 
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:3
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:3
 msgid "View information about your system"
-msgstr "Bekyk inligting oor die stelsel"
+msgstr "Vertoon inligting oor die stelsel"
 
 #. sure that you use the same "translation" for those keywords
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:5
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:5
 msgid ""
 "device;system;information;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr "device;system;information;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;toestel;stelsel;inligting;geheue;verwerker;weergawe;verstek;toepassing;terugval;voorkeur;oudio;klank;skyf;verwyderbaar;outoloop;"
+msgstr "toestel;stelsel;inligting;geheue;verwerker;weergawe;verstek;toepassing;voorkeur;cd;dvd;usb;klank;video;skyf;verwyderbaar;media;outoloop;"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:2
 msgid "De­tails"
-msgstr ""
+msgstr "Besonderhede"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:2
 msgid "Remo­vable Media"
-msgstr ""
+msgstr "Verwyderbare media"
 
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:3
 msgid "Configure Removable Media settings"
-msgstr ""
+msgstr "Verander verwyderbare media instellings"
 
 #. Translators: those are keywords for the Removable Media panel
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:5
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
+msgstr "toestel;stelsel;verstek;toepassing;voorkeur;cd;dvd;usb;klank;video;skyf;verwyderbaar;media;outoloop;"
 
 #: ../panels/info/info-default-apps.ui.h:1
 msgid "_Web"
@@ -1537,7 +1538,7 @@ msgstr "Grafika"
 #. To translators: this field contains the distro type
 #: ../panels/info/info-overview.ui.h:7
 msgid "OS type"
-msgstr ""
+msgstr "Tipe bedryfstelsel"
 
 #: ../panels/info/info-overview.ui.h:8
 msgid "Virtualization"
@@ -1613,7 +1614,7 @@ msgstr "Volume harder"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:5
 msgid "Launch media player"
-msgstr "Laat begin mediaspeler"
+msgstr "Lanseer mediaspeler"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:6
 msgid "Play (or play/pause)"
@@ -1668,15 +1669,15 @@ msgstr "Instellings"
 
 #: ../panels/keyboard/01-launchers.xml.in.h:4
 msgid "Launch calculator"
-msgstr "Laat loop sakrekenaar"
+msgstr "Lanseer sakrekenaar"
 
 #: ../panels/keyboard/01-launchers.xml.in.h:5
 msgid "Launch email client"
-msgstr "Laat loop e-poskliënt"
+msgstr "Lanseer e-poskliënt"
 
 #: ../panels/keyboard/01-launchers.xml.in.h:6
 msgid "Launch web browser"
-msgstr "Laat loop webblaaier"
+msgstr "Lanseer webblaaier"
 
 #: ../panels/keyboard/01-launchers.xml.in.h:7
 msgid "Home folder"
@@ -1806,21 +1807,21 @@ msgstr "Sleutel vir alternatiewe karakters"
 #. * See http://en.wikipedia.org/wiki/Compose_key
 #: ../panels/keyboard/cc-keyboard-option.c:363
 msgid "Compose Key"
-msgstr ""
+msgstr "Saamstelsleutel"
 
 #: ../panels/keyboard/cc-keyboard-option.c:368
 msgid "Modifiers-only switch to next source"
-msgstr ""
+msgstr "Wysigers verander slegs na volgende bron"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:181
 msgid "Reset All Shortcuts?"
-msgstr ""
+msgstr "Skrap alle kortpaaie?"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:184
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
+msgstr "Die herstel van alle kortpaaie mag jou pasgemaakte kortpaaie affekteer. Die aksie kan nie ongedaan gemaak word nie."
 
 #: ../panels/keyboard/cc-keyboard-panel.c:188
 #: ../panels/keyboard/shortcut-editor.ui.h:9
@@ -1831,53 +1832,53 @@ msgstr "Kanselleer"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:189
 msgid "Reset All"
-msgstr ""
+msgstr "Herstel alles"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:281
 msgid "Reset the shortcut to its default value"
-msgstr ""
+msgstr "Herstel die kortpad na sy oorspronklike waarde"
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:427
 #, c-format
 msgid ""
 "%s is already being used for <b>%s</b>. If you replace it, %s will be "
 "disabled"
-msgstr ""
+msgstr "%s word klaar gebruik deur <b>%s</b>. Indien jy dit vervang sal, %s gedeaktiveer word"
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:597
 msgid "Set Custom Shortcut"
-msgstr ""
+msgstr "Stel 'n pasgemaakte kortpad"
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:597
 msgid "Set Shortcut"
-msgstr ""
+msgstr "Stel Kortpad"
 
 #. Setup the top label
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:606
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
-msgstr ""
+msgstr "Voeg 'n nuwe kortpad by om <b>%s</b> te verander."
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:1033
 msgid "Add Custom Shortcut"
-msgstr ""
+msgstr "Voeg 'n pasgemaakte kortpad by"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
 msgid "Key­board"
-msgstr ""
+msgstr "Sleutelbord"
 
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:3
 msgid "View and change keyboard shortcuts and set your typing preferences"
-msgstr "Bekyk en verander sleutelbordkortpaaie en stel tikvoorkeure"
+msgstr "Vertoon en verander sleutelbordkortpaaie en stel tikvoorkeure"
 
 #. Translators: those are keywords for the keyboard control-center panel
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:5
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
+msgstr "kortpad;werkspasie;venster;verander;grootte;zoem;kontras;invoer;bron;sluit;volume;"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
 #: ../panels/region/input-options.ui.h:4 ../shell/cc-application.c:251
@@ -1886,23 +1887,23 @@ msgstr "Sleutelbordkortpaaie"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
 msgid "Reset All…"
-msgstr ""
+msgstr "Stel alles terug…"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
 msgid "Reset all shortcuts to their default keybindings"
-msgstr ""
+msgstr "Herstel alle kortpaaie na hul oorspronklike sleutelbindinge"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
 msgid "No keyboard shortcut found"
-msgstr ""
+msgstr "Geen sleutelbord kortpad gevind nie"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:5 ../shell/panel-list.ui.h:4
 msgid "Try a different search"
-msgstr ""
+msgstr "Probeer 'n ander soektog"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:1
 msgid "Press Esc to cancel or Backspace to reset the keyboard shortcut."
-msgstr ""
+msgstr "Druk Esc om te kanselleer of Backspace om die sleutelbordkortpaaie te herstel."
 
 #: ../panels/keyboard/shortcut-editor.ui.h:3
 #: ../panels/printers/details-dialog.ui.h:1
@@ -1913,15 +1914,15 @@ msgstr "Naam"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:4
 msgid "Command"
-msgstr ""
+msgstr "Opdrag"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:5
 msgid "Shortcut"
-msgstr ""
+msgstr "Kortpad"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:6
 msgid "Set Shortcut…"
-msgstr ""
+msgstr "Nuwe Kortpad…"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:7
 #: ../panels/network/network-wifi.ui.h:20
@@ -1930,11 +1931,11 @@ msgstr "Geen"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:8
 msgid "Enter the new shortcut"
-msgstr ""
+msgstr "Voer 'n nuwe kortpad in"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:10
 msgid "Remove"
-msgstr ""
+msgstr "Verwyder"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:11
 msgid "Add"
@@ -1942,11 +1943,11 @@ msgstr "Voeg by"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:12
 msgid "Replace"
-msgstr ""
+msgstr "Vervang"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:13
 msgid "Set"
-msgstr ""
+msgstr "Kies"
 
 #: ../panels/mouse/cc-mouse-panel.c:82 ../panels/wacom/cc-wacom-panel.c:402
 msgid "Test Your _Settings"
@@ -1957,7 +1958,7 @@ msgstr "Toet_s die instellings"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
 msgid "Mouse & Touch­pad"
-msgstr ""
+msgstr "Muis en Raakblad"
 
 #: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:3
 msgid ""
@@ -1968,7 +1969,7 @@ msgstr "Verander sensitiwiteit van die muis of raakblad en kies regs- of linkerh
 #. panel
 #: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:5
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;raakblad;wyser;klik;kliek;raak;dubbel;knoppie;"
+msgstr "raakblad;wyser;klik;kliek;raak;dubbel;knoppie;rolbal;rol;"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:1
 msgid "General"
@@ -2026,7 +2027,7 @@ msgstr "Raak om te klik"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:15
 msgid "Two-finger Scrolling"
-msgstr ""
+msgstr "Rol met twee vingers"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:16
 msgid "Edge Scrolling"
@@ -2039,7 +2040,7 @@ msgstr "Probeer klik, dubbelklik, rol"
 
 #: ../panels/mouse/gnome-mouse-test.c:135
 msgid "Five clicks, GEGL time!"
-msgstr ""
+msgstr "Vyf kliks, GEGL tyd!"
 
 #: ../panels/mouse/gnome-mouse-test.c:140
 msgid "Double click, primary button"
@@ -2117,7 +2118,7 @@ msgstr "Anonie_me identiteit"
 #: ../panels/network/connection-editor/8021x-security-page.ui.h:4
 #: ../panels/network/connection-editor/security-page.ui.h:4
 msgid "Inner _authentication"
-msgstr ""
+msgstr "Binne _verifikasie"
 
 #: ../panels/network/connection-editor/8021x-security-page.ui.h:5
 #: ../panels/network/connection-editor/security-page.ui.h:5
@@ -2195,13 +2196,13 @@ msgstr[1] "%i dae gelede"
 #: ../panels/network/net-device-wifi.c:600
 #, c-format
 msgid "%d Mb/s"
-msgstr "%d Mb/s"
+msgstr "%d Mg/s"
 
 #: ../panels/network/connection-editor/ce-page-details.c:253
 #: ../panels/network/net-device-wifi.c:629
 msgctxt "Signal strength"
 msgid "None"
-msgstr "Niks"
+msgstr "Geen"
 
 #: ../panels/network/connection-editor/ce-page-details.c:255
 #: ../panels/network/net-device-wifi.c:631
@@ -2229,15 +2230,15 @@ msgstr "Uitstekend"
 
 #: ../panels/network/connection-editor/ce-page-details.c:302
 msgid "Forget Connection"
-msgstr ""
+msgstr "Vergeet verbinding"
 
 #: ../panels/network/connection-editor/ce-page-details.c:304
 msgid "Remove Connection Profile"
-msgstr ""
+msgstr "Verwyder verbindingprofiel"
 
 #: ../panels/network/connection-editor/ce-page-details.c:306
 msgid "Remove VPN"
-msgstr ""
+msgstr "Verwyder VPN"
 
 #: ../panels/network/connection-editor/ce-page-details.c:334
 #: ../panels/network/network-wifi.ui.h:46 ../shell/cc-window.c:243
@@ -2379,11 +2380,11 @@ msgstr "Outomaties"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:2
 msgid "Twisted Pair (TP)"
-msgstr "Gedraaide draadpaar"
+msgstr "Gedraaide draadpaar (TP)"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:3
 msgid "Attachment Unit Interface (AUI)"
-msgstr ""
+msgstr "Aanhangsel Eenheid Koppelvlak (AEK)"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:4
 msgid "BNC"
@@ -2391,23 +2392,23 @@ msgstr "BNC"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:5
 msgid "Media Independent Interface (MII)"
-msgstr ""
+msgstr "Media Onafhankilike Koppelvlak (MOK)"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:6
 msgid "10 Mb/s"
-msgstr "10 Mb/s"
+msgstr "10 Mg/s"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:7
 msgid "100 Mb/s"
-msgstr "100 Mb/s"
+msgstr "100 Mg/s"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:8
 msgid "1 Gb/s"
-msgstr "1 Gb/s"
+msgstr "1 Gg/s"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:9
 msgid "10 Gb/s"
-msgstr "10 Gb/s"
+msgstr "10 Gg/s"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:10
 #: ../panels/network/connection-editor/vpn-page.ui.h:1
@@ -2435,7 +2436,7 @@ msgstr "grepe"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:1
 msgid "IPv_4 Method"
-msgstr ""
+msgstr "IPv_4 Metode"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:2
 #: ../panels/network/network-wifi.ui.h:27
@@ -2445,17 +2446,17 @@ msgstr "Outomaties (DHCP)"
 #: ../panels/network/connection-editor/ip4-page.ui.h:3
 #: ../panels/network/connection-editor/ip6-page.ui.h:4
 msgid "Link-Local Only"
-msgstr ""
+msgstr "Skakel slegs plaaslik"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:5
 #: ../panels/network/connection-editor/ip6-page.ui.h:6
 msgid "Disable"
-msgstr ""
+msgstr "Deaktiveer"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:6
 #: ../panels/network/connection-editor/ip6-page.ui.h:7
 msgid "Addresses"
-msgstr ""
+msgstr "Adresse"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:7
 #: ../panels/network/connection-editor/ip6-page.ui.h:8
@@ -2480,7 +2481,7 @@ msgstr "Outomatiese DNS"
 #: ../panels/network/connection-editor/ip4-page.ui.h:13
 #: ../panels/network/connection-editor/ip6-page.ui.h:13
 msgid "Separate IP addresses with commas"
-msgstr ""
+msgstr "Verdeel IP adresse met kommas"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:14
 #: ../panels/network/connection-editor/ip6-page.ui.h:14
@@ -2497,7 +2498,7 @@ msgstr "Outomatiese roetes"
 #: ../panels/network/connection-editor/ip4-page.ui.h:17
 #: ../panels/network/connection-editor/ip6-page.ui.h:17
 msgid "Metric"
-msgstr ""
+msgstr "Mates"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:18
 #: ../panels/network/connection-editor/ip6-page.ui.h:18
@@ -2507,7 +2508,7 @@ msgstr "Gebruik hierdie verbinding _slegs vir hulpbronne op sy netwerk"
 
 #: ../panels/network/connection-editor/ip6-page.ui.h:1
 msgid "IPv_6 Method"
-msgstr ""
+msgstr "IPv_6 Metode"
 
 #: ../panels/network/connection-editor/ip6-page.ui.h:3
 msgid "Automatic, DHCP only"
@@ -2536,7 +2537,7 @@ msgstr "Voer vanaf lêer in…"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:785
 msgid "Add VPN"
-msgstr ""
+msgstr "Voeg 'n VPN by"
 
 #: ../panels/network/connection-editor/security-page.ui.h:1
 #: ../panels/network/network-wifi.ui.h:16
@@ -2553,7 +2554,7 @@ msgid ""
 "The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
+msgstr "Die lêer \"%s\" kon nie gelees word nie of die inligting vir VPN-verbinding word nie herken nie.\n\nFout: %s."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:178
 msgid "Select file to import"
@@ -2569,7 +2570,7 @@ msgstr "_Open"
 #: ../panels/network/connection-editor/vpn-helpers.c:230
 #, c-format
 msgid "A file named “%s” already exists."
-msgstr ""
+msgstr "'n Lêer genaamd \"%s\" bestaan reeds."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:232
 msgid "_Replace"
@@ -2590,7 +2591,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
+msgstr "Die VPN-verbinding \"%s\" kon nie uitgevoer word na %s nie.\n\nFout: %s."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:307
 msgid "Export VPN connection"
@@ -2620,7 +2621,7 @@ msgstr "Huisnetwerk"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/network/gnome-network-panel.desktop.in.in.h:2
 msgid "Net­work"
-msgstr ""
+msgstr "Netwerk"
 
 #: ../panels/network/gnome-network-panel.desktop.in.in.h:3
 msgid "Control how you connect to the Internet"
@@ -2631,16 +2632,16 @@ msgstr "Bepaal hoe om te koppel aan die internet"
 msgid ""
 "Network;Wireless;Wi-"
 "Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr ""
+msgstr "netwerk;draadloos;Wi-Fi;IP;LAN;instaanbediener;WAN;breëband;modem;bluetooth;vpn;brug;DNS;"
 
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:3
 msgid "Control how you connect to Wi-Fi networks"
-msgstr ""
+msgstr "Bepaal hoe om te koppel aan Wi-Fi verbindings"
 
 #. Translators: those are keywords for the wi-fi control-center panel
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:5
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;"
-msgstr ""
+msgstr "netwerk;draadloos;Wi-Fi;wifi;LAN;breeband;DNS;"
 
 #: ../panels/network/net-device-ethernet.c:106
 #: ../panels/network/net-device-wifi.c:507
@@ -2694,23 +2695,23 @@ msgstr "Voeg nuwe verbinding by"
 #: ../panels/network/net-device-wifi.c:1322
 #, c-format
 msgid "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-msgstr "Deur die draadlose toegangsarea aan te skakel, sal u ontkoppel van <b>%s</b>."
+msgstr "Deur die kuberkol aan te skakel, sal u ontkoppel van <b>%s</b>."
 
 #: ../panels/network/net-device-wifi.c:1326
 msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
-msgstr "Dis nie moontlik om deur die draadloos internettoegang te kry terwyl die toegangsarea aktief is nie."
+msgstr "Dis nie moontlik om deur die draadloos internettoegang te kry terwyl die kuberkol aktief is nie."
 
 #: ../panels/network/net-device-wifi.c:1333
 msgid "Turn On Wi-Fi Hotspot?"
-msgstr ""
+msgstr "Skakel 'n Wi-Fi-kuberkol aan?"
 
 #: ../panels/network/net-device-wifi.c:1355
 msgid ""
 "Wi-Fi hotspots are usually used to share an additional Internet connection "
 "over Wi-Fi."
-msgstr ""
+msgstr "'n Wi-Fi kuberkol word gewoonlik gebruik om 'n addisionele internet verbinding oor Wi-Fi te deel."
 
 #: ../panels/network/net-device-wifi.c:1366
 msgid "_Turn On"
@@ -2718,19 +2719,19 @@ msgstr "_Skakel aan"
 
 #: ../panels/network/net-device-wifi.c:1443
 msgid "Stop hotspot and disconnect any users?"
-msgstr "Stop toegangsarea en ontkoppel alle gebruikers?"
+msgstr "Stop kuberkol en ontkoppel alle gebruikers?"
 
 #: ../panels/network/net-device-wifi.c:1446
 msgid "_Stop Hotspot"
-msgstr "_Stop toegangsarea"
+msgstr "_Stop kuberkol"
 
 #: ../panels/network/net-device-wifi.c:1543
 msgid "System policy prohibits use as a Hotspot"
-msgstr "Stelselbeleid verbied gebruik vir toegangsarea"
+msgstr "Stelselbeleid verbied die gebruik van 'n kuberkol"
 
 #: ../panels/network/net-device-wifi.c:1546
 msgid "Wireless device does not support Hotspot mode"
-msgstr "Draadlose toestel het nie steun vir toegangsarea nie"
+msgstr "Draadlose toestel het nie steun vir kuberkolmodus nie"
 
 #: ../panels/network/net-device-wifi.c:1684
 msgid ""
@@ -2746,7 +2747,7 @@ msgstr "_Vergeet"
 #: ../panels/network/net-device-wifi.c:1997
 #: ../panels/network/net-device-wifi.c:2004
 msgid "Known Wi-Fi Networks"
-msgstr ""
+msgstr "Bekende Wi-Fi netwerke"
 
 #. translators: This is the label for the "Forget wireless network"
 #. functionality
@@ -2783,7 +2784,7 @@ msgstr "Netwerk"
 
 #: ../panels/network/network-proxy.ui.h:1
 msgid "Network Proxy"
-msgstr ""
+msgstr "Netwerkinstaner"
 
 #: ../panels/network/network-proxy.ui.h:5
 msgid "_HTTP Proxy"
@@ -2803,7 +2804,7 @@ msgstr "_Socks-gasheer"
 
 #: ../panels/network/network-proxy.ui.h:9
 msgid "_Ignore Hosts"
-msgstr "_Ignoreer rekenaars"
+msgstr "_Ignoreer gashere"
 
 #: ../panels/network/network-proxy.ui.h:10
 msgid "HTTP proxy port"
@@ -2837,7 +2838,7 @@ msgstr "Bluetooth"
 
 #: ../panels/network/network.ui.h:3
 msgid "Not set up"
-msgstr ""
+msgstr "Nie opgestel nie"
 
 #: ../panels/network/network-vpn.ui.h:1
 msgid "Turn VPN connection off"
@@ -2888,7 +2889,7 @@ msgstr "Slegs outomatiese (DHCP-) adresse"
 
 #: ../panels/network/network-wifi.ui.h:29
 msgid "Link-local only"
-msgstr ""
+msgstr "Skakel slegs plaaslik"
 
 #: ../panels/network/network-wifi.ui.h:30
 msgid "Shared with other computers"
@@ -2936,7 +2937,7 @@ msgstr "Verwyder alle besonderhede wat met dié netwerk te doen het en moenie we
 
 #: ../panels/network/network-wifi.ui.h:45
 msgid "reset"
-msgstr "stel terug"
+msgstr "herstel"
 
 #: ../panels/network/network-wifi.ui.h:50
 msgid "Hardware"
@@ -2945,11 +2946,11 @@ msgstr "Hardeware"
 #: ../panels/network/network-wifi.ui.h:51
 msgctxt "tab"
 msgid "Reset"
-msgstr ""
+msgstr "Herstel"
 
 #: ../panels/network/network-wifi.ui.h:52
 msgid "Wi-Fi Hotspot"
-msgstr "Wi-Fi-toegangsarea"
+msgstr "Wi-Fi-Kuberkol"
 
 #: ../panels/network/network-wifi.ui.h:53
 msgid "Switch off to connect to a Wi-Fi network"
@@ -2984,35 +2985,35 @@ msgstr "_Koppel aan 'n versteekte netwerk…"
 
 #: ../panels/network/network-wifi.ui.h:61
 msgid "_Turn On Wi-Fi Hotspot…"
-msgstr ""
+msgstr "_Skakel Wi-Fi-kuberkol aan…"
 
 #: ../panels/network/network-wifi.ui.h:62
 msgid "_Known Wi-Fi Networks"
-msgstr ""
+msgstr "_Bekende Wi-Fi Netwerke"
 
 #: ../panels/network/wifi.ui.h:1
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
-msgstr ""
+msgstr "Maak seker u het 'n Wi-Fi-passtuk ingeprop en dat dit aangeskakel is"
 
 #: ../panels/network/wifi.ui.h:2
 msgid "No Wi-Fi Adapter Found"
-msgstr ""
+msgstr "Geen Wi-Fi passtukke gevind nie"
 
 #: ../panels/network/wifi.ui.h:3
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Vlugmodus"
 
 #: ../panels/network/wifi.ui.h:4
 msgid "Disables Wi-Fi, Bluetooth and mobile broadband"
-msgstr ""
+msgstr "Deaktiveer Wi-Fi, Bluetooth en mobiele breëband"
 
 #: ../panels/network/wifi.ui.h:5
 msgid "Visible Networks"
-msgstr ""
+msgstr "Sigbare netwerke"
 
 #: ../panels/network/wifi.ui.h:6
 msgid "NetworkManager needs to be running"
-msgstr ""
+msgstr "NetworkManager moet loop"
 
 #. TRANSLATORS: AP type
 #: ../panels/network/panel-common.c:127
@@ -3050,7 +3051,7 @@ msgstr "Koppel tans"
 #. TRANSLATORS: VPN status
 #: ../panels/network/panel-common.c:169 ../panels/network/panel-common.c:211
 msgid "Authentication required"
-msgstr ""
+msgstr "Verifikasie word vereis"
 
 #. TRANSLATORS: device status
 #. TRANSLATORS: VPN status
@@ -3104,22 +3105,22 @@ msgstr "Geheime was nodig, maar is nie verskaf nie"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:264
 msgid "802.1x supplicant disconnected"
-msgstr ""
+msgstr "802.1x supplicant ontkoppel"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:268
 msgid "802.1x supplicant configuration failed"
-msgstr ""
+msgstr "802.1x supplicant konfigurasie het misluk"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:272
 msgid "802.1x supplicant failed"
-msgstr ""
+msgstr "802.1x supplicant het misluk"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:276
 msgid "802.1x supplicant took too long to authenticate"
-msgstr ""
+msgstr "802.1x supplicant het te lank geneem om te verifieer"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:280
@@ -3154,27 +3155,27 @@ msgstr "DHCP-kliënt het misluk"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:304
 msgid "Shared connection service failed to start"
-msgstr ""
+msgstr "Gedeelde verbinding diens kon nie begin nie"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:308
 msgid "Shared connection service failed"
-msgstr ""
+msgstr "Gedeelde verbinding diens het gebreek"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:312
 msgid "AutoIP service failed to start"
-msgstr ""
+msgstr "AutoIP diens kon nie begin nie"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:316
 msgid "AutoIP service error"
-msgstr ""
+msgstr "AutoIP diens fout"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:320
 msgid "AutoIP service failed"
-msgstr ""
+msgstr "AutoIP diens het misluk"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:324
@@ -3189,7 +3190,7 @@ msgstr "Geen luitoon nie"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:332
 msgid "No carrier could be established"
-msgstr ""
+msgstr "Geen draer kon vasgestel word nie"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:336
@@ -3239,7 +3240,7 @@ msgstr "PIN-kontrole het misluk"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:372
 msgid "Firmware for the device may be missing"
-msgstr "Fermware vir die toestel ontbreek dalk"
+msgstr "Fermware vir die toestel ontbreek moontlik"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:376
@@ -3298,19 +3299,19 @@ msgstr "Kabel uitgeprop"
 
 #: ../panels/network/wireless-security/eap-method.c:57
 msgid "undefined error in 802.1X security (wpa-eap)"
-msgstr ""
+msgstr "ongedefinieerde vout in 802.1X sekuriteit (wpa-eap)"
 
 #: ../panels/network/wireless-security/eap-method.c:233
 msgid "no file selected"
-msgstr ""
+msgstr "geen lêer is geselekteer nie"
 
 #: ../panels/network/wireless-security/eap-method.c:264
 msgid "unspecified error validating eap-method file"
-msgstr ""
+msgstr "ongespesifiseerde vout ondervind terwyl eap-metode lêer gevalideer word"
 
 #: ../panels/network/wireless-security/eap-method.c:439
 msgid "DER, PEM, or PKCS#12 private keys (*.der, *.pem, *.p12, *.key)"
-msgstr ""
+msgstr "DER-, PEM-, of PKCS#12- private sleutels (*.der, *.pem, *.p12, *.key)"
 
 #: ../panels/network/wireless-security/eap-method.c:442
 msgid "DER or PEM certificates (*.der, *.pem, *.crt, *.cer)"
@@ -3318,7 +3319,7 @@ msgstr "DER- of PEM-sertifikate (*.der, *.pem, *.crt, *.cer)"
 
 #: ../panels/network/wireless-security/eap-method-fast.c:72
 msgid "missing EAP-FAST PAC file"
-msgstr ""
+msgstr "vermiste EAP-FAST PAC lêer"
 
 #: ../panels/network/wireless-security/eap-method-fast.c:268
 #: ../panels/network/wireless-security/eap-method-peap.c:302
@@ -3346,11 +3347,11 @@ msgstr "Anoniem"
 
 #: ../panels/network/wireless-security/eap-method-fast.ui.h:2
 msgid "Authenticated"
-msgstr ""
+msgstr "Geverifieer"
 
 #: ../panels/network/wireless-security/eap-method-fast.ui.h:3
 msgid "Both"
-msgstr ""
+msgstr "Altwee"
 
 #: ../panels/network/wireless-security/eap-method-fast.ui.h:5
 msgid "PAC _file"
@@ -3360,19 +3361,19 @@ msgstr "PAC-_lêer"
 #: ../panels/network/wireless-security/eap-method-peap.ui.h:7
 #: ../panels/network/wireless-security/eap-method-ttls.ui.h:4
 msgid "_Inner authentication"
-msgstr ""
+msgstr "_Binne verifiëring"
 
 #: ../panels/network/wireless-security/eap-method-fast.ui.h:7
 msgid "Allow automatic PAC pro_visioning"
-msgstr ""
+msgstr "Laat outomatiese PAC voorsiening toe"
 
 #: ../panels/network/wireless-security/eap-method-leap.c:65
 msgid "missing EAP-LEAP username"
-msgstr ""
+msgstr "vermisde EAP-LEAP gebruikersnaam"
 
 #: ../panels/network/wireless-security/eap-method-leap.c:74
 msgid "missing EAP-LEAP password"
-msgstr ""
+msgstr "vermisde EAP-LEAP wagwoord"
 
 #: ../panels/network/wireless-security/eap-method-leap.ui.h:1
 #: ../panels/network/wireless-security/eap-method-simple.ui.h:1
@@ -3392,11 +3393,11 @@ msgstr "_Wys wagwoord"
 #: ../panels/network/wireless-security/eap-method-peap.c:63
 #, c-format
 msgid "invalid EAP-PEAP CA certificate: %s"
-msgstr ""
+msgstr "ongeldige EAP-PEAP CA sertifikaat: %s"
 
 #: ../panels/network/wireless-security/eap-method-peap.c:68
 msgid "invalid EAP-PEAP CA certificate: no certificate specified"
-msgstr ""
+msgstr "ongeldige EAP-PEAP CA sertifikaat: geen sertifikaat is verskaf nie"
 
 #: ../panels/network/wireless-security/eap-method-peap.c:287
 #: ../panels/network/wireless-security/eap-method-ttls.c:336
@@ -3428,7 +3429,7 @@ msgstr "S_O-sertifikaat"
 #: ../panels/network/wireless-security/eap-method-tls.ui.h:4
 #: ../panels/network/wireless-security/eap-method-ttls.ui.h:3
 msgid "No CA certificate is _required"
-msgstr ""
+msgstr "Geen CA sertifikaat word _benodig nie"
 
 #: ../panels/network/wireless-security/eap-method-peap.ui.h:8
 msgid "PEAP _version"
@@ -3436,34 +3437,34 @@ msgstr "PEAP-_weergawe"
 
 #: ../panels/network/wireless-security/eap-method-simple.c:74
 msgid "missing EAP username"
-msgstr ""
+msgstr "vermisde EAP gebruikersnaam"
 
 #: ../panels/network/wireless-security/eap-method-simple.c:87
 msgid "missing EAP password"
-msgstr ""
+msgstr "EAP wagwoord nie teenwoordig nie"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:68
 msgid "missing EAP-TLS identity"
-msgstr ""
+msgstr "vermisde EAP-TLS identiteit"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:77
 #, c-format
 msgid "invalid EAP-TLS CA certificate: %s"
-msgstr ""
+msgstr "ongeldige EAP-TLS CA sertifikaat: %s"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:84
 msgid "invalid EAP-TLS CA certificate: no certificate specified"
-msgstr ""
+msgstr "ongeldige EAP-TLS CA sertifikaat: geen sertifikaat is verskaf nie"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:100
 #, c-format
 msgid "invalid EAP-TLS private-key: %s"
-msgstr ""
+msgstr "ongeldige EAP-TLS privaat-sleutel: %s"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:110
 #, c-format
 msgid "invalid EAP-TLS user-certificate: %s"
-msgstr ""
+msgstr "ongeldige EAP-TLS gebruikers-sertifikaat: %s"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:307
 msgid "Unencrypted private keys are insecure"
@@ -3474,7 +3475,7 @@ msgid ""
 "The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
+msgstr "Die gekose privaatsleutel word klaarblyklik nie met 'n wagwoord beskerm nie. Dit kan dalk toelaat dat u sekuriteitsinligting gesteel word.  Kies asb. 'n wagwoordbeskermde privaatsleutel.\n\n('n Privaatsleutel kan d.m.v. openssl met 'n wagwoord beskerm word)"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:486
 msgid "Choose your personal certificate"
@@ -3503,11 +3504,11 @@ msgstr "Wagwoord vir _privaatsleutel"
 #: ../panels/network/wireless-security/eap-method-ttls.c:63
 #, c-format
 msgid "invalid EAP-TTLS CA certificate: %s"
-msgstr ""
+msgstr "ongeldige EAP-TTLS CA sertifikaat: %s"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:68
 msgid "invalid EAP-TTLS CA certificate: no certificate specified"
-msgstr ""
+msgstr "ongeldige EAP-TTLS CA sertifikaat: geen sertifikaat is verskaf nie"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:259
 msgid "PAP"
@@ -3519,7 +3520,7 @@ msgstr "MSCHAP"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:305
 msgid "MSCHAPv2 (no EAP)"
-msgstr ""
+msgstr "MSCHAPv2 (geen EAP)"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:321
 msgid "CHAP"
@@ -3527,7 +3528,7 @@ msgstr "CHAP"
 
 #: ../panels/network/wireless-security/wireless-security.c:87
 msgid "Unknown error validating 802.1X security"
-msgstr ""
+msgstr "Onbekende fout ervaar tydens die verifikasie van 802.1X sekuriteit"
 
 #: ../panels/network/wireless-security/wireless-security.c:453
 msgid "TLS"
@@ -3535,7 +3536,7 @@ msgstr "TLS"
 
 #: ../panels/network/wireless-security/wireless-security.c:477
 msgid "PWD"
-msgstr ""
+msgstr "PWD"
 
 #: ../panels/network/wireless-security/wireless-security.c:488
 msgid "FAST"
@@ -3553,45 +3554,45 @@ msgstr "Beskermde EAP (PEAP)"
 #: ../panels/network/wireless-security/ws-wep-key.ui.h:6
 #: ../panels/network/wireless-security/ws-wpa-eap.ui.h:1
 msgid "Au_thentication"
-msgstr ""
+msgstr "Verifiëring"
 
 #: ../panels/network/wireless-security/ws-leap.c:63
 msgid "missing leap-username"
-msgstr ""
+msgstr "vermisde leap-gebruikersnaam"
 
 #: ../panels/network/wireless-security/ws-leap.c:74
 msgid "missing leap-password"
-msgstr ""
+msgstr "leap-wagwoord nie teenwoordig nie"
 
 #: ../panels/network/wireless-security/ws-wep-key.c:107
 msgid "missing wep-key"
-msgstr ""
+msgstr "geen wep-kode verskaf nie"
 
 #: ../panels/network/wireless-security/ws-wep-key.c:116
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
+msgstr "ongeldige wep-kode: 'n kode met 'n lengte van %zu mag slegs hex-getalle bevat"
 
 #: ../panels/network/wireless-security/ws-wep-key.c:124
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
+msgstr "ongeldige wep-kode: 'n kode met 'n lengte van %zu mag slegs ascii karakters bevat"
 
 #: ../panels/network/wireless-security/ws-wep-key.c:130
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
+msgstr "ongeldige wep-kode: verkeerde kode lengte %zu 'n Kode moet 'n lengte van 5/13 (ascii) of 10/26 (hex) hê"
 
 #: ../panels/network/wireless-security/ws-wep-key.c:137
 msgid "invalid wep-key: passphrase must be non-empty"
-msgstr ""
+msgstr "ongeldige wep-kode: wagwoord mag nie leeg wees nie"
 
 #: ../panels/network/wireless-security/ws-wep-key.c:139
 msgid "invalid wep-key: passphrase must be shorter than 64 characters"
-msgstr ""
+msgstr "ongeldige wep-kode: wagwoord moet korter as 64 karakters wees"
 
 #: ../panels/network/wireless-security/ws-wep-key.ui.h:1
 msgid "1 (Default)"
@@ -3615,18 +3616,18 @@ msgstr "_Wys sleutel"
 
 #: ../panels/network/wireless-security/ws-wep-key.ui.h:7
 msgid "WEP inde_x"
-msgstr ""
+msgstr "WEP inde_ks"
 
 #: ../panels/network/wireless-security/ws-wpa-psk.c:70
 #, c-format
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
+msgstr "ongeldige wpa-psk: ongeldige kode lengte %zu. Moet [8,63] grepe of 64 hex nommers wees"
 
 #: ../panels/network/wireless-security/ws-wpa-psk.c:79
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr ""
+msgstr "ongeldige wpa-psk: kan nie kode met 64 grepe as hex verstaan nie"
 
 #: ../panels/network/wireless-security/ws-wpa-psk.ui.h:2
 msgid "_Type"
@@ -3647,20 +3648,20 @@ msgstr "_Klankkennisgewings"
 #: ../panels/notifications/edit-dialog.ui.h:5
 msgctxt "notifications"
 msgid "Notification _Popups"
-msgstr ""
+msgstr "Kennisgewings _Baniere"
 
 #: ../panels/notifications/edit-dialog.ui.h:6
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
+msgstr "Kennisgewings sal aanhou om in die kenisgewing lys vertoon te word as baniere gedeaktiveer word."
 
 #. Popups here refers to message tray notifications in the middle of the
 #. screen.
 #: ../panels/notifications/edit-dialog.ui.h:8
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
-msgstr ""
+msgstr "Wys _boodskapinhoud in baniere"
 
 #: ../panels/notifications/edit-dialog.ui.h:9
 msgctxt "notifications"
@@ -3677,7 +3678,7 @@ msgstr "Wys _boodskapinhoud op geslote skerm"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:2
 msgid "No­ti­fi­ca­tions"
-msgstr ""
+msgstr "Kennisgewings"
 
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:3
 msgid "Control which notifications are displayed and what they show"
@@ -3686,11 +3687,11 @@ msgstr "Beheer watter kennisgewings wys en wat hulle bevat"
 #. Translators: those are keywords for the notifications control-center panel
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:5
 msgid "Notifications;Banner;Message;Tray;Popup;"
-msgstr "Notifications;Banner;Message;Tray;Popup;kennisgewings;banier;boodskap;"
+msgstr "kennisgewings;banier;boodskap;"
 
 #: ../panels/notifications/notifications.ui.h:1
 msgid "Notification _Popups"
-msgstr ""
+msgstr "Kennisgewings _Baniere"
 
 #: ../panels/notifications/notifications.ui.h:2
 msgid "_Lock Screen Notifications"
@@ -3712,7 +3713,7 @@ msgstr "Ander"
 #: ../panels/online-accounts/cc-online-accounts-panel.c:603
 #, c-format
 msgid "%s Account"
-msgstr ""
+msgstr "%s Rekening"
 
 #: ../panels/online-accounts/cc-online-accounts-panel.c:895
 msgid "Error removing account"
@@ -3723,14 +3724,14 @@ msgstr "Kon nie rekening verwyder nie"
 #: ../panels/online-accounts/cc-online-accounts-panel.c:960
 #, c-format
 msgid "<b>%s</b> removed"
-msgstr ""
+msgstr "<b>%s</b> verwyder"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:2
 msgid "On­line Accounts"
-msgstr ""
+msgstr "Aanlynrekeninge"
 
 #: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:3
 msgid "Connect to your online accounts and decide what to use them for"
@@ -3741,26 +3742,26 @@ msgstr "Koppel met aanlynrekeninge en kies waarvoor hulle gebruik moet word"
 #: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:5
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;gesels;kalender;pos;epos;e-pos;kontak;"
+msgstr "google;facebook;twitter;yahoo;web;aanlyn;klets;kalender;pos;kontak;owncloud;kerberos;IMAP;SMTP;pocket;readitlater;"
 
 #. Translators: This is the button which allows undoing the removal of the
 #. printer.
 #: ../panels/online-accounts/online-accounts.ui.h:1
 #: ../panels/printers/printers.ui.h:4
 msgid "Undo"
-msgstr ""
+msgstr "Ontdoen"
 
 #: ../panels/online-accounts/online-accounts.ui.h:2
 msgid "Connect to your data in the cloud"
-msgstr ""
+msgstr "Koppel aan jou data in die wolk"
 
 #: ../panels/online-accounts/online-accounts.ui.h:3
 msgid "No internet connection — connect to set up new online accounts"
-msgstr ""
+msgstr "Geen internet verbinding. Koppel aan die internet om aanlyn rekeninge by te voeg"
 
 #: ../panels/online-accounts/online-accounts.ui.h:4
 msgid "Add an account"
-msgstr ""
+msgstr "Voeg 'n rekening by"
 
 #: ../panels/online-accounts/online-accounts.ui.h:5
 msgid "Remove Account"
@@ -3869,7 +3870,7 @@ msgstr "Ononderbreekbare kragbron"
 #. TRANSLATORS: secondary battery
 #: ../panels/power/cc-power-panel.c:537
 msgid "Personal digital assistant"
-msgstr "Persoonlike digitale assistent (PDA)"
+msgstr "Persoonlike digitale assistent"
 
 #. TRANSLATORS: secondary battery
 #: ../panels/power/cc-power-panel.c:540
@@ -3971,7 +3972,7 @@ msgstr "_Wi-Fi"
 
 #: ../panels/power/cc-power-panel.c:1825
 msgid "Turn off Wi-Fi to save power."
-msgstr "Skakel die draadlose netwerk af om krag te spaar."
+msgstr "Skakel die Wi-Fi af om krag te spaar."
 
 #: ../panels/power/cc-power-panel.c:1850
 msgid "_Mobile broadband"
@@ -3999,7 +4000,7 @@ msgstr "Sluimer"
 
 #: ../panels/power/cc-power-panel.c:2061
 msgid "Power Off"
-msgstr ""
+msgstr "Skakel af"
 
 #: ../panels/power/cc-power-panel.c:2062
 msgid "Hibernate"
@@ -4036,7 +4037,7 @@ msgstr "Toestelle"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:2
 msgid "Po­wer"
-msgstr ""
+msgstr "Krag"
 
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:3
 msgid "View your battery status and change power saving settings"
@@ -4046,7 +4047,7 @@ msgstr "Bekyk batterystatus en verander instellings vir kragbesparing"
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:5
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-msgstr "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;krag;slaap;sluimer;hiberneer;hiberneer;helderheid;dof;"
+msgstr "krag;slaap;sluimer;hiberneer;battery;helderheid;verdof;blanko;monitor;DPMS;onaktief;"
 
 #: ../panels/power/power.ui.h:2
 msgid "20 minutes"
@@ -4130,11 +4131,11 @@ msgstr "Wagtyd"
 
 #: ../panels/printers/authentication-dialog.ui.h:1
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../panels/printers/authentication-dialog.ui.h:3
 msgid "Authenticate"
-msgstr ""
+msgstr "Verifieer"
 
 #: ../panels/printers/authentication-dialog.ui.h:4
 #: ../panels/printers/new-printer-dialog.ui.h:13
@@ -4144,13 +4145,13 @@ msgstr "Gebruikernaam"
 #: ../panels/printers/authentication-dialog.ui.h:6
 #: ../panels/printers/new-printer-dialog.ui.h:11
 msgid "Authentication Required"
-msgstr ""
+msgstr "Verifikasie benodig"
 
 #. Translators: %s is the printer name
 #: ../panels/printers/cc-printers-panel.c:718
 #, c-format
 msgid "Printer “%s” has been deleted"
-msgstr ""
+msgstr "Die drukker \"%s\" is verwyder"
 
 #. Translators: Addition of the new printer failed.
 #: ../panels/printers/cc-printers-panel.c:909
@@ -4180,22 +4181,22 @@ msgstr "Soek tans vir voorkeurdrywers…"
 
 #: ../panels/printers/details-dialog.ui.h:6
 msgid "Search for Drivers"
-msgstr ""
+msgstr "Soek vir 'n drywerprogramatuur"
 
 #: ../panels/printers/details-dialog.ui.h:7
 msgid "Select from Database…"
-msgstr ""
+msgstr "Kies uit 'n databasis…"
 
 #: ../panels/printers/details-dialog.ui.h:8
 msgid "Install PPD File…"
-msgstr ""
+msgstr "Verskaf PPD-lêer…"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
 msgid "Prin­ters"
-msgstr ""
+msgstr "Drukkers"
 
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:3
 msgid "Add printers, view printer jobs and decide how you want to print"
@@ -4204,7 +4205,7 @@ msgstr "Voeg drukkers by, bekyk druktake en kies hoe om te druk"
 #. Translators: those are keywords for the printing control-center panel
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:5
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
-msgstr "Printer;Queue;Print;Paper;Ink;Toner;drukker;druk;papier;"
+msgstr "drukker;tou;druk;papier;ink;toner;"
 
 #. Translators: this action removes (purges) all the listed jobs from the
 #. list.
@@ -4228,12 +4229,12 @@ msgstr "Voeg drukker by"
 #. Translators: This buttons submits the credentials for the selected server.
 #: ../panels/printers/new-printer-dialog.ui.h:6
 msgid "_Unlock"
-msgstr ""
+msgstr "_Ontsluit"
 
 #. Translators: No printers were detected
 #: ../panels/printers/new-printer-dialog.ui.h:8
 msgid "No Printers Found"
-msgstr ""
+msgstr "Geen drukkers gevind nie"
 
 #. Translators: The entered text should contain network address of a printer
 #. or a text which will filter found devices (their names and locations)
@@ -4243,21 +4244,21 @@ msgstr "Tik 'n netwerkadres of soek vir 'n drukker"
 
 #: ../panels/printers/new-printer-dialog.ui.h:12
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
+msgstr "Voer u gebruikernaam en wagwoord in om beskikbare drukkers op bediener te sien."
 
 #. Translators: This button triggers the printing of a test page.
 #. Translators: Name of job which makes printer to print test page
 #: ../panels/printers/options-dialog.ui.h:2
 #: ../panels/printers/pp-options-dialog.c:893
 msgid "Test Page"
-msgstr ""
+msgstr "Toetsbladsy"
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: ../panels/printers/pp-details-dialog.c:123
 #: ../panels/printers/pp-details-dialog.c:415
 #, c-format
 msgid "%s Details"
-msgstr ""
+msgstr "%s Besonderhede"
 
 #: ../panels/printers/pp-details-dialog.c:172
 msgid "No suitable driver found"
@@ -4284,7 +4285,7 @@ msgstr "Kies"
 
 #: ../panels/printers/ppd-selection-dialog.ui.h:4
 msgid "Loading drivers database…"
-msgstr ""
+msgstr "Laai tans drywerdatabasis…"
 
 #. Translators: The found device is a JetDirect printer
 #: ../panels/printers/pp-host.c:539
@@ -4382,29 +4383,29 @@ msgstr "Voltooid"
 #, c-format
 msgctxt "Printer jobs dialog title"
 msgid "%s — Active Jobs"
-msgstr ""
+msgstr "%s - Aktiewe Take"
 
 #: ../panels/printers/pp-new-printer-dialog.c:402
 msgid "Unlock Print Server"
-msgstr ""
+msgstr "Sluit die druk bediener oop"
 
 #. Translators: Samba server needs authentication of the user to show list of
 #. its printers.
 #: ../panels/printers/pp-new-printer-dialog.c:406
 #, c-format
 msgid "Unlock %s."
-msgstr ""
+msgstr "Ontsluit %s."
 
 #. Translators: Samba server needs authentication of the user to show list of
 #. its printers.
 #: ../panels/printers/pp-new-printer-dialog.c:411
 #, c-format
 msgid "Enter username and password to view printers on %s."
-msgstr ""
+msgstr "Voer u gebruikersnaam en wagwoord in om beskikbare drukkers op %s te sien."
 
 #: ../panels/printers/pp-new-printer-dialog.c:876
 msgid "Searching for Printers"
-msgstr ""
+msgstr "Soek tans vir drukkers"
 
 #. Translators: The found device is a printer connected via USB
 #: ../panels/printers/pp-new-printer-dialog.c:1799
@@ -4437,7 +4438,7 @@ msgstr "Adres: %s"
 #. printers
 #: ../panels/printers/pp-new-printer-dialog.c:1887
 msgid "Server requires authentication"
-msgstr ""
+msgstr "Bediener nodig verifikasie"
 
 #: ../panels/printers/pp-options-dialog.c:83
 msgid "Two Sided"
@@ -4524,7 +4525,7 @@ msgstr "Gevorderd"
 #. Translators: Name of job which makes printer to print test page
 #: ../panels/printers/pp-options-dialog.c:908
 msgid "Test page"
-msgstr ""
+msgstr "Toetsbladsy"
 
 #. Translators: this is an option of "Paper Source"
 #: ../panels/printers/pp-ppd-option-widget.c:76
@@ -4571,15 +4572,15 @@ msgstr "Vervaardiger"
 #: ../panels/printers/pp-printer-entry.c:585
 #: ../panels/printers/printer-entry.ui.h:8
 msgid "No Active Jobs"
-msgstr ""
+msgstr "Geen aktiewe take"
 
 #. Translators: This is the label of the button that opens the Jobs Dialog.
 #: ../panels/printers/pp-printer-entry.c:590
 #, c-format
 msgid "%u Job"
 msgid_plural "%u Jobs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u Taak"
+msgstr[1] "%u Take"
 
 #. Translators: The printer is low on toner
 #: ../panels/printers/pp-printer-entry.c:739
@@ -4606,12 +4607,12 @@ msgstr "Ontwikkelingvloeistof is op"
 #. Translators: "marker" is one color bin of the printer
 #: ../panels/printers/pp-printer-entry.c:749
 msgid "Low on a marker supply"
-msgstr ""
+msgstr "Merkervoorraad is laag"
 
 #. Translators: "marker" is one color bin of the printer
 #: ../panels/printers/pp-printer-entry.c:751
 msgid "Out of a marker supply"
-msgstr ""
+msgstr "Merkervoorraad is klaar"
 
 #. Translators: One or more covers on the printer are open
 #: ../panels/printers/pp-printer-entry.c:753
@@ -4650,22 +4651,22 @@ msgstr "Gestop"
 #. Translators: The printer marker supply waste receptacle is almost full
 #: ../panels/printers/pp-printer-entry.c:765
 msgid "Waste receptacle almost full"
-msgstr ""
+msgstr "Afvalhouer byna vol"
 
 #. Translators: The printer marker supply waste receptacle is full
 #: ../panels/printers/pp-printer-entry.c:767
 msgid "Waste receptacle full"
-msgstr ""
+msgstr "Afvalhouer vol"
 
 #. Translators: Optical photo conductors are used in laser printers
 #: ../panels/printers/pp-printer-entry.c:769
 msgid "The optical photo conductor is near end of life"
-msgstr ""
+msgstr "Die optiese fotogeleier is naby die einde van sy funksionele lewe"
 
 #. Translators: Optical photo conductors are used in laser printers
 #: ../panels/printers/pp-printer-entry.c:771
 msgid "The optical photo conductor is no longer functioning"
-msgstr ""
+msgstr "Die optiese fotogeleier werk nie meer nie"
 
 #. Translators: Printer's state (can start new job without waiting)
 #: ../panels/printers/pp-printer-entry.c:879
@@ -4688,26 +4689,26 @@ msgstr "Verwerk tans"
 #. Translators: Name of job which makes printer to clean its heads
 #: ../panels/printers/pp-printer-entry.c:913
 msgid "Clean print heads"
-msgstr ""
+msgstr "Maak drukkoppe skoon"
 
 #: ../panels/printers/printer-entry.ui.h:1
 msgid "Printing Options"
-msgstr ""
+msgstr "Drukker Instellings"
 
 #: ../panels/printers/printer-entry.ui.h:2
 msgid "Printer Details"
-msgstr ""
+msgstr "Drukker Besonderhede"
 
 #. Set this printer as default
 #: ../panels/printers/printer-entry.ui.h:4
 msgid "Use Printer by Default"
-msgstr ""
+msgstr "Gebruik as verstek drukker"
 
 #. Translators: This button executes command which cleans print heads of the
 #. printer.
 #: ../panels/printers/printer-entry.ui.h:6
 msgid "Clean Print Heads"
-msgstr ""
+msgstr "Maak drukkoppe skoon"
 
 #: ../panels/printers/printer-entry.ui.h:7
 msgid "Remove Printer"
@@ -4724,17 +4725,17 @@ msgstr "Inkvlak"
 #. Translators: This is the message which follows the printer error.
 #: ../panels/printers/printer-entry.ui.h:13
 msgid "Please restart when the problem is resolved."
-msgstr ""
+msgstr "Herbegin die toestel as die probleem opgelos is."
 
 #. Translators: This is the button which restarts the printer.
 #: ../panels/printers/printer-entry.ui.h:15
 msgid "Restart"
-msgstr ""
+msgstr "Herbegin"
 
 #. Translators: This button adds new printer.
 #: ../panels/printers/printers.ui.h:2
 msgid "Add…"
-msgstr ""
+msgstr "Voeg by…"
 
 #: ../panels/printers/printers.ui.h:5
 msgid "No printers"
@@ -4743,14 +4744,14 @@ msgstr "Geen drukkers nie"
 #. Translators: This button adds new printer.
 #: ../panels/printers/printers.ui.h:7
 msgid "Add a Printer…"
-msgstr ""
+msgstr "Voeg 'n drukker by…"
 
 #. Translators: The CUPS server is not running (we can not connect to it).
 #: ../panels/printers/printers.ui.h:9
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
+msgstr "Jammer! Die stelsel se drukdiens blyk\nnie beskikbaar te wees nie."
 
 #: ../panels/privacy/cc-privacy-panel.c:400
 #: ../panels/privacy/cc-privacy-panel.c:403 ../panels/privacy/privacy.ui.h:28
@@ -4759,21 +4760,21 @@ msgstr "Skermslot"
 
 #: ../panels/privacy/cc-privacy-panel.c:466
 msgid "In use"
-msgstr ""
+msgstr "In gebruik"
 
 #: ../panels/privacy/cc-privacy-panel.c:471
 msgctxt "Location services status"
 msgid "On"
-msgstr ""
+msgstr "Aan"
 
 #: ../panels/privacy/cc-privacy-panel.c:472
 msgctxt "Location services status"
 msgid "Off"
-msgstr ""
+msgstr "Af"
 
 #: ../panels/privacy/cc-privacy-panel.c:851 ../panels/privacy/privacy.ui.h:46
 msgid "Location Services"
-msgstr ""
+msgstr "Liggingdienste"
 
 #: ../panels/privacy/cc-privacy-panel.c:983 ../panels/privacy/privacy.ui.h:24
 msgid "Metrics"
@@ -4836,7 +4837,7 @@ msgstr "Privaatheidbeleid"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:2
 msgid "Pri­va­cy"
-msgstr ""
+msgstr "Privaatheid"
 
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:3
 msgid "Protect your personal information and control what others might see"
@@ -4846,11 +4847,11 @@ msgstr "Beskerm persoonlike inligting en bepaal wat anders moontlik kan sien"
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:5
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
-msgstr "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;skerm;slot;sluit;privaat;onlangs;tydelik;indeks;naam;netwerk;identiteit;"
+msgstr "skerm;sluit;diagnose;privaat;onlangs;voorlopig;tmp;indeks;naam;netwerk;identiteit;"
 
 #: ../panels/privacy/privacy.ui.h:1
 msgid "Screen Turns Off"
-msgstr "skerm afskakel"
+msgstr "Skerm afskakel"
 
 #: ../panels/privacy/privacy.ui.h:2
 msgid "30 seconds"
@@ -4966,11 +4967,11 @@ msgstr "Vee permament uit n_a"
 
 #: ../panels/privacy/privacy.ui.h:38
 msgid "_Empty Trash…"
-msgstr ""
+msgstr "Maak _asblik leeg…"
 
 #: ../panels/privacy/privacy.ui.h:39
 msgid "_Purge Temporary Files…"
-msgstr ""
+msgstr "Vee tydelike lêers _permanent uit…"
 
 #: ../panels/privacy/privacy.ui.h:41
 msgid ""
@@ -4987,7 +4988,7 @@ msgstr "_Stuur statistiek oor sagtewaregebruik"
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy."
-msgstr ""
+msgstr "Liggingdienste laat programme toe om jou ligging te weet. Die gebruik van Wi-Fi en mobiele breëband verhoog akkuraatheid."
 
 #: ../panels/privacy/privacy.ui.h:48
 msgid "_Location Services"
@@ -5042,7 +5043,7 @@ msgstr "Tye"
 
 #: ../panels/region/format-chooser.ui.h:7
 msgid "Dates & Times"
-msgstr ""
+msgstr "Datum en Tyd"
 
 #: ../panels/region/format-chooser.ui.h:8
 msgid "Numbers"
@@ -5061,7 +5062,7 @@ msgstr "Papier"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:2
 msgid "Re­gion & Lan­guage"
-msgstr ""
+msgstr "Streek en Taal"
 
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:3
 msgid ""
@@ -5071,7 +5072,7 @@ msgstr "Kies die vertoontaal, formate, sleutelborduitlegte en toevoerbronne"
 #. Translators: those are keywords for the region control-center panel
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:5
 msgid "Language;Layout;Keyboard;Input;"
-msgstr "Language;Layout;Keyboard;Input;taal;uitleg;sleutelbord;toetsbord;toevoer;"
+msgstr "taal;uitleg;sleutelbord;toevoer;"
 
 #: ../panels/region/input-chooser.ui.h:1
 msgid "Add a Keyboard Layout"
@@ -5079,7 +5080,7 @@ msgstr ""
 
 #: ../panels/region/input-chooser.ui.h:4
 msgid "Input methods can’t be used on the login screen"
-msgstr ""
+msgstr "Toevoermetodes kan nie gebruik word op die aanmeldskerm nie"
 
 #: ../panels/region/input-options.ui.h:1
 msgid "Keyboard Layout Options"
@@ -5115,7 +5116,7 @@ msgstr "Verander gerus dié kortpaaie in sleutelbordinstellings"
 
 #: ../panels/region/input-options.ui.h:10
 msgid "Alternative switch to next source"
-msgstr ""
+msgstr "Alternatiewe skakelaar na volgende bron"
 
 #: ../panels/region/input-options.ui.h:11
 msgid "Left+Right Alt"
@@ -5140,11 +5141,11 @@ msgstr "Engels (Verenigde Koninkryk)"
 
 #: ../panels/region/region.ui.h:5
 msgid "Restart the session for changes to take effect"
-msgstr ""
+msgstr "Die sessie moet herbegin word sodat veranderinge kan neerslag vind"
 
 #: ../panels/region/region.ui.h:6
 msgid "Restart…"
-msgstr ""
+msgstr "Herbegin…"
 
 #: ../panels/region/region.ui.h:7
 msgid "_Formats"
@@ -5217,7 +5218,7 @@ msgstr "Kies watter programme soekresultate wys in die Aktiwiteitoorsig"
 #. Translators: those are keywords for the search control-center panel
 #: ../panels/search/gnome-search-panel.desktop.in.in.h:5
 msgid "Search;Find;Index;Hide;Privacy;Results;"
-msgstr "Search;Find;Index;Hide;Privacy;Results;soek;vind;indeks;vertseek;privaatheid;resultate;"
+msgstr "soek;vind;indeks;versteek;privaatheid;resultate;"
 
 #: ../panels/search/search-locations-dialog.ui.h:1
 msgid "Search Locations"
@@ -5225,15 +5226,15 @@ msgstr "Soekliggings"
 
 #: ../panels/search/search-locations-dialog.ui.h:2
 msgid "Places"
-msgstr ""
+msgstr "Plekke"
 
 #: ../panels/search/search-locations-dialog.ui.h:3
 msgid "Bookmarks"
-msgstr ""
+msgstr "Boekmerke"
 
 #: ../panels/search/search-locations-dialog.ui.h:4
 msgid "Other"
-msgstr ""
+msgstr "Ander"
 
 #: ../panels/search/search.ui.h:1
 msgid "Move Up"
@@ -5289,14 +5290,14 @@ msgstr "Persoonlike lêerdeling maak dit moontlik om die Publiek-gids te deel me
 msgid ""
 "When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
-msgstr ""
+msgstr "Wanneer afgeleë toegang geaktiveer is kan afgeleë gebruikers koppel met die Secure Shell-opdrag:\n<a href=\"ssh %s\">ssh %s</a>"
 
 #: ../panels/sharing/cc-sharing-panel.c:873
 #, c-format
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to <a href=\"vnc://%s\">vnc://%s</a>"
-msgstr ""
+msgstr "Laat afgeleë gebruikers toe om die skerm te sien of te beheer deur te koppel aan: <a href=\"vnc://%s\">vnc://%s</a>"
 
 #: ../panels/sharing/cc-sharing-panel.c:985
 msgid "Copy"
@@ -5311,7 +5312,7 @@ msgstr "Deling"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/sharing/gnome-sharing-panel.desktop.in.in.h:2
 msgid "Sha­ring"
-msgstr ""
+msgstr "Deling"
 
 #: ../panels/sharing/gnome-sharing-panel.desktop.in.in.h:3
 msgid "Control what you want to share with others"
@@ -5321,7 +5322,7 @@ msgstr "Kies wat om te deel met ander"
 #: ../panels/sharing/gnome-sharing-panel.desktop.in.in.h:5
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
-msgstr "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;deel;deling;gasheer;naam;afgeleë;werkskerm;oudio;klank;prente;foto's;flieks;flims;bediener;"
+msgstr "deel;deling;ssh;gasheer;naam;afgeleë;werkskerm;media;klank;video;prente;fotos;flieks;bediener;"
 
 #: ../panels/sharing/networks.ui.h:1
 msgid "Networks"
@@ -5333,7 +5334,7 @@ msgstr "Aktiveer of deaktiveer afgeleë aanmelding"
 
 #: ../panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in.h:2
 msgid "Authentication is required to enable or disable remote login"
-msgstr ""
+msgstr "Verifikasie is nodig om afgeleë aanmelding aan of af te skakel"
 
 #: ../panels/sharing/sharing.ui.h:1
 msgid "_Computer Name"
@@ -5341,7 +5342,7 @@ msgstr "_Rekenaarnaam"
 
 #: ../panels/sharing/sharing.ui.h:2
 msgid "_File Sharing"
-msgstr ""
+msgstr "_Lêerdeling"
 
 #: ../panels/sharing/sharing.ui.h:3
 msgid "_Screen Sharing"
@@ -5365,7 +5366,7 @@ msgstr "Sommige dienste is gedeaktiveer weens 'n gebrek aan netwerktoegang."
 
 #: ../panels/sharing/sharing.ui.h:8
 msgid "File Sharing"
-msgstr ""
+msgstr "Lêerdeling"
 
 #: ../panels/sharing/sharing.ui.h:9
 msgid "_Require Password"
@@ -5381,7 +5382,7 @@ msgstr "Skermdeling"
 
 #: ../panels/sharing/sharing.ui.h:13
 msgid "_Allow connections to control the screen"
-msgstr ""
+msgstr "_Laat verbindings toe om die skerm te beheer"
 
 #: ../panels/sharing/sharing.ui.h:14
 msgid "_Password:"
@@ -5409,7 +5410,7 @@ msgstr "Mediadeling"
 
 #: ../panels/sharing/sharing.ui.h:20
 msgid "Share music, photos and videos over the network."
-msgstr ""
+msgstr "Deel musiek, foto's en video's oor die netwerk."
 
 #: ../panels/sharing/sharing.ui.h:21
 msgid "Folders"
@@ -5436,7 +5437,7 @@ msgstr "Verander klankvolume, toevoer, afvoer en kennisgewingklanke"
 #. Translators: those are keywords for the sound control-center panel
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
-msgstr "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;kaart;mikrofoon;uitdoof;balans;kopstuk;oudio;klank;"
+msgstr "kaart;mikrofoon;volume;doof;balans;bluetooth;kopstuk;klank;"
 
 #. Translators: This is the name of an audio file that sounds like the bark of
 #. a dog.
@@ -5657,41 +5658,41 @@ msgstr "Doelgemaak"
 #: ../panels/universal-access/cc-ua-panel.c:351
 msgctxt "cursor size"
 msgid "Default"
-msgstr ""
+msgstr "Verstek"
 
 #: ../panels/universal-access/cc-ua-panel.c:354
 msgctxt "cursor size"
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #: ../panels/universal-access/cc-ua-panel.c:357
 msgctxt "cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Groot"
 
 #: ../panels/universal-access/cc-ua-panel.c:360
 msgctxt "cursor size"
 msgid "Larger"
-msgstr ""
+msgstr "Groter"
 
 #: ../panels/universal-access/cc-ua-panel.c:363
 msgctxt "cursor size"
 msgid "Largest"
-msgstr ""
+msgstr "Grootste"
 
 #: ../panels/universal-access/cc-ua-panel.c:367
 #, c-format
 msgid "%d pixel"
 msgid_plural "%d pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d beeldpunt"
+msgstr[1] "%d beeldpunte"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
 msgid "Uni­ver­sal Access"
-msgstr ""
+msgstr "Universele toegang"
 
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:3
 msgid "Make it easier to see, hear, type, point and click"
@@ -5702,7 +5703,7 @@ msgstr "Maak sien, hoor, tik, wys en klik makliker"
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:5
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Assist;Repeat;Blink;"
-msgstr ""
+msgstr "sleutelbord;muis;a11y;toeganklikheid;kontras;zoem;skerm;leser;teks;lettertipe;grootte;accessx;kleefsleutels;stadige;sleutels;bons;dubbel;klik;vertraag;help;herhaal;flikker;"
 
 #: ../panels/universal-access/uap.ui.h:1
 msgid "_Always Show Universal Access Menu"
@@ -5722,7 +5723,7 @@ msgstr "_Groot teks"
 
 #: ../panels/universal-access/uap.ui.h:5
 msgid "C_ursor Size"
-msgstr ""
+msgstr "_Wysergrootte"
 
 #: ../panels/universal-access/uap.ui.h:6
 #: ../panels/universal-access/zoom-options.ui.h:7
@@ -5783,12 +5784,12 @@ msgstr "Wagtyd vir dubbelklik"
 
 #: ../panels/universal-access/uap.ui.h:22
 msgid "Cursor Size"
-msgstr ""
+msgstr "Wysergrootte"
 
 #: ../panels/universal-access/uap.ui.h:23
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
+msgstr "Muis grootte kan gekombineer word met die zoem funksie om dit makliker te maak om te sien."
 
 #: ../panels/universal-access/uap.ui.h:24
 msgid "Screen Reader"
@@ -5808,7 +5809,7 @@ msgstr "Klanksleutels"
 
 #: ../panels/universal-access/uap.ui.h:28
 msgid "Beep when Num Lock or Caps Lock are turned on or off."
-msgstr ""
+msgstr "Biep wanneer Caps- of NumLock aan of af geskakel word."
 
 #: ../panels/universal-access/uap.ui.h:29
 msgid "Visual Alerts"
@@ -6246,12 +6247,12 @@ msgstr "_Volle naam"
 #: ../panels/user-accounts/data/account-dialog.ui.h:6
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:4
 msgid "Standard"
-msgstr ""
+msgstr "Standaard"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:7
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:5
 msgid "Administrator"
-msgstr ""
+msgstr "Administrateur"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:8
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:6
@@ -6275,7 +6276,7 @@ msgstr "Stel 'n wagwoord _nou in"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:14
 msgid "_Confirm"
-msgstr ""
+msgstr "_Bevestig"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:15
 #: ../panels/user-accounts/data/password-dialog.ui.h:10
@@ -6287,7 +6288,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
+msgstr "Onderneming-aanmelding maak dat 'n bestaande, sentraal bestuurde gebruikerrekening op dié toestel gebruik kan word. U kan ook die rekening gebruik om toegang tot maatskapy hulpbronne op die internet te kry."
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:17
 #: ../panels/user-accounts/data/join-dialog.ui.h:9
@@ -6296,11 +6297,11 @@ msgstr "_Domein"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:18
 msgid "You are Offline"
-msgstr ""
+msgstr "Jy is vanlyn af"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:19
 msgid "You must be online in order to add enterprise users."
-msgstr ""
+msgstr "Jy moet aanlyn wees om onderneming-gebruikers by te voeg."
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:20
 msgid "_Enterprise Login"
@@ -6372,13 +6373,13 @@ msgstr "Voeg by of skrap gebruikers en verander u wagwoord"
 #. Translators: those are keywords for the user accounts control-center panel
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr "Login;Name;Fingerprint;Avatar;Logo;Face;Password;aanmeld;naam;vingerafdruk;embleem;gesig;wagwoord;meld aan;"
+msgstr "aanmeld;naam;vingerafdruk;embleem;gesig;wagwoord;"
 
 #. Translators: This button enrolls the computer in the domain in order to use
 #. enterprise logins.
 #: ../panels/user-accounts/data/join-dialog.ui.h:4
 msgid "_Enroll"
-msgstr ""
+msgstr "_Inskryf"
 
 #: ../panels/user-accounts/data/join-dialog.ui.h:5
 msgid "Domain Administrator Login"
@@ -6389,7 +6390,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
+msgstr "Om die maatskappy se aanmeldstelsel te kan gebruik, moet hierdie rekenaar aan die\ndomein gekoppel wees. Laat u netwerkadministrateur\nhul domeinwagwoord hier invul."
 
 #: ../panels/user-accounts/data/join-dialog.ui.h:10
 msgid "Administrator _Name"
@@ -6421,7 +6422,7 @@ msgstr "Huidige _wagwoord"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:1
 msgid "_Add User…"
-msgstr ""
+msgstr "_Voeg gebruiker by…"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:2
 msgid "Your session needs to be restarted for changes to take effect"
@@ -6449,7 +6450,7 @@ msgstr "Laas aangemeld"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:13
 msgid "Remove User…"
-msgstr ""
+msgstr "Verwyder gebruiker…"
 
 #: ../panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in.h:1
 msgid "Manage user accounts"
@@ -6457,7 +6458,7 @@ msgstr "Bestuur gebruikerrekeninge"
 
 #: ../panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in.h:2
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Verifikasie is nodig om gebruikersdata te verander"
 
 #: ../panels/user-accounts/pw-utils.c:81
 msgctxt "Password hint"
@@ -6546,23 +6547,23 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
+msgstr "Die wagwoord moet langer wees. Probeer om 'n mengsel van letters, syfers en leestekens te gebruik."
 
 #: ../panels/user-accounts/pw-utils.c:117
 msgctxt "Password hint"
 msgid "Mix uppercase and lowercase and try to use a number or two."
-msgstr ""
+msgstr "Meng hoof- en kleinletters en gebruik 'n syfer of twee."
 
 #: ../panels/user-accounts/pw-utils.c:119
 msgctxt "Password hint"
 msgid ""
 "Adding more letters, numbers and punctuation will make the password "
 "stronger."
-msgstr ""
+msgstr "Goeie wagwoord! Meer letters, syfers en leestekens sal dit selfs nog sterker maak."
 
 #: ../panels/user-accounts/run-passwd.c:422
 msgid "Authentication failed"
-msgstr ""
+msgstr "Verifikasie het misluk"
 
 #: ../panels/user-accounts/run-passwd.c:502
 #, c-format
@@ -6597,7 +6598,7 @@ msgstr "Die ou en nuwe wagwoorde is die selfde"
 #: ../panels/user-accounts/run-passwd.c:528
 #, c-format
 msgid "Your password has been changed since you initially authenticated!"
-msgstr ""
+msgstr "Jou wagwoord het verander sedert jy aanvanklik geverifieer is!"
 
 #: ../panels/user-accounts/run-passwd.c:532
 #, c-format
@@ -6611,7 +6612,7 @@ msgstr "Onbekende fout"
 
 #: ../panels/user-accounts/um-account-dialog.c:34
 msgid "Should match the web address of your login provider."
-msgstr ""
+msgstr "Moet pas by die webadres van die rekeningverskaffer."
 
 #: ../panels/user-accounts/um-account-dialog.c:236
 msgid "Failed to add account"
@@ -6629,7 +6630,7 @@ msgstr "Kon nie rekening registreer nie"
 
 #: ../panels/user-accounts/um-account-dialog.c:938
 msgid "No supported way to authenticate with this domain"
-msgstr ""
+msgstr "Geen ondersteunde manier om met hierdie domein te verifieer nie"
 
 #: ../panels/user-accounts/um-account-dialog.c:1011
 msgid "Failed to join domain"
@@ -6639,13 +6640,13 @@ msgstr "Kon nie by domein aansluit nie"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
+msgstr "Daardie gebruikernaam het nie gewerk nie.\nProbeer gerus weer."
 
 #: ../panels/user-accounts/um-account-dialog.c:1079
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
+msgstr "Daardie wagwoord het nie gewerk nie.\nProbeer gerus weer."
 
 #: ../panels/user-accounts/um-account-dialog.c:1087
 msgid "Failed to log into domain"
@@ -6653,7 +6654,7 @@ msgstr "Kon nie by domein aanmeld nie"
 
 #: ../panels/user-accounts/um-account-dialog.c:1145
 msgid "Unable to find the domain. Maybe you misspelled it?"
-msgstr ""
+msgstr "Kon nie die domein vind nie. Is dit reg gespel?"
 
 #: ../panels/user-accounts/um-account-type.c:34
 msgctxt "Account type"
@@ -6707,7 +6708,7 @@ msgstr "Klaar!"
 #: ../panels/user-accounts/um-fingerprint-dialog.c:546
 #, c-format
 msgid "Could not access “%s” device"
-msgstr ""
+msgstr "Kon nie toegang tot die toestel \"%s\" kry nie"
 
 #. translators:
 #. * The variable is the name of the device, for example:
@@ -6715,7 +6716,7 @@ msgstr ""
 #: ../panels/user-accounts/um-fingerprint-dialog.c:587
 #, c-format
 msgid "Could not start finger capture on “%s” device"
-msgstr ""
+msgstr "Kon nie vingeropname op \"%s\" begin nie"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:631
 msgid "Could not access any fingerprint readers"
@@ -6735,15 +6736,15 @@ msgstr "Kontak u stelseladministrateur vir hulp."
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the “%s” device."
-msgstr ""
+msgstr "Om aanmelding met vingerafdruk te aktiveer moet u een van u vingerafdrukke stoor met die toestel \"%s\"."
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:721
 msgid "Selecting finger"
-msgstr ""
+msgstr "Kies 'n vinger"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:722
 msgid "Enrolling fingerprints"
-msgstr ""
+msgstr "Besig om fingerafdrukke in te skryf"
 
 #: ../panels/user-accounts/um-history-dialog.c:70
 msgid "This Week"
@@ -6751,7 +6752,7 @@ msgstr "Dié week"
 
 #: ../panels/user-accounts/um-history-dialog.c:73
 msgid "Last Week"
-msgstr "Laas week"
+msgstr "Verlede week"
 
 #. Translators: This is a date format string in the style of "Feb 18",
 #. shown as the first day of a week on login history dialog.
@@ -6776,7 +6777,7 @@ msgstr "%e %b %Y"
 #, c-format
 msgctxt "login history week label"
 msgid "%s — %s"
-msgstr ""
+msgstr "%s — %s"
 
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
@@ -6808,7 +6809,7 @@ msgstr "Sessie is beëindig"
 #: ../panels/user-accounts/um-history-dialog.c:299
 #, c-format
 msgid "%s — Account Activity"
-msgstr ""
+msgstr "%s — Rekening Aktiwiteit"
 
 #: ../panels/user-accounts/um-password-dialog.c:187
 msgid "Please choose another password."
@@ -6854,7 +6855,7 @@ msgstr "Kan nie outomaties by 'n domein van dié soort aansluit nie"
 #: ../panels/user-accounts/um-realm-manager.c:413
 #, c-format
 msgid "No such domain or realm found"
-msgstr ""
+msgstr "Geen domein of gebied gevind nie"
 
 #: ../panels/user-accounts/um-realm-manager.c:815
 #: ../panels/user-accounts/um-realm-manager.c:829
@@ -6864,16 +6865,16 @@ msgstr "Kan nie as %s by die %s-domein aanmeld nie"
 
 #: ../panels/user-accounts/um-realm-manager.c:821
 msgid "Invalid password, please try again"
-msgstr "Verkeerde wagwoord. Probeer gerus weer."
+msgstr "Verkeerde wagwoord. Probeer gerus weer"
 
 #: ../panels/user-accounts/um-realm-manager.c:834
 #, c-format
 msgid "Couldn’t connect to the %s domain: %s"
-msgstr ""
+msgstr "Kon nie koppel aan die %s-domein nie: %s"
 
 #: ../panels/user-accounts/um-user-panel.c:195
 msgid "Your account"
-msgstr ""
+msgstr "Jou rekening"
 
 #: ../panels/user-accounts/um-user-panel.c:390
 msgid "Failed to delete user"
@@ -6883,7 +6884,7 @@ msgstr "Kon nie gebruiker skrap nie"
 #: ../panels/user-accounts/um-user-panel.c:507
 #: ../panels/user-accounts/um-user-panel.c:559
 msgid "Failed to revoke remotely managed user"
-msgstr ""
+msgstr "Kon nie afstand bestuurde gebruiker skrap nie"
 
 #: ../panels/user-accounts/um-user-panel.c:613
 msgid "You cannot delete your own account."
@@ -6903,13 +6904,13 @@ msgstr "Om 'n gebruiker te skrap terwyl hy aangemeld is, kan die stelsel in 'n i
 #: ../panels/user-accounts/um-user-panel.c:635
 #, c-format
 msgid "Do you want to keep %s’s files?"
-msgstr ""
+msgstr "Wil u %s se lêers behou?"
 
 #: ../panels/user-accounts/um-user-panel.c:639
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr "Dit is moontlik om die tuisgids, pos-spool-gids en Tydelike lêers te hou wanneer 'n gebruiker se rekening geskrap word."
+msgstr "Dit is moontlik om die tuisgids, pos-spool-gids en tydelike lêers te hou wanneer 'n gebruiker se rekening geskrap word."
 
 #: ../panels/user-accounts/um-user-panel.c:642
 msgid "_Delete Files"
@@ -6922,11 +6923,11 @@ msgstr "_Hou lêers"
 #: ../panels/user-accounts/um-user-panel.c:657
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr ""
+msgstr "Is u seker u wil %s se afstand bestuurde rekeneing skrap?"
 
 #: ../panels/user-accounts/um-user-panel.c:661
 msgid "_Delete"
-msgstr ""
+msgstr "_Skrap"
 
 #: ../panels/user-accounts/um-user-panel.c:711
 msgctxt "Password mode"
@@ -6989,7 +6990,7 @@ msgstr "Om die gekose gebruikerrekening te skrap,\nklik eers die *-ikoon"
 
 #: ../panels/user-accounts/um-utils.c:497
 msgid "Sorry, that user name isn’t available. Please try another."
-msgstr ""
+msgstr "Jammer maar die gebruikersnaam is nie meer beskikbaar nie. Probeer gerus 'n ander een."
 
 #: ../panels/user-accounts/um-utils.c:500
 #, c-format
@@ -6998,61 +6999,61 @@ msgstr "Die gebruikernaam is te lank."
 
 #: ../panels/user-accounts/um-utils.c:503
 msgid "The username cannot start with a “-”."
-msgstr ""
+msgstr "'n Gebruikernaam kan nie begin met 'n \"-\" nie."
 
 #: ../panels/user-accounts/um-utils.c:506
 msgid ""
 "The username should only consist of upper and lower case letters from a-z, "
 "digits and the following characters: . - _"
-msgstr ""
+msgstr "Die gebruikernaam moet slegs bestaan uit hoof- en kleinletters (a-z), syfers en enige van die karakters '.', '-' en '_'"
 
 #: ../panels/user-accounts/um-utils.c:510
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr ""
+msgstr "Hierdie gaan gebruik word as tuisgidsnaam en kan nie verander word nie."
 
 #: ../panels/wacom/button-mapping.ui.h:1
 msgid "Map Buttons"
-msgstr ""
+msgstr "Koppel knoppies"
 
 #: ../panels/wacom/button-mapping.ui.h:3
 msgid "Map buttons to functions"
-msgstr ""
+msgstr "Koppel knoppies aan funksies"
 
 #: ../panels/wacom/button-mapping.ui.h:4
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
+msgstr "Om 'n kortpad te wysig, kies die \"Stuur sleutel\" -aksie, druk die sleutelbordkortpad en hou die nuwe sleutels in of druk Backspace om te vee."
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:83
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
+msgstr "Raak asseblief aan die teikenmerkers soos dit verskyn om die tablet te kalibreer."
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:87
 msgid "Mis-click detected, restarting…"
-msgstr ""
+msgstr "Mis-klik bespeur, herbegin…"
 
 #: ../panels/wacom/cc-wacom-button-row.c:266
 #, c-format
 msgid "Button %d"
-msgstr ""
+msgstr "Knoppie %d"
 
 #: ../panels/wacom/cc-wacom-button-row.h:53
 msgctxt "Wacom action-type"
 msgid "Application defined"
-msgstr ""
+msgstr "Toepassings gedefinieer"
 
 #: ../panels/wacom/cc-wacom-button-row.h:54
 msgctxt "Wacom action-type"
 msgid "Send Keystroke"
-msgstr ""
+msgstr "Stuur sleutel"
 
 #: ../panels/wacom/cc-wacom-button-row.h:55
 msgctxt "Wacom action-type"
 msgid "Switch Monitor"
-msgstr ""
+msgstr "Ruil Monitor"
 
 #: ../panels/wacom/cc-wacom-button-row.h:56
 msgctxt "Wacom action-type"
@@ -7066,26 +7067,26 @@ msgstr "Afvoer:"
 #. Keep ratio switch
 #: ../panels/wacom/cc-wacom-mapping-panel.c:272
 msgid "Keep aspect ratio (letterbox):"
-msgstr ""
+msgstr "Behou beeldverhouding (breedbeeld)"
 
 #. Whole-desktop checkbox
 #: ../panels/wacom/cc-wacom-mapping-panel.c:283
 msgid "Map to single monitor"
-msgstr ""
+msgstr "Koppel aan 'n enkele skerm"
 
 #: ../panels/wacom/cc-wacom-nav-button.c:86
 #, c-format
 msgid "%d of %d"
-msgstr ""
+msgstr "%d van %d"
 
 #: ../panels/wacom/cc-wacom-page.c:544
 msgid "Display Mapping"
-msgstr ""
+msgstr "Vertoon koppelings"
 
 #: ../panels/wacom/cc-wacom-panel.c:783
 #: ../panels/wacom/wacom-stylus-page.ui.h:9
 msgid "Stylus"
-msgstr ""
+msgstr "Pen"
 
 #: ../panels/wacom/cc-wacom-stylus-page.c:347
 msgid "Button"
@@ -7096,16 +7097,16 @@ msgstr "Knoppie"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:2
 msgid "Wa­com Tab­let"
-msgstr ""
+msgstr "Wacom-Tablet"
 
 #: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:3
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
+msgstr "Stel knoppiekoppelings en pas pengevoeligheid vir grafiese tablette aan"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
 #: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:5
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
-msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;uitveër;muis;"
+msgstr "tablet;wacom;pen;uitveër;muis;"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:1
 msgid "Tablet (absolute)"
@@ -7141,11 +7142,11 @@ msgstr "Wacom-tablet"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:10
 msgid "Map to Monitor…"
-msgstr ""
+msgstr "Koppel aan Skerm…"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:11
 msgid "Map Buttons…"
-msgstr ""
+msgstr "Koppel knoppies…"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:12
 msgid "Calibrate…"
@@ -7153,7 +7154,7 @@ msgstr "Kalibreer…"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:13
 msgid "Adjust display resolution"
-msgstr ""
+msgstr "Verander die resolusie van die skerm"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:14
 msgid "Adjust mouse settings"
@@ -7161,7 +7162,7 @@ msgstr "Verstel muisinstellings"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:15
 msgid "Tracking Mode"
-msgstr ""
+msgstr "Opspoormodus"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:16
 msgid "Left-Handed Orientation"
@@ -7189,15 +7190,15 @@ msgstr "Vorentoe"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:6
 msgid "No stylus found"
-msgstr ""
+msgstr "Geen pen gevind nie"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:7
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr ""
+msgstr "Beweeg jou pen naby aan die tablet om dit in te stel"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:10
 msgid "Eraser Pressure Feel"
-msgstr ""
+msgstr "Uitveër druk gevoel"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:11
 msgid "Soft"
@@ -7217,7 +7218,7 @@ msgstr "Onderste knoppie"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:15
 msgid "Tip Pressure Feel"
-msgstr ""
+msgstr "Punt druk gevoel"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:17
 msgid "page 3"
@@ -7256,7 +7257,7 @@ msgstr "Nutsgoed om die GNOME-werkarea op te stel"
 msgid ""
 "The control center is GNOME’s main interface for configuration of various "
 "aspects of your desktop."
-msgstr ""
+msgstr "Die beheersentrum is GNOME se plek vir die opstelling van verskeie aspekte van die werkskerm."
 
 #: ../shell/cc-application.c:45
 msgid "Display version number"
@@ -7300,7 +7301,7 @@ msgstr "Sluit af"
 
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
-msgstr "Preferences;Settings;voorkeure;instelling;opstelling;"
+msgstr "voorkeure;instelling;opstelling;"
 
 #: ../shell/help-overlay.ui.h:1
 msgctxt "shortcut window"
@@ -7337,8 +7338,8 @@ msgstr "Kanselleer soektog"
 #: ../shell/hostname-helper.c:189
 msgctxt "hotspot"
 msgid "Hotspot"
-msgstr ""
+msgstr "Kuberkol"
 
 #: ../shell/panel-list.ui.h:3
 msgid "No results found"
-msgstr ""
+msgstr "Geen resultate gevind nie"

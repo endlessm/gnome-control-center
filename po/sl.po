@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:35+0000\n"
+"PO-Revision-Date: 2018-04-18 22:51+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/endless-os/gnome-control-center/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -190,7 +190,7 @@ msgstr "Vmesnik Bluetooth je izklopljen"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:332
 msgid "Turn on to connect devices and receive file transfers."
-msgstr "Priklopi naprave povezovanje za prejemanje datotek."
+msgstr "Povezovanje naprav za prejemanje datotek."
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:333
 msgid "Airplane Mode is on"
@@ -1049,7 +1049,7 @@ msgstr "24-urni"
 
 #: ../panels/datetime/datetime.ui.h:27
 msgid "AM / PM"
-msgstr "dop./pop."
+msgstr "12-urni"
 
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:3
 msgid "Change the date and time, including time zone"
@@ -1071,22 +1071,22 @@ msgstr "Za spreminjanje nastavitev časa in datuma so zahtevana skrbniška dovol
 #: ../panels/display/cc-display-panel.c:746
 msgctxt "Display rotation"
 msgid "Landscape"
-msgstr ""
+msgstr "Ležeče"
 
 #: ../panels/display/cc-display-panel.c:749
 msgctxt "Display rotation"
 msgid "Portrait Right"
-msgstr ""
+msgstr "Pokončno desno"
 
 #: ../panels/display/cc-display-panel.c:752
 msgctxt "Display rotation"
 msgid "Portrait Left"
-msgstr ""
+msgstr "Pokončno levo"
 
 #: ../panels/display/cc-display-panel.c:755
 msgctxt "Display rotation"
 msgid "Landscape (flipped)"
-msgstr ""
+msgstr "Ležeče (obrnjeno)"
 
 #. Translators: This option sets orientation of print (portrait, landscape...)
 #: ../panels/display/cc-display-panel.c:796
@@ -1110,7 +1110,7 @@ msgstr "Hitrost osveževanja"
 
 #: ../panels/display/cc-display-panel.c:1194
 msgid "Scale"
-msgstr ""
+msgstr "Prilagodi velikost"
 
 #: ../panels/display/cc-display-panel.c:1247
 msgid "Adjust for TV"
@@ -1119,25 +1119,25 @@ msgstr "Prilagodi za televiziski zaslon"
 #: ../panels/display/cc-display-panel.c:1485
 #: ../panels/display/cc-display-panel.c:1534
 msgid "Primary Display"
-msgstr ""
+msgstr "Prvi zaslon"
 
 #: ../panels/display/cc-display-panel.c:1563
 msgid "Display Arrangement"
-msgstr ""
+msgstr "Postavitev zaslonov"
 
 #: ../panels/display/cc-display-panel.c:1564
 msgid ""
 "Drag displays to match your setup. The top bar is placed on the primary "
 "display."
-msgstr ""
+msgstr "Potegnite zaslone, da bodo skladni z dejanstko postavitvijo. Vrhnja vrstica je postavljena na prvi zaslon."
 
 #: ../panels/display/cc-display-panel.c:2004
 msgid "Display Mode"
-msgstr ""
+msgstr "Način prikaza"
 
 #: ../panels/display/cc-display-panel.c:2020
 msgid "Join Displays"
-msgstr ""
+msgstr "Združi zaslone"
 
 #: ../panels/display/cc-display-panel.c:2023
 msgid "Mirror"
@@ -1145,11 +1145,11 @@ msgstr "Zrcali"
 
 #: ../panels/display/cc-display-panel.c:2026
 msgid "Single Display"
-msgstr ""
+msgstr "En zaslon"
 
 #: ../panels/display/cc-display-panel.c:2739
 msgid "Apply Changes?"
-msgstr ""
+msgstr "Ali naj se uveljavijo spremembe?"
 
 #: ../panels/display/cc-display-panel.c:2753
 #: ../panels/network/connection-editor/connection-editor.ui.h:2
@@ -1160,7 +1160,7 @@ msgstr "_Uveljavi"
 #: ../panels/display/cc-display-panel.c:3134
 #, c-format
 msgid "%.2lf Hz"
-msgstr ""
+msgstr "%.2lf Hz"
 
 #. TRANSLATORS: the state of the night light setting
 #: ../panels/display/cc-display-panel.c:3350
@@ -1277,7 +1277,7 @@ msgstr "Izbor načina uporabe povezanih zaslonov in projektorjev"
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:5
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
-msgstr "pult;panel;projektor;xrandr;zaslon;ločljivost;osveževanje;monitor;noč;svetloba;svetlost;modra;rdeči  zamik;zora;mrak;barve;"
+msgstr "pult;panel;projektor;xrandr;zaslon;ločljivost;osveževanje;monitor;noč;svetloba;svetlost;modra;rdeči zamik;zora;mrak;barve;"
 
 #: ../panels/info/cc-info-overview-panel.c:234
 msgid "No updates available"
@@ -1317,13 +1317,13 @@ msgstr "Neznano"
 #: ../panels/info/cc-info-overview-panel.c:813
 #, c-format
 msgid "64-bit"
-msgstr ""
+msgstr "64-bitni sistem"
 
 #. translators: This is the type of architecture for the OS
 #: ../panels/info/cc-info-overview-panel.c:816
 #, c-format
 msgid "32-bit"
-msgstr ""
+msgstr "32-bitni sistem"
 
 #: ../panels/info/cc-info-panel.c:138
 msgid "Section"
@@ -1434,23 +1434,23 @@ msgstr "Programska oprema za okolje Windows"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:2
 msgid "Defa­ult Applications"
-msgstr ""
+msgstr "Privzeti programi"
 
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:3
 msgid "Configure Default Applications"
-msgstr ""
+msgstr "Nastavitev privzetih programov"
 
 #. Translators: those are keywords for the Default Applications panel
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:5
 msgid "default;application;preferred;media;"
-msgstr ""
+msgstr "privzeto;program;prednostno;priljubljeno;media;predstavnost;sistem;podrobnosti;info;informacije;različica;"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:2
 msgid "Ab­out"
-msgstr ""
+msgstr "O programu"
 
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:3
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:3
@@ -1476,17 +1476,17 @@ msgstr "Podrobnosti"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:2
 msgid "Remo­vable Media"
-msgstr ""
+msgstr "Odstranljivi nosilci"
 
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:3
 msgid "Configure Removable Media settings"
-msgstr ""
+msgstr "Nastavitve odstranljivih nosilcev"
 
 #. Translators: those are keywords for the Removable Media panel
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:5
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
+msgstr "naprava;sistem;podrobnosti;pomnilnik;procesor;različica;privzeto;program;povrnjeno:prednostno;cd;dvd;usb;zvok;slika;video;disk;odstrani;predstavnost;samodejni zagon;"
 
 #: ../panels/info/info-default-apps.ui.h:1
 msgid "_Web"
@@ -1536,7 +1536,7 @@ msgstr "Grafika"
 #. To translators: this field contains the distro type
 #: ../panels/info/info-overview.ui.h:7
 msgid "OS type"
-msgstr ""
+msgstr "Vrsta OS"
 
 #: ../panels/info/info-overview.ui.h:8
 msgid "Virtualization"
@@ -1855,7 +1855,7 @@ msgstr "Nastavi tipkovno bližnjico"
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:606
 #, c-format
 msgid "Enter new shortcut to change <b>%s</b>."
-msgstr "Vpišite novo tipkovno bližnjico za  zamenjavo <b>%s</b>."
+msgstr "Vpišite novo tipkovno bližnjico za zamenjavo <b>%s</b>."
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:1033
 msgid "Add Custom Shortcut"
@@ -1876,7 +1876,7 @@ msgstr "Ogled in sprememba tipkovnih bližnjic in nastvite možnosti tipkanja"
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:5
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
+msgstr "tipkovna bližnjica;delovna površina;okno;prilagoditev;velikost;kontrast;približanje;vir;zaklep;glasnost;jakost;"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
 #: ../panels/region/input-options.ui.h:4 ../shell/cc-application.c:251
@@ -1901,7 +1901,7 @@ msgstr "Poskusite z drugačnim iskalnim nizom"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:1
 msgid "Press Esc to cancel or Backspace to reset the keyboard shortcut."
-msgstr ""
+msgstr "Pritisnite tipko Esc za preklic ali pa povratno tipko za ponastavitev tipkovne bližnjice."
 
 #: ../panels/keyboard/shortcut-editor.ui.h:3
 #: ../panels/printers/details-dialog.ui.h:1
@@ -2230,15 +2230,15 @@ msgstr "Odlično"
 
 #: ../panels/network/connection-editor/ce-page-details.c:302
 msgid "Forget Connection"
-msgstr ""
+msgstr "Pozabi povezavo"
 
 #: ../panels/network/connection-editor/ce-page-details.c:304
 msgid "Remove Connection Profile"
-msgstr ""
+msgstr "Odstrani profil povezave"
 
 #: ../panels/network/connection-editor/ce-page-details.c:306
 msgid "Remove VPN"
-msgstr ""
+msgstr "Odstrani VPN"
 
 #: ../panels/network/connection-editor/ce-page-details.c:334
 #: ../panels/network/network-wifi.ui.h:46 ../shell/cc-window.c:243
@@ -2436,7 +2436,7 @@ msgstr "bajtov"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:1
 msgid "IPv_4 Method"
-msgstr ""
+msgstr "Način IPv_4"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:2
 #: ../panels/network/network-wifi.ui.h:27
@@ -2451,12 +2451,12 @@ msgstr "Poveži le krajevno"
 #: ../panels/network/connection-editor/ip4-page.ui.h:5
 #: ../panels/network/connection-editor/ip6-page.ui.h:6
 msgid "Disable"
-msgstr ""
+msgstr "Onemogoči"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:6
 #: ../panels/network/connection-editor/ip6-page.ui.h:7
 msgid "Addresses"
-msgstr ""
+msgstr "Naslovi"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:7
 #: ../panels/network/connection-editor/ip6-page.ui.h:8
@@ -2481,7 +2481,7 @@ msgstr "Samodejni DNS"
 #: ../panels/network/connection-editor/ip4-page.ui.h:13
 #: ../panels/network/connection-editor/ip6-page.ui.h:13
 msgid "Separate IP addresses with commas"
-msgstr ""
+msgstr "Naslovi IP morajo biti ločeni z vejicami"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:14
 #: ../panels/network/connection-editor/ip6-page.ui.h:14
@@ -2498,7 +2498,7 @@ msgstr "_Samodejne smeri"
 #: ../panels/network/connection-editor/ip4-page.ui.h:17
 #: ../panels/network/connection-editor/ip6-page.ui.h:17
 msgid "Metric"
-msgstr ""
+msgstr "Metrični"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:18
 #: ../panels/network/connection-editor/ip6-page.ui.h:18
@@ -2508,7 +2508,7 @@ msgstr "Uporabi _povezavo le za sredstva na lastnem omrežju"
 
 #: ../panels/network/connection-editor/ip6-page.ui.h:1
 msgid "IPv_6 Method"
-msgstr ""
+msgstr "Način IPv_6"
 
 #: ../panels/network/connection-editor/ip6-page.ui.h:3
 msgid "Automatic, DHCP only"
@@ -2636,12 +2636,12 @@ msgstr "omrežje;brezžično;Wi-Fi;Wifi;IP;LAN;Proxy;Posredniški;širokopasovno
 
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:3
 msgid "Control how you connect to Wi-Fi networks"
-msgstr ""
+msgstr "Nadzor nad načini povezovanja v omrežja Wi-Fi"
 
 #. Translators: those are keywords for the wi-fi control-center panel
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:5
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;"
-msgstr ""
+msgstr "omrežje;brezžično;Wi-Fi;Wifi;IP;LAN;Proxy;Posredniški;širokopasovno;modem;bluetooth;vpn;vlan;most;vez;DNS;"
 
 #: ../panels/network/net-device-ethernet.c:106
 #: ../panels/network/net-device-wifi.c:507
@@ -2705,13 +2705,13 @@ msgstr "Ni mogoč dostop do interneta preko brezžične povezave, kadar je vroč
 
 #: ../panels/network/net-device-wifi.c:1333
 msgid "Turn On Wi-Fi Hotspot?"
-msgstr ""
+msgstr "Ali želite omogočiti _vročo točko Wi-Fi"
 
 #: ../panels/network/net-device-wifi.c:1355
 msgid ""
 "Wi-Fi hotspots are usually used to share an additional Internet connection "
 "over Wi-Fi."
-msgstr ""
+msgstr "Vroče točke Wi-Fi so običajno uporabljene za souporabo povezave v omrežje prek Wi-Fi."
 
 #: ../panels/network/net-device-wifi.c:1366
 msgid "_Turn On"
@@ -2747,7 +2747,7 @@ msgstr "_Izbriši"
 #: ../panels/network/net-device-wifi.c:1997
 #: ../panels/network/net-device-wifi.c:2004
 msgid "Known Wi-Fi Networks"
-msgstr ""
+msgstr "Znana omrežja Wi-Fi"
 
 #. translators: This is the label for the "Forget wireless network"
 #. functionality
@@ -2784,7 +2784,7 @@ msgstr "Omrežje"
 
 #: ../panels/network/network-proxy.ui.h:1
 msgid "Network Proxy"
-msgstr ""
+msgstr "Omrežni posredniški strežnik"
 
 #: ../panels/network/network-proxy.ui.h:5
 msgid "_HTTP Proxy"
@@ -2838,7 +2838,7 @@ msgstr "Bluetooth"
 
 #: ../panels/network/network.ui.h:3
 msgid "Not set up"
-msgstr ""
+msgstr "Ni nastavljeno"
 
 #: ../panels/network/network-vpn.ui.h:1
 msgid "Turn VPN connection off"
@@ -2985,35 +2985,35 @@ msgstr "_Poveži v skrito omrežje ..."
 
 #: ../panels/network/network-wifi.ui.h:61
 msgid "_Turn On Wi-Fi Hotspot…"
-msgstr ""
+msgstr "_Omogoči _vročo točko Wi-Fi ..."
 
 #: ../panels/network/network-wifi.ui.h:62
 msgid "_Known Wi-Fi Networks"
-msgstr ""
+msgstr "_Znana omrežja Wi-Fi"
 
 #: ../panels/network/wifi.ui.h:1
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
-msgstr ""
+msgstr "Prepričajte se, da je vmesnik Wi-Fi priklopljen in omogočen."
 
 #: ../panels/network/wifi.ui.h:2
 msgid "No Wi-Fi Adapter Found"
-msgstr ""
+msgstr "Ni najdenega vmesnika Wi-Fi"
 
 #: ../panels/network/wifi.ui.h:3
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Letalski način"
 
 #: ../panels/network/wifi.ui.h:4
 msgid "Disables Wi-Fi, Bluetooth and mobile broadband"
-msgstr ""
+msgstr "Onemogoči Wi-Fi, bluetooth in širokopasovna omrežja"
 
 #: ../panels/network/wifi.ui.h:5
 msgid "Visible Networks"
-msgstr ""
+msgstr "Vidna omrežja"
 
 #: ../panels/network/wifi.ui.h:6
 msgid "NetworkManager needs to be running"
-msgstr ""
+msgstr "Program NetworkManager mora biti zagnan."
 
 #. TRANSLATORS: AP type
 #: ../panels/network/panel-common.c:127
@@ -3299,7 +3299,7 @@ msgstr "Kabel ni priklopljen"
 
 #: ../panels/network/wireless-security/eap-method.c:57
 msgid "undefined error in 802.1X security (wpa-eap)"
-msgstr ""
+msgstr "nedoločena napaka varnostnega protokola 802.1x (wpa-eap)"
 
 #: ../panels/network/wireless-security/eap-method.c:233
 msgid "no file selected"
@@ -3475,7 +3475,7 @@ msgid ""
 "The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
+msgstr "Videti je, da izbrani zasebni ključi niso zaščiteni z geslom. To bi lahko ogrozilo varnost podatkov. Izberite z geslom zaščiten zasebni ključ.\n\n(Zasebne ključe lahko zaščitite z geslom z openssl.)"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:486
 msgid "Choose your personal certificate"
@@ -3520,7 +3520,7 @@ msgstr "MSCHAP"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:305
 msgid "MSCHAPv2 (no EAP)"
-msgstr ""
+msgstr "MSCHAPv2 (brez EAP)"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:321
 msgid "CHAP"
@@ -3528,7 +3528,7 @@ msgstr "CHAP"
 
 #: ../panels/network/wireless-security/wireless-security.c:87
 msgid "Unknown error validating 802.1X security"
-msgstr ""
+msgstr "Prišlo je do neznane napake overjanja varnosti 802.1x."
 
 #: ../panels/network/wireless-security/wireless-security.c:453
 msgid "TLS"
@@ -3972,7 +3972,7 @@ msgstr "_Zamegli zaslon ob nedejavnosti"
 
 #: ../panels/power/cc-power-panel.c:1783
 msgid "_Blank screen"
-msgstr "_Prazen zaslon"
+msgstr "_Zatemni zaslon"
 
 #: ../panels/power/cc-power-panel.c:1820
 msgid "_Wi-Fi"
@@ -4008,7 +4008,7 @@ msgstr "Zaustavi"
 
 #: ../panels/power/cc-power-panel.c:2061
 msgid "Power Off"
-msgstr ""
+msgstr "Izklop"
 
 #: ../panels/power/cc-power-panel.c:2062
 msgid "Hibernate"
@@ -4159,7 +4159,7 @@ msgstr "Zahtevana je overitev"
 #: ../panels/printers/cc-printers-panel.c:718
 #, c-format
 msgid "Printer “%s” has been deleted"
-msgstr ""
+msgstr "Tiskalnik »%s« je bil izbrisan."
 
 #. Translators: Addition of the new printer failed.
 #: ../panels/printers/cc-printers-panel.c:909
@@ -4259,7 +4259,7 @@ msgstr "Vnesite uporabniško ime in geslo za ogled tiskalnikov na strežniku tis
 #: ../panels/printers/options-dialog.ui.h:2
 #: ../panels/printers/pp-options-dialog.c:893
 msgid "Test Page"
-msgstr ""
+msgstr "Preizkusna stran"
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: ../panels/printers/pp-details-dialog.c:123
@@ -4533,7 +4533,7 @@ msgstr "Napredno"
 #. Translators: Name of job which makes printer to print test page
 #: ../panels/printers/pp-options-dialog.c:908
 msgid "Test page"
-msgstr ""
+msgstr "Preizkusna stran"
 
 #. Translators: this is an option of "Paper Source"
 #: ../panels/printers/pp-ppd-option-widget.c:76
@@ -4699,7 +4699,7 @@ msgstr "Obdelovanje"
 #. Translators: Name of job which makes printer to clean its heads
 #: ../panels/printers/pp-printer-entry.c:913
 msgid "Clean print heads"
-msgstr ""
+msgstr "Počisti glave tiskalnika"
 
 #: ../panels/printers/printer-entry.ui.h:1
 msgid "Printing Options"
@@ -4718,7 +4718,7 @@ msgstr "Privzeto uporabi tiskalnik"
 #. printer.
 #: ../panels/printers/printer-entry.ui.h:6
 msgid "Clean Print Heads"
-msgstr ""
+msgstr "Počisti glave tiskalnika"
 
 #: ../panels/printers/printer-entry.ui.h:7
 msgid "Remove Printer"
@@ -4911,7 +4911,7 @@ msgstr "Trajno"
 msgid ""
 "Remembering your history makes things easier to find again. These items are "
 "never shared over the network."
-msgstr "Pomnjenje zgodovine olajša ponovno iskanje stvari. Ti predmeti niso nikoli dani v souporabo preko omrežja."
+msgstr "Pomnjenje zgodovine pohitri pogosta iskanja. Ti podatki se ne objavljajo prek omrežja."
 
 #: ../panels/privacy/privacy.ui.h:21
 msgid "_Recently Used"
@@ -4961,7 +4961,7 @@ msgstr "Pokaži _obvestila"
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer"
 " free of unnecessary sensitive information."
-msgstr "Samodejno počisti smeti in začasne datoteke, da na vašem računalniku ni nepotrebnih občutljivih podatkov."
+msgstr "S samodejnim praznjenjem smeti in brisanjem začasnih datotek se odstranjujejo nepotrebni, vendar občutljivi podatki."
 
 #: ../panels/privacy/privacy.ui.h:35
 msgid "Automatically empty _Trash"
@@ -5053,7 +5053,7 @@ msgstr "Čas"
 
 #: ../panels/region/format-chooser.ui.h:7
 msgid "Dates & Times"
-msgstr ""
+msgstr "Datum in čas"
 
 #: ../panels/region/format-chooser.ui.h:8
 msgid "Numbers"
@@ -5151,11 +5151,11 @@ msgstr "Angleščina (Združeno kraljestvo)"
 
 #: ../panels/region/region.ui.h:5
 msgid "Restart the session for changes to take effect"
-msgstr ""
+msgstr "Za uveljavitev sprememb se je treba v sejo ponovno zagnati"
 
 #: ../panels/region/region.ui.h:6
 msgid "Restart…"
-msgstr ""
+msgstr "Ponoven zagon ..."
 
 #: ../panels/region/region.ui.h:7
 msgid "_Formats"
@@ -5672,36 +5672,36 @@ msgstr "Po meri"
 #: ../panels/universal-access/cc-ua-panel.c:351
 msgctxt "cursor size"
 msgid "Default"
-msgstr ""
+msgstr "privzeta"
 
 #: ../panels/universal-access/cc-ua-panel.c:354
 msgctxt "cursor size"
 msgid "Medium"
-msgstr ""
+msgstr "srednja"
 
 #: ../panels/universal-access/cc-ua-panel.c:357
 msgctxt "cursor size"
 msgid "Large"
-msgstr ""
+msgstr "velika"
 
 #: ../panels/universal-access/cc-ua-panel.c:360
 msgctxt "cursor size"
 msgid "Larger"
-msgstr ""
+msgstr "zelo velika"
 
 #: ../panels/universal-access/cc-ua-panel.c:363
 msgctxt "cursor size"
 msgid "Largest"
-msgstr ""
+msgstr "največja"
 
 #: ../panels/universal-access/cc-ua-panel.c:367
 #, c-format
 msgid "%d pixel"
 msgid_plural "%d pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d točk"
+msgstr[1] "%d točka"
+msgstr[2] "%d točki"
+msgstr[3] "%d točke"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -5719,7 +5719,7 @@ msgstr "Naj bo enostavnejše videti, slišati, tipkati, kazati in klikati"
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:5
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Assist;Repeat;Blink;"
-msgstr ""
+msgstr "tipkovnica;miška;a11y;dostopnost;kontrast;približanje;zaslon;bralnik;besedilo;pisava;velikost;AccessX;lepljive;počasne;odskočne;tipke;zamik;odskočne;dvojne;klik;ponovitev;"
 
 #: ../panels/universal-access/uap.ui.h:1
 msgid "_Always Show Universal Access Menu"
@@ -5739,7 +5739,7 @@ msgstr "_Veliko besedilo"
 
 #: ../panels/universal-access/uap.ui.h:5
 msgid "C_ursor Size"
-msgstr ""
+msgstr "Velikost _kazalke"
 
 #: ../panels/universal-access/uap.ui.h:6
 #: ../panels/universal-access/zoom-options.ui.h:7
@@ -5800,12 +5800,12 @@ msgstr "Časovni zamik dvojnega klika"
 
 #: ../panels/universal-access/uap.ui.h:22
 msgid "Cursor Size"
-msgstr ""
+msgstr "Velikost kazalke"
 
 #: ../panels/universal-access/uap.ui.h:23
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
+msgstr "Velikost kazalke je lahko prilagojena velikosti približanja, za lažje upravljanje."
 
 #: ../panels/universal-access/uap.ui.h:24
 msgid "Screen Reader"
@@ -5995,11 +5995,11 @@ msgstr "Dolg"
 
 #: ../panels/universal-access/uap.ui.h:70
 msgid "_Hover Click"
-msgstr "Klik z _ledbenjem"
+msgstr "Klik ob _prehodu"
 
 #: ../panels/universal-access/uap.ui.h:71
 msgid "Trigger a click when the pointer hovers"
-msgstr "Sproži klik ob ledbenju kazalnika nad mestom"
+msgstr "Sproži klik ob prehodu kazalnika nad točko"
 
 #: ../panels/universal-access/uap.ui.h:72
 msgid "D_elay:"
@@ -6556,14 +6556,14 @@ msgstr "Poskusite se izogniti ponavljanju znakov. Priporočljivo je uporabiti ra
 #: ../panels/user-accounts/pw-utils.c:113
 msgctxt "Password hint"
 msgid "Try to avoid sequences like 1234 or abcd."
-msgstr "Izognite se zaporednjem, kot sta 1234 in abcd."
+msgstr "Izognite se zaporedjem, kot sta 1234 in abcd."
 
 #: ../panels/user-accounts/pw-utils.c:115
 msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
+msgstr "Geslo mora biti daljše. Poskusite dodati črke, številke in druge znake."
 
 #: ../panels/user-accounts/pw-utils.c:117
 msgctxt "Password hint"
@@ -6575,7 +6575,7 @@ msgctxt "Password hint"
 msgid ""
 "Adding more letters, numbers and punctuation will make the password "
 "stronger."
-msgstr ""
+msgstr "Dodajanje črk, številk in ločil poveča moč gesla."
 
 #: ../panels/user-accounts/run-passwd.c:422
 msgid "Authentication failed"
@@ -6670,7 +6670,7 @@ msgstr "Prijava v domeno je spodletela"
 
 #: ../panels/user-accounts/um-account-dialog.c:1145
 msgid "Unable to find the domain. Maybe you misspelled it?"
-msgstr ""
+msgstr "Domene ni mogoče najti. Morda je vpisana napačno."
 
 #: ../panels/user-accounts/um-account-type.c:34
 msgctxt "Account type"
@@ -7021,7 +7021,7 @@ msgstr "Uporabniškega imena ni mogoče začeti z vezajem » - «."
 msgid ""
 "The username should only consist of upper and lower case letters from a-z, "
 "digits and the following characters: . - _"
-msgstr "Uporabniško ime je lahko sestavljeno iz malih in velikih črk angleške abecede, številk in posebnih znakov » .  -  _ «."
+msgstr "Uporabniško ime je lahko sestavljeno iz malih in velikih črk angleške abecede, številk in posebnih znakov » . - _ «."
 
 #: ../panels/user-accounts/um-utils.c:510
 msgid "This will be used to name your home folder and can’t be changed."
@@ -7206,11 +7206,11 @@ msgstr "Posreduj"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:6
 msgid "No stylus found"
-msgstr "Ni najdenega zaslonskega pisala"
+msgstr "Ni zaznanega pisala"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:7
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr "Priblišajte zaslonsko pisalo nad ploščico za nastavitev"
+msgstr "Približajte pisalo nad ploščico za prilagajanje nastavitev."
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:10
 msgid "Eraser Pressure Feel"
