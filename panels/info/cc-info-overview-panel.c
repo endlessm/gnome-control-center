@@ -23,7 +23,6 @@
 
 #include "cc-info-panel.h"
 #include "cc-info-resources.h"
-#include "eos-updater-generated.h"
 #include "info-cleanup.h"
 
 #include <glib.h>
@@ -52,22 +51,6 @@
 #define VENDOR_INFO_GROUP    "Info"
 #define VENDOR_INFO_LOGO_KEY "logo"
 
-typedef enum {
-  EOS_UPDATER_STATE_NONE = 0,
-  EOS_UPDATER_STATE_READY,
-  EOS_UPDATER_STATE_ERROR,
-  EOS_UPDATER_STATE_POLLING,
-  EOS_UPDATER_STATE_UPDATE_AVAILABLE,
-  EOS_UPDATER_STATE_FETCHING,
-  EOS_UPDATER_STATE_UPDATE_READY,
-  EOS_UPDATER_STATE_APPLYING_UPDATE,
-  EOS_UPDATER_STATE_UPDATE_APPLIED,
-  EOS_UPDATER_N_STATES,
-} EosUpdaterState;
-
-#define EOS_UPDATER_ERROR_LIVE_BOOT_STR "com.endlessm.Updater.Error.LiveBoot"
-#define EOS_UPDATER_ERROR_NON_OSTREE_STR "com.endlessm.Updater.Error.NotOstreeSystem"
-
 typedef struct {
   /* Will be one or 2 GPU name strings, or "Unknown" */
   char *hardware_string;
@@ -85,10 +68,6 @@ typedef struct
   GtkWidget      *graphics_label;
   GtkWidget      *virt_type_label;
 
-  GtkWidget      *os_updates_box;
-  GtkWidget      *os_updates_label;
-  GtkWidget      *os_updates_spinner;
-
   /* Virtualisation labels */
   GtkWidget      *label8;
   GtkWidget      *grid1;
@@ -98,11 +77,8 @@ typedef struct
 
   GraphicsData   *graphics_data;
 
-  EosUpdater     *updater_proxy;
   GDBusProxy     *session_proxy;
-  GCancellable   *updater_cancellable;
   UDisksClient   *udisks_client;
-  gboolean        updater_activated;
 } CcInfoOverviewPanelPrivate;
 
 struct _CcInfoOverviewPanel
@@ -112,13 +88,6 @@ struct _CcInfoOverviewPanel
   /*< private >*/
  CcInfoOverviewPanelPrivate *priv;
 };
-
-static void sync_state_from_updater         (CcInfoOverviewPanel *self,
-                                             gboolean             is_initial_state);
-static void sync_initial_state_from_updater (CcInfoOverviewPanel *self);
-static gboolean updates_link_activated      (GtkLabel            *label,
-                                             gchar               *uri,
-                                             CcInfoOverviewPanel *self);
 
 typedef struct
 {
@@ -186,298 +155,6 @@ update_vendor_specific_info (CcInfoOverviewPanel *self)
   /* Override the logo with the vendor one if it exists */
   if (g_file_test (vendor_logo_path, G_FILE_TEST_EXISTS))
     gtk_image_set_from_file (GTK_IMAGE (priv->system_image), vendor_logo_path);
-}
-
-static gboolean
-is_updater_state_spinning (EosUpdaterState state)
-{
-  switch (state)
-    {
-    case EOS_UPDATER_STATE_POLLING:
-    case EOS_UPDATER_STATE_FETCHING:
-    case EOS_UPDATER_STATE_APPLYING_UPDATE:
-      return TRUE;
-    default:
-      return FALSE;
-    }
-}
-
-static gboolean
-is_updater_state_interactive (CcInfoOverviewPanel *self,
-                              EosUpdaterState      state)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-  switch (state)
-    {
-    case EOS_UPDATER_STATE_READY:
-    case EOS_UPDATER_STATE_ERROR:
-    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
-    case EOS_UPDATER_STATE_UPDATE_READY:
-      return (!priv->updater_activated);
-    case EOS_UPDATER_STATE_UPDATE_APPLIED:
-      return TRUE;
-    default:
-      return FALSE;
-    }
-}
-
-static const gchar *
-get_message_for_updater_state (CcInfoOverviewPanel *self,
-                               EosUpdaterState      state)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-  switch (state)
-    {
-    case EOS_UPDATER_STATE_NONE:
-    case EOS_UPDATER_STATE_READY:
-      if (priv->updater_activated)
-        return _("No updates available");
-      else
-        return _("Check for updates now");
-    case EOS_UPDATER_STATE_ERROR:
-      return _("Update failed");
-    case EOS_UPDATER_STATE_POLLING:
-      return _("Checking for updates…");
-    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
-    case EOS_UPDATER_STATE_UPDATE_READY:
-      return _("Install updates now");
-    case EOS_UPDATER_STATE_FETCHING:
-    case EOS_UPDATER_STATE_APPLYING_UPDATE:
-      return _("Installing updates…");
-    case EOS_UPDATER_STATE_UPDATE_APPLIED:
-      return _("Restart to complete update");
-    default:
-      return NULL;
-    }
-}
-
-static void
-updates_apply_completed (GObject      *object,
-                         GAsyncResult *res,
-                         gpointer      user_data)
-{
-  EosUpdater *proxy = (EosUpdater *) object;
-  g_autoptr(GError) error = NULL;
-
-  eos_updater_call_apply_finish (proxy, res, &error);
-  if (error && !g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-    {
-      CcInfoOverviewPanel *self = user_data;
-      g_warning ("Failed to call Apply() on EOS updater: %s", error->message);
-      sync_state_from_updater (self, FALSE);
-    }
-}
-
-static void
-updates_fetch_completed (GObject      *object,
-                         GAsyncResult *res,
-                         gpointer      user_data)
-{
-  EosUpdater *proxy = (EosUpdater *) object;
-  g_autoptr(GError) error = NULL;
-
-  eos_updater_call_fetch_finish (proxy, res, &error);
-  if (error && !g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-    {
-      CcInfoOverviewPanel *self = user_data;
-      g_warning ("Failed to call Fetch() on EOS updater: %s", error->message);
-      sync_state_from_updater (self, FALSE);
-    }
-}
-
-static void
-updates_poll_completed (GObject      *object,
-                        GAsyncResult *res,
-                        gpointer      user_data)
-{
-  EosUpdater *proxy = (EosUpdater *) object;
-  g_autoptr(GError) error = NULL;
-
-  eos_updater_call_poll_finish (proxy, res, &error);
-  if (error && !g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-    {
-      CcInfoOverviewPanel *self = user_data;
-      g_warning ("Failed to call Poll() on EOS updater: %s", error->message);
-      sync_state_from_updater (self, FALSE);
-    }
-}
-
-static gboolean
-updates_link_activated (GtkLabel            *label,
-                        gchar               *uri,
-                        CcInfoOverviewPanel *self)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-  EosUpdaterState state;
-
-  state = eos_updater_get_state (priv->updater_proxy);
-  g_assert (is_updater_state_interactive (self, state));
-  priv->updater_activated = TRUE;
-
-  switch (state)
-    {
-    case EOS_UPDATER_STATE_ERROR:
-    case EOS_UPDATER_STATE_READY:
-      eos_updater_call_poll (priv->updater_proxy,
-                             priv->updater_cancellable,
-                             updates_poll_completed, self);
-      break;
-    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
-      eos_updater_call_fetch (priv->updater_proxy,
-                              priv->updater_cancellable,
-                              updates_fetch_completed, self);
-      break;
-    case EOS_UPDATER_STATE_UPDATE_READY:
-      eos_updater_call_apply (priv->updater_proxy,
-                              priv->updater_cancellable,
-                              updates_apply_completed, self);
-      break;
-    case EOS_UPDATER_STATE_UPDATE_APPLIED:
-      g_dbus_proxy_call (priv->session_proxy,
-                         "Reboot",
-                         NULL,
-                         G_DBUS_CALL_FLAGS_NONE,
-                         -1, NULL, NULL, NULL);
-      break;
-    default:
-      g_assert_not_reached ();
-    }
-
-  return TRUE;
-}
-
-static void
-updates_maybe_do_automatic_step (CcInfoOverviewPanel *self)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-  EosUpdaterState state;
-
-  if (!priv->updater_activated)
-    return;
-
-  state = eos_updater_get_state (priv->updater_proxy);
-  switch (state)
-    {
-    case EOS_UPDATER_STATE_UPDATE_AVAILABLE:
-      eos_updater_call_fetch (priv->updater_proxy,
-                              priv->updater_cancellable,
-                              updates_fetch_completed, self);
-      break;
-    case EOS_UPDATER_STATE_UPDATE_READY:
-      eos_updater_call_apply (priv->updater_proxy,
-                              priv->updater_cancellable,
-                              updates_apply_completed, self);
-      break;
-    default:
-      break;
-    }
-}
-
-static void
-sync_state_from_updater (CcInfoOverviewPanel *self,
-                         gboolean             is_initial_state)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-  EosUpdaterState state;
-  gboolean is_live_boot, is_non_ostree;
-  gboolean state_spinning, state_interactive;
-  const gchar *message, *error_name;
-  g_autofree gchar *markup = NULL;
-
-  state = eos_updater_get_state (priv->updater_proxy);
-  error_name = eos_updater_get_error_name (priv->updater_proxy);
-  is_live_boot = state == EOS_UPDATER_STATE_ERROR &&
-    g_strcmp0 (error_name, EOS_UPDATER_ERROR_LIVE_BOOT_STR) == 0;
-  is_non_ostree = state == EOS_UPDATER_STATE_ERROR &&
-    g_strcmp0 (error_name, EOS_UPDATER_ERROR_NON_OSTREE_STR) == 0;
-
-  /* Attempt to clear the error by pretending to be ready, which will
-   * trigger a poll
-   */
-  if (state == EOS_UPDATER_STATE_ERROR && is_initial_state)
-    state = EOS_UPDATER_STATE_READY;
-
-  state_spinning = is_updater_state_spinning (state);
-  state_interactive = is_updater_state_interactive (self, state);
-  message = get_message_for_updater_state (self, state);
-
-  gtk_widget_set_visible (priv->os_updates_spinner, state_spinning);
-  g_object_set (priv->os_updates_spinner, "active", state_spinning, NULL);
-
-  gtk_widget_set_visible (priv->os_updates_label, !is_live_boot && !is_non_ostree);
-  if (state_interactive)
-    markup = g_strdup_printf ("<a href='updates-link'>%s</a>", message);
-  else
-    markup = g_strdup (message);
-
-  gtk_label_set_markup (GTK_LABEL (priv->os_updates_label), markup);
-
-  updates_maybe_do_automatic_step (self);
-}
-
-static void
-updater_state_changed (EosUpdater          *proxy,
-                       GParamSpec          *pspec,
-                       CcInfoOverviewPanel *self)
-{
-  sync_state_from_updater (self, FALSE);
-}
-
-static void
-sync_initial_state_from_updater (CcInfoOverviewPanel *self)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-
-  priv->updater_cancellable = g_cancellable_new ();
-
-  sync_state_from_updater (self, TRUE);
-
-  g_signal_connect (priv->updater_proxy, "notify::state", G_CALLBACK (updater_state_changed), self);
-}
-
-static void
-info_overview_panel_setup_eos_updater (CcInfoOverviewPanel *self)
-{
-  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
-  g_autoptr(GError) error = NULL;
-
-  priv->updater_proxy = eos_updater_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-                                                            G_DBUS_PROXY_FLAGS_NONE,
-                                                            "com.endlessm.Updater",
-                                                            "/com/endlessm/Updater",
-                                                            NULL,
-                                                            &error);
-
-  if (error)
-    {
-      g_critical ("Unable to get a proxy to the EOS updater: %s. Updates will not be available.",
-                  error->message);
-    }
-
-  priv->session_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
-                                                       G_DBUS_PROXY_FLAGS_NONE,
-                                                       NULL,
-                                                       "org.gnome.SessionManager",
-                                                       "/org/gnome/SessionManager",
-                                                       "org.gnome.SessionManager",
-                                                       NULL,
-                                                       &error);
-
-  if (error)
-    {
-      g_critical ("Unable to get a proxy to gnome-session: %s. Updates will not be available.",
-                  error->message);
-    }
-
-  if (!priv->updater_proxy || !priv->session_proxy)
-    {
-      gtk_widget_set_visible (priv->os_updates_box, FALSE);
-    }
-  else
-    {
-      g_signal_connect (priv->os_updates_label, "activate-link", G_CALLBACK (updates_link_activated), self);
-      sync_initial_state_from_updater (self);
-    }
 }
 
 static gboolean
@@ -1095,13 +772,6 @@ cc_info_overview_panel_finalize (GObject *object)
       g_clear_object (&priv->cancellable);
     }
 
-  if (priv->updater_cancellable)
-    {
-      g_cancellable_cancel (priv->updater_cancellable);
-      g_clear_object (&priv->updater_cancellable);
-    }
-
-  g_clear_object (&priv->updater_proxy);
   g_clear_object (&priv->session_proxy);
   g_clear_object (&priv->udisks_client);
 
@@ -1125,9 +795,6 @@ cc_info_overview_panel_class_init (CcInfoOverviewPanelClass *klass)
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, memory_label);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, processor_label);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, os_type_label);
-  gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, os_updates_box);
-  gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, os_updates_label);
-  gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, os_updates_spinner);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, disk_label);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, graphics_label);
   gtk_widget_class_bind_template_child_private (widget_class, CcInfoOverviewPanel, virt_type_label);
@@ -1148,7 +815,6 @@ cc_info_overview_panel_init (CcInfoOverviewPanel *self)
 
   info_overview_panel_setup_overview (self);
   info_overview_panel_setup_virt (self);
-  info_overview_panel_setup_eos_updater (self);
 }
 
 GtkWidget *
