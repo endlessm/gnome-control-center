@@ -277,34 +277,40 @@
             <child>
               <placeholder/>
             </child>
+            <child>
+              <object class="GtkLabel" id="updates_info_label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_markup">True</property>
+                <property name="xalign">0.0</property>
+                <property name="margin_top">16</property>
+                <property name="label" translatable="yes" comments="Translators: A label to inform the user that the check-for-updates link that used to be here has been moved to the App Center.">&lt;i&gt;OS updates are now managed in the App Center&lt;/i&gt;</property>
+              </object>
+              <packing>
+                <property name="top-attach">8</property>
+                <property name="left-attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="attribution_label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_markup">True</property>
+                <property name="xalign">0.0</property>
+                <property name="hexpand">True</property>
+                <property name="label" translatable="yes" comments="Translators: A link to the terms of use of Endless OS.">&lt;a href='attribution-link'&gt;Endless Terms of Use&lt;/a&gt;</property>
+                <signal name="activate-link" handler="on_attribution_label_link" object="CcInfoOverviewPanel" swapped="no" />
+              </object>
+              <packing>
+                <property name="top-attach">9</property>
+                <property name="left-attach">2</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
             <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="attribution_label">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="use_markup">True</property>
-            <property name="xalign">0</property>
-            <property name="margin_left">22</property>
-            <property name="label" translatable="yes">&lt;a href='attribution-link'&gt;Endless Terms of Use&lt;/a&gt;</property>
-            <signal name="activate-link" handler="on_attribution_label_link" object="CcInfoOverviewPanel" swapped="no" />
-            <attributes>
-              <attribute name="scale" value="0.83"/>
-            </attributes>
-            <style>
-              <class name="dim-label"/>
-            </style>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="pack_type">end</property>
-            <property name="position">3</property>
           </packing>
         </child>
       </object>
