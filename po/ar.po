@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:48+0000\n"
+"POT-Creation-Date: 2018-04-24 11:43-0700\n"
+"PO-Revision-Date: 2018-04-29 03:14+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/endless-os/gnome-control-center/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -1288,48 +1288,20 @@ msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr "لوحة;عرض;شاشة;ميز;ليل;إضاءة;شروق;غروب;لون;"
 
-#: ../panels/info/cc-info-overview-panel.c:234
-msgid "No updates available"
-msgstr "ليست هناك أي تحديثات متاحة"
-
-#: ../panels/info/cc-info-overview-panel.c:236
-msgid "Check for updates now"
-msgstr "التحري عن وجود تحديثات الآن"
-
-#: ../panels/info/cc-info-overview-panel.c:238
-msgid "Update failed"
-msgstr "فشل تحديث"
-
-#: ../panels/info/cc-info-overview-panel.c:240
-msgid "Checking for updates…"
-msgstr "جاري التحقق من وجود تحديثات..."
-
-#: ../panels/info/cc-info-overview-panel.c:243
-msgid "Install updates now"
-msgstr "تنصيب التحديثات الآن"
-
-#: ../panels/info/cc-info-overview-panel.c:246
-msgid "Installing updates…"
-msgstr "جاري تنصيب التحديثات..."
-
-#: ../panels/info/cc-info-overview-panel.c:248
-msgid "Restart to complete update"
-msgstr "قم بإعادة التشغيل لإكمال التحديث"
-
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-overview-panel.c:719
+#: ../panels/info/cc-info-overview-panel.c:396
 #: ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "غير معروف"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:813
+#: ../panels/info/cc-info-overview-panel.c:490
 #, c-format
 msgid "64-bit"
 msgstr "٦٤ بتة"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:816
+#: ../panels/info/cc-info-overview-panel.c:493
 #, c-format
 msgid "32-bit"
 msgstr "٣٢ بتة"
@@ -1559,7 +1531,14 @@ msgstr "القرص"
 msgid "Calculating…"
 msgstr "يحسب…"
 
-#: ../panels/info/info-overview.ui.h:11
+#. Translators: A label to inform the user that the check-for-updates link
+#. that used to be here has been moved to the App Center.
+#: ../panels/info/info-overview.ui.h:12
+msgid "<i>OS updates are now managed in the App Center</i>"
+msgstr "<i>تتم إدارة تحديثات نظام التشغيل الآن من خلال مركز التطبيقات</i>"
+
+#. Translators: A link to the terms of use of Endless OS.
+#: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
 msgstr "<a href='attribution-link'>شروط استخدام Endless</a>"
 
@@ -2374,11 +2353,11 @@ msgstr "اجعله م_تاحا للمستخدمين الآخرين"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
 msgid "Restrict background data usage"
-msgstr ""
+msgstr "تقييد استخدام البيانات في الخلفية"
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
-msgstr ""
+msgstr "مناسب لخطط اتصالات البيانات المحدودة أو المكلفة."
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:1
 #: ../panels/network/connection-editor/ip4-page.ui.h:11
@@ -3310,7 +3289,7 @@ msgstr "الكبل مفصول"
 
 #: ../panels/network/wireless-security/eap-method.c:57
 msgid "undefined error in 802.1X security (wpa-eap)"
-msgstr ""
+msgstr "خطأ غير معروف في تأمين 802.1X (wpa-eap)  "
 
 #: ../panels/network/wireless-security/eap-method.c:233
 msgid "no file selected"
@@ -3531,7 +3510,7 @@ msgstr "MSCHAP"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:305
 msgid "MSCHAPv2 (no EAP)"
-msgstr ""
+msgstr "MSCHAPv2 (بدون EAP)"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:321
 msgid "CHAP"
@@ -3539,7 +3518,7 @@ msgstr "CHAP"
 
 #: ../panels/network/wireless-security/wireless-security.c:87
 msgid "Unknown error validating 802.1X security"
-msgstr ""
+msgstr "حدث خطأ غير معروف أثناء التحقق من أمان 802.1X"
 
 #: ../panels/network/wireless-security/wireless-security.c:453
 msgid "TLS"
@@ -5389,7 +5368,7 @@ msgstr "الولوج عن ب_عد"
 
 #: ../panels/sharing/sharing.ui.h:6
 msgid "_Content Sharing"
-msgstr ""
+msgstr "_مشاركة المحتوى"
 
 #: ../panels/sharing/sharing.ui.h:7
 msgid "Some services are disabled because of no network access."
@@ -5449,13 +5428,13 @@ msgstr "المجلدات"
 
 #: ../panels/sharing/sharing.ui.h:22
 msgid "Content Sharing"
-msgstr ""
+msgstr "مشاركة المحتوى"
 
 #: ../panels/sharing/sharing.ui.h:23
 msgid ""
 "Content sharing allows users to view content installed on this computer on "
 "Android devices on the same network."
-msgstr ""
+msgstr "تُمَكِّن ميزة مشاركة المحتويات المستخدمين من رؤية المحتوى المُثَبَّت على هذا الكمبيوتر من خلال الأجهزة التي تعمل بنظام Android، والموجودة على نفس الشبكة."
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -6234,49 +6213,49 @@ msgstr "المؤثرات اللونية"
 
 #: ../panels/updates/cc-updates-panel.c:472
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "اتصال من خلال خطة بيانات محدودة"
 
 #: ../panels/updates/cc-updates-panel.c:474
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "اتصال خطة بيانات غير محدودة"
 
 #: ../panels/updates/cc-updates-panel.c:523
 msgid "No active connection"
-msgstr ""
+msgstr "لا يوجد اتصال نشط"
 
 #. "Change Network Settings" label
 #: ../panels/updates/cc-updates-panel.c:747
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "تغيير إعدادات الشبكة..."
 
 #: ../panels/updates/cc-updates-panel.ui.h:1
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:1
 msgid "Automatic Updates"
-msgstr ""
+msgstr "التحديث التلقائي"
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
-"Allow system and application updates to happen automatically without your "
-"request in the background."
-msgstr ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr "السماح بالتحديث في الخلفية تلقائياً أثناء استخدام هذا الاتصال. توجد عادةً تطبيقات مزودة بترقياتٍ جديدة، أو محتوى جديد أو تحديثات لنظام Endless OS."
 
 #: ../panels/updates/cc-updates-panel.ui.h:3
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "جدولة التحديثات"
 
 #: ../panels/updates/cc-updates-panel.ui.h:4
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "إنشاء نافذة يومية للتحديثات، بحيث تُنَفَّذ تلقائياً."
 
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:2
 msgid "Schedule automatic updates"
-msgstr ""
+msgstr "جدولة التحديث التلقائي"
 
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
 msgid "Updates;Automatic;"
-msgstr ""
+msgstr "التحديثات، تلقائي"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1

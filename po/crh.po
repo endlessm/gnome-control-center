@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:51+0000\n"
+"POT-Creation-Date: 2018-04-24 11:43-0700\n"
+"PO-Revision-Date: 2018-04-24 18:44+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Crimean Turkish (http://www.transifex.com/endless-os/gnome-control-center/language/crh/)\n"
 "MIME-Version: 1.0\n"
@@ -1279,48 +1279,20 @@ msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr ""
 
-#: ../panels/info/cc-info-overview-panel.c:234
-msgid "No updates available"
-msgstr ""
-
-#: ../panels/info/cc-info-overview-panel.c:236
-msgid "Check for updates now"
-msgstr ""
-
-#: ../panels/info/cc-info-overview-panel.c:238
-msgid "Update failed"
-msgstr ""
-
-#: ../panels/info/cc-info-overview-panel.c:240
-msgid "Checking for updates…"
-msgstr ""
-
-#: ../panels/info/cc-info-overview-panel.c:243
-msgid "Install updates now"
-msgstr ""
-
-#: ../panels/info/cc-info-overview-panel.c:246
-msgid "Installing updates…"
-msgstr ""
-
-#: ../panels/info/cc-info-overview-panel.c:248
-msgid "Restart to complete update"
-msgstr ""
-
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-overview-panel.c:719
+#: ../panels/info/cc-info-overview-panel.c:396
 #: ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "Bilinmegen"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:813
+#: ../panels/info/cc-info-overview-panel.c:490
 #, c-format
 msgid "64-bit"
 msgstr ""
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:816
+#: ../panels/info/cc-info-overview-panel.c:493
 #, c-format
 msgid "32-bit"
 msgstr ""
@@ -1550,7 +1522,14 @@ msgstr "Disk"
 msgid "Calculating…"
 msgstr "Hesaplana…"
 
-#: ../panels/info/info-overview.ui.h:11
+#. Translators: A label to inform the user that the check-for-updates link
+#. that used to be here has been moved to the App Center.
+#: ../panels/info/info-overview.ui.h:12
+msgid "<i>OS updates are now managed in the App Center</i>"
+msgstr ""
+
+#. Translators: A link to the terms of use of Endless OS.
+#: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
 msgstr ""
 
@@ -6211,8 +6190,8 @@ msgstr ""
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
-"Allow system and application updates to happen automatically without your "
-"request in the background."
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
 
 #: ../panels/updates/cc-updates-panel.ui.h:3

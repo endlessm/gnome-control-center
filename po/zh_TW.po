@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:46+0000\n"
+"POT-Creation-Date: 2018-04-24 11:43-0700\n"
+"PO-Revision-Date: 2018-04-30 06:15+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/endless-os/gnome-control-center/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -1282,48 +1282,20 @@ msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;;Night;Light;Blue;redshift;color;sunset;sunrise;面板;投影機;螢幕;解析度;重新整理;螢幕;夜晚;夜光;藍光;日出;日落;"
 
-#: ../panels/info/cc-info-overview-panel.c:234
-msgid "No updates available"
-msgstr "沒有可用的更新"
-
-#: ../panels/info/cc-info-overview-panel.c:236
-msgid "Check for updates now"
-msgstr "現在檢查是否有更新"
-
-#: ../panels/info/cc-info-overview-panel.c:238
-msgid "Update failed"
-msgstr "更新失敗"
-
-#: ../panels/info/cc-info-overview-panel.c:240
-msgid "Checking for updates…"
-msgstr "正在檢查更新項目..."
-
-#: ../panels/info/cc-info-overview-panel.c:243
-msgid "Install updates now"
-msgstr "現在安裝更新"
-
-#: ../panels/info/cc-info-overview-panel.c:246
-msgid "Installing updates…"
-msgstr "正在安裝更新..."
-
-#: ../panels/info/cc-info-overview-panel.c:248
-msgid "Restart to complete update"
-msgstr "重新開機以完成更新"
-
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-overview-panel.c:719
+#: ../panels/info/cc-info-overview-panel.c:396
 #: ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "不明"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:813
+#: ../panels/info/cc-info-overview-panel.c:490
 #, c-format
 msgid "64-bit"
 msgstr "64位元"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:816
+#: ../panels/info/cc-info-overview-panel.c:493
 #, c-format
 msgid "32-bit"
 msgstr "32位元"
@@ -1553,7 +1525,14 @@ msgstr "磁碟"
 msgid "Calculating…"
 msgstr "正在計算…"
 
-#: ../panels/info/info-overview.ui.h:11
+#. Translators: A label to inform the user that the check-for-updates link
+#. that used to be here has been moved to the App Center.
+#: ../panels/info/info-overview.ui.h:12
+msgid "<i>OS updates are now managed in the App Center</i>"
+msgstr "<i>操作系統更新現在可於 App Center 中進行管理</i>"
+
+#. Translators: A link to the terms of use of Endless OS.
+#: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
 msgstr "<a href='attribution-link'>Endless 使用條款</a>"
 
@@ -2363,11 +2342,11 @@ msgstr "允許其他使用者使用(_O)"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
 msgid "Restrict background data usage"
-msgstr ""
+msgstr "限制背景數據使用"
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
-msgstr ""
+msgstr "適用於收取數據費用或設有數據限制的連線。"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:1
 #: ../panels/network/connection-editor/ip4-page.ui.h:11
@@ -5353,7 +5332,7 @@ msgstr "遠端登入(_R)"
 
 #: ../panels/sharing/sharing.ui.h:6
 msgid "_Content Sharing"
-msgstr ""
+msgstr "分享內容"
 
 #: ../panels/sharing/sharing.ui.h:7
 msgid "Some services are disabled because of no network access."
@@ -5413,13 +5392,13 @@ msgstr "資料夾"
 
 #: ../panels/sharing/sharing.ui.h:22
 msgid "Content Sharing"
-msgstr ""
+msgstr "分享內容"
 
 #: ../panels/sharing/sharing.ui.h:23
 msgid ""
 "Content sharing allows users to view content installed on this computer on "
 "Android devices on the same network."
-msgstr ""
+msgstr "內容分享功能讓使用者可以在同一網絡上的 Android 裝置查看安裝在此電腦上的內容。"
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -6183,49 +6162,49 @@ msgstr "顏色效果"
 
 #: ../panels/updates/cc-updates-panel.c:472
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "有限數據連線"
 
 #: ../panels/updates/cc-updates-panel.c:474
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "無限數據連線"
 
 #: ../panels/updates/cc-updates-panel.c:523
 msgid "No active connection"
-msgstr ""
+msgstr "無有效連線"
 
 #. "Change Network Settings" label
 #: ../panels/updates/cc-updates-panel.c:747
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "變更網路設定..."
 
 #: ../panels/updates/cc-updates-panel.ui.h:1
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:1
 msgid "Automatic Updates"
-msgstr ""
+msgstr "自動更新"
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
-"Allow system and application updates to happen automatically without your "
-"request in the background."
-msgstr ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr "允許在此連線上自動執行背景更新，通常是指應用程式升級、新內容或更新 Endless 操作系統。"
 
 #: ../panels/updates/cc-updates-panel.ui.h:3
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "已排程更新"
 
 #: ../panels/updates/cc-updates-panel.ui.h:4
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "建立每天自動更新時段。"
 
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:2
 msgid "Schedule automatic updates"
-msgstr ""
+msgstr "安排自動更新"
 
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
 msgid "Updates;Automatic;"
-msgstr ""
+msgstr "更新；自動；"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1

@@ -11,6 +11,7 @@
 # David Young <dhyang555@gmail.com>, 2011
 # Deng Xiyue <manphiz@gmail.com>, 2009
 # Dz Chen <wsxy162@gmail.com>, 2016
+# e2f_cn c9 <e2f_cn_c9@outlook.com>, 2018
 # Eleanor Chen <chenyueg@gmail.com>, 2014
 # FujianWzh <fujianwzh@gmail.com>, 2009
 # He Qiangqiang <carton@linux.net.cn>, 2002
@@ -38,9 +39,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:51+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
+"POT-Creation-Date: 2018-04-24 11:43-0700\n"
+"PO-Revision-Date: 2018-05-02 11:32+0000\n"
+"Last-Translator: e2f_cn c9 <e2f_cn_c9@outlook.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/endless-os/gnome-control-center/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1100,22 +1101,22 @@ msgstr "修改时间或日期设置需要认证。"
 #: ../panels/display/cc-display-panel.c:746
 msgctxt "Display rotation"
 msgid "Landscape"
-msgstr ""
+msgstr "横向"
 
 #: ../panels/display/cc-display-panel.c:749
 msgctxt "Display rotation"
 msgid "Portrait Right"
-msgstr ""
+msgstr "纵向右"
 
 #: ../panels/display/cc-display-panel.c:752
 msgctxt "Display rotation"
 msgid "Portrait Left"
-msgstr ""
+msgstr "纵向左"
 
 #: ../panels/display/cc-display-panel.c:755
 msgctxt "Display rotation"
 msgid "Landscape (flipped)"
-msgstr ""
+msgstr "横向（翻转）"
 
 #. Translators: This option sets orientation of print (portrait, landscape...)
 #: ../panels/display/cc-display-panel.c:796
@@ -1139,7 +1140,7 @@ msgstr "刷新频率"
 
 #: ../panels/display/cc-display-panel.c:1194
 msgid "Scale"
-msgstr ""
+msgstr "比例放大"
 
 #: ../panels/display/cc-display-panel.c:1247
 msgid "Adjust for TV"
@@ -1148,25 +1149,25 @@ msgstr "为 TV 调整"
 #: ../panels/display/cc-display-panel.c:1485
 #: ../panels/display/cc-display-panel.c:1534
 msgid "Primary Display"
-msgstr ""
+msgstr "显示器"
 
 #: ../panels/display/cc-display-panel.c:1563
 msgid "Display Arrangement"
-msgstr ""
+msgstr "显示装置"
 
 #: ../panels/display/cc-display-panel.c:1564
 msgid ""
 "Drag displays to match your setup. The top bar is placed on the primary "
 "display."
-msgstr ""
+msgstr "拖动显示器以匹配您的设置。顶部栏置于主显示器上。"
 
 #: ../panels/display/cc-display-panel.c:2004
 msgid "Display Mode"
-msgstr ""
+msgstr "显示模式"
 
 #: ../panels/display/cc-display-panel.c:2020
 msgid "Join Displays"
-msgstr ""
+msgstr "连接显示器"
 
 #: ../panels/display/cc-display-panel.c:2023
 msgid "Mirror"
@@ -1174,11 +1175,11 @@ msgstr "镜像"
 
 #: ../panels/display/cc-display-panel.c:2026
 msgid "Single Display"
-msgstr ""
+msgstr "单显示器"
 
 #: ../panels/display/cc-display-panel.c:2739
 msgid "Apply Changes?"
-msgstr ""
+msgstr "应用更改吗？"
 
 #: ../panels/display/cc-display-panel.c:2753
 #: ../panels/network/connection-editor/connection-editor.ui.h:2
@@ -1189,7 +1190,7 @@ msgstr "应用(_A)"
 #: ../panels/display/cc-display-panel.c:3134
 #, c-format
 msgid "%.2lf Hz"
-msgstr ""
+msgstr "%2如果赫兹"
 
 #. TRANSLATORS: the state of the night light setting
 #: ../panels/display/cc-display-panel.c:3350
@@ -1308,51 +1309,23 @@ msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr "面板;投影仪;xrandr;屏幕;分辨率;刷新;显示器;夜晚;灯;蓝色;红移;颜色;日落;日出;"
 
-#: ../panels/info/cc-info-overview-panel.c:234
-msgid "No updates available"
-msgstr "没有可用的更新"
-
-#: ../panels/info/cc-info-overview-panel.c:236
-msgid "Check for updates now"
-msgstr "检查更新"
-
-#: ../panels/info/cc-info-overview-panel.c:238
-msgid "Update failed"
-msgstr "更新失败"
-
-#: ../panels/info/cc-info-overview-panel.c:240
-msgid "Checking for updates…"
-msgstr "检查更新中……"
-
-#: ../panels/info/cc-info-overview-panel.c:243
-msgid "Install updates now"
-msgstr "马上安装更新"
-
-#: ../panels/info/cc-info-overview-panel.c:246
-msgid "Installing updates…"
-msgstr "安装更新……"
-
-#: ../panels/info/cc-info-overview-panel.c:248
-msgid "Restart to complete update"
-msgstr "重启以完成更新"
-
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-overview-panel.c:719
+#: ../panels/info/cc-info-overview-panel.c:396
 #: ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "未知"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:813
+#: ../panels/info/cc-info-overview-panel.c:490
 #, c-format
 msgid "64-bit"
-msgstr ""
+msgstr "64位"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:816
+#: ../panels/info/cc-info-overview-panel.c:493
 #, c-format
 msgid "32-bit"
-msgstr ""
+msgstr "32位"
 
 #: ../panels/info/cc-info-panel.c:138
 msgid "Section"
@@ -1463,23 +1436,23 @@ msgstr "Windows 软件"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:2
 msgid "Defa­ult Applications"
-msgstr ""
+msgstr "默认应用"
 
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:3
 msgid "Configure Default Applications"
-msgstr ""
+msgstr "配置默认的应用"
 
 #. Translators: those are keywords for the Default Applications panel
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:5
 msgid "default;application;preferred;media;"
-msgstr ""
+msgstr "默认的；应用；首选；媒体；"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:2
 msgid "Ab­out"
-msgstr ""
+msgstr "关于"
 
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:3
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:3
@@ -1505,17 +1478,17 @@ msgstr "详细信息"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:2
 msgid "Remo­vable Media"
-msgstr ""
+msgstr "可移动媒体"
 
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:3
 msgid "Configure Removable Media settings"
-msgstr ""
+msgstr "配置可移动媒体设置"
 
 #. Translators: those are keywords for the Removable Media panel
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:5
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
+msgstr "设备;系统;默认的;应用;首选; CD; DVD; USB;音频;视频;盘;可移动;媒体;自动运行;"
 
 #: ../panels/info/info-default-apps.ui.h:1
 msgid "_Web"
@@ -1565,7 +1538,7 @@ msgstr "图形"
 #. To translators: this field contains the distro type
 #: ../panels/info/info-overview.ui.h:7
 msgid "OS type"
-msgstr ""
+msgstr "OS类型"
 
 #: ../panels/info/info-overview.ui.h:8
 msgid "Virtualization"
@@ -1579,7 +1552,14 @@ msgstr "磁盘"
 msgid "Calculating…"
 msgstr "正在计算…"
 
-#: ../panels/info/info-overview.ui.h:11
+#. Translators: A label to inform the user that the check-for-updates link
+#. that used to be here has been moved to the App Center.
+#: ../panels/info/info-overview.ui.h:12
+msgid "<i>OS updates are now managed in the App Center</i>"
+msgstr "<i>在应用中心管理操作系统更新</i>"
+
+#. Translators: A link to the terms of use of Endless OS.
+#: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
 msgstr "<a href='attribution-link'>Endless使用条款</a>"
 
@@ -1905,7 +1885,7 @@ msgstr "查看和更改快捷并设置打字偏好"
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:5
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
+msgstr "快捷方式；工作区；窗口；调整大小；变焦；对比度；输入；来源；锁定；音量；"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
 #: ../panels/region/input-options.ui.h:4 ../shell/cc-application.c:251
@@ -1930,7 +1910,7 @@ msgstr "尝试不同的搜索"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:1
 msgid "Press Esc to cancel or Backspace to reset the keyboard shortcut."
-msgstr ""
+msgstr "按 ESC 取消或退格以重置键盘快捷方式。"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:3
 #: ../panels/printers/details-dialog.ui.h:1
@@ -2256,15 +2236,15 @@ msgstr "非常好"
 
 #: ../panels/network/connection-editor/ce-page-details.c:302
 msgid "Forget Connection"
-msgstr ""
+msgstr "忘记连接"
 
 #: ../panels/network/connection-editor/ce-page-details.c:304
 msgid "Remove Connection Profile"
-msgstr ""
+msgstr "移除连接配置"
 
 #: ../panels/network/connection-editor/ce-page-details.c:306
 msgid "Remove VPN"
-msgstr ""
+msgstr "移除 VPN"
 
 #: ../panels/network/connection-editor/ce-page-details.c:334
 #: ../panels/network/network-wifi.ui.h:46 ../shell/cc-window.c:243
@@ -2389,11 +2369,11 @@ msgstr "对其他用户可用(_O)"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
 msgid "Restrict background data usage"
-msgstr ""
+msgstr "限制后台数据使用"
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
-msgstr ""
+msgstr "适用于具有数据费用或有限制的连接。"
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:1
 #: ../panels/network/connection-editor/ip4-page.ui.h:11
@@ -2462,7 +2442,7 @@ msgstr "字节"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:1
 msgid "IPv_4 Method"
-msgstr ""
+msgstr "IPv_4 方法"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:2
 #: ../panels/network/network-wifi.ui.h:27
@@ -2477,12 +2457,12 @@ msgstr "仅本地链路"
 #: ../panels/network/connection-editor/ip4-page.ui.h:5
 #: ../panels/network/connection-editor/ip6-page.ui.h:6
 msgid "Disable"
-msgstr ""
+msgstr "禁用"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:6
 #: ../panels/network/connection-editor/ip6-page.ui.h:7
 msgid "Addresses"
-msgstr ""
+msgstr "地址"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:7
 #: ../panels/network/connection-editor/ip6-page.ui.h:8
@@ -2507,7 +2487,7 @@ msgstr "自动 DNS"
 #: ../panels/network/connection-editor/ip4-page.ui.h:13
 #: ../panels/network/connection-editor/ip6-page.ui.h:13
 msgid "Separate IP addresses with commas"
-msgstr ""
+msgstr "用逗号分隔 IP 地址"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:14
 #: ../panels/network/connection-editor/ip6-page.ui.h:14
@@ -2524,7 +2504,7 @@ msgstr "自动路由"
 #: ../panels/network/connection-editor/ip4-page.ui.h:17
 #: ../panels/network/connection-editor/ip6-page.ui.h:17
 msgid "Metric"
-msgstr ""
+msgstr "公制"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:18
 #: ../panels/network/connection-editor/ip6-page.ui.h:18
@@ -2534,7 +2514,7 @@ msgstr "仅对该网络上的资源使用此连接(_O)"
 
 #: ../panels/network/connection-editor/ip6-page.ui.h:1
 msgid "IPv_6 Method"
-msgstr ""
+msgstr "IPv_6 方法"
 
 #: ../panels/network/connection-editor/ip6-page.ui.h:3
 msgid "Automatic, DHCP only"
@@ -2662,12 +2642,12 @@ msgstr "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;v
 
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:3
 msgid "Control how you connect to Wi-Fi networks"
-msgstr ""
+msgstr "控制连接到无线网络的方式"
 
 #. Translators: those are keywords for the wi-fi control-center panel
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:5
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;"
-msgstr ""
+msgstr "网络；无线；Wi-Fi；Wifi；IP；局域网；宽带；DNS；"
 
 #: ../panels/network/net-device-ethernet.c:106
 #: ../panels/network/net-device-wifi.c:507
@@ -2731,13 +2711,13 @@ msgstr "启用热点模式时无法通过无线网络访问互联网。"
 
 #: ../panels/network/net-device-wifi.c:1333
 msgid "Turn On Wi-Fi Hotspot?"
-msgstr ""
+msgstr "打开 Wi-Fi 热点？"
 
 #: ../panels/network/net-device-wifi.c:1355
 msgid ""
 "Wi-Fi hotspots are usually used to share an additional Internet connection "
 "over Wi-Fi."
-msgstr ""
+msgstr "Wi-Fi 热点通常用于在 Wi-Fi 上共享额外的互联网连接。"
 
 #: ../panels/network/net-device-wifi.c:1366
 msgid "_Turn On"
@@ -2773,7 +2753,7 @@ msgstr "忘记(_F)"
 #: ../panels/network/net-device-wifi.c:1997
 #: ../panels/network/net-device-wifi.c:2004
 msgid "Known Wi-Fi Networks"
-msgstr ""
+msgstr "已知的 Wi-Fi 网络"
 
 #. translators: This is the label for the "Forget wireless network"
 #. functionality
@@ -2810,7 +2790,7 @@ msgstr "网络"
 
 #: ../panels/network/network-proxy.ui.h:1
 msgid "Network Proxy"
-msgstr ""
+msgstr "网络代理"
 
 #: ../panels/network/network-proxy.ui.h:5
 msgid "_HTTP Proxy"
@@ -2864,7 +2844,7 @@ msgstr "蓝牙"
 
 #: ../panels/network/network.ui.h:3
 msgid "Not set up"
-msgstr ""
+msgstr "未设置"
 
 #: ../panels/network/network-vpn.ui.h:1
 msgid "Turn VPN connection off"
@@ -3011,35 +2991,35 @@ msgstr "连接到隐藏网络(_C)…"
 
 #: ../panels/network/network-wifi.ui.h:61
 msgid "_Turn On Wi-Fi Hotspot…"
-msgstr ""
+msgstr "_打开 Wi-Fi 热点......"
 
 #: ../panels/network/network-wifi.ui.h:62
 msgid "_Known Wi-Fi Networks"
-msgstr ""
+msgstr "_已知的 Wi-Fi 网络"
 
 #: ../panels/network/wifi.ui.h:1
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
-msgstr ""
+msgstr "确保您已插入并打开 Wi-Fi 适配器"
 
 #: ../panels/network/wifi.ui.h:2
 msgid "No Wi-Fi Adapter Found"
-msgstr ""
+msgstr "未找到 Wi-Fi 适配器"
 
 #: ../panels/network/wifi.ui.h:3
 msgid "Airplane Mode"
-msgstr ""
+msgstr "飞行模式"
 
 #: ../panels/network/wifi.ui.h:4
 msgid "Disables Wi-Fi, Bluetooth and mobile broadband"
-msgstr ""
+msgstr "禁用 Wi-Fi、蓝牙和移动宽带等功能"
 
 #: ../panels/network/wifi.ui.h:5
 msgid "Visible Networks"
-msgstr ""
+msgstr "可见网络"
 
 #: ../panels/network/wifi.ui.h:6
 msgid "NetworkManager needs to be running"
-msgstr ""
+msgstr "需要运行 NetworkManager。"
 
 #. TRANSLATORS: AP type
 #: ../panels/network/panel-common.c:127
@@ -3325,7 +3305,7 @@ msgstr "线缆已拔出"
 
 #: ../panels/network/wireless-security/eap-method.c:57
 msgid "undefined error in 802.1X security (wpa-eap)"
-msgstr ""
+msgstr "802.1x 安全性中未定义的错误 （wpa-eap）"
 
 #: ../panels/network/wireless-security/eap-method.c:233
 msgid "no file selected"
@@ -3501,7 +3481,7 @@ msgid ""
 "The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
+msgstr "选择的私钥未设置密码。可能使您的安全凭据遭受攻击并失效。请选择一个带有密码的私钥。\n\n（您可以使用 openssl 来向私钥添加密码）"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:486
 msgid "Choose your personal certificate"
@@ -3546,7 +3526,7 @@ msgstr "MSCHAP"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:305
 msgid "MSCHAPv2 (no EAP)"
-msgstr ""
+msgstr "MSCHAPv2（无 EAP）"
 
 #: ../panels/network/wireless-security/eap-method-ttls.c:321
 msgid "CHAP"
@@ -3554,7 +3534,7 @@ msgstr "CHAP"
 
 #: ../panels/network/wireless-security/wireless-security.c:87
 msgid "Unknown error validating 802.1X security"
-msgstr ""
+msgstr "验证 802.1x 安全性时发生未知错误"
 
 #: ../panels/network/wireless-security/wireless-security.c:453
 msgid "TLS"
@@ -4173,7 +4153,7 @@ msgstr "需要认证"
 #: ../panels/printers/cc-printers-panel.c:718
 #, c-format
 msgid "Printer “%s” has been deleted"
-msgstr ""
+msgstr "打印机“%s”已被删除"
 
 #. Translators: Addition of the new printer failed.
 #: ../panels/printers/cc-printers-panel.c:909
@@ -4273,7 +4253,7 @@ msgstr "输入用户名和密码以查看打印服务器上的打印机。"
 #: ../panels/printers/options-dialog.ui.h:2
 #: ../panels/printers/pp-options-dialog.c:893
 msgid "Test Page"
-msgstr ""
+msgstr "测试页面"
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: ../panels/printers/pp-details-dialog.c:123
@@ -4710,7 +4690,7 @@ msgstr "正在处理"
 #. Translators: Name of job which makes printer to clean its heads
 #: ../panels/printers/pp-printer-entry.c:913
 msgid "Clean print heads"
-msgstr ""
+msgstr "清洁印刷头"
 
 #: ../panels/printers/printer-entry.ui.h:1
 msgid "Printing Options"
@@ -4729,7 +4709,7 @@ msgstr "默认使用打印机"
 #. printer.
 #: ../panels/printers/printer-entry.ui.h:6
 msgid "Clean Print Heads"
-msgstr ""
+msgstr "清洁印刷头"
 
 #: ../panels/printers/printer-entry.ui.h:7
 msgid "Remove Printer"
@@ -5064,7 +5044,7 @@ msgstr "时间"
 
 #: ../panels/region/format-chooser.ui.h:7
 msgid "Dates & Times"
-msgstr ""
+msgstr "日期和时间"
 
 #: ../panels/region/format-chooser.ui.h:8
 msgid "Numbers"
@@ -5162,11 +5142,11 @@ msgstr "英语（英国）"
 
 #: ../panels/region/region.ui.h:5
 msgid "Restart the session for changes to take effect"
-msgstr ""
+msgstr "重启会话以使更改生效"
 
 #: ../panels/region/region.ui.h:6
 msgid "Restart…"
-msgstr ""
+msgstr "重启......"
 
 #: ../panels/region/region.ui.h:7
 msgid "_Formats"
@@ -5379,7 +5359,7 @@ msgstr "远程登录(_R)"
 
 #: ../panels/sharing/sharing.ui.h:6
 msgid "_Content Sharing"
-msgstr ""
+msgstr "_内容共享"
 
 #: ../panels/sharing/sharing.ui.h:7
 msgid "Some services are disabled because of no network access."
@@ -5439,13 +5419,13 @@ msgstr "文件夹"
 
 #: ../panels/sharing/sharing.ui.h:22
 msgid "Content Sharing"
-msgstr ""
+msgstr "内容共享"
 
 #: ../panels/sharing/sharing.ui.h:23
 msgid ""
 "Content sharing allows users to view content installed on this computer on "
 "Android devices on the same network."
-msgstr ""
+msgstr "内容共享允许用户在连接同一网络上的 Android 设备上查看安装在此电脑上的内容。"
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -5677,33 +5657,33 @@ msgstr "自定义"
 #: ../panels/universal-access/cc-ua-panel.c:351
 msgctxt "cursor size"
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 #: ../panels/universal-access/cc-ua-panel.c:354
 msgctxt "cursor size"
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 #: ../panels/universal-access/cc-ua-panel.c:357
 msgctxt "cursor size"
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 #: ../panels/universal-access/cc-ua-panel.c:360
 msgctxt "cursor size"
 msgid "Larger"
-msgstr ""
+msgstr "较大"
 
 #: ../panels/universal-access/cc-ua-panel.c:363
 msgctxt "cursor size"
 msgid "Largest"
-msgstr ""
+msgstr "最大"
 
 #: ../panels/universal-access/cc-ua-panel.c:367
 #, c-format
 msgid "%d pixel"
 msgid_plural "%d pixels"
-msgstr[0] ""
+msgstr[0] "%d像素"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -5721,7 +5701,7 @@ msgstr "辅助视觉、听觉、打字和指点操作"
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:5
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Assist;Repeat;Blink;"
-msgstr ""
+msgstr "键盘；鼠标；A11Y；辅助功能；对比度；缩放；屏幕；阅读器；文本；字体；大小；AccessX；粘滞；键；慢；回弹；鼠标；双击；点击；延时；助手；重复；闪烁；"
 
 #: ../panels/universal-access/uap.ui.h:1
 msgid "_Always Show Universal Access Menu"
@@ -5741,7 +5721,7 @@ msgstr "大号文本(_L)"
 
 #: ../panels/universal-access/uap.ui.h:5
 msgid "C_ursor Size"
-msgstr ""
+msgstr "鼠标指针大小"
 
 #: ../panels/universal-access/uap.ui.h:6
 #: ../panels/universal-access/zoom-options.ui.h:7
@@ -5802,12 +5782,12 @@ msgstr "双击延时"
 
 #: ../panels/universal-access/uap.ui.h:22
 msgid "Cursor Size"
-msgstr ""
+msgstr "鼠标指针大小"
 
 #: ../panels/universal-access/uap.ui.h:23
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
+msgstr "鼠标指针大小可以与缩放结合使用，以便更容易看到鼠标指针。"
 
 #: ../panels/universal-access/uap.ui.h:24
 msgid "Screen Reader"
@@ -6209,49 +6189,49 @@ msgstr "色彩效果"
 
 #: ../panels/updates/cc-updates-panel.c:472
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "有限数据计划连接"
 
 #: ../panels/updates/cc-updates-panel.c:474
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "无限数据计划连接"
 
 #: ../panels/updates/cc-updates-panel.c:523
 msgid "No active connection"
-msgstr ""
+msgstr "无有效连接"
 
 #. "Change Network Settings" label
 #: ../panels/updates/cc-updates-panel.c:747
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "更改网络设置......"
 
 #: ../panels/updates/cc-updates-panel.ui.h:1
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:1
 msgid "Automatic Updates"
-msgstr ""
+msgstr "自动更新"
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
-"Allow system and application updates to happen automatically without your "
-"request in the background."
-msgstr ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr "允许此连接上后台自动更新。这些通常是升级的应用程序、新内容或更新 Endless 操作系统。"
 
 #: ../panels/updates/cc-updates-panel.ui.h:3
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "计划更新"
 
 #: ../panels/updates/cc-updates-panel.ui.h:4
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "创建一个每天自动更新的窗口。"
 
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:2
 msgid "Schedule automatic updates"
-msgstr ""
+msgstr "计划自动更新"
 
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
 msgid "Updates;Automatic;"
-msgstr ""
+msgstr "更新；自动"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1
@@ -6565,7 +6545,7 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
+msgstr "密码需要加长。尝试添加更多的字母、数字和标点符号。"
 
 #: ../panels/user-accounts/pw-utils.c:117
 msgctxt "Password hint"
@@ -6577,7 +6557,7 @@ msgctxt "Password hint"
 msgid ""
 "Adding more letters, numbers and punctuation will make the password "
 "stronger."
-msgstr ""
+msgstr "添加更多字母、数字和标点符号将使密码更加强大。"
 
 #: ../panels/user-accounts/run-passwd.c:422
 msgid "Authentication failed"
@@ -6672,7 +6652,7 @@ msgstr "登录到域失败"
 
 #: ../panels/user-accounts/um-account-dialog.c:1145
 msgid "Unable to find the domain. Maybe you misspelled it?"
-msgstr ""
+msgstr "找不到该域名。也许拼写有误？"
 
 #: ../panels/user-accounts/um-account-type.c:34
 msgctxt "Account type"

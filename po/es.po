@@ -23,8 +23,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 23:30+0000\n"
+"POT-Creation-Date: 2018-04-24 11:43-0700\n"
+"PO-Revision-Date: 2018-05-04 06:00+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/endless-os/gnome-control-center/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -1293,48 +1293,20 @@ msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr "Panel;Proyector;xranrd;Pantalla;Resolución;Actualizar;Monitor;Noche;Luz;Azul;color;amanecer;atardecer;ocaso;"
 
-#: ../panels/info/cc-info-overview-panel.c:234
-msgid "No updates available"
-msgstr "No hay actualizaciones disponibles"
-
-#: ../panels/info/cc-info-overview-panel.c:236
-msgid "Check for updates now"
-msgstr "Buscar actualizaciones ahora"
-
-#: ../panels/info/cc-info-overview-panel.c:238
-msgid "Update failed"
-msgstr "Hubo un error durante la actualización"
-
-#: ../panels/info/cc-info-overview-panel.c:240
-msgid "Checking for updates…"
-msgstr "Buscando actualizaciones…"
-
-#: ../panels/info/cc-info-overview-panel.c:243
-msgid "Install updates now"
-msgstr "Instalar actualizaciones ahora"
-
-#: ../panels/info/cc-info-overview-panel.c:246
-msgid "Installing updates…"
-msgstr "Instalando actualizaciones…"
-
-#: ../panels/info/cc-info-overview-panel.c:248
-msgid "Restart to complete update"
-msgstr "Reiniciar para completar la actualización"
-
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-overview-panel.c:719
+#: ../panels/info/cc-info-overview-panel.c:396
 #: ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "Desconocido"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:813
+#: ../panels/info/cc-info-overview-panel.c:490
 #, c-format
 msgid "64-bit"
 msgstr "64 bits"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:816
+#: ../panels/info/cc-info-overview-panel.c:493
 #, c-format
 msgid "32-bit"
 msgstr "32 bits"
@@ -1564,7 +1536,14 @@ msgstr "Disco"
 msgid "Calculating…"
 msgstr "Calculando…"
 
-#: ../panels/info/info-overview.ui.h:11
+#. Translators: A label to inform the user that the check-for-updates link
+#. that used to be here has been moved to the App Center.
+#: ../panels/info/info-overview.ui.h:12
+msgid "<i>OS updates are now managed in the App Center</i>"
+msgstr "<i> Las actualizaciones del sistema operativo se administran ahora en el centro de aplicaciones </i>"
+
+#. Translators: A link to the terms of use of Endless OS.
+#: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
 msgstr "<a href='attribution-link'>Endless Condiciones de Uso</a>"
 
@@ -2375,11 +2354,11 @@ msgstr "Hacer disponible para _otros usuarios"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
 msgid "Restrict background data usage"
-msgstr ""
+msgstr "Restringir el uso de los datos del historial"
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
-msgstr ""
+msgstr "Apropiado para conexiones que tienen cargas o límites de datos."
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:1
 #: ../panels/network/connection-editor/ip4-page.ui.h:11
@@ -5436,7 +5415,7 @@ msgstr "Compartición de contenido"
 msgid ""
 "Content sharing allows users to view content installed on this computer on "
 "Android devices on the same network."
-msgstr ""
+msgstr "El uso compartido de contenido permite a los usuarios ver el contenido instalado en este equipo en dispositivos Android en la misma red."
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -6203,49 +6182,49 @@ msgstr "Efectos de color"
 
 #: ../panels/updates/cc-updates-panel.c:472
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "Conexión limitada del plan de datos"
 
 #: ../panels/updates/cc-updates-panel.c:474
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "Conexión del plan de datos ilimitados"
 
 #: ../panels/updates/cc-updates-panel.c:523
 msgid "No active connection"
-msgstr ""
+msgstr "Sin conexión activa"
 
 #. "Change Network Settings" label
 #: ../panels/updates/cc-updates-panel.c:747
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "Cambiar la configuración de red..."
 
 #: ../panels/updates/cc-updates-panel.ui.h:1
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:1
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Actualizaciones automáticas"
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
-"Allow system and application updates to happen automatically without your "
-"request in the background."
-msgstr ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr "Permitir que las actualizaciones del historial se realicen automáticamente en esta conexión. Por regla general se trata de aplicaciones mejoradas, nuevos contenidos o actualizaciones del sistema operativo Endless."
 
 #: ../panels/updates/cc-updates-panel.ui.h:3
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "Actualizaciones programadas"
 
 #: ../panels/updates/cc-updates-panel.ui.h:4
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Cree una ventana diaria para que las actualizaciones se realicen automáticamente."
 
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:2
 msgid "Schedule automatic updates"
-msgstr ""
+msgstr "Programar actualizaciones automáticas "
 
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
 msgid "Updates;Automatic;"
-msgstr ""
+msgstr "Actualizaciones; automáticas;"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1

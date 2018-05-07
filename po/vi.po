@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-18 15:33-0700\n"
-"PO-Revision-Date: 2018-04-18 22:47+0000\n"
+"POT-Creation-Date: 2018-04-24 11:43-0700\n"
+"PO-Revision-Date: 2018-04-28 13:27+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/endless-os/gnome-control-center/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -1280,48 +1280,20 @@ msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr "Panel;Bảng;bang;Projector;Máy;chiếu;May;chieu;xrandr;Screen;Màn;hình;Man;hinh;Resolution;Độ;phân;giải;Do;phan;gia;Refresh;Night;Đêm;Dem;Light;Ánh sáng;anh sang;Blue;Xanh;redshift;color;màu;mau;sunset;hoàng hôn;hoang hon;sunrise;bình minh;binh minh;"
 
-#: ../panels/info/cc-info-overview-panel.c:234
-msgid "No updates available"
-msgstr "Không có cập nhật nào"
-
-#: ../panels/info/cc-info-overview-panel.c:236
-msgid "Check for updates now"
-msgstr "Kiểm tra cập nhật ngay"
-
-#: ../panels/info/cc-info-overview-panel.c:238
-msgid "Update failed"
-msgstr "Cập nhật thất bại"
-
-#: ../panels/info/cc-info-overview-panel.c:240
-msgid "Checking for updates…"
-msgstr "Đang kiểm tra tìm bản cập nhật..."
-
-#: ../panels/info/cc-info-overview-panel.c:243
-msgid "Install updates now"
-msgstr "Cài đặt bản cập nhật ngay bây giờ"
-
-#: ../panels/info/cc-info-overview-panel.c:246
-msgid "Installing updates…"
-msgstr "Đang cài các bản cập nhật...."
-
-#: ../panels/info/cc-info-overview-panel.c:248
-msgid "Restart to complete update"
-msgstr "Khởi động lại để hoàn chỉnh cập nhật"
-
 #. TRANSLATORS: AP type
-#: ../panels/info/cc-info-overview-panel.c:719
+#: ../panels/info/cc-info-overview-panel.c:396
 #: ../panels/network/panel-common.c:123
 msgid "Unknown"
 msgstr "Chưa biết"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:813
+#: ../panels/info/cc-info-overview-panel.c:490
 #, c-format
 msgid "64-bit"
 msgstr "64-bít"
 
 #. translators: This is the type of architecture for the OS
-#: ../panels/info/cc-info-overview-panel.c:816
+#: ../panels/info/cc-info-overview-panel.c:493
 #, c-format
 msgid "32-bit"
 msgstr "32-bít"
@@ -1551,7 +1523,14 @@ msgstr "Đĩa"
 msgid "Calculating…"
 msgstr "Đang tính toán…"
 
-#: ../panels/info/info-overview.ui.h:11
+#. Translators: A label to inform the user that the check-for-updates link
+#. that used to be here has been moved to the App Center.
+#: ../panels/info/info-overview.ui.h:12
+msgid "<i>OS updates are now managed in the App Center</i>"
+msgstr "<i>Bản cập nhật HĐH hiện được quản lý trong Trung tâm Ứng dụng</i>"
+
+#. Translators: A link to the terms of use of Endless OS.
+#: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
 msgstr "<a href='attribution-link'>Điều khoản Sử dụng Endless</a>"
 
@@ -2361,11 +2340,11 @@ msgstr "Cho người dùng _khác sử dụng"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
 msgid "Restrict background data usage"
-msgstr ""
+msgstr "Giới hạn việc ứng dụng sử dụng dữ liệu khi chạy ngầm"
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
-msgstr ""
+msgstr "Phù hợp cho các kết nối có tính phí dữ liệu hoặc giới hạn dữ liệu."
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:1
 #: ../panels/network/connection-editor/ip4-page.ui.h:11
@@ -5351,7 +5330,7 @@ msgstr "Đăng nhập từ _xa"
 
 #: ../panels/sharing/sharing.ui.h:6
 msgid "_Content Sharing"
-msgstr ""
+msgstr "_Chia sẻ Nội dung"
 
 #: ../panels/sharing/sharing.ui.h:7
 msgid "Some services are disabled because of no network access."
@@ -5411,13 +5390,13 @@ msgstr "Thư mục"
 
 #: ../panels/sharing/sharing.ui.h:22
 msgid "Content Sharing"
-msgstr ""
+msgstr "Chia sẻ Nội dung"
 
 #: ../panels/sharing/sharing.ui.h:23
 msgid ""
 "Content sharing allows users to view content installed on this computer on "
 "Android devices on the same network."
-msgstr ""
+msgstr "Chia sẻ nội dung cho phép người dùng xem nội dung được cài đặt trên máy tính này trên thiết bị Android trong cùng một mạng."
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -6181,49 +6160,49 @@ msgstr "Hiệu ứng màu"
 
 #: ../panels/updates/cc-updates-panel.c:472
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "Kết nối gói dữ liệu giới hạn"
 
 #: ../panels/updates/cc-updates-panel.c:474
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "Kết nối gói dữ liệu không giới hạn"
 
 #: ../panels/updates/cc-updates-panel.c:523
 msgid "No active connection"
-msgstr ""
+msgstr "Không có kết nối hoạt động"
 
 #. "Change Network Settings" label
 #: ../panels/updates/cc-updates-panel.c:747
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "Thay đổi Cài đặt Mạng..."
 
 #: ../panels/updates/cc-updates-panel.ui.h:1
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:1
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Các cập nhật tự động"
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
-"Allow system and application updates to happen automatically without your "
-"request in the background."
-msgstr ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr "Cho phép cập nhật chạy nền tự động trên kết nối này. Đây thường là các ứng dụng được nâng cấp, nội dung mới hoặc bản cập nhật cho HĐH Endless."
 
 #: ../panels/updates/cc-updates-panel.ui.h:3
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "Cập nhật theo Lịch"
 
 #: ../panels/updates/cc-updates-panel.ui.h:4
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Tạo một khoảng thời gian hàng ngày để cập nhật tự động."
 
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:2
 msgid "Schedule automatic updates"
-msgstr ""
+msgstr "Lên lịch tự động cập nhật"
 
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
 msgid "Updates;Automatic;"
-msgstr ""
+msgstr "Cập nhật;Tự động;"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1
