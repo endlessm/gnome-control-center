@@ -214,7 +214,7 @@ setup_tariff (CcTariffEditor  *self,
       gtk_stack_set_visible_child_name (GTK_STACK (self->stack_to), self->time_period_to == AM ? "am" : "pm");
 
       gtk_adjustment_set_value (self->adjustment_from_hours, get_am_hour (period_start));
-      gtk_adjustment_set_value (self->adjustment_to_hours, get_am_hour (period_start));
+      gtk_adjustment_set_value (self->adjustment_to_hours, get_am_hour (period_end));
       gtk_adjustment_set_value (self->adjustment_from_minutes, g_date_time_get_minute (period_start));
       gtk_adjustment_set_value (self->adjustment_to_minutes, g_date_time_get_minute (period_end));
     }
@@ -301,8 +301,8 @@ update_adjustments (CcTariffEditor *self)
 
   g_debug ("Updating adjustments");
 
-  start = g_date_time_new_from_unix_utc (self->seconds_to_start);
-  end = g_date_time_new_from_unix_utc (self->seconds_to_end);
+  start = g_date_time_new_from_unix_local (self->seconds_to_start);
+  end = g_date_time_new_from_unix_local (self->seconds_to_end);
 
   g_signal_handlers_block_by_func (self->adjustment_from_hours, on_time_changed_cb, self);
   g_signal_handlers_block_by_func (self->adjustment_to_hours, on_time_changed_cb, self);
