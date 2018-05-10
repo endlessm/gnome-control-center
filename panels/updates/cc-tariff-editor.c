@@ -91,28 +91,24 @@ update_seconds_from_adjustments (CcTariffEditor *self)
 {
   g_autoptr(GDateTime) local_start = NULL;
   g_autoptr(GDateTime) local_end = NULL;
-  guint factor_from = 0;
-  guint factor_to = 0;
+  gint minute_start = 0;
+  gint minute_end = 0;
+  gint hour_start = 0;
+  gint hour_end = 0;
+
+  hour_start = (gint) gtk_adjustment_get_value (self->adjustment_from_hours);
+  hour_end = (gint) gtk_adjustment_get_value (self->adjustment_to_hours);
+  minute_start = (gint) gtk_adjustment_get_value (self->adjustment_from_minutes);
+  minute_end = (gint) gtk_adjustment_get_value (self->adjustment_to_minutes);
 
   if (self->clock_format == G_DESKTOP_CLOCK_FORMAT_12H)
     {
-      factor_from = self->time_period_from == AM ? 0 : 12;
-      factor_to = self->time_period_to == AM ? 0 : 12;
+      hour_start = hour_start % 12 + (self->time_period_from == AM ? 0 : 12);
+      hour_end = hour_end % 12 + (self->time_period_to == AM ? 0 : 12);
     }
 
-  local_start = g_date_time_new_local (1970,
-                                       1,
-                                       1,
-                                       gtk_adjustment_get_value (self->adjustment_from_hours) + factor_from,
-                                       gtk_adjustment_get_value (self->adjustment_from_minutes),
-                                       0);
-
-  local_end = g_date_time_new_local (1970,
-                                     1,
-                                     1,
-                                     gtk_adjustment_get_value (self->adjustment_to_hours) + factor_to,
-                                     gtk_adjustment_get_value (self->adjustment_to_minutes),
-                                     0);
+  local_start = g_date_time_new_local (1970, 1, 1, hour_start, minute_start, 0);
+  local_end = g_date_time_new_local (1970, 1, 1, hour_end, minute_end, 0);
 
   /*
    * If 'from' > 'to', e.g. [22:15, 05:45), this period is crossing days and we
