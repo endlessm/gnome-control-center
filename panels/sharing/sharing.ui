@@ -911,7 +911,20 @@
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox">
+            <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="content-sharing-send-with-wifi-button">
+                <property name="visible">True</property>
+                <property name="label">Send with WiFi</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="content-sharing-send-with-bluetooth-button">
+                <property name="visible">True</property>
+                <property name="label">Send with Bluetooth</property>
+              </object>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -933,52 +946,11 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
-                <property name="label" translatable="yes">Content sharing allows others on the same network to view content installed on this computer with Android devices using the Endless Companion App.</property>
+                <property name="label" translatable="yes">Content sharing allows others on the same network to view content installed on this computer with Android devices using the Endless Companion App.
+
+If you don't have the Endless Companion App installed on your Android device, install it from Google Play. If you don't have internet, you can send it to your device from this computer using either WiFi or Bluetooth.</property>
                 <property name="max-width-chars">50</property>
                 <property name="wrap">True</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkBox">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="orientation">horizontal</property>
-                <child>
-                  <object class="GtkImage" id="content-sharing-download-qr-code">
-                    <property name="can_focus">False</property>
-                    <property name="width-request">256</property>
-                    <property name="height-request">256</property>
-                    <property name="visible">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkBox">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="xalign">0</property>
-                        <property name="max-width-chars">50</property>
-                        <property name="wrap">True</property>
-                        <property name="label" translatable="yes">If you don't have the Endless Companion App installed on your Android device, install it from Google Play. If you don't have internet, connect your Android device to the same network and install it by scanning this QR Code, or navigating to the URL below in your browser</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="content-sharing-download-url">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="xalign">0</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
               </object>
             </child>
           </object>
@@ -995,6 +967,166 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="title" translatable="yes">Content Sharing</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="content-sharing-download-wifi-dialog">
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Send Android App with WiFi</property>
+    <property name="resizable">False</property>
+    <property name="type_hint">dialog</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">horizontal</property>
+            <property name="margin_top">24</property>
+            <property name="margin_bottom">24</property>
+            <child>
+              <object class="GtkImage" id="content-sharing-download-qr-code">
+                <property name="can_focus">False</property>
+                <property name="width-request">128</property>
+                <property name="height-request">128</property>
+                <property name="visible">True</property>
+                <property name="margin_left">24</property>
+                <property name="margin_right">24</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="xalign">0</property>
+                    <property name="max-width-chars">50</property>
+                    <property name="wrap">True</property>
+                    <property name="label" translatable="yes">Connect your Android device to the same network and scan this QR Code, or navigate to the URL below in your browser. When the file has finished downloading, open it using your device and it will install.
+
+You may need to select "Allow installing from untrusted sources" in your device's settings menu.</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="content-sharing-download-url">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="xalign">0</property>
+                    <property name="margin_top">24</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="content-sharing-download-wifi-headerbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="title" translatable="yes">Send Android App with WiFi</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkDialog" id="content-sharing-download-bluetooth-dialog">
+    <property name="can_focus">False</property>
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Send Android App with Bluetooth</property>
+    <property name="resizable">False</property>
+    <property name="type_hint">dialog</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="content-sharing-download-bluetooth-send-file-button">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Send Android Package</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">horizontal</property>
+            <property name="margin_top">24</property>
+            <property name="margin_bottom">24</property>
+            <property name="margin_left">24</property>
+            <property name="margin_right">24</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">0</property>
+                <property name="max-width-chars">50</property>
+                <property name="wrap">True</property>
+                <property name="label" translatable="yes">Ensure that your device is discoverable, then click "Send Android Package" and select your device from the list. When the file has finished downloading, open it using your device and it will install.
+
+You may need to select "Allow installing from untrusted sources" in your device's settings menu.</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="content-sharing-download-bluetooth-headerbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="title" translatable="yes">Send Android App with Bluetooth</property>
         <property name="show_close_button">True</property>
         <child>
           <placeholder/>

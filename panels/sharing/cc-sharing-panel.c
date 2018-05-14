@@ -95,6 +95,8 @@ struct _CcSharingPanelPrivate
   GCancellable *hostname_cancellable;
   GtkWidget *screen_sharing_dialog;
   GtkWidget  *content_sharing_dialog;
+  GtkWidget  *content_sharing_download_wifi_dialog;
+  GtkWidget  *content_sharing_download_bluetooth_dialog;
 
   guint remote_desktop_name_watch;
 };
@@ -797,10 +799,12 @@ scale_image_surface (cairo_surface_t *src,
                                                                height);
   g_autoptr(cairo_t) cr = cairo_create (dst);
 
-  cairo_set_source_surface (cr, src, 0, 0);
   cairo_scale (cr,
                width / ((gfloat) cairo_image_surface_get_width (src)),
                height / ((gfloat) cairo_image_surface_get_height (src)));
+
+  cairo_set_source_surface (cr, src, 0, 0);
+  cairo_pattern_set_filter (cairo_get_source (cr), CAIRO_FILTER_NEAREST);
   cairo_paint (cr);
 
   return g_steal_pointer (&dst);
@@ -822,8 +826,7 @@ encode_string_code_as_qr_code_cairo_surface_t (const gchar  *string,
   gint i = 0;
   gint size = 0;
   gint stride = 0;
-  const gint bpp = 3;
-  gchar *bytes = NULL;
+  guint32 *bytes = NULL;
 
   if (qr_code == NULL)
     {
@@ -837,7 +840,7 @@ encode_string_code_as_qr_code_cairo_surface_t (const gchar  *string,
                                            qr_code->width);
   size = qr_code->width * qr_code->width;
   stride = cairo_image_surface_get_stride (qr_surface);
-  bytes = cairo_image_surface_get_data (qr_surface);
+  bytes = (guint32 *) cairo_image_surface_get_data (qr_surface);
 
   /* According to the qrencode documentation, the data member of the
    * QRcode is not an image on its own, but rather an 8-bit number of
@@ -851,18 +854,49 @@ encode_string_code_as_qr_code_cairo_surface_t (const gchar  *string,
     {
       gint row_idx = i / qr_code->width;
       gint col_idx = i % qr_code->width;
-      gint image_offset = row_idx * stride + col_idx * bpp;
-      gchar value = (qr_code->data[i] & (1 << 0)) != 0 ? 0x00 : 0xff;
+
+      /* Stride is in bytes, since we are writing 4 bytes at a time, we need
+       * to divide by 4 */
+      gint image_offset = row_idx * (stride / 4) + col_idx;
+      gchar value = (qr_code->data[i] & (1 << 0)) != 0 ? 0 : 0xffffff;
 
       bytes[image_offset] = value;
-      bytes[image_offset + 1] = value;
-      bytes[image_offset + 2] = value;
     }
 
   return scale_image_surface (qr_surface, target_width, target_width);
 }
 
-#define CONTENT_SHARING_QR_CODE_WIDTH 256
+static void
+cc_sharing_panel_send_with_wifi_button_clicked (GtkButton *button,
+                                                gpointer   user_data)
+{
+  CcSharingPanel *self = user_data;
+  CcSharingPanelPrivate *priv = self->priv;
+  GtkWidget *dialog, *parent;
+
+  dialog = WID ("content-sharing-download-wifi-dialog");
+  parent = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (self)));
+
+  gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (parent));
+  gtk_dialog_run (GTK_DIALOG (dialog));
+}
+
+static void
+cc_sharing_panel_send_with_bluetooth_button_clicked (GtkButton *button,
+                                                     gpointer   user_data)
+{
+  CcSharingPanel *self = user_data;
+  CcSharingPanelPrivate *priv = self->priv;
+  GtkWidget *dialog, *parent;
+
+  dialog = WID ("content-sharing-download-bluetooth-dialog");
+  parent = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (self)));
+
+  gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (parent));
+  gtk_dialog_run (GTK_DIALOG (dialog));
+}
+
+#define CONTENT_SHARING_QR_CODE_WIDTH 128
 
 static void
 cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
@@ -872,6 +906,8 @@ cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
   g_autoptr(GVariant) value = NULL;
   g_autoptr(GError) error = NULL;
   GtkWidget *content_sharing_button = GTK_WIDGET (WID ("content-sharing-button"));
+  GtkWidget *content_sharing_send_with_wifi_button = GTK_WIDGET (WID ("content-sharing-send-with-wifi-button"));
+  GtkWidget *content_sharing_send_with_bluetooth_button = GTK_WIDGET (WID ("content-sharing-send-with-bluetooth-button"));
   GtkImage *content_sharing_download_qr_code = GTK_IMAGE (WID ("content-sharing-download-qr-code"));
   GtkLabel *content_sharing_download_url = GTK_LABEL (WID ("content-sharing-download-url"));
   g_autoptr(cairo_surface_t) qr_code_surface =
@@ -921,12 +957,16 @@ cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
                                          self->priv->content_sharing_switch,
                                          WID ("content-sharing-status-label"));
 
-  /* Set up the QR code */
+  /* Set up the QR code and URL for the WiFi download */
   gtk_image_set_from_surface (content_sharing_download_qr_code,
                               qr_code_surface);
-
-  /* Set up the URL */
   gtk_label_set_markup (content_sharing_download_url, "Hello, world");
+
+  /* Set up download buttons */
+  g_signal_connect (content_sharing_send_with_wifi_button, "clicked",
+                    G_CALLBACK (cc_sharing_panel_send_with_wifi_button_clicked), self);
+  g_signal_connect (content_sharing_send_with_bluetooth_button, "clicked",
+                    G_CALLBACK (cc_sharing_panel_send_with_bluetooth_button_clicked), self);
 
   /* If everything was successful, show the row */
   gtk_widget_show (content_sharing_button);
@@ -1467,6 +1507,8 @@ cc_sharing_panel_init (CcSharingPanel *self)
       "remote-login-dialog",
       "screen-sharing-dialog",
       "content-sharing-dialog",
+      "content-sharing-download-bluetooth-dialog",
+      "content-sharing-download-wifi-dialog",
       NULL };
 
   g_resources_register (cc_sharing_get_resource ());
@@ -1495,6 +1537,8 @@ cc_sharing_panel_init (CcSharingPanel *self)
   priv->remote_login_cancellable = g_cancellable_new ();
   priv->screen_sharing_dialog = WID ("screen-sharing-dialog");
   priv->content_sharing_dialog = WID ("content-sharing-dialog");
+  priv->content_sharing_download_wifi_dialog = WID ("content-sharing-download-wifi-dialog");
+  priv->content_sharing_download_bluetooth_dialog = WID ("content-sharing-download-bluetooth-dialog");
 
   g_signal_connect (priv->media_sharing_dialog, "response",
                     G_CALLBACK (gtk_widget_hide), NULL);
@@ -1505,6 +1549,10 @@ cc_sharing_panel_init (CcSharingPanel *self)
   g_signal_connect (priv->screen_sharing_dialog, "response",
                     G_CALLBACK (gtk_widget_hide), NULL);
   g_signal_connect (priv->content_sharing_dialog, "response",
+                    G_CALLBACK (gtk_widget_hide), NULL);
+  g_signal_connect (priv->content_sharing_download_wifi_dialog, "response",
+                    G_CALLBACK (gtk_widget_hide), NULL);
+  g_signal_connect (priv->content_sharing_download_bluetooth_dialog, "response",
                     G_CALLBACK (gtk_widget_hide), NULL);
 
   gtk_list_box_set_activate_on_single_click (GTK_LIST_BOX (WID ("main-list-box")),
