@@ -32,7 +32,10 @@
 #include "cc-sharing-switch.h"
 #include "org.gnome.SettingsDaemon.Sharing.h"
 
+#include <cairo.h>
+#include <errno.h>
 #include <flatpak.h>
+#include <qrencode.h>
 
 #ifdef GDK_WINDOWING_WAYLAND
 #include <gdk/gdkwayland.h>
@@ -781,6 +784,86 @@ cc_sharing_panel_check_content_sharing_available (void)
   return ret;
 }
 
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (cairo_surface_t, cairo_surface_destroy)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (cairo_t, cairo_destroy)
+
+static cairo_surface_t *
+scale_image_surface (cairo_surface_t *src,
+                     gsize            width,
+                     gsize            height)
+{
+  g_autoptr(cairo_surface_t) dst = cairo_image_surface_create (CAIRO_FORMAT_RGB24,
+                                                               width,
+                                                               height);
+  g_autoptr(cairo_t) cr = cairo_create (dst);
+
+  cairo_set_source_surface (cr, src, 0, 0);
+  cairo_scale (cr,
+               width / ((gfloat) cairo_image_surface_get_width (src)),
+               height / ((gfloat) cairo_image_surface_get_height (src)));
+  cairo_paint (cr);
+
+  return g_steal_pointer (&dst);
+}
+
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (QRcode, QRcode_free)
+
+static cairo_surface_t *
+encode_string_code_as_qr_code_cairo_surface_t (const gchar  *string,
+                                               gsize         target_width,
+                                               GError      **error)
+{
+  g_autoptr(QRcode) qr_code = QRcode_encodeString (string,
+                                                   0,
+                                                   QR_ECLEVEL_H,
+                                                   QR_MODE_8,
+                                                   1);
+  g_autoptr(cairo_surface_t) qr_surface = NULL;
+  gint i = 0;
+  gint size = 0;
+  gint stride = 0;
+  const gint bpp = 3;
+  gchar *bytes = NULL;
+
+  if (qr_code == NULL)
+    {
+      g_autofree gchar *msg = g_strdup_printf ("Unable to encode QR code for string %s: %s", string, strerror (errno));
+      g_set_error (error, G_IO_ERROR, g_io_error_from_errno (errno), "%s", msg);
+      return NULL;
+    }
+
+  qr_surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24,
+                                           qr_code->width,
+                                           qr_code->width);
+  size = qr_code->width * qr_code->width;
+  stride = cairo_image_surface_get_stride (qr_surface);
+  bytes = cairo_image_surface_get_data (qr_surface);
+
+  /* According to the qrencode documentation, the data member of the
+   * QRcode is not an image on its own, but rather an 8-bit number of
+   * which the least significant bit is set if the corresponding module
+   * should be black and not set if the corresponding module should be white.
+   *
+   * So, we loop through the QR code and set bits in the corresponding image
+   * surface as appropriate.
+   */
+  for (; i < size; ++i)
+    {
+      gint row_idx = i / qr_code->width;
+      gint col_idx = i % qr_code->width;
+      gint image_offset = row_idx * stride + col_idx * bpp;
+      gchar value = (qr_code->data[i] & (1 << 0)) != 0 ? 0x00 : 0xff;
+
+      bytes[image_offset] = value;
+      bytes[image_offset + 1] = value;
+      bytes[image_offset + 2] = value;
+    }
+
+  return scale_image_surface (qr_surface, target_width, target_width);
+}
+
+#define CONTENT_SHARING_QR_CODE_WIDTH 256
+
 static void
 cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
 {
@@ -789,6 +872,20 @@ cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
   g_autoptr(GVariant) value = NULL;
   g_autoptr(GError) error = NULL;
   GtkWidget *content_sharing_button = GTK_WIDGET (WID ("content-sharing-button"));
+  GtkImage *content_sharing_download_qr_code = GTK_IMAGE (WID ("content-sharing-download-qr-code"));
+  GtkLabel *content_sharing_download_url = GTK_LABEL (WID ("content-sharing-download-url"));
+  g_autoptr(cairo_surface_t) qr_code_surface =
+    encode_string_code_as_qr_code_cairo_surface_t ("Hello, world",
+                                                   CONTENT_SHARING_QR_CODE_WIDTH,
+                                                   &error);
+
+  if (error != NULL)
+    {
+      g_message ("Unable to generate Android App QR Code: %s", error->message);
+
+      /* Clear the error, we can still continue */
+      g_clear_error (&error);
+    }
 
   self->priv->companion_app_avahi_helper_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
                                                                                 G_DBUS_PROXY_FLAGS_NONE,
@@ -823,6 +920,13 @@ cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
   cc_sharing_panel_bind_switch_to_label (self,
                                          self->priv->content_sharing_switch,
                                          WID ("content-sharing-status-label"));
+
+  /* Set up the QR code */
+  gtk_image_set_from_surface (content_sharing_download_qr_code,
+                              qr_code_surface);
+
+  /* Set up the URL */
+  gtk_label_set_markup (content_sharing_download_url, "Hello, world");
 
   /* If everything was successful, show the row */
   gtk_widget_show (content_sharing_button);
