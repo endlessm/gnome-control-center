@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: ../panels/background/background.ui.h:1
 msgid "_Background"
@@ -2174,6 +2174,7 @@ msgid_plural "%i days ago"
 msgstr[0] "Prieš %i dieną"
 msgstr[1] "Prieš %i dienas"
 msgstr[2] "Prieš %i dienų"
+msgstr[3] "Prieš %i dienų"
 
 #. Translators: network device speed
 #: ../panels/network/connection-editor/ce-page-details.c:227
@@ -3763,6 +3764,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minutė"
 msgstr[1] "%i minutės"
 msgstr[2] "%i minučių"
+msgstr[3] "%i minučių"
 
 #: ../panels/power/cc-power-panel.c:262
 #, c-format
@@ -3771,6 +3773,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i valanda"
 msgstr[1] "%i valandos"
 msgstr[2] "%i valandų"
+msgstr[3] "%i valandų"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -3785,6 +3788,7 @@ msgid_plural "hours"
 msgstr[0] "valanda"
 msgstr[1] "valandos"
 msgstr[2] "valandų"
+msgstr[3] "valandų"
 
 #: ../panels/power/cc-power-panel.c:272
 msgid "minute"
@@ -3792,6 +3796,7 @@ msgid_plural "minutes"
 msgstr[0] "minutė"
 msgstr[1] "minutės"
 msgstr[2] "minučių"
+msgstr[3] "minučių"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: ../panels/power/cc-power-panel.c:291
@@ -4571,6 +4576,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u darbas"
 msgstr[1] "%u darbai"
 msgstr[2] "%u darbų"
+msgstr[3] "%u darbų"
 
 #. Translators: The printer is low on toner
 #: ../panels/printers/pp-printer-entry.c:739
@@ -5523,6 +5529,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u išvestis"
 msgstr[1] "%u išvestys"
 msgstr[2] "%u išvesčių"
+msgstr[3] "%u išvesčių"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -5533,6 +5540,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u įvestis"
 msgstr[1] "%u įvestys"
 msgstr[2] "%u įvesčių"
+msgstr[3] "%u įvesčių"
 
 #: ../panels/sound/gvc/gvc-mixer-control.c:2738
 msgid "System Sounds"
@@ -5679,6 +5687,7 @@ msgid_plural "%d pixels"
 msgstr[0] "%d pikselis"
 msgstr[1] "%d pikseliai"
 msgstr[2] "%d pikselių"
+msgstr[3] "%d pikselių"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See

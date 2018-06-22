@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../panels/background/background.ui.h:1
 msgid "_Background"
@@ -2169,6 +2169,7 @@ msgid_plural "%i days ago"
 msgstr[0] "%i день тому"
 msgstr[1] "%i дні тому"
 msgstr[2] "%i днів тому"
+msgstr[3] "%i днів тому"
 
 #. Translators: network device speed
 #: ../panels/network/connection-editor/ce-page-details.c:227
@@ -3758,6 +3759,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i хвилина"
 msgstr[1] "%i хвилини"
 msgstr[2] "%i хвилин"
+msgstr[3] "%i хвилин"
 
 #: ../panels/power/cc-power-panel.c:262
 #, c-format
@@ -3766,6 +3768,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i година"
 msgstr[1] "%i години"
 msgstr[2] "%i годин"
+msgstr[3] "%i годин"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -3780,6 +3783,7 @@ msgid_plural "hours"
 msgstr[0] "година"
 msgstr[1] "години"
 msgstr[2] "годин"
+msgstr[3] "годин"
 
 #: ../panels/power/cc-power-panel.c:272
 msgid "minute"
@@ -3787,6 +3791,7 @@ msgid_plural "minutes"
 msgstr[0] "хвилина"
 msgstr[1] "хвилини"
 msgstr[2] "хвилин"
+msgstr[3] "хвилин"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: ../panels/power/cc-power-panel.c:291
@@ -4566,6 +4571,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u завдання"
 msgstr[1] "%u завдання"
 msgstr[2] "%u завдань"
+msgstr[3] "%u завдань"
 
 #. Translators: The printer is low on toner
 #: ../panels/printers/pp-printer-entry.c:739
@@ -5518,6 +5524,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u вивід"
 msgstr[1] "%u виводи"
 msgstr[2] "%u виводів"
+msgstr[3] "%u виводів"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -5528,6 +5535,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u вхід"
 msgstr[1] "%u входи"
 msgstr[2] "%u входів"
+msgstr[3] "%u входів"
 
 #: ../panels/sound/gvc/gvc-mixer-control.c:2738
 msgid "System Sounds"
@@ -5674,6 +5682,7 @@ msgid_plural "%d pixels"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
