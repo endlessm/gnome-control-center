@@ -465,7 +465,7 @@ rfkill_switch_notify_activate_cb (GtkSwitch   *rfkill_switch,
 static const gchar *
 cc_wifi_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/net-wireless";
+  return "help:gnome-help/net#connecting";
 }
 
 static GtkWidget *
