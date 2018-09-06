@@ -84,6 +84,7 @@ struct _CcSharingPanelPrivate
   GtkWidget *personal_file_sharing_switch;
   GtkWidget *screen_sharing_switch;
   GtkWidget *content_sharing_switch;
+  GtkWidget *update_sharing_switch;
 
   GtkWidget *media_sharing_dialog;
   GtkWidget *personal_file_sharing_dialog;
@@ -92,6 +93,7 @@ struct _CcSharingPanelPrivate
   GCancellable *hostname_cancellable;
   GtkWidget *screen_sharing_dialog;
   GtkWidget  *content_sharing_dialog;
+  GtkWidget  *update_sharing_dialog;
 
   guint remote_desktop_name_watch;
 };
@@ -115,6 +117,7 @@ cc_sharing_panel_master_switch_notify (GtkSwitch      *gtkswitch,
       OFF_IF_VISIBLE(priv->personal_file_sharing_switch);
       OFF_IF_VISIBLE(priv->screen_sharing_switch);
       OFF_IF_VISIBLE(priv->content_sharing_switch);
+      OFF_IF_VISIBLE(priv->update_sharing_switch);
 
       gtk_switch_set_active (GTK_SWITCH (WID ("remote-login-switch")), FALSE);
     }
@@ -185,6 +188,12 @@ cc_sharing_panel_dispose (GObject *object)
     {
       gtk_widget_destroy (priv->content_sharing_dialog);
       priv->content_sharing_dialog = NULL;
+    }
+
+  if (priv->update_sharing_dialog)
+    {
+      gtk_widget_destroy (priv->update_sharing_dialog);
+      priv->update_sharing_dialog = NULL;
     }
 
   g_cancellable_cancel (priv->sharing_proxy_cancellable);
@@ -832,6 +841,306 @@ cc_sharing_panel_setup_content_sharing_dialog (CcSharingPanel *self)
                     G_CALLBACK (content_sharing_switch_state_set_cb), self);
 }
 
+typedef struct {
+  GMutex lock;
+  guint remotes_remaining;
+  gboolean enable_p2p;
+  int refcount;
+} EnableP2PState;
+
+static void
+enable_p2p_state_unref (EnableP2PState *state)
+{
+  g_assert (state->refcount > 0);
+  state->refcount--;
+  if (state->refcount == 0)
+    {
+      g_mutex_clear (&state->lock);
+      g_free (state);
+    }
+}
+
+static EnableP2PState *
+enable_p2p_state_ref (EnableP2PState *state)
+{
+  g_assert (state->refcount > 0);
+  state->refcount++;
+  return state;
+}
+
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (EnableP2PState, enable_p2p_state_unref)
+
+static EnableP2PState *global_state = NULL;
+
+static void
+flatpak_system_helper_configure_remote_cb (GObject      *source_object,
+                                           GAsyncResult *res,
+                                           gpointer      user_data)
+{
+  CcSharingPanel *self = user_data;
+  g_autoptr(GError) error = NULL;
+  g_autoptr(GVariant) output = NULL;
+  g_autoptr(EnableP2PState) p2p_state = global_state;
+
+  output = g_dbus_connection_call_finish (G_DBUS_CONNECTION (source_object),
+                                          res,
+                                          &error);
+
+  if (output == NULL)
+    {
+      g_warning ("Flatpak system-helper call failed trying to update remote config: %s", error->message);
+      return;
+    }
+
+  g_mutex_lock (&p2p_state->lock);
+
+  p2p_state->remotes_remaining--;
+  if (p2p_state->remotes_remaining == 0)
+    gtk_switch_set_state (GTK_SWITCH (self->priv->content_sharing_switch), p2p_state->enable_p2p);
+
+  g_mutex_unlock (&p2p_state->lock);
+}
+
+static gchar *
+get_collection_id_for_remote_url (const gchar *url)
+{
+  g_auto(GStrv) url_parts = NULL;
+  guint url_parts_len;
+  g_autoptr(GString) collection_id = NULL;
+
+  if (g_strcmp0 (url, "https://dl.flathub.org/repo/") == 0)
+    return g_strdup ("org.flathub.Stable");
+
+  url_parts = g_strsplit (url, "/", -1);
+  url_parts_len = g_strv_length (url_parts);
+  if (url_parts_len < 5)
+    return NULL;
+
+  if (!g_str_has_suffix (url_parts[2], "ostree.endlessm.com"))
+    return NULL;
+
+  g_string_append (collection_id, "com.endlessm.");
+
+  if (g_strcmp0 (url_parts[url_parts_len - 2], "dev") == 0)
+    g_string_append (collection_id, "Dev.");
+  else if (g_strcmp0 (url_parts[url_parts_len - 2], "demo") == 0)
+    g_string_append (collection_id, "Demo.");
+
+  if (g_strcmp0 (url_parts[url_parts_len - 1], "eos-apps") == 0)
+    g_string_append (collection_id, "Apps");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "eos-sdk") == 0)
+    g_string_append (collection_id, "Sdk");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "brazil-moh-apps") == 0)
+    g_string_append (collection_id, "Apps.BrazilMoh");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "campeche-apps") == 0)
+    g_string_append (collection_id, "Apps.Campeche");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "colombia-moe-apps") == 0)
+    g_string_append (collection_id, "Apps.ColombiaMoe");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "conafe-apps") == 0)
+    g_string_append (collection_id, "Apps.Conafe");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "kytabu-apps") == 0)
+    g_string_append (collection_id, "Apps.Kytabu");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "save-the-children-apps") == 0)
+    g_string_append (collection_id, "Apps.SaveTheChildren");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "sinadep-apps") == 0)
+    g_string_append (collection_id, "Apps.Sinadep");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "solutions-demo-apps") == 0)
+    g_string_append (collection_id, "Apps.SolutionsDemo");
+  else if (g_strcmp0 (url_parts[url_parts_len - 1], "tamaulipas-apps") == 0)
+    g_string_append (collection_id, "Apps.Tamaulipas");
+
+  if (g_str_has_suffix (collection_id->str, "."))
+    return NULL;
+
+  return g_strdup (collection_id->str);
+}
+
+static gchar *
+get_modified_config_for_remote (FlatpakInstallation *installation,
+                                const gchar         *remote_name,
+                                gboolean             enable_p2p,
+                                const gchar         *collection_id)
+{
+  g_autoptr(GKeyFile) config = NULL;
+  g_autoptr(GFile) installation_file = NULL;
+  g_autofree gchar *installation_path = NULL;
+  g_autofree gchar *repo_config_path = NULL;
+  g_autofree gchar *group = NULL;
+
+  installation_file = flatpak_installation_get_path (installation);
+  installation_path = g_file_get_path (installation_file);
+  if (installation_path == NULL)
+    return NULL;
+  repo_config_path = g_build_filename (installation_path, "repo", "config", NULL);
+
+  config = g_key_file_new ();
+  if (!g_key_file_load_from_file (config, repo_config_path, 0, NULL))
+    return NULL;
+
+  group = g_strdup_printf ("remote \"%s\"", remote_name);
+  if (!g_key_file_has_group (config, group))
+    return NULL;
+
+  if (enable_p2p)
+    {
+      g_key_file_set_string (config, group, "collection-id", collection_id);
+      g_key_file_set_boolean (config, group, "gpg-verify-summary", FALSE);
+    }
+  else
+    {
+      g_key_file_remove_key (config, group, "collection-id", NULL);
+      g_key_file_set_boolean (config, group, "gpg-verify-summary", TRUE);
+    }
+
+  return g_key_file_to_data (config, NULL, NULL);
+}
+
+static gboolean
+update_sharing_switch_state_set_cb (GtkSwitch      *widget,
+                                    gboolean        state,
+                                    CcSharingPanel *self)
+{
+  g_autoptr(GError) error = NULL;
+  g_autoptr(FlatpakInstallation) installation = NULL;
+  g_autoptr(GPtrArray) remotes = NULL; /* (element-type FlatpakRemote) */
+  g_autoptr(GDBusConnection) bus = NULL;
+  g_autoptr(EnableP2PState) p2p_state = NULL;
+  gsize i;
+
+  if (global_state != NULL)
+    {
+      g_message ("Update sharing switch state change already in progress");
+      return FALSE;
+    }
+
+  bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
+  if (bus == NULL)
+    {
+      g_message ("Failed to get system bus: %s", error->message);
+      return FALSE;
+    }
+
+  installation = flatpak_installation_new_system (NULL, &error);
+  if (!installation)
+    {
+      g_message ("Unexpected error occurred when loading flatpak installation: %s", error->message);
+      return FALSE;
+    }
+
+  remotes = flatpak_installation_list_remotes (installation, NULL, &error);
+  if (!remotes)
+    {
+      g_message ("Unexpected error occurred when loading flatpak remotes: %s", error->message);
+      return FALSE;
+    }
+
+  /*FIXME Do we need to use g_once_init_enter here? */
+  p2p_state = global_state = g_new0 (EnableP2PState, 1);
+  p2p_state->refcount = 1;
+  p2p_state->remotes_remaining = remotes->len;
+  p2p_state->enable_p2p = state;
+  g_mutex_init (&p2p_state->lock);
+
+  for (i = 0; i < remotes->len; i++)
+    {
+      FlatpakRemote *remote = g_ptr_array_index (remotes, i);
+      const char *remote_name = flatpak_remote_get_name (remote);
+      g_autofree gchar *url = flatpak_remote_get_url (remote);
+      g_autofree gchar *current_collection_id = flatpak_remote_get_collection_id (remote);
+      g_autofree gchar *correct_collection_id = NULL;
+      g_autofree gchar *modified_config = NULL;
+      g_autoptr(GVariant) gpg_data_v = NULL;
+      GVariant *parameters;
+
+      /* Ignore disabled remotes */
+      if (url == NULL || *url == '\0')
+        continue;
+
+      /* Check if there's nothing to do */
+      if ((state && current_collection_id != NULL) ||
+          (!state && current_collection_id == NULL))
+        continue;
+
+      /* Don't P2P enable eos-runtimes; see https://phabricator.endlessm.com/T22756#602959
+       * and https://github.com/flatpak/flatpak/issues/1832 */
+      if (g_strcmp0 ("eos-runtimes", remote_name) == 0)
+        continue;
+
+      /* Don't P2P enable OS updates yet; see https://phabricator.endlessm.com/T23420 */
+      if (g_strcmp0 ("eos-amd64", remote_name) == 0 ||
+          g_strcmp0 ("eos-armhf", remote_name) == 0)
+        continue;
+
+      correct_collection_id = get_collection_id_for_remote_url (url);
+      if (correct_collection_id == NULL)
+        continue;
+
+      modified_config = get_modified_config_for_remote (installation, remote_name, state, correct_collection_id);
+      if (modified_config == NULL)
+        {
+          g_message ("An error occurred trying to read the flatpak repo config file");
+          return FALSE;
+        }
+
+      /* Use the flatpak-system-helper which runs as root to modify the config */
+      gpg_data_v = g_variant_ref_sink (g_variant_new_from_data (G_VARIANT_TYPE ("ay"), "", 0, TRUE, NULL, NULL));
+      parameters = g_variant_new ("(uss@ays)", 0, remote_name, modified_config, gpg_data_v, flatpak_installation_get_id (installation));
+      enable_p2p_state_ref (global_state);
+      g_dbus_connection_call (bus,
+                              "org.freedesktop.Flatpak.SystemHelper",
+                              "/org/freedesktop/Flatpak/SystemHelper",
+                              "org.freedesktop.Flatpak.SystemHelper",
+                              "ConfigureRemote",
+                              parameters,
+                              NULL, G_DBUS_CALL_FLAGS_NONE, -1, NULL,
+                              flatpak_system_helper_configure_remote_cb,
+                              self);
+    }
+
+  return TRUE;
+}
+
+static void
+cc_sharing_panel_setup_update_sharing_dialog (CcSharingPanel *self)
+{
+  CcSharingPanelPrivate *priv = self->priv;
+  gboolean update_sharing_enabled = FALSE;
+  g_autoptr(GVariant) value = NULL;
+  g_autoptr(GError) error = NULL;
+  GtkWidget *update_sharing_button = GTK_WIDGET (WID ("update-sharing-button"));
+  gint exit_status;
+
+  /* Read the repo config and decide if collection IDs are enabled */
+  if (!g_spawn_command_line_sync ("/usr/bin/grep -E -m 1 \"^collection-id=.+$\" /ostree/repo/config",
+                                  NULL, NULL, &exit_status, &error))
+    {
+      g_message ("An error occurred when checking for collection IDs in the repo config: %s", error->message);
+      g_clear_error (&error);
+    }
+  else
+    update_sharing_enabled = (exit_status == 0);
+
+  /* Set up the switch */
+  self->priv->update_sharing_switch = gtk_switch_new ();
+  gtk_widget_set_can_focus (self->priv->update_sharing_switch, TRUE);
+  gtk_widget_set_halign (self->priv->update_sharing_switch, GTK_ALIGN_END);
+  gtk_widget_set_valign (self->priv->update_sharing_switch, GTK_ALIGN_CENTER);
+  gtk_header_bar_pack_start (GTK_HEADER_BAR (WID ("update-sharing-headerbar")),
+                             self->priv->update_sharing_switch);
+  gtk_widget_show (self->priv->update_sharing_switch);
+
+  cc_sharing_panel_bind_switch_to_label (self,
+                                         self->priv->update_sharing_switch,
+                                         WID ("update-sharing-status-label"));
+
+  /* If everything was successful, show the row */
+  gtk_widget_show (update_sharing_button);
+  gtk_switch_set_active (GTK_SWITCH (self->priv->update_sharing_switch),
+                         update_sharing_enabled);
+  g_signal_connect (self->priv->update_sharing_switch, "state-set",
+                    G_CALLBACK (update_sharing_switch_state_set_cb), self);
+}
+
 static gboolean
 cc_sharing_panel_label_activate_link (GtkLabel *label,
                                       gchar    *uri,
@@ -1436,6 +1745,9 @@ cc_sharing_panel_init (CcSharingPanel *self)
   /* content sharing */
   if (cc_sharing_panel_check_content_sharing_available ())
     cc_sharing_panel_setup_content_sharing_dialog (self);
+
+  /* update sharing */
+  cc_sharing_panel_setup_update_sharing_dialog (self);
 
   /* make sure the hostname entry isn't focused by default */
   g_signal_connect_swapped (self, "map", G_CALLBACK (gtk_widget_grab_focus),
