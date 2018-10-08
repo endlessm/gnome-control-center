@@ -44,6 +44,10 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
 #define TOP_BAR_HEIGHT 5
 
+/* The minimum supported size for the panel */
+#define MINIMUM_WIDTH 740
+#define MINIMUM_HEIGHT 530
+
 #define PANEL_PADDING   32
 #define SECTION_PADDING 32
 #define HEADING_PADDING 12
@@ -851,14 +855,31 @@ make_orientation_row (CcDisplayPanel *panel, CcDisplayMonitor *output)
   return row;
 }
 
+static gboolean
+display_mode_supported_at_scale (CcDisplayMode *mode, double scale)
+{
+  int width, height;
+
+  cc_display_mode_get_resolution (mode, &width, &height);
+
+  return width / scale >= MINIMUM_WIDTH && height / scale >= MINIMUM_HEIGHT;
+}
+
 static void
 resolution_row_activated (CcDisplayPanel *panel,
                           GtkListBoxRow  *row)
 {
   CcDisplayPanelPrivate *priv = panel->priv;
   CcDisplayMode *mode = g_object_get_data (G_OBJECT (row), "mode");
+  double scale = cc_display_monitor_get_scale (priv->current_output);
 
   cc_display_monitor_set_mode (priv->current_output, mode);
+
+  /* Restore 1.0 scaling if the previous scale is not supported at the
+   * new resolution. */
+  if (!display_mode_supported_at_scale (mode, scale))
+    cc_display_monitor_set_scale (priv->current_output, 1.0);
+
   update_apply_button (panel);
 }
 
@@ -901,6 +922,10 @@ show_resolution_dialog (CcDisplayPanel *panel)
     {
       CcDisplayMode *mode = l->data;
       GtkWidget *row, *check;
+
+      /* Exclude unusable low resolutions */
+      if (!display_mode_supported_at_scale (mode, 1.0))
+        continue;
 
       check = gtk_image_new ();
       gtk_image_set_from_icon_name (GTK_IMAGE (check), "object-select-symbolic", GTK_ICON_SIZE_MENU);
@@ -1076,7 +1101,7 @@ n_supported_scales (CcDisplayMode *mode)
   const double *scales = cc_display_mode_get_supported_scales (mode);
   guint n = 0;
 
-  while (scales[n] != 0.0)
+  while (scales[n] != 0.0 && display_mode_supported_at_scale (mode, scales[n]))
     n++;
 
   return n;
@@ -1169,8 +1194,12 @@ setup_scale_buttons (GtkWidget        *bbox,
   group = NULL;
   for (scale = scales, i = 0; *scale != 0.0 && i < MAX_N_SCALES; scale++, i++)
     {
-      GtkWidget *button = gtk_radio_button_new_from_widget (group);
+      GtkWidget *button;
 
+      if (!display_mode_supported_at_scale (mode, *scale))
+        continue;
+
+      button = gtk_radio_button_new_from_widget (group);
       gtk_button_set_image (GTK_BUTTON (button), make_label_for_scale (*scale));
       gtk_toggle_button_set_mode (GTK_TOGGLE_BUTTON (button), FALSE);
 
