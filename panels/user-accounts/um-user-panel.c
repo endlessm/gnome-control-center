@@ -42,6 +42,7 @@
 #include "um-cell-renderer-user-image.h"
 
 #include "um-account-dialog.h"
+#include "um-app-permissions.h"
 #include "cc-language-chooser.h"
 #include "um-password-dialog.h"
 #include "um-carousel.h"
@@ -70,6 +71,7 @@ struct _CcUserPanelPrivate {
         GtkWidget *notification;
         GSettings *login_screen_settings;
 
+        UmAppPermissions *app_permissions;
         GtkWidget *headerbar_buttons;
         GtkWidget *main_box;
         UmCarousel *carousel;
@@ -911,6 +913,8 @@ show_user (ActUser *user, CcUserPanelPrivate *d)
 
         if (d->permission != NULL)
                 on_permission_changed (d->permission, NULL, d);
+
+        um_app_permissions_set_user (d->app_permissions, user);
 }
 
 static void
@@ -1335,6 +1339,8 @@ setup_main_window (CcUserPanel *self)
         d->carousel = UM_CAROUSEL (get_widget (d, "carousel"));
         g_signal_connect (d->carousel, "item-activated", G_CALLBACK (set_selected_user), d);
 
+        d->app_permissions = UM_APP_PERMISSIONS (get_widget (d, "app-permissions"));
+
         button = get_widget (d, "add-user-toolbutton");
         g_signal_connect (button, "clicked", G_CALLBACK (add_user), d);
 
@@ -1554,4 +1560,6 @@ cc_user_panel_class_init (CcUserPanelClass *klass)
         panel_class->get_help_uri = cc_user_panel_get_help_uri;
 
         g_type_class_add_private (klass, sizeof (CcUserPanelPrivate));
+
+        g_type_ensure (UM_TYPE_APP_PERMISSIONS);
 }
