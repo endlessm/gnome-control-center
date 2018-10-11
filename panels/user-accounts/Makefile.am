@@ -27,6 +27,8 @@ BUILT_SOURCES = \
 	um-resources.h
 
 libuser_accounts_la_SOURCES =		\
+	gs-content-rating.h		\
+	gs-content-rating.c		\
 	um-account-type.h		\
 	um-account-type.c 		\
 	um-account-dialog.h		\
@@ -58,6 +60,8 @@ libuser_accounts_la_SOURCES =		\
 	um-user-image.c			\
 	um-cell-renderer-user-image.h	\
 	um-cell-renderer-user-image.c	\
+	um-app-permissions.h		\
+	um-app-permissions.c		\
 	$(BUILT_SOURCES)
 
 libuser_accounts_la_LIBADD = 		\
