@@ -1129,6 +1129,23 @@ make_label_for_scale (double scale)
   return label;
 }
 
+static void
+scale_buttons_sync (GtkWidget        *bbox,
+                    CcDisplayMonitor *output)
+{
+  GList *children, *l;
+
+  children = gtk_container_get_children (GTK_CONTAINER (bbox));
+  for (l = children; l; l = l->next)
+    {
+      GtkWidget *button = l->data;
+      double scale = *(double*) g_object_get_data (G_OBJECT (button), "scale");
+      if (scale == cc_display_monitor_get_scale (output))
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+    }
+  g_list_free (children);
+}
+
 #define MAX_N_SCALES 5
 static void
 setup_scale_buttons (GtkWidget        *bbox,
@@ -1165,26 +1182,11 @@ setup_scale_buttons (GtkWidget        *bbox,
       group = GTK_RADIO_BUTTON (button);
     }
 
+  scale_buttons_sync (bbox, output);
+
   gtk_widget_show_all (bbox);
 }
 #undef MAX_N_SCALES
-
-static void
-scale_buttons_sync (GtkWidget        *bbox,
-                    CcDisplayMonitor *output)
-{
-  GList *children, *l;
-
-  children = gtk_container_get_children (GTK_CONTAINER (bbox));
-  for (l = children; l; l = l->next)
-    {
-      GtkWidget *button = l->data;
-      double scale = *(double*) g_object_get_data (G_OBJECT (button), "scale");
-      if (scale == cc_display_monitor_get_scale (output))
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    }
-  g_list_free (children);
-}
 
 static GtkWidget *
 make_scale_row (CcDisplayPanel *panel, CcDisplayMonitor *output)
@@ -1205,11 +1207,10 @@ make_scale_row (CcDisplayPanel *panel, CcDisplayMonitor *output)
   g_object_set_data (G_OBJECT (bbox), "panel", panel);
   g_signal_connect_object (output, "mode", G_CALLBACK (setup_scale_buttons),
                            bbox, G_CONNECT_SWAPPED);
-  setup_scale_buttons (bbox, output);
 
   g_signal_connect_object (output, "scale", G_CALLBACK (scale_buttons_sync),
                            bbox, G_CONNECT_SWAPPED);
-  scale_buttons_sync (bbox, output);
+  setup_scale_buttons (bbox, output);
 
   gtk_widget_show_all (row);
   gtk_widget_set_no_show_all (row, TRUE);
