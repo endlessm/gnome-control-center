@@ -375,13 +375,40 @@ menu_item_for_filename (UmPhotoDialog *um,
         return menuitem;
 }
 
+static GSList *
+get_facesdirs (void)
+{
+        GSList *facesdirs = NULL;
+        const gchar * const * data_dirs;
+        int i;
+        const char *facesdir_env;
+
+        facesdir_env = g_getenv ("CC_USER_ACCOUNTS_PANEL_FACESDIR");
+        if (facesdir_env != NULL && g_strcmp0 (facesdir_env, "") != 0) {
+                facesdirs = g_slist_prepend (facesdirs,
+                                             g_strdup (facesdir_env));
+        }
+
+        if (g_strcmp0 (USER_ACCOUNTS_PANEL_FACESDIR, "") != 0) {
+                facesdirs = g_slist_prepend (facesdirs,
+                                             g_strdup (USER_ACCOUNTS_PANEL_FACESDIR));
+        }
+
+        data_dirs = g_get_system_data_dirs ();
+        for (i = 0; data_dirs[i] != NULL; i++) {
+                char *path = g_build_filename (data_dirs[i], "pixmaps", "faces", NULL);
+                facesdirs = g_slist_prepend (facesdirs, path);
+        }
+
+        return g_slist_reverse (facesdirs);
+}
+
 static void
 setup_photo_popup (UmPhotoDialog *um)
 {
         GtkWidget *menu, *menuitem, *image;
         guint x, y;
-        const gchar * const * dirs;
-        guint i;
+        GSList *facesdirs, *facesdir_it;
         GDir *dir;
         const char *face;
         gboolean none_item_shown;
@@ -393,14 +420,12 @@ setup_photo_popup (UmPhotoDialog *um)
         y = 0;
         none_item_shown = added_faces = FALSE;
 
-        dirs = g_get_system_data_dirs ();
-        for (i = 0; dirs[i] != NULL; i++) {
-                char *path;
+        facesdirs = get_facesdirs ();
+        for (facesdir_it = facesdirs; facesdir_it; facesdir_it = facesdir_it->next) {
+                const char *path = facesdir_it->data;
 
-                path = g_build_filename (dirs[i], "pixmaps", "faces", NULL);
                 dir = g_dir_open (path, 0, NULL);
                 if (dir == NULL) {
-                        g_free (path);
                         continue;
                 }
 
@@ -426,11 +451,12 @@ setup_photo_popup (UmPhotoDialog *um)
                         }
                 }
                 g_dir_close (dir);
-                g_free (path);
 
                 if (added_faces)
                         break;
         }
+
+        g_slist_free_full (facesdirs, g_free);
 
         if (!added_faces)
                 goto skip_faces;
