@@ -9,6 +9,7 @@ noinst_LTLIBRARIES = libuser-accounts.la
 AM_CPPFLAGS =						\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
 	-DUM_PIXMAP_DIR=\""$(pkgdatadir)/pixmaps"\"	\
+	-DVENDOR_CONF_FILE=\""$(VENDOR_CONF_FILE)"\"	\
 	-DHAVE_LIBPWQUALITY				\
 	-I$(srcdir)/../common/				\
 	-I$(srcdir)/../../shell/			\

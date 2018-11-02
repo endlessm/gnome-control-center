@@ -41,6 +41,9 @@
 
 #define ROW_SPAN 6
 
+#define VENDOR_USER_ACCOUNTS_GROUP "User Accounts"
+#define VENDOR_USER_ACCOUNTS_FACESDIR_KEY "Faces"
+
 struct _UmPhotoDialog {
         GtkWidget *photo_popup;
         GtkWidget *popup_button;
@@ -382,6 +385,8 @@ get_facesdirs (void)
         const gchar * const * data_dirs;
         int i;
         const char *facesdir_env;
+        g_autoptr(GKeyFile) keyfile = NULL;
+        g_autoptr(GError) error = NULL;
 
         facesdir_env = g_getenv ("CC_USER_ACCOUNTS_PANEL_FACESDIR");
         if (facesdir_env != NULL && g_strcmp0 (facesdir_env, "") != 0) {
@@ -389,9 +394,24 @@ get_facesdirs (void)
                                              g_strdup (facesdir_env));
         }
 
-        if (g_strcmp0 (USER_ACCOUNTS_PANEL_FACESDIR, "") != 0) {
-                facesdirs = g_slist_prepend (facesdirs,
-                                             g_strdup (USER_ACCOUNTS_PANEL_FACESDIR));
+        keyfile = g_key_file_new ();
+        if (!g_key_file_load_from_file (keyfile, VENDOR_CONF_FILE, G_KEY_FILE_NONE, &error)) {
+                if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT)) {
+                        g_warning ("Could not read file %s: %s",
+                                   VENDOR_CONF_FILE, error->message);
+                }
+        } else {
+                char *path = g_key_file_get_string (keyfile,
+                                                    VENDOR_USER_ACCOUNTS_GROUP,
+                                                    VENDOR_USER_ACCOUNTS_FACESDIR_KEY,
+                                                    &error);
+                if (path) {
+                        facesdirs = g_slist_prepend (facesdirs, path);
+                } else if (!g_error_matches (error, G_KEY_FILE_ERROR, G_KEY_FILE_ERROR_KEY_NOT_FOUND) &&
+                           !g_error_matches (error, G_KEY_FILE_ERROR, G_KEY_FILE_ERROR_GROUP_NOT_FOUND)) {
+                        g_warning ("Could not read faces directory from %s: %s",
+                                   VENDOR_CONF_FILE, error->message);
+                }
         }
 
         data_dirs = g_get_system_data_dirs ();
