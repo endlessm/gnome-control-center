@@ -177,6 +177,7 @@ endif
 
 cflags += [
   '-DGNOMELOCALEDIR="@0@"'.format(control_center_localedir),
+  '-DVENDOR_CONF_FILE="@0@"'.format(vendor_conf_file),
   '-DHAVE_LIBPWQUALITY',
   '-DUM_PIXMAP_DIR="@0@"'.format(join_paths(control_center_pkgdatadir, 'pixmaps'))
 ]

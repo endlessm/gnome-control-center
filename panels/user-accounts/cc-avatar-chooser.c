@@ -45,6 +45,9 @@
 #define AVATAR_CHOOSER_PIXEL_SIZE 80
 #define PIXEL_SIZE 512
 
+#define VENDOR_USER_ACCOUNTS_GROUP "User Accounts"
+#define VENDOR_USER_ACCOUNTS_FACESDIR_KEY "Faces"
+
 struct _CcAvatarChooser {
         GtkPopover parent;
 
@@ -410,6 +413,51 @@ cheese_camera_device_monitor_new_cb (GObject *source,
 }
 #endif /* HAVE_CHEESE */
 
+static GSList *
+get_facesdirs (void)
+{
+        GSList *facesdirs = NULL;
+        const gchar * const * data_dirs;
+        int i;
+        const char *facesdir_env;
+        g_autoptr(GKeyFile) keyfile = NULL;
+        g_autoptr(GError) error = NULL;
+
+        facesdir_env = g_getenv ("CC_USER_ACCOUNTS_PANEL_FACESDIR");
+        if (facesdir_env != NULL && g_strcmp0 (facesdir_env, "") != 0) {
+                facesdirs = g_slist_prepend (facesdirs,
+                                             g_strdup (facesdir_env));
+        }
+
+        keyfile = g_key_file_new ();
+        if (!g_key_file_load_from_file (keyfile, VENDOR_CONF_FILE, G_KEY_FILE_NONE, &error)) {
+                if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT)) {
+                        g_warning ("Could not read file %s: %s",
+                                   VENDOR_CONF_FILE, error->message);
+                }
+        } else {
+                char *path = g_key_file_get_string (keyfile,
+                                                    VENDOR_USER_ACCOUNTS_GROUP,
+                                                    VENDOR_USER_ACCOUNTS_FACESDIR_KEY,
+                                                    &error);
+                if (path) {
+                        facesdirs = g_slist_prepend (facesdirs, path);
+                } else if (!g_error_matches (error, G_KEY_FILE_ERROR, G_KEY_FILE_ERROR_KEY_NOT_FOUND) &&
+                           !g_error_matches (error, G_KEY_FILE_ERROR, G_KEY_FILE_ERROR_GROUP_NOT_FOUND)) {
+                        g_warning ("Could not read faces directory from %s: %s",
+                                   VENDOR_CONF_FILE, error->message);
+                }
+        }
+
+        data_dirs = g_get_system_data_dirs ();
+        for (i = 0; data_dirs[i] != NULL; i++) {
+                char *path = g_build_filename (data_dirs[i], "pixmaps", "faces", NULL);
+                facesdirs = g_slist_prepend (facesdirs, path);
+        }
+
+        return g_slist_reverse (facesdirs);
+}
+
 static void
 setup_photo_popup (CcAvatarChooser *self)
 {
@@ -418,8 +466,7 @@ setup_photo_popup (CcAvatarChooser *self)
         GFileEnumerator *enumerator;
         GFileType type;
         const gchar *target;
-        const gchar * const * dirs;
-        guint i;
+        GSList *facesdirs, *facesdir_it;
         gboolean added_faces;
 
         self->faces = g_list_store_new (G_TYPE_FILE);
@@ -432,13 +479,11 @@ setup_photo_popup (CcAvatarChooser *self)
         g_signal_connect (self->flowbox, "child-activated",
                           G_CALLBACK (face_widget_activated), self);
 
-        dirs = g_get_system_data_dirs ();
-        for (i = 0; dirs[i] != NULL; i++) {
-                char *path;
+        facesdirs = get_facesdirs ();
+        for (facesdir_it = facesdirs; facesdir_it; facesdir_it = facesdir_it->next) {
+                const char *path = facesdir_it->data;
 
-                path = g_build_filename (dirs[i], "pixmaps", "faces", NULL);
                 dir = g_file_new_for_path (path);
-                g_free (path);
 
                 enumerator = g_file_enumerate_children (dir,
                                                         G_FILE_ATTRIBUTE_STANDARD_NAME ","
@@ -481,6 +526,8 @@ setup_photo_popup (CcAvatarChooser *self)
                 if (added_faces)
                         break;
         }
+
+        g_slist_free_full (facesdirs, g_free);
 
 #ifdef HAVE_CHEESE
         gtk_widget_set_visible (self->take_picture_button, TRUE);
