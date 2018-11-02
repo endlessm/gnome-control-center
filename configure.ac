@@ -381,6 +381,16 @@ AC_SUBST(KRB5_LIBS)
 USER_ACCOUNTS_PANEL_CFLAGS="$USER_ACCOUNTS_PANEL_CFLAGS $KRB5_CFLAGS"
 USER_ACCOUNTS_PANEL_LIBS="$USER_ACCOUNTS_PANEL_LIBS $KRB5_LIBS"
 
+dnl User accounts panel faces directory override
+AC_ARG_WITH([user-accounts-panel-facesdir],
+	    AS_HELP_STRING([--with-user-accounts-panel-facesdir=DIR], [Alternative directory to look for user images]))
+if ! test -z "$with_user_accounts_panel_facesdir"; then
+        USER_ACCOUNTS_PANEL_FACESDIR=$with_user_accounts_panel_facesdir
+else
+        USER_ACCOUNTS_PANEL_FACESDIR=""
+fi
+AC_DEFINE_UNQUOTED(USER_ACCOUNTS_PANEL_FACESDIR, "$USER_ACCOUNTS_PANEL_FACESDIR", [Alternative directory to look for user images])
+
 dnl Check for info panel
 AC_ARG_WITH([gnome-session-libexecdir],
 	    AS_HELP_STRING([--with-gnome-session-libexecdir=DIR], [Directory for gnome-session s libexecdir]),
@@ -627,4 +637,5 @@ else
 	AC_MSG_NOTICE([   Region panel IBus support disabled])
 fi
 AC_MSG_NOTICE([** gnome-session libexecdir: $GNOMESESSIONDIR])
+AC_MSG_NOTICE([** User accounts panel faces dir: $USER_ACCOUNTS_PANEL_FACESDIR])
 AC_MSG_NOTICE([End options])
