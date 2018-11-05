@@ -101,6 +101,7 @@ common_sources = files(
 )
 
 resource_data = files(
+  'cc-app-permissions.ui',
   'cc-add-user-dialog.ui',
   'cc-avatar-chooser.ui',
   'cc-carousel.ui',
@@ -145,6 +146,7 @@ common_sources += gnome.gdbus_codegen(
 )
 
 sources = common_sources + files(
+  'cc-app-permissions.c',
   'cc-avatar-chooser.c',
   'cc-carousel.c',
   'cc-crop-area.c',
@@ -152,6 +154,7 @@ sources = common_sources + files(
   'cc-password-dialog.c',
   'cc-user-image.c',
   'cc-user-panel.c',
+  'gs-content-rating.c',
   'run-passwd.c',
   'um-fingerprint-dialog.c',
 )
@@ -168,7 +171,9 @@ deps = common_deps + [
   krb_dep,
   m_dep,
   polkit_gobject_dep,
-  dependency('pwquality', version: '>= 1.2.2')
+  dependency('pwquality', version: '>= 1.2.2'),
+  dependency('malcontent-0', version: '>= 0.3.0'),
+  dependency('flatpak')
 ]
 
 if enable_cheese

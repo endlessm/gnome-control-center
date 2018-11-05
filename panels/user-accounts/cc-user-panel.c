@@ -21,6 +21,7 @@
 #include "config.h"
 
 #include "cc-user-panel.h"
+#include "cc-app-permissions.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -62,6 +63,7 @@ struct _CcUserPanel {
         ActUserManager *um;
         GCancellable  *cancellable;
         GSettings *login_screen_settings;
+        CcAppPermissions *app_permissions;
 
         GtkBox          *accounts_box;
         GtkRadioButton  *account_type_admin_button;
@@ -884,6 +886,9 @@ show_user (ActUser *user, CcUserPanel *self)
 
         if (self->permission != NULL)
                 on_permission_changed (self);
+
+        cc_app_permissions_set_user (self->app_permissions, user);
+        cc_app_permissions_set_permission (self->app_permissions, self->permission);
 }
 
 static void
@@ -1358,6 +1363,8 @@ setup_main_window (CcUserPanel *self)
                 users_loaded (self);
         else
                 g_signal_connect_object (self->um, "notify::is-loaded", G_CALLBACK (users_loaded), self, G_CONNECT_SWAPPED);
+
+	g_type_ensure (CC_TYPE_APP_PERMISSIONS);
 }
 
 static GSettings *
@@ -1468,6 +1475,7 @@ cc_user_panel_class_init (CcUserPanelClass *klass)
         gtk_widget_class_bind_template_child (widget_class, CcUserPanel, account_type_label);
         gtk_widget_class_bind_template_child (widget_class, CcUserPanel, account_type_standard_button);
         gtk_widget_class_bind_template_child (widget_class, CcUserPanel, add_user_button);
+        gtk_widget_class_bind_template_child (widget_class, CcUserPanel, app_permissions);
         gtk_widget_class_bind_template_child (widget_class, CcUserPanel, autologin_box);
         gtk_widget_class_bind_template_child (widget_class, CcUserPanel, autologin_label);
         gtk_widget_class_bind_template_child (widget_class, CcUserPanel, autologin_switch);
