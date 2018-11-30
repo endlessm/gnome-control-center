@@ -31,6 +31,7 @@
 #include <gio/gio.h>
 #include <gio/gunixmounts.h>
 #include <gio/gdesktopappinfo.h>
+#include <sys/xattr.h>
 
 #include <glibtop/fsusage.h>
 #include <glibtop/mountlist.h>
@@ -51,6 +52,7 @@
 
 #define VENDOR_INFO_GROUP    "Info"
 #define VENDOR_INFO_LOGO_KEY "logo"
+#define EOS_IMAGE_VERSION_XATTR "user.eos-image-version"
 
 typedef struct {
   /* Will be one or 2 GPU name strings, or "Unknown" */
@@ -169,6 +171,116 @@ update_vendor_specific_info (CcInfoOverviewPanel *self)
     gtk_image_set_from_file (GTK_IMAGE (priv->system_image), vendor_logo_path);
 }
 
+static gchar *
+get_image_version (const gchar *path,
+                   GError     **error)
+{
+  ssize_t attrsize;
+  g_autofree gchar *value = NULL;
+
+  g_return_val_if_fail (path != NULL, NULL);
+
+  attrsize = getxattr (path, EOS_IMAGE_VERSION_XATTR, NULL, 0);
+  if (attrsize >= 0)
+    {
+      value = g_malloc (attrsize + 1);
+      value[attrsize] = 0;
+
+      attrsize = getxattr (path, EOS_IMAGE_VERSION_XATTR, value,
+                           attrsize);
+    }
+
+  if (attrsize >= 0)
+    {
+      return g_steal_pointer (&value);
+    }
+  else
+    {
+      int errsv = errno;
+      g_set_error (error, G_IO_ERROR, g_io_error_from_errno (errsv),
+                   "Error examining " EOS_IMAGE_VERSION_XATTR " on %s: %s",
+                   path, g_strerror (errsv));
+      return NULL;
+    }
+}
+
+static char *
+get_product_name (void)
+{
+  g_autoptr(GError) error_sysroot = NULL;
+  g_autoptr(GError) error_root = NULL;
+  gchar *hyphen_index = NULL;
+  char *image_version =
+    get_image_version ("/sysroot", &error_sysroot);
+
+  if (image_version == NULL)
+    image_version =
+      get_image_version ("/", &error_root);
+
+  if (image_version == NULL)
+    {
+      g_warning ("%s", error_sysroot->message);
+      g_warning ("%s", error_root->message);
+      return NULL;
+    }
+
+  hyphen_index = index (image_version, '-');
+  if (hyphen_index == NULL)
+    return NULL;
+
+  return g_strndup (image_version, hyphen_index - image_version);
+}
+
+static char *
+find_terms_document_for_language (const gchar *product_name,
+                                  const gchar *language)
+{
+  const gchar * const * data_dirs;
+  gchar *path = NULL;
+  gint i;
+
+  data_dirs = g_get_system_data_dirs ();
+
+  for (i = 0; data_dirs[i] != NULL; i++)
+    {
+      path = g_build_filename (data_dirs[i],
+                               "eos-license-service",
+                               "terms",
+                               product_name,
+                               language,
+                               "Terms-of-Use.pdf",
+                               NULL);
+
+      if (g_file_test (path, G_FILE_TEST_EXISTS))
+        return path;
+
+      g_free (path);
+    }
+
+  return NULL;
+}
+
+static char *
+find_terms_document_for_languages (const gchar *product_name,
+                                   const gchar * const *languages)
+{
+  int i;
+  gchar *path = NULL;
+
+  if (product_name == NULL)
+    return NULL;
+
+  for (i = 0; languages[i] != NULL; i++)
+    {
+      path = find_terms_document_for_language (product_name, languages[i]);
+
+      if (path != NULL)
+        return path;
+    }
+
+  return NULL;
+}
+
 static gboolean
 on_attribution_label_link (GtkLabel            *label,
                            gchar               *uri,
@@ -176,48 +288,22 @@ on_attribution_label_link (GtkLabel            *label,
 {
   g_autoptr(GError) error = NULL;
   const gchar * const * languages;
-  const gchar * const * data_dirs;
-  const gchar *language;
   g_autofree gchar *pdf_uri = NULL;
   g_autofree gchar *path = NULL;
-  gint i, j;
-  gboolean found = FALSE;
+  g_autofree gchar *product_name = NULL;
 
   if (g_strcmp0 (uri, "attribution-link") != 0)
     return FALSE;
 
-  data_dirs = g_get_system_data_dirs ();
   languages = g_get_language_names ();
+  product_name = get_product_name ();
   path = NULL;
 
-  for (i = 0; languages[i] != NULL; i++)
-    {
-      language = languages[i];
+  path = find_terms_document_for_languages (product_name, languages);
+  if (path == NULL)
+    path = find_terms_document_for_languages ("eos", languages);
 
-      for (j = 0; data_dirs[j] != NULL; j++)
-        {
-          path = g_build_filename (data_dirs[j],
-                                   "eos-license-service",
-                                   "terms",
-                                   language,
-                                   "Endless-Terms-of-Use.pdf",
-                                   NULL);
-
-          if (g_file_test (path, G_FILE_TEST_EXISTS))
-            {
-              found = TRUE;
-              break;
-            }
-
-          g_free (path);
-          path = NULL;
-        }
-
-      if (found)
-        break;
-    }
-
-  if (!found)
+  if (path == NULL)
     {
       g_warning ("Unable to find terms and conditions PDF on the system");
       return TRUE;
