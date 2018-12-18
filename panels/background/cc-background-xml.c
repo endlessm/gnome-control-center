@@ -19,6 +19,8 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "config.h"
+
 #include <gio/gio.h>
 #include <string.h>
 #include <libxml/parser.h>
@@ -32,6 +34,9 @@
 /* The number of items we signal as "added" before
  * returning to the main loop */
 #define NUM_ITEMS_PER_BATCH 1
+
+#define VENDOR_BACKGROUND_GROUP "Background"
+#define VENDOR_BACKGROUND_DIRECTORY_KEY "Directory"
 
 struct _CcBackgroundXml
 {
@@ -408,6 +413,36 @@ cc_background_xml_load_from_dir (const gchar      *path,
   }
 }
 
+static gchar *
+read_vendor_background_directory (void)
+{
+  g_autoptr(GKeyFile) keyfile = NULL;
+  g_autoptr(GError) error = NULL;
+  g_autofree gchar *result = NULL;
+
+  keyfile = g_key_file_new ();
+  if (!g_key_file_load_from_file (keyfile, VENDOR_CONF_FILE, G_KEY_FILE_NONE, &error)) {
+    if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
+      g_warning ("Could not read file %s: %s", VENDOR_CONF_FILE, error->message);
+
+    return NULL;
+  }
+
+  result = g_key_file_get_string (keyfile,
+                                  VENDOR_BACKGROUND_GROUP,
+                                  VENDOR_BACKGROUND_DIRECTORY_KEY,
+                                  &error);
+  if (!result) {
+    if (!g_error_matches (error, G_KEY_FILE_ERROR, G_KEY_FILE_ERROR_KEY_NOT_FOUND) &&
+        !g_error_matches (error, G_KEY_FILE_ERROR, G_KEY_FILE_ERROR_GROUP_NOT_FOUND))
+      g_warning ("Could not read backgrounds path from %s: %s", VENDOR_CONF_FILE, error->message);
+
+    return NULL;
+  }
+
+  return g_steal_pointer (&result);
+}
+
 static void
 cc_background_xml_load_list (CcBackgroundXml *data,
 			     gboolean         in_thread)
@@ -415,6 +450,12 @@ cc_background_xml_load_list (CcBackgroundXml *data,
   const char * const *system_data_dirs;
   g_autofree gchar *datadir = NULL;
   gint i;
+
+  datadir = read_vendor_background_directory ();
+  if (datadir != NULL) {
+    cc_background_xml_load_from_dir (datadir, data, in_thread);
+    g_free (datadir);
+  }
 
   datadir = g_build_filename (g_get_user_data_dir (),
                               "gnome-background-properties",
