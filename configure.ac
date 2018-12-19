@@ -59,6 +59,7 @@ else
    VENDOR_CONF_FILE=${localstatedir}/lib/gnome-control-center/vendor.conf
 fi
 AC_SUBST(VENDOR_CONF_FILE)
+AC_DEFINE_UNQUOTED(VENDOR_CONF_FILE, "$VENDOR_CONF_FILE", [Path to a keyfile containing vendor customization])
 
 dnl Region panel
 savecppflags=$CPPFLAGS
