@@ -184,7 +184,9 @@ PKG_CHECK_MODULES(USER_ACCOUNTS_PANEL, $COMMON_MODULES
                   gnome-desktop-3.0
                   gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION
                   pwquality >= $PWQUALITY_REQUIRED_VERSION
-                  accountsservice >= $ACCOUNTSSERVICE_REQUIRED_VERSION)
+                  accountsservice >= $ACCOUNTSSERVICE_REQUIRED_VERSION
+                  eos-parental-controls-0
+                  flatpak)
 PKG_CHECK_MODULES(SHARING_PANEL, $COMMON_MODULES flatpak)
 PKG_CHECK_MODULES(REMOTE_LOGIN_HELPER, glib-2.0 >= $GLIB_REQUIRED_VERSION gio-2.0)
 
