@@ -349,7 +349,8 @@ setup_parental_control_settings (UmAppPermissions *self)
   reload_apps (self);
 }
 
-static gchar*
+/* Will return %NULL if @flatpak_id is not installed. */
+static gchar *
 get_flatpak_ref_for_app_id (UmAppPermissions *self,
                             const gchar      *flatpak_id)
 {
@@ -421,6 +422,12 @@ blacklist_apps_cb (gpointer data)
       if (flatpak_id)
         {
           g_autofree gchar *flatpak_ref = get_flatpak_ref_for_app_id (self, flatpak_id);
+
+          if (!flatpak_ref)
+            {
+              g_warning ("Skipping blacklisting Flatpak ID ‘%s’ due to it not being installed", flatpak_id);
+              continue;
+            }
 
           g_debug ("\t\t → Blacklisting Flatpak ref: %s", flatpak_ref);
           epc_app_filter_builder_blacklist_flatpak_ref (&builder, flatpak_ref);
