@@ -439,6 +439,12 @@ blacklist_apps_cb (gpointer data)
           const gchar *executable = g_app_info_get_executable (G_APP_INFO (app));
           g_autofree gchar *path = g_find_program_in_path (executable);
 
+          if (!path)
+            {
+              g_warning ("Skipping blacklisting executable ‘%s’ due to it not being found", executable);
+              continue;
+            }
+
           g_debug ("\t\t → Blacklisting path: %s", path);
           epc_app_filter_builder_blacklist_path (&builder, path);
         }
