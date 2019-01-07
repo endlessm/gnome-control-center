@@ -349,7 +349,8 @@ setup_parental_control_settings (UmAppPermissions *self)
   reload_apps (self);
 }
 
-static gchar*
+/* Will return %NULL if @flatpak_id is not installed. */
+static gchar *
 get_flatpak_ref_for_app_id (UmAppPermissions *self,
                             const gchar      *flatpak_id)
 {
@@ -364,12 +365,14 @@ get_flatpak_ref_for_app_id (UmAppPermissions *self,
                                                         self->cancellable,
                                                         &error);
 
-  if (error)
+  if (error &&
+      !g_error_matches (error, FLATPAK_ERROR, FLATPAK_ERROR_NOT_INSTALLED))
     {
-      if (!g_error_matches (error, FLATPAK_ERROR, FLATPAK_ERROR_NOT_INSTALLED))
-        g_warning ("Error searching for Flatpak ref: %s", error->message);
+      g_warning ("Error searching for Flatpak ref: %s", error->message);
       return NULL;
     }
+
+  g_clear_error (&error);
 
   if (!ref || !flatpak_installed_ref_get_is_current (ref))
     {
@@ -417,10 +420,18 @@ blacklist_apps_cb (gpointer data)
       g_autofree gchar *flatpak_id = NULL;
 
       flatpak_id = g_desktop_app_info_get_string (app, "X-Flatpak");
+      if (flatpak_id)
+        flatpak_id = g_strstrip (flatpak_id);
 
       if (flatpak_id)
         {
           g_autofree gchar *flatpak_ref = get_flatpak_ref_for_app_id (self, flatpak_id);
+
+          if (!flatpak_ref)
+            {
+              g_warning ("Skipping blacklisting Flatpak ID ‘%s’ due to it not being installed", flatpak_id);
+              continue;
+            }
 
           g_debug ("\t\t → Blacklisting Flatpak ref: %s", flatpak_ref);
           epc_app_filter_builder_blacklist_flatpak_ref (&builder, flatpak_ref);
@@ -429,6 +440,12 @@ blacklist_apps_cb (gpointer data)
         {
           const gchar *executable = g_app_info_get_executable (G_APP_INFO (app));
           g_autofree gchar *path = g_find_program_in_path (executable);
+
+          if (!path)
+            {
+              g_warning ("Skipping blacklisting executable ‘%s’ due to it not being found", executable);
+              continue;
+            }
 
           g_debug ("\t\t → Blacklisting path: %s", path);
           epc_app_filter_builder_blacklist_path (&builder, path);
