@@ -867,6 +867,10 @@ um_app_permissions_set_user (UmAppPermissions *self,
   g_return_if_fail (UM_IS_APP_PERMISSIONS (self));
   g_return_if_fail (ACT_IS_USER (user));
 
+  /* If we have pending unsaved changes from the previous user, force them to be
+   * saved first. */
+  flush_update_blacklisted_apps (self);
+
   if (g_set_object (&self->user, user))
     {
       update_app_filter (self);
