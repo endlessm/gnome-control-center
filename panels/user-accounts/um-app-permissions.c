@@ -207,8 +207,13 @@ update_app_filter (UmAppPermissions *self)
 {
   g_autoptr(GError) error = NULL;
 
-  /* FIXME: make it asynchronous */
   g_clear_pointer (&self->filter, epc_app_filter_unref);
+
+  /* We don’t care about the app filter for administrators. */
+  if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
+    return;
+
+  /* FIXME: make it asynchronous */
   self->filter = epc_get_app_filter (NULL,
                                      act_user_get_uid (self->user),
                                      FALSE,
@@ -344,9 +349,14 @@ update_allow_app_installation (UmAppPermissions *self)
 static void
 setup_parental_control_settings (UmAppPermissions *self)
 {
-  gboolean is_authorized;
+  gboolean is_authorized, user_is_administrator;
 
-  gtk_widget_set_visible (GTK_WIDGET (self), self->filter != NULL);
+  /* Don’t bother showing the interface if we’re editing an administrator
+   * account, since parental controls don’t apply to them. */
+  user_is_administrator = (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR);
+
+  gtk_widget_set_visible (GTK_WIDGET (self),
+                          (self->filter != NULL && !user_is_administrator));
 
   if (!self->filter)
     return;
