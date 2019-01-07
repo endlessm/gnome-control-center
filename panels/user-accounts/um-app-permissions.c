@@ -46,6 +46,9 @@ struct _UmAppPermissions
 
   ActUser    *user; /* (owned) */
 
+  GPermission *permission;  /* (owned) (nullable) */
+  gulong permission_allowed_id;
+
   GHashTable *blacklisted_apps; /* (owned) */
   GListStore *apps; /* (owned) */
 
@@ -70,11 +73,16 @@ static void on_set_age_action_activated (GSimpleAction *action,
                                          GVariant      *param,
                                          gpointer       user_data);
 
+static void on_permission_allowed_cb (GObject    *obj,
+                                      GParamSpec *pspec,
+                                      gpointer    user_data);
+
 G_DEFINE_TYPE (UmAppPermissions, um_app_permissions, GTK_TYPE_GRID)
 
 enum
 {
   PROP_USER = 1,
+  PROP_PERMISSION,
   N_PROPS
 };
 
@@ -670,6 +678,13 @@ um_app_permissions_finalize (GObject *object)
   g_clear_object (&self->user);
   g_clear_object (&self->user_installation);
 
+  if (self->permission != NULL && self->permission_allowed_id != 0)
+    {
+      g_signal_handler_disconnect (self->permission, self->permission_allowed_id);
+      self->permission_allowed_id = 0;
+    }
+  g_clear_object (&self->permission);
+
   g_clear_pointer (&self->blacklisted_apps, g_hash_table_unref);
   g_clear_pointer (&self->filter, epc_app_filter_unref);
 
@@ -706,6 +721,10 @@ um_app_permissions_get_property (GObject    *object,
       g_value_set_object (value, self->user);
       break;
 
+    case PROP_PERMISSION:
+      g_value_set_object (value, self->permission);
+      break;
+
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
     }
@@ -723,6 +742,10 @@ um_app_permissions_set_property (GObject      *object,
     {
     case PROP_USER:
       um_app_permissions_set_user (self, g_value_get_object (value));
+      break;
+
+    case PROP_PERMISSION:
+      um_app_permissions_set_permission (self, g_value_get_object (value));
       break;
 
     default:
@@ -748,6 +771,14 @@ um_app_permissions_class_init (UmAppPermissionsClass *klass)
                                                G_PARAM_READWRITE |
                                                G_PARAM_STATIC_STRINGS |
                                                G_PARAM_EXPLICIT_NOTIFY);
+
+  properties[PROP_PERMISSION] = g_param_spec_object ("permission",
+                                                     "Permission",
+                                                     "Permission to change parental controls",
+                                                     G_TYPE_PERMISSION,
+                                                     G_PARAM_READWRITE |
+                                                     G_PARAM_STATIC_STRINGS |
+                                                     G_PARAM_EXPLICIT_NOTIFY);
 
   g_object_class_install_properties (object_class, N_PROPS, properties);
 
@@ -816,4 +847,55 @@ um_app_permissions_set_user (UmAppPermissions *self,
 
       g_object_notify_by_pspec (G_OBJECT (self), properties[PROP_USER]);
     }
+}
+
+static void
+on_permission_allowed_cb (GObject    *obj,
+                          GParamSpec *pspec,
+                          gpointer    user_data)
+{
+  UmAppPermissions *self = UM_APP_PERMISSIONS (user_data);
+
+  setup_parental_control_settings (self);
+}
+
+GPermission *  /* (nullable) */
+um_app_permissions_get_permission (UmAppPermissions *self)
+{
+  g_return_val_if_fail (UM_IS_APP_PERMISSIONS (self), NULL);
+
+  return self->permission;
+}
+
+void
+um_app_permissions_set_permission (UmAppPermissions *self,
+                                   GPermission      *permission  /* (nullable) */)
+{
+  g_return_if_fail (UM_IS_APP_PERMISSIONS (self));
+  g_return_if_fail (permission == NULL || G_IS_PERMISSION (permission));
+
+  if (self->permission == permission)
+    return;
+
+  if (self->permission != NULL && self->permission_allowed_id != 0)
+    {
+      g_signal_handler_disconnect (self->permission, self->permission_allowed_id);
+      self->permission_allowed_id = 0;
+    }
+
+  g_clear_object (&self->permission);
+
+  if (permission != NULL)
+    {
+      self->permission = g_object_ref (permission);
+      self->permission_allowed_id = g_signal_connect (self->permission,
+                                                      "notify::allowed",
+                                                      (GCallback) on_permission_allowed_cb,
+                                                      self);
+    }
+
+  /* Handle changes. */
+  setup_parental_control_settings (self);
+
+  g_object_notify_by_pspec (G_OBJECT (self), properties[PROP_PERMISSION]);
 }

@@ -915,6 +915,7 @@ show_user (ActUser *user, CcUserPanelPrivate *d)
                 on_permission_changed (d->permission, NULL, d);
 
         um_app_permissions_set_user (d->app_permissions, user);
+        um_app_permissions_set_permission (d->app_permissions, d->permission);
 }
 
 static void
