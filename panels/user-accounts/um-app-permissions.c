@@ -203,6 +203,17 @@ schedule_update_blacklisted_apps (UmAppPermissions *self)
 }
 
 static void
+flush_update_blacklisted_apps (UmAppPermissions *self)
+{
+  if (self->blacklist_apps_source_id > 0)
+    {
+      blacklist_apps_cb (self);
+      g_source_remove (self->blacklist_apps_source_id);
+      self->blacklist_apps_source_id = 0;
+    }
+}
+
+static void
 update_app_filter (UmAppPermissions *self)
 {
   g_autoptr(GError) error = NULL;
@@ -718,12 +729,7 @@ um_app_permissions_dispose (GObject *object)
 {
   UmAppPermissions *self = (UmAppPermissions *)object;
 
-  if (self->blacklist_apps_source_id > 0)
-    {
-      blacklist_apps_cb (self);
-      g_source_remove (self->blacklist_apps_source_id);
-      self->blacklist_apps_source_id = 0;
-    }
+  flush_update_blacklisted_apps (self);
 
   G_OBJECT_CLASS (um_app_permissions_parent_class)->dispose (object);
 }
