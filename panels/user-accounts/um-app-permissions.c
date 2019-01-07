@@ -344,10 +344,21 @@ update_allow_app_installation (UmAppPermissions *self)
 static void
 setup_parental_control_settings (UmAppPermissions *self)
 {
+  gboolean is_authorized;
+
   gtk_widget_set_visible (GTK_WIDGET (self), self->filter != NULL);
 
   if (!self->filter)
     return;
+
+  /* We only want to make the controls sensitive if we have permission to save
+   * changes (@is_authorized). */
+  if (self->permission != NULL)
+    is_authorized = g_permission_get_allowed (G_PERMISSION (self->permission));
+  else
+    is_authorized = TRUE;
+
+  gtk_widget_set_sensitive (GTK_WIDGET (self), is_authorized);
 
   g_hash_table_remove_all (self->blacklisted_apps);
 
