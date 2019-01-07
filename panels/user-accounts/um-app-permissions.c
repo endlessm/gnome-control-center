@@ -365,12 +365,14 @@ get_flatpak_ref_for_app_id (UmAppPermissions *self,
                                                         self->cancellable,
                                                         &error);
 
-  if (error)
+  if (error &&
+      !g_error_matches (error, FLATPAK_ERROR, FLATPAK_ERROR_NOT_INSTALLED))
     {
-      if (!g_error_matches (error, FLATPAK_ERROR, FLATPAK_ERROR_NOT_INSTALLED))
-        g_warning ("Error searching for Flatpak ref: %s", error->message);
+      g_warning ("Error searching for Flatpak ref: %s", error->message);
       return NULL;
     }
+
+  g_clear_error (&error);
 
   if (!ref || !flatpak_installed_ref_get_is_current (ref))
     {
