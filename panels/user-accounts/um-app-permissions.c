@@ -418,6 +418,8 @@ blacklist_apps_cb (gpointer data)
       g_autofree gchar *flatpak_id = NULL;
 
       flatpak_id = g_desktop_app_info_get_string (app, "X-Flatpak");
+      if (flatpak_id)
+        flatpak_id = g_strstrip (flatpak_id);
 
       if (flatpak_id)
         {
