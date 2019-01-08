@@ -451,11 +451,12 @@ gs_utils_content_rating_age_to_str (GsContentRatingSystem system, guint age)
 			return "6";
 		return "0";
 	}
+	/* Reference: http://www.esra.org.ir/ */
 	if (system == GS_CONTENT_RATING_SYSTEM_ESRA) {
-		if (age >= 25)
-			return "+25";
 		if (age >= 18)
 			return "+18";
+		if (age >= 15)
+			return "+15";
 		if (age >= 12)
 			return "+12";
 		if (age >= 7)
@@ -755,7 +756,7 @@ static const gchar *content_rating_strings[GS_CONTENT_RATING_SYSTEM_LAST][7] = {
 	{ "3", "7", "12", "16", "18", NULL }, /* GS_CONTENT_RATING_SYSTEM_PEGI */
 	{ "3+", "7+", "12+", "16+", "18+", NULL }, /* GS_CONTENT_RATING_SYSTEM_KAVI */
 	{ "0", "6", "12", "16", "18", NULL}, /* GS_CONTENT_RATING_SYSTEM_USK */
-	{ "+3", "+7", "+12", "+18", "+25", NULL }, /* GS_CONTENT_RATING_SYSTEM_ESRA */
+	{ "+3", "+7", "+12", "+15", "+18", NULL }, /* GS_CONTENT_RATING_SYSTEM_ESRA */
 	{ "A", "B", "C", "D", "Z", NULL }, /* GS_CONTENT_RATING_SYSTEM_CERO */
 	{ "G", "R13", "R15", "R16", "R18", NULL }, /* GS_CONTENT_RATING_SYSTEM_OFLCNZ */
 	{ "0+", "6+", "12+", "16+", "18+", NULL }, /* GS_CONTENT_RATING_SYSTEM_RUSSIA */
@@ -781,7 +782,7 @@ static guint content_rating_ages[GS_CONTENT_RATING_SYSTEM_LAST][7] = {
 	{ 3, 7, 12, 16, 18 }, /* GS_CONTENT_RATING_SYSTEM_PEGI */
 	{ 3, 7, 12, 16, 18 }, /* GS_CONTENT_RATING_SYSTEM_KAVI */
 	{ 0, 6, 12, 16, 18 }, /* GS_CONTENT_RATING_SYSTEM_USK */
-	{ 3, 7, 12, 18, 25 }, /* GS_CONTENT_RATING_SYSTEM_ESRA */
+	{ 3, 7, 12, 15, 18 }, /* GS_CONTENT_RATING_SYSTEM_ESRA */
 	{ 0, 12, 15, 17, 18 }, /* GS_CONTENT_RATING_SYSTEM_CERO */
 	{ 0, 13, 15, 16, 18 }, /* GS_CONTENT_RATING_SYSTEM_OFLCNZ */
 	{ 0, 6, 12, 16, 18 }, /* GS_CONTENT_RATING_SYSTEM_RUSSIA */
