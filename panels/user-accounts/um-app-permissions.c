@@ -306,6 +306,10 @@ update_oars_level (UmAppPermissions *self)
   rating_system = get_content_rating_system (self->user);
   rating_age_category = gs_utils_content_rating_age_to_str (rating_system, maximum_age);
 
+  /* Unrestricted? */
+  if (rating_age_category == NULL)
+    rating_age_category = "";
+
   gtk_button_set_label (self->restriction_button, rating_age_category);
 }
 
