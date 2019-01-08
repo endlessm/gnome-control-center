@@ -34,4 +34,8 @@ ActUser* um_app_permissions_get_user (UmAppPermissions *self);
 void     um_app_permissions_set_user (UmAppPermissions *self,
                                       ActUser          *user);
 
+GPermission *um_app_permissions_get_permission (UmAppPermissions *self);
+void         um_app_permissions_set_permission (UmAppPermissions *self,
+                                                GPermission      *permission);
+
 G_END_DECLS

@@ -46,6 +46,9 @@ struct _UmAppPermissions
 
   ActUser    *user; /* (owned) */
 
+  GPermission *permission;  /* (owned) (nullable) */
+  gulong permission_allowed_id;
+
   GHashTable *blacklisted_apps; /* (owned) */
   GListStore *apps; /* (owned) */
 
@@ -70,11 +73,16 @@ static void on_set_age_action_activated (GSimpleAction *action,
                                          GVariant      *param,
                                          gpointer       user_data);
 
+static void on_permission_allowed_cb (GObject    *obj,
+                                      GParamSpec *pspec,
+                                      gpointer    user_data);
+
 G_DEFINE_TYPE (UmAppPermissions, um_app_permissions, GTK_TYPE_GRID)
 
 enum
 {
   PROP_USER = 1,
+  PROP_PERMISSION,
   N_PROPS
 };
 
@@ -195,12 +203,28 @@ schedule_update_blacklisted_apps (UmAppPermissions *self)
 }
 
 static void
+flush_update_blacklisted_apps (UmAppPermissions *self)
+{
+  if (self->blacklist_apps_source_id > 0)
+    {
+      blacklist_apps_cb (self);
+      g_source_remove (self->blacklist_apps_source_id);
+      self->blacklist_apps_source_id = 0;
+    }
+}
+
+static void
 update_app_filter (UmAppPermissions *self)
 {
   g_autoptr(GError) error = NULL;
 
-  /* FIXME: make it asynchronous */
   g_clear_pointer (&self->filter, epc_app_filter_unref);
+
+  /* We don’t care about the app filter for administrators. */
+  if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
+    return;
+
+  /* FIXME: make it asynchronous */
   self->filter = epc_get_app_filter (NULL,
                                      act_user_get_uid (self->user),
                                      FALSE,
@@ -336,10 +360,26 @@ update_allow_app_installation (UmAppPermissions *self)
 static void
 setup_parental_control_settings (UmAppPermissions *self)
 {
-  gtk_widget_set_visible (GTK_WIDGET (self), self->filter != NULL);
+  gboolean is_authorized, user_is_administrator;
+
+  /* Don’t bother showing the interface if we’re editing an administrator
+   * account, since parental controls don’t apply to them. */
+  user_is_administrator = (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR);
+
+  gtk_widget_set_visible (GTK_WIDGET (self),
+                          (self->filter != NULL && !user_is_administrator));
 
   if (!self->filter)
     return;
+
+  /* We only want to make the controls sensitive if we have permission to save
+   * changes (@is_authorized). */
+  if (self->permission != NULL)
+    is_authorized = g_permission_get_allowed (G_PERMISSION (self->permission));
+  else
+    is_authorized = TRUE;
+
+  gtk_widget_set_sensitive (GTK_WIDGET (self), is_authorized);
 
   g_hash_table_remove_all (self->blacklisted_apps);
 
@@ -670,6 +710,13 @@ um_app_permissions_finalize (GObject *object)
   g_clear_object (&self->user);
   g_clear_object (&self->user_installation);
 
+  if (self->permission != NULL && self->permission_allowed_id != 0)
+    {
+      g_signal_handler_disconnect (self->permission, self->permission_allowed_id);
+      self->permission_allowed_id = 0;
+    }
+  g_clear_object (&self->permission);
+
   g_clear_pointer (&self->blacklisted_apps, g_hash_table_unref);
   g_clear_pointer (&self->filter, epc_app_filter_unref);
 
@@ -682,12 +729,7 @@ um_app_permissions_dispose (GObject *object)
 {
   UmAppPermissions *self = (UmAppPermissions *)object;
 
-  if (self->blacklist_apps_source_id > 0)
-    {
-      blacklist_apps_cb (self);
-      g_source_remove (self->blacklist_apps_source_id);
-      self->blacklist_apps_source_id = 0;
-    }
+  flush_update_blacklisted_apps (self);
 
   G_OBJECT_CLASS (um_app_permissions_parent_class)->dispose (object);
 }
@@ -704,6 +746,10 @@ um_app_permissions_get_property (GObject    *object,
     {
     case PROP_USER:
       g_value_set_object (value, self->user);
+      break;
+
+    case PROP_PERMISSION:
+      g_value_set_object (value, self->permission);
       break;
 
     default:
@@ -723,6 +769,10 @@ um_app_permissions_set_property (GObject      *object,
     {
     case PROP_USER:
       um_app_permissions_set_user (self, g_value_get_object (value));
+      break;
+
+    case PROP_PERMISSION:
+      um_app_permissions_set_permission (self, g_value_get_object (value));
       break;
 
     default:
@@ -748,6 +798,14 @@ um_app_permissions_class_init (UmAppPermissionsClass *klass)
                                                G_PARAM_READWRITE |
                                                G_PARAM_STATIC_STRINGS |
                                                G_PARAM_EXPLICIT_NOTIFY);
+
+  properties[PROP_PERMISSION] = g_param_spec_object ("permission",
+                                                     "Permission",
+                                                     "Permission to change parental controls",
+                                                     G_TYPE_PERMISSION,
+                                                     G_PARAM_READWRITE |
+                                                     G_PARAM_STATIC_STRINGS |
+                                                     G_PARAM_EXPLICIT_NOTIFY);
 
   g_object_class_install_properties (object_class, N_PROPS, properties);
 
@@ -809,6 +867,10 @@ um_app_permissions_set_user (UmAppPermissions *self,
   g_return_if_fail (UM_IS_APP_PERMISSIONS (self));
   g_return_if_fail (ACT_IS_USER (user));
 
+  /* If we have pending unsaved changes from the previous user, force them to be
+   * saved first. */
+  flush_update_blacklisted_apps (self);
+
   if (g_set_object (&self->user, user))
     {
       update_app_filter (self);
@@ -816,4 +878,55 @@ um_app_permissions_set_user (UmAppPermissions *self,
 
       g_object_notify_by_pspec (G_OBJECT (self), properties[PROP_USER]);
     }
+}
+
+static void
+on_permission_allowed_cb (GObject    *obj,
+                          GParamSpec *pspec,
+                          gpointer    user_data)
+{
+  UmAppPermissions *self = UM_APP_PERMISSIONS (user_data);
+
+  setup_parental_control_settings (self);
+}
+
+GPermission *  /* (nullable) */
+um_app_permissions_get_permission (UmAppPermissions *self)
+{
+  g_return_val_if_fail (UM_IS_APP_PERMISSIONS (self), NULL);
+
+  return self->permission;
+}
+
+void
+um_app_permissions_set_permission (UmAppPermissions *self,
+                                   GPermission      *permission  /* (nullable) */)
+{
+  g_return_if_fail (UM_IS_APP_PERMISSIONS (self));
+  g_return_if_fail (permission == NULL || G_IS_PERMISSION (permission));
+
+  if (self->permission == permission)
+    return;
+
+  if (self->permission != NULL && self->permission_allowed_id != 0)
+    {
+      g_signal_handler_disconnect (self->permission, self->permission_allowed_id);
+      self->permission_allowed_id = 0;
+    }
+
+  g_clear_object (&self->permission);
+
+  if (permission != NULL)
+    {
+      self->permission = g_object_ref (permission);
+      self->permission_allowed_id = g_signal_connect (self->permission,
+                                                      "notify::allowed",
+                                                      (GCallback) on_permission_allowed_cb,
+                                                      self);
+    }
+
+  /* Handle changes. */
+  setup_parental_control_settings (self);
+
+  g_object_notify_by_pspec (G_OBJECT (self), properties[PROP_PERMISSION]);
 }
