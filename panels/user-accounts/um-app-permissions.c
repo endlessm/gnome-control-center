@@ -168,25 +168,9 @@ reload_apps (UmAppPermissions *self)
 static GsContentRatingSystem
 get_content_rating_system (ActUser *user)
 {
-  const gchar *suffixes[] = {
-    ".UTF-8",
-    ".utf8",
-    "@",
-    NULL,
-  };
   const gchar *user_language;
-  gchar *str;
-  gsize i;
 
   user_language = act_user_get_language (user);
-
-  /* Remove the encoding suffixes */
-  for (i = 0; suffixes[i] != NULL; i++)
-    {
-      str = g_strstr_len (user_language, -1, suffixes[i]);
-      if (str != NULL)
-        *str = '\0';
-    }
 
   return gs_utils_content_rating_system_from_locale (user_language);
 }
