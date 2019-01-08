@@ -904,6 +904,18 @@ const struct {
 { "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_MILD,		13 },
 { "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	15 },
 { "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+
+/* EOS customisation to add at least one CSM ↔ OARS mapping for ages 16 and 17,
+ * as these are used in many locale-specific ratings systems. Without them,
+ * mapping (e.g.) OFLCNZ R16 → CSM 16 → OARS → CSM gives CSM 15, which then maps
+ * back to OFLCNZ R15, which is not what we want. The addition of these two
+ * mappings should not expose younger users to content they would not have seen
+ * with the default upstream mappings; it instead slightly raises the age at
+ * which users are allowed to see intense content in these two categories.
+ *
+ * See https://phabricator.endlessm.com/T23897#666769. */
+{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	16 },
+{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	17 },
 { NULL, 0, 0 } };
 
 /**
