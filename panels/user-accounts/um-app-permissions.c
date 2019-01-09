@@ -149,7 +149,11 @@ reload_apps (UmAppPermissions *self)
           !g_app_info_should_show (app) ||
           app_name[0] == '\0' ||
           /* Endless' link apps have the "eos-link" prefix, and should be ignored too */
-          g_str_has_prefix (g_app_info_get_id (app), "eos-link"))
+          g_str_has_prefix (g_app_info_get_id (app), "eos-link") ||
+          /* FIXME: Only list flatpak apps for now; we really need a system-wide MAC
+           * to be able to reliably support blacklisting system programs. See
+           * https://phabricator.endlessm.com/T25080. */
+          !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak"))
         {
           continue;
         }
