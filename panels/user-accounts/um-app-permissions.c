@@ -326,6 +326,13 @@ update_allow_app_installation (UmAppPermissions *self)
   allow_system_installation = epc_app_filter_is_system_installation_allowed (self->filter);
   allow_user_installation = epc_app_filter_is_user_installation_allowed (self->filter);
 
+  /* While the underlying permissions storage allows the system and user settings
+   * to be stored completely independently, force the system setting to OFF if
+   * the user setting is OFF in the UI. This keeps the policy in use for most
+   * people simpler. */
+  if (!allow_user_installation)
+    allow_system_installation = FALSE;
+
   g_signal_handlers_block_by_func (self->allow_system_installation_switch,
                                    on_allow_installation_switch_active_changed_cb,
                                    self);
@@ -535,6 +542,21 @@ on_allow_installation_switch_active_changed_cb (GtkSwitch        *s,
                                                 GParamSpec       *pspec,
                                                 UmAppPermissions *self)
 {
+  /* See the comment about policy in update_allow_app_installation(). */
+  if (s == self->allow_user_installation_switch &&
+      !gtk_switch_get_active (s) &&
+      gtk_switch_get_active (self->allow_system_installation_switch))
+    {
+      g_signal_handlers_block_by_func (self->allow_system_installation_switch,
+                                       on_allow_installation_switch_active_changed_cb,
+                                       self);
+      gtk_switch_set_active (self->allow_system_installation_switch, FALSE);
+      g_signal_handlers_unblock_by_func (self->allow_system_installation_switch,
+                                         on_allow_installation_switch_active_changed_cb,
+                                         self);
+    }
+
+  /* Save the changes. */
   schedule_update_blacklisted_apps (self);
 }
 
@@ -842,6 +864,10 @@ um_app_permissions_init (UmAppPermissions *self)
                            create_row_for_app_cb,
                            self,
                            NULL);
+
+  g_object_bind_property (self->allow_user_installation_switch, "active",
+                          self->allow_system_installation_switch, "sensitive",
+                          G_BINDING_DEFAULT);
 }
 
 ActUser*
