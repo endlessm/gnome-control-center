@@ -1,6 +1,6 @@
 /* um-app-permissions.c
  *
- * Copyright 2018 Endless, Inc.
+ * Copyright 2018, 2019 Endless, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,11 +22,15 @@
 #include <flatpak.h>
 #include <gio/gio.h>
 #include <gio/gdesktopappinfo.h>
+#include <glib/gi18n.h>
 #include <strings.h>
 
 #include "gs-content-rating.h"
 
 #include "um-app-permissions.h"
+
+/* The value which we store as an age to indicate that OARS filtering is disabled. */
+static const guint32 oars_disabled_age = (guint32) -1;
 
 struct _UmAppPermissions
 {
@@ -54,7 +58,7 @@ struct _UmAppPermissions
 
   GCancellable *cancellable; /* (owned) */
   EpcAppFilter *filter; /* (owned) */
-  guint         selected_age;
+  guint         selected_age; /* @oars_disabled_age to disable OARS */
 
   guint         blacklist_apps_source_id;
 };
@@ -238,6 +242,7 @@ update_categories_from_language (UmAppPermissions *self)
   const gchar *rating_system_str;
   const guint *ages;
   gsize i;
+  g_autofree gchar *disabled_action = NULL;
 
   rating_system = get_content_rating_system (self->user);
   rating_system_str = gs_content_rating_system_to_str (rating_system);
@@ -250,9 +255,16 @@ update_categories_from_language (UmAppPermissions *self)
   /* Fill in the age menu */
   g_menu_remove_all (self->age_menu);
 
+  disabled_action = g_strdup_printf ("permissions.set-age(uint32 %u)", oars_disabled_age);
+  g_menu_append (self->age_menu, _("Disabled"), disabled_action);
+
   for (i = 0; entries[i] != NULL; i++)
     {
       g_autofree gchar *action = g_strdup_printf ("permissions.set-age(uint32 %u)", ages[i]);
+
+      /* Prevent the unlikely case that one of the real ages is the same as our
+       * special ‘disabled’ value. */
+      g_assert (ages[i] != oars_disabled_age);
 
       g_menu_append (self->age_menu, entries[i], action);
     }
@@ -286,10 +298,12 @@ update_oars_level (UmAppPermissions *self)
   const gchar *rating_age_category;
   guint maximum_age;
   gsize i;
+  gboolean all_categories_unset;
 
   g_assert (self->filter != NULL);
 
   maximum_age = 0;
+  all_categories_unset = TRUE;
 
   for (i = 0; oars_categories[i] != NULL; i++)
     {
@@ -297,6 +311,7 @@ update_oars_level (UmAppPermissions *self)
       guint age;
 
       oars_value = epc_app_filter_get_oars_value (self->filter, oars_categories[i]);
+      all_categories_unset &= (oars_value == EPC_APP_FILTER_OARS_VALUE_UNKNOWN);
       age = as_content_rating_id_value_to_csm_age (oars_categories[i], oars_value);
 
       g_debug ("OARS value for '%s': %s", oars_categories[i], oars_value_to_string (oars_value));
@@ -305,14 +320,15 @@ update_oars_level (UmAppPermissions *self)
         maximum_age = age;
     }
 
-  g_debug ("Effective age for this user: %u", maximum_age);
+  g_debug ("Effective age for this user: %u; %s", maximum_age,
+           all_categories_unset ? "all categories unset" : "some categories set");
 
   rating_system = get_content_rating_system (self->user);
   rating_age_category = gs_utils_content_rating_age_to_str (rating_system, maximum_age);
 
   /* Unrestricted? */
-  if (rating_age_category == NULL)
-    rating_age_category = "";
+  if (rating_age_category == NULL || all_categories_unset)
+    rating_age_category = _("Disabled");
 
   gtk_button_set_label (self->restriction_button, rating_age_category);
 }
@@ -495,7 +511,10 @@ blacklist_apps_cb (gpointer data)
 
   g_debug ("\t → Maturity level");
 
-  for (i = 0; oars_categories[i] != NULL; i++)
+  if (self->selected_age == oars_disabled_age)
+    g_debug ("\t\t → Disabled");
+
+  for (i = 0; self->selected_age != oars_disabled_age && oars_categories[i] != NULL; i++)
     {
       EpcAppFilterOarsValue oars_value;
       const gchar *oars_category;
@@ -689,7 +708,10 @@ on_set_age_action_activated (GSimpleAction *action,
   ages = gs_utils_content_rating_get_ages (rating_system);
 
   /* Update the button */
-  for (i = 0; entries[i] != NULL; i++)
+  if (age == oars_disabled_age)
+    gtk_button_set_label (self->restriction_button, _("Disabled"));
+
+  for (i = 0; age != oars_disabled_age && entries[i] != NULL; i++)
     {
       if (ages[i] == age)
         {
@@ -698,9 +720,12 @@ on_set_age_action_activated (GSimpleAction *action,
         }
     }
 
-  g_assert (entries[i] != NULL);
+  g_assert (age == oars_disabled_age || entries[i] != NULL);
 
-  g_debug ("Selected age: %u", age);
+  if (age == oars_disabled_age)
+    g_debug ("Selected to disable OARS");
+  else
+    g_debug ("Selected OARS age: %u", age);
 
   self->selected_age = age;
 
