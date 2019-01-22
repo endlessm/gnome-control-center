@@ -89,7 +89,7 @@ enum
 static GParamSpec *properties [N_PROPS];
 
 static const GActionEntry actions[] = {
-  { "set-age", on_set_age_action_activated, "u" }
+  { "set-age", on_set_age_action_activated, "u", NULL, NULL, }
 };
 
 /* FIXME: Factor this out and rely on code from libappstream-glib or gnome-software
