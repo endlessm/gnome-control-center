@@ -53,6 +53,8 @@ struct _UmAppPermissions
   GPermission *permission;  /* (owned) (nullable) */
   gulong permission_allowed_id;
 
+  GAppInfoMonitor *app_info_monitor;  /* (owned) */
+
   GHashTable *blacklisted_apps; /* (owned) */
   GListStore *apps; /* (owned) */
 
@@ -64,6 +66,8 @@ struct _UmAppPermissions
 };
 
 static gboolean blacklist_apps_cb (gpointer data);
+static void app_info_changed_cb (GAppInfoMonitor *monitor,
+                                 gpointer         user_data);
 
 static gint compare_app_info_cb (gconstpointer a,
                                  gconstpointer b,
@@ -171,6 +175,15 @@ reload_apps (UmAppPermissions *self)
     }
 
   g_list_free_full (apps, g_object_unref);
+}
+
+static void
+app_info_changed_cb (GAppInfoMonitor *monitor,
+                     gpointer         user_data)
+{
+  UmAppPermissions *self = UM_APP_PERMISSIONS (user_data);
+
+  reload_apps (self);
 }
 
 static GsContentRatingSystem
@@ -758,6 +771,7 @@ um_app_permissions_finalize (GObject *object)
 
   g_clear_pointer (&self->blacklisted_apps, g_hash_table_unref);
   g_clear_pointer (&self->filter, epc_app_filter_unref);
+  g_clear_object (&self->app_info_monitor);
 
   G_OBJECT_CLASS (um_app_permissions_parent_class)->finalize (object);
 }
@@ -883,6 +897,10 @@ um_app_permissions_init (UmAppPermissions *self)
 
   self->cancellable = g_cancellable_new ();
   self->apps = g_list_store_new (G_TYPE_APP_INFO);
+
+  self->app_info_monitor = g_app_info_monitor_get ();
+  g_signal_connect_object (self->app_info_monitor, "changed",
+                           (GCallback) app_info_changed_cb, self, 0);
 
   gtk_list_box_bind_model (self->listbox,
                            G_LIST_MODEL (self->apps),
