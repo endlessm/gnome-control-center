@@ -136,17 +136,50 @@ static const gchar * const oars_categories[] =
 
 /* Auxiliary methods */
 
+static gint
+app_compare_id_length_cb (gconstpointer a,
+                          gconstpointer b)
+{
+  GAppInfo *info_a = (GAppInfo *) a, *info_b = (GAppInfo *) b;
+  const gchar *id_a, *id_b;
+
+  id_a = g_app_info_get_id (info_a);
+  id_b = g_app_info_get_id (info_b);
+
+  if (id_a == NULL && id_b == NULL)
+    return 0;
+  else if (id_a == NULL)
+    return -1;
+  else if (id_b == NULL)
+    return 1;
+
+  return strlen (id_a) - strlen (id_b);
+}
+
 static void
 reload_apps (UmAppPermissions *self)
 {
   GList *iter, *apps;
+  g_autoptr(GHashTable) seen_flatpak_ids = NULL;
 
   apps = g_app_info_get_all ();
+
+  /* Sort the apps by increasing length of #GAppInfo ID. When coupled with the
+   * deduplication of flatpak IDs, below, this should ensure that we pick the
+   * ‘base’ app out of any set with matching prefixes and identical app IDs, and
+   * show only that.
+   *
+   * This is designed to avoid listing all the components of LibreOffice, which
+   * all share an app ID and hence have the same entry in the parental controls
+   * app filter. */
+  apps = g_list_sort (apps, app_compare_id_length_cb);
+  seen_flatpak_ids = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
   g_list_store_remove_all (self->apps);
 
   for (iter = apps; iter; iter = iter->next)
     {
+      g_autofree gchar *flatpak_id = NULL;
       GAppInfo *app;
       const gchar *app_name;
 
@@ -166,7 +199,19 @@ reload_apps (UmAppPermissions *self)
           continue;
         }
 
-      g_debug ("Processing app '%s' (%s)", g_app_info_get_id (app), g_app_info_get_executable (app));
+      flatpak_id = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app), "X-Flatpak");
+      g_debug ("Processing app ‘%s’ (Exec=%s, X-Flatpak=%s)",
+               g_app_info_get_id (app),
+               g_app_info_get_executable (app),
+               flatpak_id);
+
+      /* Have we seen this flatpak ID before? */
+      if (!g_hash_table_add (seen_flatpak_ids, g_steal_pointer (&flatpak_id)))
+        {
+          g_debug (" → Skipping ‘%s’ due to seeing its flatpak ID already",
+                   g_app_info_get_id (app));
+          continue;
+        }
 
       g_list_store_insert_sorted (self->apps,
                                   app,
