@@ -26,6 +26,7 @@
 
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
+#include <libmalcontent/malcontent.h>
 
 struct _CcSearchPanel
 {
@@ -42,6 +43,8 @@ struct _CcSearchPanel
   GHashTable *sort_order;
 
   CcSearchLocationsDialog  *locations_dialog;
+
+  MctAppFilter *filter;  /* (owned) (nullable) */
 };
 
 CC_PANEL_REGISTER (CcSearchPanel, cc_search_panel)
@@ -491,37 +494,77 @@ search_panel_add_one_provider (CcSearchPanel *self,
       return;
     }
 
+  /* Filter out the search provider if the app which provides it is disabled by
+   * the current user’s parental controls settings. */
+  g_assert (self->filter != NULL);
+
+  if (!mct_app_filter_is_appinfo_allowed (self->filter, app_info))
+    {
+      g_debug ("Filtering out search provider from application ‘%s’ as it’s "
+               "blacklisted by parental controls.", g_app_info_get_id (app_info));
+      g_object_unref (app_info);
+      return;
+    }
+
   default_disabled = g_key_file_get_boolean (keyfile, SHELL_PROVIDER_GROUP,
                                              "DefaultDisabled", NULL);
   search_panel_add_one_app_info (self, app_info, !default_disabled);
 }
+
+/* Result from search_providers_discover_thread(). */
+typedef struct
+{
+  GList *providers;  /* (element-type GFile) (owned) */
+  MctAppFilter *filter;  /* (owned) */
+} DiscoverProvidersResult;
+
+static void
+discover_providers_result_free (DiscoverProvidersResult *result)
+{
+  g_clear_pointer (&result->filter, mct_app_filter_unref);
+  g_list_free_full (result->providers, g_object_unref);
+  g_free (result);
+}
+
+G_DEFINE_AUTOPTR_CLEANUP_FUNC (DiscoverProvidersResult, discover_providers_result_free)
 
 static void
 search_providers_discover_ready (GObject *source,
                                  GAsyncResult *result,
                                  gpointer user_data)
 {
+  g_autoptr(DiscoverProvidersResult) discover_result = NULL;
   g_autoptr(GList) providers = NULL;
   GList *l;
   CcSearchPanel *self = CC_SEARCH_PANEL (source);
   g_autoptr(GError) error = NULL;
 
-  providers = g_task_propagate_pointer (G_TASK (result), &error);
+  discover_result = g_task_propagate_pointer (G_TASK (result), &error);
 
-  if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-    return;
+  if (error != NULL)
+    {
+      if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        g_warning ("Error discovering search providers: %s", error->message);
+      g_error_free (error);
+      return;
+    }
 
   g_clear_object (&self->load_cancellable);
 
-  if (providers == NULL)
+  /* Store the app filter. */
+  g_assert (self->filter == NULL);
+  self->filter = mct_app_filter_ref (discover_result->filter);
+
+  /* Process the providers. */
+  if (discover_result->providers == NULL)
     {
       search_panel_set_no_providers (self);
       return;
     }
 
-  for (l = providers; l != NULL; l = l->next)
+  for (l = discover_result->providers; l != NULL; l = l->next)
     {
-      g_autoptr(GFile) provider = l->data;
+      GFile *provider = l->data;
       search_panel_add_one_provider (self, provider);
     }
 
@@ -583,10 +626,37 @@ search_providers_discover_thread (GTask *task,
                                   gpointer task_data,
                                   GCancellable *cancellable)
 {
+  g_autoptr(DiscoverProvidersResult) result = NULL;
+  g_autoptr(GDBusConnection) system_bus = NULL;
+  g_autoptr(MctManager) manager = NULL;
+  g_autoptr(MctAppFilter) filter = NULL;
   GList *providers = NULL;
   const gchar * const *system_data_dirs;
   int idx;
+  GError *local_error = NULL;
 
+  system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, cancellable, &local_error);
+  if (system_bus == NULL)
+    {
+      g_task_return_error (task, g_steal_pointer (&local_error));
+      return;
+    }
+
+  manager = mct_manager_new (system_bus);
+  /* Load the user’s parental controls settings too, so we can filter the list. */
+  filter = mct_manager_get_app_filter (manager,
+                                       getuid (),
+                                       MCT_GET_APP_FILTER_FLAGS_NONE,
+                                       cancellable,
+                                       &local_error);
+
+  if (local_error != NULL)
+    {
+      g_task_return_error (task, g_steal_pointer (&local_error));
+      return;
+    }
+
+  /* Load the providers from the file system. */
   system_data_dirs = g_get_system_data_dirs ();
   for (idx = 0; system_data_dirs[idx] != NULL; idx++)
     {
@@ -600,7 +670,13 @@ search_providers_discover_thread (GTask *task,
         }
     }
 
-  g_task_return_pointer (task, providers, NULL);
+  /* Return the successful result. */
+  result = g_new0 (DiscoverProvidersResult, 1);
+  result->providers = g_steal_pointer (&providers);
+  result->filter = g_steal_pointer (&filter);
+
+  g_task_return_pointer (task, g_steal_pointer (&result),
+                         (GDestroyNotify) discover_providers_result_free);
 }
 
 static void
@@ -632,6 +708,7 @@ cc_search_panel_finalize (GObject *object)
 
   g_clear_object (&self->search_settings);
   g_hash_table_destroy (self->sort_order);
+  g_clear_pointer (&self->filter, mct_app_filter_unref);
 
   if (self->locations_dialog)
     gtk_widget_destroy (GTK_WIDGET (self->locations_dialog));
