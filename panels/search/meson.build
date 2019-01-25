@@ -27,6 +27,10 @@ resource_data = files(
   'search-locations-dialog.ui',
 )
 
+deps = common_deps + [
+    dependency('eos-parental-controls-0')
+  ]
+
 sources += gnome.compile_resources(
   'cc-' + cappletname + '-resources',
   cappletname + '.gresource.xml',
@@ -44,6 +48,6 @@ panels_libs += static_library(
   cappletname,
   sources: sources,
   include_directories: [ top_inc, common_inc ],
-  dependencies: common_deps,
+  dependencies: deps,
   c_args: cflags
 )
