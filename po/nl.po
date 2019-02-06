@@ -6,6 +6,7 @@
 # Almer S. Tigelaar <almer@gnome.org>, 2001
 # Dennis Smit <synap@area101.penguin.nl>, 2000
 # Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2011-2017
+# Heimen Stoffels <vistausss@outlook.com>, 2019
 # Huib Kleinhout <huib@stack.nl>, 2002
 # Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2002
 # Justin van Steijn <justin50@live.nl>, 2016
@@ -19,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-07 19:01+0000\n"
-"PO-Revision-Date: 2019-01-08 15:05+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
+"POT-Creation-Date: 2019-02-06 13:42+0000\n"
+"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/endless-os/gnome-control-center/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +42,7 @@ msgstr "Verandert gedurende de dag"
 #. To translators: This is a noun, not a verb
 #: ../panels/background/background.ui.h:5
 msgid "_Lock Screen"
-msgstr "_Vergrendelingsscherm"
+msgstr "_Vergrendelscherm"
 
 #: ../panels/background/background.ui.h:6
 msgctxt "background, style"
@@ -66,7 +67,7 @@ msgstr "Schalen"
 #: ../panels/background/background.ui.h:10
 msgctxt "background, style"
 msgid "Fill"
-msgstr "Vullen"
+msgstr "Opvullen"
 
 #: ../panels/background/background.ui.h:11
 msgctxt "background, style"
@@ -89,7 +90,7 @@ msgstr "Achtergrond kiezen"
 
 #: ../panels/background/cc-background-chooser-dialog.c:504
 msgid "Pictures"
-msgstr "Foto’s"
+msgstr "Afbeeldingen"
 
 #. translators: No pictures were found
 #: ../panels/background/cc-background-chooser-dialog.c:536
@@ -111,7 +112,7 @@ msgstr "Persoonlijke map"
 #: ../panels/background/cc-background-chooser-dialog.c:566
 #, c-format
 msgid "You can add images to your %s folder and they will show up here"
-msgstr "U kunt afbeeldingen toevoegen aan uw %s-map waarna ze hier weergegeven zullen worden"
+msgstr "Je kunt afbeeldingen toevoegen aan je %s-map; daarna worden ze hier getoond"
 
 #: ../panels/background/cc-background-chooser-dialog.c:573
 #: ../panels/color/cc-color-panel.c:225 ../panels/color/cc-color-panel.c:963
@@ -160,7 +161,7 @@ msgstr "%d × %d"
 
 #: ../panels/background/cc-background-item.c:333
 msgid "No Desktop Background"
-msgstr "Geen werkbladachtergrond"
+msgstr "Geen bureaubladachtergrond"
 
 #: ../panels/background/cc-background-panel.c:292
 msgid "Current background"
@@ -175,12 +176,12 @@ msgstr "Achtergrond"
 
 #: ../panels/background/gnome-background-panel.desktop.in.in.h:3
 msgid "Change your background image to a wallpaper or photo"
-msgstr "Achtergrond wijzigen in een achtergrondafbeelding of foto"
+msgstr "Wijzig je achtergrond in een achtergrondafbeelding of foto"
 
 #. Translators: those are keywords for the background control-center panel
 #: ../panels/background/gnome-background-panel.desktop.in.in.h:5
 msgid "Wallpaper;Screen;Desktop;"
-msgstr "Wallpaper;Screen;Desktop;Achtergrond;Scherm;Bureaublad;"
+msgstr "Achtergrondafbeelding;Scherm;Bureaublad;"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:265
 msgid "Turn Off Airplane Mode"
@@ -188,7 +189,7 @@ msgstr "Vliegtuigstand uitschakelen"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:331
 msgid "No Bluetooth Found"
-msgstr "Bluetooth niet aangetroffen"
+msgstr "Geen Bluetooth aangetroffen"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:331
 msgid "Plug in a dongle to use Bluetooth."
@@ -204,19 +205,19 @@ msgstr "Schakel in om apparaten aan te sluiten en bestandsoverdrachten te ontvan
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:333
 msgid "Airplane Mode is on"
-msgstr "Vliegtuigstand is ingeschakeld"
+msgstr "Vliegtuigstand ingeschakeld"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:333
 msgid "Bluetooth is disabled when airplane mode is on."
-msgstr "Bluetooth wordt uitgeschakeld in vliegtuigstand."
+msgstr "Als vliegtuigstand is ingeschakeld, dan wordt Bluetooth uitgeschakeld."
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:334
 msgid "Hardware Airplane Mode is on"
-msgstr "Hardware-vliegtuigstand is ingeschakeld"
+msgstr "Hardwarevliegtuigstand is ingeschakeld"
 
 #: ../panels/bluetooth/cc-bluetooth-panel.c:334
 msgid "Turn off the Airplane mode switch to enable Bluetooth."
-msgstr "Schakel vliegtuigstand uit om Bluetooth mogelijk te maken."
+msgstr "Schakel vliegtuigstand uit om Bluetooth te gebruiken."
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -227,17 +228,17 @@ msgstr "Bluetooth"
 
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:3
 msgid "Turn Bluetooth on and off and connect your devices"
-msgstr "Bluetooth aan- en uitzetten en uw apparaten aansluiten"
+msgstr "Schakel Bluetooth in en uit en verbind je apparaten"
 
 #. Translators: those are keywords for the bluetooth control-center panel
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:5
 msgid "share;sharing;bluetooth;obex;"
-msgstr "share;sharing;bluetooth;obex;delen;"
+msgstr "delen;deling;bluetooth;obex;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: ../panels/color/cc-color-calibrate.c:361
 msgid "Place your calibration device over the square and press “Start”"
-msgstr "Plaats uw kalibratieapparaat boven het vierkant en druk op ‘Starten’"
+msgstr "Plaats je kalibratieapparaat boven het vierkant en druk op ‘Starten’"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -245,7 +246,7 @@ msgstr "Plaats uw kalibratieapparaat boven het vierkant en druk op ‘Starten’
 #: ../panels/color/cc-color-calibrate.c:367
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr "Zet uw kalibratieapparaat in de kalibratiepositie en druk op ‘Doorgaan’"
+msgstr "Zet je kalibratieapparaat in de kalibratiepositie en druk op ‘Doorgaan’"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -253,7 +254,7 @@ msgstr "Zet uw kalibratieapparaat in de kalibratiepositie en druk op ‘Doorgaan
 #: ../panels/color/cc-color-calibrate.c:373
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr "Zet uw kalibratieapparaat in de oppervlaktepositie en druk op ‘Doorgaan’"
+msgstr "Zet je kalibratieapparaat in de oppervlaktepositie en druk op ‘Doorgaan’"
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -272,19 +273,19 @@ msgstr "Er is een interne fout opgetreden die niet hersteld kon worden."
 #. * installed, which should only affect insane distros
 #: ../panels/color/cc-color-calibrate.c:415
 msgid "Tools required for calibration are not installed."
-msgstr "De hulpmiddelen nodig voor de kalibratie zijn niet geïnstalleerd."
+msgstr "De voor kalibratie benodigde hulpmiddelen zijn niet geïnstalleerd."
 
 #. TRANSLATORS: The profile failed for some reason
 #: ../panels/color/cc-color-calibrate.c:421
 msgid "The profile could not be generated."
-msgstr "Het profiel kon niet gegenereerd worden."
+msgstr "Het profiel kan niet worden gegenereerd."
 
 #. TRANSLATORS: The user specified a whitepoint that was
 #. * unobtainable with the hardware they've got -- see
 #. * https://en.wikipedia.org/wiki/White_point for details
 #: ../panels/color/cc-color-calibrate.c:427
 msgid "The target whitepoint was not obtainable."
-msgstr "Het ‘target whitepoint’ was niet te krijgen."
+msgstr "Het ‘target whitepoint’ is niet opvraagbaar."
 
 #. TRANSLATORS: the display calibration process is finished
 #: ../panels/color/cc-color-calibrate.c:467
@@ -300,7 +301,7 @@ msgstr "Kalibratie mislukt!"
 #. TRANSLATORS: The user can now remove the sensor from the screen
 #: ../panels/color/cc-color-calibrate.c:482
 msgid "You can remove the calibration device."
-msgstr "U kunt het kalibratieapparaat verwijderen."
+msgstr "Je kunt het kalibratieapparaat verwijderen."
 
 #. TRANSLATORS: The user has to be careful not to knock the
 #. * display off the screen (although we do cope if this is
@@ -363,7 +364,7 @@ msgstr "Kleurprofielen voor %s tonen"
 #. not calibrated
 #: ../panels/color/cc-color-device.c:323
 msgid "Not calibrated"
-msgstr "Niet gekalibreerd"
+msgstr "Niet-gekalibreerd"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
@@ -411,7 +412,7 @@ msgstr "Scherm"
 #: ../panels/color/cc-color-panel.c:908
 #, c-format
 msgid "Failed to upload file: %s"
-msgstr "Bestand uploaden mislukt: %s"
+msgstr "Kan bestand niet uploaden: %s"
 
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
@@ -426,11 +427,11 @@ msgstr "Noteer deze URL."
 
 #: ../panels/color/cc-color-panel.c:925
 msgid "Restart this computer and boot your normal operating system."
-msgstr "Herstart deze computer en start op met uw normale besturingssysteem."
+msgstr "Herstart deze computer en start je normale besturingssysteem op."
 
 #: ../panels/color/cc-color-panel.c:926
 msgid "Type the URL into your browser to download and install the profile."
-msgstr "Voer de URL in in uw browser om het profiel te downloaden en te installeren."
+msgstr "Voer de URL in in je browser om het profiel te downloaden en installeren."
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
 #: ../panels/color/cc-color-panel.c:960
@@ -440,24 +441,24 @@ msgstr "Profiel opslaan"
 #: ../panels/color/cc-color-panel.c:964
 #: ../panels/network/connection-editor/vpn-helpers.c:311
 msgid "_Save"
-msgstr "_Opslaan"
+msgstr "Op_slaan"
 
 #. TRANSLATORS: this is when the button is sensitive
 #: ../panels/color/cc-color-panel.c:1314
 msgid "Create a color profile for the selected device"
-msgstr "Kleurprofiel maken voor het geselecteerde apparaat"
+msgstr "Kleurprofiel creëren voor geselecteerd apparaat"
 
 #. TRANSLATORS: this is when the button is insensitive
 #: ../panels/color/cc-color-panel.c:1329 ../panels/color/cc-color-panel.c:1353
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr "Het meetinstrument is niet gevonden. Controleer of het aan staat en correct verbonden is."
+msgstr "Het meetinstrument is niet aangetroffen. Controleer of het is ingeschakeld en juist is aangesloten."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: ../panels/color/cc-color-panel.c:1363
 msgid "The measuring instrument does not support printer profiling."
-msgstr "Het meetinstrument ondersteunt het profileren van printers niet."
+msgstr "Het meetinstrument heeft geen ondersteuning voor het profileren van printers."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: ../panels/color/cc-color-panel.c:1374
@@ -542,7 +543,7 @@ msgstr "Dit profiel is mogelijk niet meer accuraat"
 
 #: ../panels/color/color-calibrate.ui.h:1
 msgid "Display Calibration"
-msgstr "Kalibratie weergeven"
+msgstr "Schermkalibratie"
 
 #. This starts the calibration process
 #: ../panels/color/color-calibrate.ui.h:4
@@ -552,7 +553,7 @@ msgstr "_Starten"
 #. This resumes the calibration process
 #: ../panels/color/color-calibrate.ui.h:6
 msgid "_Resume"
-msgstr "_Hervatten"
+msgstr "He_rvatten"
 
 #. This button returns the user back to the color control panel
 #: ../panels/color/color-calibrate.ui.h:8
@@ -574,12 +575,12 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr "Kalibratie zal een profiel opleveren dat u kunt gebruiken voor kleurbeheer van uw scherm. Hoe langer u kalibreert, hoe beter de kwaliteit van het kleurprofiel."
+msgstr "Kalibratie levert een profiel op dat je kunt gebruiken voor kleurbeheer van je scherm. Hoe langer je kalibreert, hoe beter de kwaliteit van het kleurprofiel."
 
 #: ../panels/color/color.ui.h:3
 msgid ""
 "You will not be able to use your computer while calibration takes place."
-msgstr "Tijdens het kalibreren kunt u uw computer niet gebruiken."
+msgstr "Tijdens het kalibreren kun je je computer niet gebruiken."
 
 #. This is the approximate time it takes to calibrate the display.
 #: ../panels/color/color.ui.h:5
@@ -597,7 +598,7 @@ msgstr "Kalibratiekwaliteit"
 
 #: ../panels/color/color.ui.h:9
 msgid "Select the sensor device you want to use for calibration."
-msgstr "Het sensorapparaat dat u voor kalibratie wilt gebruiken selecteren."
+msgstr "Kies het sensorapparaat dat je wilt gebruiken voor het uitvoeren van de kalibratie."
 
 #: ../panels/color/color.ui.h:10
 msgid "Calibration Device"
@@ -605,7 +606,7 @@ msgstr "Kalibratieapparaat"
 
 #: ../panels/color/color.ui.h:11
 msgid "Select the type of display that is connected."
-msgstr "Het type scherm dat aangesloten is selecteren."
+msgstr "Kies het aangesloten scherm."
 
 #: ../panels/color/color.ui.h:12
 msgid "Display Type"
@@ -615,7 +616,7 @@ msgstr "Type beeldscherm"
 msgid ""
 "Select a display target white point. Most displays should be calibrated to a"
 " D65 illuminant."
-msgstr "Een ‘target white point' voor het scherm selecteren. De meeste schermen moeten naar een ‘D65 illuminant’ gekalibreerd worden."
+msgstr "Kies een ‘target white point' voor het scherm. De meeste schermen moeten naar een ‘D65 illuminant’ gekalibreerd worden."
 
 #: ../panels/color/color.ui.h:14
 msgid "Profile Whitepoint"
@@ -625,23 +626,23 @@ msgstr "Whitepoint-profiel"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr "Stel de voor u juiste helderheid van het scherm in. Kleurbeheer zal het nauwkeurigst zijn bij deze helderheid."
+msgstr "Stel de voor jouw juiste helderheid van het scherm in. Kleurbeheer zal het nauwkeurigst zijn bij deze helderheid."
 
 #: ../panels/color/color.ui.h:16
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr "U kunt ook gebruik maken van het helderheidsniveau dat gebruikt wordt met een van de andere profielen voor dit apparaat."
+msgstr "Je kunt ook gebruikmaken van het helderheidsniveau dat gebruikt wordt met één van de andere profielen voor dit apparaat."
 
 #: ../panels/color/color.ui.h:17
 msgid "Display Brightness"
-msgstr "Helderheid van het scherm"
+msgstr "Schermhelderheid"
 
 #: ../panels/color/color.ui.h:18
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr "U kunt een kleurprofiel gebruiken op verschillende computers, of zelfs een profiel aanmaken voor verschillende lichtomstandigheden."
+msgstr "Je kunt een kleurprofiel gebruiken op verschillende computers, of zelfs een profiel creëren voor verschillende lichtomstandigheden."
 
 #: ../panels/color/color.ui.h:19
 msgid "Profile Name:"
@@ -653,7 +654,7 @@ msgstr "Profielnaam"
 
 #: ../panels/color/color.ui.h:21
 msgid "Profile successfully created!"
-msgstr "Profiel met succes aangemaakt!"
+msgstr "Het profiel is gecreëerd!"
 
 #: ../panels/color/color.ui.h:22
 msgid "Copy profile"
@@ -676,7 +677,7 @@ msgid ""
 "You may find these instructions on how to use the profile on <a "
 "href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
 "href=\"windows\">Microsoft Windows</a> systems useful."
-msgstr "De instructies over hoe een profiel te gebruiken op <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a>- en <a href=\"windows\">Microsoft Windows</a>-systemen kunnen nuttig zijn."
+msgstr "De instructies over het gebruik van het profiel op <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple macOS</a> en <a href=\"windows\">Microsoft Windows</a> kunnen nuttig zijn."
 
 #: ../panels/color/color.ui.h:27
 #: ../panels/user-accounts/um-fingerprint-dialog.c:723
@@ -703,7 +704,7 @@ msgstr "_Toevoegen"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr "Er zijn problemen ontdekt. Het profiel werkt mogelijk niet correct. <a href=\"\">Details tonen.</a>"
+msgstr "Er zijn problemen ontdekt; het profiel werkt mogelijk niet goed. <a href=\"\">Meer informatie.</a>"
 
 #: ../panels/color/color.ui.h:33
 msgid "Each device needs an up to date color profile to be color managed."
@@ -711,15 +712,15 @@ msgstr "Elk apparaat heeft een actueel bijgewerkt kleurprofiel nodig om gebruik 
 
 #: ../panels/color/color.ui.h:34
 msgid "_Set for all users"
-msgstr "Voor _alle gebruikers instellen"
+msgstr "In_stellen voor alle gebruikers"
 
 #: ../panels/color/color.ui.h:35
 msgid "Set this profile for all users on this computer"
-msgstr "Dit profiel instellen voor alle gebruikers op deze computer"
+msgstr "Stel dit profiel in voor alle gebruikers op deze computer"
 
 #: ../panels/color/color.ui.h:36
 msgid "_Enable"
-msgstr "_Inschakelen"
+msgstr "Inschak_elen"
 
 #: ../panels/color/color.ui.h:37
 msgid "_Add profile"
@@ -731,11 +732,11 @@ msgstr "_Kalibreren…"
 
 #: ../panels/color/color.ui.h:39
 msgid "Calibrate the device"
-msgstr "Apparaat kalibreren"
+msgstr "Kalibreer het apparaat"
 
 #: ../panels/color/color.ui.h:40
 msgid "_Remove profile"
-msgstr "Profiel _verwijderen"
+msgstr "P_rofiel verwijderen"
 
 #: ../panels/color/color.ui.h:41
 msgid "_View details"
@@ -767,23 +768,23 @@ msgstr "Plasma"
 
 #: ../panels/color/color.ui.h:48
 msgid "LCD (CCFL backlight)"
-msgstr "LCD (CCFL achtergrondverlichting)"
+msgstr "LCD (CCFL-achtergrondverlichting)"
 
 #: ../panels/color/color.ui.h:49
 msgid "LCD (RGB LED backlight)"
-msgstr "LCD (RGB LED achtergrondverlichting)"
+msgstr "LCD (RGB LED-achtergrondverlichting)"
 
 #: ../panels/color/color.ui.h:50
 msgid "LCD (white LED backlight)"
-msgstr "LCD (wit LED achtergrondverlichting)"
+msgstr "LCD (witte LED-achtergrondverlichting)"
 
 #: ../panels/color/color.ui.h:51
 msgid "Wide gamut LCD (CCFL backlight)"
-msgstr "Wide gamut LCD (CCFL achtergrondverlichting)"
+msgstr "Wide gamut LCD (CCFL-achtergrondverlichting)"
 
 #: ../panels/color/color.ui.h:52
 msgid "Wide gamut LCD (RGB LED backlight)"
-msgstr "Wide gamut LCD (RGB LED achtergrondverlichting)"
+msgstr "Wide gamut LCD (RGB LED-achtergrondverlichting)"
 
 #: ../panels/color/color.ui.h:53
 msgctxt "Calibration quality"
@@ -819,7 +820,7 @@ msgstr "Scherm-eigen"
 
 #: ../panels/color/color.ui.h:60
 msgid "D50 (Printing and publishing)"
-msgstr "D50 (Afdrukken en publiceren)"
+msgstr "D50 (afdrukken en publiceren)"
 
 #: ../panels/color/color.ui.h:61
 msgid "D55"
@@ -827,7 +828,7 @@ msgstr "D55"
 
 #: ../panels/color/color.ui.h:62
 msgid "D65 (Photography and graphics)"
-msgstr "D65 (Fotografie en afbeeldingen)"
+msgstr "D65 (fotografie en grafisch ontwerp)"
 
 #: ../panels/color/color.ui.h:63
 msgid "D75"
@@ -843,12 +844,12 @@ msgstr "Kleur"
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:3
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr "De kleur van uw apparaten, zoals beeldschermen, camera's of printers kalibreren"
+msgstr "Kalibreer de kleur van je apparaten, zoals beeldschermen, camera's en printers"
 
 #. Translators: those are keywords for the color control-center panel
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:5
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
-msgstr "Color;ICC;Profile;Calibrate;Printer;Display;Kleur;Kalibreren;Weergave;"
+msgstr "Kleur;Kalibreren;Weergave;ICC;Printer;Beeldscherm;"
 
 #: ../panels/common/cc-common-language.c:322
 msgid "Other…"
@@ -1019,7 +1020,7 @@ msgstr "∶"
 
 #: ../panels/datetime/datetime.ui.h:17
 msgid "Minute"
-msgstr "minuut"
+msgstr "Minuut"
 
 #: ../panels/datetime/datetime.ui.h:18
 msgid "Time Zone"
@@ -1027,7 +1028,7 @@ msgstr "Tijdzone"
 
 #: ../panels/datetime/datetime.ui.h:19
 msgid "Search for a city"
-msgstr "Een locatie zoeken"
+msgstr "Zoek een locatie"
 
 #: ../panels/datetime/datetime.ui.h:20
 msgid "Automatic _Date & Time"
@@ -1047,7 +1048,7 @@ msgstr "Datum en _tijd"
 
 #: ../panels/datetime/datetime.ui.h:24
 msgid "Time Z_one"
-msgstr "_Tijdzone"
+msgstr "Tijdz_one"
 
 #: ../panels/datetime/datetime.ui.h:25
 msgid "Time _Format"
@@ -1063,20 +1064,20 @@ msgstr "AM / PM"
 
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:3
 msgid "Change the date and time, including time zone"
-msgstr "Datum en tijd, inclusief tijdzone, wijzigen"
+msgstr "Wijzig de datum en tijd, inclusief de tijdzone"
 
 #. Translators: those are keywords for the date and time control-center panel
 #: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:5
 msgid "Clock;Timezone;Location;"
-msgstr "Clock;Timezone;Location;Klok;Tijdzone;Locatie;"
+msgstr "Klok;Tijdzone;Locatie;"
 
 #: ../panels/datetime/org.gnome.controlcenter.datetime.policy.in.h:1
 msgid "Change system time and date settings"
-msgstr "Datum en tijd van systeem wijzigen"
+msgstr "Wijzig de datum en tijd van het systeem"
 
 #: ../panels/datetime/org.gnome.controlcenter.datetime.policy.in.h:2
 msgid "To change time or date settings, you need to authenticate."
-msgstr "Om de datum en tijd van het systeem te wijzigen dient u zich te authenticeren."
+msgstr "Om de datum en tijd van het systeem te wijzigen, moet je je authenticeren."
 
 #: ../panels/display/cc-display-panel.c:750
 msgctxt "Display rotation"
@@ -1120,7 +1121,7 @@ msgstr "Verversingsfrequentie"
 
 #: ../panels/display/cc-display-panel.c:1225
 msgid "Scale"
-msgstr "Schalen"
+msgstr "Afmetingen wijzigen"
 
 #: ../panels/display/cc-display-panel.c:1277
 msgid "Adjust for TV"
@@ -1139,7 +1140,7 @@ msgstr "Schermvolgorde"
 msgid ""
 "Drag displays to match your setup. The top bar is placed on the primary "
 "display."
-msgstr "Schermen verslepen om overeen te komen met uw instelling. De menubalk wordt geplaatst op het primaire scherm."
+msgstr "Versleep schermen om ze overeen te laten komen met je opstelling. De menubalk wordt op je primaire scherm geplaatst."
 
 #: ../panels/display/cc-display-panel.c:2034
 msgid "Display Mode"
@@ -1165,7 +1166,7 @@ msgstr "Wijzigingen toepassen?"
 #: ../panels/network/connection-editor/connection-editor.ui.h:2
 #: ../panels/network/network-wifi.ui.h:2
 msgid "_Apply"
-msgstr "_Toepassen"
+msgstr "Toep_assen"
 
 #: ../panels/display/cc-display-panel.c:3164
 #, c-format
@@ -1205,11 +1206,11 @@ msgstr "Uit"
 
 #: ../panels/display/cc-display-panel.c:3401
 msgid "_Night Light"
-msgstr "_Nachtlicht"
+msgstr "_Nachtverlichting"
 
 #: ../panels/display/cc-display-panel.c:3466
 msgid "Could not get screen information"
-msgstr "Kon informatie over het scherm niet verkrijgen"
+msgstr "Kan geen informatie ophalen over het scherm"
 
 #. This cancels the redshift inhibit.
 #: ../panels/display/display.ui.h:2
@@ -1225,17 +1226,17 @@ msgstr "Tijdelijk uitgeschakeld tot morgen"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr "Nachtlicht maakt de schermkleur warmer. Dit kan helpen vermoeide ogen en slapeloosheid te voorkomen."
+msgstr "Nachtverlichting maakt de schermkleur warmer. Dit kan helpen vermoeide ogen en slapeloosheid te voorkomen."
 
 #. This is the redshift functionality where we suppress blue light when the
 #. sun has gone down
 #: ../panels/display/display.ui.h:7
 msgid "Night Light"
-msgstr "Nachtlicht"
+msgstr "Nachtverlichting"
 
 #: ../panels/display/display.ui.h:8
 msgid "Schedule"
-msgstr "Planning"
+msgstr "Programma"
 
 #: ../panels/display/display.ui.h:9
 msgid "Sunset to Sunrise"
@@ -1261,12 +1262,12 @@ msgstr ":"
 #. This is the short form for the time period in the morning
 #: ../panels/display/display.ui.h:14 ../panels/updates/cc-tariff-editor.ui.h:3
 msgid "AM"
-msgstr "am"
+msgstr "AM"
 
 #. This is the short form for the time period in the afternoon
 #: ../panels/display/display.ui.h:16 ../panels/updates/cc-tariff-editor.ui.h:5
 msgid "PM"
-msgstr "pm"
+msgstr "PM"
 
 #: ../panels/display/display.ui.h:17 ../panels/updates/cc-tariff-editor.ui.h:6
 msgid "To"
@@ -1277,17 +1278,17 @@ msgstr "tot"
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:2
 msgid "Dis­plays"
-msgstr "Schermen"
+msgstr "Beeldschermen"
 
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:3
 msgid "Choose how to use connected monitors and projectors"
-msgstr "Kiezen hoe aangesloten beeldschermen en projectoren gebruikt worden"
+msgstr "Kies hoe aangesloten beeldschermen en projectoren gebruikt worden"
 
 #. Translators: those are keywords for the display control-center panel
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:5
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
-msgstr "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;Paneel;Scherm;Resolutie;Verversen;Beeldscherm;Nacht;Licht;Blauw;kleur;zonsondergang;zonsopgang;"
+msgstr ";Paneel;Scherm;Resolutie;Verversen;Beeldscherm;Nacht;Licht;Blauw;kleur;zonsondergang;zonsopgang;"
 
 #. TRANSLATORS: AP type
 #: ../panels/info/cc-info-overview-panel.c:481
@@ -1341,23 +1342,23 @@ msgstr "Andere media"
 
 #: ../panels/info/cc-info-removable-media-panel.c:444
 msgid "Select an application for audio CDs"
-msgstr "Selecteer een toepassing voor audio-cd's"
+msgstr "Kies een toepassing voor audio-cd's"
 
 #: ../panels/info/cc-info-removable-media-panel.c:445
 msgid "Select an application for video DVDs"
-msgstr "Selecteer een toepassing voor video-dvd's"
+msgstr "Kies een toepassing voor video-dvd's"
 
 #: ../panels/info/cc-info-removable-media-panel.c:446
 msgid "Select an application to run when a music player is connected"
-msgstr "Selecteer de te starten toepassing als een muziekspeler wordt aangesloten"
+msgstr "Kies de toepassing die moet worden geopend bij het aansluiten van een muziekspeler"
 
 #: ../panels/info/cc-info-removable-media-panel.c:447
 msgid "Select an application to run when a camera is connected"
-msgstr "Selecteer de te starten toepassing als een camera wordt aangesloten"
+msgstr "Kies de toepassing die moet worden geopend bij het aansluiten van een camera"
 
 #: ../panels/info/cc-info-removable-media-panel.c:448
 msgid "Select an application for software CDs"
-msgstr "Selecteer een toepassing voor software-cd's"
+msgstr "Kies een toepassing voor software-cd's"
 
 #. translators: these strings are duplicates of shared-mime-info
 #. * strings, just here to fix capitalization of the English originals.
@@ -1420,31 +1421,31 @@ msgstr "Standaardtoepassingen"
 
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:3
 msgid "Configure Default Applications"
-msgstr "Standaardtoepassingen configureren"
+msgstr "Stel de standaardtoepassingen in"
 
 #. Translators: those are keywords for the Default Applications panel
 #: ../panels/info/gnome-default-apps-panel.desktop.in.in.h:5
 msgid "default;application;preferred;media;"
-msgstr "default;application;preferred;media;standaard;toepassing;voorkeur;"
+msgstr "standaard;toepassing;voorkeur;media;"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:2
 msgid "Ab­out"
-msgstr "Info"
+msgstr "Informatie"
 
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:3
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:3
 msgid "View information about your system"
-msgstr "Systeeminformatie bekijken"
+msgstr "Bekijk informatie over je systeem"
 
 #. sure that you use the same "translation" for those keywords
 #: ../panels/info/gnome-info-overview-panel.desktop.in.in.h:5
 #: ../panels/info/gnome-info-panel.desktop.in.in.h:5
 msgid ""
 "device;system;information;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr "device;system;information;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;apparaat;informatie;geheugen;versie;standaard;toepassing;voorkeur;"
+msgstr "apparaat;informatie;geheugen;versie;standaard;toepassing;voorkeur;media;"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -1462,21 +1463,21 @@ msgstr "Verwijderbare media"
 
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:3
 msgid "Configure Removable Media settings"
-msgstr "Instellingen voor verwijderbare media configureren"
+msgstr "Stel de instellingen voor verwijderbare media in"
 
 #. Translators: those are keywords for the Removable Media panel
 #: ../panels/info/gnome-removable-media-panel.desktop.in.in.h:5
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;apparaat;standaard;toepassing;voorkeur;schijf;verwijderbaar;"
+msgstr "apparaat;standaard;toepassing;voorkeur;schijf;verwijderbaar;media;"
 
 #: ../panels/info/info-default-apps.ui.h:1
 msgid "_Web"
-msgstr "_Web"
+msgstr "_Webbrowser"
 
 #: ../panels/info/info-default-apps.ui.h:2
 msgid "_Mail"
-msgstr "_E-mail"
+msgstr "E-_mail"
 
 #: ../panels/info/info-default-apps.ui.h:3
 msgid "_Calendar"
@@ -1505,7 +1506,7 @@ msgstr "Versie"
 
 #: ../panels/info/info-overview.ui.h:3
 msgid "Memory"
-msgstr "Geheugen"
+msgstr "Werkgeheugen"
 
 #: ../panels/info/info-overview.ui.h:4
 msgid "Processor"
@@ -1513,7 +1514,7 @@ msgstr "Processor"
 
 #: ../panels/info/info-overview.ui.h:5
 msgid "Graphics"
-msgstr "Grafisch"
+msgstr "Videokaart"
 
 #. To translators: this field contains the distro type
 #: ../panels/info/info-overview.ui.h:7
@@ -1530,18 +1531,18 @@ msgstr "Schijf"
 
 #: ../panels/info/info-overview.ui.h:10
 msgid "Calculating…"
-msgstr "Wordt berekend…"
+msgstr "Bezig met berekenen..."
 
 #. Translators: A label to inform the user that the check-for-updates link
 #. that used to be here has been moved to the App Center.
 #: ../panels/info/info-overview.ui.h:12
 msgid "<i>OS updates are now managed in the App Center</i>"
-msgstr ""
+msgstr "<i>Systeemupdates worden vanaf nu beheerd via het Appcentrum</i>"
 
 #. Translators: A link to the terms of use of Endless OS.
 #: ../panels/info/info-overview.ui.h:14
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
-msgstr ""
+msgstr "<a href='attribution-link'>Endless-gebruiksvoorwaarden</a>"
 
 #: ../panels/info/info-removable-media.ui.h:1
 msgid "Select how media should be handled"
@@ -1569,7 +1570,7 @@ msgstr "_Andere media…"
 
 #: ../panels/info/info-removable-media.ui.h:8
 msgid "_Never prompt or start programs on media insertion"
-msgstr "_Nooit vragen en ook geen toepassingen starten als media ingevoerd worden"
+msgstr "_Nooit vragen en ook geen toepassingen starten als media wordt ingevoerd"
 
 #: ../panels/info/info-removable-media.ui.h:9
 msgid "Select how other media should be handled"
@@ -1589,15 +1590,15 @@ msgstr "Geluid en media"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:2
 msgid "Volume mute"
-msgstr "Geluid dempen"
+msgstr "Volume dempen"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:3
 msgid "Volume down"
-msgstr "Geluid zachter"
+msgstr "Volume omlaag"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:4
 msgid "Volume up"
-msgstr "Geluid harder"
+msgstr "Volume omhoog"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:5
 msgid "Launch media player"
@@ -1605,7 +1606,7 @@ msgstr "Mediaspeler starten"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:6
 msgid "Play (or play/pause)"
-msgstr "Afspelen (of spelen/pauzeren)"
+msgstr "Afspelen (of afspelen/pauzeren)"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:7
 msgid "Pause playback"
@@ -1617,11 +1618,11 @@ msgstr "Afspelen stoppen"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:9
 msgid "Previous track"
-msgstr "Vorige track"
+msgstr "Vorig nummer"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:10
 msgid "Next track"
-msgstr "Volgende track"
+msgstr "Volgend nummer"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:11
 msgid "Eject"
@@ -1683,31 +1684,31 @@ msgstr "Schermafdrukken"
 #. directory
 #: ../panels/keyboard/01-screenshot.xml.in.h:3
 msgid "Save a screenshot to $PICTURES"
-msgstr "Een schermafdruk opslaan in $PICTURES"
+msgstr "Schermafdruk opslaan in $PICTURES"
 
 #. translators: $PICTURES will be replaced by the name of the XDG Pictures
 #. directory
 #: ../panels/keyboard/01-screenshot.xml.in.h:5
 msgid "Save a screenshot of a window to $PICTURES"
-msgstr "Een schermafdruk van een venster opslaan in $PICTURES"
+msgstr "Schermafdruk van een venster opslaan in $PICTURES"
 
 #. translators: $PICTURES will be replaced by the name of the XDG Pictures
 #. directory
 #: ../panels/keyboard/01-screenshot.xml.in.h:7
 msgid "Save a screenshot of an area to $PICTURES"
-msgstr "Een schermafdruk van een gebied opslaan in $PICTURES"
+msgstr "Schermafdruk van een gebied opslaan in $PICTURES"
 
 #: ../panels/keyboard/01-screenshot.xml.in.h:8
 msgid "Copy a screenshot to clipboard"
-msgstr "Een schermafdruk naar het klembord kopiëren"
+msgstr "Schermafdruk kopiëren naar klembord"
 
 #: ../panels/keyboard/01-screenshot.xml.in.h:9
 msgid "Copy a screenshot of a window to clipboard"
-msgstr "Een schermafdruk van een venster naar het klembord kopiëren"
+msgstr "Schermafdruk van een venster kopiëren naar klembord"
 
 #: ../panels/keyboard/01-screenshot.xml.in.h:10
 msgid "Copy a screenshot of an area to clipboard"
-msgstr "Een schermafdruk van een gebied naar het klembord kopiëren"
+msgstr "Schermafdruk van een gebied kopiëren naar klembord"
 
 #: ../panels/keyboard/01-screenshot.xml.in.h:11
 msgid "Record a short screencast"
@@ -1719,7 +1720,7 @@ msgstr "Systeem"
 
 #: ../panels/keyboard/01-system.xml.in.h:2
 msgid "Log out"
-msgstr "Afmelden"
+msgstr "Uitloggen"
 
 #: ../panels/keyboard/01-system.xml.in.h:3
 msgid "Lock screen"
@@ -1747,15 +1748,15 @@ msgstr "Schermlezer in- of uitschakelen"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:6
 msgid "Turn on-screen keyboard on or off"
-msgstr "Toetsenbord op scherm in- of uitschakelen"
+msgstr "Virtueel toetsenbord in- of uitschakelen"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:7
 msgid "Increase text size"
-msgstr "Grotere tekst"
+msgstr "Tekst vergroten"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:8
 msgid "Decrease text size"
-msgstr "Kleinere tekst"
+msgstr "Tekst verkleinen"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:9
 msgid "High contrast on or off"
@@ -1765,7 +1766,7 @@ msgstr "Hoog contrast aan of uit"
 #: ../panels/keyboard/cc-keyboard-manager.c:514
 #: ../panels/keyboard/cc-keyboard-manager.c:822
 msgid "Custom Shortcuts"
-msgstr "Aangepaste sneltoets"
+msgstr "Aangepaste sneltoetsen"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
@@ -1778,6 +1779,9 @@ msgstr "Aangepaste sneltoets"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Uitgeschakeld"
@@ -1802,13 +1806,13 @@ msgstr "\"Modifiers-only\"-schakeling naar volgende bron"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:181
 msgid "Reset All Shortcuts?"
-msgstr "Alle sneltoetsen resetten?"
+msgstr "Alle sneltoetsen herstellen?"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:184
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr "Het resetten van de sneltoetsen kan invloed hebben op uw aangepaste sneltoetsen. Dit kan niet ongedaan worden gemaakt."
+msgstr "Het herstellen van de sneltoetsen kan invloed hebben op je aangepaste sneltoetsen. Dit kan niet ongedaan worden gemaakt."
 
 #: ../panels/keyboard/cc-keyboard-panel.c:188
 #: ../panels/keyboard/shortcut-editor.ui.h:9
@@ -1819,18 +1823,18 @@ msgstr "Annuleren"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:189
 msgid "Reset All"
-msgstr "Alles resetten"
+msgstr "Alles herstellen"
 
 #: ../panels/keyboard/cc-keyboard-panel.c:281
 msgid "Reset the shortcut to its default value"
-msgstr "Sneltoets naar standaardwaarde terugzetten"
+msgstr "Sneltoets terugzetten naar standaardwaarde"
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:427
 #, c-format
 msgid ""
 "%s is already being used for <b>%s</b>. If you replace it, %s will be "
 "disabled"
-msgstr "%s wordt al gebruikt voor <b>%s</b>. Als u deze vervangt, zal %s worden uitgeschakeld"
+msgstr "%s wordt al gebruikt voor <b>%s</b>. Als je deze vervangt, dan wordt %s uitgeschakeld."
 
 #: ../panels/keyboard/cc-keyboard-shortcut-editor.c:597
 msgid "Set Custom Shortcut"
@@ -1865,7 +1869,7 @@ msgstr "Sneltoetsen bekijken en wijzigen en typvoorkeuren instellen"
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:5
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;Sneltoets;Werkruimte;Venster;Vergrendelen;"
+msgstr "Volume;Sneltoets;Werkruimte;Venster;Vergrendelen;"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
 #: ../panels/region/input-options.ui.h:4 ../shell/cc-application.c:251
@@ -1874,11 +1878,11 @@ msgstr "Sneltoetsen"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
 msgid "Reset All…"
-msgstr "Alles resetten…"
+msgstr "Alles herstellen…"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
 msgid "Reset all shortcuts to their default keybindings"
-msgstr "Alle sneltoetsen naar hun standaardwaarde terugzetten"
+msgstr "Alle sneltoetsen terugzetten naar hun standaardwaarde"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
 msgid "No keyboard shortcut found"
@@ -1890,7 +1894,7 @@ msgstr "Probeer een andere zoekopdracht"
 
 #: ../panels/keyboard/shortcut-editor.ui.h:1
 msgid "Press Esc to cancel or Backspace to reset the keyboard shortcut."
-msgstr "Druk op Esc om te annuleren, of Backspace om de sneltoets te resetten."
+msgstr "Druk op Esc om te annuleren of Backspace om de sneltoets te herstellen."
 
 #: ../panels/keyboard/shortcut-editor.ui.h:3
 #: ../panels/printers/details-dialog.ui.h:1
@@ -1938,7 +1942,7 @@ msgstr "Instellen"
 
 #: ../panels/mouse/cc-mouse-panel.c:82 ../panels/wacom/cc-wacom-panel.c:402
 msgid "Test Your _Settings"
-msgstr "Uw instellingen _testen"
+msgstr "Test je in_stellingen"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -1956,7 +1960,7 @@ msgstr "De gevoeligheid van muis of touchpad wijzigen en rechts- of linkshandig 
 #. panel
 #: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:5
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;Aanwijzer;Klik;Tik;Dubbel;Knop;"
+msgstr "TrackpadTrackball;Scroll;Aanwijzer;Klik;Tik;Dubbel;Knop;"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:1
 msgid "General"
@@ -1994,11 +1998,11 @@ msgstr "Intervaltijd voor dubbelklik"
 #. The term used comes from OS X so use the same translation if possible.
 #: ../panels/mouse/gnome-mouse-properties.ui.h:10
 msgid "Natural Scrolling"
-msgstr "Natuurlijk schuiven"
+msgstr "Natuurlijk scrollen"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:11
 msgid "Scrolling moves the content, not the view."
-msgstr "Schuiven beweegt de inhoud, niet de weergave."
+msgstr "Scrollen beweegt de inhoud, niet de weergave."
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:12
 msgid "Touchpad"
@@ -2018,7 +2022,7 @@ msgstr "Scrollen met twee vingers"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:16
 msgid "Edge Scrolling"
-msgstr "Aan de rand schuiven"
+msgstr "Aan de rand scrollen"
 
 #: ../panels/mouse/gnome-mouse-test.c:130
 #: ../panels/mouse/gnome-mouse-test.ui.h:1
@@ -2069,11 +2073,11 @@ msgstr "%s VPN"
 
 #: ../panels/network/cc-network-panel.c:779 ../panels/network/wifi.ui.h:7
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr "Oeps! Er ging iets mis. Neem contact op met uw softwareleverancier."
+msgstr "Oeps, er is iets misgegaan. Neem contact op met je softwareleverancier."
 
 #: ../panels/network/cc-network-panel.c:785
 msgid "NetworkManager needs to be running."
-msgstr "Netwerkbeheer moet draaien."
+msgstr "Netwerkbeheer moet actief zijn."
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -2082,7 +2086,7 @@ msgstr "Netwerkbeheer moet draaien."
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:2
 #: ../panels/network/network-wifi.ui.h:58
 msgid "Wi-Fi"
-msgstr "Wifi"
+msgstr "Wi-Fi"
 
 #: ../panels/network/connection-editor/8021x-security-page.ui.h:1
 msgid "802.1x _Security"
@@ -2201,7 +2205,7 @@ msgstr "Zwak"
 #: ../panels/network/net-device-wifi.c:633
 msgctxt "Signal strength"
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oké"
 
 #: ../panels/network/connection-editor/ce-page-details.c:259
 #: ../panels/network/net-device-wifi.c:635
@@ -2338,7 +2342,7 @@ msgstr "DNS"
 
 #: ../panels/network/connection-editor/details-page.ui.h:9
 msgid "Last Used"
-msgstr "Laatst gebruikt"
+msgstr "Laatstgebruikt"
 
 #: ../panels/network/connection-editor/details-page.ui.h:10
 msgid "Connect _automatically"
@@ -2349,12 +2353,12 @@ msgid "Make available to _other users"
 msgstr "Beschikbaar maken voor andere _gebruikers"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
-msgid "Restrict background data usage"
+msgid "Restrict _background data usage"
 msgstr ""
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
-msgstr ""
+msgstr "Nuttig voor verbinden met gegevenskosten of -limieten."
 
 #: ../panels/network/connection-editor/ethernet-page.ui.h:1
 #: ../panels/network/connection-editor/ip4-page.ui.h:11
@@ -2438,7 +2442,7 @@ msgstr "Alleen Link-Local"
 #: ../panels/network/connection-editor/ip4-page.ui.h:5
 #: ../panels/network/connection-editor/ip6-page.ui.h:6
 msgid "Disable"
-msgstr "Uitgeschakelen"
+msgstr "Uitschakelen"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:6
 #: ../panels/network/connection-editor/ip6-page.ui.h:7
@@ -2468,7 +2472,7 @@ msgstr "Automatische DNS"
 #: ../panels/network/connection-editor/ip4-page.ui.h:13
 #: ../panels/network/connection-editor/ip6-page.ui.h:13
 msgid "Separate IP addresses with commas"
-msgstr "IP-adressen met komma's scheiden"
+msgstr "Scheid IP-adressen met komma's"
 
 #: ../panels/network/connection-editor/ip4-page.ui.h:14
 #: ../panels/network/connection-editor/ip6-page.ui.h:14
@@ -2507,7 +2511,7 @@ msgstr "Voorvoegsel"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:273
 msgid "Unable to open connection editor"
-msgstr "Openen van verbindingseditor mislukt"
+msgstr "Kan verbindingsbewerker niet openen"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:291
 msgid "New Profile"
@@ -2520,7 +2524,7 @@ msgstr "VPN"
 
 #: ../panels/network/connection-editor/net-connection-editor.c:751
 msgid "Import from file…"
-msgstr "Uit bestand importeren…"
+msgstr "Importeren uit bestand..."
 
 #: ../panels/network/connection-editor/net-connection-editor.c:785
 msgid "Add VPN"
@@ -2529,7 +2533,7 @@ msgstr "VPN toevoegen"
 #: ../panels/network/connection-editor/security-page.ui.h:1
 #: ../panels/network/network-wifi.ui.h:16
 msgid "S_ecurity"
-msgstr "_Beveiliging"
+msgstr "B_eveiliging"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:141
 msgid "Cannot import VPN connection"
@@ -2541,11 +2545,11 @@ msgid ""
 "The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr "Het bestand ‘%s’ kon niet gelezen worden, of bevat geen herkende informatie over de VPN-verbinding\n\nFout: %s."
+msgstr "Het bestand ‘%s’ kan niet worden uitgelezen of bevat geen bekende informatie over de VPN-verbinding\n\nFout: %s."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:178
 msgid "Select file to import"
-msgstr "Het te importeren bestand selecteren"
+msgstr "Kies het te importeren bestand"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:182
 #: ../panels/printers/pp-details-dialog.c:320
@@ -2561,12 +2565,12 @@ msgstr "Er bestaat al een bestand met de naam ‘%s’."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:232
 msgid "_Replace"
-msgstr "_Vervangen"
+msgstr "Ve_rvangen"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:234
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
-msgstr "Wilt u %s vervangen door de VPN-verbinding die u op wilt slaan?"
+msgstr "Wil je %s vervangen door de VPN-verbinding die je op wilt slaan?"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:270
 msgid "Cannot export VPN connection"
@@ -2578,7 +2582,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr "De VPN-verbinding ‘%s’ kon niet geëxporteerd worden naar %s.\n\nFout: %s."
+msgstr "De VPN-verbinding ‘%s’ kan niet worden geëxporteerd naar %s.\n\nFout: %s."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:307
 msgid "Export VPN connection"
@@ -2586,7 +2590,7 @@ msgstr "VPN-verbinding exporteren"
 
 #: ../panels/network/connection-editor/vpn-page.ui.h:2
 msgid "(Error: unable to load VPN connection editor)"
-msgstr "(Fout: laden van VPN-verbindingseditor mislukt)"
+msgstr "(Fout: kan VPN-verbindingsbewerker niet openen)"
 
 #: ../panels/network/connection-editor/wifi-page.ui.h:1
 #: ../panels/network/network-wifi.ui.h:14
@@ -2612,23 +2616,23 @@ msgstr "Netwerk"
 
 #: ../panels/network/gnome-network-panel.desktop.in.in.h:3
 msgid "Control how you connect to the Internet"
-msgstr "Regelen hoe u verbinding maakt met het internet"
+msgstr "Regel hoe je verbinding maakt met het internet"
 
 #. Translators: those are keywords for the network control-center panel
 #: ../panels/network/gnome-network-panel.desktop.in.in.h:5
 msgid ""
 "Network;Wireless;Wi-"
 "Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr "Network;Netwerk;Wireless;Draadloos;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Breedband;Modem;Bluetooth;vpn;DNS;"
+msgstr "Draadloos;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Breedband;Modem;Bluetooth;vpn;DNS;"
 
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:3
 msgid "Control how you connect to Wi-Fi networks"
-msgstr "Regelen hoe u verbinding maakt met wifi-netwerken"
+msgstr "Regel hoe je verbinding maakt met Wi-Fi-netwerken"
 
 #. Translators: those are keywords for the wi-fi control-center panel
 #: ../panels/network/gnome-wifi-panel.desktop.in.in.h:5
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;"
-msgstr "Network;Netwerk;Wireless;Draadloos;Wi-Fi;Wifi;IP;LAN;Broadband;Breedband;DNS;"
+msgstr "Netwerk;Draadloos;Wi-Fi;Wifi;IP;LAN;Breedband;DNS;"
 
 #: ../panels/network/net-device-ethernet.c:106
 #: ../panels/network/net-device-wifi.c:507
@@ -2682,35 +2686,35 @@ msgstr "Nieuwe verbinding toevoegen"
 #: ../panels/network/net-device-wifi.c:1322
 #, c-format
 msgid "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-msgstr "De inschakeling van de draadloze hotspot zal uw verbinding met <b>%s</b> verbreken."
+msgstr "Door de draadloze hotspot in te schakelen wordt je verbinding met <b>%s</b> verbroken."
 
 #: ../panels/network/net-device-wifi.c:1326
 msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
-msgstr "U heeft geen toegang tot het internet via uw draadloze verbinding zolang de hotspot is geactiveerd."
+msgstr "Zolang de hotspot geactiveerd is, heb je geen toegang tot internet via je draadloze verbinding."
 
 #: ../panels/network/net-device-wifi.c:1333
 msgid "Turn On Wi-Fi Hotspot?"
-msgstr "Wifi-hotspot inschakelen?"
+msgstr "Wi-Fi-hotspot inschakelen?"
 
 #: ../panels/network/net-device-wifi.c:1355
 msgid ""
 "Wi-Fi hotspots are usually used to share an additional Internet connection "
 "over Wi-Fi."
-msgstr "Wifi-hotspots worden meestal gebruikt om een extra internetverbinding via wifi te delen."
+msgstr "Wi-Fi-hotspots worden meestal gebruikt om een extra internetverbinding te delen via Wi-Fi."
 
 #: ../panels/network/net-device-wifi.c:1366
 msgid "_Turn On"
-msgstr "_Aanzetten"
+msgstr "_Inschakelen"
 
 #: ../panels/network/net-device-wifi.c:1443
 msgid "Stop hotspot and disconnect any users?"
-msgstr "Hotspot stoppen en verbinding verbreken met gebruikers?"
+msgstr "Hotspot uitschakelen en verbinding verbreken met gebruikers?"
 
 #: ../panels/network/net-device-wifi.c:1446
 msgid "_Stop Hotspot"
-msgstr "Hotspot _stoppen"
+msgstr "Hotspot uit_schakelen"
 
 #: ../panels/network/net-device-wifi.c:1543
 msgid "System policy prohibits use as a Hotspot"
@@ -2718,13 +2722,13 @@ msgstr "Systeembeleid staat gebruik als hotspot niet toe"
 
 #: ../panels/network/net-device-wifi.c:1546
 msgid "Wireless device does not support Hotspot mode"
-msgstr "Draadloos apparaat ondersteunt de hotspot-modus niet"
+msgstr "Draadloos apparaat heeft geen ondersteuning voor hotspotstand"
 
 #: ../panels/network/net-device-wifi.c:1684
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr "Netwerkdetails voor de geselecteerde netwerken, inclusief wachtwoord en aangepaste configuratie, zullen verloren gaan."
+msgstr "Netwerkgegevens van de geselecteerde netwerken, inclusief wachtwoord en aangepaste configuratie, gaan verloren."
 
 #: ../panels/network/net-device-wifi.c:1688
 #: ../panels/network/network-wifi.ui.h:42
@@ -2734,7 +2738,7 @@ msgstr "_Vergeten"
 #: ../panels/network/net-device-wifi.c:1997
 #: ../panels/network/net-device-wifi.c:2004
 msgid "Known Wi-Fi Networks"
-msgstr "Bekende wifi-netwerken"
+msgstr "Bekende Wi-Fi-netwerken"
 
 #. translators: This is the label for the "Forget wireless network"
 #. functionality
@@ -2747,7 +2751,7 @@ msgstr "_Vergeten"
 #: ../panels/network/net-proxy.c:102
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr "Automatisch ontdekken van de web-proxy wordt gebruikt als er geen configuratie-url is opgegeven."
+msgstr "Automatisch ontdekken van de webproxy wordt gebruikt als er geen configuratie-url is opgegeven."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -2833,7 +2837,7 @@ msgstr "VPN-verbinding uitschakelen"
 
 #: ../panels/network/network-wifi.ui.h:3
 msgid "Automatic _Connect"
-msgstr "Automatisch ver_binden"
+msgstr "Automatis_ch verbinden"
 
 #: ../panels/network/network-wifi.ui.h:13
 msgid "details"
@@ -2908,23 +2912,23 @@ msgstr "hardware"
 
 #: ../panels/network/network-wifi.ui.h:41
 msgid "_Reset"
-msgstr "_Resetten"
+msgstr "Standaa_rdwaarden"
 
 #: ../panels/network/network-wifi.ui.h:43
 msgid ""
 "Reset the settings for this connection to their defaults, but remember as a "
 "preferred connection."
-msgstr "Instellingen voor deze verbinding terugzetten naar standaardinstellingen, maar onthouden als een voorkeursnetwerk."
+msgstr "Zet de standaardinstellingen van deze verbinding terug, maar sla het netwerk op als voorkeursnetwerk."
 
 #: ../panels/network/network-wifi.ui.h:44
 msgid ""
 "Remove all details relating to this network and do not try to automatically "
 "connect to it."
-msgstr "Alle details met betrekking tot dit netwerk verwijderen, en niet proberen automatisch verbinding te maken."
+msgstr "Verwijder alle gegevens met betrekking tot dit netwerk en probeer niet automatisch te verbinden."
 
 #: ../panels/network/network-wifi.ui.h:45
 msgid "reset"
-msgstr "resetten"
+msgstr "herstellen"
 
 #: ../panels/network/network-wifi.ui.h:50
 msgid "Hardware"
@@ -2933,15 +2937,15 @@ msgstr "Hardware"
 #: ../panels/network/network-wifi.ui.h:51
 msgctxt "tab"
 msgid "Reset"
-msgstr "Resetten"
+msgstr "Herstellen"
 
 #: ../panels/network/network-wifi.ui.h:52
 msgid "Wi-Fi Hotspot"
-msgstr "Wifi-hotspot"
+msgstr "Wi-Fi-hotspot"
 
 #: ../panels/network/network-wifi.ui.h:53
 msgid "Switch off to connect to a Wi-Fi network"
-msgstr "Uitschakelen om te verbinden met een wifi-netwerk"
+msgstr "Schakel uit om verbinding te maken met een Wi-Fi-netwerk"
 
 #: ../panels/network/network-wifi.ui.h:54
 msgid "Network Name"
@@ -2953,7 +2957,7 @@ msgstr "Verbonden apparaten"
 
 #: ../panels/network/network-wifi.ui.h:56
 msgid "Security type"
-msgstr "Beveiligingstype"
+msgstr "Soort beveiliging"
 
 #: ../panels/network/network-wifi.ui.h:57
 #: ../panels/printers/authentication-dialog.ui.h:5
@@ -2964,7 +2968,7 @@ msgstr "Wachtwoord"
 
 #: ../panels/network/network-wifi.ui.h:59
 msgid "Turn Wi-Fi off"
-msgstr "Wifi uitschakelen"
+msgstr "Wi-Fi uitschakelen"
 
 #: ../panels/network/network-wifi.ui.h:60
 msgid "_Connect to Hidden Network…"
@@ -2972,7 +2976,7 @@ msgstr "_Verbinden met een verborgen netwerk…"
 
 #: ../panels/network/network-wifi.ui.h:61
 msgid "_Turn On Wi-Fi Hotspot…"
-msgstr "Wifi-hotspot i_nschakelen…"
+msgstr "Wi-Fi-hotspot i_nschakelen…"
 
 #: ../panels/network/network-wifi.ui.h:62
 msgid "_Known Wi-Fi Networks"
@@ -2980,11 +2984,11 @@ msgstr "Be_kende wifi-netwerken"
 
 #: ../panels/network/wifi.ui.h:1
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
-msgstr "Zorg ervoor dat u een wifi-adapter heeft aangesloten en ingeschakeld"
+msgstr "Zorg ervoor dat je een Wi-Fi-adapter hebt aangesloten en ingeschakeld"
 
 #: ../panels/network/wifi.ui.h:2
 msgid "No Wi-Fi Adapter Found"
-msgstr "Geen wifi-adapter gevonden"
+msgstr "Geen Wi-Fi-adapter aangetroffen"
 
 #: ../panels/network/wifi.ui.h:3
 msgid "Airplane Mode"
@@ -2992,7 +2996,7 @@ msgstr "Vliegtuigstand"
 
 #: ../panels/network/wifi.ui.h:4
 msgid "Disables Wi-Fi, Bluetooth and mobile broadband"
-msgstr "Schakelt wifi, bluetooth en mobiel breedband uit"
+msgstr "Schakelt Wi-Fi, Bluetooth en mobiel internet uit"
 
 #: ../panels/network/wifi.ui.h:5
 msgid "Visible Networks"
@@ -3000,7 +3004,7 @@ msgstr "Zichtbare netwerken"
 
 #: ../panels/network/wifi.ui.h:6
 msgid "NetworkManager needs to be running"
-msgstr "Netwerkbeheer moet draaien"
+msgstr "Netwerkbeheer moet actief zijn"
 
 #. TRANSLATORS: AP type
 #: ../panels/network/panel-common.c:127
@@ -3021,7 +3025,7 @@ msgstr "Onbekende status"
 #. TRANSLATORS: device status
 #: ../panels/network/panel-common.c:151
 msgid "Unmanaged"
-msgstr "Niet-gemanaged"
+msgstr "Onbeheerd"
 
 #. TRANSLATORS: device status
 #: ../panels/network/panel-common.c:155
@@ -3032,7 +3036,7 @@ msgstr "Niet beschikbaar"
 #. TRANSLATORS: VPN status
 #: ../panels/network/panel-common.c:165 ../panels/network/panel-common.c:207
 msgid "Connecting"
-msgstr "Verbinden"
+msgstr "Bezig met verbinden..."
 
 #. TRANSLATORS: device status
 #. TRANSLATORS: VPN status
@@ -3050,7 +3054,7 @@ msgstr "Verbonden"
 #. TRANSLATORS: device status
 #: ../panels/network/panel-common.c:177
 msgid "Disconnecting"
-msgstr "Verbinding verbreken"
+msgstr "Bezig met verbreken van verbinding..."
 
 #. TRANSLATORS: device status
 #. TRANSLATORS: VPN status
@@ -3087,27 +3091,27 @@ msgstr "IP-configuratie verlopen"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:260
 msgid "Secrets were required, but not provided"
-msgstr "Geheimen werden vereist, maar niet verstrekt"
+msgstr "Toeganssleutels zijn vereist, maar niet verstrekt"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:264
 msgid "802.1x supplicant disconnected"
-msgstr "Niet verbonden met 802.1x supplicant"
+msgstr "Niet verbonden met 802.1x-supplicant"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:268
 msgid "802.1x supplicant configuration failed"
-msgstr "Configuratie 802.1x supplicant mislukt"
+msgstr "Configuratie van 802.1x-supplicant mislukt"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:272
 msgid "802.1x supplicant failed"
-msgstr "802.1x supplicant mislukt"
+msgstr "802.1x-supplicant mislukt"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:276
 msgid "802.1x supplicant took too long to authenticate"
-msgstr "802.1x supplicant authenticatie duurde te lang"
+msgstr "802.1x-supplicantauthenticatie duurde te lang"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:280
@@ -3132,7 +3136,7 @@ msgstr "Starten van DHCP-client mislukt"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:296
 msgid "DHCP client error"
-msgstr "Fout DHCP-client"
+msgstr "DHCP-clientfout"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:300
@@ -3142,12 +3146,12 @@ msgstr "DHCP-client mislukt"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:304
 msgid "Shared connection service failed to start"
-msgstr "Starten van gedeelde verbinding-dienst mislukt"
+msgstr "Kan dienst voor gedeelde verbinding niet starten"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:308
 msgid "Shared connection service failed"
-msgstr "Gedeelde verbinding-dienst mislukt"
+msgstr "Dienst voor gedeelde verbinding mislukt"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:312
@@ -3177,17 +3181,17 @@ msgstr "Geen kiestoon"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:332
 msgid "No carrier could be established"
-msgstr "Er kon geen carrier worden vastgesteld"
+msgstr "Er kan geen provider worden vastgesteld"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:336
 msgid "Dialing request timed out"
-msgstr "Tijdslimiet belaanvraag overschreden"
+msgstr "Tijdslimiet inbelaanvraag overschreden"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:340
 msgid "Dialing attempt failed"
-msgstr "Belpoging mislukt"
+msgstr "Inbelpoging mislukt"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:344
@@ -3202,7 +3206,7 @@ msgstr "Selecteren van opgegeven APN mislukt"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:352
 msgid "Not searching for networks"
-msgstr "Er wordt niet naar netwerken gezocht"
+msgstr "Er wordt niet gezocht naar netwerken"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:356
@@ -3217,7 +3221,7 @@ msgstr "Tijdslimiet netwerkregistratie verlopen"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:364
 msgid "Failed to register with the requested network"
-msgstr "Registreren bij het gevraagde netwerk mislukt"
+msgstr "Registreren bij het opgevraagde netwerk mislukt"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:368
@@ -3242,7 +3246,7 @@ msgstr "Er werd uitgegaan van de bestaande verbinding"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:384
 msgid "Modem not found"
-msgstr "Modem niet gevonden"
+msgstr "Modem niet aangetroffen"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:388
@@ -3252,7 +3256,7 @@ msgstr "Bluetooth-verbinding mislukt"
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:392
 msgid "SIM Card not inserted"
-msgstr "Simkaart niet ingebracht"
+msgstr "Geen simkaart ingevoerd"
 
 #. TRANSLATORS: device status reason
 #: ../panels/network/panel-common.c:396
@@ -3334,7 +3338,7 @@ msgstr "Anoniem"
 
 #: ../panels/network/wireless-security/eap-method-fast.ui.h:2
 msgid "Authenticated"
-msgstr "Gecontroleerd"
+msgstr "Met authenticatie"
 
 #: ../panels/network/wireless-security/eap-method-fast.ui.h:3
 msgid "Both"
@@ -3455,22 +3459,22 @@ msgstr "ongeldig EAP-TLS-gebruikerscertificaat: %s"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:307
 msgid "Unencrypted private keys are insecure"
-msgstr "Niet-versleutelde privésleutels zijn onveilig"
+msgstr "Onversleutelde privésleutels zijn onveilig"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:310
 msgid ""
 "The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr "De geselecteerde privésleutel lijkt niet te zijn beveiligd met een wachtwoord. Dit kan leiden ertoe leiden dat uw beveiligingsgegevens in gevaar komen. Kies een privésleutel die met een wachtwoord is beveiligd.\n\n(U kunt uw privésleutel beveiligen via openssl)"
+msgstr "De geselecteerde privésleutel lijkt niet te zijn beveiligd met een wachtwoord. Dit kan leiden ertoe leiden dat je beveiligingsgegevens in gevaar komen. Kies een privésleutel die met een wachtwoord is beveiligd.\n\n(je kunt je privésleutel beveiligen via openssl)"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:486
 msgid "Choose your personal certificate"
-msgstr "Kies uw persoonlijke certificaat"
+msgstr "Kies je persoonlijke certificaat"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:498
 msgid "Choose your private key"
-msgstr "Kies uw privésleutel"
+msgstr "Kies je privésleutel"
 
 #: ../panels/network/wireless-security/eap-method-tls.ui.h:1
 msgid "I_dentity"
@@ -3624,7 +3628,7 @@ msgstr "_Type"
 #: ../panels/notifications/edit-dialog.ui.h:2
 msgctxt "notifications"
 msgid "_Notifications"
-msgstr "_Notificaties"
+msgstr "Meldi_ngen"
 
 #. This is the setting to configure sounds associated with notifications.
 #: ../panels/notifications/edit-dialog.ui.h:4
@@ -3635,54 +3639,54 @@ msgstr "Geluids_waarschuwingen"
 #: ../panels/notifications/edit-dialog.ui.h:5
 msgctxt "notifications"
 msgid "Notification _Popups"
-msgstr "_Notificaties"
+msgstr "Meldings_ballonnen"
 
 #: ../panels/notifications/edit-dialog.ui.h:6
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr "Notificaties zullen nog steeds verschijnen in de lijst met notificaties wanneer pop-ups uitgeschakeld zijn."
+msgstr "Als meldingsballonnen zijn uitgeschakeld, dan verschijnen meldingen nog steeds in de meldingslijst."
 
 #. Popups here refers to message tray notifications in the middle of the
 #. screen.
 #: ../panels/notifications/edit-dialog.ui.h:8
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
-msgstr "Bericht_inhoud tonen in pop-ups"
+msgstr "Bericht_inhoud tonen in meldingsballonnen"
 
 #: ../panels/notifications/edit-dialog.ui.h:9
 msgctxt "notifications"
 msgid "_Lock Screen Notifications"
-msgstr "Notificaties op _vergrendelingsscherm"
+msgstr "Me_ldingen op vergrendelscherm"
 
 #: ../panels/notifications/edit-dialog.ui.h:10
 msgctxt "notifications"
 msgid "Show Message C_ontent on Lock Screen"
-msgstr "_Berichtinhoud tonen op vergrendelingsscherm"
+msgstr "_Berichtinhoud tonen op vergrendelscherm"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:2
 msgid "No­ti­fi­ca­tions"
-msgstr "Notificaties"
+msgstr "Meldingen"
 
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:3
 msgid "Control which notifications are displayed and what they show"
-msgstr "Regelen welke notificaties weergegeven worden en wat ze tonen"
+msgstr "Regel welke meldingen moeten worden getoond en wat ze moeten tonen"
 
 #. Translators: those are keywords for the notifications control-center panel
 #: ../panels/notifications/gnome-notifications-panel.desktop.in.in.h:5
 msgid "Notifications;Banner;Message;Tray;Popup;"
-msgstr "Notifications;Notificaties;Banners;Banieren;Bericht;Message;Tray;Systeemvak;Pop-up;Meldingen;"
+msgstr "Meldingen;Banieren;Bericht;Systeemvak;Pop-up;Meldingen;Ballonnen;"
 
 #: ../panels/notifications/notifications.ui.h:1
 msgid "Notification _Popups"
-msgstr "_Notificaties"
+msgstr "Meldings_ballonnen"
 
 #: ../panels/notifications/notifications.ui.h:2
 msgid "_Lock Screen Notifications"
-msgstr "_Notificaties op vergrendelingsscherm"
+msgstr "Me_ldingen tonen op vergrendelscherm"
 
 #. List of applications.
 #: ../panels/notifications/notifications.ui.h:4
@@ -3704,14 +3708,14 @@ msgstr "%s-account"
 
 #: ../panels/online-accounts/cc-online-accounts-panel.c:895
 msgid "Error removing account"
-msgstr "Fout tijdens verwijderen van het account"
+msgstr "Kan account niet verwijderen"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
 #: ../panels/online-accounts/cc-online-accounts-panel.c:960
 #, c-format
 msgid "<b>%s</b> removed"
-msgstr "<b>%s</b> verwijderd"
+msgstr "<b>%s</b> is verwijderd"
 
 #. Translators: Add soft hyphens to your translations so that the icon view
 #. won't clip your translations. See
@@ -3722,7 +3726,7 @@ msgstr "Online-accounts"
 
 #: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:3
 msgid "Connect to your online accounts and decide what to use them for"
-msgstr "Met uw online-accounts verbinden en bepalen waar u ze voor gebruikt"
+msgstr "Voeg je online-accounts toe en bepaal waarvoor je ze gebruikt"
 
 #. For ReadItLater and Pocket, see
 #. http://en.wikipedia.org/wiki/Pocket_(application)
@@ -3740,7 +3744,7 @@ msgstr "Ongedaan maken"
 
 #: ../panels/online-accounts/online-accounts.ui.h:2
 msgid "Connect to your data in the cloud"
-msgstr "Met uw data in de cloud verbinden"
+msgstr "Koppel je cloudgegevens"
 
 #: ../panels/online-accounts/online-accounts.ui.h:3
 msgid "No internet connection — connect to set up new online accounts"
@@ -3748,7 +3752,7 @@ msgstr "Geen internetverbinding — maak verbinding om nieuwe online-accounts in
 
 #: ../panels/online-accounts/online-accounts.ui.h:4
 msgid "Add an account"
-msgstr "Een account toevoegen"
+msgstr "Account toevoegen"
 
 #: ../panels/online-accounts/online-accounts.ui.h:5
 msgid "Remove Account"
@@ -3817,7 +3821,7 @@ msgstr "Volledig opgeladen"
 #. TRANSLATORS: primary battery
 #: ../panels/power/cc-power-panel.c:311 ../panels/power/cc-power-panel.c:342
 msgid "Not charging"
-msgstr ""
+msgstr "Wordt niet opgeladen"
 
 #. TRANSLATORS: primary battery
 #: ../panels/power/cc-power-panel.c:315 ../panels/power/cc-power-panel.c:346
@@ -3827,12 +3831,12 @@ msgstr "Leeg"
 #. TRANSLATORS: primary battery
 #: ../panels/power/cc-power-panel.c:329
 msgid "Charging"
-msgstr "Aan het opladen"
+msgstr "Bezig met opladen"
 
 #. TRANSLATORS: primary battery
 #: ../panels/power/cc-power-panel.c:334
 msgid "Discharging"
-msgstr "Aan het ontladen"
+msgstr "Bezig met ontladen"
 
 #: ../panels/power/cc-power-panel.c:461
 msgctxt "Battery name"
@@ -3862,7 +3866,7 @@ msgstr "Onderbrekingsvrije voeding"
 #. TRANSLATORS: secondary battery
 #: ../panels/power/cc-power-panel.c:543
 msgid "Personal digital assistant"
-msgstr "Personal digital assistant"
+msgstr "Persoonlijke digitale assistent"
 
 #. TRANSLATORS: secondary battery
 #: ../panels/power/cc-power-panel.c:546
@@ -3894,7 +3898,7 @@ msgstr "Accu"
 #: ../panels/power/cc-power-panel.c:612
 msgctxt "Battery power"
 msgid "Charging"
-msgstr "Aan het opladen"
+msgstr "Bezig met opladen"
 
 #. TRANSLATORS: secondary battery
 #: ../panels/power/cc-power-panel.c:619
@@ -3932,7 +3936,7 @@ msgstr "Accu’s"
 
 #: ../panels/power/cc-power-panel.c:1230
 msgid "When _idle"
-msgstr "Wanneer i_nactief"
+msgstr "Indien i_nactief"
 
 #: ../panels/power/cc-power-panel.c:1684
 msgid "Power Saving"
@@ -3940,7 +3944,7 @@ msgstr "Energiebesparing"
 
 #: ../panels/power/cc-power-panel.c:1715
 msgid "_Screen brightness"
-msgstr "Helderheid beeld_scherm"
+msgstr "_Schermhelderheid"
 
 #: ../panels/power/cc-power-panel.c:1734
 msgid "Automatic brightness"
@@ -3948,11 +3952,11 @@ msgstr "Automatische helderheid"
 
 #: ../panels/power/cc-power-panel.c:1754
 msgid "_Keyboard brightness"
-msgstr "_Helderheid toetsenbord"
+msgstr "_Toetsenbordverlichting"
 
 #: ../panels/power/cc-power-panel.c:1764
 msgid "_Dim screen when inactive"
-msgstr "Scherm _dimmen wanneer inactief"
+msgstr "Scherm _dimmen indien inactief"
 
 #: ../panels/power/cc-power-panel.c:1789
 msgid "_Blank screen"
@@ -3960,19 +3964,19 @@ msgstr "_Zwart scherm"
 
 #: ../panels/power/cc-power-panel.c:1826
 msgid "_Wi-Fi"
-msgstr "_Wifi"
+msgstr "_Wi-Fi"
 
 #: ../panels/power/cc-power-panel.c:1831
 msgid "Turn off Wi-Fi to save power."
-msgstr "Schakel wifi uit om energie te besparen."
+msgstr "Schakel Wi-Fi uit om energie te besparen."
 
 #: ../panels/power/cc-power-panel.c:1856
 msgid "_Mobile broadband"
-msgstr "_Mobiel breedband"
+msgstr "_Mobiel internet"
 
 #: ../panels/power/cc-power-panel.c:1861
 msgid "Turn off mobile broadband (3G, 4G, LTE, etc.) to save power."
-msgstr "Schakel mobiel breedband (3G, 4G, LTE, etc.) uit om energie te sparen."
+msgstr "Schakel mobiel internet (3G, 4G, LTE, etc.) uit om energie te besparen."
 
 #: ../panels/power/cc-power-panel.c:1906
 msgid "_Bluetooth"
@@ -3980,11 +3984,11 @@ msgstr "_Bluetooth"
 
 #: ../panels/power/cc-power-panel.c:1969
 msgid "When on battery power"
-msgstr "Wanneer op accustroom"
+msgstr "Indien op accustroom"
 
 #: ../panels/power/cc-power-panel.c:1971
 msgid "When plugged in"
-msgstr "Als de kabel aangesloten is"
+msgstr "Als de kabel is aangesloten"
 
 #: ../panels/power/cc-power-panel.c:2066
 msgid "Suspend"
@@ -4005,7 +4009,7 @@ msgstr "Niets doen"
 #. Frame header
 #: ../panels/power/cc-power-panel.c:2183
 msgid "Suspend & Power Button"
-msgstr "Pauzestand & uitschakelen"
+msgstr "Pauzestand en aan-/uitknop"
 
 #: ../panels/power/cc-power-panel.c:2222
 msgid "_Automatic suspend"
@@ -4033,13 +4037,13 @@ msgstr "Energie"
 
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:3
 msgid "View your battery status and change power saving settings"
-msgstr "De accustatus bekijken en instellingen voor energiebesparing wijzigen"
+msgstr "Bekijk de accustatus en wijzig de instellingen voor energiebesparing"
 
 #. Translators: those are keywords for the power control-center panel
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:5
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-msgstr "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Helderheid;Dim;Blank;Monitor;Beeldscherm;DPMS;Idle;Energie;Slaapstand;Pauzestand;Accu;"
+msgstr "Helderheid;Dim;Monitor;Beeldscherm;DPMS;Energie;Slaapstand;Pauzestand;Accu;"
 
 #: ../panels/power/power.ui.h:2
 msgid "20 minutes"
@@ -4087,7 +4091,7 @@ msgstr "3 minuten"
 
 #: ../panels/power/power.ui.h:14
 msgid "4 minutes"
-msgstr "5 minuten"
+msgstr "4 minuten"
 
 #: ../panels/power/power.ui.h:15 ../panels/privacy/privacy.ui.h:6
 msgid "5 minutes"
@@ -4148,13 +4152,13 @@ msgstr "Printer ‘%s’ is verwijderd"
 #. Translators: Addition of the new printer failed.
 #: ../panels/printers/cc-printers-panel.c:909
 msgid "Failed to add new printer."
-msgstr "Nieuwe printer toevoegen mislukt."
+msgstr "Kan nieuwe printer niet toevoegen."
 
 #. Translators: The XML file containing user interface can not be loaded
 #: ../panels/printers/cc-printers-panel.c:1221
 #, c-format
 msgid "Could not load ui: %s"
-msgstr "Kon UI niet laden: %s"
+msgstr "Kan UI niet laden: %s"
 
 #: ../panels/printers/details-dialog.ui.h:2
 #: ../panels/printers/printer-entry.ui.h:10
@@ -4169,15 +4173,15 @@ msgstr "Stuurprogramma"
 
 #: ../panels/printers/details-dialog.ui.h:5
 msgid "Searching for preferred drivers…"
-msgstr "Zoeken naar de beste stuurprogramma’s…"
+msgstr "Bezig met zoeken naar beste stuurprogramma’s…"
 
 #: ../panels/printers/details-dialog.ui.h:6
 msgid "Search for Drivers"
-msgstr "Naar stuurprogramma’s zoeken"
+msgstr "Zoeken naar stuurprogramma's"
 
 #: ../panels/printers/details-dialog.ui.h:7
 msgid "Select from Database…"
-msgstr "Selecteren uit de database…"
+msgstr "Kiezen uit de databank..."
 
 #: ../panels/printers/details-dialog.ui.h:8
 msgid "Install PPD File…"
@@ -6224,7 +6228,7 @@ msgstr ""
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
-msgid "Updates;Automatic;"
+msgid "Updates;Automatic;Background;Metered;"
 msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
@@ -6364,15 +6368,16 @@ msgstr "Gebruikers toevoegen of verwijderen en uw wachtwoord wijzigen"
 
 #. Translators: those are keywords for the user accounts control-center panel
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
-msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Aanmelden;Inloggen;Vingerafdruk;Gezicht;Wachtwoord;"
+msgid ""
+"Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental;Restrict;Restrictions;"
+msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:1
 msgid "Restrict Apps"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:2
-msgid "Prevent this user from opening some apps."
+msgid "Prevent this user from opening some apps by turning them off below."
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:3
@@ -6380,15 +6385,15 @@ msgid "App Center Restrictions"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:4
-msgid "App installation:"
+msgid "App _Installation:"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:5
-msgid "Installed apps can be used by every user:"
+msgid "Install Apps for All _Users:"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:6
-msgid "Show apps suitable for:"
+msgid "Show Apps _Suitable For:"
 msgstr ""
 
 #. Translators: This button enrolls the computer in the domain in order to use
@@ -6469,490 +6474,490 @@ msgid "Remove User…"
 msgstr "Gebruiker verwijderen…"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:75
+#: ../panels/user-accounts/gs-content-rating.c:76
 msgid "No cartoon violence"
 msgstr "Geen geweld in strip"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:78
+#: ../panels/user-accounts/gs-content-rating.c:79
 msgid "Cartoon characters in unsafe situations"
 msgstr "Stripfiguren in onveilige situaties"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:81
+#: ../panels/user-accounts/gs-content-rating.c:82
 msgid "Cartoon characters in aggressive conflict"
 msgstr "Stripfiguren in een agressieve conflictsituatie"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:84
+#: ../panels/user-accounts/gs-content-rating.c:85
 msgid "Graphic violence involving cartoon characters"
 msgstr "Grafisch geweld met stripfiguren"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:87
+#: ../panels/user-accounts/gs-content-rating.c:88
 msgid "No fantasy violence"
 msgstr "Geen geweld in fantasie"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:90
+#: ../panels/user-accounts/gs-content-rating.c:91
 msgid "Characters in unsafe situations easily distinguishable from reality"
 msgstr "Figuren in onveilige situaties, gemakkelijk te onderscheiden van de werkelijkheid"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:93
+#: ../panels/user-accounts/gs-content-rating.c:94
 msgid "Characters in aggressive conflict easily distinguishable from reality"
 msgstr "Figuren in agressieve conflictsituaties, gemakkelijk te onderscheiden van de werkelijkheid"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:96
+#: ../panels/user-accounts/gs-content-rating.c:97
 msgid "Graphic violence easily distinguishable from reality"
 msgstr "Grafisch geweld, gemakkelijk te onderscheiden van de werkelijkheid"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:99
+#: ../panels/user-accounts/gs-content-rating.c:100
 msgid "No realistic violence"
 msgstr "Geen realistisch geweld"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:102
+#: ../panels/user-accounts/gs-content-rating.c:103
 msgid "Mildly realistic characters in unsafe situations"
 msgstr "Enigszins realistisch figuur in onveilige situaties"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:105
+#: ../panels/user-accounts/gs-content-rating.c:106
 msgid "Depictions of realistic characters in aggressive conflict"
 msgstr "Afbeeldingen van realistische figuren in agressieve conflictsituatie"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:108
+#: ../panels/user-accounts/gs-content-rating.c:109
 msgid "Graphic violence involving realistic characters"
 msgstr "Grafisch geweld met realistische figuren"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:111
+#: ../panels/user-accounts/gs-content-rating.c:112
 msgid "No bloodshed"
 msgstr "Geen bloedvergieten"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:114
+#: ../panels/user-accounts/gs-content-rating.c:115
 msgid "Unrealistic bloodshed"
 msgstr "Niet-realistisch bloedvergieten"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:117
+#: ../panels/user-accounts/gs-content-rating.c:118
 msgid "Realistic bloodshed"
 msgstr "Realistisch bloedvergieten"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:120
+#: ../panels/user-accounts/gs-content-rating.c:121
 msgid "Depictions of bloodshed and the mutilation of body parts"
 msgstr "Afbeeldingen van bloedvergieten en het mutileren van lichaamsdelen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:123
+#: ../panels/user-accounts/gs-content-rating.c:124
 msgid "No sexual violence"
 msgstr "Geen seksueel geweld"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:126
+#: ../panels/user-accounts/gs-content-rating.c:127
 msgid "Rape or other violent sexual behavior"
 msgstr "Verkrachting of ander gewelddadig seksueel gedrag"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:129
+#: ../panels/user-accounts/gs-content-rating.c:130
 msgid "No references to alcohol"
 msgstr "Geen verwijzingen naar alcohol"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:132
+#: ../panels/user-accounts/gs-content-rating.c:133
 msgid "References to alcoholic beverages"
 msgstr "Verwijzingen naar alcoholische dranken"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:135
+#: ../panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
 msgstr "Gebruik van alcoholische dranken"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:138
+#: ../panels/user-accounts/gs-content-rating.c:139
 msgid "No references to illicit drugs"
 msgstr "Geen verwijzingen naar illegale drugs"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:141
+#: ../panels/user-accounts/gs-content-rating.c:142
 msgid "References to illicit drugs"
 msgstr "Verwijzingen naar illegale drugs"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:144
+#: ../panels/user-accounts/gs-content-rating.c:145
 msgid "Use of illicit drugs"
 msgstr "Gebruik van illegale drugs"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:147
+#: ../panels/user-accounts/gs-content-rating.c:148
 msgid "References to tobacco products"
 msgstr "Verwijzingen naar tabaksproducten"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:150
+#: ../panels/user-accounts/gs-content-rating.c:151
 msgid "Use of tobacco products"
 msgstr "Gebruik van tabaksproducten"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:153
+#: ../panels/user-accounts/gs-content-rating.c:154
 msgid "No nudity of any sort"
 msgstr "Geen enkel naakt"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:156
+#: ../panels/user-accounts/gs-content-rating.c:157
 msgid "Brief artistic nudity"
 msgstr "Beknopt artistiek naakt"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:159
+#: ../panels/user-accounts/gs-content-rating.c:160
 msgid "Prolonged nudity"
 msgstr "Langdurig naakt"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:162
+#: ../panels/user-accounts/gs-content-rating.c:163
 msgid "No references or depictions of sexual nature"
 msgstr "Geen seksuele verwijzingen of afbeeldingen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:165
+#: ../panels/user-accounts/gs-content-rating.c:166
 msgid "Provocative references or depictions"
 msgstr "Provocerende verwijzingen of afbeeldingen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:168
+#: ../panels/user-accounts/gs-content-rating.c:169
 msgid "Sexual references or depictions"
 msgstr "Seksuele verwijzingen of afbeeldingen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:171
+#: ../panels/user-accounts/gs-content-rating.c:172
 msgid "Graphic sexual behavior"
 msgstr "Grafisch seksueel gedrag"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:174
+#: ../panels/user-accounts/gs-content-rating.c:175
 msgid "No profanity of any kind"
 msgstr "Geen enkele godslastering"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:177
+#: ../panels/user-accounts/gs-content-rating.c:178
 msgid "Mild or infrequent use of profanity"
 msgstr "Mild of niet veelvuldig gebruik van godslastering"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:180
+#: ../panels/user-accounts/gs-content-rating.c:181
 msgid "Moderate use of profanity"
 msgstr "Matig gebruik van godslastering"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:183
+#: ../panels/user-accounts/gs-content-rating.c:184
 msgid "Strong or frequent use of profanity"
 msgstr "Sterk of veelvuldig gebruik van godslastering"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:186
+#: ../panels/user-accounts/gs-content-rating.c:187
 msgid "No inappropriate humor"
 msgstr "Geen ongepaste humor"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:189
+#: ../panels/user-accounts/gs-content-rating.c:190
 msgid "Slapstick humor"
 msgstr "Slapstick-humor"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:192
+#: ../panels/user-accounts/gs-content-rating.c:193
 msgid "Vulgar or bathroom humor"
 msgstr "Vulgaire of platte humor"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:195
+#: ../panels/user-accounts/gs-content-rating.c:196
 msgid "Mature or sexual humor"
 msgstr "Volwassen of seksuele humor"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:198
+#: ../panels/user-accounts/gs-content-rating.c:199
 msgid "No discriminatory language of any kind"
 msgstr "Geen enkel discriminerend woordgebruik"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:201
+#: ../panels/user-accounts/gs-content-rating.c:202
 msgid "Negativity towards a specific group of people"
 msgstr "Negativiteit in de richting van een specifieke groep mensen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:204
+#: ../panels/user-accounts/gs-content-rating.c:205
 msgid "Discrimination designed to cause emotional harm"
 msgstr "Discriminatie met de bedoeling emotionele schade te berokkenen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:207
+#: ../panels/user-accounts/gs-content-rating.c:208
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr "Expliciete discriminatie op grond van geslacht, seksuele geaardheid, ras of religie"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:210
+#: ../panels/user-accounts/gs-content-rating.c:211
 msgid "No advertising of any kind"
 msgstr "Zonder enige reclame"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:213
+#: ../panels/user-accounts/gs-content-rating.c:214
 msgid "Product placement"
 msgstr "Sluikreclame"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:216
+#: ../panels/user-accounts/gs-content-rating.c:217
 msgid "Explicit references to specific brands or trademarked products"
 msgstr "Expliciete verwijzingen naar bepaalde merken of producten met handelsmerk"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:219
+#: ../panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:222
+#: ../panels/user-accounts/gs-content-rating.c:223
 msgid "No gambling of any kind"
 msgstr "Zonder gokken"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:225
+#: ../panels/user-accounts/gs-content-rating.c:226
 msgid "Gambling on random events using tokens or credits"
 msgstr "Gokken op willekeurige gebeurtenissen met behulp van tokens of credits"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:228
+#: ../panels/user-accounts/gs-content-rating.c:229
 msgid "Gambling using “play” money"
 msgstr "Gokken met ‘speel’geld"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:231
+#: ../panels/user-accounts/gs-content-rating.c:232
 msgid "Gambling using real money"
 msgstr "Gokken met echt geld"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:234
+#: ../panels/user-accounts/gs-content-rating.c:235
 msgid "No ability to spend money"
 msgstr "Geen mogelijkheid om echt geld uit te geven"
 
 #. v1.1
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:237
+#: ../panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:240
+#: ../panels/user-accounts/gs-content-rating.c:241
 msgid "Ability to spend real money in-game"
 msgstr "Mogelijk om in het spel echt geld uit te geven"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:243
+#: ../panels/user-accounts/gs-content-rating.c:244
 msgid "No way to chat with other users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:246
+#: ../panels/user-accounts/gs-content-rating.c:247
 msgid "User-to-user game interactions without chat functionality"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:249
+#: ../panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:252
+#: ../panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:255
+#: ../panels/user-accounts/gs-content-rating.c:256
 msgid "No way to talk with other users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:258
+#: ../panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:261
+#: ../panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
 msgstr "Sociaal netwerk-gebruikersnamen en e-mailadressen worden niet gedeeld"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:264
+#: ../panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
 msgstr "Deelt sociaal netwerk-gebruikersnamen of e-mailadressen"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:267
+#: ../panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
 msgstr "Gebruikersinformatie worden niet gedeeld met derden"
 
 #. v1.1
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:270
+#: ../panels/user-accounts/gs-content-rating.c:271
 msgid "Checking for the latest application version"
 msgstr ""
 
 #. v1.1
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:273
+#: ../panels/user-accounts/gs-content-rating.c:274
 msgid "Sharing diagnostic data that does not let others identify the user"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:276
+#: ../panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:279
+#: ../panels/user-accounts/gs-content-rating.c:280
 msgid "No sharing of physical location to other users"
 msgstr "Fysieke locatie wordt niet gedeeld met andere gebruikers"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:282
+#: ../panels/user-accounts/gs-content-rating.c:283
 msgid "Sharing physical location to other users"
 msgstr "Deelt fysieke locatie met andere gebruikers"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:287
+#: ../panels/user-accounts/gs-content-rating.c:288
 msgid "No references to homosexuality"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:290
+#: ../panels/user-accounts/gs-content-rating.c:291
 msgid "Indirect references to homosexuality"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:293
+#: ../panels/user-accounts/gs-content-rating.c:294
 msgid "Kissing between people of the same gender"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:296
+#: ../panels/user-accounts/gs-content-rating.c:297
 msgid "Graphic sexual behavior between people of the same gender"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:299
+#: ../panels/user-accounts/gs-content-rating.c:300
 msgid "No references to prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:302
+#: ../panels/user-accounts/gs-content-rating.c:303
 msgid "Indirect references to prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:305
+#: ../panels/user-accounts/gs-content-rating.c:306
 msgid "Direct references to prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:308
+#: ../panels/user-accounts/gs-content-rating.c:309
 msgid "Graphic depictions of the act of prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:311
+#: ../panels/user-accounts/gs-content-rating.c:312
 msgid "No references to adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:314
+#: ../panels/user-accounts/gs-content-rating.c:315
 msgid "Indirect references to adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:317
+#: ../panels/user-accounts/gs-content-rating.c:318
 msgid "Direct references to adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:320
+#: ../panels/user-accounts/gs-content-rating.c:321
 msgid "Graphic depictions of the act of adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:323
+#: ../panels/user-accounts/gs-content-rating.c:324
 msgid "No sexualized characters"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:326
+#: ../panels/user-accounts/gs-content-rating.c:327
 msgid "Scantily clad human characters"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:329
+#: ../panels/user-accounts/gs-content-rating.c:330
 msgid "Overtly sexualized human characters"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:332
+#: ../panels/user-accounts/gs-content-rating.c:333
 msgid "No references to desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:335
+#: ../panels/user-accounts/gs-content-rating.c:336
 msgid "Depictions or references to historical desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:338
+#: ../panels/user-accounts/gs-content-rating.c:339
 msgid "Depictions of modern-day human desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:341
+#: ../panels/user-accounts/gs-content-rating.c:342
 msgid "Graphic depictions of modern-day desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:344
+#: ../panels/user-accounts/gs-content-rating.c:345
 msgid "No visible dead human remains"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:347
+#: ../panels/user-accounts/gs-content-rating.c:348
 msgid "Visible dead human remains"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:350
+#: ../panels/user-accounts/gs-content-rating.c:351
 msgid "Dead human remains that are exposed to the elements"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:353
+#: ../panels/user-accounts/gs-content-rating.c:354
 msgid "Graphic depictions of desecration of human bodies"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:356
+#: ../panels/user-accounts/gs-content-rating.c:357
 msgid "No references to slavery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:359
+#: ../panels/user-accounts/gs-content-rating.c:360
 msgid "Depictions or references to historical slavery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:362
+#: ../panels/user-accounts/gs-content-rating.c:363
 msgid "Depictions of modern-day slavery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:365
+#: ../panels/user-accounts/gs-content-rating.c:366
 msgid "Graphic depictions of modern-day slavery"
 msgstr ""
 
@@ -7452,11 +7457,11 @@ msgstr "Geen"
 msgid "Logged in"
 msgstr "Aangemeld"
 
-#: ../panels/user-accounts/um-user-panel.c:1121
+#: ../panels/user-accounts/um-user-panel.c:1122
 msgid "Failed to contact the accounts service"
 msgstr "Kon de accounts-service niet benaderen"
 
-#: ../panels/user-accounts/um-user-panel.c:1123
+#: ../panels/user-accounts/um-user-panel.c:1124
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Zorg ervoor dat de AccountService geïnstalleerd en ingeschakeld is."
 
@@ -7464,29 +7469,29 @@ msgstr "Zorg ervoor dat de AccountService geïnstalleerd en ingeschakeld is."
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1159
+#: ../panels/user-accounts/um-user-panel.c:1160
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "Klik op het het *-pictogram\nom wijzigingen te maken"
 
-#: ../panels/user-accounts/um-user-panel.c:1201
+#: ../panels/user-accounts/um-user-panel.c:1202
 msgid "Create a user account"
 msgstr "Gebruikersaccount aanmaken"
 
-#: ../panels/user-accounts/um-user-panel.c:1212
-#: ../panels/user-accounts/um-user-panel.c:1393
+#: ../panels/user-accounts/um-user-panel.c:1213
+#: ../panels/user-accounts/um-user-panel.c:1394
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "Klik op het *-pictogram\nom een gebruikersaccount aan te maken"
 
-#: ../panels/user-accounts/um-user-panel.c:1222
+#: ../panels/user-accounts/um-user-panel.c:1223
 msgid "Delete the selected user account"
 msgstr "De geselecteerde gebruiker verwijderen"
 
-#: ../panels/user-accounts/um-user-panel.c:1234
-#: ../panels/user-accounts/um-user-panel.c:1398
+#: ../panels/user-accounts/um-user-panel.c:1235
+#: ../panels/user-accounts/um-user-panel.c:1399
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
