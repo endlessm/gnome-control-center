@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-07 19:01+0000\n"
-"PO-Revision-Date: 2019-01-08 15:05+0000\n"
-"Last-Translator: e2f_in c7 <e2f_in_c7@outlook.com>\n"
+"POT-Creation-Date: 2019-02-06 13:42+0000\n"
+"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/endless-os/gnome-control-center/language/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1773,6 +1773,9 @@ msgstr "पसंदीदा शार्टकट"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "अक्षम"
@@ -2344,8 +2347,8 @@ msgid "Make available to _other users"
 msgstr "अन्य उपयोगकर्ताओं के लिए उपलब्ध है (_o)"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
-msgid "Restrict background data usage"
-msgstr "पृष्ठभूमि डेटा उपयोग प्रतिबंधित करें"
+msgid "Restrict _background data usage"
+msgstr ""
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
@@ -6219,8 +6222,8 @@ msgstr "स्वचालित अपडेट अनुसूचित कर
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
-msgid "Updates;Automatic;"
-msgstr "अपडेट्स;स्वचालित;"
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1
@@ -6359,15 +6362,16 @@ msgstr "उपयोगकर्ताओं को जोड़ें या �
 
 #. Translators: those are keywords for the user accounts control-center panel
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
-msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
+msgid ""
+"Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental;Restrict;Restrictions;"
+msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:1
 msgid "Restrict Apps"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:2
-msgid "Prevent this user from opening some apps."
+msgid "Prevent this user from opening some apps by turning them off below."
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:3
@@ -6375,15 +6379,15 @@ msgid "App Center Restrictions"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:4
-msgid "App installation:"
+msgid "App _Installation:"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:5
-msgid "Installed apps can be used by every user:"
+msgid "Install Apps for All _Users:"
 msgstr ""
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:6
-msgid "Show apps suitable for:"
+msgid "Show Apps _Suitable For:"
 msgstr ""
 
 #. Translators: This button enrolls the computer in the domain in order to use
@@ -6464,490 +6468,490 @@ msgid "Remove User…"
 msgstr "उपयोगकर्ता को निकालें…"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:75
+#: ../panels/user-accounts/gs-content-rating.c:76
 msgid "No cartoon violence"
 msgstr "कोई कार्टून हिंसा नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:78
+#: ../panels/user-accounts/gs-content-rating.c:79
 msgid "Cartoon characters in unsafe situations"
 msgstr "असुरक्षित परिस्थितियों में कार्टून कैरेक्टर"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:81
+#: ../panels/user-accounts/gs-content-rating.c:82
 msgid "Cartoon characters in aggressive conflict"
 msgstr "आक्रामक विरोध में कार्टून कैरेक्टर"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:84
+#: ../panels/user-accounts/gs-content-rating.c:85
 msgid "Graphic violence involving cartoon characters"
 msgstr "कार्टून कैरेक्टर में शामिल ग्राफ़िक हिंसा"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:87
+#: ../panels/user-accounts/gs-content-rating.c:88
 msgid "No fantasy violence"
 msgstr "कोई काल्पनिक हिंसा नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:90
+#: ../panels/user-accounts/gs-content-rating.c:91
 msgid "Characters in unsafe situations easily distinguishable from reality"
 msgstr "असुरक्षित परिस्थितियों वाले कैरेक्टर को रिएलिटी से आसानी से अलग होने योग्य है"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:93
+#: ../panels/user-accounts/gs-content-rating.c:94
 msgid "Characters in aggressive conflict easily distinguishable from reality"
 msgstr "आक्रामक विरोध वाले कैरेक्टर को रिएलिटी से आसानी से अलग होने योग्य है"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:96
+#: ../panels/user-accounts/gs-content-rating.c:97
 msgid "Graphic violence easily distinguishable from reality"
 msgstr "ग्राफ़िक हिंसा रिएलिटी से आसानी से अलग होने योग्य है"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:99
+#: ../panels/user-accounts/gs-content-rating.c:100
 msgid "No realistic violence"
 msgstr "कोई यथार्थवादी हिंसा नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:102
+#: ../panels/user-accounts/gs-content-rating.c:103
 msgid "Mildly realistic characters in unsafe situations"
 msgstr "असुरक्षित परिस्थितियों में थोड़े यथार्थवादी चरित्र"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:105
+#: ../panels/user-accounts/gs-content-rating.c:106
 msgid "Depictions of realistic characters in aggressive conflict"
 msgstr "आक्रामक विरोध में वास्तविक कैरेक्टर का विवरण"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:108
+#: ../panels/user-accounts/gs-content-rating.c:109
 msgid "Graphic violence involving realistic characters"
 msgstr "ग्राफ़िक हिंसा वाले वास्तविक कैरेक्टर"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:111
+#: ../panels/user-accounts/gs-content-rating.c:112
 msgid "No bloodshed"
 msgstr "कोई रक्तपात नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:114
+#: ../panels/user-accounts/gs-content-rating.c:115
 msgid "Unrealistic bloodshed"
 msgstr "अवास्तविक रक्तपात"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:117
+#: ../panels/user-accounts/gs-content-rating.c:118
 msgid "Realistic bloodshed"
 msgstr "वास्तविक रक्तपात"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:120
+#: ../panels/user-accounts/gs-content-rating.c:121
 msgid "Depictions of bloodshed and the mutilation of body parts"
 msgstr "रक्तपात और शरीर के अंगों में विकृति का विवरण"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:123
+#: ../panels/user-accounts/gs-content-rating.c:124
 msgid "No sexual violence"
 msgstr "कोई यौन हिंसा नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:126
+#: ../panels/user-accounts/gs-content-rating.c:127
 msgid "Rape or other violent sexual behavior"
 msgstr "बलात्कार या अन्य हिंसात्मक लैंगिक व्यवहार"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:129
+#: ../panels/user-accounts/gs-content-rating.c:130
 msgid "No references to alcohol"
 msgstr "एल्कोहल के कोई संदर्भ नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:132
+#: ../panels/user-accounts/gs-content-rating.c:133
 msgid "References to alcoholic beverages"
 msgstr "एल्कोहल वाले पेय पदार्थों का संदर्भ"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:135
+#: ../panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
 msgstr "एल्कोहल वाले पेयपदार्थों का उपयोग"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:138
+#: ../panels/user-accounts/gs-content-rating.c:139
 msgid "No references to illicit drugs"
 msgstr "अवैध नशीली दवाओं के कोई संदर्भ नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:141
+#: ../panels/user-accounts/gs-content-rating.c:142
 msgid "References to illicit drugs"
 msgstr "अवैध ड्रग का संदर्भ"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:144
+#: ../panels/user-accounts/gs-content-rating.c:145
 msgid "Use of illicit drugs"
 msgstr "अवैध ड्रग का उपयोग"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:147
+#: ../panels/user-accounts/gs-content-rating.c:148
 msgid "References to tobacco products"
 msgstr "तंबाकू के उत्पादों का संदर्भ"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:150
+#: ../panels/user-accounts/gs-content-rating.c:151
 msgid "Use of tobacco products"
 msgstr "तंबाकू के उत्पादों का उपयोग"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:153
+#: ../panels/user-accounts/gs-content-rating.c:154
 msgid "No nudity of any sort"
 msgstr "किसी प्रकार की कोई नग्नता नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:156
+#: ../panels/user-accounts/gs-content-rating.c:157
 msgid "Brief artistic nudity"
 msgstr "संक्षिप्त कलात्मक नग्नता"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:159
+#: ../panels/user-accounts/gs-content-rating.c:160
 msgid "Prolonged nudity"
 msgstr "लंबे समय तक नग्नता"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:162
+#: ../panels/user-accounts/gs-content-rating.c:163
 msgid "No references or depictions of sexual nature"
 msgstr "यौन प्रकृति के कोई संदर्भ या चित्रण नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:165
+#: ../panels/user-accounts/gs-content-rating.c:166
 msgid "Provocative references or depictions"
 msgstr "उत्तेजक संदर्भ या विवरण"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:168
+#: ../panels/user-accounts/gs-content-rating.c:169
 msgid "Sexual references or depictions"
 msgstr "लैंगिक संदर्भ या विवरण"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:171
+#: ../panels/user-accounts/gs-content-rating.c:172
 msgid "Graphic sexual behavior"
 msgstr "ग्राफ़िक लैंगिक व्यवहार"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:174
+#: ../panels/user-accounts/gs-content-rating.c:175
 msgid "No profanity of any kind"
 msgstr "किसी प्रकार की कोई गाली नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:177
+#: ../panels/user-accounts/gs-content-rating.c:178
 msgid "Mild or infrequent use of profanity"
 msgstr "गलत आचरण का माइल्ड या कभी कभी उपयोग"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:180
+#: ../panels/user-accounts/gs-content-rating.c:181
 msgid "Moderate use of profanity"
 msgstr "गलत आचरण का मॉडरेट उपयोग"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:183
+#: ../panels/user-accounts/gs-content-rating.c:184
 msgid "Strong or frequent use of profanity"
 msgstr "गलत आचरण का अधिक या बार-बार उपयोग"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:186
+#: ../panels/user-accounts/gs-content-rating.c:187
 msgid "No inappropriate humor"
 msgstr "कोई अनुचित हास्य नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:189
+#: ../panels/user-accounts/gs-content-rating.c:190
 msgid "Slapstick humor"
 msgstr "हँसी मज़ाक"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:192
+#: ../panels/user-accounts/gs-content-rating.c:193
 msgid "Vulgar or bathroom humor"
 msgstr "अश्लील या बाथरुम संबंधी हास्य"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:195
+#: ../panels/user-accounts/gs-content-rating.c:196
 msgid "Mature or sexual humor"
 msgstr "वयस्क या लिंग संबंधी हास्य"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:198
+#: ../panels/user-accounts/gs-content-rating.c:199
 msgid "No discriminatory language of any kind"
 msgstr "किसी प्रकार की कोई भेदभावपूर्ण भाषा नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:201
+#: ../panels/user-accounts/gs-content-rating.c:202
 msgid "Negativity towards a specific group of people"
 msgstr "लोगों के किसी विशेष समूह के लिए नकारात्मकता"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:204
+#: ../panels/user-accounts/gs-content-rating.c:205
 msgid "Discrimination designed to cause emotional harm"
 msgstr "भावनात्मक नुकसान पहुँचाने के लिए निर्मित भेदभाव"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:207
+#: ../panels/user-accounts/gs-content-rating.c:208
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr "लिंग, लिंग संबंध, जाति या धर्म के आधार पर  सुस्पष्ट भेदभाव"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:210
+#: ../panels/user-accounts/gs-content-rating.c:211
 msgid "No advertising of any kind"
 msgstr "किसी प्रकार का कोई विज्ञापन नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:213
+#: ../panels/user-accounts/gs-content-rating.c:214
 msgid "Product placement"
 msgstr "उत्पाद का प्रतिस्थापन"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:216
+#: ../panels/user-accounts/gs-content-rating.c:217
 msgid "Explicit references to specific brands or trademarked products"
 msgstr "विशेष ब्रांड या ट्रेडमार्क उत्पादों के लिए सुस्पष्ट संदर्भ"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:219
+#: ../panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:222
+#: ../panels/user-accounts/gs-content-rating.c:223
 msgid "No gambling of any kind"
 msgstr "किसी प्रकार का कोई जुआ नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:225
+#: ../panels/user-accounts/gs-content-rating.c:226
 msgid "Gambling on random events using tokens or credits"
 msgstr "टोकन या क्रेडिट का उपयोग करके जुआं या निरुदेश्य ईवेंट"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:228
+#: ../panels/user-accounts/gs-content-rating.c:229
 msgid "Gambling using “play” money"
 msgstr "\"प्ले\" धन का उपयोग करके जुआ"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:231
+#: ../panels/user-accounts/gs-content-rating.c:232
 msgid "Gambling using real money"
 msgstr "वास्तविक धन का उपयोग जुआ"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:234
+#: ../panels/user-accounts/gs-content-rating.c:235
 msgid "No ability to spend money"
 msgstr "धन व्यय करने की कोई क्षमता नहीं"
 
 #. v1.1
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:237
+#: ../panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:240
+#: ../panels/user-accounts/gs-content-rating.c:241
 msgid "Ability to spend real money in-game"
 msgstr "गेम में वास्तविक धन व्यय करने की क्षमता"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:243
+#: ../panels/user-accounts/gs-content-rating.c:244
 msgid "No way to chat with other users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:246
+#: ../panels/user-accounts/gs-content-rating.c:247
 msgid "User-to-user game interactions without chat functionality"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:249
+#: ../panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:252
+#: ../panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:255
+#: ../panels/user-accounts/gs-content-rating.c:256
 msgid "No way to talk with other users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:258
+#: ../panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:261
+#: ../panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
 msgstr "सामाजिक नेटवर्क उपयोगकर्ता नामों या ईमेल पतों का कोई साझाकरण नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:264
+#: ../panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
 msgstr "सामाजिक नेटवर्क उपयोगकर्ता नाम या ईमेल पतों का साझाकरण"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:267
+#: ../panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
 msgstr "तृतीय पक्षों के साथ उपयोगकर्ता जानकारी का कोई साझाकरण नहीं"
 
 #. v1.1
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:270
+#: ../panels/user-accounts/gs-content-rating.c:271
 msgid "Checking for the latest application version"
 msgstr ""
 
 #. v1.1
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:273
+#: ../panels/user-accounts/gs-content-rating.c:274
 msgid "Sharing diagnostic data that does not let others identify the user"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:276
+#: ../panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:279
+#: ../panels/user-accounts/gs-content-rating.c:280
 msgid "No sharing of physical location to other users"
 msgstr "अन्य उपयोगकर्ताओं के साथ भौतिक स्थान का कोई साझाकरण नहीं"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:282
+#: ../panels/user-accounts/gs-content-rating.c:283
 msgid "Sharing physical location to other users"
 msgstr "अन्य उपयोगकर्ताओं के साथ भौतिक स्थान साझा करना"
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:287
+#: ../panels/user-accounts/gs-content-rating.c:288
 msgid "No references to homosexuality"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:290
+#: ../panels/user-accounts/gs-content-rating.c:291
 msgid "Indirect references to homosexuality"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:293
+#: ../panels/user-accounts/gs-content-rating.c:294
 msgid "Kissing between people of the same gender"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:296
+#: ../panels/user-accounts/gs-content-rating.c:297
 msgid "Graphic sexual behavior between people of the same gender"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:299
+#: ../panels/user-accounts/gs-content-rating.c:300
 msgid "No references to prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:302
+#: ../panels/user-accounts/gs-content-rating.c:303
 msgid "Indirect references to prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:305
+#: ../panels/user-accounts/gs-content-rating.c:306
 msgid "Direct references to prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:308
+#: ../panels/user-accounts/gs-content-rating.c:309
 msgid "Graphic depictions of the act of prostitution"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:311
+#: ../panels/user-accounts/gs-content-rating.c:312
 msgid "No references to adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:314
+#: ../panels/user-accounts/gs-content-rating.c:315
 msgid "Indirect references to adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:317
+#: ../panels/user-accounts/gs-content-rating.c:318
 msgid "Direct references to adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:320
+#: ../panels/user-accounts/gs-content-rating.c:321
 msgid "Graphic depictions of the act of adultery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:323
+#: ../panels/user-accounts/gs-content-rating.c:324
 msgid "No sexualized characters"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:326
+#: ../panels/user-accounts/gs-content-rating.c:327
 msgid "Scantily clad human characters"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:329
+#: ../panels/user-accounts/gs-content-rating.c:330
 msgid "Overtly sexualized human characters"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:332
+#: ../panels/user-accounts/gs-content-rating.c:333
 msgid "No references to desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:335
+#: ../panels/user-accounts/gs-content-rating.c:336
 msgid "Depictions or references to historical desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:338
+#: ../panels/user-accounts/gs-content-rating.c:339
 msgid "Depictions of modern-day human desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:341
+#: ../panels/user-accounts/gs-content-rating.c:342
 msgid "Graphic depictions of modern-day desecration"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:344
+#: ../panels/user-accounts/gs-content-rating.c:345
 msgid "No visible dead human remains"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:347
+#: ../panels/user-accounts/gs-content-rating.c:348
 msgid "Visible dead human remains"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:350
+#: ../panels/user-accounts/gs-content-rating.c:351
 msgid "Dead human remains that are exposed to the elements"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:353
+#: ../panels/user-accounts/gs-content-rating.c:354
 msgid "Graphic depictions of desecration of human bodies"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:356
+#: ../panels/user-accounts/gs-content-rating.c:357
 msgid "No references to slavery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:359
+#: ../panels/user-accounts/gs-content-rating.c:360
 msgid "Depictions or references to historical slavery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:362
+#: ../panels/user-accounts/gs-content-rating.c:363
 msgid "Depictions of modern-day slavery"
 msgstr ""
 
 #. TRANSLATORS: content rating description
-#: ../panels/user-accounts/gs-content-rating.c:365
+#: ../panels/user-accounts/gs-content-rating.c:366
 msgid "Graphic depictions of modern-day slavery"
 msgstr ""
 
@@ -7447,11 +7451,11 @@ msgstr "कुछ नहीं"
 msgid "Logged in"
 msgstr "लाग्ड इन"
 
-#: ../panels/user-accounts/um-user-panel.c:1121
+#: ../panels/user-accounts/um-user-panel.c:1122
 msgid "Failed to contact the accounts service"
 msgstr "खातों सेवा से संपर्क करने में विफल"
 
-#: ../panels/user-accounts/um-user-panel.c:1123
+#: ../panels/user-accounts/um-user-panel.c:1124
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "कृपया सुनिश्चित करें कि खाता सेवा स्थापित और सक्षम है."
 
@@ -7459,29 +7463,29 @@ msgstr "कृपया सुनिश्चित करें कि खा�
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1159
+#: ../panels/user-accounts/um-user-panel.c:1160
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "बदलाब लाने के लिए,\nक्लिक करें * चिह्न पर पहले"
 
-#: ../panels/user-accounts/um-user-panel.c:1201
+#: ../panels/user-accounts/um-user-panel.c:1202
 msgid "Create a user account"
 msgstr "उपयोगकर्ता खाता बनाएँ"
 
-#: ../panels/user-accounts/um-user-panel.c:1212
-#: ../panels/user-accounts/um-user-panel.c:1393
+#: ../panels/user-accounts/um-user-panel.c:1213
+#: ../panels/user-accounts/um-user-panel.c:1394
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "उपयोगकर्ता खाता बनाने के लिए,\nक्लिक करें * चिह्न पर पहले"
 
-#: ../panels/user-accounts/um-user-panel.c:1222
+#: ../panels/user-accounts/um-user-panel.c:1223
 msgid "Delete the selected user account"
 msgstr "चयनित उपयोगकर्ता खाता को हटायें"
 
-#: ../panels/user-accounts/um-user-panel.c:1234
-#: ../panels/user-accounts/um-user-panel.c:1398
+#: ../panels/user-accounts/um-user-panel.c:1235
+#: ../panels/user-accounts/um-user-panel.c:1399
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
