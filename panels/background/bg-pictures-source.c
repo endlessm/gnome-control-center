@@ -29,6 +29,8 @@
 #include <string.h>
 #include <cairo-gobject.h>
 #include <gio/gio.h>
+#include <glib.h>
+#include <glib/gi18n.h>
 #include <grilo.h>
 #include <libgnome-desktop/gnome-desktop-thumbnail.h>
 #include <gdesktop-enums.h>
@@ -1025,9 +1027,9 @@ bg_pictures_source_init (BgPicturesSource *self)
 
   priv->picture_dir_monitor = monitor_path (self, pictures_path);
 
-  wallpapers_path = g_get_user_special_dir_for_desktop_id ("gnome-wallpapers.desktop");
-  if (wallpapers_path)
-    priv->wallpapers_dir_monitor = monitor_path (self, wallpapers_path);
+  /* Nautilus puts wallpapers into this subdirectory: */
+  wallpapers_path = g_build_filename (pictures_path, _("Wallpapers"), NULL);
+  priv->wallpapers_dir_monitor = monitor_path (self, wallpapers_path);
 
   cache_path = bg_pictures_source_get_cache_path ();
   priv->cache_dir_monitor = monitor_path (self, cache_path);
