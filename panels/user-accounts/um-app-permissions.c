@@ -713,7 +713,9 @@ create_row_for_app_cb (gpointer item,
   gtk_container_add (GTK_CONTAINER (box), w);
 
   /* Switch */
-  w = gtk_switch_new ();
+  w = g_object_new (GTK_TYPE_SWITCH,
+                    "valign", GTK_ALIGN_CENTER,
+                    NULL);
   gtk_container_add (GTK_CONTAINER (box), w);
 
   gtk_widget_show_all (box);
