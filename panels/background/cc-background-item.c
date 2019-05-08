@@ -999,7 +999,7 @@ colors_equal (const char *a,
 	GdkRGBA color1, color2;
 
 	gdk_rgba_parse (&color1, a);
-	gdk_rgba_parse (&color1, b);
+	gdk_rgba_parse (&color2, b);
 
 	return gdk_rgba_equal (&color1, &color2);
 }
