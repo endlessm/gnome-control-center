@@ -150,8 +150,8 @@ get_emblemed_pixbuf (CcBackgroundItem *item, GdkPixbuf *pixbuf, gint scale_facto
 static void
 set_bg_properties (CcBackgroundItem *item)
 {
-        GdkColor pcolor = { 0, 0, 0, 0 };
-        GdkColor scolor = { 0, 0, 0, 0 };
+        GdkRGBA pcolor = { 0, 0, 0, 0 };
+        GdkRGBA scolor = { 0, 0, 0, 0 };
 
         if (item->priv->uri) {
 		GFile *file;
@@ -166,13 +166,13 @@ set_bg_properties (CcBackgroundItem *item)
 	}
 
         if (item->priv->primary_color != NULL) {
-                gdk_color_parse (item->priv->primary_color, &pcolor);
+                gdk_rgba_parse (&pcolor, item->priv->primary_color);
         }
         if (item->priv->secondary_color != NULL) {
-                gdk_color_parse (item->priv->secondary_color, &scolor);
+                gdk_rgba_parse (&scolor, item->priv->secondary_color);
         }
 
-        gnome_bg_set_color (item->priv->bg, item->priv->shading, &pcolor, &scolor);
+        gnome_bg_set_rgba (item->priv->bg, item->priv->shading, &pcolor, &scolor);
         gnome_bg_set_placement (item->priv->bg, item->priv->placement);
 }
 
@@ -996,12 +996,12 @@ static gboolean
 colors_equal (const char *a,
 	      const char *b)
 {
-	GdkColor color1, color2;
+	GdkRGBA color1, color2;
 
-	gdk_color_parse (a, &color1);
-	gdk_color_parse (b, &color2);
+	gdk_rgba_parse (&color1, a);
+	gdk_rgba_parse (&color1, b);
 
-	return gdk_color_equal (&color1, &color2);
+	return gdk_rgba_equal (&color1, &color2);
 }
 
 gboolean
