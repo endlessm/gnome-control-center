@@ -250,6 +250,8 @@ vendor_conf_file = get_option('vendor_conf_file')
 if vendor_conf_file == ''
   vendor_conf_file = join_paths(control_center_localstatedir, 'lib', 'gnome-control-center', 'vendor.conf')
 endif
+config_h.set_quoted('VENDOR_CONF_FILE', vendor_conf_file,
+                    description: 'Vendor configuration file')
 
 gnome = import('gnome')
 i18n = import('i18n')
