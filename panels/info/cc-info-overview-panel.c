@@ -51,6 +51,8 @@
 #include "cc-info-overview-panel.h"
 
 #define EOS_IMAGE_VERSION_XATTR "user.eos-image-version"
+#define VENDOR_INFO_GROUP    "Info"
+#define VENDOR_INFO_LOGO_KEY "logo"
 
 typedef struct {
   /* Will be one or 2 GPU name strings, or "Unknown" */
@@ -222,6 +224,61 @@ find_terms_document_for_languages (const gchar *product_name,
     }
 
   return NULL;
+}
+
+static gchar *
+read_vendor_logo_path (void)
+{
+  g_autoptr(GKeyFile) keyfile = NULL;
+  g_autoptr(GError) error = NULL;
+  gchar *result = NULL;
+
+  /* VENDOR_CONF_FILE points to a keyfile containing vendor customization
+   * options. This panel will look for options under the "Info" group, and
+   * supports the following keys:
+   *   - logo (required): absolute path to the file with a logo for the vendor.
+   *
+   * This is how this file would look on a vendor image:
+   *
+   *   [Info]
+   *   logo=/path/to/the/image/with/the/logo.png
+   */
+  keyfile = g_key_file_new ();
+  if (!g_key_file_load_from_file (keyfile, VENDOR_CONF_FILE, G_KEY_FILE_NONE, &error))
+    {
+      if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
+        g_warning ("Could not read file %s: %s", VENDOR_CONF_FILE, error->message);
+
+      return NULL;
+    }
+
+  result = g_key_file_get_string (keyfile, VENDOR_INFO_GROUP, VENDOR_INFO_LOGO_KEY, &error);
+  if (!result)
+    {
+      g_warning ("Could not read logo path from %s: %s", VENDOR_CONF_FILE, error->message);
+      return NULL;
+    }
+
+  return result;
+}
+
+static void
+update_vendor_specific_info (CcInfoOverviewPanel *self)
+{
+  CcInfoOverviewPanelPrivate *priv = cc_info_overview_panel_get_instance_private (self);
+  g_autofree gchar *vendor_logo_path = NULL;
+
+  vendor_logo_path = read_vendor_logo_path ();
+
+  if (!vendor_logo_path)
+    {
+      g_debug ("No vendor configuration found");
+      return;
+    }
+
+  /* Override the logo with the vendor one if it exists */
+  if (g_file_test (vendor_logo_path, G_FILE_TEST_EXISTS))
+    gtk_image_set_from_file (GTK_IMAGE (priv->system_image), vendor_logo_path);
 }
 
 static gboolean
@@ -737,6 +794,8 @@ info_overview_panel_setup_overview (CcInfoOverviewPanel *self)
   get_primary_disc_info (self);
 
   gtk_label_set_markup (GTK_LABEL (priv->graphics_label), priv->graphics_data->hardware_string);
+
+  update_vendor_specific_info (self);
 }
 
 static void
