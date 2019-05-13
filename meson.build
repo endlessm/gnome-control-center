@@ -10,6 +10,7 @@ control_center_bindir = join_paths(control_center_prefix, get_option('bindir'))
 control_center_datadir = join_paths(control_center_prefix, get_option('datadir'))
 control_center_libexecdir = join_paths(control_center_prefix, get_option('libexecdir'))
 control_center_localedir = join_paths(control_center_prefix, get_option('localedir'))
+control_center_localstatedir = get_option('localstatedir')
 control_center_mandir = join_paths(control_center_prefix, get_option('mandir'))
 control_center_sysconfdir = join_paths(control_center_prefix, get_option('sysconfdir'))
 
@@ -245,6 +246,11 @@ if gnome_session_libexecdir == ''
   gnome_session_libexecdir = control_center_libexecdir
 endif
 
+vendor_conf_file = get_option('vendor_conf_file')
+if vendor_conf_file == ''
+  vendor_conf_file = join_paths(control_center_localstatedir, 'lib', 'gnome-control-center', 'vendor.conf')
+endif
+
 gnome = import('gnome')
 i18n = import('i18n')
 pkg = import('pkgconfig')
@@ -293,6 +299,7 @@ output += '     GNOME Bluetooth (Bluetooth panel) .......... ' + host_is_linux_n
 output += '     Cheese (Users panel webcam support) ........ ' + enable_cheese.to_string() + '\n'
 output += '     IBus (Region panel IBus support) ........... ' + enable_ibus.to_string() + '\n'
 output += '     NetworkManager (Network panel) ............. ' + host_is_linux.to_string() + '\n'
+output += '     Vendor\'s config file ....................... ' + vendor_conf_file + '\n'
 output += '     Wacom (Wacom tablet panel) ................. ' + host_is_linux_not_s390.to_string() + '\n'
 output += '     Wayland .................................... ' + enable_wayland.to_string() + '\n'
 

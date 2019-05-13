@@ -30,6 +30,7 @@ cflags += [
   '-DBINDIR="@0@"'.format(control_center_bindir),
   '-DDATADIR="@0@"'.format(control_center_datadir),
   '-DGNOME_SESSION_DIR="@0@"'.format(gnome_session_libexecdir),
+  '-DVENDOR_CONF_FILE="@0@"'.format(vendor_conf_file),
   '-DGNOMELOCALEDIR="@0@"'.format(control_center_localedir)
 ]
 
