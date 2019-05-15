@@ -1,9 +1,246 @@
-gnome-control-center (1:3.26.2-1endless0) unstable; urgency=medium
+gnome-control-center (1:3.32.1-1) experimental; urgency=medium
 
-  * Add dependency to libeos-parental-controls-0
-    https://phabricator.endlessm.com/T23897
+  * New upstream release
 
- -- Georges Basile Stavracas Neto <georges@endlessm.com>  Mon, 19 Nov 2018 12:03:23 -0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 03 Apr 2019 18:25:00 +0200
+
+gnome-control-center (1:3.32.0.1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Remove the patches included in the new version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 12 Mar 2019 10:47:36 +0100
+
+gnome-control-center (1:3.31.92-3) experimental; urgency=medium
+
+  * Cherry-pick two patches from upstream libhandy to fix translations
+
+ -- Iain Lane <laney@debian.org>  Thu, 07 Mar 2019 15:51:05 +0000
+
+gnome-control-center (1:3.31.92-2) experimental; urgency=medium
+
+  * debian/control.in:
+    - Build-Depends on libudisks2-dev
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 06 Mar 2019 16:05:01 +0100
+
+gnome-control-center (1:3.31.92-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 06 Mar 2019 15:26:53 +0100
+
+gnome-control-center (1:3.31.90-1) experimental; urgency=medium
+
+  * New upstream development release
+  * Build-Depend on libgsound-dev
+  * Bump Build-Depends: meson 0.48.0, libupower-glib-dev 0.99.8 and
+    gsettings-desktop-schemas-dev 3.31.0
+  * Remove 10 patches applied in new release
+  * Refresh patches
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 07 Feb 2019 14:27:18 -0500
+
+gnome-control-center (1:3.30.2-5) unstable; urgency=medium
+
+  * Add distro-logo.patch used by Fedora and Ubuntu. See the
+    desktop-base README.Debian for how to override using Debian alternatives.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 06 Feb 2019 20:39:07 -0500
+
+gnome-control-center (1:3.30.2-4) unstable; urgency=medium
+
+  * debian/patches/power-Label-the-PENDING_CHARGING-state-as-Not-Charging.patch:
+    - Label the PENDING_CHARGING state as "Not Charging" (LP: #1745032)
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Fri, 25 Jan 2019 12:39:58 +0000
+
+gnome-control-center (1:3.30.2-3) unstable; urgency=medium
+
+  * Cherry-pick 8 commits to improve accessibility
+    - Include fix for reversed Repeat Keys speed slider (LP: #1736883)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 10 Jan 2019 09:08:13 -0500
+
+gnome-control-center (1:3.30.2-2) unstable; urgency=medium
+
+  * Drop Build-Depend on gnome-common & intltool (Closes: #829788)
+  * Restore -Wl,-O1 to our LDFLAGS
+  * Enable all hardening flags
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 23 Dec 2018 11:17:33 -0500
+
+gnome-control-center (1:3.30.2-1) unstable; urgency=medium
+
+  * d/p/Debian-s-adduser-doesn-t-allow-uppercase-letters-by-defau.patch:
+    - Debian's adduser doesn't allow uppercase letters by default
+      (Closes: #910141)
+  * New upstream release
+  * d/p/region-Autodisconnect-IBusBus-connected-handler.patch:
+    - Do not segfault when region panel is closed during init
+      (Cherry-picked from upstream commit 88ca2fcd)
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Thu, 08 Nov 2018 12:55:32 +0000
+
+gnome-control-center (1:3.30.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - d/p/Fix-icons-in-translations.patch:
+    - d/p/Update-Belarusian-translation.patch:
+    - d/p/Update-German-translation.patch:
+    - d/p/Update-Russian-translation.patch:
+    - d/p/Updated-Czech-translation-1.patch:
+    - d/p/Updated-Czech-translation-2.patch:
+    - d/p/Updated-Czech-translation.patch:
+    - d/p/color-Fix-fallout-from-the-GtkTemplate-port.patch:
+    - d/p/region-Cancel-async-permission-requests-when-panel-is-clo.patch:
+    - d/p/region-Do-not-release-locale-keys-in-IM-hash-table.patch:
+    - d/p/region-Don-t-leak-GFile-objects.patch:
+    - d/p/region-Fix-language-section-not-being-marked-insensitive.patch:
+    - d/p/region-Remove-duplicate-cancellable-code.patch:
+    - d/p/region-Replace-tab-characters-with-spaces.patch:
+      Drop patches applied upstream.
+  * debian/rules:
+    - Bump Standards-Version to 4.2.1 (no changes required)
+    - Don't include gnome-get-source.mk because it's no longer required since
+      Debian Policy 4.1.4
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Mon, 01 Oct 2018 16:37:52 +0100
+
+gnome-control-center (1:3.30.0-2) unstable; urgency=medium
+
+  * Team upload
+  * d/patches: Update from upstream gnome-3-30 branch at commit
+    3.30.0-21-g230f659a3 (excluding CI and Flatpak changes) for bug fixes
+    and translation updates
+  * Release to unstable
+    - d/gbp.conf, d/control: Switch branches for unstable
+    - d/watch: Watch for upstream stable (even-numbered) releases
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 20 Sep 2018 12:49:10 +0100
+
+gnome-control-center (1:3.30.0-1) experimental; urgency=medium
+
+  * Team upload
+  * d/gbp.conf: Update from glib2.0
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 19 Sep 2018 14:55:49 +0100
+
+gnome-control-center (1:3.29.92-1) experimental; urgency=medium
+
+  * New upstream version
+    - Wi-Fi, Fix a potential crash (lp: #1718727)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 28 Aug 2018 10:38:40 +0200
+
+gnome-control-center (1:3.29.90-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Arnaud Rebillout ]
+  * Bump requirement for libgtk-3, libupower-glib and cheese (per meson.build)
+
+  [ Iain Lane ]
+  * debian/gbp.conf:
+    + Upstream's tags are normal now - remove the commented out
+      upstream-vcs-tag.
+    + Use patch-numbers = False
+  * debian/*: Update for experimental / 3.29 series
+  * New upstream release 3.29.4
+    + Use symbolic icons in Shell search
+    + Introduce Dynamic Panel
+    + Display:
+      - Improve display arrangement widget
+      - Fix a few crashers
+    + Sharing:
+      - Expose Remote Desktop work on Wayland
+    + User Accounts:
+      - Use term "Confirm" instead of "Verify"
+      - Use the same phrase when passwords do not match
+    + Wacom:
+      - Hide when no Wacom devices are connected
+      - Remove deprecated APIs
+    + Wi-Fi:
+      - Hide when no Wi-Fi adapters are available
+    + Power:
+      - Fix showing approximate percentages
+    + Thunderbolt:
+      - Introduce new Thunderbolt panel
+    + User Accounts:
+      - Fix hint for wrong enterprise user/password
+    + Improve logging engine
+    + Add an object caching mechanism
+    + Vastly improve CI
+    + Organize tests
+    + Add Network tests
+  * d/p/Show-scrollbar-on-first-Language-window-if-needed.patch: Drop, applied
+    upstream.
+  * d/p/Expose-touchpad-settings-if-synaptics-is-in-use.patch: Refresh.
+  * debian/control*:
+    + Bump libnm* deps, and add libsecret-1-dev per meson.build.
+    + Add test deps (xvfb, python3-dbusmock, at-spi2-core)
+  * debian/gnome-control-center.docs: Remove AUTHORS, README → README.md
+  * debian/control*: Require gnome-settings-daemon 3.29
+
+  [ Simon McVittie ]
+  * Bump Standards-Version to 4.1.5 (no changes required)
+  * Set Rules-Requires-Root to no
+  * d/copyright: Update and convert to machine-readable format
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 05 Aug 2018 18:18:52 +0100
+
+gnome-control-center (1:3.28.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release 3.28.2
+    - Fixes file permissions regression introduced in meson conversion
+      (Closes: #900911)
+  * Standards-Version: 4.1.4 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 27 Jun 2018 09:18:33 +0100
+
+gnome-control-center (1:3.28.1-1) unstable; urgency=medium
+
+  [ Gunnar Hjalmarsson ]
+  * d/p/0005-Show-scrollbar-on-first-Language-window-if-needed.patch:
+    - If the list of languages in the region & language panel is too long,
+      show a scroll bar.
+
+  [ Michael Biebl ]
+  * New upstream version 3.28.1
+  * Drop Build-Depends on network-manager-dev, no longer necessary
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 11 Apr 2018 18:20:17 +0200
+
+gnome-control-center (1:3.28.0-1) unstable; urgency=medium
+
+  [ Simon McVittie ]
+  * New upstream stable release
+  * Switch Vcs-* to salsa.debian.org git
+  * d/gbp.conf: Add
+  * Refresh patches via gbp pq
+
+  [ Daniel van Vugt ]
+  * Add 0004-Expose-touchpad-settings-if-synaptics-is-in-use.patch
+    - Allow touchpad settings to work with xserver-xorg-input-synaptics
+      Note that this is unneeded on GNOME on Wayland where libinput is
+      always used. (LP: #1686081)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 18 Mar 2018 20:14:00 -0400
+
+gnome-control-center (1:3.27.92-1) unstable; urgency=medium
+
+  * New upstream release candidate
+  * Build with meson
+  * Build-Depend on policykit-1 for itstool rules
+  * Build-Depend on networkmanager-dev
+  * Bump minimum gnome-desktop3 and gsettings-desktop-schemas
+  * Bump debhelper compat to 11
+  * Bump Standards-Version to 4.1.3
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 10 Mar 2018 14:50:31 -0500
 
 gnome-control-center (1:3.26.2-1) unstable; urgency=medium
 
@@ -324,9 +561,9 @@ gnome-control-center (1:3.14.2-1) unstable; urgency=medium
 
   * New upstream translation and bugfix release.
     + Disables SSLv3 because POODLE.
-  * 30_stack_overflow.patch: patch from upstream git. Prevents stack 
+  * 30_stack_overflow.patch: patch from upstream git. Prevents stack
     overflow in sharing panel.
-  * 31_printers_border.patch: patch from upstream git. Removes unwanted 
+  * 31_printers_border.patch: patch from upstream git. Removes unwanted
     border around printer model name.
 
  -- Josselin Mouette <joss@debian.org>  Sun, 30 Nov 2014 11:08:12 +0100
@@ -784,7 +1021,7 @@ gnome-control-center (1:3.0.2-3) unstable; urgency=low
 gnome-control-center (1:3.0.2-2) unstable; urgency=low
 
   [ Josselin Mouette ]
-  * Drop useless gst-alsa | gst-audiosink suggstion; suggest 
+  * Drop useless gst-alsa | gst-audiosink suggstion; suggest
     gst-pulseaudio instead.
 
   [ Michael Biebl ]
@@ -819,13 +1056,13 @@ gnome-control-center (1:3.0.2-1) experimental; urgency=low
 
   [ Josselin Mouette ]
   * Break gnome-session < 3.0 because of the sound-applet startup.
-  * 01_menu_category.patch: new patch. Put g-c-c.desktop in the Settings 
+  * 01_menu_category.patch: new patch. Put g-c-c.desktop in the Settings
     menu instead of the System one.
-  * 90_force_fallback.patch: new patch. Disable the “forced fallback 
-    mode” switch, since we already provide a xsession file for it in 
+  * 90_force_fallback.patch: new patch. Disable the “forced fallback
+    mode” switch, since we already provide a xsession file for it in
     gnome-session-fallback.
   * Break gnome-power-manager < 3.0 because of the power panel.
-  * 02_https.patch: patch from upstream git. Correctly register https 
+  * 02_https.patch: patch from upstream git. Correctly register https
     scheme together with http.
   * 03_ppd_h.patch: patch from upstream git. Include ppd.h explicitly.
   * Use dh-autoreconf to go with this patch.
@@ -1004,10 +1241,10 @@ control-center (1:2.30.1-1) unstable; urgency=low
   * New upstream release.
   * Update build-dependencies.
   * Require g-s-d 2.30.
-  * 01_fix_libslab_build.patch, 02_xrandr_assert.patch: dropped, merged 
+  * 01_fix_libslab_build.patch, 02_xrandr_assert.patch: dropped, merged
     upstream.
   * 70_relibtoolize.patch: updated for the new version.
-  * 01_ml_po.patch: new patch. Fix Malayalam translation that causes 
+  * 01_ml_po.patch: new patch. Fix Malayalam translation that causes
     GConf errors.
 
  -- Josselin Mouette <joss@debian.org>  Tue, 27 Apr 2010 20:22:38 +0200
@@ -1016,7 +1253,7 @@ control-center (1:2.28.1-2) unstable; urgency=low
 
   * Drop libxxf86misc-dev build-dependency, it is not used.
     Closes: #559694.
-  * 02_xrandr_assert.patch: stolen upstream. Fix assertion when using 
+  * 02_xrandr_assert.patch: stolen upstream. Fix assertion when using
     mirroring. Closes: #563094.
 
  -- Josselin Mouette <joss@debian.org>  Mon, 04 Jan 2010 18:26:06 +0100
@@ -1087,11 +1324,11 @@ control-center (1:2.26.0-1) unstable; urgency=low
   * Remove scrollkeeper dependency.
   * New upstream release.
   * Update build-dependencies.
-  * Remove build-deps unneeded thanks to the external libslab: librsvg, 
+  * Remove build-deps unneeded thanks to the external libslab: librsvg,
     pango.
-  * 02_build_libgnome.patch, 06_gnomedesktop_api.patch: removed, fixed 
+  * 02_build_libgnome.patch, 06_gnomedesktop_api.patch: removed, fixed
     upstream.
-  * 03_a11y_logout.patch: removed, now uses the gnome-session dbus 
+  * 03_a11y_logout.patch: removed, now uses the gnome-session dbus
     interface.
   * 05_ta_po.patch, 70_relibtoolize.patch: updated for the new version.
   * Install the autostart file in /usr/share/gnome/autostart.
@@ -1108,10 +1345,10 @@ control-center (1:2.24.0.1-5) unstable; urgency=low
 control-center (1:2.24.0.1-4) unstable; urgency=low
 
   * Set the team as primary maintainer. Closes: #523535.
-  * 02_build_libgnome.patch: new patch. Fix build failure by linking 
-    explicitly to libgnomeui for stuff incorrectly listing gnome-desktop 
+  * 02_build_libgnome.patch: new patch. Fix build failure by linking
+    explicitly to libgnomeui for stuff incorrectly listing gnome-desktop
     only as a requirement. Closes: #524308.
-  * 06_gnomedesktop_api.patch: patch to cope with the API changes in 
+  * 06_gnomedesktop_api.patch: patch to cope with the API changes in
     GnomeRR 2.26.
   * 70_relibtoolize.patch: regenerated.
   * Bump build-dependency on gnome-desktop to 2.26.
@@ -1120,8 +1357,8 @@ control-center (1:2.24.0.1-4) unstable; urgency=low
 
 control-center (1:2.24.0.1-3) unstable; urgency=low
 
-  * capplets-data.gconf-defaults: remove the keybinding settings. Now 
-    that X.org returns correctly the XF86* keys, they must be used 
+  * capplets-data.gconf-defaults: remove the keybinding settings. Now
+    that X.org returns correctly the XF86* keys, they must be used
     instead.
   * Add missing shortcuts for Home and Help.
 
@@ -1151,17 +1388,17 @@ control-center (1:2.24.0.1-2) unstable; urgency=low
 
 control-center (1:2.24.0.1-1) experimental; urgency=low
 
-  * 03_a11y_logout.patch: use gnome-panel-logout for logout when 
+  * 03_a11y_logout.patch: use gnome-panel-logout for logout when
     available.
   * New upstream release.
     + Correctly sets background without nautilus. Closes: #472902.
     + The about-me capplet correctly saves emails. Closes: #350651.
     + Resolutions are sorted in the display capplet. Closes: #509899.
   * Update build-dependencies.
-  * Build-depend on libeel 2.24 to build against the experimental 
+  * Build-depend on libeel 2.24 to build against the experimental
     version.
   * Suggest libcanberra-gtk-module instead of esound-clients.
-  * Remove obsolete files: libgnome-settings-daemon-dev.install, 
+  * Remove obsolete files: libgnome-settings-daemon-dev.install,
     gnome-control-center.dirs.
   * Switch to quilt for managing patches; build-depend on quilt.
   * 01_fix_libslab_build.patch: updated for the new version.
@@ -1173,10 +1410,10 @@ control-center (1:2.24.0.1-1) experimental; urgency=low
   * *.install: simplify a lot the installation files.
     + Remove the pkg-config files in capplets-data.
   * Remove -1 suffix in build-deps.
-  * 99_ltmain_as-needed.patch: make --as-needed work for the library as 
+  * 99_ltmain_as-needed.patch: make --as-needed work for the library as
     well.
   * debian/gnome-control-center.postinst: remove gnome-vfs conffiles.
-  * 05_ta_po.patch: new patch. Fix Tamil translation of the GConf 
+  * 05_ta_po.patch: new patch. Fix Tamil translation of the GConf
     defaults.
 
  -- Josselin Mouette <joss@debian.org>  Sun, 28 Dec 2008 12:38:50 +0100
@@ -2902,5 +3139,3 @@ gnome-core (0.13-1) unstable; urgency=low
   * Initial Release.
 
  -- Jim Pick <jim@jimpick.com>  Mon, 16 Mar 1998 15:27:43 -0800
-
-
