@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Marathi (http://www.transifex.com/endless-os/gnome-control-center/language/mr/)\n"
 "MIME-Version: 1.0\n"
@@ -63,8 +63,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "स्पॅन"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "वॉलपेपर्स्"
 
@@ -128,8 +129,8 @@ msgstr "प्रतिमांना %s फोल्डरमध्ये स�
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "रद्द करा (_C)"
 
@@ -1768,9 +1769,6 @@ msgstr "स्वपसंत शॉर्टकट"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "अकार्यान्वित"
@@ -5184,7 +5182,7 @@ msgstr "ठिकाण पसंत करा"
 msgid "_OK"
 msgstr "ठीक आहे (_O)"
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr "ॲप्लिकेशन्स आढळले नाही"
 
@@ -7164,6 +7162,12 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "प्रशासक"
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
@@ -7280,7 +7284,7 @@ msgstr ""
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%k:%M"
@@ -7288,7 +7292,7 @@ msgstr "%k:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7370,87 +7374,87 @@ msgstr "अवैध पासवर्ड, कृपया पुनः प्�
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "%s डोमेन: %sसह जोडणी अशक्य"
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
 msgstr "वापरकर्ता नष्ट करण्यास अपयशी"
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
 msgstr "स्वतःचे खाते नष्ट करणे शक्य नाही."
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
 msgstr "%s ने अजूनही प्रवेश केले आहे"
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr "प्रवेश केले असताना वापरकर्त्याला नष्ट केल्याने प्रणालीला अस्थीर स्तरात जाऊ शकते."
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr "वापरकर्ता खात्याला नष्ट करतेवेळी होम डिरेक्ट्री, मेल स्पूल व तात्पुर्ते फाइल्स् जपून ठेवणे शक्य आहे."
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr "फाइल्स् नष्ट करा (_D)"
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr "फाइल्स् जपवून ठेवा (_K)"
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "काढून टाका (_D)"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "खाते बंद केले"
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "पुढच्या प्रवेशवेळी सेट करा"
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "काहिच नाही"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
 msgstr "प्रवेश केले"
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
 msgstr "खाते सर्व्हिससह संपर्क करणे अपयशी"
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "कृपया AccountService प्रतिष्ठापीत नाही व सुरू नाही याची खात्री करा."
 
@@ -7458,29 +7462,29 @@ msgstr "कृपया AccountService प्रतिष्ठापीत न�
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "बदल करण्यासाठी,\nपहिले * चिन्ह क्लिक करा"
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
 msgstr "वापरकर्ता खाते निर्माण करा"
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "वापरकर्ता खाते निर्माण करण्यासाठी,\nपहिले * क्लिक करा"
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
 msgstr "निवडलेल्या वापरकर्त्याचे खाते नष्ट करा"
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"

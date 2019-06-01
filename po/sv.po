@@ -9,15 +9,15 @@
 # Daniel Nylander <po@danielnylander.se>, 2006-2012
 # Josef Andersson <josef.andersson@fripost.org>, 2014
 # Martin Wahlen <mva@sbbs.se>, 1998-1999
-# Mattias Eriksson <snaggen@gmail.com>, 2015
+# Mattias Eriksson <mattias.eriksson@tutanota.com>, 2015
 # Roddy Shuler <roddy@stanfordalumni.org>, 2018
 # Sebastian Rasmussen <sebras@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/endless-os/gnome-control-center/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -70,8 +70,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "Omfång"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Bakgrundsbilder"
 
@@ -135,8 +136,8 @@ msgstr "Du kan lägga till bilder till mapp för %s så kommer de att visas här
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "_Avbryt"
 
@@ -1775,9 +1776,6 @@ msgstr "Anpassade kortkommandon"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Inaktiverad"
@@ -5191,7 +5189,7 @@ msgstr "Välj plats"
 msgid "_OK"
 msgstr "_OK"
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr "Inga program hittades"
 
@@ -7171,6 +7169,12 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "Administratör"
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
@@ -7287,7 +7291,7 @@ msgstr "%s — %s"
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%k:%M"
@@ -7295,7 +7299,7 @@ msgstr "%k:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7377,87 +7381,87 @@ msgstr "Ogiltigt lösenord, försök igen"
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "Det gick inte att ansluta till %s-domänen: %s"
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
 msgstr "Ditt konto"
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
 msgstr "Misslyckades med att ta bort användaren"
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
 msgstr "Misslyckades med att ta bort fjärrhanterad användare"
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
 msgstr "Du kan inte ta bort ditt egna konto."
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
 msgstr "%s är fortfarande inloggad"
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr "Att ta bort en användare när de är inloggade kan medföra att systemet hamnar i ett inkonsistent tillstånd."
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr "Vill du behålla filer tillhörande %s?"
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr "Det är möjligt att behålla hemkatalogen, e-postkö och tillfälliga filer när ett användarkonto tas bort."
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr "_Ta bort filer"
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr "_Behåll filer"
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "Är du säker på att du vill ta bort fjärrhanterade kontot för %s?"
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "_Ta bort"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Kontot är inaktiverat"
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "Ska ställas in vid nästa inloggning"
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "Ingen"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
 msgstr "Inloggad"
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
 msgstr "Misslyckades med att kontakta kontotjänsten"
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Försäkra dig om att kontotjänsten är installerad och aktiverad."
 
@@ -7465,29 +7469,29 @@ msgstr "Försäkra dig om att kontotjänsten är installerad och aktiverad."
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "Klicka först på *-ikonen\nför att göra ändringar"
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
 msgstr "Skapa ett användarkonto"
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "Klicka först på *-ikonen för\natt skapa ett användarkonto"
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
 msgstr "Ta bort markerat användarkonto"
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"

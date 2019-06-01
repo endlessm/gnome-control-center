@@ -21,6 +21,7 @@
 # Jonh Wendell <wendell@bani.com.br>, 2008-2009
 # Krix Apolinário <krixapolinario@gmail.com>, 2009,2011
 # Leandro Stanger <leandrostanger@hotmail.com>, 2018
+# Leandro Stanger <leandrostanger@hotmail.com>, 2019
 # leonardof <leonardof@gnome.org>, 2006,2008
 # leonardof <leonardof@gnome.org>, 2006,2008
 # Mariana Barbosa <mariana@endlessm.com>, 2017
@@ -39,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:33+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/endless-os/gnome-control-center/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -93,8 +94,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "Expandir"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Papéis de parede"
 
@@ -158,8 +160,8 @@ msgstr "Você pode adicionar imagens para a pasta %s e elas aparecerão aqui"
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "_Cancelar"
 
@@ -1798,9 +1800,6 @@ msgstr "Atalhos personalizados"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Desabilitado"
@@ -5214,7 +5213,7 @@ msgstr "Selecione localização"
 msgid "_OK"
 msgstr "_OK"
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr "Nenhum aplicativo encontrado"
 
@@ -6401,7 +6400,7 @@ msgstr "Impeça este usuário de executar alguns aplicativos."
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:3
 msgid "App Center Restrictions"
-msgstr "Restrições na Central de Programas"
+msgstr "Restrições na Central de Aplicativos"
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:4
 msgid "App _Installation:"
@@ -7194,6 +7193,12 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "Administrador"
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
@@ -7310,7 +7315,7 @@ msgstr "%s — %s"
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%k:%M"
@@ -7318,7 +7323,7 @@ msgstr "%k:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7400,87 +7405,87 @@ msgstr "Senha inválida, por favor tente novamente"
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "Não foi possível conectar ao domínio %s: %s"
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
 msgstr "Sua conta"
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
 msgstr "Falha ao excluir usuário"
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
 msgstr "Falha ao revogar usuário gerenciado remotamente"
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
 msgstr "Você não pode excluir sua própria conta."
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
 msgstr "%s ainda está conectado"
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr "Excluindo um usuário enquanto ele está conectado pode deixar o sistema em um estado inconsistente."
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr "Você deseja manter os arquivos de %s?"
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr "É possível manter o diretório home, fila de e-mail e arquivos temporários ao excluir uma conta de usuário."
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr "_Excluir arquivos"
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr "_Manter arquivos"
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "Tem certeza de que deseja revogar a conta gerenciada remotamente do %s?"
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "_Excluir"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Conta desabilitada"
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "Para ser definido no próximo início de sessão"
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "Nenhum"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
 msgstr "Acesso autorizado"
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
 msgstr "Falhou ao contactar o serviço de contas"
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Por favor, certifique-se de que o Serviço de Contas esteja instalado corretamente."
 
@@ -7488,29 +7493,29 @@ msgstr "Por favor, certifique-se de que o Serviço de Contas esteja instalado co
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "Para fazer alterações,\nclique no ícone * primeiro"
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
 msgstr "Cria uma conta de usuário"
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "Para criar uma conta de usuário,\nclique primeiro no ícone *"
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
 msgstr "Exclui a conta de usuário selecionada"
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
@@ -7755,7 +7760,7 @@ msgstr "página 3"
 #: ../shell/alt/cc-window.c:53 ../shell/alt/cc-window.c:1484
 #: ../shell/cc-window.c:762
 msgid "All Settings"
-msgstr "Todas configurações"
+msgstr "Todas as configurações"
 
 #. Add categories
 #: ../shell/alt/cc-window.c:875
@@ -7775,17 +7780,17 @@ msgstr "Sistema"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:1
 msgid "GNOME Control Center"
-msgstr "Centro de controle GNOME"
+msgstr "Centro de controle Endless"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:2
 msgid "Utilities to configure the GNOME desktop"
-msgstr "Utilitários para configura o ambiente GNOME"
+msgstr "Utilitários para configura o ambiente Endless Shell"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:3
 msgid ""
 "The control center is GNOME’s main interface for configuration of various "
 "aspects of your desktop."
-msgstr "O centro de controle é a interface principal do GNOME para configuração de vários aspectos de seu ambiente."
+msgstr "O centro de controle é a interface principal do Endless para configuração de vários aspectos de seu ambiente."
 
 #: ../shell/cc-application.c:45
 msgid "Display version number"

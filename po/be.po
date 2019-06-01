@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/endless-os/gnome-control-center/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -68,8 +68,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "Ад краю да краю"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Абрусы"
 
@@ -133,8 +134,8 @@ msgstr "Тут вы зможаце ўбачыць выявы, якія змес�
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "_Скасаваць"
 
@@ -1773,9 +1774,6 @@ msgstr "Уласныя клавіятурныя скароты"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Выключана"
@@ -5201,7 +5199,7 @@ msgstr "Выбар мясцовасці"
 msgid "_OK"
 msgstr "_Добра"
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr "Праграмы не знойдзены"
 
@@ -7187,6 +7185,12 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "Адміністратар"
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
@@ -7303,7 +7307,7 @@ msgstr "%s — %s"
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%k:%M"
@@ -7311,7 +7315,7 @@ msgstr "%k:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7393,87 +7397,87 @@ msgstr "Хібны пароль, паўтарыце спробу"
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "Не ўдалося злучыцца з даменам %s: %s"
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
 msgstr "Ваш конт"
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
 msgstr "Не ўдалося выдаліць карыстальніка"
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
 msgstr "Не ўдалося адклікаць карыстальніка, які кіруецца аддалена"
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
 msgstr "Немагчыма выдаліць уласны конт."
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
 msgstr "%s яшчэ карыстаецца сеансам"
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr "Калі вы выдаліце карыстальніка, які дасюль карыстаецца сеансам, гэта можа прывесці да няўзгодненага стану сістэмы."
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr "Ці вы хочаце пакінуць файлы карыстальніка %s?"
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr "Пры выдаленні конта карыстальніка можна пакінуць яго хатні каталог, пошту і часовыя файлы."
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr "_Выдаліць файлы"
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr "_Пакінуць файлы"
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "Ці вы насамрэч хочаце адклікаць конт %s, які кіруецца аддалена?"
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "_Выдаліць"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Конт выключаны"
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "Мусіць быць вызначаны пры ўваходзе"
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "Няма"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
 msgstr "У сістэме"
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
 msgstr "Не ўдалося звязацца са службай контаў"
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Праверце, што AccountService усталяваны і ўключаны."
 
@@ -7481,29 +7485,29 @@ msgstr "Праверце, што AccountService усталяваны і ўклю
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "Каб учыніць змены,\nспачатку пстрыкніце ў значок \"*\""
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
 msgstr "Стварыць конт карыстальніка"
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "Каб стварыць конт карыстальніка,\nспачатку пстрыкніце ў значок \"*\""
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
 msgstr "Выдаліць вылучаны конт карыстальніка"
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"

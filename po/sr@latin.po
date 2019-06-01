@@ -13,10 +13,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
-"Language-Team: Serbian (Latin) (http://www.transifex.com/endless-os/gnome-control-center/language/sr%40latin/)\n"
+"Language-Team: Serbian (Latin) (http://www.transifex.com/endless-os/gnome-control-center/language/sr@latin/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -67,8 +67,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "Rasprostrto"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Pozadine"
 
@@ -132,8 +133,8 @@ msgstr "Možete da dodate slike u vašu fasciklu %s i one će biti prikazane ovd
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "_Otkaži"
 
@@ -1772,9 +1773,6 @@ msgstr "Proizvoljne prečice"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Isključeno"
@@ -5194,7 +5192,7 @@ msgstr "Izaberi mesto"
 msgid "_OK"
 msgstr "U _redu"
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr "Nisam pronašao programe"
 
@@ -7177,6 +7175,12 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "Administrator"
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
@@ -7293,7 +7297,7 @@ msgstr "%s — %s"
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%k:%M"
@@ -7301,7 +7305,7 @@ msgstr "%k:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7383,87 +7387,87 @@ msgstr "Neispravna lozinka, pokušajte ponovo"
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "Ne mogu da se povežem na domen „%s“: %s"
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
 msgstr "Vaš nalog"
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
 msgstr "Nisam uspeo da izbrišem korisnika"
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
 msgstr "Nisam uspeo da opozovem daljinski upravljanog korisnika"
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
 msgstr "Ne možete obrisati vaš lični nalog."
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
 msgstr "„%s“ je i dalje prijavljen"
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr "Brisanje korisnika dok su prijavljeni može da ostavi sistem u neusklađenom stanju."
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr "Da li želite da sačuvate datoteke korisnika „%s“?"
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr "Moguće je zadržati ličnu fasciklu, skladišta pošte i privremene datoteke prilikom brisanja korisničkog naloga."
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr "_Obriši datoteke"
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr "_Zadrži datoteke"
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "Da li sigurno želite da opozovete daljinski upravljani nalog korisnika „%s“?"
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "_Obriši"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Nalog je isključen"
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "Za podešavanje prilikom narednog prijavljivanja"
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "Ništa"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
 msgstr "Prijavljen sam"
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
 msgstr "Nisam uspeo da kontaktiram uslugu naloga"
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Molim proverite da li je Usluga naloga instalirana i uključena."
 
@@ -7471,29 +7475,29 @@ msgstr "Molim proverite da li je Usluga naloga instalirana i uključena."
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr "Da napravite izmene,\nkliknite prvo na ikonicu *"
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
 msgstr "Napravite korisnički nalog"
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr "Da napravite korisnički nalog,\nkliknite prvo na ikonicu *"
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
 msgstr "Obrišite izabrani korisnički nalog"
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"

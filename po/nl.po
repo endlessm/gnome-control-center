@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/endless-os/gnome-control-center/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -74,8 +74,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "Omspannen"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Achtergrondafbeeldingen"
 
@@ -139,8 +140,8 @@ msgstr "Je kunt afbeeldingen toevoegen aan je %s-map; daarna worden ze hier geto
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "_Annuleren"
 
@@ -1779,9 +1780,6 @@ msgstr "Aangepaste sneltoetsen"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Uitgeschakeld"
@@ -2354,7 +2352,7 @@ msgstr "Beschikbaar maken voor andere _gebruikers"
 
 #: ../panels/network/connection-editor/details-page.ui.h:12
 msgid "Restrict _background data usage"
-msgstr ""
+msgstr "Gegevensge_bruik op achtergrond beperken"
 
 #: ../panels/network/connection-editor/details-page.ui.h:13
 msgid "Appropriate for connections that have data charges or limits."
@@ -4196,12 +4194,12 @@ msgstr "Printers"
 
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:3
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr "Printers toevoegen, afdruktaken bekijken, en bepalen hoe u wilt afdrukken"
+msgstr "Voeg printers toe, bekijk afdruktaken en regel hoe je wilt printen"
 
 #. Translators: those are keywords for the printing control-center panel
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:5
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
-msgstr "Printer;Queue;Print;Paper;Ink;Toner;Wachtrij;Papier;Inkt;"
+msgstr "Printer;Print;Toner;Wachtrij;Papier;Inkt;"
 
 #. Translators: this action removes (purges) all the listed jobs from the
 #. list.
@@ -4230,7 +4228,7 @@ msgstr "_Ontgrendelen"
 #. Translators: No printers were detected
 #: ../panels/printers/new-printer-dialog.ui.h:8
 msgid "No Printers Found"
-msgstr "Geen printers gevonden"
+msgstr "Geen printers aangetroffen"
 
 #. Translators: The entered text should contain network address of a printer
 #. or a text which will filter found devices (their names and locations)
@@ -4240,7 +4238,7 @@ msgstr "Voer een netwerkadres in of zoek naar een printer"
 
 #: ../panels/printers/new-printer-dialog.ui.h:12
 msgid "Enter username and password to view printers on Print Server."
-msgstr "Uw gebruikersnaam en wachtwoord invoeren om printers op printserver te bekijken."
+msgstr "Voer je gebruikersnaam en wachtwoord in om printers te bekijken op de printserver."
 
 #. Translators: This button triggers the printing of a test page.
 #. Translators: Name of job which makes printer to print test page
@@ -4281,12 +4279,12 @@ msgstr "Selecteren"
 
 #: ../panels/printers/ppd-selection-dialog.ui.h:4
 msgid "Loading drivers database…"
-msgstr "Stuurprogrammadatabase wordt geladen…"
+msgstr "Bezig met laden van stuurprogrammadatabank..."
 
 #. Translators: The found device is a JetDirect printer
 #: ../panels/printers/pp-host.c:539
 msgid "JetDirect Printer"
-msgstr "JetDirect Printer"
+msgstr "JetDirect-printer"
 
 #. Translators: The found device is a Line Printer Daemon printer
 #: ../panels/printers/pp-host.c:795
@@ -4397,11 +4395,11 @@ msgstr "Ontgrendel %s."
 #: ../panels/printers/pp-new-printer-dialog.c:411
 #, c-format
 msgid "Enter username and password to view printers on %s."
-msgstr "Voer uw gebruikersnaam en wachtwoord in om printers op %s te bekijken."
+msgstr "Voer je gebruikersnaam en wachtwoord in om printers op %s te bekijken."
 
 #: ../panels/printers/pp-new-printer-dialog.c:876
 msgid "Searching for Printers"
-msgstr "Zoeken naar printers"
+msgstr "Bezig met zoeken naar printers..."
 
 #. Translators: The found device is a printer connected via USB
 #: ../panels/printers/pp-new-printer-dialog.c:1799
@@ -4454,12 +4452,12 @@ msgstr "Uitvoerlade"
 
 #: ../panels/printers/pp-options-dialog.c:88
 msgid "GhostScript pre-filtering"
-msgstr "Voorfilteren GhostScript"
+msgstr "GhostScript voorfilteren"
 
 #. Translators: This option sets number of pages printed on one sheet
 #: ../panels/printers/pp-options-dialog.c:534
 msgid "Pages per side"
-msgstr "Pagina’s per vel"
+msgstr "Aantal pagina’s per vel"
 
 #. Translators: This option sets whether to print on both sides of paper
 #: ../panels/printers/pp-options-dialog.c:546
@@ -4477,7 +4475,7 @@ msgstr "Algemeen"
 #: ../panels/printers/pp-options-dialog.c:658
 msgctxt "Printer Option Group"
 msgid "Page Setup"
-msgstr "Pagina-instelling"
+msgstr "Pagina-instellingen"
 
 #. Translators: "Installable Options" tab contains settings of presence of
 #. installed options (amount of RAM, duplex unit, etc.)
@@ -4537,7 +4535,7 @@ msgstr "Automatisch selecteren"
 #: ../panels/printers/pp-ppd-option-widget.c:84
 #: ../panels/printers/pp-ppd-option-widget.c:88
 msgid "Printer Default"
-msgstr "Standaardinstellingen van de printer"
+msgstr "Standaardinstellingen"
 
 #. Translators: this is an option of "GhostScript"
 #: ../panels/printers/pp-ppd-option-widget.c:90
@@ -4603,7 +4601,7 @@ msgstr "Geen developer meer (voor ontwikkelen)"
 #. Translators: "marker" is one color bin of the printer
 #: ../panels/printers/pp-printer-entry.c:749
 msgid "Low on a marker supply"
-msgstr "Weinig marker-voorraad"
+msgstr "Weinig markervoorraad"
 
 #. Translators: "marker" is one color bin of the printer
 #: ../panels/printers/pp-printer-entry.c:751
@@ -4657,12 +4655,12 @@ msgstr "Afvalbakje vol"
 #. Translators: Optical photo conductors are used in laser printers
 #: ../panels/printers/pp-printer-entry.c:769
 msgid "The optical photo conductor is near end of life"
-msgstr "De optische lichtgevoelige geleider (optical photo conductor) is bijna niet meer te gebruiken"
+msgstr "De optische lichtgevoelige geleider is bijna niet meer te gebruiken"
 
 #. Translators: Optical photo conductors are used in laser printers
 #: ../panels/printers/pp-printer-entry.c:771
 msgid "The optical photo conductor is no longer functioning"
-msgstr "De optische lichtgevoelige geleider (optical photo conductor) functioneert niet meer"
+msgstr "De optische lichtgevoelige geleider is niet meer te gebruiken"
 
 #. Translators: Printer's state (can start new job without waiting)
 #: ../panels/printers/pp-printer-entry.c:879
@@ -4674,7 +4672,7 @@ msgstr "Gereed"
 #: ../panels/printers/pp-printer-entry.c:884
 msgctxt "printer state"
 msgid "Does not accept jobs"
-msgstr "Taken worden niet geaccepteerd"
+msgstr "Accepteert geen taken"
 
 #. Translators: Printer's state (jobs are processing)
 #: ../panels/printers/pp-printer-entry.c:889
@@ -4698,7 +4696,7 @@ msgstr "Details van de printer"
 #. Set this printer as default
 #: ../panels/printers/printer-entry.ui.h:4
 msgid "Use Printer by Default"
-msgstr "Printer standaard gebruiken"
+msgstr "Instellen als standaardprinter"
 
 #. Translators: This button executes command which cleans print heads of the
 #. printer.
@@ -4716,12 +4714,12 @@ msgstr "Model"
 
 #: ../panels/printers/printer-entry.ui.h:11
 msgid "Ink Level"
-msgstr "Inkt-niveau"
+msgstr "Inktniveau"
 
 #. Translators: This is the message which follows the printer error.
 #: ../panels/printers/printer-entry.ui.h:13
 msgid "Please restart when the problem is resolved."
-msgstr "Gelieve opnieuw te starten wanneer het probleem opgelost is."
+msgstr "Start opnieuw op zodra het probleem is opgelost."
 
 #. Translators: This is the button which restarts the printer.
 #: ../panels/printers/printer-entry.ui.h:15
@@ -4747,7 +4745,7 @@ msgstr "Printer toevoegen…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr "Helaas, de systeemservice voor\nafdrukken is niet beschikbaar."
+msgstr "De systeemdienst voor\nafdrukken is niet beschikbaar."
 
 #: ../panels/privacy/cc-privacy-panel.c:400
 #: ../panels/privacy/cc-privacy-panel.c:403 ../panels/privacy/privacy.ui.h:28
@@ -4774,11 +4772,11 @@ msgstr "Locatiediensten"
 
 #: ../panels/privacy/cc-privacy-panel.c:983 ../panels/privacy/privacy.ui.h:24
 msgid "Metrics"
-msgstr ""
+msgstr "Statistieken"
 
 #: ../panels/privacy/cc-privacy-panel.c:1080 ../panels/privacy/privacy.ui.h:19
 msgid "Usage & History"
-msgstr "Gebruik & geschiedenis"
+msgstr "Gebruik en geschiedenis"
 
 #: ../panels/privacy/cc-privacy-panel.c:1209
 msgid "Empty all items from Trash?"
@@ -4786,11 +4784,11 @@ msgstr "Alle items uit prullenbak verwijderen?"
 
 #: ../panels/privacy/cc-privacy-panel.c:1210
 msgid "All items in the Trash will be permanently deleted."
-msgstr "Alle items in de prullenbak zullen definitief verwijderd worden."
+msgstr "Alle items in de prullenbak worden definitief verwijderd."
 
 #: ../panels/privacy/cc-privacy-panel.c:1211
 msgid "_Empty Trash"
-msgstr "Prullenbak l_egen"
+msgstr "Prullenbak l_eegmaken"
 
 #: ../panels/privacy/cc-privacy-panel.c:1234
 msgid "Delete all the temporary files?"
@@ -4798,7 +4796,7 @@ msgstr "Alle tijdelijke bestanden verwijderen?"
 
 #: ../panels/privacy/cc-privacy-panel.c:1235
 msgid "All the temporary files will be permanently deleted."
-msgstr "Alle tijdelijke bestanden zullen definitief verwijderd worden."
+msgstr "Alle tijdelijke bestanden worden definitief verwijderd."
 
 #: ../panels/privacy/cc-privacy-panel.c:1236
 msgid "_Purge Temporary Files"
@@ -4806,7 +4804,7 @@ msgstr "Tijdelijke bestanden _definitief verwijderen"
 
 #: ../panels/privacy/cc-privacy-panel.c:1258 ../panels/privacy/privacy.ui.h:33
 msgid "Purge Trash & Temporary Files"
-msgstr "Prullenbak legen & tijdelijke bestanden definitief verwijderen"
+msgstr "Prullenbak en tijdelijke bestanden definitief opschonen"
 
 #: ../panels/privacy/cc-privacy-panel.c:1298 ../panels/privacy/privacy.ui.h:40
 msgid "Software Usage"
@@ -4814,7 +4812,7 @@ msgstr "Softwaregebruik"
 
 #: ../panels/privacy/cc-privacy-panel.c:1339 ../panels/privacy/privacy.ui.h:50
 msgid "Problem Reporting"
-msgstr "Melden van het probleem"
+msgstr "Probleemrapportage"
 
 #. translators: '%s' is the distributor's name, such as 'Fedora'
 #: ../panels/privacy/cc-privacy-panel.c:1353
@@ -4822,7 +4820,7 @@ msgstr "Melden van het probleem"
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data."
-msgstr "Het sturen van rapporten over technische problemen helpt ons %s te verbeteren. Rapporten worden anoniem verstuurd en bevatten geen persoonlijke gegevens."
+msgstr "Het insturen van rapporten over technische problemen helpt ons %s te verbeteren. Deze worden anoniem verstuurd en bevatten geen persoonlijke gegevens."
 
 #: ../panels/privacy/cc-privacy-panel.c:1365 ../panels/privacy/privacy.ui.h:45
 msgid "Privacy Policy"
@@ -4837,17 +4835,17 @@ msgstr "Pri­va­cy"
 
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:3
 msgid "Protect your personal information and control what others might see"
-msgstr "Bescherm uw persoonlijke gegevens en bepaal wat anderen mogen zien"
+msgstr "Bescherm je persoonlijke gegevens en bepaal wat anderen mogen zien"
 
 #. Translators: those are keywords for the privacy control-center panel
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:5
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
-msgstr "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;scherm;vergrendelen;privé;tijdelijk;"
+msgstr "index;name;network;identity;scherm;vergrendelen;privé;tijdelijk;"
 
 #: ../panels/privacy/privacy.ui.h:1
 msgid "Screen Turns Off"
-msgstr "Scherm wordt uitgeschakeld"
+msgstr "Scherm uitschakelen na"
 
 #: ../panels/privacy/privacy.ui.h:2
 msgid "30 seconds"
@@ -4897,15 +4895,15 @@ msgstr "Altijd"
 msgid ""
 "Remembering your history makes things easier to find again. These items are "
 "never shared over the network."
-msgstr "Het onthouden van uw geschiedenis maakt terugvinden eenvoudiger. Deze zaken worden nooit gedeeld over het netwerk."
+msgstr "Door je geschiedenis te onthouden, kun je dingen makkelijker terugvinden. Deze items worden nooit gedeeld via het netwerk."
 
 #: ../panels/privacy/privacy.ui.h:21
 msgid "_Recently Used"
-msgstr "_Onlangs gebruikt"
+msgstr "Onlangs geb_ruikt"
 
 #: ../panels/privacy/privacy.ui.h:22
 msgid "Retain _History"
-msgstr "_Geschiedenis behouden"
+msgstr "Gesc_hiedenis behouden"
 
 #: ../panels/privacy/privacy.ui.h:23
 msgid "Cl_ear Recent History"
@@ -4921,15 +4919,15 @@ msgstr "_Sluiten"
 msgid ""
 "Endless collects metrics on user behavior and actions. All data sent is "
 "anonymous. We use the data to improve the system."
-msgstr ""
+msgstr "Endless verzamelt statistieken over gebruik en uitgevoerde acties. Alle gegevens worden anoniem versstuurd. Wij gebruiken dit om ons systeem te verbeteren."
 
 #: ../panels/privacy/privacy.ui.h:27
 msgid "Enable Metrics Collection"
-msgstr ""
+msgstr "Statistiekverzameling inschakelen"
 
 #: ../panels/privacy/privacy.ui.h:29
 msgid "The Screen Lock protects your privacy when you are away."
-msgstr "De schermvergrendeling beschermt uw privacy wanneer u weg bent."
+msgstr "Schermvergrendeling beschermt je privacy als je weg bent."
 
 #: ../panels/privacy/privacy.ui.h:30
 msgid "Automatic Screen _Lock"
@@ -4941,17 +4939,17 @@ msgstr "Scherm _vergrendelen na zwart scherm gedurende"
 
 #: ../panels/privacy/privacy.ui.h:32
 msgid "Show _Notifications"
-msgstr "_Notificaties tonen"
+msgstr "Meldi_ngen tonen"
 
 #: ../panels/privacy/privacy.ui.h:34
 msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer"
 " free of unnecessary sensitive information."
-msgstr "Automatisch de prullenbak legen en tijdelijke bestanden verwijderen om te zorgen dat uw computer geen onnodige gevoelige informatie bevat."
+msgstr "Schoon de prullenbak en tijdelijke bestanden automatisch op om ervoor te zorgen dat er geen gevoelige informatie achterblijft op je computer."
 
 #: ../panels/privacy/privacy.ui.h:35
 msgid "Automatically empty _Trash"
-msgstr "_Prullenbak automatisch legen"
+msgstr "Prullenbak au_tomatisch leegmaken"
 
 #: ../panels/privacy/privacy.ui.h:36
 msgid "Automatically purge Temporary _Files"
@@ -4963,7 +4961,7 @@ msgstr "Verwijderen _na"
 
 #: ../panels/privacy/privacy.ui.h:38
 msgid "_Empty Trash…"
-msgstr "Prullenbak l_egen…"
+msgstr "Prullenbak l_eegmaken…"
 
 #: ../panels/privacy/privacy.ui.h:39
 msgid "_Purge Temporary Files…"
@@ -4974,17 +4972,17 @@ msgid ""
 "Sending us information about which software you use helps us provide you with more accurate recommendations. It also helps us to improve our software.\n"
 "\n"
 "All the information we collect is made anonymous, and we will never share your data with third parties."
-msgstr "Als u ons informatie stuurt over welke software u gebruikt dan helpt u ons om u van accuratere aanbevelingen te voorzien. Het helpt ons daarnaast om onze software te verbeteren.\n\nAlle informatie die wij verzamelen is geanonimiseerd en we zullen uw gegevens nooit delen met derden."
+msgstr "Als je ons informatie stuurt over je gebruikte software, dan help je ons om je van accuratere aanbevelingen te voorzien. Daarnaast helpt het ons onze software te verbeteren.\n\nAlle verzamelde informatie is geanonimiseerd en wordt nooit gedeeld met externe partijen."
 
 #: ../panels/privacy/privacy.ui.h:44
 msgid "_Send software usage statistics"
-msgstr "_Statistieken over softwaregebruik verzenden"
+msgstr "_Statistieken over softwaregebruik versturen"
 
 #: ../panels/privacy/privacy.ui.h:47
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy."
-msgstr "Met locatiediensten kunnen toepassingen uw locatie te weten komen. Gebruik van wifi en mobiele breedband verhoogt de nauwkeurigheid."
+msgstr "Met locatiediensten kunnen toepassingen je locatie opvragen. Gebruik van Wi-Fi en mobiel internet verhoogt de nauwkeurigheid."
 
 #: ../panels/privacy/privacy.ui.h:48
 msgid "_Location Services"
@@ -4992,7 +4990,7 @@ msgstr "_Locatiediensten"
 
 #: ../panels/privacy/privacy.ui.h:51
 msgid "_Automatic Problem Reporting"
-msgstr "_Automatisch melden van het probleem"
+msgstr "_Automatische probleemrapportage"
 
 #: ../panels/region/cc-format-chooser.c:118
 msgctxt "measurement format"
@@ -5010,7 +5008,7 @@ msgstr "Geen regio's gevonden"
 
 #: ../panels/region/cc-input-chooser.c:182
 msgid "No input sources found"
-msgstr "Er zijn geen invoerbronnen aangetroffen"
+msgstr "Geen invoerbronnen aangetroffen"
 
 #: ../panels/region/cc-input-chooser.c:1012
 msgctxt "Keyboard Layout"
@@ -5019,7 +5017,7 @@ msgstr "Overige"
 
 #: ../panels/region/cc-region-panel.c:879
 msgid "No input source selected"
-msgstr "Er zijn geen invoerbronnen geselecteerd"
+msgstr "Geen invoerbron geselecteerd"
 
 #: ../panels/region/format-chooser.ui.h:1
 msgid "Formats"
@@ -5031,7 +5029,7 @@ msgstr "Voorbeeld"
 
 #: ../panels/region/format-chooser.ui.h:5
 msgid "Dates"
-msgstr "Data"
+msgstr "Datums"
 
 #: ../panels/region/format-chooser.ui.h:6
 msgid "Times"
@@ -5063,24 +5061,24 @@ msgstr "Regio en taal"
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:3
 msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
-msgstr "Schermtaal, formaten, toetsenbordindelingen en invoerbronnen selecteren"
+msgstr "Kies je schermtaal, formaten, toetsenbordindelingen en invoerbronnen"
 
 #. Translators: those are keywords for the region control-center panel
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:5
 msgid "Language;Layout;Keyboard;Input;"
-msgstr "Language;Layout;Keyboard;Taal;Indeling;Toetsenbord;"
+msgstr "Taal;Indeling;Toetsenbord;"
 
 #: ../panels/region/input-chooser.ui.h:1
 msgid "Add a Keyboard Layout"
-msgstr ""
+msgstr "Toetsenbordindeling toevoegen"
 
 #: ../panels/region/input-chooser.ui.h:4
 msgid "Input methods can’t be used on the login screen"
-msgstr "Invoermethodes kunnen niet gebruikt worden in het aanmeldscherm"
+msgstr "Invoermethodes kunnen niet gebruikt worden op het inlogscherm"
 
 #: ../panels/region/input-options.ui.h:1
 msgid "Keyboard Layout Options"
-msgstr ""
+msgstr "Opties voor toetsenbordindeling"
 
 #: ../panels/region/input-options.ui.h:2
 msgid "Use the _same source for all windows"
@@ -5108,7 +5106,7 @@ msgstr "Super+Spatiebalk"
 
 #: ../panels/region/input-options.ui.h:9
 msgid "You can change these shortcuts in the keyboard settings"
-msgstr "U kunt deze sneltoetsen wijzigen in de toetsenbordinstellingen"
+msgstr "Je kunt deze sneltoetsen wijzigen in de toetsenbordinstellingen"
 
 #: ../panels/region/input-options.ui.h:10
 msgid "Alternative switch to next source"
@@ -5116,7 +5114,7 @@ msgstr "Alternatieve overschakeling naar volgende bron"
 
 #: ../panels/region/input-options.ui.h:11
 msgid "Left+Right Alt"
-msgstr "Linker+rechter Alt"
+msgstr "Linker- en rechteralt-toets"
 
 #: ../panels/region/region.ui.h:1
 msgid "My Account"
@@ -5124,7 +5122,7 @@ msgstr "Mijn account"
 
 #: ../panels/region/region.ui.h:2
 msgid "Login Screen"
-msgstr ""
+msgstr "Inlogscherm"
 
 #: ../panels/region/region.ui.h:3
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:11
@@ -5137,7 +5135,7 @@ msgstr "Engels (Verenigd Koninkrijk)"
 
 #: ../panels/region/region.ui.h:5
 msgid "Restart the session for changes to take effect"
-msgstr "Om de wijzigingen door te voeren moet de sessie opnieuw gestart worden"
+msgstr "Herstart de sessie om de wijzigingen toe te passen"
 
 #: ../panels/region/region.ui.h:6
 msgid "Restart…"
@@ -5153,7 +5151,7 @@ msgstr "Verenigd Koninkrijk"
 
 #: ../panels/region/region.ui.h:9
 msgid "Keyboard Layouts"
-msgstr ""
+msgstr "Toetsenbordindelingen"
 
 #: ../panels/region/region.ui.h:10
 msgid "_Options"
@@ -5177,25 +5175,25 @@ msgstr "Invoerbron naar beneden verplaatsen"
 
 #: ../panels/region/region.ui.h:15
 msgid "Configure input source"
-msgstr "Invoerbron configureren"
+msgstr "Invoerbron instellen"
 
 #: ../panels/region/region.ui.h:16
 msgid "Show input source keyboard layout"
-msgstr "Invoerbron toetsenbordindeling tonen"
+msgstr "Invoerbron-toetsenbordindeling tonen"
 
 #: ../panels/region/region.ui.h:17
 msgid "Login settings are used by all users when logging into the system"
-msgstr "Aanmeldinstellingen worden gebruikt door alle gebruikers die zich aanmelden bij het systeem"
+msgstr "Inloginstellingen worden gebruikt door alle gebruikers die inloggen op het systeem"
 
 #: ../panels/search/cc-search-locations-dialog.c:639
 msgid "Select Location"
-msgstr "Locatie selecteren"
+msgstr "Locatie kiezen"
 
 #: ../panels/search/cc-search-locations-dialog.c:643
 msgid "_OK"
 msgstr "_Oké"
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr "Geen toepassingen aangetroffen"
 
@@ -5214,7 +5212,7 @@ msgstr "Bepaal welke toepassingen zoekresultaten tonen in het activiteitenoverzi
 #. Translators: those are keywords for the search control-center panel
 #: ../panels/search/gnome-search-panel.desktop.in.in.h:5
 msgid "Search;Find;Index;Hide;Privacy;Results;"
-msgstr "Search;Find;Index;Hide;Privacy;Results;Zoeken;Verbergen;Resultaten;"
+msgstr "Zoeken;Verbergen;Resultaten;Privacy;"
 
 #: ../panels/search/search-locations-dialog.ui.h:1
 msgid "Search Locations"
@@ -5247,7 +5245,7 @@ msgstr "Voorkeuren"
 #. Label
 #: ../panels/sharing/cc-sharing-networks.c:303
 msgid "No networks selected for sharing"
-msgstr "Geen netwerken geselecteerd om te delen"
+msgstr "Geen te delen netwerken geselecteerd"
 
 #: ../panels/sharing/cc-sharing-panel.c:286
 msgctxt "service is enabled"
@@ -5272,28 +5270,28 @@ msgstr "Actief"
 
 #: ../panels/sharing/cc-sharing-panel.c:392
 msgid "Choose a Folder"
-msgstr "Een map kiezen"
+msgstr "Kies een map"
 
 #: ../panels/sharing/cc-sharing-panel.c:869
 #, c-format
 msgid ""
 "Personal File Sharing allows you to share your Public folder with others on "
 "your current network using: <a href=\"dav://%s\">dav://%s</a>"
-msgstr "Met ‘Delen van persoonlijke bestanden’ kunt u de map ‘Openbaar’ delen met anderen op uw huidige netwerk via: <a href=\"dav://%s\">dav://%s</a>"
+msgstr "Met ‘Delen van persoonlijke bestanden’ kun je de map ‘Openbaar’ delen met anderen op je huidige netwerk via: <a href=\"dav://%s\">dav://%s</a>"
 
 #: ../panels/sharing/cc-sharing-panel.c:871
 #, c-format
 msgid ""
 "When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "<a href=\"ssh %s\">ssh %s</a>"
-msgstr "Wanneer aanmelden op afstand is ingeschakeld kunnen gebruikers op afstand verbinding maken via de Secure Shell-opdracht:\n<a href=\"ssh %s\">ssh %s</a>"
+msgstr "Als inloggen op afstand is ingeschakeld, dan kunnen gebruikers op afstand verbinding maken via de Secure Shell-opdracht:\n<a href=\"ssh %s\">ssh %s</a>"
 
 #: ../panels/sharing/cc-sharing-panel.c:873
 #, c-format
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to <a href=\"vnc://%s\">vnc://%s</a>"
-msgstr "Met scherm delen kunnen gebruikers op afstand uw scherm te bekijken of besturen door te verbinden met <a href=\"vnc://%s\">vnc://%s</a>"
+msgstr "Met scherm delen kunnen gebruikers op afstand je scherm bekijken of besturen door te verbinden met <a href=\"vnc://%s\">vnc://%s</a>"
 
 #: ../panels/sharing/cc-sharing-panel.c:985
 msgid "Copy"
@@ -5312,7 +5310,7 @@ msgstr "Delen"
 
 #: ../panels/sharing/gnome-sharing-panel.desktop.in.in.h:3
 msgid "Control what you want to share with others"
-msgstr "Regelen wat u met anderen wilt delen"
+msgstr "Bepaal wat je wilt delen met anderen"
 
 #. Translators: those are keywords for the sharing control-center panel
 #: ../panels/sharing/gnome-sharing-panel.desktop.in.in.h:5
@@ -5326,11 +5324,11 @@ msgstr "Netwerken"
 
 #: ../panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in.h:1
 msgid "Enable or disable remote login"
-msgstr "Aanmelden op afstand in- of uitschakelen"
+msgstr "Inloggen op afstand in- of uitschakelen"
 
 #: ../panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in.h:2
 msgid "Authentication is required to enable or disable remote login"
-msgstr "Er is authenticatie vereist om aanmelden op afstand in of uit te schakelen"
+msgstr "Er is authenticatie vereist om inloggen op afstand in of uit te schakelen"
 
 #: ../panels/sharing/sharing.ui.h:1
 msgid "_Computer Name"
@@ -5338,7 +5336,7 @@ msgstr "_Computernaam"
 
 #: ../panels/sharing/sharing.ui.h:2
 msgid "_File Sharing"
-msgstr "Delen van _bestanden"
+msgstr "_Bestanden delen"
 
 #: ../panels/sharing/sharing.ui.h:3
 msgid "_Screen Sharing"
@@ -5350,11 +5348,11 @@ msgstr "_Media delen"
 
 #: ../panels/sharing/sharing.ui.h:5
 msgid "_Remote Login"
-msgstr "_Aanmelden op afstand"
+msgstr "_Inloggen op afstand"
 
 #: ../panels/sharing/sharing.ui.h:6
 msgid "_Content Sharing"
-msgstr ""
+msgstr "_Inhoud delen"
 
 #: ../panels/sharing/sharing.ui.h:7
 msgid "Some services are disabled because of no network access."
@@ -5362,15 +5360,15 @@ msgstr "Sommige diensten zijn uitgeschakeld omdat er geen netwerktoegang is."
 
 #: ../panels/sharing/sharing.ui.h:8
 msgid "File Sharing"
-msgstr "Delen van bestanden"
+msgstr "Bestanden delen"
 
 #: ../panels/sharing/sharing.ui.h:9
 msgid "_Require Password"
-msgstr "_Wachtwoord vereisen"
+msgstr "Wachtwoo_rd vereisen"
 
 #: ../panels/sharing/sharing.ui.h:11
 msgid "Remote Login"
-msgstr "Aanmelden op afstand"
+msgstr "Inloggen op afstand"
 
 #: ../panels/sharing/sharing.ui.h:12
 msgid "Screen Sharing"
@@ -5398,7 +5396,7 @@ msgstr "_Nieuwe verbindingen moeten toegang vragen"
 
 #: ../panels/sharing/sharing.ui.h:18
 msgid "_Require a password"
-msgstr "Een wachtwoord _vereisen"
+msgstr "Wachtwoord _vereisen"
 
 #: ../panels/sharing/sharing.ui.h:19
 msgid "Media Sharing"
@@ -5414,13 +5412,13 @@ msgstr "Mappen"
 
 #: ../panels/sharing/sharing.ui.h:22
 msgid "Content Sharing"
-msgstr ""
+msgstr "Inhoud delen"
 
 #: ../panels/sharing/sharing.ui.h:23
 msgid ""
 "Content sharing allows users to view content installed on this computer on "
 "Android devices on the same network."
-msgstr ""
+msgstr "Inhoud delen laat gebruikers geïnstalleerde inhoud van deze computer bekijken via een Android-apparaat op hetzelfde netwerk."
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
 msgid "Sound"
@@ -5428,12 +5426,12 @@ msgstr "Geluid"
 
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
 msgid "Change sound levels, inputs, outputs, and alert sounds"
-msgstr "Geluidsvolume, invoer, uitvoer en gebeurtenisgeluiden wijzigen"
+msgstr "Wijzig volumeniveaus, in- en uitvoerapparaten en gebeurtenisgeluiden"
 
 #. Translators: those are keywords for the sound control-center panel
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
-msgstr "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Kaart;Microfoon;Balans;Audio;"
+msgstr "Bluetooth;Headset;Kaart;Microfoon;Balans;Audio;Volume;"
 
 #. Translators: This is the name of an audio file that sounds like the bark of
 #. a dog.
@@ -5499,7 +5497,7 @@ msgstr "_Balans:"
 
 #: ../panels/sound/gvc-balance-bar.c:292
 msgid "_Fade:"
-msgstr "_Fade:"
+msgstr "Ver_vaging:"
 
 #: ../panels/sound/gvc-balance-bar.c:295
 msgid "_Subwoofer:"
@@ -5526,8 +5524,8 @@ msgstr "_Profiel:"
 #, c-format
 msgid "%u Output"
 msgid_plural "%u Outputs"
-msgstr[0] "%u uitvoer"
-msgstr[1] "%u uitvoeren"
+msgstr[0] "%u uitvoerapparaat"
+msgstr[1] "%u uitvoerapparaten"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -5535,8 +5533,8 @@ msgstr[1] "%u uitvoeren"
 #, c-format
 msgid "%u Input"
 msgid_plural "%u Inputs"
-msgstr[0] "%u invoer"
-msgstr[1] "%u invoeren"
+msgstr[0] "%u invoerapparaat"
+msgstr[1] "%u invoerapparaten"
 
 #: ../panels/sound/gvc/gvc-mixer-control.c:2738
 msgid "System Sounds"
@@ -5544,7 +5542,7 @@ msgstr "Systeemgeluiden"
 
 #: ../panels/sound/gvc-mixer-dialog.c:251
 msgid "_Test Speakers"
-msgstr "Speakers _testen"
+msgstr "Luidsprekers _testen"
 
 #: ../panels/sound/gvc-mixer-dialog.c:420
 msgid "Peak detect"
@@ -5557,7 +5555,7 @@ msgstr "Apparaat"
 #: ../panels/sound/gvc-mixer-dialog.c:1581
 #, c-format
 msgid "Speaker Testing for %s"
-msgstr "Speakers testen voor %s"
+msgstr "Luidsprekers testen voor %s"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1637
 msgid "_Output volume:"
@@ -5565,11 +5563,11 @@ msgstr "Uit_voervolume:"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1651
 msgid "Output"
-msgstr "Uitvoer"
+msgstr "Uitvoerapparaat"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1656
 msgid "C_hoose a device for sound output:"
-msgstr "Kies een apparaat voor geluids_weergave:"
+msgstr "Kies een apparaat voor het afspelen van geluiden:"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1678
 msgid "Settings for the selected device:"
@@ -5577,7 +5575,7 @@ msgstr "Instellingen voor het gekozen apparaat:"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1689
 msgid "Input"
-msgstr "Invoer"
+msgstr "Invoerapparaat"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1696
 msgid "_Input volume:"
@@ -5597,7 +5595,7 @@ msgstr "Geluidseffecten"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1774
 msgid "_Alert volume:"
-msgstr "_Waarschuwingsvolume:"
+msgstr "_Gebeurtenisvolume:"
 
 #: ../panels/sound/gvc-mixer-dialog.c:1791
 msgid "No application is currently playing or recording audio."
@@ -5626,7 +5624,7 @@ msgstr "Standaard"
 
 #: ../panels/sound/gvc-sound-theme-chooser.c:555
 msgid "From theme"
-msgstr "Van thema"
+msgstr "Uit thema"
 
 #: ../panels/sound/gvc-sound-theme-chooser.c:740
 msgid "C_hoose an alert sound:"
@@ -5692,14 +5690,14 @@ msgstr "Universele toegang"
 
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:3
 msgid "Make it easier to see, hear, type, point and click"
-msgstr "Zien, horen, typen, aanwijzen en klikken vergemakkelijken"
+msgstr "Vergemakkelijk zien, horen, typen en aanwijzen-en-klikken"
 
 #. Translators: those are keywords for the universal access control-center
 #. panel
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:5
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Assist;Repeat;Blink;"
-msgstr "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky;Keys;Plaktoetsen;Slow;Trage toetsen;Bounce;Springende toetsen;Mouse;Double;click;Delay;Assist;Repeat;Blink;Muistoetsen;Toetsenbord;Toegankelijkheid;Tekst;Lettertype;vergroten;Dubbel;klik;"
+msgstr "AccessX;Plaktoetsen;Trage toetsen;Springende toetsen;Muistoetsen;Toetsenbord;Toegankelijkheid;Tekst;Lettertype;vergroten;Dubbel;klik;a11y;"
 
 #: ../panels/universal-access/uap.ui.h:1
 msgid "_Always Show Universal Access Menu"
@@ -5740,11 +5738,11 @@ msgstr "Gehoor"
 
 #: ../panels/universal-access/uap.ui.h:11
 msgid "_Visual Alerts"
-msgstr "_Visuele alertering"
+msgstr "_Visuele meldingen"
 
 #: ../panels/universal-access/uap.ui.h:13
 msgid "Screen _Keyboard"
-msgstr "_Toetsenbord op scherm"
+msgstr "Virtueel _toetsenbord"
 
 #: ../panels/universal-access/uap.ui.h:14
 msgid "R_epeat Keys"
@@ -5756,11 +5754,11 @@ msgstr "_Knipperen van de cursor"
 
 #: ../panels/universal-access/uap.ui.h:16
 msgid "_Typing Assist (AccessX)"
-msgstr "_Typ-assistent (AccessX)"
+msgstr "_Typassistent (AccessX)"
 
 #: ../panels/universal-access/uap.ui.h:17
 msgid "Pointing & Clicking"
-msgstr "Aanwijzen & klikken"
+msgstr "Aanwijzen-en-klikken"
 
 #: ../panels/universal-access/uap.ui.h:18
 msgid "_Mouse Keys"
@@ -5768,11 +5766,11 @@ msgstr "_Muistoetsen"
 
 #: ../panels/universal-access/uap.ui.h:19
 msgid "_Click Assist"
-msgstr "Op Typ-assistent _klikken"
+msgstr "_Klikassistent"
 
 #: ../panels/universal-access/uap.ui.h:20
 msgid "_Double-Click Delay"
-msgstr "_Dubbelklik-vertraging"
+msgstr "_Dubbelklikvertraging"
 
 #: ../panels/universal-access/uap.ui.h:21
 msgid "Double-Click Delay"
@@ -5785,7 +5783,7 @@ msgstr "Cursorgrootte"
 #: ../panels/universal-access/uap.ui.h:23
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr "De cursorgrootte kan gecombineerd worden met zoomen zodat de cursor beter zichtbaar wordt."
+msgstr "De cursorgrootte kan worden gecombineerd met zoomen zodat de cursor beter zichtbaar wordt."
 
 #: ../panels/universal-access/uap.ui.h:24
 msgid "Screen Reader"
@@ -5793,7 +5791,7 @@ msgstr "Schermlezer"
 
 #: ../panels/universal-access/uap.ui.h:25
 msgid "The screen reader reads displayed text as you move the focus."
-msgstr "De schermlezer leest getoonde tekst terwijl u de focus verplaatst."
+msgstr "De schermlezer leest afgebeelde tekst terwijl je de focus verplaatst."
 
 #: ../panels/universal-access/uap.ui.h:26
 msgid "_Screen Reader"
@@ -5805,19 +5803,19 @@ msgstr "Geluidtoetsen"
 
 #: ../panels/universal-access/uap.ui.h:28
 msgid "Beep when Num Lock or Caps Lock are turned on or off."
-msgstr "Piepen wanneer Num Lock of Caps Lock aan of uit wordt gezet."
+msgstr "Piepen als Num Lock of Caps Lock aan of uit wordt gezet."
 
 #: ../panels/universal-access/uap.ui.h:29
 msgid "Visual Alerts"
-msgstr "Visuele alertering"
+msgstr "Visuele meldingen"
 
 #: ../panels/universal-access/uap.ui.h:30
 msgid "_Test flash"
-msgstr "_Knipperen testen"
+msgstr "Knipperen _testen"
 
 #: ../panels/universal-access/uap.ui.h:31
 msgid "Use a visual indication when an alert sound occurs."
-msgstr "Visuele indicatie tonen als er een alerteringsgeluid klinkt."
+msgstr "Visuele indicatie tonen als er een meldingsgeluid klinkt."
 
 #: ../panels/universal-access/uap.ui.h:32
 msgid "Flash the _window title"
@@ -5825,7 +5823,7 @@ msgstr "_Titelbalk laten knipperen"
 
 #: ../panels/universal-access/uap.ui.h:33
 msgid "Flash the entire _screen"
-msgstr "_Hele scherm laten knipperen"
+msgstr "Hele _scherm laten knipperen"
 
 #: ../panels/universal-access/uap.ui.h:34
 msgid "Repeat Keys"
@@ -5833,11 +5831,11 @@ msgstr "Herhaaltoetsen"
 
 #: ../panels/universal-access/uap.ui.h:35
 msgid "Key presses repeat when key is held down."
-msgstr "Toetsaanslagen herhalen zich wanneer de toets ingedrukt blijft."
+msgstr "Toetsaanslagen herhalen zich als de toets ingedrukt blijft."
 
 #: ../panels/universal-access/uap.ui.h:37
 msgid "Repeat keys delay"
-msgstr "Toetsherhaalvertraging"
+msgstr "Herhaalvertraging"
 
 #: ../panels/universal-access/uap.ui.h:38
 msgid "Speed"
@@ -5845,7 +5843,7 @@ msgstr "Snelheid"
 
 #: ../panels/universal-access/uap.ui.h:39
 msgid "Repeat keys speed"
-msgstr "Toetsherhaalsnelheid"
+msgstr "Herhaalsnelheid"
 
 #: ../panels/universal-access/uap.ui.h:40
 msgid "Cursor Blinking"
@@ -5857,27 +5855,27 @@ msgstr "Cursor knippert in tekstvelden."
 
 #: ../panels/universal-access/uap.ui.h:42
 msgid "Cursor blinking speed"
-msgstr "Cursorknippersnelheid"
+msgstr "Knippersnelheid"
 
 #: ../panels/universal-access/uap.ui.h:43
 msgid "Typing Assist"
-msgstr "Typ-assistent"
+msgstr "Typassistent"
 
 #: ../panels/universal-access/uap.ui.h:44
 msgid "_Sticky Keys"
-msgstr "_Plaktoetsen"
+msgstr "Plaktoet_sen"
 
 #: ../panels/universal-access/uap.ui.h:45
 msgid "Treats a sequence of modifier keys as a key combination"
-msgstr "Een opeenvolging van optietoetsen als een toetsencombinatie behandelen"
+msgstr "Behandelt een opeenvolging van optietoetsen als toetscombinatie"
 
 #: ../panels/universal-access/uap.ui.h:46
 msgid "_Disable if two keys are pressed together"
-msgstr "_Uitschakelen wanneer twee toetsen tegelijkertijd worden ingedrukt"
+msgstr "_Uitschakelen als twee toetsen tegelijkertijd worden ingedrukt"
 
 #: ../panels/universal-access/uap.ui.h:47
 msgid "Beep when a _modifier key is pressed"
-msgstr "Piepen wanneer _bewerktoets wordt ingedrukt"
+msgstr "Piepen als een _bewerktoets wordt ingedrukt"
 
 #: ../panels/universal-access/uap.ui.h:48
 msgid "S_low Keys"
@@ -5885,7 +5883,7 @@ msgstr "T_rage toetsen"
 
 #: ../panels/universal-access/uap.ui.h:49
 msgid "Puts a delay between when a key is pressed and when it is accepted"
-msgstr "Een vertraging inbouwen tussen het aanslaan en accepteren van een toets"
+msgstr "Bouwt een vertraging in tussen het aanslaan en accepteren van de toets"
 
 #: ../panels/universal-access/uap.ui.h:50
 msgid "A_cceptance delay:"
@@ -5898,7 +5896,7 @@ msgstr "Kort"
 
 #: ../panels/universal-access/uap.ui.h:52
 msgid "Slow keys typing delay"
-msgstr "Typ-vertraging trage toetsen"
+msgstr "Typvertraging van trage toetsen"
 
 #: ../panels/universal-access/uap.ui.h:53
 msgctxt "slow keys delay"
@@ -5907,15 +5905,15 @@ msgstr "Lang"
 
 #: ../panels/universal-access/uap.ui.h:54
 msgid "Beep when a key is pr_essed"
-msgstr "Piepen wanneer  er een toets wordt i_ngedrukt"
+msgstr "Piepen als er een toets wordt i_ngedrukt"
 
 #: ../panels/universal-access/uap.ui.h:55
 msgid "Beep when a key is _accepted"
-msgstr "Piepen wanneer toets is _geaccepteerd"
+msgstr "Piepen als een toets is _geaccepteerd"
 
 #: ../panels/universal-access/uap.ui.h:56
 msgid "Beep when a key is _rejected"
-msgstr "Piepen wanneer toets is _geweigerd"
+msgstr "Piepen als een toets is _geweigerd"
 
 #: ../panels/universal-access/uap.ui.h:57
 msgid "_Bounce Keys"
@@ -5932,7 +5930,7 @@ msgstr "Kort"
 
 #: ../panels/universal-access/uap.ui.h:60
 msgid "Bounce keys typing delay"
-msgstr "Typ-vertraging kaatstoetsen"
+msgstr "Typvertraging van springende toetsen"
 
 #: ../panels/universal-access/uap.ui.h:61
 msgctxt "bounce keys delay"
@@ -5941,23 +5939,23 @@ msgstr "Lang"
 
 #: ../panels/universal-access/uap.ui.h:62
 msgid "_Enable by Keyboard"
-msgstr "_Via toetsenbord inschakelen"
+msgstr "Inschak_elen via toetsenbord"
 
 #: ../panels/universal-access/uap.ui.h:63
 msgid "Turn accessibility features on and off using the keyboard"
-msgstr "Toegankelijkheidsfuncties via het toetsenbord inschakelen"
+msgstr "Toegankelijkheidsfuncties inschakelen met het toetsenbord"
 
 #: ../panels/universal-access/uap.ui.h:64
 msgid "Click Assist"
-msgstr "Op Typ-assistent klikken"
+msgstr "Klikassistent"
 
 #: ../panels/universal-access/uap.ui.h:65
 msgid "_Simulated Secondary Click"
-msgstr "_Gesimuleerde secundaire klik"
+msgstr "Ge_simuleerde secundaire klik"
 
 #: ../panels/universal-access/uap.ui.h:66
 msgid "Trigger a secondary click by holding down the primary button"
-msgstr "Tweede keer klikken als de primaire knop ingedrukt gehouden wordt"
+msgstr "Secundaire klik uitvoeren als de primaire knop ingedrukt blijft"
 
 #: ../panels/universal-access/uap.ui.h:67
 msgctxt "secondary click"
@@ -5966,7 +5964,7 @@ msgstr "Kort"
 
 #: ../panels/universal-access/uap.ui.h:68
 msgid "Secondary click delay"
-msgstr "Vertraging secundaire klik"
+msgstr "Vertraging van secundaire klik"
 
 #: ../panels/universal-access/uap.ui.h:69
 msgctxt "secondary click delay"
@@ -5975,7 +5973,7 @@ msgstr "Lang"
 
 #: ../panels/universal-access/uap.ui.h:70
 msgid "_Hover Click"
-msgstr "_ZweefKlik"
+msgstr "_Zweefklik"
 
 #: ../panels/universal-access/uap.ui.h:71
 msgid "Trigger a click when the pointer hovers"
@@ -6088,7 +6086,7 @@ msgstr "Vergrootglascursor beweegt mee met de _inhoud"
 
 #: ../panels/universal-access/zoom-options.ui.h:15
 msgid "Magnifier Position:"
-msgstr "Positie vergrootglas:"
+msgstr "Positie van vergrootglas:"
 
 #: ../panels/universal-access/zoom-options.ui.h:16
 msgid "Magnifier"
@@ -6115,11 +6113,11 @@ msgstr "_Lengte:"
 #. The color of the accessibility crosshair
 #: ../panels/universal-access/zoom-options.ui.h:22
 msgid "Co_lor:"
-msgstr "_Kleur:"
+msgstr "K_leur:"
 
 #: ../panels/universal-access/zoom-options.ui.h:23
 msgid "_Crosshairs:"
-msgstr "_Draadkruis:"
+msgstr "_Vizier:"
 
 #: ../panels/universal-access/zoom-options.ui.h:24
 msgid "_Overlaps mouse cursor"
@@ -6127,7 +6125,7 @@ msgstr "_Overlapt muisaanwijzer"
 
 #: ../panels/universal-access/zoom-options.ui.h:25
 msgid "Crosshairs"
-msgstr "Draadkruis"
+msgstr "Vizier"
 
 #: ../panels/universal-access/zoom-options.ui.h:26
 msgid "_White on black:"
@@ -6145,7 +6143,7 @@ msgstr "_Contrast:"
 #: ../panels/universal-access/zoom-options.ui.h:30
 msgctxt "universal access, contrast"
 msgid "Co_lor"
-msgstr "Kl_eur"
+msgstr "K_leur"
 
 #: ../panels/universal-access/zoom-options.ui.h:31
 msgctxt "universal access, color"
@@ -6187,49 +6185,49 @@ msgstr "Kleureffecten"
 
 #: ../panels/updates/cc-updates-panel.c:521
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "Beperkte gegevensverbinding"
 
 #: ../panels/updates/cc-updates-panel.c:523
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "Onbeperkte gegevensverbinding"
 
 #: ../panels/updates/cc-updates-panel.c:572
 msgid "No active connection"
-msgstr ""
+msgstr "Geen actieve verbinding"
 
 #. "Change Network Settings" label
 #: ../panels/updates/cc-updates-panel.c:785
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "Netwerkinstellingen aanpassen..."
 
 #: ../panels/updates/cc-updates-panel.ui.h:1
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:1
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Automatische updates"
 
 #: ../panels/updates/cc-updates-panel.ui.h:2
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
-msgstr ""
+msgstr "Sta automatische achtergrondupdates toe via deze verbinding. Dit zijn meestal upgrades van apps, nieuwe inhoud of systeemupdates."
 
 #: ../panels/updates/cc-updates-panel.ui.h:3
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "Ingeplande updates"
 
 #: ../panels/updates/cc-updates-panel.ui.h:4
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Creëer een dagschema voor automatische updates."
 
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:2
 msgid "Schedule automatic updates"
-msgstr ""
+msgstr "Automatische updates inplannen"
 
 #. Translators: those are keywords for the automatic updates control-center
 #. panel
 #: ../panels/updates/gnome-updates-panel.desktop.in.in.h:4
 msgid "Updates;Automatic;Background;Metered;"
-msgstr ""
+msgstr "Updates;Automatisch;Achtergrond;Beperkt;"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:1
 #: ../panels/user-accounts/data/join-dialog.ui.h:1
@@ -6253,22 +6251,22 @@ msgstr "Beheerder"
 #: ../panels/user-accounts/data/account-dialog.ui.h:8
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:6
 msgid "Account _Type"
-msgstr "Account-_type"
+msgstr "Soor_t account"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:10
 #: ../panels/user-accounts/data/password-dialog.ui.h:7
 msgid "Allow user to set a password when they next _login"
-msgstr "Gebruiker kan wachtwoord instellen bij de volgende keer _aanmelden"
+msgstr "Laat gebruiker wachtwoord instellen bij de volgende in_log"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:11
 #: ../panels/user-accounts/data/password-dialog.ui.h:8
 msgid "Do not re_quire a password when logging in"
-msgstr ""
+msgstr "_Geen wachtwoord vereisen voor inloggen"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:12
 #: ../panels/user-accounts/data/password-dialog.ui.h:9
 msgid "Set a password _now"
-msgstr "_Nu een wachtwoord instellen"
+msgstr "Stel _nu een wachtwoord in"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:14
 msgid "_Confirm"
@@ -6277,14 +6275,14 @@ msgstr "_Bevestigen"
 #: ../panels/user-accounts/data/account-dialog.ui.h:15
 #: ../panels/user-accounts/data/password-dialog.ui.h:10
 msgid "Password _Reminder"
-msgstr ""
+msgstr "Geheugensteun"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:16
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr "Met enterprise-aanmelding kan een bestaande centraal beheerde gebruikersaccount op dit apparaat gebruikt worden. U kunt dit account ook gebruiken om toegang te krijgen tot bedrijfsbronnen op het internet."
+msgstr "Met enterprise-aanmelding kan een bestaand, centraal beheerd gebruikersaccount op dit apparaat gebruikt worden. Je kunt dit account ook gebruiken om toegang te krijgen tot bedrijfsbronnen op het internet."
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:17
 #: ../panels/user-accounts/data/join-dialog.ui.h:9
@@ -6293,11 +6291,11 @@ msgstr "_Domein"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:18
 msgid "You are Offline"
-msgstr "U bent offline"
+msgstr "Je bent offline"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:19
 msgid "You must be online in order to add enterprise users."
-msgstr "U moet online gaan om enterprise-\ngebruikers toe te voegen."
+msgstr "Je moet online gaan om enterprise-\ngebruikers toe te voegen."
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:20
 msgid "_Enterprise Login"
@@ -6305,48 +6303,48 @@ msgstr "_Enterprise-aanmelding"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:1
 msgid "Left thumb"
-msgstr "Linker duim"
+msgstr "Linkerduim"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:2
 msgid "Left middle finger"
-msgstr "Linker middelvinger"
+msgstr "Linkermiddelvinger"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:3
 msgid "Left ring finger"
-msgstr "Linker ringvinger"
+msgstr "Linkerringvinger"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:4
 msgid "Left little finger"
-msgstr "Linker pink"
+msgstr "Linkerpink"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:5
 msgid "Right thumb"
-msgstr "Rechter duim"
+msgstr "Rechterduim"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:6
 msgid "Right middle finger"
-msgstr "Rechter middelvinger"
+msgstr "Rechtermiddelvinger"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:7
 msgid "Right ring finger"
-msgstr "Rechter ringvinger"
+msgstr "Rechterringvinger"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:8
 msgid "Right little finger"
-msgstr "Rechter pink"
+msgstr "Rechterpink"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:9
 #: ../panels/user-accounts/um-fingerprint-dialog.c:680
 msgid "Enable Fingerprint Login"
-msgstr "Vingerafdrukaanmelding aanzetten"
+msgstr "Inloggen met vingerafdruk"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:10
 msgid "_Right index finger"
-msgstr "_Rechter wijsvinger"
+msgstr "_Rechterwijsvinger"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:11
 msgid "_Left index finger"
-msgstr "_Linker wijsvinger"
+msgstr "_Linkerwijsvinger"
 
 #: ../panels/user-accounts/data/account-fingerprint.ui.h:12
 msgid "_Other finger:"
@@ -6356,7 +6354,7 @@ msgstr "An_dere vinger:"
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
-msgstr "Uw vingerafdruk is opgeslagen. U kunt nu aanmelden via uw vingerafdruklezer."
+msgstr "Je vingerafdruk is opgeslagen. Je kunt nu inloggen met behulp van je vingerafdruklezer."
 
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
 msgid "Users"
@@ -6364,43 +6362,43 @@ msgstr "Gebruikers"
 
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:2
 msgid "Add or remove users and change your password"
-msgstr "Gebruikers toevoegen of verwijderen en uw wachtwoord wijzigen"
+msgstr "Gebruikers toevoegen of verwijderen en je wachtwoord wijzigen"
 
 #. Translators: those are keywords for the user accounts control-center panel
 #: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental;Restrict;Restrictions;"
-msgstr ""
+msgstr "Inloggen;Naam;Vingerafdruk;Gebruikersafbeelding;Logo;Gezicht;Wachtwoord;Ouderlijk;Toezicht;Beperkingen;"
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:1
 msgid "Restrict Apps"
-msgstr ""
+msgstr "Apps beperken"
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:2
 msgid "Prevent this user from opening some apps by turning them off below."
-msgstr ""
+msgstr "Voorkom dat deze gebruiker bepaalde apps opent door ze hieronder uit te schakelen."
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:3
 msgid "App Center Restrictions"
-msgstr ""
+msgstr "Appcentrum-beperkingen"
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:4
 msgid "App _Installation:"
-msgstr ""
+msgstr "App_installatie:"
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:5
 msgid "Install Apps for All _Users:"
-msgstr ""
+msgstr "Installeer apps voor alle gebr_uikers:"
 
 #: ../panels/user-accounts/data/app-permissions.ui.h:6
 msgid "Show Apps _Suitable For:"
-msgstr ""
+msgstr "Toon apps die ge_schikt zijn voor:"
 
 #. Translators: This button enrolls the computer in the domain in order to use
 #. enterprise logins.
 #: ../panels/user-accounts/data/join-dialog.ui.h:4
 msgid "_Enroll"
-msgstr "_Registreren"
+msgstr "R_egistreren"
 
 #: ../panels/user-accounts/data/join-dialog.ui.h:5
 msgid "Domain Administrator Login"
@@ -6411,7 +6409,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr "Voor enterprise-aanmelding moet deze computer\ningeschreven zijn bij het domein. Laat uw netwerkbeheerder\nhier het wachtwoord voor het domein intypen."
+msgstr "Voor enterprise-aanmelding moet deze computer\ningeschreven zijn bij het domein. Laat je netwerkbeheerder\nhier het wachtwoord voor het domein intypen."
 
 #: ../panels/user-accounts/data/join-dialog.ui.h:10
 msgid "Administrator _Name"
@@ -6419,7 +6417,7 @@ msgstr "Beheerders_naam"
 
 #: ../panels/user-accounts/data/join-dialog.ui.h:11
 msgid "Administrator Password"
-msgstr "Wachtwoord beheerder"
+msgstr "Wachtwoord van beheerder"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:1
 msgid "Change Password"
@@ -6431,7 +6429,7 @@ msgstr "_Wijzigen"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:4
 msgid "_Verify New Password"
-msgstr "_Nieuw wachtwoord verifiëren"
+msgstr "Nieuw wachtwoord _verifiëren"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:5
 msgid "_New Password"
@@ -6439,7 +6437,7 @@ msgstr "_Nieuw wachtwoord"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:6
 msgid "Current _Password"
-msgstr "_Huidige wachtwoord"
+msgstr "_Huidig wachtwoord"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:1
 msgid "_Add User…"
@@ -6447,7 +6445,7 @@ msgstr "_Gebruiker toevoegen…"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:2
 msgid "Your session needs to be restarted for changes to take effect"
-msgstr "Om de wijzigingen door te voeren moet de computer opnieuw gestart worden"
+msgstr "Herstart de sessie om de wijzigingen toe te passen"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:3
 msgid "Restart Now"
@@ -6455,11 +6453,11 @@ msgstr "Nu herstarten"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:8
 msgid "A_utomatic Login"
-msgstr "A_utomatisch aanmelden"
+msgstr "A_utomatisch inloggen"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:9
 msgid "_Fingerprint Login"
-msgstr "Aanmelden met _vingerafdruk"
+msgstr "Inloggen met _vingerafdruk"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:10
 msgid "User Icon"
@@ -6467,7 +6465,7 @@ msgstr "Gebruikerspictogram"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:12
 msgid "Last Login"
-msgstr "Laatste keer aangemeld"
+msgstr "Vorige inlog"
 
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:13
 msgid "Remove User…"
@@ -6476,7 +6474,7 @@ msgstr "Gebruiker verwijderen…"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:76
 msgid "No cartoon violence"
-msgstr "Geen geweld in strip"
+msgstr "Geen geweld in stripverhalen"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:79
@@ -6496,7 +6494,7 @@ msgstr "Grafisch geweld met stripfiguren"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:88
 msgid "No fantasy violence"
-msgstr "Geen geweld in fantasie"
+msgstr "Geen geweld in fantasieverhalen"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:91
@@ -6541,12 +6539,12 @@ msgstr "Geen bloedvergieten"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:115
 msgid "Unrealistic bloodshed"
-msgstr "Niet-realistisch bloedvergieten"
+msgstr "Onrealistische bloedvergieten"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:118
 msgid "Realistic bloodshed"
-msgstr "Realistisch bloedvergieten"
+msgstr "Realistische bloedvergieten"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:121
@@ -6576,7 +6574,7 @@ msgstr "Verwijzingen naar alcoholische dranken"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
-msgstr "Gebruik van alcoholische dranken"
+msgstr "Nuttiging van alcoholische dranken"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:139
@@ -6606,17 +6604,17 @@ msgstr "Gebruik van tabaksproducten"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:154
 msgid "No nudity of any sort"
-msgstr "Geen enkel naakt"
+msgstr "Geen naaktheid"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:157
 msgid "Brief artistic nudity"
-msgstr "Beknopt artistiek naakt"
+msgstr "Beknopte artistieke naaktheid"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:160
 msgid "Prolonged nudity"
-msgstr "Langdurig naakt"
+msgstr "Langdurige naaktheid"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:163
@@ -6716,7 +6714,7 @@ msgstr "Expliciete verwijzingen naar bepaalde merken of producten met handelsmer
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Gebruikers worden aangemoedigd om bepaalde daadwerkelijk bestaande artikelen te kopen"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:223
@@ -6726,7 +6724,7 @@ msgstr "Zonder gokken"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:226
 msgid "Gambling on random events using tokens or credits"
-msgstr "Gokken op willekeurige gebeurtenissen met behulp van tokens of credits"
+msgstr "Gokken op willekeurige gebeurtenissen met behulp van fiches of krediet"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:229
@@ -6747,7 +6745,7 @@ msgstr "Geen mogelijkheid om echt geld uit te geven"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
-msgstr ""
+msgstr "Gebruikers worden aangemoedigd om echt geld te doneren"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:241
@@ -6757,64 +6755,64 @@ msgstr "Mogelijk om in het spel echt geld uit te geven"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:244
 msgid "No way to chat with other users"
-msgstr ""
+msgstr "Niet mogelijk om met andere spelers te chatten"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:247
 msgid "User-to-user game interactions without chat functionality"
-msgstr ""
+msgstr "Spelinteractie tussen spelers zonder gespreksfunctionaliteit"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
-msgstr ""
+msgstr "Gecontroleerde gespreksfunctionaliteit tussen spelers"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Ongecontroleerde gespreksfunctionaliteit tussen spelers"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:256
 msgid "No way to talk with other users"
-msgstr ""
+msgstr "Geen manier om met andere spelers te praten"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
-msgstr ""
+msgstr "Ongecontroleerde audio- of videogespreksfunctionaliteit tussen spelers"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
-msgstr "Sociaal netwerk-gebruikersnamen en e-mailadressen worden niet gedeeld"
+msgstr "Socialenetwerkgebruikersnamen en e-mailadressen worden niet gedeeld"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
-msgstr "Deelt sociaal netwerk-gebruikersnamen of e-mailadressen"
+msgstr "Deelt socialenetwerkgebruikersnamen of e-mailadressen"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
-msgstr "Gebruikersinformatie worden niet gedeeld met derden"
+msgstr "Gebruikersinformatie wordt niet gedeeld met externe partijen"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:271
 msgid "Checking for the latest application version"
-msgstr ""
+msgstr "Controleren op nieuwste appversie"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:274
 msgid "Sharing diagnostic data that does not let others identify the user"
-msgstr ""
+msgstr "Deelt diagnostische gegevens die de gebruiker niet kunnen identificeren"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
-msgstr ""
+msgstr "Deelt informatie die de gebruiker kan identiceren"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:280
@@ -6829,137 +6827,137 @@ msgstr "Deelt fysieke locatie met andere gebruikers"
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:288
 msgid "No references to homosexuality"
-msgstr ""
+msgstr "Geen verwijzingen naar homoseksualiteit"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:291
 msgid "Indirect references to homosexuality"
-msgstr ""
+msgstr "Indirecte verwijzingen naar homoseksualiteit"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:294
 msgid "Kissing between people of the same gender"
-msgstr ""
+msgstr "Zoenende mensen van hetzelfde geslacht"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:297
 msgid "Graphic sexual behavior between people of the same gender"
-msgstr ""
+msgstr "Grafisch seksueel gedrag tussen mensen van hetzelfde geslacht"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:300
 msgid "No references to prostitution"
-msgstr ""
+msgstr "Geen verwijzigingen naar prostitutie"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:303
 msgid "Indirect references to prostitution"
-msgstr ""
+msgstr "Indirecte verwijzingen naar prostitutie"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:306
 msgid "Direct references to prostitution"
-msgstr ""
+msgstr "Directe verwijzingen naar prostitutie"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:309
 msgid "Graphic depictions of the act of prostitution"
-msgstr ""
+msgstr "Grafische uitingen met betrekking tot prostitutie"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:312
 msgid "No references to adultery"
-msgstr ""
+msgstr "Geen verwijzingen naar volwassen materiaal"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:315
 msgid "Indirect references to adultery"
-msgstr ""
+msgstr "Indirecte verwijzingen naar volwassen materiaal"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:318
 msgid "Direct references to adultery"
-msgstr ""
+msgstr "Directe verwijzingen naar volwassen materiaal"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:321
 msgid "Graphic depictions of the act of adultery"
-msgstr ""
+msgstr "Grafische uitingen met betrekking tot volwassen materiaal"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:324
 msgid "No sexualized characters"
-msgstr ""
+msgstr "Geen geseksualiseerde personages"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:327
 msgid "Scantily clad human characters"
-msgstr ""
+msgstr "Schaars geklede personages"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:330
 msgid "Overtly sexualized human characters"
-msgstr ""
+msgstr "Overgeseksualiseerde personages"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:333
 msgid "No references to desecration"
-msgstr ""
+msgstr "Geen verwijzingen naar ontheiliging"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:336
 msgid "Depictions or references to historical desecration"
-msgstr ""
+msgstr "Uitingen of verwijzingen naar historische ontheiliging"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:339
 msgid "Depictions of modern-day human desecration"
-msgstr ""
+msgstr "Uitingen me betrekking tot moderne ontheiliging"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:342
 msgid "Graphic depictions of modern-day desecration"
-msgstr ""
+msgstr "Grafische uitingen van moderne ontheiliging"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:345
 msgid "No visible dead human remains"
-msgstr ""
+msgstr "Geen zichtbare overblijfselen van mensen"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:348
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Zichtbare overblijfselen van mensen"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:351
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Zichtbare overblijfselen van mensen die zijn blootgesteld aan de natuur"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:354
 msgid "Graphic depictions of desecration of human bodies"
-msgstr ""
+msgstr "Grafische uitingen met betrekking tot grafschennis"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:357
 msgid "No references to slavery"
-msgstr ""
+msgstr "Geen verwijzingen naar slavernij"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:360
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Uitingen of verwijzingen naar historische slavernij"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:363
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Uitingen met betrekking tot moderne slavernij"
 
 #. TRANSLATORS: content rating description
 #: ../panels/user-accounts/gs-content-rating.c:366
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Grafische uitingen van moderne slavernij"
 
 #: ../panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in.h:1
 msgid "Manage user accounts"
@@ -6967,7 +6965,7 @@ msgstr "Gebruikersaccounts beheren"
 
 #: ../panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in.h:2
 msgid "Authentication is required to change user data"
-msgstr "Er is authenticatie vereist om gebruikersgegevens te wijzigen"
+msgstr "Authenticatie vereist om gebruikersgegevens te wijzigen"
 
 #: ../panels/user-accounts/pw-utils.c:81
 msgctxt "Password hint"
@@ -6987,12 +6985,12 @@ msgstr "Probeer het wachtwoord iets meer te wijzigen."
 #: ../panels/user-accounts/pw-utils.c:87
 msgctxt "Password hint"
 msgid "A password without your user name would be stronger."
-msgstr "Een wachtwoord zonder uw gebruikersnaam zal sterker zijn."
+msgstr "Een wachtwoord zonder je gebruikersnaam zal sterker zijn."
 
 #: ../panels/user-accounts/pw-utils.c:89
 msgctxt "Password hint"
 msgid "Try to avoid using your name in the password."
-msgstr "Vermijd het gebruik van uw naam in uw wachtwoord."
+msgstr "Probeer je naam niet te verwerken in je wachtwoord."
 
 #: ../panels/user-accounts/pw-utils.c:91
 msgctxt "Password hint"
@@ -7044,12 +7042,12 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr "Probeer herhaling van hetzelfde soort teken te vermijden: u dient letters, cijfers en interpunctie te combineren."
+msgstr "Probeer herhaling van hetzelfde soort teken te vermijden: je moet letters, cijfers en interpunctie combineren."
 
 #: ../panels/user-accounts/pw-utils.c:113
 msgctxt "Password hint"
 msgid "Try to avoid sequences like 1234 or abcd."
-msgstr "Probeer reeksen zoals 1234 of abcd te vermijden."
+msgstr "Probeer reeksen, zoals 1234 of abcd, te vermijden."
 
 #: ../panels/user-accounts/pw-utils.c:115
 msgctxt "Password hint"
@@ -7068,7 +7066,7 @@ msgctxt "Password hint"
 msgid ""
 "Adding more letters, numbers and punctuation will make the password "
 "stronger."
-msgstr "Toevoegen van meer letters, cijfers en leestekens maakt het wachtwoord nog sterker."
+msgstr "Toevoegen van meer letters, cijfers en leestekens maakt het wachtwoord nóg sterker."
 
 #: ../panels/user-accounts/run-passwd.c:422
 msgid "Authentication failed"
@@ -7107,7 +7105,7 @@ msgstr "Het oude en nieuwe wachtwoord zijn hetzelfde"
 #: ../panels/user-accounts/run-passwd.c:528
 #, c-format
 msgid "Your password has been changed since you initially authenticated!"
-msgstr "Uw wachtwoord is gewijzigd sinds de vorige wachtwoordcontrole!"
+msgstr "Je wachtwoord is gewijzigd sinds de vorige wachtwoordcontrole!"
 
 #: ../panels/user-accounts/run-passwd.c:532
 #, c-format
@@ -7121,11 +7119,11 @@ msgstr "Onbekende fout"
 
 #: ../panels/user-accounts/um-account-dialog.c:34
 msgid "Should match the web address of your login provider."
-msgstr "Dient overeen te komen met het internetadres van uw inlog-provider."
+msgstr "Dient overeen te komen met het internetadres van je inlogdienst."
 
 #: ../panels/user-accounts/um-account-dialog.c:236
 msgid "Failed to add account"
-msgstr "Toevoegen van account mislukt"
+msgstr "Kan account niet toevoegen"
 
 #: ../panels/user-accounts/um-account-dialog.c:468
 msgid "Passwords do not match."
@@ -7135,7 +7133,7 @@ msgstr "Wachtwoorden komen niet overeen."
 #: ../panels/user-accounts/um-account-dialog.c:794
 #: ../panels/user-accounts/um-account-dialog.c:815
 msgid "Failed to register account"
-msgstr "Registreren van account mislukt"
+msgstr "Kan account niet registreren"
 
 #: ../panels/user-accounts/um-account-dialog.c:938
 msgid "No supported way to authenticate with this domain"
@@ -7143,7 +7141,7 @@ msgstr "Geen ondersteunde manier om met dit domein te authenticeren"
 
 #: ../panels/user-accounts/um-account-dialog.c:1011
 msgid "Failed to join domain"
-msgstr "Toetreden tot domein mislukt"
+msgstr "Kan niet toetreden tot domein"
 
 #: ../panels/user-accounts/um-account-dialog.c:1072
 msgid ""
@@ -7159,11 +7157,11 @@ msgstr "Ongeldig wachtwoord.\nProbeer het opnieuw."
 
 #: ../panels/user-accounts/um-account-dialog.c:1087
 msgid "Failed to log into domain"
-msgstr "Aanmelden bij domein mislukt"
+msgstr "Kan niet inloggen op domein"
 
 #: ../panels/user-accounts/um-account-dialog.c:1145
 msgid "Unable to find the domain. Maybe you misspelled it?"
-msgstr "Domein niet gevonden. Heeft u het verkeerd gespeld?"
+msgstr "Domein niet gevonden. Heb je het verkeerd gespeld?"
 
 #: ../panels/user-accounts/um-account-type.c:34
 msgctxt "Account type"
@@ -7175,10 +7173,16 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr "Beheerder"
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
-msgstr "U heeft geen toegang tot het apparaat. Neem contact op met systeembeheerder."
+msgstr "Je hebt geen toegang tot het apparaat. Neem contact op met je systeembeheerder."
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:144
 msgid "The device is already in use."
@@ -7204,7 +7208,7 @@ msgstr "Vingerafdrukken ver_wijderen"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr "Wilt u uw geregistreerde vingerafdruk verwijderen zodat vingerafdrukaanmelding uitgeschakeld wordt?"
+msgstr "Wil je je geregistreerde vingerafdrukken verwijderen zodat inloggen met vingerafdruk uitgeschakeld wordt?"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:443
 msgid "Done!"
@@ -7217,7 +7221,7 @@ msgstr "Voltooid!"
 #: ../panels/user-accounts/um-fingerprint-dialog.c:546
 #, c-format
 msgid "Could not access “%s” device"
-msgstr "Kon geen toegang krijgen tot het ‘%s’-apparaat"
+msgstr "Kan geen toegang krijgen tot het ‘%s’-apparaat"
 
 #. translators:
 #. * The variable is the name of the device, for example:
@@ -7225,15 +7229,15 @@ msgstr "Kon geen toegang krijgen tot het ‘%s’-apparaat"
 #: ../panels/user-accounts/um-fingerprint-dialog.c:587
 #, c-format
 msgid "Could not start finger capture on “%s” device"
-msgstr "Kon vingerafdruk nemen op het ‘%s’-apparaat niet starten"
+msgstr "Kan vastleggen van vingerafdruk niet starten op het ‘%s’-apparaat"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:631
 msgid "Could not access any fingerprint readers"
-msgstr "Kon tot geen enkele vingerafdruklezer toegang krijgen"
+msgstr "Kan geen toegang krijgen tot een vingerafdruklezer"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:632
 msgid "Please contact your system administrator for help."
-msgstr "Neem contact op met uw systeembeheerder voor hulp."
+msgstr "Neem contact op met je systeembeheerder voor hulp."
 
 #. translators:
 #. * The variable is the name of the device, for example:
@@ -7245,7 +7249,7 @@ msgstr "Neem contact op met uw systeembeheerder voor hulp."
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the “%s” device."
-msgstr "Om vingerafdrukaanmelding aan te zetten moet u een van uw vingerafdrukken opslaan met het ‘%s’-apparaat."
+msgstr "Om inloggen met vingerafdruk aan te zetten, moet je één van je vingerafdrukken opslaan met het ‘%s’-apparaat."
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:721
 msgid "Selecting finger"
@@ -7291,7 +7295,7 @@ msgstr "%s — %s"
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%k:%M"
@@ -7299,7 +7303,7 @@ msgstr "%k:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7326,11 +7330,11 @@ msgstr "Kies een ander wachtwoord."
 
 #: ../panels/user-accounts/um-password-dialog.c:196
 msgid "Please type your current password again."
-msgstr "Vul uw wachtwoord opnieuw in."
+msgstr "Vul je wachtwoord nogmaals in."
 
 #: ../panels/user-accounts/um-password-dialog.c:202
 msgid "Password could not be changed"
-msgstr "Wachtwoord kon niet gewijzigd worden"
+msgstr "Wachtwoord kan niet worden gewijzigd"
 
 #: ../panels/user-accounts/um-password-dialog.c:368
 msgid "The passwords do not match."
@@ -7346,7 +7350,7 @@ msgstr "Afbeelding uitschakelen"
 
 #: ../panels/user-accounts/um-photo-dialog.c:516
 msgid "Take a photo…"
-msgstr "Een foto nemen…"
+msgstr "Maak een foto..."
 
 #: ../panels/user-accounts/um-photo-dialog.c:534
 msgid "Browse for more pictures…"
@@ -7370,128 +7374,128 @@ msgstr "Een dergelijk domein of realm is niet aangetroffen"
 #: ../panels/user-accounts/um-realm-manager.c:829
 #, c-format
 msgid "Cannot log in as %s at the %s domain"
-msgstr "Aanmelden als %s bij het domein %s kan niet"
+msgstr "Inloggen als '%s' bij het domein '%s' is niet mogelijk"
 
 #: ../panels/user-accounts/um-realm-manager.c:821
 msgid "Invalid password, please try again"
-msgstr "Ongeldig wachtwoord, probeer het opnieuw"
+msgstr "Ongeldig wachtwoord; probeer het opnieuw"
 
 #: ../panels/user-accounts/um-realm-manager.c:834
 #, c-format
 msgid "Couldn’t connect to the %s domain: %s"
-msgstr "Kon geen verbinding maken met het %s domein: %s"
+msgstr "Kan geen verbinding maken met het %s domein: %s"
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
-msgstr "Uw account"
+msgstr "Je account"
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
-msgstr "Kon gebruiker niet verwijderen"
+msgstr "Kan gebruiker niet verwijderen"
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
-msgstr "Op afstand beheerde gebruiker kon niet worden verwijderen"
+msgstr "Op afstand beheerde gebruiker kan niet worden verwijderd"
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
-msgstr "U kunt uw eigen account niet verwijderen."
+msgstr "Je kunt je eigen account niet verwijderen."
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
-msgstr "%s is nog aangemeld"
+msgstr "%s is nog ingelogd"
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr "Het verwijderen van een gebruiker die nog aangemeld is, kan leiden tot een inconsistent systeem."
+msgstr "Het verwijderen van een gebruiker die nog ingelogd is, kan leiden tot een inconsistente systeemstatus."
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr "Moeten de bestanden van %s bewaard blijven?"
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr "Het is mogelijk om de persoonlijke map, de e-mailmap en de tijdelijke bestanden te bewaren als een account verwijderd wordt."
+msgstr "Het is mogelijk om de persoonlijke map, e-mailmap en tijdelijke bestanden te bewaren als een account verwijderd wordt."
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr "Bestanden _verwijderen"
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr "Bestanden be_waren"
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr "Weet u zeker dat u de op afstand beheerde account van %s wilt verwijderen?"
+msgstr "Weet je zeker dat je het op afstand beheerde account van %s wilt verwijderen?"
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "_Verwijderen"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Account uitgeschakeld"
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
-msgstr "In te stellen bij volgende keer aanmelden"
+msgstr "In te stellen bij volgende inlog"
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "Geen"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
-msgstr "Aangemeld"
+msgstr "Ingelogd"
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
-msgstr "Kon de accounts-service niet benaderen"
+msgstr "Kan de accountsdienst niet benaderen"
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
-msgstr "Zorg ervoor dat de AccountService geïnstalleerd en ingeschakeld is."
+msgstr "Zorg ervoor dat AccountService geïnstalleerd en ingeschakeld is."
 
 #. Translator comments:
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr "Klik op het het *-pictogram\nom wijzigingen te maken"
+msgstr "Klik op het het *-pictogram\nom wijzigingen aan te brengen"
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
-msgstr "Gebruikersaccount aanmaken"
+msgstr "Gebruikersaccount creëren"
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
-msgstr "Klik op het *-pictogram\nom een gebruikersaccount aan te maken"
+msgstr "Klik op het *-pictogram\nom een gebruikersaccount te creëren"
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
-msgstr "De geselecteerde gebruiker verwijderen"
+msgstr "Geselecteerde gebruiker verwijderen"
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
@@ -7508,17 +7512,17 @@ msgstr "De gebruikersnaam is te lang."
 
 #: ../panels/user-accounts/um-utils.c:503
 msgid "The username cannot start with a “-”."
-msgstr "De gebruikersnaam mag niet met een ‘-’ beginnen."
+msgstr "De gebruikersnaam mag niet beginnen met ‘-’."
 
 #: ../panels/user-accounts/um-utils.c:506
 msgid ""
 "The username should only consist of upper and lower case letters from a-z, "
 "digits and the following characters: . - _"
-msgstr "De gebruikersnaam mag alleen maar bestaan uit grote/kleine letters van a t/m z, cijfers en de tekens ‘.’, ‘-’ en ‘_’."
+msgstr "De gebruikersnaam mag alleen bestaan uit hoofdletters/kleine letters van a t/m z, cijfers en de tekens ‘.’, ‘-’ en ‘_’."
 
 #: ../panels/user-accounts/um-utils.c:510
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr "Dit zal gebruikt worden om uw persoonlijke map een naam te geven en kan niet worden gewijzigd."
+msgstr "Dit wordt gebruikt om je persoonlijke map een naam te geven en kan niet worden gewijzigd."
 
 #: ../panels/wacom/button-mapping.ui.h:1
 msgid "Map Buttons"
@@ -7532,7 +7536,7 @@ msgstr "Knoppen toewijzen aan functies"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr "Om een sneltoets te bewerken, kies de actie ‘Send Keystroke’, druk op de sneltoetsknop en houd de nieuwe toetsen ingedrukt, of druk op Backspace om hem te wissen."
+msgstr "Kies, om een sneltoets te bewerken, de actie ‘Toetsaanslag sturen’, druk op de sneltoetsknop en houd de nieuwe toetsen ingedrukt, of druk op Backspace om hem te wissen."
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:83
 msgid ""
@@ -7552,7 +7556,7 @@ msgstr "Knop %d"
 #: ../panels/wacom/cc-wacom-button-row.h:53
 msgctxt "Wacom action-type"
 msgid "Application defined"
-msgstr "Toepassingen gedefinieerd"
+msgstr "Toepassing gedefinieerd"
 
 #: ../panels/wacom/cc-wacom-button-row.h:54
 msgctxt "Wacom action-type"
@@ -7590,7 +7594,7 @@ msgstr "%d van %d"
 
 #: ../panels/wacom/cc-wacom-page.c:544
 msgid "Display Mapping"
-msgstr "Taal voor weergave"
+msgstr "Schermtoewijzing"
 
 #: ../panels/wacom/cc-wacom-panel.c:783
 #: ../panels/wacom/wacom-stylus-page.ui.h:9
@@ -7615,7 +7619,7 @@ msgstr "Knoptoewijzingen instellen en gevoeligheid van stylus voor grafische tab
 #. Translators: those are keywords for the wacom tablet control-center panel
 #: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:5
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
-msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;Tekenen;Gum;Muis;"
+msgstr "Tablet;Wacom;Stylus;Tekenen;Gum;Muis;"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:1
 msgid "Tablet (absolute)"
@@ -7635,11 +7639,11 @@ msgstr "_Hulp"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:6
 msgid "No tablet detected"
-msgstr "Geen tablet gedetecteerd"
+msgstr "Geen tablet aangetroffen"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:7
 msgid "Please plug in or turn on your Wacom tablet"
-msgstr "Sluit het Wacom-tablet aan en zet het aan"
+msgstr "Sluit de Wacom-tablet aan en zet het aan"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:8
 msgid "Bluetooth Settings"
@@ -7651,7 +7655,7 @@ msgstr "Wacom-tablet"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:10
 msgid "Map to Monitor…"
-msgstr "Naar monitor mappen…"
+msgstr "Toewijzen aan beeldscherm..."
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:11
 msgid "Map Buttons…"
@@ -7671,7 +7675,7 @@ msgstr "Muisinstellingen aanpassen"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:15
 msgid "Tracking Mode"
-msgstr "Tracking-modus"
+msgstr "Volgmodus"
 
 #: ../panels/wacom/gnome-wacom-properties.ui.h:16
 msgid "Left-Handed Orientation"
@@ -7699,15 +7703,15 @@ msgstr "Vooruit"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:6
 msgid "No stylus found"
-msgstr "Geen pen aangetroffen"
+msgstr "Geen stylus aangetroffen"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:7
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr "Breng de pen in de buurt van het tablet om hem te configureren"
+msgstr "Breng de stylus in de buurt van de tablet om hem in te stellen"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:10
 msgid "Eraser Pressure Feel"
-msgstr "Gedrag gumdruk"
+msgstr "Gevoeligheid van gum"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:11
 msgid "Soft"
@@ -7727,7 +7731,7 @@ msgstr "Onderste knop"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:15
 msgid "Tip Pressure Feel"
-msgstr "Gedrag puntdruk"
+msgstr "Gevoeligheid van punt"
 
 #: ../panels/wacom/wacom-stylus-page.ui.h:17
 msgid "page 3"
@@ -7760,21 +7764,21 @@ msgstr "Gnome-configuratiecentrum"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:2
 msgid "Utilities to configure the GNOME desktop"
-msgstr "Hulpmiddelen om de Gnome-desktop te configureren"
+msgstr "Hulpmiddelen om de Gnome-werkomgeving in te stellen"
 
 #: ../shell/appdata/gnome-control-center.appdata.xml.in.h:3
 msgid ""
 "The control center is GNOME’s main interface for configuration of various "
 "aspects of your desktop."
-msgstr "Het configuratiecentrum is de hoofdinterface van Gnome om verschillende aspecten van uw desktop te configureren."
+msgstr "Het configuratiecentrum is de hoofdapplicatie van Gnome om verschillende aspecten van je werkomgeving in te stellen."
 
 #: ../shell/cc-application.c:45
 msgid "Display version number"
-msgstr "Versienummer weergeven"
+msgstr "Versienummer tonen"
 
 #: ../shell/cc-application.c:46
 msgid "Enable verbose mode"
-msgstr "Verbose-modus inschakelen"
+msgstr "Uitgebreid loggen inschakelen"
 
 #: ../shell/cc-application.c:47
 msgid "Show the overview"
@@ -7782,7 +7786,7 @@ msgstr "Overzicht tonen"
 
 #: ../shell/cc-application.c:48
 msgid "Search for the string"
-msgstr "Zoeken naar de tekenreeks"
+msgstr "Zoeken naar tekenreeks"
 
 #: ../shell/cc-application.c:49
 msgid "List possible panel names and exit"
@@ -7810,7 +7814,7 @@ msgstr "Afsluiten"
 
 #: ../shell/gnome-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
-msgstr "Preferences;Settings;Voorkeuren;Instellingen;"
+msgstr "Voorkeuren;Instellingen;"
 
 #: ../shell/help-overlay.ui.h:1
 msgctxt "shortcut window"
@@ -7835,12 +7839,12 @@ msgstr "Panelen"
 #: ../shell/help-overlay.ui.h:5
 msgctxt "shortcut window"
 msgid "Go back to the overview"
-msgstr "Terug naar het overzicht gaan"
+msgstr "Ga terug naar het overzicht"
 
 #: ../shell/help-overlay.ui.h:6
 msgctxt "shortcut window"
 msgid "Cancel search"
-msgstr "Zoeken annuleren"
+msgstr "Zoekopdracht annuleren"
 
 #. translators: This is the default hotspot name, need to be less than
 #. 32-bytes
@@ -7851,4 +7855,4 @@ msgstr "Hotspot"
 
 #: ../shell/panel-list.ui.h:3
 msgid "No results found"
-msgstr "Geen resultaat gevonden"
+msgstr "Geen resultaten gevonden"

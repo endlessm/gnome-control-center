@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 13:42+0000\n"
-"PO-Revision-Date: 2019-02-06 14:07+0000\n"
+"POT-Creation-Date: 2019-05-31 21:11+0100\n"
+"PO-Revision-Date: 2019-05-31 20:14+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Albanian (http://www.transifex.com/endless-os/gnome-control-center/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -63,8 +63,9 @@ msgctxt "background, style"
 msgid "Span"
 msgstr "Spektër"
 
+#. Nautilus puts wallpapers into this subdirectory:
+#: ../panels/background/bg-pictures-source.c:1031
 #: ../panels/background/cc-background-chooser-dialog.c:430
-#: ../panels/background/gnome-wallpapers.desktop.in.h:1
 msgid "Wallpapers"
 msgstr "Sfond"
 
@@ -92,7 +93,7 @@ msgstr "Fotot Nuk Janë "
 #: ../panels/background/cc-background-chooser-dialog.c:554
 #: ../panels/search/cc-search-locations-dialog.c:302
 msgid "Home"
-msgstr "Shtëpia"
+msgstr "Shtëpi"
 
 #. translators: %s here is the name of the Pictures directory, the string
 #. should be translated in
@@ -128,8 +129,8 @@ msgstr "Ju mund të shtoni fotografi %s te dosja juaj dhe do shfaqen këtu"
 #: ../panels/user-accounts/um-fingerprint-dialog.c:264
 #: ../panels/user-accounts/um-photo-dialog.c:97
 #: ../panels/user-accounts/um-photo-dialog.c:224
-#: ../panels/user-accounts/um-user-panel.c:646
-#: ../panels/user-accounts/um-user-panel.c:664
+#: ../panels/user-accounts/um-user-panel.c:647
+#: ../panels/user-accounts/um-user-panel.c:665
 msgid "_Cancel"
 msgstr "_Anulo"
 
@@ -213,11 +214,11 @@ msgstr ""
 #. https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:2
 msgid "Blue­tooth"
-msgstr ""
+msgstr "Blue­tooth"
 
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:3
 msgid "Turn Bluetooth on and off and connect your devices"
-msgstr ""
+msgstr "Aktivizoni dhe fikni Bluetooth dhe lidhni pajisjet tuaja"
 
 #. Translators: those are keywords for the bluetooth control-center panel
 #: ../panels/bluetooth/gnome-bluetooth-panel.desktop.in.in.h:5
@@ -279,13 +280,13 @@ msgstr ""
 #. TRANSLATORS: the display calibration process is finished
 #: ../panels/color/cc-color-calibrate.c:467
 msgid "Complete!"
-msgstr ""
+msgstr "Përfunduar!"
 
 #. TRANSLATORS: the display calibration failed, and we also show
 #. * the translated (or untranslated) error string after this
 #: ../panels/color/cc-color-calibrate.c:475
 msgid "Calibration failed!"
-msgstr ""
+msgstr "Kalibrimi dështoi!"
 
 #. TRANSLATORS: The user can now remove the sensor from the screen
 #: ../panels/color/cc-color-calibrate.c:482
@@ -314,31 +315,31 @@ msgstr ""
 #: ../panels/color/cc-color-common.c:65
 #, c-format
 msgid "%s Monitor"
-msgstr ""
+msgstr "%s Ekran"
 
 #. TRANSLATORS: a flatbed scanner device, e.g. 'Epson Scanner'
 #: ../panels/color/cc-color-common.c:69
 #, c-format
 msgid "%s Scanner"
-msgstr ""
+msgstr "%s Skaner"
 
 #. TRANSLATORS: a camera device, e.g. 'Nikon D60 Camera'
 #: ../panels/color/cc-color-common.c:73
 #, c-format
 msgid "%s Camera"
-msgstr ""
+msgstr "%s Aparat Fotografik"
 
 #. TRANSLATORS: a printer device, e.g. 'Epson Photosmart Printer'
 #: ../panels/color/cc-color-common.c:77
 #, c-format
 msgid "%s Printer"
-msgstr ""
+msgstr "%s Stampues"
 
 #. TRANSLATORS: a webcam device, e.g. 'Philips HiDef Camera'
 #: ../panels/color/cc-color-common.c:81
 #, c-format
 msgid "%s Webcam"
-msgstr ""
+msgstr "%s Webcam"
 
 #: ../panels/color/cc-color-device.c:89
 #, c-format
@@ -395,13 +396,13 @@ msgstr "Gjithë skedarët"
 
 #: ../panels/color/cc-color-panel.c:583
 msgid "Screen"
-msgstr ""
+msgstr "Ekran"
 
 #. TRANSLATORS: this is when the upload of the profile failed
 #: ../panels/color/cc-color-panel.c:908
 #, c-format
 msgid "Failed to upload file: %s"
-msgstr ""
+msgstr "Dështoj në ngarkimin e skedarit: %s"
 
 #. TRANSLATORS: these are instructions on how to recover
 #. * the ICC profile on the native operating system and are
@@ -792,7 +793,7 @@ msgstr ""
 #: ../panels/color/color.ui.h:56 ../panels/power/power.ui.h:4
 #: ../panels/privacy/privacy.ui.h:7
 msgid "30 minutes"
-msgstr ""
+msgstr "30 minuta"
 
 #: ../panels/color/color.ui.h:57
 msgctxt "Calibration quality"
@@ -1768,9 +1769,6 @@ msgstr "Përshpejtime të personalizuara"
 #: ../panels/network/network-proxy.ui.h:4
 #: ../panels/network/network-wifi.ui.h:31
 #: ../panels/sound/gvc/gvc-mixer-control.c:1866
-#: ../panels/user-accounts/um-app-permissions.c:317
-#: ../panels/user-accounts/um-app-permissions.c:389
-#: ../panels/user-accounts/um-app-permissions.c:770
 #: ../panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Disabled"
 msgstr "Çaktivizuar"
@@ -4048,7 +4046,7 @@ msgstr ""
 
 #: ../panels/power/power.ui.h:6 ../panels/privacy/privacy.ui.h:8
 msgid "1 hour"
-msgstr ""
+msgstr "1 orë"
 
 #: ../panels/power/power.ui.h:7
 msgid "80 minutes"
@@ -4068,7 +4066,7 @@ msgstr ""
 
 #: ../panels/power/power.ui.h:11 ../panels/privacy/privacy.ui.h:3
 msgid "1 minute"
-msgstr ""
+msgstr "1 minutë"
 
 #: ../panels/power/power.ui.h:12 ../panels/privacy/privacy.ui.h:4
 msgid "2 minutes"
@@ -4084,7 +4082,7 @@ msgstr ""
 
 #: ../panels/power/power.ui.h:15 ../panels/privacy/privacy.ui.h:6
 msgid "5 minutes"
-msgstr ""
+msgstr "5 minuta"
 
 #: ../panels/power/power.ui.h:16
 msgid "8 minutes"
@@ -4844,39 +4842,39 @@ msgstr ""
 
 #: ../panels/privacy/privacy.ui.h:9
 msgid "1 day"
-msgstr ""
+msgstr "1 ditë"
 
 #: ../panels/privacy/privacy.ui.h:10
 msgid "2 days"
-msgstr ""
+msgstr "2 ditë"
 
 #: ../panels/privacy/privacy.ui.h:11
 msgid "3 days"
-msgstr ""
+msgstr "3 ditë"
 
 #: ../panels/privacy/privacy.ui.h:12
 msgid "4 days"
-msgstr ""
+msgstr "4 ditë"
 
 #: ../panels/privacy/privacy.ui.h:13
 msgid "5 days"
-msgstr ""
+msgstr "5 ditë"
 
 #: ../panels/privacy/privacy.ui.h:14
 msgid "6 days"
-msgstr ""
+msgstr "6 ditë"
 
 #: ../panels/privacy/privacy.ui.h:15
 msgid "7 days"
-msgstr ""
+msgstr "7 ditë"
 
 #: ../panels/privacy/privacy.ui.h:16
 msgid "14 days"
-msgstr ""
+msgstr "14 ditë"
 
 #: ../panels/privacy/privacy.ui.h:17
 msgid "30 days"
-msgstr ""
+msgstr "15 ditë"
 
 #: ../panels/privacy/privacy.ui.h:18
 msgid "Forever"
@@ -5184,7 +5182,7 @@ msgstr ""
 msgid "_OK"
 msgstr ""
 
-#: ../panels/search/cc-search-panel.c:178
+#: ../panels/search/cc-search-panel.c:181
 msgid "No applications found"
 msgstr ""
 
@@ -5286,7 +5284,7 @@ msgstr ""
 
 #: ../panels/sharing/cc-sharing-panel.c:985
 msgid "Copy"
-msgstr ""
+msgstr "Kopje"
 
 #: ../panels/sharing/cc-sharing-panel.c:1416
 msgid "Sharing"
@@ -6144,7 +6142,7 @@ msgstr "Asnjë"
 #: ../panels/universal-access/zoom-options.ui.h:32
 msgctxt "universal access, color"
 msgid "Full"
-msgstr ""
+msgstr "Plotë"
 
 #: ../panels/universal-access/zoom-options.ui.h:33
 msgctxt "universal access, brightness"
@@ -7164,6 +7162,12 @@ msgctxt "Account type"
 msgid "Administrator"
 msgstr ""
 
+#: ../panels/user-accounts/um-app-permissions.c:317
+#: ../panels/user-accounts/um-app-permissions.c:389
+#: ../panels/user-accounts/um-app-permissions.c:772
+msgid "No Restriction"
+msgstr ""
+
 #: ../panels/user-accounts/um-fingerprint-dialog.c:142
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
@@ -7280,7 +7284,7 @@ msgstr ""
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: ../panels/user-accounts/um-history-dialog.c:177
-#: ../panels/user-accounts/um-user-panel.c:778
+#: ../panels/user-accounts/um-user-panel.c:779
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr ""
@@ -7288,7 +7292,7 @@ msgstr ""
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: ../panels/user-accounts/um-history-dialog.c:180
-#: ../panels/user-accounts/um-user-panel.c:782
+#: ../panels/user-accounts/um-user-panel.c:783
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7370,87 +7374,87 @@ msgstr ""
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:197
+#: ../panels/user-accounts/um-user-panel.c:198
 msgid "Your account"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:392
+#: ../panels/user-accounts/um-user-panel.c:393
 msgid "Failed to delete user"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:450
-#: ../panels/user-accounts/um-user-panel.c:509
-#: ../panels/user-accounts/um-user-panel.c:561
+#: ../panels/user-accounts/um-user-panel.c:451
+#: ../panels/user-accounts/um-user-panel.c:510
+#: ../panels/user-accounts/um-user-panel.c:562
 msgid "Failed to revoke remotely managed user"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:615
+#: ../panels/user-accounts/um-user-panel.c:616
 msgid "You cannot delete your own account."
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:624
+#: ../panels/user-accounts/um-user-panel.c:625
 #, c-format
 msgid "%s is still logged in"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:628
+#: ../panels/user-accounts/um-user-panel.c:629
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:637
+#: ../panels/user-accounts/um-user-panel.c:638
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:641
+#: ../panels/user-accounts/um-user-panel.c:642
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:644
+#: ../panels/user-accounts/um-user-panel.c:645
 msgid "_Delete Files"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:645
+#: ../panels/user-accounts/um-user-panel.c:646
 msgid "_Keep Files"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:659
+#: ../panels/user-accounts/um-user-panel.c:660
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:663
+#: ../panels/user-accounts/um-user-panel.c:664
 msgid "_Delete"
 msgstr "_Elemino"
 
-#: ../panels/user-accounts/um-user-panel.c:713
+#: ../panels/user-accounts/um-user-panel.c:714
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:721
+#: ../panels/user-accounts/um-user-panel.c:722
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:724
+#: ../panels/user-accounts/um-user-panel.c:725
 msgctxt "Password mode"
 msgid "None"
 msgstr "Asnjë"
 
-#: ../panels/user-accounts/um-user-panel.c:771
+#: ../panels/user-accounts/um-user-panel.c:772
 msgid "Logged in"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1122
+#: ../panels/user-accounts/um-user-panel.c:1123
 msgid "Failed to contact the accounts service"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1124
+#: ../panels/user-accounts/um-user-panel.c:1125
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr ""
 
@@ -7458,29 +7462,29 @@ msgstr ""
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: ../panels/user-accounts/um-user-panel.c:1160
+#: ../panels/user-accounts/um-user-panel.c:1161
 msgid ""
 "To make changes,\n"
 "click the * icon first"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1202
+#: ../panels/user-accounts/um-user-panel.c:1203
 msgid "Create a user account"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1213
-#: ../panels/user-accounts/um-user-panel.c:1394
+#: ../panels/user-accounts/um-user-panel.c:1214
+#: ../panels/user-accounts/um-user-panel.c:1395
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1223
+#: ../panels/user-accounts/um-user-panel.c:1224
 msgid "Delete the selected user account"
 msgstr ""
 
-#: ../panels/user-accounts/um-user-panel.c:1235
-#: ../panels/user-accounts/um-user-panel.c:1399
+#: ../panels/user-accounts/um-user-panel.c:1236
+#: ../panels/user-accounts/um-user-panel.c:1400
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
