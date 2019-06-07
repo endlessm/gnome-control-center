@@ -614,7 +614,7 @@ search_providers_discover_ready (GObject *source,
 
   for (l = discover_result->providers; l != NULL; l = l->next)
     {
-      g_autoptr(GFile) provider = l->data;
+      GFile *provider = l->data;
       search_panel_add_one_provider (self, provider);
     }
 
