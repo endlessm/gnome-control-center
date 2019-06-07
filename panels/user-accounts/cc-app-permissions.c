@@ -162,25 +162,26 @@ reload_apps (CcAppPermissions *self)
 {
   GList *iter, *apps;
   g_autoptr(GHashTable) seen_flatpak_ids = NULL;
+  g_autoptr(GHashTable) seen_executables = NULL;
 
   apps = g_app_info_get_all ();
 
   /* Sort the apps by increasing length of #GAppInfo ID. When coupled with the
-   * deduplication of flatpak IDs, below, this should ensure that we pick the
-   * ‘base’ app out of any set with matching prefixes and identical app IDs, and
-   * show only that.
+   * deduplication of flatpak IDs and executable paths, below, this should ensure that we
+   * pick the ‘base’ app out of any set with matching prefixes and identical app IDs (in
+   * case of flatpak apps) or executables (for non-flatpak apps), and show only that.
    *
-   * This is designed to avoid listing all the components of LibreOffice, which
-   * all share an app ID and hence have the same entry in the parental controls
+   * This is designed to avoid listing all the components of LibreOffice for example,
+   * which all share an app ID and hence have the same entry in the parental controls
    * app filter. */
   apps = g_list_sort (apps, app_compare_id_length_cb);
   seen_flatpak_ids = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+  seen_executables = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
   g_list_store_remove_all (self->apps);
 
   for (iter = apps; iter; iter = iter->next)
     {
-      g_autofree gchar *flatpak_id = NULL;
       GAppInfo *app;
       const gchar *app_name;
 
@@ -192,26 +193,58 @@ reload_apps (CcAppPermissions *self)
           app_name[0] == '\0' ||
           /* Endless' link apps have the "eos-link" prefix, and should be ignored too */
           g_str_has_prefix (g_app_info_get_id (app), "eos-link") ||
-          /* FIXME: Only list flatpak apps for now; we really need a system-wide MAC
-           * to be able to reliably support blacklisting system programs. See
+          /* FIXME: Only list flatpak apps and apps with X-Parental-Controls
+           * key set for now; we really need a system-wide MAC to be able to
+           * reliably support blacklisting system programs. See
            * https://phabricator.endlessm.com/T25080. */
-          !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak"))
+          (!g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak") &&
+           !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Parental-Controls")))
         {
           continue;
         }
 
-      flatpak_id = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app), "X-Flatpak");
-      g_debug ("Processing app ‘%s’ (Exec=%s, X-Flatpak=%s)",
-               g_app_info_get_id (app),
-               g_app_info_get_executable (app),
-               flatpak_id);
-
-      /* Have we seen this flatpak ID before? */
-      if (!g_hash_table_add (seen_flatpak_ids, g_steal_pointer (&flatpak_id)))
+      if (g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak"))
         {
-          g_debug (" → Skipping ‘%s’ due to seeing its flatpak ID already",
-                   g_app_info_get_id (app));
-          continue;
+          g_autofree gchar *flatpak_id = NULL;
+
+          flatpak_id = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app), "X-Flatpak");
+          g_debug ("Processing app ‘%s’ (Exec=%s, X-Flatpak=%s)",
+                   g_app_info_get_id (app),
+                   g_app_info_get_executable (app),
+                   flatpak_id);
+
+          /* Have we seen this flatpak ID before? */
+          if (!g_hash_table_add (seen_flatpak_ids, g_steal_pointer (&flatpak_id)))
+            {
+              g_debug (" → Skipping ‘%s’ due to seeing its flatpak ID already",
+                       g_app_info_get_id (app));
+              continue;
+            }
+        }
+      else if (g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Parental-Controls"))
+        {
+          g_autofree gchar *parental_controls_type = NULL;
+          g_autofree gchar *executable = NULL;
+
+          parental_controls_type = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app),
+                                                                  "X-Parental-Controls");
+          /* Ignore X-Parental-Controls=none */
+          if (g_strcmp0 (parental_controls_type, "none") == 0)
+            continue;
+
+          executable = g_strdup (g_app_info_get_executable (app));
+          g_debug ("Processing app ‘%s’ (Exec=%s, X-Parental-Controls=%s)",
+                   g_app_info_get_id (app),
+                   executable,
+                   parental_controls_type);
+
+          /* Have we seen this executable before? */
+          if (!g_hash_table_add (seen_executables, g_steal_pointer (&executable)))
+            {
+              g_debug (" → Skipping ‘%s’ due to seeing its executable already",
+                       g_app_info_get_id (app));
+              continue;
+            }
         }
 
       g_list_store_insert_sorted (self->apps,
