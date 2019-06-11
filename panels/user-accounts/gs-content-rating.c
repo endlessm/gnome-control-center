@@ -63,305 +63,305 @@ gs_content_rating_system_to_str (GsContentRatingSystem system)
 }
 
 const gchar *
-gs_content_rating_key_value_to_str (const gchar *id, EpcAppFilterOarsValue value)
+gs_content_rating_key_value_to_str (const gchar *id, MctAppFilterOarsValue value)
 {
 	guint i;
 	const struct {
 		const gchar		*id;
-		EpcAppFilterOarsValue	 value;
+		MctAppFilterOarsValue	 value;
 		const gchar		*desc;
 	} tab[] =  {
-	{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No cartoon violence") },
-	{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Cartoon characters in unsafe situations") },
-	{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Cartoon characters in aggressive conflict") },
-	{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic violence involving cartoon characters") },
-	{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No fantasy violence") },
-	{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Characters in unsafe situations easily distinguishable from reality") },
-	{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Characters in aggressive conflict easily distinguishable from reality") },
-	{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic violence easily distinguishable from reality") },
-	{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No realistic violence") },
-	{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-realistic", MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Mildly realistic characters in unsafe situations") },
-	{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Depictions of realistic characters in aggressive conflict") },
-	{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic violence involving realistic characters") },
-	{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No bloodshed") },
-	{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Unrealistic bloodshed") },
-	{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Realistic bloodshed") },
-	{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Depictions of bloodshed and the mutilation of body parts") },
-	{ "violence-sexual",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-sexual",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No sexual violence") },
-	{ "violence-sexual",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-sexual",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Rape or other violent sexual behavior") },
-	{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to alcohol") },
-	{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("References to alcoholic beverages") },
-	{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Use of alcoholic beverages") },
-	{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to illicit drugs") },
-	{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("References to illicit drugs") },
-	{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Use of illicit drugs") },
-	{ "drugs-tobacco",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "drugs-tobacco",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("References to tobacco products") },
-	{ "drugs-tobacco",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "drugs-tobacco",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Use of tobacco products") },
-	{ "sex-nudity",		EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "sex-nudity",		MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No nudity of any sort") },
-	{ "sex-nudity",		EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "sex-nudity",		MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Brief artistic nudity") },
-	{ "sex-nudity",		EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "sex-nudity",		MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Prolonged nudity") },
-	{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references or depictions of sexual nature") },
-	{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Provocative references or depictions") },
-	{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Sexual references or depictions") },
-	{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic sexual behavior") },
-	{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No profanity of any kind") },
-	{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Mild or infrequent use of profanity") },
-	{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Moderate use of profanity") },
-	{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Strong or frequent use of profanity") },
-	{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No inappropriate humor") },
-	{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Slapstick humor") },
-	{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Vulgar or bathroom humor") },
-	{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Mature or sexual humor") },
-	{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No discriminatory language of any kind") },
-	{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Negativity towards a specific group of people") },
-	{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Discrimination designed to cause emotional harm") },
-	{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Explicit discrimination based on gender, sexuality, race or religion") },
-	{ "money-advertising", EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "money-advertising", MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No advertising of any kind") },
-	{ "money-advertising", EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "money-advertising", MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Product placement") },
-	{ "money-advertising", EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "money-advertising", MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Explicit references to specific brands or trademarked products") },
-	{ "money-advertising", EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "money-advertising", MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Users are encouraged to purchase specific real-world items") },
-	{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No gambling of any kind") },
-	{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Gambling on random events using tokens or credits") },
-	{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Gambling using “play” money") },
-	{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Gambling using real money") },
-	{ "money-purchasing",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "money-purchasing",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No ability to spend money") },
-	{ "money-purchasing",	EPC_APP_FILTER_OARS_VALUE_MILD,		/* v1.1 */
+	{ "money-purchasing",	MCT_APP_FILTER_OARS_VALUE_MILD,		/* v1.1 */
 	/* TRANSLATORS: content rating description */
 	_("Users are encouraged to donate real money") },
-	{ "money-purchasing",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "money-purchasing",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Ability to spend real money in-game") },
-	{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No way to chat with other users") },
-	{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("User-to-user game interactions without chat functionality") },
-	{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Moderated chat functionality between users") },
-	{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Uncontrolled chat functionality between users") },
-	{ "social-audio",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "social-audio",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No way to talk with other users") },
-	{ "social-audio",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "social-audio",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Uncontrolled audio or video chat functionality between users") },
-	{ "social-contacts",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "social-contacts",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No sharing of social network usernames or email addresses") },
-	{ "social-contacts",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "social-contacts",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Sharing social network usernames or email addresses") },
-	{ "social-info",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "social-info",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No sharing of user information with 3rd parties") },
-	{ "social-info",	EPC_APP_FILTER_OARS_VALUE_MILD,		/* v1.1 */
+	{ "social-info",	MCT_APP_FILTER_OARS_VALUE_MILD,		/* v1.1 */
 	/* TRANSLATORS: content rating description */
 	_("Checking for the latest application version") },
-	{ "social-info",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	/* v1.1 */
+	{ "social-info",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	/* v1.1 */
 	/* TRANSLATORS: content rating description */
 	_("Sharing diagnostic data that does not let others identify the user") },
-	{ "social-info",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "social-info",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Sharing information that lets others identify the user") },
-	{ "social-location",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "social-location",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No sharing of physical location to other users") },
-	{ "social-location",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "social-location",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Sharing physical location to other users") },
 
 	/* v1.1 */
-	{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to homosexuality") },
-	{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Indirect references to homosexuality") },
-	{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Kissing between people of the same gender") },
-	{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic sexual behavior between people of the same gender") },
-	{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to prostitution") },
-	{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Indirect references to prostitution") },
-	{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Direct references to prostitution") },
-	{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic depictions of the act of prostitution") },
-	{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to adultery") },
-	{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Indirect references to adultery") },
-	{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Direct references to adultery") },
-	{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic depictions of the act of adultery") },
-	{ "sex-appearance",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "sex-appearance",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No sexualized characters") },
-	{ "sex-appearance",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "sex-appearance",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Scantily clad human characters") },
-	{ "sex-appearance",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "sex-appearance",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Overtly sexualized human characters") },
-	{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to desecration") },
-	{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Depictions or references to historical desecration") },
-	{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Depictions of modern-day human desecration") },
-	{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic depictions of modern-day desecration") },
-	{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No visible dead human remains") },
-	{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Visible dead human remains") },
-	{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Dead human remains that are exposed to the elements") },
-	{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic depictions of desecration of human bodies") },
-	{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_NONE,
+	{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_NONE,
 	/* TRANSLATORS: content rating description */
 	_("No references to slavery") },
-	{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_MILD,
+	{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_MILD,
 	/* TRANSLATORS: content rating description */
 	_("Depictions or references to historical slavery") },
-	{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_MODERATE,
+	{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_MODERATE,
 	/* TRANSLATORS: content rating description */
 	_("Depictions of modern-day slavery") },
-	{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_INTENSE,
+	{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_INTENSE,
 	/* TRANSLATORS: content rating description */
 	_("Graphic depictions of modern-day slavery") },
 	{ NULL, 0, NULL } };
@@ -801,110 +801,110 @@ gs_utils_content_rating_get_ages (GsContentRatingSystem system)
 
 const struct {
 	const gchar		*id;
-	EpcAppFilterOarsValue	 value;
+	MctAppFilterOarsValue	 value;
 	guint			 csm_age;
 } id_to_csm_age[] =  {
 /* v1.0 */
-{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_MILD,		3 },
-{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	4 },
-{ "violence-cartoon",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	6 },
-{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_MILD,		3 },
-{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	7 },
-{ "violence-fantasy",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	8 },
-{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_MILD,		4 },
-{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	9 },
-{ "violence-realistic",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	14 },
-{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_MILD,		9 },
-{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	11 },
-{ "violence-bloodshed",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "violence-sexual",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "violence-sexual",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_MILD,		11 },
-{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	13 },
-{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_MILD,		12 },
-{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	14 },
-{ "drugs-tobacco",	EPC_APP_FILTER_OARS_VALUE_NONE,		0 },
-{ "drugs-tobacco",	EPC_APP_FILTER_OARS_VALUE_MILD,		10 },
-{ "drugs-tobacco",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	13 },
-{ "sex-nudity",		EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "sex-nudity",		EPC_APP_FILTER_OARS_VALUE_MILD,		12 },
-{ "sex-nudity",		EPC_APP_FILTER_OARS_VALUE_MODERATE,	14 },
-{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_MILD,		13 },
-{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_MODERATE,	14 },
-{ "sex-themes",		EPC_APP_FILTER_OARS_VALUE_INTENSE,	15 },
-{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_MILD,		8  },
-{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	11 },
-{ "language-profanity",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	14 },
-{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_MILD,		3  },
-{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	8  },
-{ "language-humor",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	14 },
-{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_NONE,	0  },
-{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_MILD,	9  },
-{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_MODERATE,10 },
-{ "language-discrimination", EPC_APP_FILTER_OARS_VALUE_INTENSE,	11 },
-{ "money-advertising",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "money-advertising",	EPC_APP_FILTER_OARS_VALUE_MILD,		7  },
-{ "money-advertising",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	8  },
-{ "money-advertising",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	10 },
-{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_MILD,		7  },
-{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	10 },
-{ "money-gambling",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "money-purchasing",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "money-purchasing",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	15 },
-{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_MILD,		4  },
-{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	10 },
-{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	13 },
-{ "social-audio",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "social-audio",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	15 },
-{ "social-contacts",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "social-contacts",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	12 },
-{ "social-info",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "social-info",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	13 },
-{ "social-location",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "social-location",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	13 },
+{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_MILD,		3 },
+{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	4 },
+{ "violence-cartoon",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	6 },
+{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_MILD,		3 },
+{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	7 },
+{ "violence-fantasy",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	8 },
+{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_MILD,		4 },
+{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	9 },
+{ "violence-realistic",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	14 },
+{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_MILD,		9 },
+{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	11 },
+{ "violence-bloodshed",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "violence-sexual",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "violence-sexual",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_MILD,		11 },
+{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	13 },
+{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_MILD,		12 },
+{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	14 },
+{ "drugs-tobacco",	MCT_APP_FILTER_OARS_VALUE_NONE,		0 },
+{ "drugs-tobacco",	MCT_APP_FILTER_OARS_VALUE_MILD,		10 },
+{ "drugs-tobacco",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	13 },
+{ "sex-nudity",		MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "sex-nudity",		MCT_APP_FILTER_OARS_VALUE_MILD,		12 },
+{ "sex-nudity",		MCT_APP_FILTER_OARS_VALUE_MODERATE,	14 },
+{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_MILD,		13 },
+{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_MODERATE,	14 },
+{ "sex-themes",		MCT_APP_FILTER_OARS_VALUE_INTENSE,	15 },
+{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_MILD,		8  },
+{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	11 },
+{ "language-profanity",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	14 },
+{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_MILD,		3  },
+{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	8  },
+{ "language-humor",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	14 },
+{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_NONE,	0  },
+{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_MILD,	9  },
+{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_MODERATE,10 },
+{ "language-discrimination", MCT_APP_FILTER_OARS_VALUE_INTENSE,	11 },
+{ "money-advertising",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "money-advertising",	MCT_APP_FILTER_OARS_VALUE_MILD,		7  },
+{ "money-advertising",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	8  },
+{ "money-advertising",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	10 },
+{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_MILD,		7  },
+{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	10 },
+{ "money-gambling",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "money-purchasing",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "money-purchasing",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	15 },
+{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_MILD,		4  },
+{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	10 },
+{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	13 },
+{ "social-audio",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "social-audio",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	15 },
+{ "social-contacts",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "social-contacts",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	12 },
+{ "social-info",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "social-info",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	13 },
+{ "social-location",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "social-location",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	13 },
 /* v1.1 additions */
-{ "social-info",	EPC_APP_FILTER_OARS_VALUE_MILD,		0  },
-{ "social-info",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	13 },
-{ "money-purchasing",	EPC_APP_FILTER_OARS_VALUE_MILD,		12 },
-{ "social-chat",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	14 },
-{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_MILD,		10 },
-{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	13 },
-{ "sex-homosexuality",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_MILD,		12 },
-{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	14 },
-{ "sex-prostitution",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_MILD,		8  },
-{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	10 },
-{ "sex-adultery",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "sex-appearance",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "sex-appearance",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	10 },
-{ "sex-appearance",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	15 },
-{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_MILD,		13 },
-{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	15 },
-{ "violence-worship",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_NONE,	0  },
-{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_MILD,	13 },
-{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_MODERATE,	15 },
-{ "violence-desecration", EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
-{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_NONE,		0  },
-{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_MILD,		13 },
-{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_MODERATE,	15 },
-{ "violence-slavery",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "social-info",	MCT_APP_FILTER_OARS_VALUE_MILD,		0  },
+{ "social-info",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	13 },
+{ "money-purchasing",	MCT_APP_FILTER_OARS_VALUE_MILD,		12 },
+{ "social-chat",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	14 },
+{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_MILD,		10 },
+{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	13 },
+{ "sex-homosexuality",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_MILD,		12 },
+{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	14 },
+{ "sex-prostitution",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_MILD,		8  },
+{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	10 },
+{ "sex-adultery",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "sex-appearance",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "sex-appearance",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	10 },
+{ "sex-appearance",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	15 },
+{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_MILD,		13 },
+{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	15 },
+{ "violence-worship",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_NONE,	0  },
+{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_MILD,	13 },
+{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_MODERATE,	15 },
+{ "violence-desecration", MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
+{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_NONE,		0  },
+{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_MILD,		13 },
+{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_MODERATE,	15 },
+{ "violence-slavery",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	18 },
 
 /* EOS customisation to add at least one CSM ↔ OARS mapping for ages 16 and 17,
  * as these are used in many locale-specific ratings systems. Without them,
@@ -915,14 +915,14 @@ const struct {
  * which users are allowed to see intense content in these two categories.
  *
  * See https://phabricator.endlessm.com/T23897#666769. */
-{ "drugs-alcohol",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	16 },
-{ "drugs-narcotics",	EPC_APP_FILTER_OARS_VALUE_INTENSE,	17 },
+{ "drugs-alcohol",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	16 },
+{ "drugs-narcotics",	MCT_APP_FILTER_OARS_VALUE_INTENSE,	17 },
 { NULL, 0, 0 } };
 
 /**
  * as_content_rating_id_value_to_csm_age:
  * @id: the subsection ID e.g. "violence-cartoon"
- * @value: the #AsContentRatingValue, e.g. %EPC_APP_FILTER_OARS_VALUE_INTENSE
+ * @value: the #AsContentRatingValue, e.g. %MCT_APP_FILTER_OARS_VALUE_INTENSE
  *
  * Gets the Common Sense Media approved age for a specific rating level.
  *
@@ -931,7 +931,7 @@ const struct {
  * Since: 0.5.12
  **/
 guint
-as_content_rating_id_value_to_csm_age (const gchar *id, EpcAppFilterOarsValue value)
+as_content_rating_id_value_to_csm_age (const gchar *id, MctAppFilterOarsValue value)
 {
 	guint i;
 	for (i = 0; id_to_csm_age[i].id != NULL; i++) {
@@ -947,17 +947,17 @@ as_content_rating_id_value_to_csm_age (const gchar *id, EpcAppFilterOarsValue va
  * @id: the subsection ID e.g. "violence-cartoon"
  * @age: the age
  *
- * Gets the #EpcAppFilterOarsValue for a given age.
+ * Gets the #MctAppFilterOarsValue for a given age.
  *
- * Returns: the #EpcAppFilterOarsValue
+ * Returns: the #MctAppFilterOarsValue
  **/
-EpcAppFilterOarsValue
+MctAppFilterOarsValue
 as_content_rating_id_csm_age_to_value (const gchar *id, guint age)
 {
-	EpcAppFilterOarsValue value;
+	MctAppFilterOarsValue value;
 	guint i;
 
-	value = EPC_APP_FILTER_OARS_VALUE_UNKNOWN;
+	value = MCT_APP_FILTER_OARS_VALUE_UNKNOWN;
 
 	for (i = 0; id_to_csm_age[i].id != NULL; i++) {
 		if (age >= id_to_csm_age[i].csm_age &&
