@@ -28,7 +28,7 @@ resource_data = files(
 )
 
 deps = common_deps + [
-    dependency('eos-parental-controls-0')
+    dependency('malcontent-0', version: '>= 0.3.0')
   ]
 
 sources += gnome.compile_resources(
