@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include <libeos-parental-controls/app-filter.h>
+#include <libmalcontent/malcontent.h>
 #include <flatpak.h>
 #include <gio/gio.h>
 #include <gio/gdesktopappinfo.h>
@@ -59,7 +59,8 @@ struct _CcAppPermissions
   GListStore *apps; /* (owned) */
 
   GCancellable *cancellable; /* (owned) */
-  EpcAppFilter *filter; /* (owned) */
+  MctManager   *manager; /* (owned) */
+  MctAppFilter *filter; /* (owned) */
   guint         selected_age; /* @oars_disabled_age to disable OARS */
 
   guint         blacklist_apps_source_id;
@@ -301,18 +302,18 @@ update_app_filter (CcAppPermissions *self)
 {
   g_autoptr(GError) error = NULL;
 
-  g_clear_pointer (&self->filter, epc_app_filter_unref);
+  g_clear_pointer (&self->filter, mct_app_filter_unref);
 
   /* We don’t care about the app filter for administrators. */
   if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
     return;
 
   /* FIXME: make it asynchronous */
-  self->filter = epc_get_app_filter (NULL,
-                                     act_user_get_uid (self->user),
-                                     FALSE,
-                                     self->cancellable,
-                                     &error);
+  self->filter = mct_manager_get_app_filter (self->manager,
+                                             act_user_get_uid (self->user),
+                                             MCT_GET_APP_FILTER_FLAGS_NONE,
+                                             self->cancellable,
+                                             &error);
 
   if (error)
     {
@@ -364,19 +365,19 @@ update_categories_from_language (CcAppPermissions *self)
 /* Returns a human-readable but untranslated string, not suitable
  * to be shown in any UI */
 static const gchar*
-oars_value_to_string (EpcAppFilterOarsValue oars_value)
+oars_value_to_string (MctAppFilterOarsValue oars_value)
 {
   switch (oars_value)
     {
-    case EPC_APP_FILTER_OARS_VALUE_UNKNOWN:
+    case MCT_APP_FILTER_OARS_VALUE_UNKNOWN:
       return "unknown";
-    case EPC_APP_FILTER_OARS_VALUE_NONE:
+    case MCT_APP_FILTER_OARS_VALUE_NONE:
       return "none";
-    case EPC_APP_FILTER_OARS_VALUE_MILD:
+    case MCT_APP_FILTER_OARS_VALUE_MILD:
       return "mild";
-    case EPC_APP_FILTER_OARS_VALUE_MODERATE:
+    case MCT_APP_FILTER_OARS_VALUE_MODERATE:
       return "moderate";
-    case EPC_APP_FILTER_OARS_VALUE_INTENSE:
+    case MCT_APP_FILTER_OARS_VALUE_INTENSE:
       return "intense";
     }
   return "";
@@ -398,11 +399,11 @@ update_oars_level (CcAppPermissions *self)
 
   for (i = 0; oars_categories[i] != NULL; i++)
     {
-      EpcAppFilterOarsValue oars_value;
+      MctAppFilterOarsValue oars_value;
       guint age;
 
-      oars_value = epc_app_filter_get_oars_value (self->filter, oars_categories[i]);
-      all_categories_unset &= (oars_value == EPC_APP_FILTER_OARS_VALUE_UNKNOWN);
+      oars_value = mct_app_filter_get_oars_value (self->filter, oars_categories[i]);
+      all_categories_unset &= (oars_value == MCT_APP_FILTER_OARS_VALUE_UNKNOWN);
       age = as_content_rating_id_value_to_csm_age (oars_categories[i], oars_value);
 
       g_debug ("OARS value for '%s': %s", oars_categories[i], oars_value_to_string (oars_value));
@@ -430,8 +431,8 @@ update_allow_app_installation (CcAppPermissions *self)
   gboolean allow_system_installation;
   gboolean allow_user_installation;
 
-  allow_system_installation = epc_app_filter_is_system_installation_allowed (self->filter);
-  allow_user_installation = epc_app_filter_is_user_installation_allowed (self->filter);
+  allow_system_installation = mct_app_filter_is_system_installation_allowed (self->filter);
+  allow_user_installation = mct_app_filter_is_user_installation_allowed (self->filter);
 
   /* While the underlying permissions storage allows the system and user settings
    * to be stored completely independently, force the system setting to OFF if
@@ -542,8 +543,8 @@ get_flatpak_ref_for_app_id (CcAppPermissions *self,
 static gboolean
 blacklist_apps_cb (gpointer data)
 {
-  g_auto(EpcAppFilterBuilder) builder = EPC_APP_FILTER_BUILDER_INIT ();
-  g_autoptr(EpcAppFilter) new_filter = NULL;
+  g_auto(MctAppFilterBuilder) builder = MCT_APP_FILTER_BUILDER_INIT ();
+  g_autoptr(MctAppFilter) new_filter = NULL;
   g_autoptr(GError) error = NULL;
   CcAppPermissions *self = data;
   GDesktopAppInfo *app;
@@ -580,7 +581,7 @@ blacklist_apps_cb (gpointer data)
             }
 
           g_debug ("\t\t → Blacklisting Flatpak ref: %s", flatpak_ref);
-          epc_app_filter_builder_blacklist_flatpak_ref (&builder, flatpak_ref);
+          mct_app_filter_builder_blacklist_flatpak_ref (&builder, flatpak_ref);
         }
       else
         {
@@ -594,7 +595,7 @@ blacklist_apps_cb (gpointer data)
             }
 
           g_debug ("\t\t → Blacklisting path: %s", path);
-          epc_app_filter_builder_blacklist_path (&builder, path);
+          mct_app_filter_builder_blacklist_path (&builder, path);
         }
     }
 
@@ -607,7 +608,7 @@ blacklist_apps_cb (gpointer data)
 
   for (i = 0; self->selected_age != oars_disabled_age && oars_categories[i] != NULL; i++)
     {
-      EpcAppFilterOarsValue oars_value;
+      MctAppFilterOarsValue oars_value;
       const gchar *oars_category;
 
       oars_category = oars_categories[i];
@@ -615,7 +616,7 @@ blacklist_apps_cb (gpointer data)
 
       g_debug ("\t\t → %s: %s", oars_category, oars_value_to_string (oars_value));
 
-      epc_app_filter_builder_set_oars_value (&builder, oars_category, oars_value);
+      mct_app_filter_builder_set_oars_value (&builder, oars_category, oars_value);
     }
 
   /* App Installation */
@@ -625,18 +626,18 @@ blacklist_apps_cb (gpointer data)
   g_debug ("\t → %s system installation", allow_system_installation ? "Enabling" : "Disabling");
   g_debug ("\t → %s user installation", allow_user_installation ? "Enabling" : "Disabling");
 
-  epc_app_filter_builder_set_allow_user_installation (&builder, allow_user_installation);
-  epc_app_filter_builder_set_allow_system_installation (&builder, allow_system_installation);
+  mct_app_filter_builder_set_allow_user_installation (&builder, allow_user_installation);
+  mct_app_filter_builder_set_allow_system_installation (&builder, allow_system_installation);
 
-  new_filter = epc_app_filter_builder_end (&builder);
+  new_filter = mct_app_filter_builder_end (&builder);
 
   /* FIXME: should become asynchronous */
-  epc_set_app_filter (NULL,
-                      act_user_get_uid (self->user),
-                      new_filter,
-                      TRUE,
-                      self->cancellable,
-                      &error);
+  mct_manager_set_app_filter (self->manager,
+                              act_user_get_uid (self->user),
+                              new_filter,
+                              MCT_GET_APP_FILTER_FLAGS_INTERACTIVE,
+                              self->cancellable,
+                              &error);
 
   if (error)
     {
@@ -754,7 +755,7 @@ create_row_for_app_cb (gpointer item,
   gtk_widget_show_all (box);
 
   /* Fetch status from AccountService */
-  allowed = epc_app_filter_is_appinfo_allowed (self->filter, app);
+  allowed = mct_app_filter_is_appinfo_allowed (self->filter, app);
 
   gtk_switch_set_active (GTK_SWITCH (w), allowed);
   g_object_set_data_full (G_OBJECT (w), "GAppInfo", g_object_ref (app), g_object_unref);
@@ -850,7 +851,8 @@ cc_app_permissions_finalize (GObject *object)
   g_clear_object (&self->permission);
 
   g_clear_pointer (&self->blacklisted_apps, g_hash_table_unref);
-  g_clear_pointer (&self->filter, epc_app_filter_unref);
+  g_clear_pointer (&self->filter, mct_app_filter_unref);
+  g_clear_object (&self->manager);
   g_clear_object (&self->app_info_monitor);
 
   G_OBJECT_CLASS (cc_app_permissions_parent_class)->finalize (object);
@@ -957,10 +959,25 @@ cc_app_permissions_class_init (CcAppPermissionsClass *klass)
 static void
 cc_app_permissions_init (CcAppPermissions *self)
 {
+  g_autoptr(GDBusConnection) system_bus = NULL;
+  g_autoptr(GError) error = NULL;
+
   gtk_widget_init_template (GTK_WIDGET (self));
 
   self->system_installation = flatpak_installation_new_system (NULL, NULL);
   self->user_installation = flatpak_installation_new_user (NULL, NULL);
+
+  self->cancellable = g_cancellable_new ();
+
+  /* FIXME: should become asynchronous */
+  system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, self->cancellable, &error);
+  if (system_bus == NULL)
+    {
+      g_warning ("Error getting system bus while setting up app permissions: %s", error->message);
+      return;
+    }
+
+  self->manager = mct_manager_new (system_bus);
 
   self->action_group = g_simple_action_group_new ();
   g_action_map_add_action_entries (G_ACTION_MAP (self->action_group),
@@ -975,7 +992,6 @@ cc_app_permissions_init (CcAppPermissions *self)
   gtk_popover_bind_model (self->restriction_popover, G_MENU_MODEL (self->age_menu), NULL);
   self->blacklisted_apps = g_hash_table_new_full (g_direct_hash, g_direct_equal, g_object_unref, NULL);
 
-  self->cancellable = g_cancellable_new ();
   self->apps = g_list_store_new (G_TYPE_APP_INFO);
 
   self->app_info_monitor = g_app_info_monitor_get ();
