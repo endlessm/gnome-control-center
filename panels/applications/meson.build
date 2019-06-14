@@ -38,12 +38,16 @@ sources += gnome.compile_resources(
         export : true
 )
 
+deps = common_deps + [
+    dependency('malcontent-0', version: '>= 0.3.0'),
+]
+
 cflags += '-DGNOMELOCALEDIR="@0@"'.format(control_center_localedir)
 
 panels_libs += static_library(
            cappletname,
               sources : sources,
   include_directories : [ top_inc, common_inc ],
-         dependencies : common_deps,
+         dependencies : deps,
                c_args : cflags
 )
