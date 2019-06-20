@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: control-center-2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:17+0000\n"
+"POT-Creation-Date: 2019-06-20 15:48+0000\n"
 "PO-Revision-Date: 2011-10-23 19:59+0100\n"
 "Last-Translator: ivarela <ivarela@softastur.org>\n"
 "Language-Team: Softastur <alministradores@softastur.org>\n"
@@ -21,8 +21,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-10-23 16:28+0000\n"
 "X-Generator: Launchpad (build 14170)\n"
+"X-Launchpad-Export-Date: 2011-10-23 16:28+0000\n"
 
 #: panels/applications/cc-applications-panel.c:564
 #, fuzzy
@@ -72,7 +72,7 @@ msgstr "Nome de rede"
 #: panels/background/cc-background-chooser-dialog.c:536
 #: panels/search/cc-search-locations-dialog.c:286
 msgid "Home"
-msgstr "Entamu"
+msgstr "Carpeta personal"
 
 #: panels/applications/cc-applications-panel.c:584
 #: panels/applications/cc-applications-panel.c:589
@@ -383,10 +383,9 @@ msgid "Tile"
 msgstr "Mosaicu"
 
 #: panels/background/background.ui:272
-#, fuzzy
 msgctxt "background, style"
 msgid "Zoom"
-msgstr "Zoom"
+msgstr "Ampliación"
 
 #: panels/background/background.ui:276
 #, fuzzy
@@ -395,7 +394,6 @@ msgid "Center"
 msgstr "Centru"
 
 #: panels/background/background.ui:280
-#, fuzzy
 msgctxt "background, style"
 msgid "Scale"
 msgstr "Escala"
@@ -1063,15 +1061,13 @@ msgid "Wide gamut LCD (RGB LED backlight)"
 msgstr ""
 
 #: panels/color/cc-color-panel.ui:1073
-#, fuzzy
 msgctxt "Calibration quality"
 msgid "High"
 msgstr "Altu"
 
 #: panels/color/cc-color-panel.ui:1074
-#, fuzzy
 msgid "40 minutes"
-msgstr "10 minutos"
+msgstr "40 minutos"
 
 #: panels/color/cc-color-panel.ui:1078
 #, fuzzy
@@ -1084,15 +1080,13 @@ msgid "30 minutes"
 msgstr "30 minutos"
 
 #: panels/color/cc-color-panel.ui:1083
-#, fuzzy
 msgctxt "Calibration quality"
 msgid "Low"
 msgstr "Baxu"
 
 #: panels/color/cc-color-panel.ui:1084
-#, fuzzy
 msgid "15 minutes"
-msgstr "5 minutos"
+msgstr "15 minutos"
 
 #: panels/color/cc-color-panel.ui:1106
 #, fuzzy
@@ -1136,7 +1130,6 @@ msgstr "Perfil de color:"
 #. * for instance the default monitor profile is created from the
 #. * primaries specified in the monitor EDID
 #: panels/color/cc-color-profile.c:114
-#, fuzzy
 msgctxt "Automatically generated profile"
 msgid "Automatic"
 msgstr "Automáticu"
@@ -1204,9 +1197,8 @@ msgstr "Calibración"
 
 #. This starts the calibration process
 #: panels/color/color-calibrate.ui:40
-#, fuzzy
 msgid "_Start"
-msgstr "Entamar %s"
+msgstr "_Entamar"
 
 #. This resumes the calibration process
 #: panels/color/color-calibrate.ui:54
@@ -1262,7 +1254,7 @@ msgstr "Esbilla una llingua"
 #: panels/common/cc-util.c:127
 #: panels/network/connection-editor/ce-page-details.c:106
 msgid "Today"
-msgstr ""
+msgstr "Güei"
 
 #: panels/common/cc-util.c:131
 #: panels/network/connection-editor/ce-page-details.c:108
@@ -1325,10 +1317,10 @@ msgstr ""
 #. Update the timezone on the listbow row
 #. Translators: "timezone (details)"
 #: panels/datetime/cc-datetime-panel.c:529
-#, fuzzy, c-format
+#, c-format
 msgctxt "timezone desc"
 msgid "%s (%s)"
-msgstr "%d x %d (%s)"
+msgstr "%s (%s)"
 
 #. Translators: UTC here means the Coordinated Universal Time.
 #. * %:::z will be replaced by the offset from UTC e.g. UTC+02
@@ -1349,10 +1341,10 @@ msgstr ""
 #. Update the text bubble in the timezone map
 #. Translators: "timezone (utc shift)"
 #: panels/datetime/cc-datetime-panel.c:551
-#, fuzzy, c-format
+#, c-format
 msgctxt "timezone map"
 msgid "%s (%s)"
-msgstr "%d x %d (%s)"
+msgstr "%s (%s)"
 
 #: panels/datetime/cc-datetime-panel.ui:26
 msgid "January"
@@ -1677,7 +1669,6 @@ msgstr ""
 #: panels/network/net-proxy.c:56 panels/network/network-proxy.ui:113
 #: panels/network/network-wifi.ui:776 panels/network/network-wifi.ui:1053
 #: panels/privacy/cc-privacy-panel.c:246
-#, fuzzy
 msgid "Manual"
 msgstr "Manual"
 
@@ -2129,7 +2120,6 @@ msgid "Home folder"
 msgstr "Carpeta personal"
 
 #: panels/keyboard/01-launchers.xml.in:16
-#, fuzzy
 msgctxt "keybinding"
 msgid "Search"
 msgstr "Guetar"
@@ -2354,9 +2344,8 @@ msgid "Name"
 msgstr "Nome"
 
 #: panels/keyboard/shortcut-editor.ui:168
-#, fuzzy
 msgid "Command"
-msgstr "C_omandu:"
+msgstr "Comandu"
 
 #: panels/keyboard/shortcut-editor.ui:180
 msgid "Shortcut"
@@ -2377,9 +2366,8 @@ msgid "Enter the new shortcut"
 msgstr "Error al guardar l'atayu nuevu"
 
 #: panels/keyboard/shortcut-editor.ui:357
-#, fuzzy
 msgid "Remove"
-msgstr "_Desaniciar"
+msgstr "Desaniciar"
 
 #: panels/keyboard/shortcut-editor.ui:367
 #, fuzzy
@@ -2388,7 +2376,7 @@ msgstr "_Amestar"
 
 #: panels/keyboard/shortcut-editor.ui:382
 msgid "Replace"
-msgstr ""
+msgstr "Trocar"
 
 #: panels/keyboard/shortcut-editor.ui:395
 #, fuzzy
@@ -2436,13 +2424,11 @@ msgstr ""
 
 #: panels/mouse/gnome-mouse-properties.ui:136
 #: panels/sound/cc-balance-slider.ui:13
-#, fuzzy
 msgid "Left"
 msgstr "Esquierda"
 
 #: panels/mouse/gnome-mouse-properties.ui:146
 #: panels/sound/cc-balance-slider.ui:15
-#, fuzzy
 msgid "Right"
 msgstr "Derecha"
 
@@ -2703,7 +2689,6 @@ msgstr "Empresa"
 
 #: panels/network/connection-editor/ce-page-details.c:74
 #: panels/network/net-device-wifi.c:141 panels/network/net-device-wifi.c:289
-#, fuzzy
 msgctxt "Wifi security"
 msgid "None"
 msgstr "Dengún"
@@ -2730,7 +2715,6 @@ msgstr "%d Mb/s"
 
 #: panels/network/connection-editor/ce-page-details.c:249
 #: panels/network/net-device-wifi.c:505
-#, fuzzy
 msgctxt "Signal strength"
 msgid "None"
 msgstr "Dengún"
@@ -2813,7 +2797,6 @@ msgid "IPv6"
 msgstr ""
 
 #: panels/network/connection-editor/ce-page-security.c:245
-#, fuzzy
 msgctxt "Wi-Fi/Ethernet security"
 msgid "None"
 msgstr "Dengún"
@@ -2920,7 +2903,6 @@ msgstr ""
 #: panels/network/net-proxy.c:58 panels/network/network-proxy.ui:103
 #: panels/network/wireless-security/eap-method-peap.ui:22
 #: panels/privacy/cc-privacy-panel.c:246
-#, fuzzy
 msgid "Automatic"
 msgstr "Automáticu"
 
@@ -3133,7 +3115,7 @@ msgstr "Escoyer deu"
 #: panels/sharing/cc-sharing-panel.c:428
 #: panels/user-accounts/cc-avatar-chooser.c:238
 msgid "_Open"
-msgstr ""
+msgstr "A_brir"
 
 #: panels/network/connection-editor/vpn-helpers.c:230
 #, fuzzy, c-format
@@ -3142,7 +3124,7 @@ msgstr "Yá hai otru usuariu con el nome «%s»."
 
 #: panels/network/connection-editor/vpn-helpers.c:232
 msgid "_Replace"
-msgstr ""
+msgstr "_Trocar"
 
 #: panels/network/connection-editor/vpn-helpers.c:234
 #, c-format
@@ -3497,10 +3479,9 @@ msgid "Hardware"
 msgstr "Hardware"
 
 #: panels/network/network-wifi.ui:1453
-#, fuzzy
 msgctxt "tab"
 msgid "Reset"
-msgstr "Resetear"
+msgstr "Restablecer"
 
 #: panels/network/network-wifi.ui:1505
 #, fuzzy
@@ -4321,7 +4302,7 @@ msgstr ""
 #. Translators: This is the button which allows undoing the removal of the printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:71
 msgid "Undo"
-msgstr ""
+msgstr "Desfacer"
 
 #: panels/online-accounts/online-accounts.ui:96
 msgid "Connect to your data in the cloud"
@@ -4477,9 +4458,8 @@ msgstr "Tableta Wacom"
 
 #. TRANSLATORS: secondary battery
 #: panels/power/cc-power-panel.c:571
-#, fuzzy
 msgid "Computer"
-msgstr "Completáu"
+msgstr "Equipu"
 
 #. TRANSLATORS: secondary battery
 #: panels/power/cc-power-panel.c:574
@@ -4509,7 +4489,6 @@ msgstr "Allugamientu"
 
 #. TRANSLATORS: secondary battery
 #: panels/power/cc-power-panel.c:649
-#, fuzzy
 msgctxt "Battery power"
 msgid "Low"
 msgstr "Baxu"
@@ -4653,7 +4632,6 @@ msgid "Suspend"
 msgstr "Suspender"
 
 #: panels/power/cc-power-panel.c:2195
-#, fuzzy
 msgid "Power Off"
 msgstr "Apagar"
 
@@ -4872,9 +4850,8 @@ msgid " "
 msgstr ""
 
 #: panels/printers/authentication-dialog.ui:42
-#, fuzzy
 msgid "Authenticate"
-msgstr "_Autenticar"
+msgstr "Autenticar"
 
 #. Translators: This is a username on a print server.
 #: panels/printers/authentication-dialog.ui:80
@@ -4892,7 +4869,6 @@ msgstr "C_ontraseña"
 
 #: panels/printers/authentication-dialog.ui:139
 #: panels/printers/new-printer-dialog.ui:337
-#, fuzzy
 msgid "Authentication Required"
 msgstr "Necesítase autenticación"
 
@@ -5283,7 +5259,6 @@ msgstr "Orientación del mur"
 
 #. Translators: "General" tab contains general printer options
 #: panels/printers/pp-options-dialog.c:669
-#, fuzzy
 msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Xeneral"
@@ -5316,7 +5291,6 @@ msgstr ""
 
 #. Translators: "Color" tab contains color settings (e.g. color printing)
 #: panels/printers/pp-options-dialog.c:684
-#, fuzzy
 msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Color"
@@ -5550,9 +5524,8 @@ msgstr "Tea xuru de que la miniaplicación ta instalada correchamente"
 
 #. Translators: This is the button which restarts the printer.
 #: panels/printers/printer-entry.ui:319
-#, fuzzy
 msgid "Restart"
-msgstr "_Executar al entamu"
+msgstr "Reaniciar"
 
 #. Translators: This button adds new printer.
 #: panels/printers/printers.ui:20
@@ -5639,11 +5612,11 @@ msgstr ""
 
 #: panels/privacy/cc-privacy-panel.c:1290
 msgid "Empty all items from Trash?"
-msgstr ""
+msgstr "¿Desaniciar tolos elementos de la papelera?"
 
 #: panels/privacy/cc-privacy-panel.c:1291
 msgid "All items in the Trash will be permanently deleted."
-msgstr ""
+msgstr "Van desaniciase ensembre tolos elementos de la papelera."
 
 #: panels/privacy/cc-privacy-panel.c:1292
 msgid "_Empty Trash"
@@ -5998,7 +5971,6 @@ msgid "Imperial"
 msgstr "Imperial"
 
 #: panels/region/cc-format-chooser.c:116
-#, fuzzy
 msgctxt "measurement format"
 msgid "Metric"
 msgstr "Métricu"
@@ -6223,7 +6195,7 @@ msgstr ""
 
 #: panels/search/search-locations-dialog.ui:73
 msgid "Bookmarks"
-msgstr ""
+msgstr "Marcadores"
 
 #: panels/search/search-locations-dialog.ui:130
 msgid "Other"
@@ -6248,7 +6220,6 @@ msgid "Off"
 msgstr "Apagáu"
 
 #: panels/sharing/cc-sharing-panel.c:351
-#, fuzzy
 msgctxt "service is enabled"
 msgid "Enabled"
 msgstr "Activáu"
@@ -6735,7 +6706,6 @@ msgstr ""
 #. translators: the labels will read:
 #. * Cursor Size: Default
 #: panels/universal-access/cc-ua-panel.c:498
-#, fuzzy
 msgctxt "cursor size"
 msgid "Default"
 msgstr "Predetermináu"
@@ -7294,9 +7264,8 @@ msgid "_White on black:"
 msgstr ""
 
 #: panels/universal-access/zoom-options.ui:842
-#, fuzzy
 msgid "_Brightness:"
-msgstr "Brillu"
+msgstr "_Brillu:"
 
 #: panels/universal-access/zoom-options.ui:863
 msgid "_Contrast:"
@@ -7309,7 +7278,6 @@ msgid "Co_lor"
 msgstr ""
 
 #: panels/universal-access/zoom-options.ui:908
-#, fuzzy
 msgctxt "universal access, color"
 msgid "None"
 msgstr "Dengún"
@@ -7321,13 +7289,11 @@ msgid "Full"
 msgstr "C_ompletu"
 
 #: panels/universal-access/zoom-options.ui:1003
-#, fuzzy
 msgctxt "universal access, brightness"
 msgid "Low"
 msgstr "Baxu"
 
 #: panels/universal-access/zoom-options.ui:1036
-#, fuzzy
 msgctxt "universal access, brightness"
 msgid "High"
 msgstr "Altu"
@@ -7466,13 +7432,11 @@ msgstr "Nome Completu"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:206
 #: panels/user-accounts/cc-user-panel.ui:156
-#, fuzzy
 msgid "Standard"
 msgstr "Estándar"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:216
 #: panels/user-accounts/cc-user-panel.ui:166
-#, fuzzy
 msgid "Administrator"
 msgstr "Alministrador"
 
@@ -7744,9 +7708,8 @@ msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "¿Tas seguru de que quies desaniciar la cuenta?"
 
 #: panels/user-accounts/cc-user-panel.c:659
-#, fuzzy
 msgid "_Delete"
-msgstr "Desaniciar"
+msgstr "_Desaniciar"
 
 #: panels/user-accounts/cc-user-panel.c:709
 msgctxt "Password mode"
@@ -8367,9 +8330,8 @@ msgid "Tablet Preferences"
 msgstr "Preferencies de tableta"
 
 #: panels/wacom/gnome-wacom-properties.ui:44
-#, fuzzy
 msgid "_Help"
-msgstr "Ayuda"
+msgstr "_Ayuda"
 
 #: panels/wacom/gnome-wacom-properties.ui:125
 msgid "No tablet detected"
@@ -8560,7 +8522,6 @@ msgid "Preferences;Settings;"
 msgstr "Preferencies"
 
 #: shell/help-overlay.ui:15
-#, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Xeneral"
@@ -8568,10 +8529,9 @@ msgstr "Xeneral"
 #: shell/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Quitar"
 
 #: shell/help-overlay.ui:27 shell/help-overlay.ui:48
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Guetar"
