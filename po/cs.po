@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:17+0000\n"
+"POT-Creation-Date: 2019-06-20 15:48+0000\n"
 "PO-Revision-Date: 2019-02-28 11:04+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
@@ -1711,9 +1711,8 @@ msgid "Device name"
 msgstr "Název zařízení"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Verze 0"
+msgstr "Verze"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -1747,12 +1746,12 @@ msgstr "Počítá se…"
 #. Translators: A label to inform the user that the check-for-updates link that used to be here has been moved to the App Center.
 #: panels/info/cc-info-overview-panel.ui:306
 msgid "<i>OS updates are now managed in the App Center</i>"
-msgstr ""
+msgstr "<i>Aktualizace OS jsou nyní spravovány v Centru aplikací</i>"
 
 #. Translators: A link to the terms of use of Endless OS.
 #: panels/info/cc-info-overview-panel.ui:320
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
-msgstr ""
+msgstr "Podmínky použití OS Endless"
 
 #: panels/info/cc-info-removable-media-panel.c:296
 msgid "Ask what to do"
@@ -2594,6 +2593,7 @@ msgid_plural "%i days ago"
 msgstr[0] "před %i dnem"
 msgstr[1] "před %i dny"
 msgstr[2] "před %i dny"
+msgstr[3] "před %i dny"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -2767,13 +2767,12 @@ msgid "Make available to _other users"
 msgstr "Zpřístupnit _ostatním uživatelům"
 
 #: panels/network/connection-editor/details-page.ui:376
-#, fuzzy
 msgid "Restrict _background data usage"
-msgstr "Omezit použití pro data na pozadí"
+msgstr "Omezit používání dat na pozadí"
 
 #: panels/network/connection-editor/details-page.ui:387
 msgid "Appropriate for connections that have data charges or limits."
-msgstr "Určeno pro připojení, u kterých jsou přenosy účtované nebo omezené."
+msgstr "Vhodné pro připojení, která mají datové poplatky či omezení."
 
 #: panels/network/connection-editor/ethernet-page.ui:16
 #: panels/network/connection-editor/ethernet-page.ui:39
@@ -4173,6 +4172,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minuta"
 msgstr[1] "%i minuty"
 msgstr[2] "%i minut"
+msgstr[3] "%i minut"
 
 #: panels/power/cc-power-panel.c:269
 #, c-format
@@ -4181,6 +4181,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i hodina"
 msgstr[1] "%i hodiny"
 msgstr[2] "%i hodin"
+msgstr[3] "%i hodin"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4195,6 +4196,7 @@ msgid_plural "hours"
 msgstr[0] "hodina"
 msgstr[1] "hodiny"
 msgstr[2] "hodin"
+msgstr[3] "hodin"
 
 #: panels/power/cc-power-panel.c:279
 msgid "minute"
@@ -4202,6 +4204,7 @@ msgid_plural "minutes"
 msgstr[0] "minuta"
 msgstr[1] "minuty"
 msgstr[2] "minut"
+msgstr[3] "minut"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:297
@@ -5147,6 +5150,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u úloha"
 msgstr[1] "%u úlohy"
 msgstr[2] "%u úloh"
+msgstr[3] "%u úloh"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:766
@@ -5777,29 +5781,25 @@ msgid "No input sources found"
 msgstr "Žádné vstupní zdroje nenalezeny"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
-msgstr "Ostatní"
+msgstr "Další"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Klávesové zkratky"
+msgstr "Přidat nové rozložení klávesnice"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Vstupní metody nemohou být použity na přihlašovací obrazovce"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Účet %s"
+msgstr "Můj účet"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Při_hlašovací obrazovka"
+msgstr "Obrazovka přihlašování"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:367
@@ -5819,9 +5819,8 @@ msgid "_Formats"
 msgstr "_Formáty"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Klávesové zkratky"
+msgstr "Rozložení klávesnice"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5838,9 +5837,8 @@ msgstr ""
 "systému"
 
 #: panels/region/cc-region-panel.ui:382
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Klávesové zkratky"
+msgstr "Možnosti rozložení klávesnice"
 
 #: panels/region/cc-region-panel.ui:397
 msgid "Use the _same source for all windows"
@@ -6460,6 +6458,7 @@ msgid_plural "%d pixels"
 msgstr[0] "%d pixel"
 msgstr[1] "%d pixely"
 msgstr[2] "%d pixelů"
+msgstr[3] "%d pixelů"
 
 #: panels/universal-access/cc-ua-panel.ui:93
 msgid "_Always Show Universal Access Menu"
@@ -6988,41 +6987,39 @@ msgid "Unlimited data plan connection"
 msgstr "Nelze otevřít editor připojení"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Přidat nové připojení"
+msgstr "Žádné aktivní připojení"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Nastavení lze měnit"
+msgstr "Změnit nastavení sítě..."
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Automatické směrování"
+msgstr "Automatické aktualizace"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Povolit automatické aktualizace na pozadí na tomto připojení. Obvykle se "
+"jedná o aktualizace aplikací, stahování nového obsahu či aktualizací OS "
+"Endless."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Plánování"
+msgstr "Plánované aktualizace"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Vyberte, kdy během dne mohou automatické aktualizace probíhat."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Automatické směrování"
+msgstr "Naplánujte automatické aktualizace"
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:6
 msgid "software-update-available"
@@ -8213,6 +8210,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u výstup"
 msgstr[1] "%u výstupy"
 msgstr[2] "%u výstupů"
+msgstr[3] "%u výstupů"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8223,6 +8221,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u vstup"
 msgstr[1] "%u vstupy"
 msgstr[2] "%u vstupů"
+msgstr[3] "%u vstupů"
 
 #: subprojects/gvc/gvc-mixer-control.c:2736
 msgid "System Sounds"

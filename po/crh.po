@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:17+0000\n"
+"POT-Creation-Date: 2019-06-20 15:48+0000\n"
 "PO-Revision-Date: 2013-05-23 18:26-0500\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
 "Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-meydan@lists."
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: UTF-8\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Launchpad-Export-Date: 2013-04-18 01:48+0000\n"
 "X-Generator: Launchpad (build 16567)\n"
+"X-Launchpad-Export-Date: 2013-04-18 01:48+0000\n"
 
 # tr
 #: panels/applications/cc-applications-panel.c:564
@@ -1216,9 +1216,8 @@ msgstr "Kösterim Kalibrasyonı"
 
 #. This starts the calibration process
 #: panels/color/color-calibrate.ui:40
-#, fuzzy
 msgid "_Start"
-msgstr "Başlat"
+msgstr "_Başlat"
 
 #. This resumes the calibration process
 #: panels/color/color-calibrate.ui:54
@@ -1342,10 +1341,10 @@ msgstr ""
 #. Update the timezone on the listbow row
 #. Translators: "timezone (details)"
 #: panels/datetime/cc-datetime-panel.c:529
-#, fuzzy, c-format
+#, c-format
 msgctxt "timezone desc"
 msgid "%s (%s)"
-msgstr "%d x %d (%s)"
+msgstr "%s (%s)"
 
 #. Translators: UTC here means the Coordinated Universal Time.
 #. * %:::z will be replaced by the offset from UTC e.g. UTC+02
@@ -1369,10 +1368,10 @@ msgstr ""
 #. Update the text bubble in the timezone map
 #. Translators: "timezone (utc shift)"
 #: panels/datetime/cc-datetime-panel.c:551
-#, fuzzy, c-format
+#, c-format
 msgctxt "timezone map"
 msgid "%s (%s)"
-msgstr "%d x %d (%s)"
+msgstr "%s (%s)"
 
 #: panels/datetime/cc-datetime-panel.ui:26
 msgid "January"
@@ -1622,7 +1621,6 @@ msgid "Night Light"
 msgstr "Oñ Alqa"
 
 #: panels/display/cc-display-settings.c:108
-#, fuzzy
 msgctxt "Display rotation"
 msgid "Landscape"
 msgstr "Manzara"
@@ -2411,9 +2409,8 @@ msgstr "İsim"
 
 # tr
 #: panels/keyboard/shortcut-editor.ui:168
-#, fuzzy
 msgid "Command"
-msgstr "Kom_ut:"
+msgstr "Emir"
 
 # tr
 #: panels/keyboard/shortcut-editor.ui:180
@@ -2447,7 +2444,7 @@ msgstr "Ekle"
 
 #: panels/keyboard/shortcut-editor.ui:382
 msgid "Replace"
-msgstr ""
+msgstr "İvaz et"
 
 #: panels/keyboard/shortcut-editor.ui:395
 #, fuzzy
@@ -2495,14 +2492,12 @@ msgstr ""
 # tr
 #: panels/mouse/gnome-mouse-properties.ui:136
 #: panels/sound/cc-balance-slider.ui:13
-#, fuzzy
 msgid "Left"
 msgstr "Sol"
 
 # tr
 #: panels/mouse/gnome-mouse-properties.ui:146
 #: panels/sound/cc-balance-slider.ui:15
-#, fuzzy
 msgid "Right"
 msgstr "Sağ"
 
@@ -2781,6 +2776,7 @@ msgstr "Asla"
 msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "%i kün evvel"
+msgstr[1] "%i kün evvel"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -3110,7 +3106,6 @@ msgstr "Avtomatik Rotalar"
 #. Translators: Please see https://en.wikipedia.org/wiki/Metrics_(networking)
 #: panels/network/connection-editor/ip4-page.ui:354
 #: panels/network/connection-editor/ip6-page.ui:368
-#, fuzzy
 msgid "Metric"
 msgstr "Metrik"
 
@@ -3553,7 +3548,6 @@ msgid "Hardware"
 msgstr "Donanım"
 
 #: panels/network/network-wifi.ui:1453
-#, fuzzy
 msgctxt "tab"
 msgid "Reset"
 msgstr "Sıfırla"
@@ -4370,7 +4364,7 @@ msgstr ""
 #. Translators: This is the button which allows undoing the removal of the printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:71
 msgid "Undo"
-msgstr ""
+msgstr "Keri Yap"
 
 #: panels/online-accounts/online-accounts.ui:96
 msgid "Connect to your data in the cloud"
@@ -4399,12 +4393,14 @@ msgstr "Bilinmegen vaqıt"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i daqqa"
+msgstr[1] "%i daqqa"
 
 #: panels/power/cc-power-panel.c:269
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i saat"
+msgstr[1] "%i saat"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4418,11 +4414,13 @@ msgstr "%i %s %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "saat"
+msgstr[1] "saat"
 
 #: panels/power/cc-power-panel.c:279
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "daqqa"
+msgstr[1] "daqqa"
 
 # tr
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
@@ -4688,7 +4686,7 @@ msgstr "Fişe takıldığıında"
 
 #: panels/power/cc-power-panel.c:2194
 msgid "Suspend"
-msgstr "Beklet"
+msgstr "Sarqıt"
 
 #: panels/power/cc-power-panel.c:2195
 msgid "Power Off"
@@ -4717,9 +4715,8 @@ msgid "_Automatic suspend"
 msgstr "_Avtomatik Sarqıtım"
 
 #: panels/power/cc-power-panel.c:2341
-#, fuzzy
 msgid "Automatic suspend"
-msgstr "Avtomatik Sarqıtım"
+msgstr "Avtomatik sarqıtım"
 
 #: panels/power/cc-power-panel.c:2407
 #, fuzzy
@@ -5668,13 +5665,11 @@ msgid "In use"
 msgstr ""
 
 #: panels/privacy/cc-privacy-panel.c:503
-#, fuzzy
 msgctxt "Location services status"
 msgid "On"
 msgstr "Açıq"
 
 #: panels/privacy/cc-privacy-panel.c:504
-#, fuzzy
 msgctxt "Location services status"
 msgid "Off"
 msgstr "Qapalı"
@@ -5716,11 +5711,11 @@ msgstr ""
 
 #: panels/privacy/cc-privacy-panel.c:1290
 msgid "Empty all items from Trash?"
-msgstr ""
+msgstr "Çöpteki bütün unsurlar boşatılsınmı?"
 
 #: panels/privacy/cc-privacy-panel.c:1291
 msgid "All items in the Trash will be permanently deleted."
-msgstr ""
+msgstr "Çöpteki hepsi unsurlar ebediyen silingen olacaq."
 
 #: panels/privacy/cc-privacy-panel.c:1292
 msgid "_Empty Trash"
@@ -6128,7 +6123,6 @@ msgid "No input sources found"
 msgstr "Tapılğan kirdi menbaları yoq"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Diger"
@@ -6297,10 +6291,9 @@ msgstr ""
 
 #: panels/search/search-locations-dialog.ui:73
 msgid "Bookmarks"
-msgstr ""
+msgstr "Yer İmleri"
 
 #: panels/search/search-locations-dialog.ui:130
-#, fuzzy
 msgid "Other"
 msgstr "Diger"
 
@@ -6322,7 +6315,6 @@ msgid "Off"
 msgstr "Qapalı"
 
 #: panels/sharing/cc-sharing-panel.c:351
-#, fuzzy
 msgctxt "service is enabled"
 msgid "Enabled"
 msgstr "Qabilleştirilgen"
@@ -6460,9 +6452,8 @@ msgid "Share music, photos and videos over the network."
 msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:830
-#, fuzzy
 msgid "Folders"
-msgstr "Cilbent Ekle"
+msgstr "Cilbentler"
 
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:4
 msgid "Control what you want to share with others"
@@ -6839,13 +6830,11 @@ msgstr "Thunderbird"
 #. translators: the labels will read:
 #. * Cursor Size: Default
 #: panels/universal-access/cc-ua-panel.c:498
-#, fuzzy
 msgctxt "cursor size"
 msgid "Default"
 msgstr "Ögbelgilengen"
 
 #: panels/universal-access/cc-ua-panel.c:501
-#, fuzzy
 msgctxt "cursor size"
 msgid "Medium"
 msgstr "Orta"
@@ -7115,7 +7104,6 @@ msgid "A_cceptance delay:"
 msgstr "Q_abul keçikmesi:"
 
 #: panels/universal-access/cc-ua-panel.ui:2019
-#, fuzzy
 msgctxt "slow keys delay"
 msgid "Short"
 msgstr "Qısqa"
@@ -7125,7 +7113,6 @@ msgid "Slow keys typing delay"
 msgstr "Yavaş tuşlar tuşlama keçikmesi"
 
 #: panels/universal-access/cc-ua-panel.ui:2053
-#, fuzzy
 msgctxt "slow keys delay"
 msgid "Long"
 msgstr "Uzun"
@@ -7159,7 +7146,6 @@ msgid "Ignores fast duplicate keypresses"
 msgstr "Kısa aralıklı tuş tekrarlarını yok sayar"
 
 #: panels/universal-access/cc-ua-panel.ui:2232
-#, fuzzy
 msgctxt "bounce keys delay"
 msgid "Short"
 msgstr "Qısqa"
@@ -7169,7 +7155,6 @@ msgid "Bounce keys typing delay"
 msgstr "Sıçrama tuşları tuşlama keçikmesi"
 
 #: panels/universal-access/cc-ua-panel.ui:2266
-#, fuzzy
 msgctxt "bounce keys delay"
 msgid "Long"
 msgstr "Uzun"
@@ -7198,7 +7183,6 @@ msgid "Trigger a secondary click by holding down the primary button"
 msgstr "İlk düğme basılı tutulduğunda ikincil tıklama tetikle"
 
 #: panels/universal-access/cc-ua-panel.ui:2568
-#, fuzzy
 msgctxt "secondary click"
 msgid "Short"
 msgstr "Qısqa"
@@ -7208,7 +7192,6 @@ msgid "Secondary click delay"
 msgstr "Ekilemci çertme keçikmesi"
 
 #: panels/universal-access/cc-ua-panel.ui:2602
-#, fuzzy
 msgctxt "secondary click delay"
 msgid "Long"
 msgstr "Uzun"
@@ -7229,13 +7212,11 @@ msgid "D_elay:"
 msgstr "_Keçikme:"
 
 #: panels/universal-access/cc-ua-panel.ui:2732
-#, fuzzy
 msgctxt "dwell click delay"
 msgid "Short"
 msgstr "Qısqa"
 
 #: panels/universal-access/cc-ua-panel.ui:2763
-#, fuzzy
 msgctxt "dwell click delay"
 msgid "Long"
 msgstr "Uzun"
@@ -7427,9 +7408,8 @@ msgid "_White on black:"
 msgstr "Qara üzeri aq:"
 
 #: panels/universal-access/zoom-options.ui:842
-#, fuzzy
 msgid "_Brightness:"
-msgstr "Parlaqlıq:"
+msgstr "_Parlaqlıq:"
 
 #: panels/universal-access/zoom-options.ui:863
 msgid "_Contrast:"
@@ -7600,13 +7580,11 @@ msgstr "_Tam İsim"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:206
 #: panels/user-accounts/cc-user-panel.ui:156
-#, fuzzy
 msgid "Standard"
 msgstr "Standart"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:216
 #: panels/user-accounts/cc-user-panel.ui:166
-#, fuzzy
 msgid "Administrator"
 msgstr "Memur"
 
@@ -7901,9 +7879,8 @@ msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "Hesabı silmek istediğinizden emin misiniz?"
 
 #: panels/user-accounts/cc-user-panel.c:659
-#, fuzzy
 msgid "_Delete"
-msgstr "Cihaznı sil"
+msgstr "_Sil"
 
 # tr
 #: panels/user-accounts/cc-user-panel.c:709
@@ -8571,9 +8548,8 @@ msgid "Tablet Preferences"
 msgstr "Tablet Tercihleri"
 
 #: panels/wacom/gnome-wacom-properties.ui:44
-#, fuzzy
 msgid "_Help"
-msgstr "Yardım"
+msgstr "_Yardım"
 
 # tr
 #: panels/wacom/gnome-wacom-properties.ui:125
@@ -8781,20 +8757,17 @@ msgid "Preferences;Settings;"
 msgstr "Tercihler;Ayarlar;"
 
 #: shell/help-overlay.ui:15
-#, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Umumiy"
 
 #: shell/help-overlay.ui:20
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Terk et"
+msgstr "Çıq"
 
 # tr
 #: shell/help-overlay.ui:27 shell/help-overlay.ui:48
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Qıdır"
@@ -8844,6 +8817,7 @@ msgstr ""
 msgid "%u Output"
 msgid_plural "%u Outputs"
 msgstr[0] "%u Çıkış"
+msgstr[1] "%u Çıkış"
 
 # tr
 #. translators:
@@ -8853,6 +8827,7 @@ msgstr[0] "%u Çıkış"
 msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u Giriş"
+msgstr[1] "%u Giriş"
 
 # tr
 #: subprojects/gvc/gvc-mixer-control.c:2736

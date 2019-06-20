@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:17+0000\n"
+"POT-Creation-Date: 2019-06-20 15:48+0000\n"
 "PO-Revision-Date: 2019-02-28 02:27+0200\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -1706,9 +1706,8 @@ msgid "Device name"
 msgstr "Aygıt adı"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Sürüm 0"
+msgstr "Sürüm"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -1747,7 +1746,7 @@ msgstr ""
 #. Translators: A link to the terms of use of Endless OS.
 #: panels/info/cc-info-overview-panel.ui:320
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
-msgstr ""
+msgstr "<a href='attribution-link'>Endless Kullanım Koşulları</a>"
 
 #: panels/info/cc-info-removable-media-panel.c:296
 msgid "Ask what to do"
@@ -2581,6 +2580,7 @@ msgstr "Asla"
 msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "%i gün önce"
+msgstr[1] "%i gün önce"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -4148,12 +4148,14 @@ msgstr "Bilinmeyen süre"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i dakika"
+msgstr[1] "%i dakika"
 
 #: panels/power/cc-power-panel.c:269
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i saat"
+msgstr[1] "%i saat"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4166,11 +4168,13 @@ msgstr "%i %s %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "saat"
+msgstr[1] "saat"
 
 #: panels/power/cc-power-panel.c:279
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "dakika"
+msgstr[1] "dakika"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:297
@@ -5315,7 +5319,6 @@ msgstr "Açık"
 
 #: panels/privacy/cc-privacy-panel.c:1075
 #: panels/privacy/cc-privacy-panel.ui:280
-#, fuzzy
 msgid "Metrics"
 msgstr "Metrik"
 
@@ -5541,10 +5544,12 @@ msgid ""
 "Endless collects metrics on user behavior and actions. All data sent is "
 "anonymous. We use the data to improve the system."
 msgstr ""
+"Endless, kullanıcı hareket ve davranışlarını kayıt eder. Gönderilen tüm "
+"bilgiler anonimdir. Bu datayı sistemi geliştirmek için kullanıyoruz."
 
 #: panels/privacy/cc-privacy-panel.ui:351
 msgid "Enable Metrics Collection"
-msgstr ""
+msgstr "Bilgi toplamayı aktifleştir"
 
 #: panels/privacy/cc-privacy-panel.ui:413
 msgid "The Screen Lock protects your privacy when you are away."
@@ -5735,29 +5740,25 @@ msgid "No input sources found"
 msgstr "Girdi kaynağı bulunamadı"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Diğer"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Klavye Kısayolları"
+msgstr "Klavye Düzeni Ekle"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Girdi yöntemleri oturum açma ekranında kullanılamaz"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "%s Hesabı"
+msgstr "Hesabım"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Oturum A_çma Ekranı"
+msgstr "Giriş Ekranı"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:367
@@ -5777,9 +5778,8 @@ msgid "_Formats"
 msgstr "Bi_çimler"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Klavye Kısayolları"
+msgstr "Klavye Düzenleri"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5795,9 +5795,8 @@ msgstr ""
 "Girdi ayarları sisteme giriş esnasında tüm kullanıcılar tarafından kullanılır"
 
 #: panels/region/cc-region-panel.ui:382
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Klavye Kısayolları"
+msgstr "Klavye Düzeni Ayarlar"
 
 #: panels/region/cc-region-panel.ui:397
 msgid "Use the _same source for all windows"
@@ -6947,9 +6946,8 @@ msgstr "Ayarları değiştirebilir"
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Kendiliğinden Rota"
+msgstr "Otomatik Güncellemeler"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
@@ -7076,9 +7074,8 @@ msgstr "_Doğrula"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:490
 #: panels/user-accounts/cc-password-dialog.ui:308
-#, fuzzy
 msgid "Password _Reminder"
-msgstr "Parola"
+msgstr "Parola Hatırlatıcı"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:530
 #: panels/user-accounts/cc-add-user-dialog.ui:737
@@ -8212,7 +8209,6 @@ msgstr "Sistem Sesleri"
 #~ msgid "The GNOME Project"
 #~ msgstr "GNOME Projesi"
 
-#~| msgid "Drag displays to rearrange them"
 #~ msgid "Drag displays to match your setup."
 #~ msgstr "Ekranları kurulumunuza uydurmak için sürükleyin."
 
@@ -8452,7 +8448,6 @@ msgstr "Sistem Sesleri"
 #~ msgid "System"
 #~ msgstr "Sistem"
 
-#~| msgid "_Apply"
 #~ msgid "Apply"
 #~ msgstr "Uygula"
 
@@ -8915,7 +8910,6 @@ msgstr "Sistem Sesleri"
 #~ msgid "_Allow Remote Control"
 #~ msgstr "Uz_aktan Denetime İzin Ver"
 
-#~| msgid "GNOME Control Center"
 #~ msgid "Welcome to the Control Center"
 #~ msgstr "Denetim Merkezine Hoş Geldiniz"
 
@@ -9031,11 +9025,9 @@ msgstr "Sistem Sesleri"
 #~ msgid "Password:"
 #~ msgstr "Parola:"
 
-#~| msgid "Repeat Keys"
 #~ msgid "_Repeat Keys"
 #~ msgstr "Tuşları Tek_rarla"
 
-#~| msgid "Cursor Blinking"
 #~ msgid "_Cursor Blinking"
 #~ msgstr "_İmleç Yanıp Sönmesi"
 

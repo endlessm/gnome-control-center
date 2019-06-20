@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:17+0000\n"
+"POT-Creation-Date: 2019-06-20 15:48+0000\n"
 "PO-Revision-Date: 2019-03-03 18:50+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
@@ -1705,9 +1705,8 @@ msgid "Device name"
 msgstr "Įrenginio pavadinimas"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Versija 0"
+msgstr "Versija"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -2579,6 +2578,7 @@ msgid_plural "%i days ago"
 msgstr[0] "Prieš %i dieną"
 msgstr[1] "Prieš %i dienas"
 msgstr[2] "Prieš %i dienų"
+msgstr[3] "Prieš %i dienų"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -4149,6 +4149,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minutė"
 msgstr[1] "%i minutės"
 msgstr[2] "%i minučių"
+msgstr[3] "%i minučių"
 
 #: panels/power/cc-power-panel.c:269
 #, c-format
@@ -4157,6 +4158,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i valanda"
 msgstr[1] "%i valandos"
 msgstr[2] "%i valandų"
+msgstr[3] "%i valandų"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4171,6 +4173,7 @@ msgid_plural "hours"
 msgstr[0] "valanda"
 msgstr[1] "valandos"
 msgstr[2] "valandų"
+msgstr[3] "valandų"
 
 #: panels/power/cc-power-panel.c:279
 msgid "minute"
@@ -4178,6 +4181,7 @@ msgid_plural "minutes"
 msgstr[0] "minutė"
 msgstr[1] "minutės"
 msgstr[2] "minučių"
+msgstr[3] "minučių"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:297
@@ -5123,6 +5127,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u darbas"
 msgstr[1] "%u darbai"
 msgstr[2] "%u darbų"
+msgstr[3] "%u darbų"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:766
@@ -5753,7 +5758,6 @@ msgid "No input sources found"
 msgstr "Nerasta įvesties šaltinių"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Kita"
@@ -5768,9 +5772,8 @@ msgid "Input methods can’t be used on the login screen"
 msgstr "Įvesties metodų negalima naudoti prisijungimo ekrane"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "%s paskyra"
+msgstr "Mano paskyra"
 
 #: panels/region/cc-region-panel.ui:55
 #, fuzzy
@@ -6432,6 +6435,7 @@ msgid_plural "%d pixels"
 msgstr[0] "%d pikselis"
 msgstr[1] "%d pikseliai"
 msgstr[2] "%d pikselių"
+msgstr[3] "%d pikselių"
 
 #: panels/universal-access/cc-ua-panel.ui:93
 msgid "_Always Show Universal Access Menu"
@@ -8177,6 +8181,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u išvestis"
 msgstr[1] "%u išvestys"
 msgstr[2] "%u išvesčių"
+msgstr[3] "%u išvesčių"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8187,6 +8192,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u įvestis"
 msgstr[1] "%u įvestys"
 msgstr[2] "%u įvesčių"
+msgstr[3] "%u įvesčių"
 
 #: subprojects/gvc/gvc-mixer-control.c:2736
 msgid "System Sounds"
@@ -8405,35 +8411,27 @@ msgstr "Sistemos garsai"
 #~ msgid "Swipe your left thumb on %s"
 #~ msgstr "Perbraukite kairiuoju nykščiu per %s"
 
-#~| msgid "_Left index finger"
 #~ msgid "Place your left index finger on %s"
 #~ msgstr "Uždėkite kairįjį smilių ant %s"
 
-#~| msgid "_Left index finger"
 #~ msgid "Swipe your left index finger on %s"
 #~ msgstr "Perbraukite kairiuoju smiliumi per %s"
 
-#~| msgid "Left middle finger"
 #~ msgid "Place your left middle finger on %s"
 #~ msgstr "Uždėkite kairįjį didįjį pirštą ant %s"
 
-#~| msgid "Left middle finger"
 #~ msgid "Swipe your left middle finger on %s"
 #~ msgstr "Perbraukite kairiuoju didžiuoju pirštu per %s"
 
-#~| msgid "Left ring finger"
 #~ msgid "Place your left ring finger on %s"
 #~ msgstr "Uždėkite kairįjį bevardį pirštą ant %s"
 
-#~| msgid "Left ring finger"
 #~ msgid "Swipe your left ring finger on %s"
 #~ msgstr "Perbraukite kairiuoju bevardžių pirštu per %s"
 
-#~| msgid "Left little finger"
 #~ msgid "Place your left little finger on %s"
 #~ msgstr "Uždėkite kairįjį mažąjį pirštą ant %s"
 
-#~| msgid "Left little finger"
 #~ msgid "Swipe your left little finger on %s"
 #~ msgstr "Perbraukite kairiuoju mažuoju pirštu per %s"
 
@@ -8443,35 +8441,27 @@ msgstr "Sistemos garsai"
 #~ msgid "Swipe your right thumb on %s"
 #~ msgstr "Perbraukite dešiniuoju nykščiu per %s"
 
-#~| msgid "_Right index finger"
 #~ msgid "Place your right index finger on %s"
 #~ msgstr "Uždėkite dešinįjį smilių ant %s"
 
-#~| msgid "_Right index finger"
 #~ msgid "Swipe your right index finger on %s"
 #~ msgstr "Perbraukite dešiniuoju smiliumi per %s"
 
-#~| msgid "Right middle finger"
 #~ msgid "Place your right middle finger on %s"
 #~ msgstr "Uždėkite dešinįjį didįjį pirštą ant %s"
 
-#~| msgid "Right middle finger"
 #~ msgid "Swipe your right middle finger on %s"
 #~ msgstr "Perbraukite dešiniuoju didžiuoju pirštu per %s"
 
-#~| msgid "Right ring finger"
 #~ msgid "Place your right ring finger on %s"
 #~ msgstr "Uždėkite dešinįjį bevardį pirštą ant %s"
 
-#~| msgid "Right ring finger"
 #~ msgid "Swipe your right ring finger on %s"
 #~ msgstr "Perbraukite dešiniuoju bevardžiu pirštu per %s"
 
-#~| msgid "Right little finger"
 #~ msgid "Place your right little finger on %s"
 #~ msgstr "Uždėkite dešinįjį mažąjį pirštą ant %s"
 
-#~| msgid "Right little finger"
 #~ msgid "Swipe your right little finger on %s"
 #~ msgstr "Perbraukite dešiniuoju mažuoju pirštu per %s"
 
@@ -8572,7 +8562,6 @@ msgstr "Sistemos garsai"
 #~ msgid "System"
 #~ msgstr "Sistema"
 
-#~| msgid "_Apply"
 #~ msgid "Apply"
 #~ msgstr "Pritaikyti"
 
@@ -8775,7 +8764,6 @@ msgstr "Sistemos garsai"
 #~ msgid "Edit"
 #~ msgstr "Keisti"
 
-#~| msgid "Set Shortcut"
 #~ msgctxt "button"
 #~ msgid "Set Shortcut"
 #~ msgstr "Nustatyti trumpinį"
@@ -8976,7 +8964,6 @@ msgstr "Sistemos garsai"
 #~ msgid "_Sign In"
 #~ msgstr "Pri_sijungti"
 
-#~| msgid "Account _Type"
 #~ msgid "_Account Activity"
 #~ msgstr "Paskyros _aktyvumas"
 

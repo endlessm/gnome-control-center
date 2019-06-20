@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:17+0000\n"
+"POT-Creation-Date: 2019-06-20 15:48+0000\n"
 "PO-Revision-Date: 2017-02-20 12:32+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
@@ -1502,9 +1502,8 @@ msgstr "Показати"
 
 #: panels/display/cc-display-panel.ui:100
 #: panels/display/cc-display-panel.ui:305
-#, fuzzy
 msgid "Join Displays"
-msgstr "Показати"
+msgstr "Приєднання екранів"
 
 #: panels/display/cc-display-panel.ui:118
 msgid "Mirror"
@@ -1539,7 +1538,6 @@ msgid "Night Light"
 msgstr "Нічне світло"
 
 #: panels/display/cc-display-settings.c:108
-#, fuzzy
 msgctxt "Display rotation"
 msgid "Landscape"
 msgstr "Альбомна"
@@ -1588,7 +1586,6 @@ msgid "Adjust for TV"
 msgstr "Підкоригувати для телебачення"
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgid "Scale"
 msgstr "Шкала"
 
@@ -1736,9 +1733,8 @@ msgid "Device name"
 msgstr "Назва пристрою"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Версія 0"
+msgstr "Версія"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -2616,6 +2612,7 @@ msgid_plural "%i days ago"
 msgstr[0] "%i день тому"
 msgstr[1] "%i дні тому"
 msgstr[2] "%i днів тому"
+msgstr[3] "%i днів тому"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -2882,9 +2879,8 @@ msgstr "Лише місцевий"
 
 #: panels/network/connection-editor/ip4-page.ui:83
 #: panels/network/connection-editor/ip6-page.ui:97
-#, fuzzy
 msgid "Disable"
-msgstr "Вимкнено"
+msgstr "Вимкнути"
 
 #: panels/network/connection-editor/ip4-page.ui:111
 #: panels/network/connection-editor/ip6-page.ui:125
@@ -2936,9 +2932,8 @@ msgstr "Автоматичні маршрути"
 #. Translators: Please see https://en.wikipedia.org/wiki/Metrics_(networking)
 #: panels/network/connection-editor/ip4-page.ui:354
 #: panels/network/connection-editor/ip6-page.ui:368
-#, fuzzy
 msgid "Metric"
-msgstr "Метрика"
+msgstr "Метрична"
 
 #: panels/network/connection-editor/ip4-page.ui:384
 #: panels/network/connection-editor/ip6-page.ui:398
@@ -4183,6 +4178,7 @@ msgstr "З'єднати ваші дані з хмарою"
 #: panels/online-accounts/online-accounts.ui:111
 msgid "No internet connection — connect to set up new online accounts"
 msgstr ""
+"Немає інтернету — під'єднайтесь до мережі, щоб створювати облікові записи"
 
 #: panels/online-accounts/online-accounts.ui:136
 msgid "Add an account"
@@ -4203,6 +4199,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i хвилина"
 msgstr[1] "%i хвилини"
 msgstr[2] "%i хвилин"
+msgstr[3] "%i хвилин"
 
 #: panels/power/cc-power-panel.c:269
 #, c-format
@@ -4211,6 +4208,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i година"
 msgstr[1] "%i години"
 msgstr[2] "%i годин"
+msgstr[3] "%i годин"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4225,6 +4223,7 @@ msgid_plural "hours"
 msgstr[0] "година"
 msgstr[1] "години"
 msgstr[2] "годин"
+msgstr[3] "годин"
 
 #: panels/power/cc-power-panel.c:279
 msgid "minute"
@@ -4232,6 +4231,7 @@ msgid_plural "minutes"
 msgstr[0] "хвилина"
 msgstr[1] "хвилини"
 msgstr[2] "хвилин"
+msgstr[3] "хвилин"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:297
@@ -5207,6 +5207,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u завдання"
 msgstr[1] "%u завдання"
 msgstr[2] "%u завдань"
+msgstr[3] "%u завдань"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:766
@@ -5863,7 +5864,6 @@ msgid "No input sources found"
 msgstr "Не знайдено жодного джерела введення"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Інше"
@@ -5878,9 +5878,8 @@ msgid "Input methods can’t be used on the login screen"
 msgstr "Способи введення неможливо використовувати у вікні входу"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Обліковий запис %s"
+msgstr "Мій обліковий запис"
 
 #: panels/region/cc-region-panel.ui:55
 #, fuzzy
@@ -6539,19 +6538,16 @@ msgstr ""
 #. translators: the labels will read:
 #. * Cursor Size: Default
 #: panels/universal-access/cc-ua-panel.c:498
-#, fuzzy
 msgctxt "cursor size"
 msgid "Default"
 msgstr "Типовий"
 
 #: panels/universal-access/cc-ua-panel.c:501
-#, fuzzy
 msgctxt "cursor size"
 msgid "Medium"
 msgstr "Середня"
 
 #: panels/universal-access/cc-ua-panel.c:504
-#, fuzzy
 msgctxt "cursor size"
 msgid "Large"
 msgstr "Великий"
@@ -7418,9 +7414,8 @@ msgid "Couldn’t connect to the %s domain: %s"
 msgstr "Неможливо з'єднатися із доменом %s: %s"
 
 #: panels/user-accounts/cc-user-panel.c:215
-#, fuzzy
 msgid "Your account"
-msgstr "Облікові записи"
+msgstr "Ваш обліковий запис"
 
 #: panels/user-accounts/cc-user-panel.c:390
 msgid "Failed to delete user"
@@ -8332,6 +8327,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u вивід"
 msgstr[1] "%u виводи"
 msgstr[2] "%u виводів"
+msgstr[3] "%u виводів"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8342,6 +8338,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u вхід"
 msgstr[1] "%u входи"
 msgstr[2] "%u входів"
+msgstr[3] "%u входів"
 
 #: subprojects/gvc/gvc-mixer-control.c:2736
 msgid "System Sounds"
@@ -8820,7 +8817,6 @@ msgstr "Системі звуки"
 #~ msgid "Mail"
 #~ msgstr "Пошта"
 
-#~| msgid "_Calendar"
 #~ msgid "Calendar"
 #~ msgstr "Календар"
 
