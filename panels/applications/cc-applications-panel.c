@@ -1660,7 +1660,6 @@ update_panel (CcApplicationsPanel *self,
 
   gtk_label_set_label (self->title_label, g_app_info_get_display_name (info));
   gtk_stack_set_visible_child (self->stack, GTK_WIDGET (self->settings_box));
-  gtk_widget_show (GTK_WIDGET (self->header_button));
 
   g_clear_pointer (&self->current_app_id, g_free);
   g_clear_pointer (&self->current_portal_app_id, g_free);
@@ -1672,6 +1671,12 @@ update_panel (CcApplicationsPanel *self,
 
   self->current_app_id = get_app_id (info);
   self->current_portal_app_id = get_portal_app_id (info);
+
+  /* Don't show “Open in Software” button for Software itself. */
+  {
+    gboolean is_software = g_strcmp0 (self->current_app_id, "org.gnome.Software") == 0;
+    gtk_widget_set_visible (GTK_WIDGET (self->header_button), !is_software);
+  }
 }
 
 static void
