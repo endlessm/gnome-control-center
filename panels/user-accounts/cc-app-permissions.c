@@ -304,10 +304,6 @@ update_app_filter (CcAppPermissions *self)
 
   g_clear_pointer (&self->filter, mct_app_filter_unref);
 
-  /* We don’t care about the app filter for administrators. */
-  if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
-    return;
-
   /* FIXME: make it asynchronous */
   self->filter = mct_manager_get_app_filter (self->manager,
                                              act_user_get_uid (self->user),
@@ -467,14 +463,9 @@ update_allow_app_installation (CcAppPermissions *self)
 static void
 setup_parental_control_settings (CcAppPermissions *self)
 {
-  gboolean is_authorized, user_is_administrator;
+  gboolean is_authorized;
 
-  /* Don’t bother showing the interface if we’re editing an administrator
-   * account, since parental controls don’t apply to them. */
-  user_is_administrator = (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR);
-
-  gtk_widget_set_visible (GTK_WIDGET (self),
-                          (self->filter != NULL && !user_is_administrator));
+  gtk_widget_set_visible (GTK_WIDGET (self), self->filter != NULL);
 
   if (!self->filter)
     return;
