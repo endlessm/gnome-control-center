@@ -1009,6 +1009,7 @@ cc_app_permissions_init (CcAppPermissions *self)
 
   gtk_widget_init_template (GTK_WIDGET (self));
 
+  self->selected_age = (guint) -1;
   self->system_installation = flatpak_installation_new_system (NULL, NULL);
   self->user_installation = flatpak_installation_new_user (NULL, NULL);
 
