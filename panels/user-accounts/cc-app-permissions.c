@@ -438,6 +438,23 @@ update_allow_app_installation (CcAppPermissions *self)
 {
   gboolean allow_system_installation;
   gboolean allow_user_installation;
+  gboolean non_admin_user = TRUE;
+
+  if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
+    non_admin_user = FALSE;
+
+  /* Admins are always allowed to install apps for all users. This behaviour is governed
+   * by flatpak polkit rules. Hence, these hide these defunct switches for admins. */
+  gtk_widget_set_visible (GTK_WIDGET (self->allow_system_installation_switch), non_admin_user);
+  gtk_widget_set_visible (GTK_WIDGET (self->allow_user_installation_switch), non_admin_user);
+
+  /* If user is admin, we are done here, bail out. */
+  if (!non_admin_user)
+    {
+      g_debug ("User %s is administrator, hiding app installation controls",
+               act_user_get_user_name (self->user));
+      return;
+    }
 
   allow_system_installation = mct_app_filter_is_system_installation_allowed (self->filter);
   allow_user_installation = mct_app_filter_is_user_installation_allowed (self->filter);
@@ -575,8 +592,6 @@ blacklist_apps_cb (gpointer data)
   GDesktopAppInfo *app;
   GHashTableIter iter;
   gboolean allow_web_browsers;
-  gboolean allow_system_installation;
-  gboolean allow_user_installation;
   gsize i;
 
   self->blacklist_apps_source_id = 0;
@@ -653,15 +668,21 @@ blacklist_apps_cb (gpointer data)
   if (!allow_web_browsers)
     mct_app_filter_builder_blacklist_content_type (&builder, WEB_BROWSERS_CONTENT_TYPE);
 
-  /* App Installation */
-  allow_system_installation = gtk_switch_get_active (self->allow_system_installation_switch);
-  allow_user_installation = gtk_switch_get_active (self->allow_user_installation_switch);
+  /* App installation */
+  if (act_user_get_account_type (self->user) != ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
+    {
+      gboolean allow_system_installation;
+      gboolean allow_user_installation;
 
-  g_debug ("\t → %s system installation", allow_system_installation ? "Enabling" : "Disabling");
-  g_debug ("\t → %s user installation", allow_user_installation ? "Enabling" : "Disabling");
+      allow_system_installation = gtk_switch_get_active (self->allow_system_installation_switch);
+      allow_user_installation = gtk_switch_get_active (self->allow_user_installation_switch);
 
-  mct_app_filter_builder_set_allow_user_installation (&builder, allow_user_installation);
-  mct_app_filter_builder_set_allow_system_installation (&builder, allow_system_installation);
+      g_debug ("\t → %s system installation", allow_system_installation ? "Enabling" : "Disabling");
+      g_debug ("\t → %s user installation", allow_user_installation ? "Enabling" : "Disabling");
+
+      mct_app_filter_builder_set_allow_user_installation (&builder, allow_user_installation);
+      mct_app_filter_builder_set_allow_system_installation (&builder, allow_system_installation);
+    }
 
   new_filter = mct_app_filter_builder_end (&builder);
 
