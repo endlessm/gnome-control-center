@@ -1679,6 +1679,21 @@ update_panel (CcApplicationsPanel *self,
   }
 }
 
+/* Checks whether the given @info is a pseudo-application from
+ * eos-application-tools (which opens the app center if the app is not
+ * installed, or forward to the app if it is).
+ */
+static gboolean
+has_replaced_by (GAppInfo *info)
+{
+  g_autofree gchar *replaced_by = NULL;
+
+  if (G_IS_DESKTOP_APP_INFO (info))
+    replaced_by = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (info), "X-Endless-Replaced-By");
+
+  return replaced_by != NULL;
+}
+
 static void
 populate_applications (CcApplicationsPanel *self)
 {
@@ -1699,7 +1714,9 @@ populate_applications (CcApplicationsPanel *self)
       g_autofree gchar *id = NULL;
 
       id = get_app_id (info);
-      if (!g_app_info_should_show (info) || g_str_has_prefix (id, EOS_LINK_PREFIX))
+      if (!g_app_info_should_show (info) ||
+          g_str_has_prefix (id, EOS_LINK_PREFIX) ||
+          has_replaced_by (info))
         continue;
 
 #ifdef HAVE_MALCONTENT
