@@ -18,7 +18,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#include <libeos-parental-controls/app-filter.h>
+#include <libmalcontent/malcontent.h>
 #include <flatpak.h>
 #include <gio/gio.h>
 #include <gio/gdesktopappinfo.h>
@@ -28,6 +28,8 @@
 #include "gs-content-rating.h"
 
 #include "cc-app-permissions.h"
+
+#define WEB_BROWSERS_CONTENT_TYPE "x-scheme-handler/http"
 
 /* The value which we store as an age to indicate that OARS filtering is disabled. */
 static const guint32 oars_disabled_age = (guint32) -1;
@@ -39,6 +41,7 @@ struct _CcAppPermissions
   GMenu      *age_menu;
   GtkSwitch  *allow_system_installation_switch;
   GtkSwitch  *allow_user_installation_switch;
+  GtkSwitch  *allow_web_browsers_switch;
   GtkListBox *listbox;
   GtkButton  *restriction_button;
   GtkPopover *restriction_popover;
@@ -59,7 +62,8 @@ struct _CcAppPermissions
   GListStore *apps; /* (owned) */
 
   GCancellable *cancellable; /* (owned) */
-  EpcAppFilter *filter; /* (owned) */
+  MctManager   *manager; /* (owned) */
+  MctAppFilter *filter; /* (owned) */
   guint         selected_age; /* @oars_disabled_age to disable OARS */
 
   guint         blacklist_apps_source_id;
@@ -74,6 +78,10 @@ static gint compare_app_info_cb (gconstpointer a,
                                  gpointer      user_data);
 
 static void on_allow_installation_switch_active_changed_cb (GtkSwitch        *s,
+                                                            GParamSpec       *pspec,
+                                                            CcAppPermissions *self);
+
+static void on_allow_web_browsers_switch_active_changed_cb (GtkSwitch        *s,
                                                             GParamSpec       *pspec,
                                                             CcAppPermissions *self);
 
@@ -161,56 +169,94 @@ reload_apps (CcAppPermissions *self)
 {
   GList *iter, *apps;
   g_autoptr(GHashTable) seen_flatpak_ids = NULL;
+  g_autoptr(GHashTable) seen_executables = NULL;
 
   apps = g_app_info_get_all ();
 
   /* Sort the apps by increasing length of #GAppInfo ID. When coupled with the
-   * deduplication of flatpak IDs, below, this should ensure that we pick the
-   * ‘base’ app out of any set with matching prefixes and identical app IDs, and
-   * show only that.
+   * deduplication of flatpak IDs and executable paths, below, this should ensure that we
+   * pick the ‘base’ app out of any set with matching prefixes and identical app IDs (in
+   * case of flatpak apps) or executables (for non-flatpak apps), and show only that.
    *
-   * This is designed to avoid listing all the components of LibreOffice, which
-   * all share an app ID and hence have the same entry in the parental controls
+   * This is designed to avoid listing all the components of LibreOffice for example,
+   * which all share an app ID and hence have the same entry in the parental controls
    * app filter. */
   apps = g_list_sort (apps, app_compare_id_length_cb);
   seen_flatpak_ids = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+  seen_executables = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
   g_list_store_remove_all (self->apps);
 
   for (iter = apps; iter; iter = iter->next)
     {
-      g_autofree gchar *flatpak_id = NULL;
       GAppInfo *app;
       const gchar *app_name;
+      const gchar * const *supported_types;
 
       app = iter->data;
       app_name = g_app_info_get_name (app);
+
+      supported_types = g_app_info_get_supported_types (app);
 
       if (!G_IS_DESKTOP_APP_INFO (app) ||
           !g_app_info_should_show (app) ||
           app_name[0] == '\0' ||
           /* Endless' link apps have the "eos-link" prefix, and should be ignored too */
           g_str_has_prefix (g_app_info_get_id (app), "eos-link") ||
-          /* FIXME: Only list flatpak apps for now; we really need a system-wide MAC
-           * to be able to reliably support blacklisting system programs. See
+          /* FIXME: Only list flatpak apps and apps with X-Parental-Controls
+           * key set for now; we really need a system-wide MAC to be able to
+           * reliably support blacklisting system programs. See
            * https://phabricator.endlessm.com/T25080. */
-          !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak"))
+          (!g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak") &&
+           !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Parental-Controls")) ||
+          /* Web browsers are special cased */
+          (supported_types && g_strv_contains (supported_types, WEB_BROWSERS_CONTENT_TYPE)))
         {
           continue;
         }
 
-      flatpak_id = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app), "X-Flatpak");
-      g_debug ("Processing app ‘%s’ (Exec=%s, X-Flatpak=%s)",
-               g_app_info_get_id (app),
-               g_app_info_get_executable (app),
-               flatpak_id);
-
-      /* Have we seen this flatpak ID before? */
-      if (!g_hash_table_add (seen_flatpak_ids, g_steal_pointer (&flatpak_id)))
+      if (g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak"))
         {
-          g_debug (" → Skipping ‘%s’ due to seeing its flatpak ID already",
-                   g_app_info_get_id (app));
-          continue;
+          g_autofree gchar *flatpak_id = NULL;
+
+          flatpak_id = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app), "X-Flatpak");
+          g_debug ("Processing app ‘%s’ (Exec=%s, X-Flatpak=%s)",
+                   g_app_info_get_id (app),
+                   g_app_info_get_executable (app),
+                   flatpak_id);
+
+          /* Have we seen this flatpak ID before? */
+          if (!g_hash_table_add (seen_flatpak_ids, g_steal_pointer (&flatpak_id)))
+            {
+              g_debug (" → Skipping ‘%s’ due to seeing its flatpak ID already",
+                       g_app_info_get_id (app));
+              continue;
+            }
+        }
+      else if (g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Parental-Controls"))
+        {
+          g_autofree gchar *parental_controls_type = NULL;
+          g_autofree gchar *executable = NULL;
+
+          parental_controls_type = g_desktop_app_info_get_string (G_DESKTOP_APP_INFO (app),
+                                                                  "X-Parental-Controls");
+          /* Ignore X-Parental-Controls=none */
+          if (g_strcmp0 (parental_controls_type, "none") == 0)
+            continue;
+
+          executable = g_strdup (g_app_info_get_executable (app));
+          g_debug ("Processing app ‘%s’ (Exec=%s, X-Parental-Controls=%s)",
+                   g_app_info_get_id (app),
+                   executable,
+                   parental_controls_type);
+
+          /* Have we seen this executable before? */
+          if (!g_hash_table_add (seen_executables, g_steal_pointer (&executable)))
+            {
+              g_debug (" → Skipping ‘%s’ due to seeing its executable already",
+                       g_app_info_get_id (app));
+              continue;
+            }
         }
 
       g_list_store_insert_sorted (self->apps,
@@ -268,18 +314,14 @@ update_app_filter (CcAppPermissions *self)
 {
   g_autoptr(GError) error = NULL;
 
-  g_clear_pointer (&self->filter, epc_app_filter_unref);
-
-  /* We don’t care about the app filter for administrators. */
-  if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
-    return;
+  g_clear_pointer (&self->filter, mct_app_filter_unref);
 
   /* FIXME: make it asynchronous */
-  self->filter = epc_get_app_filter (NULL,
-                                     act_user_get_uid (self->user),
-                                     FALSE,
-                                     self->cancellable,
-                                     &error);
+  self->filter = mct_manager_get_app_filter (self->manager,
+                                             act_user_get_uid (self->user),
+                                             MCT_GET_APP_FILTER_FLAGS_NONE,
+                                             self->cancellable,
+                                             &error);
 
   if (error)
     {
@@ -331,19 +373,19 @@ update_categories_from_language (CcAppPermissions *self)
 /* Returns a human-readable but untranslated string, not suitable
  * to be shown in any UI */
 static const gchar*
-oars_value_to_string (EpcAppFilterOarsValue oars_value)
+oars_value_to_string (MctAppFilterOarsValue oars_value)
 {
   switch (oars_value)
     {
-    case EPC_APP_FILTER_OARS_VALUE_UNKNOWN:
+    case MCT_APP_FILTER_OARS_VALUE_UNKNOWN:
       return "unknown";
-    case EPC_APP_FILTER_OARS_VALUE_NONE:
+    case MCT_APP_FILTER_OARS_VALUE_NONE:
       return "none";
-    case EPC_APP_FILTER_OARS_VALUE_MILD:
+    case MCT_APP_FILTER_OARS_VALUE_MILD:
       return "mild";
-    case EPC_APP_FILTER_OARS_VALUE_MODERATE:
+    case MCT_APP_FILTER_OARS_VALUE_MODERATE:
       return "moderate";
-    case EPC_APP_FILTER_OARS_VALUE_INTENSE:
+    case MCT_APP_FILTER_OARS_VALUE_INTENSE:
       return "intense";
     }
   return "";
@@ -365,11 +407,11 @@ update_oars_level (CcAppPermissions *self)
 
   for (i = 0; oars_categories[i] != NULL; i++)
     {
-      EpcAppFilterOarsValue oars_value;
+      MctAppFilterOarsValue oars_value;
       guint age;
 
-      oars_value = epc_app_filter_get_oars_value (self->filter, oars_categories[i]);
-      all_categories_unset &= (oars_value == EPC_APP_FILTER_OARS_VALUE_UNKNOWN);
+      oars_value = mct_app_filter_get_oars_value (self->filter, oars_categories[i]);
+      all_categories_unset &= (oars_value == MCT_APP_FILTER_OARS_VALUE_UNKNOWN);
       age = as_content_rating_id_value_to_csm_age (oars_categories[i], oars_value);
 
       g_debug ("OARS value for '%s': %s", oars_categories[i], oars_value_to_string (oars_value));
@@ -396,9 +438,26 @@ update_allow_app_installation (CcAppPermissions *self)
 {
   gboolean allow_system_installation;
   gboolean allow_user_installation;
+  gboolean non_admin_user = TRUE;
 
-  allow_system_installation = epc_app_filter_is_system_installation_allowed (self->filter);
-  allow_user_installation = epc_app_filter_is_user_installation_allowed (self->filter);
+  if (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
+    non_admin_user = FALSE;
+
+  /* Admins are always allowed to install apps for all users. This behaviour is governed
+   * by flatpak polkit rules. Hence, these hide these defunct switches for admins. */
+  gtk_widget_set_visible (GTK_WIDGET (self->allow_system_installation_switch), non_admin_user);
+  gtk_widget_set_visible (GTK_WIDGET (self->allow_user_installation_switch), non_admin_user);
+
+  /* If user is admin, we are done here, bail out. */
+  if (!non_admin_user)
+    {
+      g_debug ("User %s is administrator, hiding app installation controls",
+               act_user_get_user_name (self->user));
+      return;
+    }
+
+  allow_system_installation = mct_app_filter_is_system_installation_allowed (self->filter);
+  allow_user_installation = mct_app_filter_is_user_installation_allowed (self->filter);
 
   /* While the underlying permissions storage allows the system and user settings
    * to be stored completely independently, force the system setting to OFF if
@@ -431,16 +490,32 @@ update_allow_app_installation (CcAppPermissions *self)
 }
 
 static void
+update_allow_web_browsers (CcAppPermissions *self)
+{
+  gboolean allow_web_browsers;
+
+  allow_web_browsers = mct_app_filter_is_content_type_allowed (self->filter,
+                                                               WEB_BROWSERS_CONTENT_TYPE);
+
+  g_signal_handlers_block_by_func (self->allow_web_browsers_switch,
+                                   on_allow_web_browsers_switch_active_changed_cb,
+                                   self);
+
+  gtk_switch_set_active (self->allow_web_browsers_switch, allow_web_browsers);
+
+  g_debug ("Allow web browsers: %s", allow_web_browsers ? "yes" : "no");
+
+  g_signal_handlers_unblock_by_func (self->allow_web_browsers_switch,
+                                     on_allow_web_browsers_switch_active_changed_cb,
+                                     self);
+}
+
+static void
 setup_parental_control_settings (CcAppPermissions *self)
 {
-  gboolean is_authorized, user_is_administrator;
+  gboolean is_authorized;
 
-  /* Don’t bother showing the interface if we’re editing an administrator
-   * account, since parental controls don’t apply to them. */
-  user_is_administrator = (act_user_get_account_type (self->user) == ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR);
-
-  gtk_widget_set_visible (GTK_WIDGET (self),
-                          (self->filter != NULL && !user_is_administrator));
+  gtk_widget_set_visible (GTK_WIDGET (self), self->filter != NULL);
 
   if (!self->filter)
     return;
@@ -459,6 +534,7 @@ setup_parental_control_settings (CcAppPermissions *self)
   update_oars_level (self);
   update_categories_from_language (self);
   update_allow_app_installation (self);
+  update_allow_web_browsers (self);
   reload_apps (self);
 }
 
@@ -509,14 +585,13 @@ get_flatpak_ref_for_app_id (CcAppPermissions *self,
 static gboolean
 blacklist_apps_cb (gpointer data)
 {
-  g_auto(EpcAppFilterBuilder) builder = EPC_APP_FILTER_BUILDER_INIT ();
-  g_autoptr(EpcAppFilter) new_filter = NULL;
+  g_auto(MctAppFilterBuilder) builder = MCT_APP_FILTER_BUILDER_INIT ();
+  g_autoptr(MctAppFilter) new_filter = NULL;
   g_autoptr(GError) error = NULL;
   CcAppPermissions *self = data;
   GDesktopAppInfo *app;
   GHashTableIter iter;
-  gboolean allow_system_installation;
-  gboolean allow_user_installation;
+  gboolean allow_web_browsers;
   gsize i;
 
   self->blacklist_apps_source_id = 0;
@@ -547,7 +622,7 @@ blacklist_apps_cb (gpointer data)
             }
 
           g_debug ("\t\t → Blacklisting Flatpak ref: %s", flatpak_ref);
-          epc_app_filter_builder_blacklist_flatpak_ref (&builder, flatpak_ref);
+          mct_app_filter_builder_blacklist_flatpak_ref (&builder, flatpak_ref);
         }
       else
         {
@@ -561,7 +636,7 @@ blacklist_apps_cb (gpointer data)
             }
 
           g_debug ("\t\t → Blacklisting path: %s", path);
-          epc_app_filter_builder_blacklist_path (&builder, path);
+          mct_app_filter_builder_blacklist_path (&builder, path);
         }
     }
 
@@ -574,7 +649,7 @@ blacklist_apps_cb (gpointer data)
 
   for (i = 0; self->selected_age != oars_disabled_age && oars_categories[i] != NULL; i++)
     {
-      EpcAppFilterOarsValue oars_value;
+      MctAppFilterOarsValue oars_value;
       const gchar *oars_category;
 
       oars_category = oars_categories[i];
@@ -582,28 +657,42 @@ blacklist_apps_cb (gpointer data)
 
       g_debug ("\t\t → %s: %s", oars_category, oars_value_to_string (oars_value));
 
-      epc_app_filter_builder_set_oars_value (&builder, oars_category, oars_value);
+      mct_app_filter_builder_set_oars_value (&builder, oars_category, oars_value);
     }
 
-  /* App Installation */
-  allow_system_installation = gtk_switch_get_active (self->allow_system_installation_switch);
-  allow_user_installation = gtk_switch_get_active (self->allow_user_installation_switch);
+  /* Web browsers */
+  allow_web_browsers = gtk_switch_get_active (self->allow_web_browsers_switch);
 
-  g_debug ("\t → %s system installation", allow_system_installation ? "Enabling" : "Disabling");
-  g_debug ("\t → %s user installation", allow_user_installation ? "Enabling" : "Disabling");
+  g_debug ("\t → %s web browsers", allow_web_browsers ? "Enabling" : "Disabling");
 
-  epc_app_filter_builder_set_allow_user_installation (&builder, allow_user_installation);
-  epc_app_filter_builder_set_allow_system_installation (&builder, allow_system_installation);
+  if (!allow_web_browsers)
+    mct_app_filter_builder_blacklist_content_type (&builder, WEB_BROWSERS_CONTENT_TYPE);
 
-  new_filter = epc_app_filter_builder_end (&builder);
+  /* App installation */
+  if (act_user_get_account_type (self->user) != ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
+    {
+      gboolean allow_system_installation;
+      gboolean allow_user_installation;
+
+      allow_system_installation = gtk_switch_get_active (self->allow_system_installation_switch);
+      allow_user_installation = gtk_switch_get_active (self->allow_user_installation_switch);
+
+      g_debug ("\t → %s system installation", allow_system_installation ? "Enabling" : "Disabling");
+      g_debug ("\t → %s user installation", allow_user_installation ? "Enabling" : "Disabling");
+
+      mct_app_filter_builder_set_allow_user_installation (&builder, allow_user_installation);
+      mct_app_filter_builder_set_allow_system_installation (&builder, allow_system_installation);
+    }
+
+  new_filter = mct_app_filter_builder_end (&builder);
 
   /* FIXME: should become asynchronous */
-  epc_set_app_filter (NULL,
-                      act_user_get_uid (self->user),
-                      new_filter,
-                      TRUE,
-                      self->cancellable,
-                      &error);
+  mct_manager_set_app_filter (self->manager,
+                              act_user_get_uid (self->user),
+                              new_filter,
+                              MCT_GET_APP_FILTER_FLAGS_INTERACTIVE,
+                              self->cancellable,
+                              &error);
 
   if (error)
     {
@@ -633,6 +722,15 @@ on_allow_installation_switch_active_changed_cb (GtkSwitch        *s,
                                          self);
     }
 
+  /* Save the changes. */
+  schedule_update_blacklisted_apps (self);
+}
+
+static void
+on_allow_web_browsers_switch_active_changed_cb (GtkSwitch        *s,
+                                                GParamSpec       *pspec,
+                                                CcAppPermissions *self)
+{
   /* Save the changes. */
   schedule_update_blacklisted_apps (self);
 }
@@ -721,7 +819,7 @@ create_row_for_app_cb (gpointer item,
   gtk_widget_show_all (box);
 
   /* Fetch status from AccountService */
-  allowed = epc_app_filter_is_appinfo_allowed (self->filter, app);
+  allowed = mct_app_filter_is_appinfo_allowed (self->filter, app);
 
   gtk_switch_set_active (GTK_SWITCH (w), allowed);
   g_object_set_data_full (G_OBJECT (w), "GAppInfo", g_object_ref (app), g_object_unref);
@@ -817,7 +915,8 @@ cc_app_permissions_finalize (GObject *object)
   g_clear_object (&self->permission);
 
   g_clear_pointer (&self->blacklisted_apps, g_hash_table_unref);
-  g_clear_pointer (&self->filter, epc_app_filter_unref);
+  g_clear_pointer (&self->filter, mct_app_filter_unref);
+  g_clear_object (&self->manager);
   g_clear_object (&self->app_info_monitor);
 
   G_OBJECT_CLASS (cc_app_permissions_parent_class)->finalize (object);
@@ -914,20 +1013,38 @@ cc_app_permissions_class_init (CcAppPermissionsClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, age_menu);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, allow_system_installation_switch);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, allow_user_installation_switch);
+  gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, allow_web_browsers_switch);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, restriction_button);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, restriction_popover);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, listbox);
 
   gtk_widget_class_bind_template_callback (widget_class, on_allow_installation_switch_active_changed_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_allow_web_browsers_switch_active_changed_cb);
 }
 
 static void
 cc_app_permissions_init (CcAppPermissions *self)
 {
+  g_autoptr(GDBusConnection) system_bus = NULL;
+  g_autoptr(GError) error = NULL;
+
   gtk_widget_init_template (GTK_WIDGET (self));
 
+  self->selected_age = (guint) -1;
   self->system_installation = flatpak_installation_new_system (NULL, NULL);
   self->user_installation = flatpak_installation_new_user (NULL, NULL);
+
+  self->cancellable = g_cancellable_new ();
+
+  /* FIXME: should become asynchronous */
+  system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, self->cancellable, &error);
+  if (system_bus == NULL)
+    {
+      g_warning ("Error getting system bus while setting up app permissions: %s", error->message);
+      return;
+    }
+
+  self->manager = mct_manager_new (system_bus);
 
   self->action_group = g_simple_action_group_new ();
   g_action_map_add_action_entries (G_ACTION_MAP (self->action_group),
@@ -942,7 +1059,6 @@ cc_app_permissions_init (CcAppPermissions *self)
   gtk_popover_bind_model (self->restriction_popover, G_MENU_MODEL (self->age_menu), NULL);
   self->blacklisted_apps = g_hash_table_new_full (g_direct_hash, g_direct_equal, g_object_unref, NULL);
 
-  self->cancellable = g_cancellable_new ();
   self->apps = g_list_store_new (G_TYPE_APP_INFO);
 
   self->app_info_monitor = g_app_info_monitor_get ();

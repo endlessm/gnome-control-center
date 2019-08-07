@@ -25,7 +25,7 @@
 
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
-#include <libeos-parental-controls/app-filter.h>
+#include <libmalcontent/malcontent.h>
 
 struct _CcSearchPanel
 {
@@ -44,7 +44,7 @@ struct _CcSearchPanel
 
   CcSearchLocationsDialog  *locations_dialog;
 
-  EpcAppFilter *filter;  /* (owned) (nullable) */
+  MctAppFilter *filter;  /* (owned) (nullable) */
 };
 
 CC_PANEL_REGISTER (CcSearchPanel, cc_search_panel)
@@ -548,7 +548,7 @@ search_panel_add_one_provider (CcSearchPanel *self,
    * the current user’s parental controls settings. */
   g_assert (self->filter != NULL);
 
-  if (!epc_app_filter_is_appinfo_allowed (self->filter, app_info))
+  if (!mct_app_filter_is_appinfo_allowed (self->filter, app_info))
     {
       g_debug ("Filtering out search provider from application ‘%s’ as it’s "
                "blacklisted by parental controls.", g_app_info_get_id (app_info));
@@ -565,13 +565,13 @@ search_panel_add_one_provider (CcSearchPanel *self,
 typedef struct
 {
   GList *providers;  /* (element-type GFile) (owned) */
-  EpcAppFilter *filter;  /* (owned) */
+  MctAppFilter *filter;  /* (owned) */
 } DiscoverProvidersResult;
 
 static void
 discover_providers_result_free (DiscoverProvidersResult *result)
 {
-  g_clear_pointer (&result->filter, epc_app_filter_unref);
+  g_clear_pointer (&result->filter, mct_app_filter_unref);
   g_list_free_full (result->providers, g_object_unref);
   g_free (result);
 }
@@ -603,7 +603,7 @@ search_providers_discover_ready (GObject *source,
 
   /* Store the app filter. */
   g_assert (self->filter == NULL);
-  self->filter = epc_app_filter_ref (discover_result->filter);
+  self->filter = mct_app_filter_ref (discover_result->filter);
 
   /* Process the providers. */
   if (discover_result->providers == NULL)
@@ -677,18 +677,28 @@ search_providers_discover_thread (GTask *task,
                                   GCancellable *cancellable)
 {
   g_autoptr(DiscoverProvidersResult) result = NULL;
+  g_autoptr(GDBusConnection) system_bus = NULL;
+  g_autoptr(MctManager) manager = NULL;
+  g_autoptr(MctAppFilter) filter = NULL;
   GList *providers = NULL;
   const gchar * const *system_data_dirs;
   int idx;
-  g_autoptr(EpcAppFilter) filter = NULL;
   GError *local_error = NULL;
 
+  system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, cancellable, &local_error);
+  if (system_bus == NULL)
+    {
+      g_task_return_error (task, g_steal_pointer (&local_error));
+      return;
+    }
+
+  manager = mct_manager_new (system_bus);
   /* Load the user’s parental controls settings too, so we can filter the list. */
-  filter = epc_get_app_filter (NULL,
-                               getuid (),
-                               FALSE,
-                               cancellable,
-                               &local_error);
+  filter = mct_manager_get_app_filter (manager,
+                                       getuid (),
+                                       MCT_GET_APP_FILTER_FLAGS_NONE,
+                                       cancellable,
+                                       &local_error);
 
   if (local_error != NULL)
     {
@@ -748,7 +758,7 @@ cc_search_panel_finalize (GObject *object)
 
   g_clear_object (&self->search_settings);
   g_hash_table_destroy (self->sort_order);
-  g_clear_pointer (&self->filter, epc_app_filter_unref);
+  g_clear_pointer (&self->filter, mct_app_filter_unref);
 
   if (self->locations_dialog)
     gtk_widget_destroy (GTK_WIDGET (self->locations_dialog));

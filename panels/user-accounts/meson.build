@@ -172,7 +172,7 @@ deps = common_deps + [
   m_dep,
   polkit_gobject_dep,
   dependency('pwquality', version: '>= 1.2.2'),
-  dependency('eos-parental-controls-0'),
+  dependency('malcontent-0', version: '>= 0.4.0'),
   dependency('flatpak')
 ]
 

@@ -24,7 +24,7 @@
 G_BEGIN_DECLS
 
 #include <glib-object.h>
-#include <libeos-parental-controls/app-filter.h>
+#include <libmalcontent/malcontent.h>
 
 typedef enum {
 	GS_CONTENT_RATING_SYSTEM_UNKNOWN,
@@ -51,11 +51,11 @@ const gchar *gs_utils_content_rating_age_to_str (GsContentRatingSystem system,
 						 guint age);
 GsContentRatingSystem gs_utils_content_rating_system_from_locale (const gchar *locale);
 const gchar *gs_content_rating_key_value_to_str (const gchar *id,
-						 EpcAppFilterOarsValue value);
+						 MctAppFilterOarsValue value);
 const gchar *gs_content_rating_system_to_str (GsContentRatingSystem system);
 const gchar * const *gs_utils_content_rating_get_values (GsContentRatingSystem system);
 const guint *gs_utils_content_rating_get_ages (GsContentRatingSystem system);
-guint as_content_rating_id_value_to_csm_age (const gchar *id, EpcAppFilterOarsValue value);
-EpcAppFilterOarsValue as_content_rating_id_csm_age_to_value (const gchar *id, guint age);
+guint as_content_rating_id_value_to_csm_age (const gchar *id, MctAppFilterOarsValue value);
+MctAppFilterOarsValue as_content_rating_id_csm_age_to_value (const gchar *id, guint age);
 
 G_END_DECLS
