@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:48+0000\n"
-"PO-Revision-Date: 2019-06-20 16:10+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"POT-Creation-Date: 2019-08-23 06:06+0000\n"
+"PO-Revision-Date: 2019-08-23 06:18+0000\n"
+"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
 "Language-Team: Korean (http://www.transifex.com/endless-os/gnome-control-center/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6851,7 +6851,7 @@ msgstr ""
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
 msgid "Automatic Updates"
-msgstr ""
+msgstr "자동 업데이트"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
@@ -7001,10 +7001,49 @@ msgstr "기업 사용자를 추가하려면 연결된 상태여야 합니다."
 msgid "_Enterprise Login"
 msgstr "기업 로그인(_E)"
 
-#: panels/user-accounts/cc-app-permissions.c:351
-#: panels/user-accounts/cc-app-permissions.c:423
-#: panels/user-accounts/cc-app-permissions.c:806
+#: panels/user-accounts/cc-app-permissions.c:359
+#: panels/user-accounts/cc-app-permissions.c:431
+#: panels/user-accounts/cc-app-permissions.c:870
 msgid "No Restriction"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:15
+msgid "Restrict Apps"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:30
+msgid "Prevent this user from opening some apps by turning them off below."
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:78
+msgid "Restrict Web Browsers"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:93
+msgid ""
+"Prevent this user from running web browsers by turning them off below. Note "
+"that if the computer is connected to the internet, limited web content may "
+"still be available in other applications."
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:120
+msgid "Web _Browsers"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:153
+msgid "App Center Restrictions"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:173
+msgid "App _Installation"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:209
+msgid "Install Apps for All _Users"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:245
+msgid "Show Apps _Suitable For"
 msgstr ""
 
 #: panels/user-accounts/cc-avatar-chooser.c:234
@@ -7398,6 +7437,494 @@ msgstr "관리자 이름(_N)"
 #: panels/user-accounts/data/join-dialog.ui:185
 msgid "Administrator Password"
 msgstr "관리자 암호"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:76
+msgid "No cartoon violence"
+msgstr "만화 수준 폭력 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:79
+msgid "Cartoon characters in unsafe situations"
+msgstr "안전하지 않은 상황의 만화 주인공 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:82
+msgid "Cartoon characters in aggressive conflict"
+msgstr "적극적 폭력 상황의 만화 주인공 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:85
+msgid "Graphic violence involving cartoon characters"
+msgstr "만화 주인공의 그래픽 폭력"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:88
+msgid "No fantasy violence"
+msgstr "판타지 폭력 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:91
+msgid "Characters in unsafe situations easily distinguishable from reality"
+msgstr "실제와 구분할 수 있는 안전하지 않은 상황의 등장 인물 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:94
+msgid "Characters in aggressive conflict easily distinguishable from reality"
+msgstr "실제와 구분할 수 있는 적극적 폭력 상황의 등장 인물 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:97
+msgid "Graphic violence easily distinguishable from reality"
+msgstr "실제와 구분할 수 있는 그래픽 폭력"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:100
+msgid "No realistic violence"
+msgstr "폭력 재현 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:103
+msgid "Mildly realistic characters in unsafe situations"
+msgstr "실제와 비슷하게 안전하지 않은 상황의 등장 인물 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:106
+msgid "Depictions of realistic characters in aggressive conflict"
+msgstr "실제에 가깝게 적극적 폭력 상황의 등장 인물 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:109
+msgid "Graphic violence involving realistic characters"
+msgstr "실제에 가까운 적극적 그래픽 폭력"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:112
+msgid "No bloodshed"
+msgstr "유혈 장면 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:115
+msgid "Unrealistic bloodshed"
+msgstr "비현실적 혈흔"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:118
+msgid "Realistic bloodshed"
+msgstr "현실적 혈흔"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:121
+msgid "Depictions of bloodshed and the mutilation of body parts"
+msgstr "혈흔 묘사 및 사지 절단"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:124
+msgid "No sexual violence"
+msgstr "성폭력 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:127
+msgid "Rape or other violent sexual behavior"
+msgstr "강간/기타 금지 성 행위"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:130
+msgid "No references to alcohol"
+msgstr "알콜 음료 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:133
+msgid "References to alcoholic beverages"
+msgstr "알콜 음료 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:136
+msgid "Use of alcoholic beverages"
+msgstr "알콜 음료 활용"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:139
+msgid "No references to illicit drugs"
+msgstr "불법 약물 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:142
+msgid "References to illicit drugs"
+msgstr "불법 약물 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:145
+msgid "Use of illicit drugs"
+msgstr "불법 약물 활용"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:148
+msgid "References to tobacco products"
+msgstr "담배 상품 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:151
+msgid "Use of tobacco products"
+msgstr "담배 상품 활용"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:154
+msgid "No nudity of any sort"
+msgstr "나체 표현 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:157
+msgid "Brief artistic nudity"
+msgstr "대략적인 예술 전라 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:160
+msgid "Prolonged nudity"
+msgstr "지속적인 전라 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:163
+msgid "No references or depictions of sexual nature"
+msgstr "성적 표현 출현 또는 묘사 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:166
+msgid "Provocative references or depictions"
+msgstr "도발적 표현 언급 또는 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:169
+msgid "Sexual references or depictions"
+msgstr "성적 표현 언급 또는 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:172
+msgid "Graphic sexual behavior"
+msgstr "그래픽 성 행위"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:175
+msgid "No profanity of any kind"
+msgstr "비속어 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:178
+msgid "Mild or infrequent use of profanity"
+msgstr "온화하거나 드문 모독 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:181
+msgid "Moderate use of profanity"
+msgstr "어중간한 모독 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:184
+msgid "Strong or frequent use of profanity"
+msgstr "강렬하거나 빈번한 모독 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:187
+msgid "No inappropriate humor"
+msgstr "부적절한 유머 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:190
+msgid "Slapstick humor"
+msgstr "슬랩스틱 유머"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:193
+msgid "Vulgar or bathroom humor"
+msgstr "3류/화장실 유머"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:196
+msgid "Mature or sexual humor"
+msgstr "성인/성 유머"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:199
+msgid "No discriminatory language of any kind"
+msgstr "차별 문구 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:202
+msgid "Negativity towards a specific group of people"
+msgstr "특정 인물 집단에 대한 부정"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:205
+msgid "Discrimination designed to cause emotional harm"
+msgstr "감정적 해를 끼치도록 의도한 차별"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:208
+msgid "Explicit discrimination based on gender, sexuality, race or religion"
+msgstr "성, 인종, 종교에 기반한 적나라한 차별"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:211
+msgid "No advertising of any kind"
+msgstr "광고 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:214
+msgid "Product placement"
+msgstr "제품 배치"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:217
+msgid "Explicit references to specific brands or trademarked products"
+msgstr "특정 브랜드 및 상표 등록 제품을 명백하게 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:220
+msgid "Users are encouraged to purchase specific real-world items"
+msgstr "특정 실물 구매를 장려"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:223
+msgid "No gambling of any kind"
+msgstr "도박 내용 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:226
+msgid "Gambling on random events using tokens or credits"
+msgstr "토큰 또는 크레딧을 활용한 임의 이벤트 도박"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:229
+msgid "Gambling using “play” money"
+msgstr "“게임” 머니 활용 도박"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:232
+msgid "Gambling using real money"
+msgstr "현금 활용 도박"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:235
+msgid "No ability to spend money"
+msgstr "현금 소비 기능 없음"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:238
+msgid "Users are encouraged to donate real money"
+msgstr "현금 기부 장려"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:241
+msgid "Ability to spend real money in-game"
+msgstr "게임 내 현금 소비성"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:244
+msgid "No way to chat with other users"
+msgstr "다른 사용자와의 문장 대화 기능 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:247
+msgid "User-to-user game interactions without chat functionality"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:250
+msgid "Moderated chat functionality between users"
+msgstr "사용자간 중재 문장 대화 기능"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:253
+msgid "Uncontrolled chat functionality between users"
+msgstr "사용자간 비통제 문장 대화 기능"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:256
+msgid "No way to talk with other users"
+msgstr "다른 사용자와의 음성 대화 기능 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:259
+msgid "Uncontrolled audio or video chat functionality between users"
+msgstr "사용자간 비통제 영상/음성 대화 기능"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:262
+msgid "No sharing of social network usernames or email addresses"
+msgstr "소셜 네트워크 사용자 이름 또는 전자메일 주소를 공유하지 않음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:265
+msgid "Sharing social network usernames or email addresses"
+msgstr "소셜 네트워크 사용자 이름 또는 전자메일 주소를 공유함"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:268
+msgid "No sharing of user information with 3rd parties"
+msgstr "제 3자 사용자 정보 공유 안함"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:271
+msgid "Checking for the latest application version"
+msgstr "프로그램 최신 버전 확인"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:274
+msgid "Sharing diagnostic data that does not let others identify the user"
+msgstr "사용자를 식별할 수 없는 진단 데이터 공유"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:277
+msgid "Sharing information that lets others identify the user"
+msgstr "사용자 상호 식별 가능한 정보 공유"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:280
+msgid "No sharing of physical location to other users"
+msgstr "실제 위치 공유하지 않음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:283
+msgid "Sharing physical location to other users"
+msgstr "다른 사용자와 실제 위치를 공유함"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:288
+msgid "No references to homosexuality"
+msgstr "동성애 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:291
+msgid "Indirect references to homosexuality"
+msgstr "동성애 간접 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:294
+msgid "Kissing between people of the same gender"
+msgstr "동성간의 키스"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:297
+msgid "Graphic sexual behavior between people of the same gender"
+msgstr "동성간의 성적 행동 화면 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:300
+msgid "No references to prostitution"
+msgstr "매춘 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:303
+msgid "Indirect references to prostitution"
+msgstr "매춘 간접 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:306
+msgid "Direct references to prostitution"
+msgstr "매춘 직접 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:309
+msgid "Graphic depictions of the act of prostitution"
+msgstr "매춘 행위 화면 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:312
+msgid "No references to adultery"
+msgstr "간통 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:315
+msgid "Indirect references to adultery"
+msgstr "간통 간접 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:318
+msgid "Direct references to adultery"
+msgstr "간통 직접 언급"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:321
+msgid "Graphic depictions of the act of adultery"
+msgstr "간통 행위 화면 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:324
+msgid "No sexualized characters"
+msgstr "성적 대상화 주인공 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:327
+msgid "Scantily clad human characters"
+msgstr "반라 인간상"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:330
+msgid "Overtly sexualized human characters"
+msgstr "명백히 성적 매력을 부여한 인간상"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:333
+msgid "No references to desecration"
+msgstr "신성 모독 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:336
+msgid "Depictions or references to historical desecration"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:339
+msgid "Depictions of modern-day human desecration"
+msgstr "현대식 인간 모독 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:342
+msgid "Graphic depictions of modern-day desecration"
+msgstr "현대식 모독 화면 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:345
+msgid "No visible dead human remains"
+msgstr "명확하지 않은 죽은 인간 시신 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:348
+msgid "Visible dead human remains"
+msgstr "명확한 죽은 인간 시신 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:351
+msgid "Dead human remains that are exposed to the elements"
+msgstr "실외에 노출된 죽은 인간 시신 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:354
+msgid "Graphic depictions of desecration of human bodies"
+msgstr "인간 신체 모독 화면 묘사"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:357
+msgid "No references to slavery"
+msgstr "노예제도 언급 없음"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:360
+msgid "Depictions or references to historical slavery"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:363
+msgid "Depictions of modern-day slavery"
+msgstr "현대식 노예제도 표현"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:366
+msgid "Graphic depictions of modern-day slavery"
+msgstr "현대식 노예제도 화면 묘사"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:11
 msgid "Manage user accounts"
@@ -7888,6 +8415,10 @@ msgstr "그놈 데스크톱 설정 프로그램"
 #: shell/appdata/gnome-control-center.appdata.xml.in:10
 msgid "Settings is the primary interface for configuring your system."
 msgstr "설정은 시스템을 설정하는 주요 인터페이스 프로그램입니다."
+
+#: shell/appdata/gnome-control-center.appdata.xml.in:20
+msgid "The GNOME Project"
+msgstr "그놈 프로젝트"
 
 #: shell/cc-application.c:58
 msgid "Display version number"

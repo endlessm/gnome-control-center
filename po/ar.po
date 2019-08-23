@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:48+0000\n"
-"PO-Revision-Date: 2019-06-20 16:35+0000\n"
+"POT-Creation-Date: 2019-08-23 06:06+0000\n"
+"PO-Revision-Date: 2019-08-23 06:18+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/endless-os/gnome-control-center/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -7070,10 +7070,49 @@ msgstr "يجب أن تكون متصلا لإضافة حسابات ولوج مؤ�
 msgid "_Enterprise Login"
 msgstr "ولوج ال_مؤسسات"
 
-#: panels/user-accounts/cc-app-permissions.c:351
-#: panels/user-accounts/cc-app-permissions.c:423
-#: panels/user-accounts/cc-app-permissions.c:806
+#: panels/user-accounts/cc-app-permissions.c:359
+#: panels/user-accounts/cc-app-permissions.c:431
+#: panels/user-accounts/cc-app-permissions.c:870
 msgid "No Restriction"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:15
+msgid "Restrict Apps"
+msgstr "تقييد التطبيقات"
+
+#: panels/user-accounts/cc-app-permissions.ui:30
+msgid "Prevent this user from opening some apps by turning them off below."
+msgstr "امنع هذا المستخدم من فتح بعض التطبيقات."
+
+#: panels/user-accounts/cc-app-permissions.ui:78
+msgid "Restrict Web Browsers"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:93
+msgid ""
+"Prevent this user from running web browsers by turning them off below. Note "
+"that if the computer is connected to the internet, limited web content may "
+"still be available in other applications."
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:120
+msgid "Web _Browsers"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:153
+msgid "App Center Restrictions"
+msgstr "قيود مركز التطبيقات"
+
+#: panels/user-accounts/cc-app-permissions.ui:173
+msgid "App _Installation"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:209
+msgid "Install Apps for All _Users"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:245
+msgid "Show Apps _Suitable For"
 msgstr ""
 
 #: panels/user-accounts/cc-avatar-chooser.c:234
@@ -7467,6 +7506,494 @@ msgstr "ا_سم المدير"
 #: panels/user-accounts/data/join-dialog.ui:185
 msgid "Administrator Password"
 msgstr "كلمة سر المدير"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:76
+msgid "No cartoon violence"
+msgstr "لا عنف كرتوني"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:79
+msgid "Cartoon characters in unsafe situations"
+msgstr "شخصيات كرتونية في مواقف خطرة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:82
+msgid "Cartoon characters in aggressive conflict"
+msgstr "شخصيات كرتونية تتصراع بعدوانية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:85
+msgid "Graphic violence involving cartoon characters"
+msgstr "عنف رسومي لشخصيات كرتونية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:88
+msgid "No fantasy violence"
+msgstr "لا عنف خيالي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:91
+msgid "Characters in unsafe situations easily distinguishable from reality"
+msgstr "الشخصيات الكرتونية في مواقف خطرة يمكن تمييزها عن الواقع بسهولة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:94
+msgid "Characters in aggressive conflict easily distinguishable from reality"
+msgstr "الشخصيات الكرتونية وهي تتصارع بعدوانية يمكن تمييزها عن الواقع بسهولة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:97
+msgid "Graphic violence easily distinguishable from reality"
+msgstr "العنف الرسومي سهل تفرقته عن الواقع"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:100
+msgid "No realistic violence"
+msgstr "لا عنف واقعي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:103
+msgid "Mildly realistic characters in unsafe situations"
+msgstr "شخصيات واقعية معتدلة في حالات غير آمنة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:106
+msgid "Depictions of realistic characters in aggressive conflict"
+msgstr "تصوير شخصيات واقعية تتصراع بعدوانية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:109
+msgid "Graphic violence involving realistic characters"
+msgstr "عنف رسومي لشخصيات واقعية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:112
+msgid "No bloodshed"
+msgstr "لا إراقة دماء"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:115
+msgid "Unrealistic bloodshed"
+msgstr "إراقة الدماء غير حقيقة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:118
+msgid "Realistic bloodshed"
+msgstr "إراقة الدماء حقيقة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:121
+msgid "Depictions of bloodshed and the mutilation of body parts"
+msgstr "تصوير لسفك الدماء والتمثيل بأجزاء الجسد"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:124
+msgid "No sexual violence"
+msgstr "لا عنف جنسي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:127
+msgid "Rape or other violent sexual behavior"
+msgstr "اغتصاب أو سلوك جنسي عنيف"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:130
+msgid "No references to alcohol"
+msgstr "لا إشارات لمشروبات كحولية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:133
+msgid "References to alcoholic beverages"
+msgstr "إشارات لمشروبات كحولية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:136
+msgid "Use of alcoholic beverages"
+msgstr "استخدام مشروبات كحولية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:139
+msgid "No references to illicit drugs"
+msgstr "لا إشارات لمخدرات غير مشروعة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:142
+msgid "References to illicit drugs"
+msgstr "إشارات لمخدرات غير مشروعة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:145
+msgid "Use of illicit drugs"
+msgstr "استخدام مخدرات غير مشروعة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:148
+msgid "References to tobacco products"
+msgstr "إشارات منتجات التبغ"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:151
+msgid "Use of tobacco products"
+msgstr "استخدام منتجات التبغ"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:154
+msgid "No nudity of any sort"
+msgstr "لا عري من أي نوع"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:157
+msgid "Brief artistic nudity"
+msgstr "عري فني بسيط"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:160
+msgid "Prolonged nudity"
+msgstr "العري لفترة طويلة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:163
+msgid "No references or depictions of sexual nature"
+msgstr "لا إشارات أو تصوير للجنس"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:166
+msgid "Provocative references or depictions"
+msgstr "تلميحات استفزازية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:169
+msgid "Sexual references or depictions"
+msgstr "إشارات أو تصوير للجنس"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:172
+msgid "Graphic sexual behavior"
+msgstr "سلوك جنسي رسومي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:175
+msgid "No profanity of any kind"
+msgstr "لا ألفاظ نابية من أي نوع"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:178
+msgid "Mild or infrequent use of profanity"
+msgstr "استخدام معتدل أو نادر للألفاظ النابية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:181
+msgid "Moderate use of profanity"
+msgstr "استعمال معتدل للألفاظ النابية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:184
+msgid "Strong or frequent use of profanity"
+msgstr "استعمال قوي أو متكرر للألفاظ النابية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:187
+msgid "No inappropriate humor"
+msgstr "لا فكاهة مبتذلة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:190
+msgid "Slapstick humor"
+msgstr "فكاهة تهريجية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:193
+msgid "Vulgar or bathroom humor"
+msgstr "فكاهة مبتذلة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:196
+msgid "Mature or sexual humor"
+msgstr "نكت جنسية/للكبار"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:199
+msgid "No discriminatory language of any kind"
+msgstr "لا لغة متحيزة من أي نوع"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:202
+msgid "Negativity towards a specific group of people"
+msgstr "السلبية تجاه مجموعة من الأشخاص"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:205
+msgid "Discrimination designed to cause emotional harm"
+msgstr "تمييز مفتعل للتسبب بضرر عاطفي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:208
+msgid "Explicit discrimination based on gender, sexuality, race or religion"
+msgstr "تمييز صريح بناء على الجنس، أو السلاسة البشرية أو العقيدة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:211
+msgid "No advertising of any kind"
+msgstr "لا إعلانات من أي نوع"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:214
+msgid "Product placement"
+msgstr "إشهار منتجات"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:217
+msgid "Explicit references to specific brands or trademarked products"
+msgstr "إشارات صريحة لعلامات تجارية ومنتجات معينة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:220
+msgid "Users are encouraged to purchase specific real-world items"
+msgstr "يُشجّع المستخدمين على شراء عناصر معينة في العالم الحقيقي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:223
+msgid "No gambling of any kind"
+msgstr "لا مقامرة من أي نوع"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:226
+msgid "Gambling on random events using tokens or credits"
+msgstr "مقامرة على أحداث عشوائية باستخدام عمل رمزية أو ائتمانات"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:229
+msgid "Gambling using “play” money"
+msgstr "مقامرة باستخدام مال ”ألعاب“"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:232
+msgid "Gambling using real money"
+msgstr "مقامرة باستخدام مال حقيقي"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:235
+msgid "No ability to spend money"
+msgstr "لا إمكانية إنفاق أموال"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:238
+msgid "Users are encouraged to donate real money"
+msgstr "يُشجّع المستخدمين على التبرع بنقود حقيقية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:241
+msgid "Ability to spend real money in-game"
+msgstr "إمكانية إنفاق أموال حقيقية داخل اللعبة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:244
+msgid "No way to chat with other users"
+msgstr "لا إمكانية للدردشة مع مستخدمين آخرين"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:247
+msgid "User-to-user game interactions without chat functionality"
+msgstr "تفاعل المستخدمين مع بعض في اللعبة بدون ميزة دردشة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:250
+msgid "Moderated chat functionality between users"
+msgstr "ميزة مدارة دردشة بين المستخدمين"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:253
+msgid "Uncontrolled chat functionality between users"
+msgstr "ميزة دردشة بين المستخدمين بلا إدارة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:256
+msgid "No way to talk with other users"
+msgstr "لا إمكانية للحديث مع مستخدمين آخرين"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:259
+msgid "Uncontrolled audio or video chat functionality between users"
+msgstr "ميزة دردشة مرئية أو صوتية بين المستخدمين بلا إدارة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:262
+msgid "No sharing of social network usernames or email addresses"
+msgstr "لا مشاركة لأسماء حسابات شبكات التواصل أو عناوين البريد"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:265
+msgid "Sharing social network usernames or email addresses"
+msgstr "مشاركة أسماء حسابات شبكات التواصل أو عناوين البريد"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:268
+msgid "No sharing of user information with 3rd parties"
+msgstr "لا مشاركة لمعلومات المستخدم مع أطراف ثالثة"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:271
+msgid "Checking for the latest application version"
+msgstr "يتم التحقق من أحدث إصدار للتطبيق"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:274
+msgid "Sharing diagnostic data that does not let others identify the user"
+msgstr "مشاركة بيانات التشخيص التي لا تسمح للآخرين بتحديد المستخدم"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:277
+msgid "Sharing information that lets others identify the user"
+msgstr "مشاركة المعلومات التي تتيح للآخرين تحديد هوية المستخدم"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:280
+msgid "No sharing of physical location to other users"
+msgstr "غير مصرح بمشاركة الموقع الفعلي مع المستخدمين الآخرين"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:283
+msgid "Sharing physical location to other users"
+msgstr "مشاركة الموقع الفيزيائي مع بقية المستخدمين"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:288
+msgid "No references to homosexuality"
+msgstr "لا توجد إشارات إلى المثلية الجنسية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:291
+msgid "Indirect references to homosexuality"
+msgstr "إشارات غير مباشرة إلى المثلية الجنسية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:294
+msgid "Kissing between people of the same gender"
+msgstr "تقبيل بين الناس من نفس الجنس"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:297
+msgid "Graphic sexual behavior between people of the same gender"
+msgstr "السلوك الجنسي الجرافيكي بين الناس من نفس الجنس"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:300
+msgid "No references to prostitution"
+msgstr "لا إشارات إلى البغاء"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:303
+msgid "Indirect references to prostitution"
+msgstr "إشارات غير مباشرة إلى البغاء"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:306
+msgid "Direct references to prostitution"
+msgstr "إشارات مباشرة للبغاء"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:309
+msgid "Graphic depictions of the act of prostitution"
+msgstr "تصوير جرافيك لممارسة البغاء"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:312
+msgid "No references to adultery"
+msgstr "لا إشارات إلى الزنا"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:315
+msgid "Indirect references to adultery"
+msgstr "إشارات غير مباشرة إلى الزنا"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:318
+msgid "Direct references to adultery"
+msgstr "إشارات مباشرة إلى الزنا"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:321
+msgid "Graphic depictions of the act of adultery"
+msgstr "تصوير جرافيك لفعل الزنا"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:324
+msgid "No sexualized characters"
+msgstr "بدون شخصيات جنسية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:327
+msgid "Scantily clad human characters"
+msgstr "يكتنفه الشخصيات البشرية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:330
+msgid "Overtly sexualized human characters"
+msgstr "شخصيات بشرية جنسية بشكل علني"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:333
+msgid "No references to desecration"
+msgstr "لا إشارات إلى التدنيس"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:336
+msgid "Depictions or references to historical desecration"
+msgstr "تصوير أو إشارات تدنيس تاريخية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:339
+msgid "Depictions of modern-day human desecration"
+msgstr "تصوير تدنيس الإنسان الحديث"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:342
+msgid "Graphic depictions of modern-day desecration"
+msgstr "صور جرافيك لتدنيس العصر الحديث"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:345
+msgid "No visible dead human remains"
+msgstr "لا توجد رفات بشرية ميتة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:348
+msgid "Visible dead human remains"
+msgstr "بقايا بشرية ميتة ظاهرة"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:351
+msgid "Dead human remains that are exposed to the elements"
+msgstr "بقايا بشرية ميتة تتعرض للعناصر"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:354
+msgid "Graphic depictions of desecration of human bodies"
+msgstr "الرسوم البيانية لتدنيس الأجسام البشرية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:357
+msgid "No references to slavery"
+msgstr "لا إشارات إلى العبودية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:360
+msgid "Depictions or references to historical slavery"
+msgstr "تصوير أو إشارات إلى العبودية التاريخية"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:363
+msgid "Depictions of modern-day slavery"
+msgstr "تصوير الرق المعاصر"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:366
+msgid "Graphic depictions of modern-day slavery"
+msgstr "تصوير جرافيكي للعبودية الحديثة"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:11
 msgid "Manage user accounts"
@@ -7957,6 +8484,10 @@ msgstr "أدوات لضبط سطح مكتب جنوم"
 #: shell/appdata/gnome-control-center.appdata.xml.in:10
 msgid "Settings is the primary interface for configuring your system."
 msgstr ""
+
+#: shell/appdata/gnome-control-center.appdata.xml.in:20
+msgid "The GNOME Project"
+msgstr "مشروع جنوم"
 
 #: shell/cc-application.c:58
 msgid "Display version number"
