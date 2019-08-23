@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-20 15:48+0000\n"
-"PO-Revision-Date: 2019-06-20 16:46+0000\n"
+"POT-Creation-Date: 2019-08-23 06:06+0000\n"
+"PO-Revision-Date: 2019-08-23 06:18+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/endless-os/gnome-control-center/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -7023,10 +7023,49 @@ msgstr "Morate biti povezani s internetom za dodavanje poslovnih korisnika."
 msgid "_Enterprise Login"
 msgstr "_Poslovno prijavljivanje"
 
-#: panels/user-accounts/cc-app-permissions.c:351
-#: panels/user-accounts/cc-app-permissions.c:423
-#: panels/user-accounts/cc-app-permissions.c:806
+#: panels/user-accounts/cc-app-permissions.c:359
+#: panels/user-accounts/cc-app-permissions.c:431
+#: panels/user-accounts/cc-app-permissions.c:870
 msgid "No Restriction"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:15
+msgid "Restrict Apps"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:30
+msgid "Prevent this user from opening some apps by turning them off below."
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:78
+msgid "Restrict Web Browsers"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:93
+msgid ""
+"Prevent this user from running web browsers by turning them off below. Note "
+"that if the computer is connected to the internet, limited web content may "
+"still be available in other applications."
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:120
+msgid "Web _Browsers"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:153
+msgid "App Center Restrictions"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:173
+msgid "App _Installation"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:209
+msgid "Install Apps for All _Users"
+msgstr ""
+
+#: panels/user-accounts/cc-app-permissions.ui:245
+msgid "Show Apps _Suitable For"
 msgstr ""
 
 #: panels/user-accounts/cc-avatar-chooser.c:234
@@ -7420,6 +7459,494 @@ msgstr "Administratorovo _ime"
 #: panels/user-accounts/data/join-dialog.ui:185
 msgid "Administrator Password"
 msgstr "Administratorova lozinka"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:76
+msgid "No cartoon violence"
+msgstr "Bez nasilja u crtićima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:79
+msgid "Cartoon characters in unsafe situations"
+msgstr "Likovi crtića su u opasnim situacijama"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:82
+msgid "Cartoon characters in aggressive conflict"
+msgstr "Likovi crtića su u agresivnim sukobima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:85
+msgid "Graphic violence involving cartoon characters"
+msgstr "Animirano nasilje uključuje likove crtića"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:88
+msgid "No fantasy violence"
+msgstr "Bez umišljenog nasilja"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:91
+msgid "Characters in unsafe situations easily distinguishable from reality"
+msgstr "Likovi u opasnim situacijama se lako mogu razlikovati od stvarnosti"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:94
+msgid "Characters in aggressive conflict easily distinguishable from reality"
+msgstr "Likovi u agresivnim sukobima se lako mogu razlikovati od stvarnosti"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:97
+msgid "Graphic violence easily distinguishable from reality"
+msgstr "Animirano nasilje se lako može razlikovati od stvarnosti"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:100
+msgid "No realistic violence"
+msgstr "Bez stvarnog nasilja"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:103
+msgid "Mildly realistic characters in unsafe situations"
+msgstr "Srednje realni likovi u agresivnom sukobu"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:106
+msgid "Depictions of realistic characters in aggressive conflict"
+msgstr "Prikaz realnih likova u agresivnom sukobu"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:109
+msgid "Graphic violence involving realistic characters"
+msgstr "Animirano nasilje uključuje realne likove"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:112
+msgid "No bloodshed"
+msgstr "Bez krvoprolića"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:115
+msgid "Unrealistic bloodshed"
+msgstr "Nerealno krvoproliće"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:118
+msgid "Realistic bloodshed"
+msgstr "Realno krvoproliće"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:121
+msgid "Depictions of bloodshed and the mutilation of body parts"
+msgstr "Prikaz krvoprolića i sakaćenja dijelova tijela"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:124
+msgid "No sexual violence"
+msgstr "Bez seksualnog nasilja"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:127
+msgid "Rape or other violent sexual behavior"
+msgstr "Silovanje ili ostalo nasilje seksualnog ponašanja"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:130
+msgid "No references to alcohol"
+msgstr "Bez pozivanja na alkoholna pića"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:133
+msgid "References to alcoholic beverages"
+msgstr "Pozivanje na alkoholna pića"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:136
+msgid "Use of alcoholic beverages"
+msgstr "Upotreba alkoholnih pića"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:139
+msgid "No references to illicit drugs"
+msgstr "Bez pozivanja na nedopuštene droge"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:142
+msgid "References to illicit drugs"
+msgstr "Pozivanje na nedopuštene droge"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:145
+msgid "Use of illicit drugs"
+msgstr "Upotreba nedopuštenih droga"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:148
+msgid "References to tobacco products"
+msgstr "Pozivanje na duhanske proizvode"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:151
+msgid "Use of tobacco products"
+msgstr "Upotreba duhanskih proizvoda"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:154
+msgid "No nudity of any sort"
+msgstr "Bez golotinje svake vrste"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:157
+msgid "Brief artistic nudity"
+msgstr "Kratka umjetnička golotinja"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:160
+msgid "Prolonged nudity"
+msgstr "Dugotrajna golotinja"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:163
+msgid "No references or depictions of sexual nature"
+msgstr "Bez aluzije ili prikaza seksualne prirode"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:166
+msgid "Provocative references or depictions"
+msgstr "Provokativne aluzije ili crteži"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:169
+msgid "Sexual references or depictions"
+msgstr "Seksualne aluzije ili crteži"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:172
+msgid "Graphic sexual behavior"
+msgstr "Animirano seksualno ponašanje"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:175
+msgid "No profanity of any kind"
+msgstr "Bez psovki bilo koje vrste"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:178
+msgid "Mild or infrequent use of profanity"
+msgstr "Blaga ili sporadičnu upotreba psovki"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:181
+msgid "Moderate use of profanity"
+msgstr "Umjerena upotreba psovki"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:184
+msgid "Strong or frequent use of profanity"
+msgstr "Snažna ili česta upotreba psovki"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:187
+msgid "No inappropriate humor"
+msgstr "Bez neprimjerenog humora"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:190
+msgid "Slapstick humor"
+msgstr "Urnebesni humor"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:193
+msgid "Vulgar or bathroom humor"
+msgstr "Vulgaran ili kafanski humor"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:196
+msgid "Mature or sexual humor"
+msgstr "Seksualni ili humor za odrasle"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:199
+msgid "No discriminatory language of any kind"
+msgstr "Bez diskriminirajućeg jezika bilo koje vrste"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:202
+msgid "Negativity towards a specific group of people"
+msgstr "Negativnost prema određenoj skupini ljudi"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:205
+msgid "Discrimination designed to cause emotional harm"
+msgstr "Diskriminacija osmišljena da uzrokuje emocionalno nasilje"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:208
+msgid "Explicit discrimination based on gender, sexuality, race or religion"
+msgstr "Eksplicitna diskriminacija na osnovi spola, spolnosti, rasi ili religiji"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:211
+msgid "No advertising of any kind"
+msgstr "Bez oglasa bilo koje vrste"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:214
+msgid "Product placement"
+msgstr "Plasman proizvoda"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:217
+msgid "Explicit references to specific brands or trademarked products"
+msgstr "Jasne odredbe zaštićene robne marke ili zaštitnog znaka proizvoda"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:220
+msgid "Users are encouraged to purchase specific real-world items"
+msgstr "Korisnici se potiču na kupnju određenog stvarnog predmeta"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:223
+msgid "No gambling of any kind"
+msgstr "Bez kockanja bilo koje vrste"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:226
+msgid "Gambling on random events using tokens or credits"
+msgstr "Kockanje na slučajnim događajima pomoću žetona ili kredita"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:229
+msgid "Gambling using “play” money"
+msgstr "Kockanje upotrebom novca iz \"igre\""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:232
+msgid "Gambling using real money"
+msgstr "Kockanje upotrebno stvarnog novca"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:235
+msgid "No ability to spend money"
+msgstr "Bez mogućnosti trošenja stvarnog novca"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:238
+msgid "Users are encouraged to donate real money"
+msgstr "Korisnici se potiču na kupnju određenog stvarnog predmeta"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:241
+msgid "Ability to spend real money in-game"
+msgstr "Mogućnost trošenja stvarnog novca u igri"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:244
+msgid "No way to chat with other users"
+msgstr "Bez mogućnost razgovora s drugim korisnicima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:247
+msgid "User-to-user game interactions without chat functionality"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:250
+msgid "Moderated chat functionality between users"
+msgstr "Ograničena mogućnost razgovora između korisnika"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:253
+msgid "Uncontrolled chat functionality between users"
+msgstr "Nekontrolirana mogućnost razgovora između korisnika"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:256
+msgid "No way to talk with other users"
+msgstr "Bez mogućnost razgovora s drugim korisnicima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:259
+msgid "Uncontrolled audio or video chat functionality between users"
+msgstr "Nekontrolirana mogućnost glasovnog i video razgovora između korisnika"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:262
+msgid "No sharing of social network usernames or email addresses"
+msgstr "Bez dijeljenja imena i adresa e-pošte društvenih mreža"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:265
+msgid "Sharing social network usernames or email addresses"
+msgstr "Dijeljenje imena i adresa e-pošte društvenih mreža"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:268
+msgid "No sharing of user information with 3rd parties"
+msgstr "Bez dijeljenja informacija korisnika sa trećom stranom"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:271
+msgid "Checking for the latest application version"
+msgstr "Provjera najnovije inačice aplikacije"
+
+#. v1.1
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:274
+msgid "Sharing diagnostic data that does not let others identify the user"
+msgstr "Dijeljenji dijagnostički podaci koji ne dopuštaju drugima da identificiraju korisnika"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:277
+msgid "Sharing information that lets others identify the user"
+msgstr "Dijeljene informacije koju dopuštaju drugima da identificiraju korisnika"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:280
+msgid "No sharing of physical location to other users"
+msgstr "Bez dijeljenja fizičke lokacije sa ostalim korisnicima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:283
+msgid "Sharing physical location to other users"
+msgstr "Dijeljenje fizičke lokacije sa ostalim korisnicima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:288
+msgid "No references to homosexuality"
+msgstr "Bez pozivanja na homoseksualnost"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:291
+msgid "Indirect references to homosexuality"
+msgstr "Neizrano pozivanje na homoseksualnost"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:294
+msgid "Kissing between people of the same gender"
+msgstr "Ljubljenje između ljudi istog spola"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:297
+msgid "Graphic sexual behavior between people of the same gender"
+msgstr "Grafičko spolno ponašanje između ljudi istog spola"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:300
+msgid "No references to prostitution"
+msgstr "Bez pozivanja na prostituciju"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:303
+msgid "Indirect references to prostitution"
+msgstr "Neizravno pozivanje na prostituciju"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:306
+msgid "Direct references to prostitution"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:309
+msgid "Graphic depictions of the act of prostitution"
+msgstr "Grafički prikaz čina prostitucije"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:312
+msgid "No references to adultery"
+msgstr "Bez pozivanja na preljub"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:315
+msgid "Indirect references to adultery"
+msgstr "Neizravno pozivanje na preljub"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:318
+msgid "Direct references to adultery"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:321
+msgid "Graphic depictions of the act of adultery"
+msgstr "Grafički prikaz čina preljuba"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:324
+msgid "No sexualized characters"
+msgstr "Bez seksualnih likova"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:327
+msgid "Scantily clad human characters"
+msgstr "Oskudno odjeveni likovi"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:330
+msgid "Overtly sexualized human characters"
+msgstr "Javno neprimjereni seksualni likovi"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:333
+msgid "No references to desecration"
+msgstr "Bez pozivanja na oskvrnuće"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:336
+msgid "Depictions or references to historical desecration"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:339
+msgid "Depictions of modern-day human desecration"
+msgstr "Prikaz oskvrnuća ljudske suvremenosti"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:342
+msgid "Graphic depictions of modern-day desecration"
+msgstr "Grafički prikaz oskvrnuća ljudske suvremenosti"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:345
+msgid "No visible dead human remains"
+msgstr "Bez vidljivih mrtvih ljudskih ostataka"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:348
+msgid "Visible dead human remains"
+msgstr "Vidlji mrtvi ljudski ostaci"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:351
+msgid "Dead human remains that are exposed to the elements"
+msgstr "Vidlji mrtvi ljudski ostaci koji su izloženi u elementima"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:354
+msgid "Graphic depictions of desecration of human bodies"
+msgstr "Grafički prikazi oskvrnuća ljudskih tijela"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:357
+msgid "No references to slavery"
+msgstr "Bez pozivanja na ropstvo"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:360
+msgid "Depictions or references to historical slavery"
+msgstr ""
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:363
+msgid "Depictions of modern-day slavery"
+msgstr "Prikaz suvremenog ropstva"
+
+#. TRANSLATORS: content rating description
+#: panels/user-accounts/gs-content-rating.c:366
+msgid "Graphic depictions of modern-day slavery"
+msgstr "Grafički prikaz suvremenog ropstva"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:11
 msgid "Manage user accounts"
@@ -7910,6 +8437,10 @@ msgstr "Pomagalo za podešavanje GNOME radne površine"
 #: shell/appdata/gnome-control-center.appdata.xml.in:10
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Postavke su glavno sučelje za podešavanje vašeg sustava."
+
+#: shell/appdata/gnome-control-center.appdata.xml.in:20
+msgid "The GNOME Project"
+msgstr "GNOME projekt"
 
 #: shell/cc-application.c:58
 msgid "Display version number"
