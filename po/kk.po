@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:20-0700\n"
+"POT-Creation-Date: 2019-09-18 14:28-0700\n"
 "PO-Revision-Date: 2019-03-09 17:12+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -1651,9 +1651,8 @@ msgid "Device name"
 msgstr "Құрылғы аты"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Нұсқасы 0"
+msgstr "Нұсқасы"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -2555,6 +2554,7 @@ msgstr "Ешқашан"
 msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "%i күн бұрын"
+msgstr[1] "%i күн бұрын"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -4168,12 +4168,14 @@ msgstr "Уақыты белгісіз"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i минут"
+msgstr[1] "%i минут"
 
 #: panels/power/cc-power-panel.c:336
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i сағат"
+msgstr[1] "%i сағат"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4186,11 +4188,13 @@ msgstr "%i %s %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "сағат"
+msgstr[1] "сағат"
 
 #: panels/power/cc-power-panel.c:346
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "минут"
+msgstr[1] "минут"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:364
@@ -5139,6 +5143,7 @@ msgstr "Белсенді тапсырмалар жоқ"
 msgid "%u Job"
 msgid_plural "%u Jobs"
 msgstr[0] "%u тапсырма"
+msgstr[1] "%u тапсырма"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:766
@@ -5772,7 +5777,6 @@ msgid "No input sources found"
 msgstr "Кіріс қайнар көздері табылмады"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Басқа"
@@ -6462,6 +6466,7 @@ msgstr "Ең үлкен"
 msgid "%d pixel"
 msgid_plural "%d pixels"
 msgstr[0] "%d пиксель"
+msgstr[1] "%d пиксель"
 
 #: panels/universal-access/cc-ua-panel.ui:78
 msgid "_Always Show Universal Access Menu"
@@ -7003,9 +7008,8 @@ msgstr "Желі баптаулары"
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Автоматты бағдарлар"
+msgstr "Автоматты жаңартулар"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
@@ -7709,19 +7713,18 @@ msgstr ""
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:130
-#, fuzzy
 msgid "No references to alcohol"
-msgstr "preferences-color"
+msgstr "Алкогольге сілтемелер жоқ"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:133
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Алкогольді өнімдеріне сілтемелер"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Алкогольді өнімдерін пайдалану"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:139
@@ -7741,12 +7744,12 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:148
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Темекі өнімдеріне сілтемелер"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:151
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Темекі өнімдерін пайдалану"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:154
@@ -7846,7 +7849,7 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:211
 msgid "No advertising of any kind"
-msgstr ""
+msgstr "Жарнаманың ешбір түрі жоқ"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:214
@@ -7857,11 +7860,12 @@ msgstr ""
 #: panels/user-accounts/gs-content-rating.c:217
 msgid "Explicit references to specific brands or trademarked products"
 msgstr ""
+"Кейбір брендтер немесе сауда маркасымен қорғалған өнімдерге тікелей сілтеу"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Пайдаланушыларға шын әлемнен кейбір нәрселерді сатып алу ұсынылады"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:223
@@ -7886,24 +7890,23 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:235
 msgid "No ability to spend money"
-msgstr ""
+msgstr "Ақшаны жарату мүмкіндігі жоқ"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
-msgstr ""
+msgstr "Пайдаланушылар шын ақшаны жіберуге ұсынылады"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:241
 msgid "Ability to spend real money in-game"
-msgstr ""
+msgstr "Ойынша шын ақшаны жарату мүмкіндігі"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:244
-#, fuzzy
 msgid "No way to chat with other users"
-msgstr "Басқалармен немен бөлісуді таңдау"
+msgstr "Басқа ойыншылармен чат мүмкін емес"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:247
@@ -7913,38 +7916,37 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
-msgstr ""
+msgstr "Ойыншылар арасындағы басқарылатын чат мүмкіндігі"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Ойыншылар арасындағы басқарылмайтын чат мүмкіндігі"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:256
-#, fuzzy
 msgid "No way to talk with other users"
-msgstr "Басқалармен немен бөлісуді таңдау"
+msgstr "Басқа ойыншылармен сөйлесу мүмкін емес"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
-msgstr ""
+msgstr "Ойыншылар арасындағы басқарылмайтын аудио немесе видео чат мүмкіндігі"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
-msgstr ""
+msgstr "Әлеуметтік желілердегі аттар немесе эл. пошта адрестермен бөлісу жоқ"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
-msgstr ""
+msgstr "Әлеуметтік желілердегі аттар немесе эл. пошта адрестермен бөлісу"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
-msgstr ""
+msgstr "Пайдаланушы ақпаратын 3-ші жақтармен бөлісу жоқ"
 
 #. v1.1
 #. TRANSLATORS: content rating description
@@ -7961,17 +7963,17 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
-msgstr ""
+msgstr "Басқалар пайдаланушыны анықтай алатын ақпаратымен бөлісу"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:280
 msgid "No sharing of physical location to other users"
-msgstr ""
+msgstr "Басқа пайдаланушылармен нақты орналасумен бөлісу жоқ"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:283
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Басқа пайдаланушылармен нақты орналасумен бөлісу"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:288
@@ -8746,6 +8748,7 @@ msgstr ""
 msgid "%u Output"
 msgid_plural "%u Outputs"
 msgstr[0] "%u шығыс"
+msgstr[1] "%u шығыс"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8754,6 +8757,7 @@ msgstr[0] "%u шығыс"
 msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u кіріс"
+msgstr[1] "%u кіріс"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
@@ -9985,42 +9989,33 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Export"
 #~ msgstr "И_мпорт"
 
-#~| msgid "Left"
 #~ msgid "Left Shift"
 #~ msgstr "Сол жақ"
 
-#~| msgid "Left"
 #~ msgid "Left Alt"
 #~ msgstr "Сол жақ"
 
-#~| msgid "Left"
 #~ msgid "Left Ctrl"
 #~ msgstr "Сол жақ"
 
-#~| msgid "Right"
 #~ msgid "Right Shift"
 #~ msgstr "Оң жақ"
 
-#~| msgid "Right"
 #~ msgid "Right Alt"
 #~ msgstr "Оң жақ"
 
-#~| msgid "Right"
 #~ msgid "Right Ctrl"
 #~ msgstr "Оң жақ"
 
-#~| msgid "Left"
 #~ msgid "Left Alt+Shift"
 #~ msgstr "Сол жақ"
 
-#~| msgid "Right"
 #~ msgid "Right Alt+Shift"
 #~ msgstr "Оң жақ"
 
 #~ msgid "Left Ctrl+Shift"
 #~ msgstr "Сол жақ Ctrl+Shift"
 
-#~| msgid "Right"
 #~ msgid "Right Ctrl+Shift"
 #~ msgstr "Оң жақ"
 
@@ -10092,7 +10087,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "R_otation"
 #~ msgstr "Кең_ейтілуі:"
 
-#~| msgid "Slow Keys"
 #~ msgctxt "mouse, speed"
 #~ msgid "Slow"
 #~ msgstr "Баяу пернелер"
@@ -10102,22 +10096,18 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Fast"
 #~ msgstr "Жылдам"
 
-#~| msgid "_Options"
 #~ msgid "_Options…"
 #~ msgstr "_Опциялар"
 
 #~ msgid "00:24:16:31:8G:7A"
 #~ msgstr "00:24:16:31:8G:7A"
 
-#~| msgid "Visibility"
 #~ msgid "Visible"
 #~ msgstr "Көрінуі"
 
-#~| msgid "Visibility"
 #~ msgid "Name & Visibility"
 #~ msgstr "Көрінуі"
 
-#~| msgid "None"
 #~ msgctxt "Input source"
 #~ msgid "None"
 #~ msgstr "Ешнәрсе"
@@ -10145,7 +10135,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "150%"
 #~ msgstr "150%"
 
-#~| msgid "Zoom"
 #~ msgctxt "universal access, zoom"
 #~ msgid "Zoom"
 #~ msgstr "Үлкейту"
@@ -10156,12 +10145,10 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Zoom out:"
 #~ msgstr "Кішірейту:"
 
-#~| msgid "Short"
 #~ msgctxt "universal access, delay"
 #~ msgid "Short"
 #~ msgstr "<i>Қысқа</i>"
 
-#~| msgid "Long"
 #~ msgctxt "universal access, delay"
 #~ msgid "Long"
 #~ msgstr "Ұзақ"
@@ -10170,28 +10157,23 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "rejected"
 #~ msgstr "Тайдырылған"
 
-#~| msgid "Mouse"
 #~ msgid "Video Mouse"
 #~ msgstr "Тышқан"
 
-#~| msgid "Small"
 #~ msgctxt "universal access, threshold"
 #~ msgid "Small"
 #~ msgstr "Кішкентай"
 
-#~| msgid "Large"
 #~ msgctxt "universal access, threshold"
 #~ msgid "Large"
 #~ msgstr "Үлкен"
 
-#~| msgid "Remove Account"
 #~ msgid "_Local Account"
 #~ msgstr "Тіркелгіні өшіру"
 
 #~ msgid "C_ontinue"
 #~ msgstr "Жа_лғастыру"
 
-#~| msgid "Preview"
 #~ msgid "Previous Week"
 #~ msgstr "Алдыңғы апта"
 
@@ -10204,7 +10186,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Disable this account"
 #~ msgstr "Бұл тіркелгіні сөндіру"
 
-#~| msgid "Set a password now"
 #~ msgid "Generate a password"
 #~ msgstr "Парольді қазір орнату"
 
@@ -10222,7 +10203,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Weak"
 #~ msgstr "Әлсіз"
 
-#~| msgid "Filter"
 #~ msgctxt "Password strength"
 #~ msgid "Fair"
 #~ msgstr "Фильтр"
@@ -10231,19 +10211,16 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Good"
 #~ msgstr "Жақсы"
 
-#~| msgid "Scrolling"
 #~ msgctxt "Password strength"
 #~ msgid "Strong"
 #~ msgstr "Айналдыру"
 
-#~| msgid "Set a password now"
 #~ msgid "_Generate a password"
 #~ msgstr "Парольді қазір орнату"
 
 #~ msgid "You need to enter a new password"
 #~ msgstr "Сізге жаңа парольді енгізу керек"
 
-#~| msgid "The current password is not correct"
 #~ msgid "The new password is not strong enough"
 #~ msgstr "Ағымдағы пароль дұрыс көрсетілмеді"
 
@@ -10306,37 +10283,30 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "%d x %d"
 #~ msgstr "%d x %d"
 
-#~| msgid "Unknown"
 #~ msgid "Unknown model"
 #~ msgstr "Белгісіз"
 
 #~ msgid "System Information"
 #~ msgstr "Жүйелік ақпарат"
 
-#~| msgid "Appearance"
 #~ msgid "Experience"
 #~ msgstr "Сыртқы түрі"
 
-#~| msgid "Out of toner"
 #~ msgid "Out of range"
 #~ msgstr "Тонер жоқ"
 
 #~ msgid "_Options..."
 #~ msgstr "_Опциялар..."
 
-#~| msgid "Create..."
 #~ msgid "C_reate..."
 #~ msgstr "Жаса_у..."
 
-#~| msgid "Hinting"
 #~ msgid "_Disconnect"
 #~ msgstr "Б_айланысты үзу"
 
-#~| msgid "Contact"
 #~ msgid "_Connect"
 #~ msgstr "<u>Байланысу</u>"
 
-#~| msgid "_Options..."
 #~ msgid "_Settings..."
 #~ msgstr "Ба_птаулар"
 
@@ -10347,22 +10317,18 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Manage online accounts"
 #~ msgstr "Желідегі тіркелгілерді басқару"
 
-#~| msgid "On battery power"
 #~ msgid "Using battery power - %s remaining"
 #~ msgstr "Батареядан"
 
-#~| msgid "On battery power"
 #~ msgid "Using battery power"
 #~ msgstr "Батареядан"
 
-#~| msgid "Suspend when inactive for:"
 #~ msgid "Suspend when inactive for"
 #~ msgstr "Ұйықтату үшін белсенді емес уақыты:"
 
 #~ msgid "Manufacturers"
 #~ msgstr "Өндірушілер"
 
-#~| msgid "_Show..."
 #~ msgid "_Show"
 #~ msgstr "Көр_сету"
 
@@ -10397,7 +10363,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Examples"
 #~ msgstr "Мысалдар"
 
-#~| msgid "Shortcuts"
 #~ msgid "Shortcut Settings"
 #~ msgstr "Жарлықтар"
 
@@ -10407,7 +10372,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "System settings"
 #~ msgstr "Жүйелік баптаулар"
 
-#~| msgid "Brightness and Lock"
 #~ msgid "Brightness & Lock"
 #~ msgstr "Жарықтылық пен блоктау"
 
@@ -10441,11 +10405,9 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Options..."
 #~ msgstr "Опциялар..."
 
-#~| msgid "Filter"
 #~ msgid "Fair"
 #~ msgstr "Фильтр"
 
-#~| msgid "_Options..."
 #~ msgid "Map Buttons..."
 #~ msgstr "_Опциялар..."
 
@@ -10467,7 +10429,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Colors & Gradients"
 #~ msgstr "Түстер мен градиенттер"
 
-#~| msgid "Action"
 #~ msgid "Acti_on:"
 #~ msgstr "Әре_кет:"
 
@@ -10477,7 +10438,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "_Left-handed"
 #~ msgstr "_Солақай"
 
-#~| msgid "_Acceleration:"
 #~ msgid "A_cceleration:"
 #~ msgstr "Үд_ету:"
 
@@ -10487,12 +10447,10 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "_Disabled"
 #~ msgstr "Сөн_дірулі"
 
-#~| msgid "Other"
 #~ msgctxt "Wireless access point"
 #~ msgid "Other..."
 #~ msgstr "Басқа..."
 
-#~| msgid "Disabled"
 #~ msgid "Disable VPN"
 #~ msgstr "Сөндірулі"
 
@@ -10511,15 +10469,12 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "%.0lf%% charged"
 #~ msgstr "%.0lf%% зарядталған"
 
-#~| msgid "_Language:"
 #~ msgid "Remove Language"
 #~ msgstr "Тілді өшіру"
 
-#~| msgid "Layout"
 #~ msgid "Remove Layout"
 #~ msgstr "Жайманы өшіру"
 
-#~| msgid "Preview:"
 #~ msgid "Preview Layout"
 #~ msgstr "Жайманы алдын-ала қарау"
 
@@ -10551,15 +10506,12 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Dasher"
 #~ msgstr "Dasher"
 
-#~| msgid "None"
 #~ msgid "Nomon"
 #~ msgstr "Ешнәрсе"
 
-#~| msgid "Change your password"
 #~ msgid "Change contrast:"
 #~ msgstr "Контрастты өзгерту"
 
-#~| msgid "Zoom"
 #~ msgctxt "universal access, seeing"
 #~ msgid "Zoom"
 #~ msgstr "Масштаб"

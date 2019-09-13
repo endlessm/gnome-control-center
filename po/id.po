@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:20-0700\n"
+"POT-Creation-Date: 2019-09-18 14:28-0700\n"
 "PO-Revision-Date: 2019-08-29 14:16+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
@@ -289,7 +289,7 @@ msgstr "Penyimpanan"
 
 #: panels/applications/cc-applications-panel.ui:413
 msgid "Open in App Center"
-msgstr ""
+msgstr "Buka di Pusat Aplikasi"
 
 #: panels/applications/cc-applications-panel.ui:463 shell/cc-panel-list.ui:190
 msgid "No results found"
@@ -1451,7 +1451,7 @@ msgstr "Terang Malam"
 #: panels/display/cc-display-settings.c:104
 msgctxt "Display rotation"
 msgid "Landscape"
-msgstr "Landsekap"
+msgstr "Lanskap"
 
 #: panels/display/cc-display-settings.c:107
 msgctxt "Display rotation"
@@ -1466,7 +1466,7 @@ msgstr "Potret Kiri"
 #: panels/display/cc-display-settings.c:113
 msgctxt "Display rotation"
 msgid "Landscape (flipped)"
-msgstr "Landsekap (dijungkir)"
+msgstr "Lanskap (dijungkir)"
 
 #: panels/display/cc-display-settings.c:193
 #, c-format
@@ -1640,9 +1640,8 @@ msgid "Device name"
 msgstr "Nama perangkat"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Versi 0"
+msgstr "Versi"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -1676,12 +1675,12 @@ msgstr "Menghitung…"
 #. Translators: A label to inform the user that the check-for-updates link that used to be here has been moved to the App Center.
 #: panels/info/cc-info-overview-panel.ui:306
 msgid "<i>OS updates are now managed in the App Center</i>"
-msgstr ""
+msgstr "<i>Pembaruan OS kini dikelola oleh Pusat Aplikasi</i>"
 
 #. Translators: A link to the terms of use of Endless OS.
 #: panels/info/cc-info-overview-panel.ui:320
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
-msgstr ""
+msgstr "<a href='attribution-link'>Syarat Penggunaan Endless</a>"
 
 #: panels/info/cc-info-removable-media-panel.c:307
 msgid "Ask what to do"
@@ -2533,7 +2532,6 @@ msgstr "Tak pernah"
 msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "%i hari yang lalu"
-msgstr[1] "%i hari yang lalu"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -2704,13 +2702,12 @@ msgid "Make available to _other users"
 msgstr "Jadikan tersedia bagi pengg_una lain"
 
 #: panels/network/connection-editor/details-page.ui:376
-#, fuzzy
 msgid "Restrict _background data usage"
-msgstr "Batasi penggunaan data di belakang"
+msgstr "_Batasi pemakaian data latar"
 
 #: panels/network/connection-editor/details-page.ui:387
 msgid "Appropriate for connections that have data charges or limits."
-msgstr "Cocok untuk koneksi yang memiliki biaya atau batas data."
+msgstr "Cocok untuk koneksi yang mengenakan biaya atau membatasi data."
 
 #: panels/network/connection-editor/ethernet-page.ui:16
 #: panels/network/connection-editor/ethernet-page.ui:39
@@ -4137,14 +4134,12 @@ msgstr "Waktu tak diketahui"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i menit"
-msgstr[1] "%i menit"
 
 #: panels/power/cc-power-panel.c:336
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i jam"
-msgstr[1] "%i jam"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4157,13 +4152,11 @@ msgstr "%i %s %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "jam"
-msgstr[1] "jam"
 
 #: panels/power/cc-power-panel.c:346
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "menit"
-msgstr[1] "menit"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:364
@@ -4191,7 +4184,7 @@ msgstr "Terisi penuh"
 #. TRANSLATORS: primary battery
 #: panels/power/cc-power-panel.c:385 panels/power/cc-power-panel.c:415
 msgid "Not charging"
-msgstr "Tidak Mengisi"
+msgstr "Tidak mengisi"
 
 #. TRANSLATORS: primary battery
 #: panels/power/cc-power-panel.c:389 panels/power/cc-power-panel.c:419
@@ -4314,21 +4307,18 @@ msgstr "Batera"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d jam"
-msgstr[1] "%d jam"
 
 #: panels/power/cc-power-panel.c:1267
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d menit"
-msgstr[1] "%d menit"
 
 #: panels/power/cc-power-panel.c:1270
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d detik"
-msgstr[1] "%d detik"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/power/cc-power-panel.c:1275
@@ -4888,7 +4878,6 @@ msgstr "Selesai"
 msgid "%u Job Requires Authentication"
 msgid_plural "%u Jobs Require Authentication"
 msgstr[0] "%u Tugas Memerlukan Autentikasi"
-msgstr[1] "%u Tugas Memerlukan Autentikasi"
 
 #. Translators: This is the printer name for which we are showing the active jobs
 #: panels/printers/pp-jobs-dialog.c:613
@@ -5101,7 +5090,6 @@ msgstr "Tidak Ada Tugas Aktif"
 msgid "%u Job"
 msgid_plural "%u Jobs"
 msgstr[0] "%u Tugas"
-msgstr[1] "%u Tugas"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:766
@@ -5316,7 +5304,6 @@ msgstr "Nyala"
 
 #: panels/privacy/cc-privacy-panel.c:1075
 #: panels/privacy/cc-privacy-panel.ui:280
-#, fuzzy
 msgid "Metrics"
 msgstr "Metrik"
 
@@ -5541,10 +5528,13 @@ msgid ""
 "Endless collects metrics on user behavior and actions. All data sent is "
 "anonymous. We use the data to improve the system."
 msgstr ""
+"Endless mengumpulkan data mengenai perilaku dan aktifitas pengguna. Semua "
+"data yang dikirimkan bersifat anonim. Kami menggunakan data tersebut untuk "
+"meningkatkan kinerja sistem."
 
 #: panels/privacy/cc-privacy-panel.ui:351
 msgid "Enable Metrics Collection"
-msgstr ""
+msgstr "Aktifkan Pengiriman Metrik"
 
 #: panels/privacy/cc-privacy-panel.ui:413
 msgid "The Screen Lock protects your privacy when you are away."
@@ -5732,29 +5722,25 @@ msgid "No input sources found"
 msgstr "Sumber masukan tak ditemukan"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Lainnya"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Tombol Pintas"
+msgstr "Tambahkan Tata Letak Keyboard"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Metoda masukan tak dapat dipakai pada layar log masuk"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Akun %s"
+msgstr "Akun Saya"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Layar Log Ma_suk"
+msgstr "Layar Log Masuk"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:369
@@ -5774,9 +5760,8 @@ msgid "_Formats"
 msgstr "_Format"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Tombol Pintas"
+msgstr "Tata Letak Keyboard"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5793,9 +5778,8 @@ msgstr ""
 "sistem"
 
 #: panels/region/cc-region-panel.ui:381
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Tombol Pintas"
+msgstr "Pilihan Tata Letak Keyboard"
 
 #: panels/region/cc-region-panel.ui:396
 msgid "Use the _same source for all windows"
@@ -6289,7 +6273,6 @@ msgstr "Gagal melupakan perangkat: "
 msgid "Depends on %u other device"
 msgid_plural "Depends on %u other devices"
 msgstr[0] "Tergantung pada%u perangkat lain"
-msgstr[1] "Tergantung pada%u perangkat lain"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:109
 msgid "Name:"
@@ -6425,7 +6408,6 @@ msgstr "Terbesar"
 msgid "%d pixel"
 msgid_plural "%d pixels"
 msgstr[0] "%d piksel"
-msgstr[1] "%d piksel"
 
 #: panels/universal-access/cc-ua-panel.ui:78
 msgid "_Always Show Universal Access Menu"
@@ -6944,60 +6926,56 @@ msgid "Color Effects"
 msgstr "Efek Warna"
 
 #: panels/updates/cc-updates-panel.c:521
-#, fuzzy
 msgid "Limited data plan connection"
-msgstr "Tambah sambungan baru"
+msgstr "Koneksi paket data terbatas"
 
 #: panels/updates/cc-updates-panel.c:523
-#, fuzzy
 msgid "Unlimited data plan connection"
-msgstr "Tak bisa membuka penyunting koneksi"
+msgstr "Koneksi paket data tak terbatas"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Tambah sambungan baru"
+msgstr "Tak ada koneksi aktif"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Dapat mengubah pengaturan"
+msgstr "Ganti Pengaturan Jaringan..."
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Route Otomatis"
+msgstr "Pembaruan Otomatis"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Izinkan pembaruan latar terjadi secara otomatis pada koneksi ini. Ini "
+"umumnya berupa aplikasi yang ditingkatkan, konten baru atau pembaruan untuk "
+"Endless OS."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Jadwal"
+msgstr "Pembaruan Terjadwal"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Ciptakan celah harian untuk pembaruan agar berlangsung otomatis."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Route Otomatis"
+msgstr "Jadwalkan pembaruan otomatis"
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:6
 msgid "software-update-available"
-msgstr ""
+msgstr "software-update-available"
 
 #. Translators: those are keywords for the automatic updates control-center panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
-msgstr ""
+msgstr "Pembaruan;Otomatis;Latar;"
 
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
@@ -7082,7 +7060,7 @@ msgstr "Ijinkan pengguna mengatur kata sandi saat _log masuk berikutnya"
 #: panels/user-accounts/cc-add-user-dialog.ui:284
 #: panels/user-accounts/cc-password-dialog.ui:266
 msgid "Do not re_quire a password when logging in"
-msgstr ""
+msgstr "Tida_k membutuhkan kata sandi saat log masuk"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:301
 #: panels/user-accounts/cc-password-dialog.ui:282
@@ -7095,9 +7073,8 @@ msgstr "_Konfirmasi"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:490
 #: panels/user-accounts/cc-password-dialog.ui:308
-#, fuzzy
 msgid "Password _Reminder"
-msgstr "Kata Sandi"
+msgstr "_Pengingat Kata Sandi"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:530
 #: panels/user-accounts/cc-add-user-dialog.ui:737
@@ -7125,22 +7102,20 @@ msgstr "Log Masuk _Enterprise"
 #: panels/user-accounts/cc-app-permissions.c:359
 #: panels/user-accounts/cc-app-permissions.c:431
 #: panels/user-accounts/cc-app-permissions.c:870
-#, fuzzy
 msgid "No Restriction"
-msgstr "Notifikasi"
+msgstr "Tak ada batasan"
 
 #: panels/user-accounts/cc-app-permissions.ui:15
-#, fuzzy
 msgid "Restrict Apps"
-msgstr "Nyalakan Ulang"
+msgstr "Membatasi aplikasi"
 
 #: panels/user-accounts/cc-app-permissions.ui:30
 msgid "Prevent this user from opening some apps by turning them off below."
-msgstr ""
+msgstr "Mencegah Pengguna ini membuka beberapa aplikasi."
 
 #: panels/user-accounts/cc-app-permissions.ui:78
 msgid "Restrict Web Browsers"
-msgstr ""
+msgstr "Batasi Peramban Web"
 
 #: panels/user-accounts/cc-app-permissions.ui:93
 msgid ""
@@ -7148,27 +7123,29 @@ msgid ""
 "that if the computer is connected to the internet, limited web content may "
 "still be available in other applications."
 msgstr ""
+"Cegah pengguna ini menjalankan peramban web dengan mematikannya di bawah. "
+"Harap dicatat bahwa jika komputer terhubung ke internet, konten web dalam "
+"porsi terbatas masih akan tersedia di aplikasi lain."
 
 #: panels/user-accounts/cc-app-permissions.ui:120
 msgid "Web _Browsers"
-msgstr ""
+msgstr "Peramban _Web"
 
 #: panels/user-accounts/cc-app-permissions.ui:153
 msgid "App Center Restrictions"
-msgstr ""
+msgstr "Batasan Pusat Aplikasi"
 
 #: panels/user-accounts/cc-app-permissions.ui:173
-#, fuzzy
 msgid "App _Installation"
-msgstr "Opsi Dapat Dipasang"
+msgstr "Instalasi _Aplikasi"
 
 #: panels/user-accounts/cc-app-permissions.ui:209
 msgid "Install Apps for All _Users"
-msgstr ""
+msgstr "Instal Aplikasi untuk Semua _Pengguna"
 
 #: panels/user-accounts/cc-app-permissions.ui:245
 msgid "Show Apps _Suitable For"
-msgstr ""
+msgstr "Tampilkan Aplikasi yang _Cocok Untuk"
 
 #: panels/user-accounts/cc-avatar-chooser.c:232
 msgid "Browse for more pictures"
@@ -7542,11 +7519,10 @@ msgstr "system-users"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
-#, fuzzy
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental;Restrict;"
 "Restrictions;"
-msgstr "Login;Nama;Sidik jari;Avatar;Logo;Muka;Kata Sandi;"
+msgstr "Login;Nama;Sidik jari;Avatar;Logo;Muka;Sandi;"
 
 #. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
@@ -7578,496 +7554,495 @@ msgstr "Kata Sandi Administrator"
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:76
 msgid "No cartoon violence"
-msgstr ""
+msgstr "Tidak ada kekerasan kartun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:79
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Karakter kartun dalam situasi yang tidak aman"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:82
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Karakter kartun dalam konflik agresif"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:85
 msgid "Graphic violence involving cartoon characters"
-msgstr ""
+msgstr "Kekerasan grafis yang melibatkan karakter kartun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:88
 msgid "No fantasy violence"
-msgstr ""
+msgstr "Tidak ada kekerasan fantasi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:91
 msgid "Characters in unsafe situations easily distinguishable from reality"
 msgstr ""
+"Karakter dalam situasi yang tidak aman dengan mudah dibedakan dari realitas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:94
 msgid "Characters in aggressive conflict easily distinguishable from reality"
-msgstr ""
+msgstr "Karakter dalam konflik agresif dengan mudah dibedakan dari realitas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:97
 msgid "Graphic violence easily distinguishable from reality"
-msgstr ""
+msgstr "Kekerasan grafis dengan mudah dibedakan dari realitas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:100
 msgid "No realistic violence"
-msgstr ""
+msgstr "Tidak ada kekerasan realistis"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:103
 msgid "Mildly realistic characters in unsafe situations"
-msgstr ""
+msgstr "Sedikit karakter realistis dalam situasi yang tidak aman"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:106
 msgid "Depictions of realistic characters in aggressive conflict"
-msgstr ""
+msgstr "Penggambaran karakter yang realistis dalam konflik agresif"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:109
 msgid "Graphic violence involving realistic characters"
-msgstr ""
+msgstr "Kekerasan grafis yang melibatkan karakter yang realistis"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:112
 msgid "No bloodshed"
-msgstr ""
+msgstr "Tidak ada pertumpahan darah"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:115
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Pertumpahan darah yang tidak realistis"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:118
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Pertumpahan darah yang realistis"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:121
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Penggambaran pertumpahan darah dan mutilasi bagian tubuh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:124
 msgid "No sexual violence"
-msgstr ""
+msgstr "Tidak ada kekerasan seksual"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:127
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Perkosaan atau perilaku seksual kekerasan lainnya"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:130
-#, fuzzy
 msgid "No references to alcohol"
-msgstr "preferences-color"
+msgstr "Tidak ada referensi untuk alkohol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:133
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Referensi untuk minuman beralkohol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Penggunaan minuman beralkohol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:139
 msgid "No references to illicit drugs"
-msgstr ""
+msgstr "Tidak ada referensi untuk obat-obatan terlarang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:142
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Referensi untuk obat-obatan terlarang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:145
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Penggunaan obat-obatan terlarang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:148
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Referensi untuk produk tembakau"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:151
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Penggunaan produk tembakau"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:154
 msgid "No nudity of any sort"
-msgstr ""
+msgstr "Tidak ada ketelanjangan apapun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:157
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Ketelanjangan artistik singkat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:160
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Ketelanjangan berkepanjangan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:163
 msgid "No references or depictions of sexual nature"
-msgstr ""
+msgstr "Tidak ada referensi atau penggambaran alam seksual"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:166
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Referensi provokatif atau penggambaran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:169
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Referensi seksual atau penggambaran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:172
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Perilaku seksual grafis"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:175
 msgid "No profanity of any kind"
-msgstr ""
+msgstr "Tidak ada kata-kata tidak senonoh apapun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:178
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Penggunaan ringan atau jarang kata-kata tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:181
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Penggunaan sedang kata-kata tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:184
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Penggunaan kuat atau sering kata-kata tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:187
 msgid "No inappropriate humor"
-msgstr ""
+msgstr "Tidak ada humor yang tidak pantas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:190
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Humor slapstick"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:193
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Vulgar atau humor kamar mandi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:196
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Humor dewasa atau seksual"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:199
 msgid "No discriminatory language of any kind"
-msgstr ""
+msgstr "Tidak ada bahasa diskriminatif apapun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:202
 msgid "Negativity towards a specific group of people"
-msgstr ""
+msgstr "Negatif terhadap sekelompok orang tertentu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:205
 msgid "Discrimination designed to cause emotional harm"
-msgstr ""
+msgstr "Diskriminasi dirancang untuk menyebabkan kerusakan emosional"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:208
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
-msgstr ""
+msgstr "Diskriminasi eksplisit berdasarkan gender, seksualitas, ras atau agama"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:211
 msgid "No advertising of any kind"
-msgstr ""
+msgstr "Tidak ada iklan jenis apapun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:214
 msgid "Product placement"
-msgstr ""
+msgstr "Penempatan produk"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:217
 msgid "Explicit references to specific brands or trademarked products"
 msgstr ""
+"Referensi eksplisit untuk merek tertentu atau produk dengan merek dagang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Pengguna dianjurkan untuk membeli barang dunia nyata tertentu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:223
 msgid "No gambling of any kind"
-msgstr ""
+msgstr "Tidak ada perjudian jenis apapun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:226
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Perjudian pada peristiwa acak menggunakan token atau kredit"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:229
 msgid "Gambling using “play” money"
-msgstr ""
+msgstr "Perjudian menggunakan \"permainan\" uang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:232
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Perjudian menggunakan uang riil"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:235
 msgid "No ability to spend money"
-msgstr ""
+msgstr "Tidak ada kemampuan membelanjakan uang"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
-msgstr ""
+msgstr "Pengguna dianjurkan untuk menyumbangkan uang sungguhan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:241
 msgid "Ability to spend real money in-game"
-msgstr ""
+msgstr "Kemampuan untuk menghabiskan uang riil dalam game"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:244
-#, fuzzy
 msgid "No way to chat with other users"
-msgstr "Kendalikan apa yang ingin Anda bagikan dengan orang lain"
+msgstr "Tidak ada cara untuk mengobrol dengan pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:247
 msgid "User-to-user game interactions without chat functionality"
-msgstr ""
+msgstr "Antarmuka pengguna ke pengguna tanpa fungsi obrolan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
-msgstr ""
+msgstr "Moderasi fungsi obrolan antar pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Fungsi obrolan yang tidak terkontrol antara pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:256
-#, fuzzy
 msgid "No way to talk with other users"
-msgstr "Kendalikan apa yang ingin Anda bagikan dengan orang lain"
+msgstr "Tidak ada cara untuk berbicara dengan pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
-msgstr ""
+msgstr "Fungsi obrolan audio atau video yang tidak terkontrol antara pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
-msgstr ""
+msgstr "Tidak berbagi alamat surel atau nama pengguna media sosial"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
-msgstr ""
+msgstr "Berbagai nama pengguna jejaring sosial atau alamat surel"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
-msgstr ""
+msgstr "Tidak berbagi informasi pengguna dengan pihak ke-3"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:271
 msgid "Checking for the latest application version"
-msgstr ""
+msgstr "Memeriksa versi aplikasi terbaru"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:274
 msgid "Sharing diagnostic data that does not let others identify the user"
 msgstr ""
+"Berbagi data diagnostik yang tidak membiarkan orang lain mengidentifikasi "
+"pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
 msgstr ""
+"Berbagi informasi yang memungkinkan orang lain mengidentifikasi pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:280
 msgid "No sharing of physical location to other users"
-msgstr ""
+msgstr "Tidak berbagi lokasi fisik ke pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:283
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Berbagi lokasi fisik ke pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:288
 msgid "No references to homosexuality"
-msgstr ""
+msgstr "Tidak ada referensi untuk homoseksualitas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:291
 msgid "Indirect references to homosexuality"
-msgstr ""
+msgstr "Tidak ada referensi untuk homoseksualitas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:294
 msgid "Kissing between people of the same gender"
-msgstr ""
+msgstr "Berciuman antara orang-orang dengan jenis kelamin yang sama"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:297
 msgid "Graphic sexual behavior between people of the same gender"
-msgstr ""
+msgstr "Perilaku seksual grafis antara orang dengan jenis kelamin yang sama"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:300
 msgid "No references to prostitution"
-msgstr ""
+msgstr "Tidak ada referensi untuk prostitusi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:303
 msgid "Indirect references to prostitution"
-msgstr ""
+msgstr "Referensi tidak langsung untuk prostitusi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:306
 msgid "Direct references to prostitution"
-msgstr ""
+msgstr "Referensi langsung ke prostitusi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:309
 msgid "Graphic depictions of the act of prostitution"
-msgstr ""
+msgstr "Penggambaran grafis dari prostitusi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:312
-#, fuzzy
 msgid "No references to adultery"
-msgstr "preferences-color"
+msgstr "Tidak ada referensi untuk perzinaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:315
 msgid "Indirect references to adultery"
-msgstr ""
+msgstr "Referensi tidak langsung untuk perzinaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:318
 msgid "Direct references to adultery"
-msgstr ""
+msgstr "Referensi langsung ke perzinaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:321
 msgid "Graphic depictions of the act of adultery"
-msgstr ""
+msgstr "Penggambaran grafis dari tindakan perzinaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:324
 msgid "No sexualized characters"
-msgstr ""
+msgstr "Tidak ada karakter seksual"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:327
 msgid "Scantily clad human characters"
-msgstr ""
+msgstr "Karakter manusia berpakaian minim"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:330
 msgid "Overtly sexualized human characters"
-msgstr ""
+msgstr "Karakter manusia seksual secara menyeluruh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:333
-#, fuzzy
 msgid "No references to desecration"
-msgstr "preferences-system-notifications"
+msgstr "Tidak ada referensi untuk penodaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:336
 msgid "Depictions or references to historical desecration"
-msgstr ""
+msgstr "Penggambaran atau referensi tentang penodaan sejarah"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:339
 msgid "Depictions of modern-day human desecration"
-msgstr ""
+msgstr "Penggambaran tentang penodaan manusia zaman modern"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:342
 msgid "Graphic depictions of modern-day desecration"
-msgstr ""
+msgstr "Penggambaran grafis tentang penodaan modern"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:345
 msgid "No visible dead human remains"
-msgstr ""
+msgstr "Tidak ada sisa manusia mati yang terlihat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:348
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Sisa manusia mati yang terlihat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:351
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Sisa manusia mati yang terpapar unsur"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:354
 msgid "Graphic depictions of desecration of human bodies"
-msgstr ""
+msgstr "Penggambaran grafis penodaan tubuh manusia"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:357
-#, fuzzy
 msgid "No references to slavery"
-msgstr "preferences-color"
+msgstr "Tidak ada referensi untuk perbudakan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:360
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Penggambaran atau referensi tentang perbudakan sejarah"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:363
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Penggambaran perbudakan modern"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:366
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Penggambaran grafis tentang perbudakan modern"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:11
 msgid "Manage user accounts"
@@ -8700,7 +8675,6 @@ msgstr ""
 msgid "%u Output"
 msgid_plural "%u Outputs"
 msgstr[0] "%u Keluaran"
-msgstr[1] "%u Keluaran"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8709,7 +8683,6 @@ msgstr[1] "%u Keluaran"
 msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u Masukan"
-msgstr[1] "%u Masukan"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
@@ -8785,7 +8758,7 @@ msgstr "Suara Sistem"
 
 #~ msgctxt "background, style"
 #~ msgid "Zoom"
-#~ msgstr "Zum"
+#~ msgstr "Perbesaran"
 
 #~ msgctxt "background, style"
 #~ msgid "Center"

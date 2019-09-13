@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:20-0700\n"
+"POT-Creation-Date: 2019-09-18 14:28-0700\n"
 "PO-Revision-Date: 2019-09-03 19:10+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
@@ -1652,9 +1652,8 @@ msgid "Device name"
 msgstr "Název zařízení"
 
 #: panels/info/cc-info-overview-panel.ui:70
-#, fuzzy
 msgid "Version"
-msgstr "Verze 0"
+msgstr "Verze"
 
 #: panels/info/cc-info-overview-panel.ui:86
 msgid "Memory"
@@ -1688,12 +1687,12 @@ msgstr "Počítá se…"
 #. Translators: A label to inform the user that the check-for-updates link that used to be here has been moved to the App Center.
 #: panels/info/cc-info-overview-panel.ui:306
 msgid "<i>OS updates are now managed in the App Center</i>"
-msgstr ""
+msgstr "<i>Aktualizace OS jsou nyní spravovány v Centru aplikací</i>"
 
 #. Translators: A link to the terms of use of Endless OS.
 #: panels/info/cc-info-overview-panel.ui:320
 msgid "<a href='attribution-link'>Endless Terms of Use</a>"
-msgstr ""
+msgstr "Podmínky použití OS Endless"
 
 #: panels/info/cc-info-removable-media-panel.c:307
 msgid "Ask what to do"
@@ -2555,6 +2554,7 @@ msgid_plural "%i days ago"
 msgstr[0] "před %i dnem"
 msgstr[1] "před %i dny"
 msgstr[2] "před %i dny"
+msgstr[3] "před %i dny"
 
 #. Translators: network device speed
 #: panels/network/connection-editor/ce-page-details.c:228
@@ -2728,13 +2728,12 @@ msgid "Make available to _other users"
 msgstr "Zpřístupnit _ostatním uživatelům"
 
 #: panels/network/connection-editor/details-page.ui:376
-#, fuzzy
 msgid "Restrict _background data usage"
-msgstr "Omezit použití pro data na pozadí"
+msgstr "Omezit používání dat na pozadí"
 
 #: panels/network/connection-editor/details-page.ui:387
 msgid "Appropriate for connections that have data charges or limits."
-msgstr "Určeno pro připojení, u kterých jsou přenosy účtované nebo omezené."
+msgstr "Vhodné pro připojení, která mají datové poplatky či omezení."
 
 #: panels/network/connection-editor/ethernet-page.ui:16
 #: panels/network/connection-editor/ethernet-page.ui:39
@@ -4171,6 +4170,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minuta"
 msgstr[1] "%i minuty"
 msgstr[2] "%i minut"
+msgstr[3] "%i minut"
 
 #: panels/power/cc-power-panel.c:336
 #, c-format
@@ -4179,6 +4179,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i hodina"
 msgstr[1] "%i hodiny"
 msgstr[2] "%i hodin"
+msgstr[3] "%i hodin"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4193,6 +4194,7 @@ msgid_plural "hours"
 msgstr[0] "hodina"
 msgstr[1] "hodiny"
 msgstr[2] "hodin"
+msgstr[3] "hodin"
 
 #: panels/power/cc-power-panel.c:346
 msgid "minute"
@@ -4200,6 +4202,7 @@ msgid_plural "minutes"
 msgstr[0] "minuta"
 msgstr[1] "minuty"
 msgstr[2] "minut"
+msgstr[3] "minut"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:364
@@ -5146,6 +5149,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u úloha"
 msgstr[1] "%u úlohy"
 msgstr[2] "%u úloh"
+msgstr[3] "%u úloh"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:766
@@ -5772,29 +5776,25 @@ msgid "No input sources found"
 msgstr "Žádné vstupní zdroje nenalezeny"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
-msgstr "Ostatní"
+msgstr "Další"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Klávesové zkratky"
+msgstr "Přidat nové rozložení klávesnice"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Vstupní metody nemohou být použity na přihlašovací obrazovce"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Účet %s"
+msgstr "Můj účet"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Při_hlašovací obrazovka"
+msgstr "Obrazovka přihlašování"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:369
@@ -5814,9 +5814,8 @@ msgid "_Formats"
 msgstr "_Formáty"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Klávesové zkratky"
+msgstr "Rozložení klávesnice"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5833,9 +5832,8 @@ msgstr ""
 "systému"
 
 #: panels/region/cc-region-panel.ui:381
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Klávesové zkratky"
+msgstr "Možnosti rozložení klávesnice"
 
 #: panels/region/cc-region-panel.ui:396
 msgid "Use the _same source for all windows"
@@ -6472,6 +6470,7 @@ msgid_plural "%d pixels"
 msgstr[0] "%d pixel"
 msgstr[1] "%d pixely"
 msgstr[2] "%d pixelů"
+msgstr[3] "%d pixelů"
 
 #: panels/universal-access/cc-ua-panel.ui:78
 msgid "_Always Show Universal Access Menu"
@@ -7000,41 +6999,39 @@ msgid "Unlimited data plan connection"
 msgstr "Nelze otevřít editor připojení"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Přidat nové připojení"
+msgstr "Žádné aktivní připojení"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Nastavení lze měnit"
+msgstr "Změnit nastavení sítě..."
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Automatické směrování"
+msgstr "Automatické aktualizace"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Povolit automatické aktualizace na pozadí na tomto připojení. Obvykle se "
+"jedná o aktualizace aplikací, stahování nového obsahu či aktualizací OS "
+"Endless."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Plánování"
+msgstr "Plánované aktualizace"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Vyberte, kdy během dne mohou automatické aktualizace probíhat."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Automatické směrování"
+msgstr "Naplánujte automatické aktualizace"
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:6
 msgid "software-update-available"
@@ -7628,289 +7625,290 @@ msgstr "Heslo správce"
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:76
 msgid "No cartoon violence"
-msgstr ""
+msgstr "Žádné kreslené násilí"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:79
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Kreslené postavy v nebezpečných situacích"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:82
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Kreslené postavy v agresivních střetech"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:85
 msgid "Graphic violence involving cartoon characters"
-msgstr ""
+msgstr "Grafické vyobrazení násilí páchaného na kreslených postavách"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:88
 msgid "No fantasy violence"
-msgstr ""
+msgstr "Žádné fantazie o násilí"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:91
 msgid "Characters in unsafe situations easily distinguishable from reality"
-msgstr ""
+msgstr "Osoby v nebezpečných situacích snadno odlišitelných od skutečnosti"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:94
 msgid "Characters in aggressive conflict easily distinguishable from reality"
-msgstr ""
+msgstr "Osoby v agresivních střetech snadno odlišitelných od skutečnosti"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:97
 msgid "Graphic violence easily distinguishable from reality"
-msgstr ""
+msgstr "Grafické násilí snadno odlišitelné od reality"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:100
 msgid "No realistic violence"
-msgstr ""
+msgstr "Žádné realistické násilí"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:103
 msgid "Mildly realistic characters in unsafe situations"
-msgstr ""
+msgstr "Mírně realistické osoby v nebezpečných situacích"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:106
 msgid "Depictions of realistic characters in aggressive conflict"
-msgstr ""
+msgstr "Vyobrazení skutečných osob v agresivních konfliktech"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:109
 msgid "Graphic violence involving realistic characters"
-msgstr ""
+msgstr "Grafické násilí páchané na skutečných osobách"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:112
 msgid "No bloodshed"
-msgstr ""
+msgstr "Žádné zabíjení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:115
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Nerealistické zabíjení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:118
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Realistické zabíjení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:121
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Vyobrazení krveprolití a mrzačení lidí"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:124
 msgid "No sexual violence"
-msgstr ""
+msgstr "Žádné sexuální násilí"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:127
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Znásilnění nebo jiné násilné sexuální chování"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:130
 msgid "No references to alcohol"
-msgstr ""
+msgstr "Žádné zmínky o alkoholu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:133
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Zmínky o alkoholických nápojích"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Požívání alkoholických nápojů"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:139
 msgid "No references to illicit drugs"
-msgstr ""
+msgstr "Žádné zmínky o zakázaných drogách"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:142
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Zmínky o zakázaných drogách"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:145
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Používání zakázaných drog"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:148
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Zmínky o tabákových výrobcích"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:151
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Používání tabákových výrobků"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:154
 msgid "No nudity of any sort"
-msgstr ""
+msgstr "Žádná nahota jakéhokoliv typu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:157
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Občasná umělecká nahota"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:160
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Dlouhotrvající nahota"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:163
 msgid "No references or depictions of sexual nature"
-msgstr ""
+msgstr "Žádné zmínky o sexu nebo jeho vyobrazení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:166
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Provokativní zmínky nebo vyobrazení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:169
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Zmínky o sexu nebo jeho vyobrazení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:172
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Grafické znázornění sexuálního chování"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:175
 msgid "No profanity of any kind"
-msgstr ""
+msgstr "Žádné vulgární výrazy jakéhokoliv typu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:178
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Lehké nebo občasné používání vulgárních výrazů"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:181
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Střídmé používání vulgárních výrazů"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:184
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Hrubé nebo časté používání vulgárních výrazů"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:187
 msgid "No inappropriate humor"
-msgstr ""
+msgstr "Žádný nevhodný humor"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:190
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Bláznivý humor"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:193
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Vulgární nebo postelový humor"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:196
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Humor o sexu a pro dospělé"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:199
 msgid "No discriminatory language of any kind"
-msgstr ""
+msgstr "Žádné diskriminační řeči jakéhokoliv druhu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:202
 msgid "Negativity towards a specific group of people"
-msgstr ""
+msgstr "Špatný pohled na konkrétní skupinu lidí"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:205
 msgid "Discrimination designed to cause emotional harm"
-msgstr ""
+msgstr "Diskriminace cílící na způsobení citové újmy"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:208
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
 msgstr ""
+"Výslovná diskriminace založená na pohlaví, sexuální orientaci, rase nebo "
+"náboženství"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:211
 msgid "No advertising of any kind"
-msgstr ""
+msgstr "Žádná reklama jakéhokoliv druhu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:214
 msgid "Product placement"
-msgstr ""
+msgstr "Vyobrazení produktů"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:217
 msgid "Explicit references to specific brands or trademarked products"
-msgstr ""
+msgstr "Výslovné odkazy na konkrétní výrobce nebo značky výrobků"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Uživatelé jsou vybízení k nákupu konkrétního skutečného zboží"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:223
 msgid "No gambling of any kind"
-msgstr ""
+msgstr "Žádné hraní jakéhokoliv druhu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:226
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Příležitostné hraní s žetony nebo kreditem"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:229
 msgid "Gambling using “play” money"
-msgstr ""
+msgstr "Hraní o fiktivní peníze"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:232
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Hraní o skutečné peníze"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:235
 msgid "No ability to spend money"
-msgstr ""
+msgstr "Žádná možnost prohrát skutečné peníze"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
-msgstr ""
+msgstr "Uživatelé jsou vybízení k přispění skutečnými penězi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:241
 msgid "Ability to spend real money in-game"
-msgstr ""
+msgstr "Možnost prohrát skutečné peníze"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:244
-#, fuzzy
 msgid "No way to chat with other users"
-msgstr "Určete, co chcete sdílet s ostatními"
+msgstr "Žádný způsob, jak komunikovat s ostatními uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:247
@@ -7920,145 +7918,145 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
-msgstr ""
+msgstr "Moderovaná textová komunikace mezi uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Neřízená textová komunikace mezi uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:256
-#, fuzzy
 msgid "No way to talk with other users"
-msgstr "Určete, co chcete sdílet s ostatními"
+msgstr "Žádný způsob, jako hovořit s ostatními uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
-msgstr ""
+msgstr "Neřízená zvuková nebo obrazová komunikace mezi uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
 msgstr ""
+"Žádné sdílení uživatelských jmen ze sociálních sítí a e-mailových adres"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
-msgstr ""
+msgstr "Sdílení uživatelských jmen ze sociálních sítí a e-mailových adres"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
-msgstr ""
+msgstr "Žádné sdílení informací o uživateli se třetími stranami"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:271
 msgid "Checking for the latest application version"
-msgstr ""
+msgstr "Zjišťuje se nejnovější verze aplikace"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:274
 msgid "Sharing diagnostic data that does not let others identify the user"
-msgstr ""
+msgstr "Sdílení diagnostických dat, dle kterých se nedá identifikovat uživatel"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
-msgstr ""
+msgstr "Sdílení informací, dle kterých se dá identifikovat uživatel"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:280
 msgid "No sharing of physical location to other users"
-msgstr ""
+msgstr "Žádné sdílení fyzické polohy s ostatními uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:283
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Sdílení fyzické polohy s ostatními uživateli"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:288
 msgid "No references to homosexuality"
-msgstr ""
+msgstr "Žádné zmínky o homosexualitě"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:291
 msgid "Indirect references to homosexuality"
-msgstr ""
+msgstr "Nepřímé zmínky o homosexualitě"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:294
 msgid "Kissing between people of the same gender"
-msgstr ""
+msgstr "Polibky dvou lidí stejného pohlaví"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:297
 msgid "Graphic sexual behavior between people of the same gender"
-msgstr ""
+msgstr "Grafické vyobrazení sexuálního chování mezi lidmi stejného pohlaví"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:300
 msgid "No references to prostitution"
-msgstr ""
+msgstr "Žádné zmínky o prostituci"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:303
 msgid "Indirect references to prostitution"
-msgstr ""
+msgstr "Nepřímé zmínky o prostituci"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:306
 msgid "Direct references to prostitution"
-msgstr ""
+msgstr "Přímé zmínky o prostituci"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:309
 msgid "Graphic depictions of the act of prostitution"
-msgstr ""
+msgstr "Grafické vyobrazení aktu prostituce"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:312
 msgid "No references to adultery"
-msgstr ""
+msgstr "Žádné zmínky o cizoložství"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:315
 msgid "Indirect references to adultery"
-msgstr ""
+msgstr "Nepřímé zmínky o cizoložství"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:318
 msgid "Direct references to adultery"
-msgstr ""
+msgstr "Přímé zmínky o cizoložství"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:321
 msgid "Graphic depictions of the act of adultery"
-msgstr ""
+msgstr "Grafické vyobrazení aktu cizoložství"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:324
 msgid "No sexualized characters"
-msgstr ""
+msgstr "Žádné sexualizované postavy"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:327
 msgid "Scantily clad human characters"
-msgstr ""
+msgstr "Skrovně oděné lidské postavy"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:330
 msgid "Overtly sexualized human characters"
-msgstr ""
+msgstr "Otevřeně sexualizované lidské postavy"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:333
 msgid "No references to desecration"
-msgstr ""
+msgstr "Žádné zmínky o znesvěcení"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:336
@@ -8068,37 +8066,37 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:339
 msgid "Depictions of modern-day human desecration"
-msgstr ""
+msgstr "Vyobrazení znesvěcení lidmi v moderní době"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:342
 msgid "Graphic depictions of modern-day desecration"
-msgstr ""
+msgstr "Grafické vyobrazení znesvěcení v moderní době"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:345
 msgid "No visible dead human remains"
-msgstr ""
+msgstr "Žádné viditelné pozůstatky lidských mrtvol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:348
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Viditelné pozůstatky lidských mrtvol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:351
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Ostatky lidských mrtvol zabrané do detailů"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:354
 msgid "Graphic depictions of desecration of human bodies"
-msgstr ""
+msgstr "Grafické vyobrazení znesvěcení lidských těl"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:357
 msgid "No references to slavery"
-msgstr ""
+msgstr "Žádné zmínky o otroctví"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:360
@@ -8108,12 +8106,12 @@ msgstr ""
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:363
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Vyobrazení otroctví v moderní době"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:366
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Grafické vyobrazení otroctví v moderní době"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:11
 msgid "Manage user accounts"
@@ -8748,6 +8746,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u výstup"
 msgstr[1] "%u výstupy"
 msgstr[2] "%u výstupů"
+msgstr[3] "%u výstupů"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8758,6 +8757,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u vstup"
 msgstr[1] "%u vstupy"
 msgstr[2] "%u vstupů"
+msgstr[3] "%u vstupů"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
