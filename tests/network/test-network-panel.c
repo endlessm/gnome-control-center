@@ -119,6 +119,7 @@ fixture_set_up_wired (NetworkPanelFixture  *fixture,
 
 /*****************************************************************************/
 
+#if 0  /* See /network-panel-wired/vpn-sorting note */
 static GtkWidget*
 find_parent_of_type(GtkWidget *widget, GType parent)
 {
@@ -130,6 +131,7 @@ find_parent_of_type(GtkWidget *widget, GType parent)
 
   return NULL;
 }
+#endif
 
 /*****************************************************************************/
 
@@ -528,6 +530,7 @@ test_vpn_updating (NetworkPanelFixture  *fixture,
 
 /*****************************************************************************/
 
+#if 0  /* See note below, where this test is added */
 static void
 test_vpn_sorting (NetworkPanelFixture  *fixture,
                    gconstpointer         user_data)
@@ -634,6 +637,7 @@ test_vpn_sorting (NetworkPanelFixture  *fixture,
   g_assert_cmpint (g_list_index (list, a), <, g_list_index (list, b));
   g_list_free (list);
 }
+#endif
 
 /*****************************************************************************/
 
