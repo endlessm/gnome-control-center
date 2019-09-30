@@ -38,7 +38,7 @@
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="shadow-type">none</property>
-                <property name="valign">start</property>
+                <property name="valign">end</property>
                 <style>
                   <class name="desktop-preview" />
                 </style>
@@ -52,14 +52,36 @@
                       <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="label" translatable="yes">Activities</property>
+                        <property name="label" translatable="no">∞</property>
+                        <style>
+                          <class name="endless-icon" />
+                        </style>
                       </object>
                     </child>
 
-                    <child type="center">
-                      <object class="GtkLabel" id="desktop_clock_label">
+                    <child>
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="spacing">2</property>
+
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="icon-name">org.gnome.Software</property>
+                            <property name="pixel-size">6</property>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="icon-name">eos-app-org.gnome.Nautilus</property>
+                            <property name="pixel-size">6</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
 
@@ -93,6 +115,13 @@
                             <property name="can-focus">False</property>
                             <property name="icon-name">battery-low-symbolic</property>
                             <property name="pixel-size">6</property>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="GtkLabel" id="desktop_clock_label">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
                           </object>
                         </child>
                       </object>
