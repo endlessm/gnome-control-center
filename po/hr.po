@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:28-0700\n"
-"PO-Revision-Date: 2019-09-24 18:09+0000\n"
-"Last-Translator: Philip Chimento <philip.chimento@gmail.com>\n"
+"POT-Creation-Date: 2019-10-03 17:24+0100\n"
+"PO-Revision-Date: 2019-10-03 16:25+0000\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
 "Language-Team: Croatian (http://www.transifex.com/endless-os/gnome-control-center/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,7 +56,7 @@ msgstr "Ima pristup mreži"
 
 #: panels/applications/cc-applications-panel.c:586
 #: panels/applications/cc-applications-panel.c:588
-#: panels/search/cc-search-locations-dialog.c:292
+#: panels/search/cc-search-locations-dialog.c:293
 msgid "Home"
 msgstr "Osobna mapa"
 
@@ -356,7 +356,7 @@ msgstr "Odaberi sliku"
 #: panels/printers/pp-details-dialog.c:313
 #: panels/privacy/cc-privacy-panel.c:1270
 #: panels/region/cc-format-chooser.ui:24 panels/region/cc-input-chooser.ui:11
-#: panels/search/cc-search-locations-dialog.c:613
+#: panels/search/cc-search-locations-dialog.c:614
 #: panels/sharing/cc-sharing-panel.c:428
 #: panels/user-accounts/cc-add-user-dialog.ui:28
 #: panels/user-accounts/cc-avatar-chooser.c:107
@@ -415,10 +415,6 @@ msgstr "Trenutna pozadina"
 #: panels/background/cc-background-panel.ui:63
 msgid "Add Picture…"
 msgstr "Dodaj sliku…"
-
-#: panels/background/cc-background-preview.ui:55
-msgid "Activities"
-msgstr "Aktivnosti"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
@@ -1397,6 +1393,14 @@ msgstr "Zrcalo"
 msgid "Display Mode"
 msgstr "Način rada zalona"
 
+#: panels/display/cc-display-panel.ui:222
+msgid "Contains task bar"
+msgstr ""
+
+#: panels/display/cc-display-panel.ui:223
+msgid "Primary Display"
+msgstr "Glavni zaslon"
+
 #: panels/display/cc-display-panel.ui:245
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
@@ -1406,6 +1410,10 @@ msgstr "Povlačite zaslone kako bi se prilagodili vašim fizičkim postavkama za
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
 msgstr "Razmještaj zaslona"
+
+#: panels/display/cc-display-panel.ui:387
+msgid "Active Display"
+msgstr ""
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -5785,11 +5793,11 @@ msgstr "preferences-desktop-locale"
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Jezik;Raspored;Tipkovnica;ulaz;"
 
-#: panels/search/cc-search-locations-dialog.c:610
+#: panels/search/cc-search-locations-dialog.c:611
 msgid "Select Location"
 msgstr "Odaberi lokaciju"
 
-#: panels/search/cc-search-locations-dialog.c:614
+#: panels/search/cc-search-locations-dialog.c:615
 msgid "_OK"
 msgstr "_U redu"
 
@@ -6110,7 +6118,7 @@ msgstr "Glasnoća zvuka"
 msgid "Alert Sound"
 msgstr "Zvuk upozorenja"
 
-#: panels/sound/cc-volume-slider.c:93
+#: panels/sound/cc-volume-slider.c:92
 msgctxt "volume"
 msgid "100%"
 msgstr "100%"
@@ -8546,6 +8554,16 @@ msgstr "Prikaži upozorenje kada je pokrenuta razvojna inačica Postavki"
 msgid ""
 "Whether Settings should show a warning when running a development build."
 msgstr "Trebaju li Postavke prikazati upozorenje kada je pokrenuta razvojna inačica."
+
+#: shell/org.gnome.ControlCenter.gschema.xml:20
+msgid "Directories with avatar faces"
+msgstr ""
+
+#: shell/org.gnome.ControlCenter.gschema.xml:21
+msgid ""
+"Directories to override the default avatar faces installed by gnome-control-"
+"center."
+msgstr ""
 
 #. translators:
 #. * The number of sound outputs on a particular device

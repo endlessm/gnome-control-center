@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:28-0700\n"
-"PO-Revision-Date: 2019-09-24 17:53+0000\n"
+"POT-Creation-Date: 2019-10-03 17:24+0100\n"
+"PO-Revision-Date: 2019-10-03 16:25+0000\n"
 "Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
 "Language-Team: Latvian (http://www.transifex.com/endless-os/gnome-control-center/language/lv/)\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr "Ir piekļuve tīklam"
 
 #: panels/applications/cc-applications-panel.c:586
 #: panels/applications/cc-applications-panel.c:588
-#: panels/search/cc-search-locations-dialog.c:292
+#: panels/search/cc-search-locations-dialog.c:293
 msgid "Home"
 msgstr "Mājas"
 
@@ -361,7 +361,7 @@ msgstr ""
 #: panels/printers/pp-details-dialog.c:313
 #: panels/privacy/cc-privacy-panel.c:1270
 #: panels/region/cc-format-chooser.ui:24 panels/region/cc-input-chooser.ui:11
-#: panels/search/cc-search-locations-dialog.c:613
+#: panels/search/cc-search-locations-dialog.c:614
 #: panels/sharing/cc-sharing-panel.c:428
 #: panels/user-accounts/cc-add-user-dialog.ui:28
 #: panels/user-accounts/cc-avatar-chooser.c:107
@@ -420,10 +420,6 @@ msgstr "Pašreizējais fons"
 #: panels/background/cc-background-panel.ui:63
 msgid "Add Picture…"
 msgstr ""
-
-#: panels/background/cc-background-preview.ui:55
-msgid "Activities"
-msgstr "Aktivitātes"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
@@ -1402,6 +1398,14 @@ msgstr "Dublēt"
 msgid "Display Mode"
 msgstr "Displeja režīms"
 
+#: panels/display/cc-display-panel.ui:222
+msgid "Contains task bar"
+msgstr ""
+
+#: panels/display/cc-display-panel.ui:223
+msgid "Primary Display"
+msgstr "Primārais ekrāns"
+
 #: panels/display/cc-display-panel.ui:245
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
@@ -1411,6 +1415,10 @@ msgstr "Velciet displejus, lai tie atbilstu monitoru fiziskajam novietojumam. Iz
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
 msgstr "Displeju izkārtojums"
+
+#: panels/display/cc-display-panel.ui:387
+msgid "Active Display"
+msgstr ""
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -5790,11 +5798,11 @@ msgstr "preferences-desktop-locale"
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Valoda;Izkārtojums;Tastatūra;Ievade;"
 
-#: panels/search/cc-search-locations-dialog.c:610
+#: panels/search/cc-search-locations-dialog.c:611
 msgid "Select Location"
 msgstr "Izvēlieties vietu"
 
-#: panels/search/cc-search-locations-dialog.c:614
+#: panels/search/cc-search-locations-dialog.c:615
 msgid "_OK"
 msgstr "_Labi"
 
@@ -6115,7 +6123,7 @@ msgstr "Skaļums"
 msgid "Alert Sound"
 msgstr "Trauksmes skaņa"
 
-#: panels/sound/cc-volume-slider.c:93
+#: panels/sound/cc-volume-slider.c:92
 msgctxt "volume"
 msgid "100%"
 msgstr "100%"
@@ -8551,6 +8559,16 @@ msgstr "Rādīt brīdinājumus, kad palaiž “Iestatījumu” izstrādes būvē
 msgid ""
 "Whether Settings should show a warning when running a development build."
 msgstr "Vai “Iestatījumiem” vajadzētu rādīt brīdinājumu, kad palaiž izstrādes būvējumu."
+
+#: shell/org.gnome.ControlCenter.gschema.xml:20
+msgid "Directories with avatar faces"
+msgstr ""
+
+#: shell/org.gnome.ControlCenter.gschema.xml:21
+msgid ""
+"Directories to override the default avatar faces installed by gnome-control-"
+"center."
+msgstr ""
 
 #. translators:
 #. * The number of sound outputs on a particular device
