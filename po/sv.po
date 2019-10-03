@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:28-0700\n"
-"PO-Revision-Date: 2019-09-24 18:09+0000\n"
-"Last-Translator: Philip Chimento <philip.chimento@gmail.com>\n"
+"POT-Creation-Date: 2019-10-03 17:24+0100\n"
+"PO-Revision-Date: 2019-10-03 16:25+0000\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
 "Language-Team: Swedish (http://www.transifex.com/endless-os/gnome-control-center/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +64,7 @@ msgstr "Har nätverksåtkomst"
 
 #: panels/applications/cc-applications-panel.c:586
 #: panels/applications/cc-applications-panel.c:588
-#: panels/search/cc-search-locations-dialog.c:292
+#: panels/search/cc-search-locations-dialog.c:293
 msgid "Home"
 msgstr "Hem"
 
@@ -364,7 +364,7 @@ msgstr "Välj en bild"
 #: panels/printers/pp-details-dialog.c:313
 #: panels/privacy/cc-privacy-panel.c:1270
 #: panels/region/cc-format-chooser.ui:24 panels/region/cc-input-chooser.ui:11
-#: panels/search/cc-search-locations-dialog.c:613
+#: panels/search/cc-search-locations-dialog.c:614
 #: panels/sharing/cc-sharing-panel.c:428
 #: panels/user-accounts/cc-add-user-dialog.ui:28
 #: panels/user-accounts/cc-avatar-chooser.c:107
@@ -423,10 +423,6 @@ msgstr "Aktuell bakgrund"
 #: panels/background/cc-background-panel.ui:63
 msgid "Add Picture…"
 msgstr "Lägg till bild…"
-
-#: panels/background/cc-background-preview.ui:55
-msgid "Activities"
-msgstr "Aktiviteter"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
@@ -1405,6 +1401,14 @@ msgstr "Spegling"
 msgid "Display Mode"
 msgstr "Skärmläge"
 
+#: panels/display/cc-display-panel.ui:222
+msgid "Contains task bar"
+msgstr ""
+
+#: panels/display/cc-display-panel.ui:223
+msgid "Primary Display"
+msgstr "Primär skärm"
+
 #: panels/display/cc-display-panel.ui:245
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
@@ -1414,6 +1418,10 @@ msgstr "Dra skärmar så de överensstämmer med din fysiska skärmuppställning
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
 msgstr "Skärmuppställning"
+
+#: panels/display/cc-display-panel.ui:387
+msgid "Active Display"
+msgstr ""
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -5783,11 +5791,11 @@ msgstr "preferences-desktop-locale"
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Språk;Layout;Tangentbord;Inmatning;"
 
-#: panels/search/cc-search-locations-dialog.c:610
+#: panels/search/cc-search-locations-dialog.c:611
 msgid "Select Location"
 msgstr "Välj plats"
 
-#: panels/search/cc-search-locations-dialog.c:614
+#: panels/search/cc-search-locations-dialog.c:615
 msgid "_OK"
 msgstr "_OK"
 
@@ -6108,7 +6116,7 @@ msgstr "Volym"
 msgid "Alert Sound"
 msgstr "Larmljud"
 
-#: panels/sound/cc-volume-slider.c:93
+#: panels/sound/cc-volume-slider.c:92
 msgctxt "volume"
 msgid "100%"
 msgstr "100%"
@@ -8542,6 +8550,16 @@ msgstr "Visa en varning då en utvecklingsversion av Inställningar körs"
 msgid ""
 "Whether Settings should show a warning when running a development build."
 msgstr "Huruvida Inställningar ska visa en varning då en utvecklingsversion körs."
+
+#: shell/org.gnome.ControlCenter.gschema.xml:20
+msgid "Directories with avatar faces"
+msgstr ""
+
+#: shell/org.gnome.ControlCenter.gschema.xml:21
+msgid ""
+"Directories to override the default avatar faces installed by gnome-control-"
+"center."
+msgstr ""
 
 #. translators:
 #. * The number of sound outputs on a particular device

@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:28-0700\n"
-"PO-Revision-Date: 2019-09-24 18:15+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"POT-Creation-Date: 2019-10-03 17:24+0100\n"
+"PO-Revision-Date: 2019-10-03 16:24+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Malay (http://www.transifex.com/endless-os/gnome-control-center/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,7 +58,7 @@ msgstr "Mempunyai capaian rangkaian"
 
 #: panels/applications/cc-applications-panel.c:586
 #: panels/applications/cc-applications-panel.c:588
-#: panels/search/cc-search-locations-dialog.c:292
+#: panels/search/cc-search-locations-dialog.c:293
 msgid "Home"
 msgstr "Rumah"
 
@@ -286,7 +286,7 @@ msgstr "Buka dalam Pusat Apl"
 
 #: panels/applications/cc-applications-panel.ui:463 shell/cc-panel-list.ui:190
 msgid "No results found"
-msgstr ""
+msgstr "Tiada keputusan ditemui"
 
 #: panels/applications/cc-applications-panel.ui:474
 #: panels/keyboard/cc-keyboard-panel.ui:157 shell/cc-panel-list.ui:201
@@ -342,7 +342,7 @@ msgstr "Kertas Dinding"
 
 #: panels/background/cc-background-chooser.c:349
 msgid "Select a picture"
-msgstr ""
+msgstr "Pilih satu gambar"
 
 #: panels/background/cc-background-chooser.c:352
 #: panels/color/cc-color-panel.c:241 panels/color/cc-color-panel.c:894
@@ -358,7 +358,7 @@ msgstr ""
 #: panels/printers/pp-details-dialog.c:313
 #: panels/privacy/cc-privacy-panel.c:1270
 #: panels/region/cc-format-chooser.ui:24 panels/region/cc-input-chooser.ui:11
-#: panels/search/cc-search-locations-dialog.c:613
+#: panels/search/cc-search-locations-dialog.c:614
 #: panels/sharing/cc-sharing-panel.c:428
 #: panels/user-accounts/cc-add-user-dialog.ui:28
 #: panels/user-accounts/cc-avatar-chooser.c:107
@@ -381,19 +381,19 @@ msgstr "_Buka"
 
 #: panels/background/cc-background-chooser.ui:104
 msgid "Set Background and Lock Screen"
-msgstr ""
+msgstr "Tetapkan Latar Belakang dan Skrin Kunci"
 
 #: panels/background/cc-background-chooser.ui:114
 msgid "Set Background"
-msgstr ""
+msgstr "Tetapkan Latar Belakang"
 
 #: panels/background/cc-background-chooser.ui:121
 msgid "Set Lock Screen"
-msgstr ""
+msgstr "Tetapkan Skrin Kunci"
 
 #: panels/background/cc-background-chooser.ui:143
 msgid "Remove Background"
-msgstr ""
+msgstr "Buang Latar Belakang"
 
 #: panels/background/cc-background-item.c:140
 msgid "multiple sizes"
@@ -416,11 +416,7 @@ msgstr "Latar belakang semasa"
 
 #: panels/background/cc-background-panel.ui:63
 msgid "Add Picture…"
-msgstr ""
-
-#: panels/background/cc-background-preview.ui:55
-msgid "Activities"
-msgstr "Aktiviti"
+msgstr "Tambah Gambar..."
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
@@ -1399,6 +1395,14 @@ msgstr "Cermin"
 msgid "Display Mode"
 msgstr "Mod Paparan"
 
+#: panels/display/cc-display-panel.ui:222
+msgid "Contains task bar"
+msgstr ""
+
+#: panels/display/cc-display-panel.ui:223
+msgid "Primary Display"
+msgstr ""
+
 #: panels/display/cc-display-panel.ui:245
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
@@ -1408,6 +1412,10 @@ msgstr "Seret paparan untuk dipadankan dengan persediaan paparan fizikal anda. P
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
 msgstr "Penyusunan Paparan"
+
+#: panels/display/cc-display-panel.ui:387
+msgid "Active Display"
+msgstr ""
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -1475,11 +1483,11 @@ msgstr "Skala"
 
 #: panels/display/cc-night-light-page.c:622
 msgid "More Warm"
-msgstr ""
+msgstr "Lebih Suam"
 
 #: panels/display/cc-night-light-page.c:634
 msgid "Less Warm"
-msgstr ""
+msgstr "Kurang Suam"
 
 #. This cancels the redshift inhibit.
 #: panels/display/cc-night-light-page.ui:28
@@ -1507,7 +1515,7 @@ msgstr "Matahari Terbit hingga Matahari Terbenam"
 
 #: panels/display/cc-night-light-page.ui:137
 msgid "Manual Schedule"
-msgstr ""
+msgstr "Jadual Manual"
 
 #: panels/display/cc-night-light-page.ui:148
 #: panels/region/cc-format-chooser.ui:154
@@ -2136,7 +2144,7 @@ msgstr "Pintasan;RuangKerja;Tetingkap;SaizSemula;Zum;BezaJelas;Input;Sumber;Kunc
 #: panels/keyboard/shortcut-editor.ui:68
 #: panels/keyboard/shortcut-editor.ui:318
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr ""
+msgstr "Tekan Esc untuk batal atau Backspace untuk lumpuhkan pintasan papan kekunci."
 
 #: panels/keyboard/shortcut-editor.ui:156 panels/printers/details-dialog.ui:38
 msgid "Name"
@@ -2330,7 +2338,7 @@ msgstr "Pengurus Rangkaian perlu dijalankan."
 
 #: panels/network/cc-network-panel.ui:102
 msgid "Other Devices"
-msgstr ""
+msgstr "Lain-Lain Peranti"
 
 #: panels/network/cc-network-panel.ui:143
 #: panels/network/connection-editor/net-connection-editor.c:581
@@ -2430,26 +2438,26 @@ msgstr "Keselamatan"
 
 #: panels/network/connection-editor/ce-page.c:396
 msgid "Preserve"
-msgstr ""
+msgstr "Kekal"
 
 #: panels/network/connection-editor/ce-page.c:397
 msgid "Permanent"
-msgstr ""
+msgstr "Kekal"
 
 #: panels/network/connection-editor/ce-page.c:398
 msgid "Random"
-msgstr ""
+msgstr "Rawak"
 
 #: panels/network/connection-editor/ce-page.c:399
 msgid "Stable"
-msgstr ""
+msgstr "Stabil"
 
 #: panels/network/connection-editor/ce-page.c:403
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
 "network device this connection is activated on. This feature is known as MAC"
 " cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
+msgstr "Alamat MAC yang dimasukkan di sini akan digunakan sebagai alamat perkakasan bagi peranti rangkaian yang mana sambungannya aktif. Fitur ini dikenali sebagai pengklonan MAC atau perdayaan. Contoh: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:538
 msgid "automatic"
@@ -2942,7 +2950,7 @@ msgstr "network-workgroup"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr ""
+msgstr "Rangkaian;IP;LAN;Proksi;WAN;JalurLebar;Modem;Bluetooth;vpn;DNS;"
 
 #: panels/network/gnome-wifi-panel.desktop.in.in:4
 msgid "Control how you connect to Wi-Fi networks"
@@ -2958,7 +2966,7 @@ msgstr "network-wireless"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
-msgstr ""
+msgstr "Rangkaian;TanpaWayar;Wi-Fi;Wifi;IP;LAN;JalurLebar;DNS;KawasanKhas;"
 
 #: panels/network/net-device-ethernet.c:123
 #: panels/network/net-device-wifi.c:399
@@ -4287,23 +4295,23 @@ msgstr "Penjimatan Kuasa"
 
 #: panels/power/cc-power-panel.c:1860
 msgid "_Screen Brightness"
-msgstr ""
+msgstr "Kecerahan _Skrin"
 
 #: panels/power/cc-power-panel.c:1881
 msgid "Automatic Brightness"
-msgstr ""
+msgstr "Kecerahan Automatik"
 
 #: panels/power/cc-power-panel.c:1894
 msgid "_Keyboard Brightness"
-msgstr ""
+msgstr "Kecerahan Papan _Kekunci"
 
 #: panels/power/cc-power-panel.c:1905
 msgid "_Dim Screen When Inactive"
-msgstr ""
+msgstr "Ma_lapkan Skrin Ketika Tidak Aktif"
 
 #: panels/power/cc-power-panel.c:1923
 msgid "_Blank Screen"
-msgstr ""
+msgstr "Skrin _Gelap"
 
 #: panels/power/cc-power-panel.c:1946
 msgid "_Wi-Fi"
@@ -4315,7 +4323,7 @@ msgstr "Wi-Fi boleh dimatikan untuk menjimatkan tenaga."
 
 #: panels/power/cc-power-panel.c:1963
 msgid "_Mobile Broadband"
-msgstr ""
+msgstr "Jalur Lebar _Mudah Alih"
 
 #: panels/power/cc-power-panel.c:1964
 msgid "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
@@ -4360,7 +4368,7 @@ msgstr "Butang Tangguh & Kuasa"
 
 #: panels/power/cc-power-panel.c:2307
 msgid "_Automatic Suspend"
-msgstr ""
+msgstr "Tangguh _Automatik"
 
 #: panels/power/cc-power-panel.c:2308
 msgid "Automatic suspend"
@@ -4368,7 +4376,7 @@ msgstr "Tangguh automatik"
 
 #: panels/power/cc-power-panel.c:2365
 msgid "Po_wer Button Action"
-msgstr ""
+msgstr "Tindakan Butang K_uasa"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
@@ -5508,7 +5516,7 @@ msgstr "Kunci skrin _selepas gelap dalam tempoh"
 
 #: panels/privacy/cc-privacy-panel.ui:506
 msgid "Lock Screen _Notifications"
-msgstr ""
+msgstr "_Pemberitahuan Skrin Kunci"
 
 #: panels/privacy/cc-privacy-panel.ui:566
 msgid ""
@@ -5767,11 +5775,11 @@ msgstr "preferences-desktop-locale"
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Bahasa;Bentangan;PapanKekunci;Input;"
 
-#: panels/search/cc-search-locations-dialog.c:610
+#: panels/search/cc-search-locations-dialog.c:611
 msgid "Select Location"
 msgstr "Select Location"
 
-#: panels/search/cc-search-locations-dialog.c:614
+#: panels/search/cc-search-locations-dialog.c:615
 msgid "_OK"
 msgstr "_OK"
 
@@ -5791,7 +5799,7 @@ msgstr "Bergerak ke Bawah"
 msgid ""
 "Control which search results are shown in the Activities Overview. The order"
 " of search results can also be changed by moving rows in the list."
-msgstr ""
+msgstr "Tentukan keputusan gelintar manakah akan dipaparkan dalam Selayang Pandang Aktiviti/. Tetib keputusan gelintar juga diubah fengan menggerakkan baris-baris di dalam senarai"
 
 #: panels/search/cc-search-panel.ui:60
 #: panels/search/search-locations-dialog.ui:9
@@ -5821,7 +5829,7 @@ msgstr "Gelintar;Cari;Indeks;Sembunyi;Kerahsiaan;Keputusan;"
 msgid ""
 "Folders which are searched by system applications, such as Files, Photos and"
 " Videos."
-msgstr ""
+msgstr "Folder-folder yang digelintar oleh aplikasi-aplikasi sistem, seperti Fail, Foto dan Video."
 
 #: panels/search/search-locations-dialog.ui:52
 msgid "Places"
@@ -5843,17 +5851,17 @@ msgstr "Tiada rangkaian terpilih untuk perkongsian"
 #: panels/sharing/cc-sharing-panel.c:320
 msgctxt "service is enabled"
 msgid "On"
-msgstr "Buka"
+msgstr "Hidup"
 
 #: panels/sharing/cc-sharing-panel.c:322 panels/sharing/cc-sharing-panel.c:349
 msgctxt "service is disabled"
 msgid "Off"
-msgstr "Tutup"
+msgstr "Mati"
 
 #: panels/sharing/cc-sharing-panel.c:352
 msgctxt "service is enabled"
 msgid "Enabled"
-msgstr "Dibolehkan"
+msgstr "Dibenarkan"
 
 #: panels/sharing/cc-sharing-panel.c:355
 msgctxt "service is active"
@@ -5862,7 +5870,7 @@ msgstr "Aktif"
 
 #: panels/sharing/cc-sharing-panel.c:425
 msgid "Choose a Folder"
-msgstr "Pilih Folder"
+msgstr "Pilih satu Folder"
 
 #: panels/sharing/cc-sharing-panel.c:726
 #, c-format
@@ -6092,7 +6100,7 @@ msgstr "Volum"
 msgid "Alert Sound"
 msgstr "Bunyi Amaran"
 
-#: panels/sound/cc-volume-slider.c:93
+#: panels/sound/cc-volume-slider.c:92
 msgctxt "volume"
 msgid "100%"
 msgstr "100%"
@@ -6116,7 +6124,7 @@ msgstr "multimedia-volume-control"
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
+msgstr "Kad;Mikrofon;Volum;Resap;Imbangan;Bluetooth;SetKepala;Audio;Output;Input;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6162,7 +6170,7 @@ msgstr "Bersambung & Mendapat Izin"
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
-msgstr "Entah"
+msgstr "Tidak Diketahui"
 
 #. Translators: The time point the device was authorized.
 #: panels/thunderbolt/cc-bolt-device-dialog.c:177
@@ -6298,7 +6306,7 @@ msgstr "Thunderbolt;"
 #: panels/universal-access/cc-ua-panel.c:497
 msgctxt "cursor size"
 msgid "Default"
-msgstr "Default"
+msgstr "Lalai"
 
 #: panels/universal-access/cc-ua-panel.c:500
 msgctxt "cursor size"
@@ -6460,11 +6468,11 @@ msgstr "Kekunci Ulangan"
 
 #: panels/universal-access/cc-ua-panel.ui:1453
 msgid "Key presses repeat when key is held down."
-msgstr ""
+msgstr "Ketikan kekunci diulang jika kekunci ditahan."
 
 #: panels/universal-access/cc-ua-panel.ui:1533
 msgid "Repeat keys delay"
-msgstr ""
+msgstr "Lengah kekunci-kekunci ulang"
 
 #: panels/universal-access/cc-ua-panel.ui:1581
 #: panels/universal-access/cc-ua-panel.ui:1716
@@ -6473,53 +6481,53 @@ msgstr "Kelajuan"
 
 #: panels/universal-access/cc-ua-panel.ui:1620
 msgid "Repeat keys speed"
-msgstr "Ulangan kelajuan kekunci"
+msgstr "Kelajuan kekunci-kekunci ulang"
 
 #: panels/universal-access/cc-ua-panel.ui:1644
 msgid "Cursor Blinking"
-msgstr "Kerdipan Kursor"
+msgstr "Kerlipan Kursor"
 
 #: panels/universal-access/cc-ua-panel.ui:1674
 msgid "Cursor blinks in text fields."
-msgstr ""
+msgstr "Kelipan kursor dalam medan-medan teks."
 
 #: panels/universal-access/cc-ua-panel.ui:1753
 msgid "Cursor blinking speed"
-msgstr ""
+msgstr "Kelajuan kerlipan kursor"
 
 #: panels/universal-access/cc-ua-panel.ui:1789
 msgid "Typing Assist"
-msgstr ""
+msgstr "Bantuan Menaip"
 
 #: panels/universal-access/cc-ua-panel.ui:1828
 msgid "_Sticky Keys"
-msgstr ""
+msgstr "Kekunci-Kekunci _Lekat"
 
 #: panels/universal-access/cc-ua-panel.ui:1845
 msgid "Treats a sequence of modifier keys as a key combination"
-msgstr ""
+msgstr "Anggap jujukan kekunci-kekunci pengubahsuai sebagai satu gabungan kekunci"
 
 #: panels/universal-access/cc-ua-panel.ui:1869
 msgid "_Disable if two keys are pressed together"
-msgstr ""
+msgstr "_Lumpuhkan sekiranya dua kekunci ditekan serentak"
 
 #: panels/universal-access/cc-ua-panel.ui:1887
 msgid "Beep when a _modifier key is pressed"
-msgstr ""
+msgstr "Bunyikan bip ketika satu kekunci peng_ubahsuai ditekan"
 
 #: panels/universal-access/cc-ua-panel.ui:1935
 msgid "S_low Keys"
-msgstr ""
+msgstr "Kekunci-Kekunci _Lambat"
 
 #: panels/universal-access/cc-ua-panel.ui:1952
 msgid "Puts a delay between when a key is pressed and when it is accepted"
-msgstr ""
+msgstr "Letak lengah ketika satu kekunci ditekan dan kemudian ia diterima"
 
 #: panels/universal-access/cc-ua-panel.ui:1985
 #: panels/universal-access/cc-ua-panel.ui:2198
 #: panels/universal-access/cc-ua-panel.ui:2535
 msgid "A_cceptance delay:"
-msgstr ""
+msgstr "Lengah pe_nerimaan:"
 
 #: panels/universal-access/cc-ua-panel.ui:2007
 msgctxt "slow keys delay"
@@ -6528,7 +6536,7 @@ msgstr "Pendek"
 
 #: panels/universal-access/cc-ua-panel.ui:2026
 msgid "Slow keys typing delay"
-msgstr ""
+msgstr "Tunjuk lengah menaip kekunci-kekunci"
 
 #: panels/universal-access/cc-ua-panel.ui:2041
 msgctxt "slow keys delay"
@@ -6537,24 +6545,24 @@ msgstr "Panjang"
 
 #: panels/universal-access/cc-ua-panel.ui:2068
 msgid "Beep when a key is pr_essed"
-msgstr ""
+msgstr "Bunyi bip bila satu kekunci di t_ekan"
 
 #: panels/universal-access/cc-ua-panel.ui:2085
 msgid "Beep when a key is _accepted"
-msgstr ""
+msgstr "Bunyi bip bila satu kekunci di terim_a"
 
 #: panels/universal-access/cc-ua-panel.ui:2102
 #: panels/universal-access/cc-ua-panel.ui:2281
 msgid "Beep when a key is _rejected"
-msgstr ""
+msgstr "Bunyi bip bila satu kekunci di _tolak"
 
 #: panels/universal-access/cc-ua-panel.ui:2148
 msgid "_Bounce Keys"
-msgstr ""
+msgstr "Kekunci-Kekunci _Lantun"
 
 #: panels/universal-access/cc-ua-panel.ui:2165
 msgid "Ignores fast duplicate keypresses"
-msgstr ""
+msgstr "Abai ketukan kekunci pendua pantas"
 
 #: panels/universal-access/cc-ua-panel.ui:2220
 msgctxt "bounce keys delay"
@@ -6563,7 +6571,7 @@ msgstr "Pendek"
 
 #: panels/universal-access/cc-ua-panel.ui:2239
 msgid "Bounce keys typing delay"
-msgstr ""
+msgstr "Lengah menaip kekunci-kekunci lantun"
 
 #: panels/universal-access/cc-ua-panel.ui:2254
 msgctxt "bounce keys delay"
@@ -6572,23 +6580,23 @@ msgstr "Panjang"
 
 #: panels/universal-access/cc-ua-panel.ui:2367
 msgid "_Enable by Keyboard"
-msgstr ""
+msgstr "B_enarkan melalui Papan Kekunci"
 
 #: panels/universal-access/cc-ua-panel.ui:2384
 msgid "Turn accessibility features on and off using the keyboard"
-msgstr ""
+msgstr "Hidup atau matikan fitur-fitur kebolehcapaian melalui papan kekunci"
 
 #: panels/universal-access/cc-ua-panel.ui:2448
 msgid "Click Assist"
-msgstr ""
+msgstr "Bantuan Klik"
 
 #: panels/universal-access/cc-ua-panel.ui:2484
 msgid "_Simulated Secondary Click"
-msgstr ""
+msgstr "Klik Sekunder _Bersimulasi"
 
 #: panels/universal-access/cc-ua-panel.ui:2502
 msgid "Trigger a secondary click by holding down the primary button"
-msgstr ""
+msgstr "Picu satu klik sekunder dengan menahan butang utama"
 
 #: panels/universal-access/cc-ua-panel.ui:2556
 msgctxt "secondary click"
@@ -6597,7 +6605,7 @@ msgstr "Pendek"
 
 #: panels/universal-access/cc-ua-panel.ui:2575
 msgid "Secondary click delay"
-msgstr ""
+msgstr "Lengah klik sekunder"
 
 #: panels/universal-access/cc-ua-panel.ui:2590
 msgctxt "secondary click delay"
@@ -6606,15 +6614,15 @@ msgstr "Panjang"
 
 #: panels/universal-access/cc-ua-panel.ui:2647
 msgid "_Hover Click"
-msgstr ""
+msgstr "Klik _Apung"
 
 #: panels/universal-access/cc-ua-panel.ui:2665
 msgid "Trigger a click when the pointer hovers"
-msgstr ""
+msgstr "Picu satu klik ketika penuding berada di atasnya"
 
 #: panels/universal-access/cc-ua-panel.ui:2698
 msgid "D_elay:"
-msgstr "P_enangguhan:"
+msgstr "L_engah:"
 
 #: panels/universal-access/cc-ua-panel.ui:2720
 msgctxt "dwell click delay"
@@ -6628,7 +6636,7 @@ msgstr "Panjang"
 
 #: panels/universal-access/cc-ua-panel.ui:2787
 msgid "Motion _threshold:"
-msgstr ""
+msgstr "_Ambang gerakan:"
 
 #: panels/universal-access/cc-ua-panel.ui:2809
 msgctxt "dwell click threshold"
@@ -6642,13 +6650,13 @@ msgstr "Besar"
 
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:4
 msgid "Make it easier to see, hear, type, point and click"
-msgstr ""
+msgstr "Jadikannya lebih mudah dilihat, dengar, taip, tuju dan klik"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:7
 msgid "preferences-desktop-accessibility"
-msgstr ""
+msgstr "preferences-desktop-accessibility"
 
 #. Translators: Search terms to find the Universal Access panel. Do NOT
 #. translate or localize the semicolons! The list MUST also end with a
@@ -6656,7 +6664,7 @@ msgstr ""
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
+msgstr "PapanKekunci;Tetikus;a11y;Kebolehcapaian;BezaJelas;Kursor;Bunyi;Zum;Skrin;Pembaca;besar;tinggi;lebihbesar;teks;fon;saiz;AccessX;Lekat;Kekunci;Lambat;Lantun;Tetikus;Dwi;klik;Lengah;Kelajuan;Bantuan;Ulang;Kelip;visual;pendengaran;audio;menaip;"
 
 #: panels/universal-access/zoom-options.c:305
 msgctxt "Distance"
@@ -6689,19 +6697,19 @@ msgstr "Skrin Penuh"
 
 #: panels/universal-access/zoom-options.ui:53
 msgid "Top Half"
-msgstr "Separuh Keatas"
+msgstr "Separa Atas"
 
 #: panels/universal-access/zoom-options.ui:58
 msgid "Bottom Half"
-msgstr ""
+msgstr "Separa Bawah"
 
 #: panels/universal-access/zoom-options.ui:63
 msgid "Left Half"
-msgstr "Separuh Kekiri"
+msgstr "Separa Kiri"
 
 #: panels/universal-access/zoom-options.ui:68
 msgid "Right Half"
-msgstr "Separuh Kekanan"
+msgstr "Separa Kanan"
 
 #: panels/universal-access/zoom-options.ui:78
 msgid "Zoom Options"
@@ -6709,78 +6717,78 @@ msgstr "Pilihan Zum"
 
 #: panels/universal-access/zoom-options.ui:185
 msgid "_Magnification:"
-msgstr ""
+msgstr "Pe_mbesaran:"
 
 #: panels/universal-access/zoom-options.ui:249
 msgid "_Follow mouse cursor"
-msgstr ""
+msgstr "_Ikut kursor tetikus"
 
 #: panels/universal-access/zoom-options.ui:269
 msgid "_Screen part:"
-msgstr ""
+msgstr "Bahagian _skrin:"
 
 #: panels/universal-access/zoom-options.ui:331
 msgid "Magnifier _extends outside of screen"
-msgstr ""
+msgstr "Pembesar m_elangkaui luar skrin"
 
 #: panels/universal-access/zoom-options.ui:350
 msgid "_Keep magnifier cursor centered"
-msgstr ""
+msgstr "_Kekalkan kursor bersaiz besar ditengah-tengah"
 
 #: panels/universal-access/zoom-options.ui:370
 msgid "Magnifier cursor _pushes contents around"
-msgstr ""
+msgstr "Kursor bersaiz besar boleh me_nolak isi kandungan disekitarnya"
 
 #: panels/universal-access/zoom-options.ui:390
 msgid "Magnifier cursor moves with _contents"
-msgstr ""
+msgstr "Kursor bersaiz besar bergerak bersama-sama _isi kandungan"
 
 #: panels/universal-access/zoom-options.ui:425
 msgid "Magnifier Position:"
-msgstr ""
+msgstr "Kedudukan Pembesar:"
 
 #: panels/universal-access/zoom-options.ui:446
 msgid "Magnifier"
-msgstr "Kaca Pembesar"
+msgstr "Pembesar"
 
 #: panels/universal-access/zoom-options.ui:493
 msgid "_Thickness:"
-msgstr ""
+msgstr "Ke_tebalan:"
 
 #: panels/universal-access/zoom-options.ui:519
 msgctxt "universal access, thickness"
 msgid "Thin"
-msgstr ""
+msgstr "Nipis"
 
 #: panels/universal-access/zoom-options.ui:551
 msgctxt "universal access, thickness"
 msgid "Thick"
-msgstr ""
+msgstr "Tebal"
 
 #: panels/universal-access/zoom-options.ui:577
 msgid "_Length:"
-msgstr ""
+msgstr "_Panjang:"
 
 #. The color of the accessibility crosshair
 #: panels/universal-access/zoom-options.ui:626
 msgid "Co_lor:"
-msgstr ""
+msgstr "_Warna:"
 
 #: panels/universal-access/zoom-options.ui:690
 msgid "_Crosshairs:"
-msgstr ""
+msgstr "_Rerambut Silang:"
 
 #: panels/universal-access/zoom-options.ui:738
 msgid "_Overlaps mouse cursor"
-msgstr ""
+msgstr "_Tindih kursor tetikus"
 
 #: panels/universal-access/zoom-options.ui:776
 msgid "Crosshairs"
-msgstr ""
+msgstr "Rerambut Silang"
 
 #: panels/universal-access/zoom-options.ui:825
 msgid "_White on black:"
-msgstr ""
+msgstr "P_utih atas hitam:"
 
 #: panels/universal-access/zoom-options.ui:845
 msgid "_Brightness:"
@@ -6788,13 +6796,13 @@ msgstr "_Kecerahan:"
 
 #: panels/universal-access/zoom-options.ui:866
 msgid "_Contrast:"
-msgstr ""
+msgstr "_Beza Jelas:"
 
 #. The contrast scale goes from Color to None (grayscale)
 #: panels/universal-access/zoom-options.ui:886
 msgctxt "universal access, contrast"
 msgid "Co_lor"
-msgstr ""
+msgstr "Wa_rna"
 
 #: panels/universal-access/zoom-options.ui:911
 msgctxt "universal access, color"
@@ -6860,7 +6868,7 @@ msgstr "Kemaskini-Kemaskini Automatik"
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
-msgstr ""
+msgstr "Benarkan kemaskini-kemaskini dibalik tabir bergerak secara automatik dengan sambungan ini. Biasanya apl-apl ditatarkan, ada kandungan baharu atau kemaskini-kemaskini Endless OS."
 
 #: panels/updates/cc-updates-panel.ui:217
 msgid "Scheduled Updates"
@@ -7007,46 +7015,46 @@ msgstr "Tiada Sekatan"
 
 #: panels/user-accounts/cc-app-permissions.ui:15
 msgid "Restrict Apps"
-msgstr ""
+msgstr "Sekat Apl"
 
 #: panels/user-accounts/cc-app-permissions.ui:30
 msgid "Prevent this user from opening some apps by turning them off below."
-msgstr ""
+msgstr "Halang pengguna ini membuka beberapa apl dengan mematikannya di bawah."
 
 #: panels/user-accounts/cc-app-permissions.ui:78
 msgid "Restrict Web Browsers"
-msgstr ""
+msgstr "Sekat Pelayar Sesawang"
 
 #: panels/user-accounts/cc-app-permissions.ui:93
 msgid ""
 "Prevent this user from running web browsers by turning them off below. Note "
 "that if the computer is connected to the internet, limited web content may "
 "still be available in other applications."
-msgstr ""
+msgstr "Halang pengguna ini menjalankan pelayar sesawang dengan mematikannya di bawah. Perhatian sekiranya komputer bersambung dengan internet, kandungan sesawang terbatas masih tersedia untuk lain-lain aplikasi."
 
 #: panels/user-accounts/cc-app-permissions.ui:120
 msgid "Web _Browsers"
-msgstr ""
+msgstr "Pela_yar Sesawang"
 
 #: panels/user-accounts/cc-app-permissions.ui:153
 msgid "App Center Restrictions"
-msgstr ""
+msgstr "Sekatan Pusat Apl"
 
 #: panels/user-accounts/cc-app-permissions.ui:173
 msgid "App _Installation"
-msgstr ""
+msgstr "Pe_masangan Apl"
 
 #: panels/user-accounts/cc-app-permissions.ui:209
 msgid "Install Apps for All _Users"
-msgstr ""
+msgstr "Pasang Apl untuk Semua _Pengguna"
 
 #: panels/user-accounts/cc-app-permissions.ui:245
 msgid "Show Apps _Suitable For"
-msgstr ""
+msgstr "Tunjuk Apl Yang Sesuai Untuk"
 
 #: panels/user-accounts/cc-avatar-chooser.c:232
 msgid "Browse for more pictures"
-msgstr ""
+msgstr "Layar lagi banyak gambar"
 
 #: panels/user-accounts/cc-avatar-chooser.ui:39
 msgid "Take a Picture…"
@@ -7054,7 +7062,7 @@ msgstr "Ambil satu Gambar..."
 
 #: panels/user-accounts/cc-avatar-chooser.ui:46
 msgid "Select a File…"
-msgstr ""
+msgstr "Pilih satu Fail"
 
 #: panels/user-accounts/cc-login-history-dialog.c:69
 msgid "This Week"
@@ -7072,7 +7080,7 @@ msgstr "Minggu Lepas"
 #: panels/user-accounts/cc-login-history-dialog.c:86
 msgctxt "login history week label"
 msgid "%b %e"
-msgstr "%e %b %e"
+msgstr "%e %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013",
 #. shown as the last day of a week on login history dialog.
@@ -7087,7 +7095,7 @@ msgstr "%e %b, %Y"
 #, c-format
 msgctxt "login history week label"
 msgid "%s — %s"
-msgstr ""
+msgstr "%s — %s"
 
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
@@ -7095,7 +7103,7 @@ msgstr ""
 #: panels/user-accounts/cc-user-panel.c:773
 msgctxt "login date-time"
 msgid "%k:%M"
-msgstr ""
+msgstr "%k:%M"
 
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
@@ -7112,46 +7120,46 @@ msgstr "Sesi Tamat"
 
 #: panels/user-accounts/cc-login-history-dialog.c:249
 msgid "Session Started"
-msgstr "Sesi Bermula."
+msgstr "Sesi Bermula"
 
 #. Translators: This is the title of the "Account Activity" dialog.
 #. The %s is the user real name.
 #: panels/user-accounts/cc-login-history-dialog.c:343
 #, c-format
 msgid "%s — Account Activity"
-msgstr ""
+msgstr "Aktiviti Akaun  — %s"
 
 #: panels/user-accounts/cc-password-dialog.c:155
 msgid "Please choose another password."
-msgstr "Pilih katalaluan yang lain."
+msgstr "Sila pilih kata laluan lain."
 
 #: panels/user-accounts/cc-password-dialog.c:164
 msgid "Please type your current password again."
-msgstr "Taipkan kata laluan anda sekali lagi."
+msgstr "Sila taip kata laluan semasa anda sekali lagi."
 
 #: panels/user-accounts/cc-password-dialog.c:170
 msgid "Password could not be changed"
-msgstr "Katalaluan tidak dapat ditukar"
+msgstr "Kata laluan tidak dapat ditukarkan"
 
 #: panels/user-accounts/cc-password-dialog.ui:7
 msgid "Change Password"
-msgstr ""
+msgstr "Ubah Kata Laluan"
 
 #: panels/user-accounts/cc-password-dialog.ui:37
 msgid "Ch_ange"
-msgstr ""
+msgstr "_Ubah"
 
 #: panels/user-accounts/cc-password-dialog.ui:145
 msgid "_Confirm New Password"
-msgstr ""
+msgstr "_Sahkan Kata Laluan Baharu"
 
 #: panels/user-accounts/cc-password-dialog.ui:162
 msgid "_New Password"
-msgstr ""
+msgstr "Kata Laluan _Baharu"
 
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
-msgstr ""
+msgstr "_Kata Laluan Semasa"
 
 #: panels/user-accounts/cc-realm-manager.c:307
 msgid "Cannot automatically join this type of domain"
@@ -7169,7 +7177,7 @@ msgstr "Tidak dapat mendaftar masuk sebagai %s pada domain %s"
 
 #: panels/user-accounts/cc-realm-manager.c:738
 msgid "Invalid password, please try again"
-msgstr "Katalaluan tidak sah. Cuba semula."
+msgstr "Kata laluan tidak sah. Cuba sekali lagi."
 
 #: panels/user-accounts/cc-realm-manager.c:751
 #, c-format
@@ -7178,7 +7186,7 @@ msgstr "Tidak dapat menyambung ke domain %s: %s"
 
 #: panels/user-accounts/cc-user-panel.c:216
 msgid "Your account"
-msgstr ""
+msgstr "Akaun anda"
 
 #: panels/user-accounts/cc-user-panel.c:391
 msgid "Failed to delete user"
@@ -7188,33 +7196,33 @@ msgstr "Gagal memadam pengguna"
 #: panels/user-accounts/cc-user-panel.c:508
 #: panels/user-accounts/cc-user-panel.c:560
 msgid "Failed to revoke remotely managed user"
-msgstr ""
+msgstr "Gagal menyeru pengguna terurus secara jauh"
 
 #: panels/user-accounts/cc-user-panel.c:612
 msgid "You cannot delete your own account."
-msgstr ""
+msgstr "Anda tidak boleh memadam akaun anda sendiri."
 
 #: panels/user-accounts/cc-user-panel.c:621
 #, c-format
 msgid "%s is still logged in"
-msgstr "%s belum log keluar"
+msgstr "%s masih mendaftar masuk"
 
 #: panels/user-accounts/cc-user-panel.c:625
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
+msgstr "Memadam seorang pengguna ketika mereka masih mendaftar masuk boleh menyebabkan sistem dalam keadaan tidak konsisten."
 
 #: panels/user-accounts/cc-user-panel.c:634
 #, c-format
 msgid "Do you want to keep %s’s files?"
-msgstr ""
+msgstr "Anda mahu mengekalkan fail-fail %s?"
 
 #: panels/user-accounts/cc-user-panel.c:638
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
+msgstr "Boleh mengekalkan direktori rumah, kili mel dan fail-fail sementara ketika memadam satu akaun pengguna."
 
 #: panels/user-accounts/cc-user-panel.c:641
 msgid "_Delete Files"
@@ -7227,7 +7235,7 @@ msgstr "_Kekalkan Fail"
 #: panels/user-accounts/cc-user-panel.c:656
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr ""
+msgstr "Anda pasti mahu menyerus akaun %s yang diurus secara jauh?"
 
 #: panels/user-accounts/cc-user-panel.c:660
 msgid "_Delete"
@@ -7241,7 +7249,7 @@ msgstr "Akaun dilumpuhkan"
 #: panels/user-accounts/cc-user-panel.c:718
 msgctxt "Password mode"
 msgid "To be set at next login"
-msgstr ""
+msgstr "Untuk ditetapkan pada daftar masuk berikutnya"
 
 #: panels/user-accounts/cc-user-panel.c:721
 msgctxt "Password mode"
@@ -7250,15 +7258,15 @@ msgstr "Tiada"
 
 #: panels/user-accounts/cc-user-panel.c:766
 msgid "Logged in"
-msgstr "Telah log masuk"
+msgstr "Telah mendaftar masuk"
 
 #: panels/user-accounts/cc-user-panel.c:1103
 msgid "Failed to contact the accounts service"
-msgstr ""
+msgstr "Gagal menghubungi perkhidmatan akaun"
 
 #: panels/user-accounts/cc-user-panel.c:1105
 msgid "Please make sure that the AccountService is installed and enabled."
-msgstr ""
+msgstr "Sila pastikan AccountService telah dipasang dan dibenarkan."
 
 #. Translator comments:
 #. * We split the line in 2 here to "make it look good", as there's
@@ -7268,7 +7276,7 @@ msgstr ""
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
+msgstr "Untuk membuat perubahan,\nklik ikon * terlebih dahulu"
 
 #: panels/user-accounts/cc-user-panel.c:1212
 msgid "Create a user account"
@@ -7279,61 +7287,61 @@ msgstr "Cipta satu akaun pengguna"
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
-msgstr ""
+msgstr "Untuk mencipta satu akaun pengguna,\nklik ikon * terlebih dahulu"
 
 #: panels/user-accounts/cc-user-panel.c:1232
 msgid "Delete the selected user account"
-msgstr "Padam akaun pengguna dipilih"
+msgstr "Padam akaun pengguna terpilih"
 
 #: panels/user-accounts/cc-user-panel.c:1244
 #: panels/user-accounts/cc-user-panel.c:1356
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
+msgstr "Untuk memadam akaun pengguna terpilih,\nklik ikon * terlebih dahulu"
 
 #: panels/user-accounts/cc-user-panel.ui:18
 msgid "_Add User…"
-msgstr ""
+msgstr "_Tambah Pengguna..."
 
 #: panels/user-accounts/cc-user-panel.ui:70
 msgid "Your session needs to be restarted for changes to take effect"
-msgstr ""
+msgstr "Sesi anda perlu dimulakan semula supaya perubahan yang dibuat berkesan"
 
 #: panels/user-accounts/cc-user-panel.ui:78
 msgid "Restart Now"
-msgstr "Mulakan Semula Sekarang"
+msgstr "Mula Semula Sekarang"
 
 #: panels/user-accounts/cc-user-panel.ui:261
 msgid "A_utomatic Login"
-msgstr ""
+msgstr "Daftar Masuk A_utomatik"
 
 #: panels/user-accounts/cc-user-panel.ui:303
 msgid "_Fingerprint Login"
-msgstr ""
+msgstr "Daftar Masuk Ber_cap Jari"
 
 #: panels/user-accounts/cc-user-panel.ui:329
 #: panels/user-accounts/cc-user-panel.ui:345
 msgid "User Icon"
-msgstr ""
+msgstr "Ikon Pengguna"
 
 #: panels/user-accounts/cc-user-panel.ui:409
 msgid "Last Login"
-msgstr ""
+msgstr "Daftar Masuk Terakhir"
 
 #: panels/user-accounts/cc-user-panel.ui:474
 msgid "Remove User…"
-msgstr ""
+msgstr "Buang Pengguna..."
 
 #. Translators: This is the empty state page label which states that there are
 #. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:507
 msgid "No Users Found"
-msgstr ""
+msgstr "Tiada Pengguna Ditemui"
 
 #: panels/user-accounts/cc-user-panel.ui:517
 msgid "Unlock to add a user account."
-msgstr ""
+msgstr "Nyahkunci untuk menambah satu akaun pengguna."
 
 #: panels/user-accounts/data/account-fingerprint.ui:12
 msgid "Left thumb"
@@ -7349,7 +7357,7 @@ msgstr "Jari manis kiri"
 
 #: panels/user-accounts/data/account-fingerprint.ui:21
 msgid "Left little finger"
-msgstr "Jari anak kiri"
+msgstr "Jari kelingking kiri"
 
 #: panels/user-accounts/data/account-fingerprint.ui:24
 msgid "Right thumb"
@@ -7365,12 +7373,12 @@ msgstr "Jari manis kanan"
 
 #: panels/user-accounts/data/account-fingerprint.ui:33
 msgid "Right little finger"
-msgstr "Jari anak"
+msgstr "Jari kelingking kanan"
 
 #: panels/user-accounts/data/account-fingerprint.ui:39
 #: panels/user-accounts/um-fingerprint-dialog.c:677
 msgid "Enable Fingerprint Login"
-msgstr "Bolehkan Log Masuk Cap Jari"
+msgstr "Benarkan Daftar Masuk Bercap Jari"
 
 #: panels/user-accounts/data/account-fingerprint.ui:89
 msgid "_Right index finger"
@@ -7382,555 +7390,555 @@ msgstr "Jari tengah k_iri"
 
 #: panels/user-accounts/data/account-fingerprint.ui:126
 msgid "_Other finger:"
-msgstr "Jari _lain:"
+msgstr "_Lain-lain jari:"
 
 #: panels/user-accounts/data/account-fingerprint.ui:324
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
-msgstr ""
+msgstr "Cap jari anda berjaya disimpan. Anda kini boleh mendaftar masuk menggunakan pembaca cap jari anda."
 
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:3
 msgid "Users"
-msgstr ""
+msgstr "Pengguna"
 
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:4
 msgid "Add or remove users and change your password"
-msgstr ""
+msgstr "Tambah atau buang para pengguna dan ubah kata laluan anda"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:7
 msgid "system-users"
-msgstr ""
+msgstr "system-users"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental;Restrict;Restrictions;"
-msgstr ""
+msgstr "DaftarMasuk;Nama;CapJari;Avatar;Logo;Wajah;KataLaluan;IbuBapa;Sekat;Sekatan;"
 
 #. Translators: This button enrolls the computer in the domain in order to use
 #. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
-msgstr ""
+msgstr "_Daftar"
 
 #: panels/user-accounts/data/join-dialog.ui:75
 msgid "Domain Administrator Login"
-msgstr "Login Pengurus Domain"
+msgstr "Daftar Masuk Pentadbir Domain"
 
 #: panels/user-accounts/data/join-dialog.ui:93
 msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
+msgstr "Untuk menggunakan daftar masuk enterprise, komputer ini perlu\nberdaftar ke dalam domain. Pastikan pentadbir rangkaian anda \nmenaip kata laluan domain di sini."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
-msgstr "Nama Pengu_rus"
+msgstr "Nama Penta_dbir"
 
 #: panels/user-accounts/data/join-dialog.ui:185
 msgid "Administrator Password"
-msgstr "Katalaluan Pengurus"
+msgstr "Kata Laluan Pentadbir"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:76
 msgid "No cartoon violence"
-msgstr ""
+msgstr "Tiada aksi keganasan kartun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:79
 msgid "Cartoon characters in unsafe situations"
-msgstr ""
+msgstr "Karakter-karakter kartun dalam situasi-situasi tidak selamat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:82
 msgid "Cartoon characters in aggressive conflict"
-msgstr ""
+msgstr "Karakter-karakter kartun berada dalam konflik yang agresif"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:85
 msgid "Graphic violence involving cartoon characters"
-msgstr ""
+msgstr "Keganasan dalam bentuk grafik yang melibatkan karakter-karakter kartun"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:88
 msgid "No fantasy violence"
-msgstr ""
+msgstr "Tiada aksi keganasan fantasi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:91
 msgid "Characters in unsafe situations easily distinguishable from reality"
-msgstr ""
+msgstr "Karakter-karakter dalam situasi tidak selamat yang mudah dibezakan dengan realiti"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:94
 msgid "Characters in aggressive conflict easily distinguishable from reality"
-msgstr ""
+msgstr "Karakter-karakter berada dalam konflik agresif yang mudah dibezakan dengan realiti"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:97
 msgid "Graphic violence easily distinguishable from reality"
-msgstr ""
+msgstr "Keganasan dalam bentuk grafik yang mudah dibezakan dengan realiti"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:100
 msgid "No realistic violence"
-msgstr ""
+msgstr "Tiada aksi keganasan realistik"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:103
 msgid "Mildly realistic characters in unsafe situations"
-msgstr ""
+msgstr "Karakter-karakter berkeadaan sedikit realistik dalam situasi-situasi tidak selamat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:106
 msgid "Depictions of realistic characters in aggressive conflict"
-msgstr ""
+msgstr "Pelukisan karakter-karakter berkeadaan realistik dengan konflik agresif"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:109
 msgid "Graphic violence involving realistic characters"
-msgstr ""
+msgstr "Keganasan dalam bentuk grafik yang melibatkan karakter-karakter berkeadaan realistik"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:112
 msgid "No bloodshed"
-msgstr ""
+msgstr "Tiada pertumpahan darah"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:115
 msgid "Unrealistic bloodshed"
-msgstr ""
+msgstr "Pertumpahan darah tidak realistik"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:118
 msgid "Realistic bloodshed"
-msgstr ""
+msgstr "Pertumpahan darah yang realistik"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:121
 msgid "Depictions of bloodshed and the mutilation of body parts"
-msgstr ""
+msgstr "Pelukisan pertumpahan darah dan pencacatan anggota badan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:124
 msgid "No sexual violence"
-msgstr ""
+msgstr "Tiada aksi keganasan seks"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:127
 msgid "Rape or other violent sexual behavior"
-msgstr ""
+msgstr "Aksi rogol atau lain-lain kelakuan seks ganas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:130
 msgid "No references to alcohol"
-msgstr ""
+msgstr "Tiada penggambaran berkenaan alkohol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:133
 msgid "References to alcoholic beverages"
-msgstr ""
+msgstr "Gambaran berkenaan minuman beralkohol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:136
 msgid "Use of alcoholic beverages"
-msgstr ""
+msgstr "Penggunaan minuman beralkohol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:139
 msgid "No references to illicit drugs"
-msgstr ""
+msgstr "Tiada penggambaran berkenaan dadah-dadah terlarang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:142
 msgid "References to illicit drugs"
-msgstr ""
+msgstr "Gambaran berkenaan dadah-dadah terlarang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:145
 msgid "Use of illicit drugs"
-msgstr ""
+msgstr "Penggunaan dadah-dadah terlarang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:148
 msgid "References to tobacco products"
-msgstr ""
+msgstr "Gambaran berkenaan produk-produk tembakau"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:151
 msgid "Use of tobacco products"
-msgstr ""
+msgstr "Penggunaan produk-produk tembakau"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:154
 msgid "No nudity of any sort"
-msgstr ""
+msgstr "Tiada unsur-unsur kebogelan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:157
 msgid "Brief artistic nudity"
-msgstr ""
+msgstr "Sedikit unsur-unsur kebogelan bersifat artistik"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:160
 msgid "Prolonged nudity"
-msgstr ""
+msgstr "Gambaran kebogelan yang berlanjutan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:163
 msgid "No references or depictions of sexual nature"
-msgstr ""
+msgstr "Tiada gambaran berkenaan tabiat-tabiat seks"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:166
 msgid "Provocative references or depictions"
-msgstr ""
+msgstr "Gambaran berkenaan sikap-sikap provokatif"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:169
 msgid "Sexual references or depictions"
-msgstr ""
+msgstr "Gambaran berkenaan aksi-aksi seksual"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:172
 msgid "Graphic sexual behavior"
-msgstr ""
+msgstr "Kelakuan seksual yang jelas dan nyata"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:175
 msgid "No profanity of any kind"
-msgstr ""
+msgstr "Tiada aksi-aksi tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:178
 msgid "Mild or infrequent use of profanity"
-msgstr ""
+msgstr "Sedikit atau jarang-jarang kelakuan tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:181
 msgid "Moderate use of profanity"
-msgstr ""
+msgstr "Ada pelakuan tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:184
 msgid "Strong or frequent use of profanity"
-msgstr ""
+msgstr "Aksi-aksi tidak senonoh kerap ditayangkan atau sangat menonjol"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:187
 msgid "No inappropriate humor"
-msgstr ""
+msgstr "Tiada lawak tidak senonoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:190
 msgid "Slapstick humor"
-msgstr ""
+msgstr "Lawak bodoh"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:193
 msgid "Vulgar or bathroom humor"
-msgstr ""
+msgstr "Lawak ganas"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:196
 msgid "Mature or sexual humor"
-msgstr ""
+msgstr "Lawak dewasa atau seks"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:199
 msgid "No discriminatory language of any kind"
-msgstr ""
+msgstr "Tiada pengucapan bersifat diskriminasi"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:202
 msgid "Negativity towards a specific group of people"
-msgstr ""
+msgstr "Ada unsur-unsur negatif yang khusus kepada kumpulan tertentu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:205
 msgid "Discrimination designed to cause emotional harm"
-msgstr ""
+msgstr "Ada unsur-unsur diskriminasi yang mengugat emos"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:208
 msgid "Explicit discrimination based on gender, sexuality, race or religion"
-msgstr ""
+msgstr "Ada unsur-unsur diskriminasi terhadap jantina, seks, bangsa atau agama"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:211
 msgid "No advertising of any kind"
-msgstr ""
+msgstr "Tiada pengiklanan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:214
 msgid "Product placement"
-msgstr ""
+msgstr "Ada memaparkan produk-produk tertentu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:217
 msgid "Explicit references to specific brands or trademarked products"
-msgstr ""
+msgstr "Gambaran jelas terhadap jenama-jenama atau produk-produk tertentu"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:220
 msgid "Users are encouraged to purchase specific real-world items"
-msgstr ""
+msgstr "Para pengguna digalakkan membeli item-item sebenar"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:223
 msgid "No gambling of any kind"
-msgstr ""
+msgstr "Tiada aksi-aksi perjudian"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:226
 msgid "Gambling on random events using tokens or credits"
-msgstr ""
+msgstr "Ada unsur-unsur perjudian pada acara-acara secara rawak menggunakan token atau kredit"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:229
 msgid "Gambling using “play” money"
-msgstr ""
+msgstr "Ada aksi perjudian menggunakan duit \"khusus\""
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:232
 msgid "Gambling using real money"
-msgstr ""
+msgstr "Ada aksi perjudian menggunakan duit sebenar"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:235
 msgid "No ability to spend money"
-msgstr ""
+msgstr "Tidak melibatkan penggunaan duit"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:238
 msgid "Users are encouraged to donate real money"
-msgstr ""
+msgstr "Para pengguna digalakkan menderma duit sebenar"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:241
 msgid "Ability to spend real money in-game"
-msgstr ""
+msgstr "Ada fungsi yang melibatkan duit di dalam permainan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:244
 msgid "No way to chat with other users"
-msgstr ""
+msgstr "Tiada fungsi sembang dengan pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:247
 msgid "User-to-user game interactions without chat functionality"
-msgstr ""
+msgstr "Interaksi permainan pengguna-dengan-pengguna tanpa fungsi sembang"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:250
 msgid "Moderated chat functionality between users"
-msgstr ""
+msgstr "Ada fungsi sembang bersifat sederhana antara pengguna "
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:253
 msgid "Uncontrolled chat functionality between users"
-msgstr ""
+msgstr "Ada fungsi sembang tanpa kawalan antara pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:256
 msgid "No way to talk with other users"
-msgstr ""
+msgstr "Tiada fungsi berbual dengan pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:259
 msgid "Uncontrolled audio or video chat functionality between users"
-msgstr ""
+msgstr "Ada fungsi sembang audio atau video tanpa kawalan antara pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:262
 msgid "No sharing of social network usernames or email addresses"
-msgstr ""
+msgstr "Tiada perkongsian nama pengguna rangkaian sosial atau alamat emel"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:265
 msgid "Sharing social network usernames or email addresses"
-msgstr ""
+msgstr "Ada perkongsian nama pengguna rangkaian sosial atau alamat emel"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:268
 msgid "No sharing of user information with 3rd parties"
-msgstr ""
+msgstr "Tiada perkongsian maklumat pengguna dengan pihak ke-3"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:271
 msgid "Checking for the latest application version"
-msgstr ""
+msgstr "Ada pemeriksaan versi aplikasi yang terkini"
 
 #. v1.1
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:274
 msgid "Sharing diagnostic data that does not let others identify the user"
-msgstr ""
+msgstr "Ada perkongsian data diagnostik yang membolehkan orang lain dapat mengenal pasti pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:277
 msgid "Sharing information that lets others identify the user"
-msgstr ""
+msgstr "Ada perkongsian maklumat yang membolehkan orang lain dapat mengenal pasti pengguna"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:280
 msgid "No sharing of physical location to other users"
-msgstr ""
+msgstr "Tiada perkongsian lokasi sebenar dengan pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:283
 msgid "Sharing physical location to other users"
-msgstr ""
+msgstr "Ada perkongsian lokasi sebenar dengan pengguna lain"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:288
 msgid "No references to homosexuality"
-msgstr ""
+msgstr "Tiada gambaran berkenaan homoseks"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:291
 msgid "Indirect references to homosexuality"
-msgstr ""
+msgstr "Gambaran tidak langsung berkenaan homoseks"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:294
 msgid "Kissing between people of the same gender"
-msgstr ""
+msgstr "Ada adegan cium antara sama jantina"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:297
 msgid "Graphic sexual behavior between people of the same gender"
-msgstr ""
+msgstr "Ada adegan seks bergrafik antara sama jantina"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:300
 msgid "No references to prostitution"
-msgstr ""
+msgstr "Tiada gambaran berkenaan pelacuran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:303
 msgid "Indirect references to prostitution"
-msgstr ""
+msgstr "Gambaran tidak langsung berkenaan pelacuran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:306
 msgid "Direct references to prostitution"
-msgstr ""
+msgstr "Ada gambaran jelas berkenaan pelacuran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:309
 msgid "Graphic depictions of the act of prostitution"
-msgstr ""
+msgstr "Ada gambaran bergrafik aksi-aksi pelacuran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:312
 msgid "No references to adultery"
-msgstr ""
+msgstr "Tiada penggambaran berkenaan zina"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:315
 msgid "Indirect references to adultery"
-msgstr ""
+msgstr "Ada gambaran tidak langsung berkenaan zina"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:318
 msgid "Direct references to adultery"
-msgstr ""
+msgstr "Ada gambaran jelas berkenaan zina"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:321
 msgid "Graphic depictions of the act of adultery"
-msgstr ""
+msgstr "Ada gambaran bergrafik aksi-aksi penzinaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:324
 msgid "No sexualized characters"
-msgstr ""
+msgstr "Tiada karakter-karakter seks"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:327
 msgid "Scantily clad human characters"
-msgstr ""
+msgstr "Ada karakter-karakter manusia hampir tidak berpakaian"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:330
 msgid "Overtly sexualized human characters"
-msgstr ""
+msgstr "Ada karakter-karakter manusia berkelakuan seks yang melampau"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:333
 msgid "No references to desecration"
-msgstr ""
+msgstr "Tiada gambaran berkenaan penodaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:336
 msgid "Depictions or references to historical desecration"
-msgstr ""
+msgstr "Ada gambaran berkenaan penodaan bersejarah"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:339
 msgid "Depictions of modern-day human desecration"
-msgstr ""
+msgstr "Ada gambaran berkenaan penodaan manusia di era modern"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:342
 msgid "Graphic depictions of modern-day desecration"
-msgstr ""
+msgstr "Ada gambaran jelas penodaan di era modern"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:345
 msgid "No visible dead human remains"
-msgstr ""
+msgstr "Tiada penampakan mayat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:348
 msgid "Visible dead human remains"
-msgstr ""
+msgstr "Ada penampakan mayat"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:351
 msgid "Dead human remains that are exposed to the elements"
-msgstr ""
+msgstr "Ada penampakan mayat yang telah terdedah dengan persekitaran"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:354
 msgid "Graphic depictions of desecration of human bodies"
-msgstr ""
+msgstr "Ada gambaran jelas penodaan jasad manusia"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:357
 msgid "No references to slavery"
-msgstr ""
+msgstr "Tiada gambaran berkenaan perhambaan"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:360
 msgid "Depictions or references to historical slavery"
-msgstr ""
+msgstr "Ada gambaran berkenaan perhambaan bersejarah"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:363
 msgid "Depictions of modern-day slavery"
-msgstr ""
+msgstr "Ada gambaran berkenaan perhambaan di era modern"
 
 #. TRANSLATORS: content rating description
 #: panels/user-accounts/gs-content-rating.c:366
 msgid "Graphic depictions of modern-day slavery"
-msgstr ""
+msgstr "Ada gambaran jelas perhambaan di era modern"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:11
 msgid "Manage user accounts"
-msgstr ""
+msgstr "Urus akaun-akaun pengguna"
 
 #: panels/user-accounts/org.gnome.controlcenter.user-accounts.policy.in:12
 msgid "Authentication is required to change user data"
-msgstr ""
+msgstr "Pengesahihan diperlukan untuk mengubah data pengguna"
 
 #: panels/user-accounts/pw-utils.c:94
 msgctxt "Password hint"
@@ -7940,86 +7948,86 @@ msgstr "Kata laluan baharu mesti berbeza dengan yang lama."
 #: panels/user-accounts/pw-utils.c:96
 msgctxt "Password hint"
 msgid "Try changing some letters and numbers."
-msgstr ""
+msgstr "Cuba ubah beberapa abjad dan angka"
 
 #: panels/user-accounts/pw-utils.c:98 panels/user-accounts/pw-utils.c:106
 msgctxt "Password hint"
 msgid "Try changing the password a bit more."
-msgstr ""
+msgstr "Cuba ubah lagi kata laluan ini."
 
 #: panels/user-accounts/pw-utils.c:100
 msgctxt "Password hint"
 msgid "A password without your user name would be stronger."
-msgstr ""
+msgstr "Kata laluan tanpa melibatkan nama pengguna anda adalah lebih mantap."
 
 #: panels/user-accounts/pw-utils.c:102
 msgctxt "Password hint"
 msgid "Try to avoid using your name in the password."
-msgstr ""
+msgstr "Cuba hindari nama anda di dalam kata laluan."
 
 #: panels/user-accounts/pw-utils.c:104
 msgctxt "Password hint"
 msgid "Try to avoid some of the words included in the password."
-msgstr ""
+msgstr "Cuba hindari beberapa perkataan yang ada di dalam kata laluan."
 
 #: panels/user-accounts/pw-utils.c:108
 msgctxt "Password hint"
 msgid "Try to avoid common words."
-msgstr ""
+msgstr "Cuba hindari perkataan umum yang biasa digunakan."
 
 #: panels/user-accounts/pw-utils.c:110
 msgctxt "Password hint"
 msgid "Try to avoid reordering existing words."
-msgstr ""
+msgstr "Cuba hindari menyusun semula perkataan yang sedia ada."
 
 #: panels/user-accounts/pw-utils.c:112
 msgctxt "Password hint"
 msgid "Try to use more numbers."
-msgstr ""
+msgstr "Cuba masukkan lebih banyak nombor."
 
 #: panels/user-accounts/pw-utils.c:114
 msgctxt "Password hint"
 msgid "Try to use more uppercase letters."
-msgstr ""
+msgstr "Cuba gandingkan dengan beberapa abjad berhuruf besar."
 
 #: panels/user-accounts/pw-utils.c:116
 msgctxt "Password hint"
 msgid "Try to use more lowercase letters."
-msgstr ""
+msgstr "Cuba gandingkan dengan beberapa abjad berhuruf kecil."
 
 #: panels/user-accounts/pw-utils.c:118
 msgctxt "Password hint"
 msgid "Try to use more special characters, like punctuation."
-msgstr ""
+msgstr "Cuba gandingkan dengan aksara-aksara khas, seperti tanda baca."
 
 #: panels/user-accounts/pw-utils.c:120
 msgctxt "Password hint"
 msgid "Try to use a mixture of letters, numbers and punctuation."
-msgstr ""
+msgstr "Cuba gabungkan dengan beberapa abjad, nombor dan tanda baca."
 
 #: panels/user-accounts/pw-utils.c:122
 msgctxt "Password hint"
 msgid "Try to avoid repeating the same character."
-msgstr ""
+msgstr "Cuba hindari mengulangi beberapa aksara yang serupa."
 
 #: panels/user-accounts/pw-utils.c:124
 msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
+msgstr "Cuba hindari pengulangan jenis aksara yang sama: anda perlu gabungkan beberapa abjad, nombor dan tanda baca."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
 msgid "Try to avoid sequences like 1234 or abcd."
-msgstr ""
+msgstr "Cuba hindari turutan seperti 1234 atau abcd."
 
 #: panels/user-accounts/pw-utils.c:128
 msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
+msgstr "Kata laluan perlu lebih panjang aksaranya. Tambah lagi beberapa abjad, nombor dan tanda baca."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -8035,47 +8043,47 @@ msgstr "Dengan menambah beberapa abjad, nombor dan tanda baca, kata laluan anda 
 
 #: panels/user-accounts/run-passwd.c:422
 msgid "Authentication failed"
-msgstr ""
+msgstr "Pengesahihan gagal"
 
 #: panels/user-accounts/run-passwd.c:502
 #, c-format
 msgid "The new password is too short"
-msgstr ""
+msgstr "Kata laluan baharu terlalu pendek"
 
 #: panels/user-accounts/run-passwd.c:508
 #, c-format
 msgid "The new password is too simple"
-msgstr ""
+msgstr "Kata laluan baharu terlalu mudah"
 
 #: panels/user-accounts/run-passwd.c:514
 #, c-format
 msgid "The old and new passwords are too similar"
-msgstr ""
+msgstr "Kata laluan lama dan baru hampir sama"
 
 #: panels/user-accounts/run-passwd.c:517
 #, c-format
 msgid "The new password has already been used recently."
-msgstr ""
+msgstr "Kata laluan baharu telah digunakan baru-baru ini"
 
 #: panels/user-accounts/run-passwd.c:520
 #, c-format
 msgid "The new password must contain numeric or special characters"
-msgstr ""
+msgstr "Kata laluan baharu mesti mengandungi beberapa angka atau aksara khas"
 
 #: panels/user-accounts/run-passwd.c:524
 #, c-format
 msgid "The old and new passwords are the same"
-msgstr ""
+msgstr "Kata laluan lama dan baru adalah serupa"
 
 #: panels/user-accounts/run-passwd.c:528
 #, c-format
 msgid "Your password has been changed since you initially authenticated!"
-msgstr ""
+msgstr "Kata laluan anda telah diubah semenjak ana mula-mula sahihkan!"
 
 #: panels/user-accounts/run-passwd.c:532
 #, c-format
 msgid "The new password does not contain enough different characters"
-msgstr ""
+msgstr "Kata laluan baharu tidak mengandungi aksara-aksara yang berbeza"
 
 #: panels/user-accounts/run-passwd.c:536
 #, c-format
@@ -8086,7 +8094,7 @@ msgstr "Ralat tidak diketahui"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
+msgstr "Nama pengguna seharusnya mengandungi huruf besar atau huruf kecil a-z, digit dan aksara-aksara berikut: . - _"
 
 #: panels/user-accounts/user-utils.c:431
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -8103,7 +8111,7 @@ msgstr "Tindakan ini akan menggunakan nama folder rumah anda dan ia tidak boleh 
 #: panels/user-accounts/um-fingerprint-dialog.c:139
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
-msgstr "Tidak tidak dibenarkan akses pada peranti. Hubungi sistem pentadbir anda."
+msgstr "Anda tidak dibenarkan mencapai peranti. Hubungi pentadbir sistem anda."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:141
 msgid "The device is already in use."
@@ -8111,15 +8119,15 @@ msgstr "Peranti tersebut sedang digunakan"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:143
 msgid "An internal error occurred."
-msgstr "Satu ralat dalaman telah terjadi."
+msgstr "Satu ralat dalaman telah berlaku."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:214
 msgid "Enabled"
-msgstr "Bolehkan"
+msgstr "Dibenarkan"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:260
 msgid "Delete registered fingerprints?"
-msgstr "Padam cap jari didaftarkan?"
+msgstr "Padam cap jari berdaftar?"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:264
 msgid "_Delete Fingerprints"
@@ -8129,7 +8137,7 @@ msgstr "_Padam Cap Jari"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
+msgstr "Anda pasti mahu memadam cap jari berdaftar anda supaya daftar masuk bercap jari dilumpuhkan?"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:440
 msgid "Done!"
@@ -8142,7 +8150,7 @@ msgstr "Selesai!"
 #: panels/user-accounts/um-fingerprint-dialog.c:543
 #, c-format
 msgid "Could not access “%s” device"
-msgstr ""
+msgstr "Tidak dapat mencapai peranti \"%s\""
 
 #. translators:
 #. * The variable is the name of the device, for example:
@@ -8150,15 +8158,15 @@ msgstr ""
 #: panels/user-accounts/um-fingerprint-dialog.c:584
 #, c-format
 msgid "Could not start finger capture on “%s” device"
-msgstr ""
+msgstr "Tidak dapat memulakan tangkapan cari pada peranti \"%s\""
 
 #: panels/user-accounts/um-fingerprint-dialog.c:628
 msgid "Could not access any fingerprint readers"
-msgstr ""
+msgstr "Tidak dapat mencapai mana-mana pembaca cap jari"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:629
 msgid "Please contact your system administrator for help."
-msgstr ""
+msgstr "Sila hubungi pentadbir sistem anda untuk mendapatkan bantuan."
 
 #. translators:
 #. * The variable is the name of the device, for example:
@@ -8170,7 +8178,7 @@ msgstr ""
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the “%s” device."
-msgstr ""
+msgstr "Untuk membenarkan daftar masuk bercap jari, anda perlu menyimpan salah satu cap jari anda, menggunakan peranti \"%s\"."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:718
 msgid "Selecting finger"
@@ -8186,38 +8194,38 @@ msgstr "Petakan Butang"
 
 #: panels/wacom/button-mapping.ui:71
 msgid "Map buttons to functions"
-msgstr ""
+msgstr "Petakan butang untuk diberi fungsi"
 
 #: panels/wacom/button-mapping.ui:119
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
+msgstr "Untuk menyunting pintasan, pilih tindakan \"Hantar Ketukan Kekunci\", tekan butang pintasan papan kekunci dan tahan kekunci baharu atau tekan kekunci Backspace untuk kosongkan."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
+msgstr "Sila ketika penanda sasaran apabila ia muncul di atas skrin untuk menentukur tablet."
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
-msgstr ""
+msgstr "Tersilap-klik dikesan, memulakan semula..."
 
 #: panels/wacom/cc-wacom-button-row.c:253
 #, c-format
 msgid "Button %d"
-msgstr ""
+msgstr "Butang %d"
 
 #: panels/wacom/cc-wacom-button-row.h:34
 msgctxt "Wacom action-type"
 msgid "Application defined"
-msgstr ""
+msgstr "Aplikasi ditakrifkan"
 
 #: panels/wacom/cc-wacom-button-row.h:35
 msgctxt "Wacom action-type"
 msgid "Send Keystroke"
-msgstr ""
+msgstr "Hantar Ketukan Kekunci"
 
 #: panels/wacom/cc-wacom-button-row.h:36
 msgctxt "Wacom action-type"
@@ -8227,7 +8235,7 @@ msgstr "Tukar Monitor"
 #: panels/wacom/cc-wacom-button-row.h:37
 msgctxt "Wacom action-type"
 msgid "Show On-Screen Help"
-msgstr ""
+msgstr "Tunjuk Bantuan Atas-Skrin"
 
 #: panels/wacom/cc-wacom-mapping-panel.c:256
 msgid "Output:"
@@ -8236,7 +8244,7 @@ msgstr "Output:"
 #. Keep ratio switch
 #: panels/wacom/cc-wacom-mapping-panel.c:268
 msgid "Keep aspect ratio (letterbox):"
-msgstr ""
+msgstr "Kekalkan nisbah bidang (peti surat):"
 
 #. Whole-desktop checkbox
 #: panels/wacom/cc-wacom-mapping-panel.c:279
@@ -8246,7 +8254,7 @@ msgstr "Petakan ke monitor tunggal"
 #: panels/wacom/cc-wacom-nav-button.c:84
 #, c-format
 msgid "%d of %d"
-msgstr ""
+msgstr "%d daripada %d"
 
 #: panels/wacom/cc-wacom-page.c:530
 msgid "Display Mapping"
@@ -8267,27 +8275,27 @@ msgstr "Tablet Wacom"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
+msgstr "Tetapkan pemetaan butang dan laras kepekaan stilus untuk tablet-tablet grafik"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:7
 msgid "input-tablet"
-msgstr ""
+msgstr "input-tablet"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
 #. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
-msgstr ""
+msgstr "Tablet;Wacom;Stilus;Pemadam;Tetikus;"
 
 #: panels/wacom/gnome-wacom-properties.ui:15
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tablet (mutlak)"
 
 #: panels/wacom/gnome-wacom-properties.ui:19
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Touchpad (relatif)"
 
 #: panels/wacom/gnome-wacom-properties.ui:27
 msgid "Tablet Preferences"
@@ -8303,7 +8311,7 @@ msgstr "Tiada tablet dikesan"
 
 #: panels/wacom/gnome-wacom-properties.ui:141
 msgid "Please plug in or turn on your Wacom tablet"
-msgstr ""
+msgstr "Sila palamkan kuasa atau hidupkan tablet Wacom anda"
 
 #: panels/wacom/gnome-wacom-properties.ui:161
 msgid "Bluetooth Settings"
@@ -8311,7 +8319,7 @@ msgstr "Tetapan Bluetooth"
 
 #: panels/wacom/gnome-wacom-properties.ui:238
 msgid "Tracking Mode"
-msgstr ""
+msgstr "Mod Penjejakan"
 
 #: panels/wacom/gnome-wacom-properties.ui:266
 msgid "Left-Handed Orientation"
@@ -8319,11 +8327,11 @@ msgstr "Orientasi Kidal"
 
 #: panels/wacom/gnome-wacom-properties.ui:296
 msgid "Map to Monitor…"
-msgstr "Peta untuk Dipantau"
+msgstr "Petakan untuk Pantau..."
 
 #: panels/wacom/gnome-wacom-properties.ui:309
 msgid "Map Buttons…"
-msgstr "Butang Peta..."
+msgstr "Petakan Butang..."
 
 #: panels/wacom/gnome-wacom-properties.ui:322
 msgid "Calibrate…"
@@ -8331,11 +8339,11 @@ msgstr "Tentukur..."
 
 #: panels/wacom/gnome-wacom-properties.ui:340
 msgid "Adjust mouse settings"
-msgstr "Betulkan tetapan tetikus"
+msgstr "Laras tetapan tetikus"
 
 #: panels/wacom/gnome-wacom-properties.ui:356
 msgid "Adjust display resolution"
-msgstr "Betulkan resolusi paparan"
+msgstr "Laras resolusi paparan"
 
 #: panels/wacom/gsd-wacom-key-shortcut-button.c:217
 msgid "New shortcut…"
@@ -8343,15 +8351,15 @@ msgstr "Pintasan baharu..."
 
 #: panels/wacom/wacom-stylus-page.ui:25
 msgid "Default"
-msgstr "Default"
+msgstr "Lalai"
 
 #: panels/wacom/wacom-stylus-page.ui:29
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Klik Butang Tengah Tetikus"
 
 #: panels/wacom/wacom-stylus-page.ui:33
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Klik Butang Kanan Tetikus"
 
 #: panels/wacom/wacom-stylus-page.ui:37 shell/cc-window.ui:242
 msgid "Back"
@@ -8363,23 +8371,23 @@ msgstr "Maju"
 
 #: panels/wacom/wacom-stylus-page.ui:79
 msgid "No stylus found"
-msgstr ""
+msgstr "Tiada stilus ditemui"
 
 #: panels/wacom/wacom-stylus-page.ui:93
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr ""
+msgstr "Sila gerak stilus anda kedekatan tablet untuk mengkonfigurkannya"
 
 #: panels/wacom/wacom-stylus-page.ui:159
 msgid "Eraser Pressure Feel"
-msgstr ""
+msgstr "Rasa Tekanan Pemadam"
 
 #: panels/wacom/wacom-stylus-page.ui:180 panels/wacom/wacom-stylus-page.ui:340
 msgid "Soft"
-msgstr ""
+msgstr "Lembut"
 
 #: panels/wacom/wacom-stylus-page.ui:210 panels/wacom/wacom-stylus-page.ui:370
 msgid "Firm"
-msgstr ""
+msgstr "Kejat"
 
 #: panels/wacom/wacom-stylus-page.ui:233
 msgid "Top Button"
@@ -8391,23 +8399,23 @@ msgstr "Butang Bawah"
 
 #: panels/wacom/wacom-stylus-page.ui:291
 msgid "Lowest Button"
-msgstr ""
+msgstr "Butang Terbawah"
 
 #: panels/wacom/wacom-stylus-page.ui:320
 msgid "Tip Pressure Feel"
-msgstr ""
+msgstr "Rasa Tekanan Hujung Stilus"
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:7
 msgid "GNOME Settings"
-msgstr ""
+msgstr "Tetapan-Tetapan GNOME"
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:8
 msgid "Utility to configure the GNOME desktop"
-msgstr ""
+msgstr "Utiliti untuk mengkonfigur desktop GNOME"
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:10
 msgid "Settings is the primary interface for configuring your system."
-msgstr ""
+msgstr "Tetapan-tetapan ialah antaramuka utama untuk mengkonfigur sistem anda."
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:20
 msgid "The GNOME Project"
@@ -8415,27 +8423,27 @@ msgstr "Projek GNOME"
 
 #: shell/cc-application.c:58
 msgid "Display version number"
-msgstr ""
+msgstr "Nombor version paparan"
 
 #: shell/cc-application.c:59
 msgid "Enable verbose mode"
-msgstr "Benarkan mod panjang lebar"
+msgstr "Benarkan mod berjela"
 
 #: shell/cc-application.c:60
 msgid "Search for the string"
-msgstr "Cari rentetan"
+msgstr "Gelintar rentetan"
 
 #: shell/cc-application.c:61
 msgid "List possible panel names and exit"
-msgstr ""
+msgstr "Senaraikan nama panel yang mungkin kemudian keluar"
 
 #: shell/cc-application.c:62
 msgid "Panel to display"
-msgstr "Panel hendak dipaparkan"
+msgstr "Panel untuk dipaparkan"
 
 #: shell/cc-application.c:62
 msgid "[PANEL] [ARGUMENT…]"
-msgstr "[PANEL] [ARGUMENT…]"
+msgstr "[PANEL] [ARGUMEN…]"
 
 #: shell/cc-panel-loader.c:281
 msgid "Available panels:"
@@ -8447,18 +8455,18 @@ msgstr "Semua Tetapan"
 
 #: shell/cc-window.ui:185
 msgid "Primary Menu"
-msgstr ""
+msgstr "Menu Utama"
 
 #: shell/cc-window.ui:332
 msgid "Warning: Development Version"
-msgstr ""
+msgstr "Amaran: Versi Pembangunan"
 
 #: shell/cc-window.ui:333
 msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
+msgstr "Versi Tetapan-Tetapan ini seharusnya boleh digunakan untuk tujuan-tujuan pembangunan. Anda mungkin mengalami kelakuan sistem yang pelik, kehilangan data, dan lain-lain isu-isu tidak dijangka."
 
 #: shell/cc-window.ui:344
 msgid "Help"
@@ -8468,7 +8476,7 @@ msgstr "Bantuan"
 #. file name)!
 #: shell/gnome-control-center.desktop.in.in:5
 msgid "org.gnome.Settings"
-msgstr ""
+msgstr "org.gnome.Settings"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -8479,50 +8487,60 @@ msgstr "Keutamaan;Tetapan;"
 #: shell/help-overlay.ui:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Umum"
+msgstr "Am"
 
 #: shell/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Berhenti"
+msgstr "Keluar"
 
 #: shell/help-overlay.ui:27 shell/help-overlay.ui:48
 msgctxt "shortcut window"
 msgid "Search"
-msgstr "Carian"
+msgstr "Gelintar"
 
 #: shell/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "Panels"
-msgstr ""
+msgstr "Panel"
 
 #: shell/help-overlay.ui:40
 msgctxt "shortcut window"
 msgid "Go back to previous panel"
-msgstr ""
+msgstr "Undur ke panel terdahulu"
 
 #: shell/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Cancel search"
-msgstr ""
+msgstr "Batal gelintar"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:5
 msgid "The identifier for the last Settings panel to be opened"
-msgstr ""
+msgstr "Pengecam untuk panel Tetapan-Tetapan terakhir yang dibuka"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
 "The identifier for the last Settings panel to be opened. Unrecognised values"
 " will be ignored and the first panel in the list selected."
-msgstr ""
+msgstr "Pengecam untuk panel Tetapan-Tetapan terakhir yang dibuka. Nilai-nilai tidak dikenal pasti akan diabaikan dan panel pertama dalam senarai dipilih."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
-msgstr ""
+msgstr "Tunjuk amaran ketika menjalankan binaan pembangunan Tetapan-Tetapan"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
+msgstr "Sama ada Tetapan-Tetapan patut menunjukkan amaran ketika menjalankan binaan pembangunan."
+
+#: shell/org.gnome.ControlCenter.gschema.xml:20
+msgid "Directories with avatar faces"
+msgstr ""
+
+#: shell/org.gnome.ControlCenter.gschema.xml:21
+msgid ""
+"Directories to override the default avatar faces installed by gnome-control-"
+"center."
 msgstr ""
 
 #. translators:

@@ -41,9 +41,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 14:28-0700\n"
-"PO-Revision-Date: 2019-09-24 17:54+0000\n"
-"Last-Translator: Philip Chimento <philip.chimento@gmail.com>\n"
+"POT-Creation-Date: 2019-10-03 17:24+0100\n"
+"PO-Revision-Date: 2019-10-03 16:25+0000\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/endless-os/gnome-control-center/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,7 +89,7 @@ msgstr "Tem acesso à rede"
 
 #: panels/applications/cc-applications-panel.c:586
 #: panels/applications/cc-applications-panel.c:588
-#: panels/search/cc-search-locations-dialog.c:292
+#: panels/search/cc-search-locations-dialog.c:293
 msgid "Home"
 msgstr "Pasta pessoal"
 
@@ -389,7 +389,7 @@ msgstr "Selecionar uma imagem"
 #: panels/printers/pp-details-dialog.c:313
 #: panels/privacy/cc-privacy-panel.c:1270
 #: panels/region/cc-format-chooser.ui:24 panels/region/cc-input-chooser.ui:11
-#: panels/search/cc-search-locations-dialog.c:613
+#: panels/search/cc-search-locations-dialog.c:614
 #: panels/sharing/cc-sharing-panel.c:428
 #: panels/user-accounts/cc-add-user-dialog.ui:28
 #: panels/user-accounts/cc-avatar-chooser.c:107
@@ -448,10 +448,6 @@ msgstr "Plano de fundo atual"
 #: panels/background/cc-background-panel.ui:63
 msgid "Add Picture…"
 msgstr "Adicionar imagem…"
-
-#: panels/background/cc-background-preview.ui:55
-msgid "Activities"
-msgstr "Atividades"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
@@ -1430,6 +1426,14 @@ msgstr "Espelhar"
 msgid "Display Mode"
 msgstr "Modo da tela"
 
+#: panels/display/cc-display-panel.ui:222
+msgid "Contains task bar"
+msgstr ""
+
+#: panels/display/cc-display-panel.ui:223
+msgid "Primary Display"
+msgstr "Tela primária"
+
 #: panels/display/cc-display-panel.ui:245
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
@@ -1439,6 +1443,10 @@ msgstr "Arraste as telas para corresponder a sua configuração física de telas
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
 msgstr "Organização de telas"
+
+#: panels/display/cc-display-panel.ui:387
+msgid "Active Display"
+msgstr ""
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -5808,11 +5816,11 @@ msgstr "preferences-desktop-locale"
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Idioma;Disposição;Teclado;Entrada;"
 
-#: panels/search/cc-search-locations-dialog.c:610
+#: panels/search/cc-search-locations-dialog.c:611
 msgid "Select Location"
 msgstr "Selecione localização"
 
-#: panels/search/cc-search-locations-dialog.c:614
+#: panels/search/cc-search-locations-dialog.c:615
 msgid "_OK"
 msgstr "_OK"
 
@@ -6133,7 +6141,7 @@ msgstr "Volume"
 msgid "Alert Sound"
 msgstr "Som de alerta"
 
-#: panels/sound/cc-volume-slider.c:93
+#: panels/sound/cc-volume-slider.c:92
 msgctxt "volume"
 msgid "100%"
 msgstr "100%"
@@ -8567,6 +8575,16 @@ msgstr "Mostrar aviso quando estiver em uma compilação de desenvolvimento de C
 msgid ""
 "Whether Settings should show a warning when running a development build."
 msgstr "Se Configurações deve mostrar um aviso quando estiver sendo executando como uma compilação de desenvolvimento."
+
+#: shell/org.gnome.ControlCenter.gschema.xml:20
+msgid "Directories with avatar faces"
+msgstr ""
+
+#: shell/org.gnome.ControlCenter.gschema.xml:21
+msgid ""
+"Directories to override the default avatar faces installed by gnome-control-"
+"center."
+msgstr ""
 
 #. translators:
 #. * The number of sound outputs on a particular device
