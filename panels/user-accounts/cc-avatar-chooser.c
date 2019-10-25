@@ -420,8 +420,7 @@ get_settings_facesdirs (void)
 
         g_autoptr(GSettings) settings = NULL;
 
-        settings = g_settings_new_with_path ("org.gnome.ControlCenter",
-                                             "/org/gnome/control-center/");
+        settings = g_settings_new ("org.gnome.desktop.interface");
 
         settings_dirs = g_settings_get_strv (settings, "facesdirs");
         if (settings_dirs != NULL) {
