@@ -418,6 +418,18 @@ get_settings_facesdirs (void)
         char **settings_dirs;
         int i;
 
+        GSettingsSchemaSource *source = g_settings_schema_source_get_default ();
+        if (!source)
+                return NULL;
+
+        g_autoptr(GSettingsSchema) schema =
+            g_settings_schema_source_lookup (source,
+                                             "org.gnome.desktop.interface",
+                                             FALSE);
+
+        if (!schema || !g_settings_schema_has_key (schema, "facesdirs"))
+                return NULL;
+
         g_autoptr(GSettings) settings = NULL;
 
         settings = g_settings_new ("org.gnome.desktop.interface");
