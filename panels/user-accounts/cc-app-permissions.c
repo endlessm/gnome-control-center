@@ -24,6 +24,8 @@
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
 #include <strings.h>
+#include <pwd.h>
+#include <grp.h>
 
 #include "gs-content-rating.h"
 
@@ -309,12 +311,77 @@ flush_update_blacklisted_apps (CcAppPermissions *self)
     }
 }
 
+static gboolean
+current_user_in_sudo_group (void)
+{
+  /* Check if the current user is in the sudo group, which would mean they can
+   * read other users' parental controls info; see
+   * /usr/share/polkit-1/rules.d/com.endlessm.ParentalControls.rules
+   * This function is largely copied from eos-app-manager.
+   */
+  int n_groups = 10;
+  g_autofree gid_t *groups = g_new0 (gid_t, n_groups);
+
+  struct passwd *pw = getpwuid (getuid ());
+  if (pw == NULL)
+    return FALSE;
+
+  while (1)
+    {
+      int max_n_groups = n_groups;
+      int ret = getgrouplist (pw->pw_name, pw->pw_gid, groups, &max_n_groups);
+
+      if (ret >= 0)
+        {
+          n_groups = max_n_groups;
+          break;
+        }
+
+      /* some systems fail to update n_groups so we just grow it by approximation */
+      if (n_groups == max_n_groups)
+        n_groups = 2 * max_n_groups;
+      else
+        n_groups = max_n_groups;
+
+      groups = g_renew (gid_t, groups, n_groups);
+    }
+
+  for (int i = 0; i < n_groups; i++)
+    {
+      struct group *gr = getgrgid (groups[i]);
+
+      if (gr != NULL && g_strcmp0 (gr->gr_name, "sudo") == 0)
+        return TRUE;
+    }
+
+  return FALSE;
+}
+
 static void
 update_app_filter (CcAppPermissions *self)
 {
   g_autoptr(GError) error = NULL;
 
   g_clear_pointer (&self->filter, mct_app_filter_unref);
+
+  /* Avoid trying to get the app filter when we don't have permission. The
+   * mct_manager_get_app_filter() call uses MCT_GET_APP_FILTER_FLAGS_NONE not
+   * MCT_GET_APP_FILTER_FLAGS_INTERACTIVE because the proper way for the user
+   * to authenticate is to use the lock button (which corresponds to
+   * self->permission). But accountsservice tries to do interactive auth anyway
+   * and this leads to an unresponsive dialog. This is an Endless-specific
+   * patch only on the eos3.7 branch as a temporary fix for
+   * https://phabricator.endlessm.com/T28600
+   */
+  if (act_user_get_uid (self->user) != getuid () &&
+      !current_user_in_sudo_group () &&
+      self->permission != NULL &&
+      !g_permission_get_allowed (G_PERMISSION (self->permission)))
+    {
+      g_debug ("Not attempting to retrieve app filter for user '%s' due to lack of permissions",
+               act_user_get_user_name (self->user));
+      return;
+    }
 
   /* FIXME: make it asynchronous */
   self->filter = mct_manager_get_app_filter (self->manager,
