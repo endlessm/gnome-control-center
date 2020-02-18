@@ -70,80 +70,6 @@
       </packing>
     </child>
 
-    <!-- Restricted Web Browsers -->
-    <child>
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="xalign">0.0</property>
-        <property name="label" translatable="yes">Restrict Web Browsers</property>
-        <attributes>
-          <attribute name="weight" value="bold" />
-        </attributes>
-      </object>
-      <packing>
-        <property name="top-attach">3</property>
-        <property name="left-attach">0</property>
-      </packing>
-    </child>
-
-    <child>
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="xalign">0.0</property>
-        <property name="label" translatable="yes">Prevent this user from running web browsers by turning them off below. Note that if the computer is connected to the internet, limited web content may still be available in other applications.</property>
-        <property name="wrap">True</property>
-        <property name="max-width-chars">55</property>
-        <property name="use-underline">True</property>
-        <property name="mnemonic-widget">allow_web_browsers_switch</property>
-        <attributes>
-          <attribute name="scale" value="0.83333" />
-        </attributes>
-        <style>
-          <class name="dim-label" />
-        </style>
-      </object>
-      <packing>
-        <property name="top-attach">4</property>
-        <property name="left-attach">0</property>
-      </packing>
-    </child>
-
-    <child>
-      <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="spacing">12</property>
-
-        <child>
-          <object class="GtkLabel" id="browsers_label">
-            <property name="visible">True</property>
-            <property name="xalign">1.0</property>
-            <property name="label" translatable="yes">Web _Browsers</property>
-            <property name="wrap">True</property>
-            <property name="use-underline">True</property>
-            <property name="mnemonic-widget">allow_web_browsers_switch</property>
-            <style>
-              <class name="dim-label" />
-            </style>
-          </object>
-        </child>
-
-        <child>
-          <object class="GtkSwitch" id="allow_web_browsers_switch">
-            <property name="visible">True</property>
-            <property name="hexpand">True</property>
-            <property name="halign">start</property>
-            <signal name="notify::active" handler="on_allow_web_browsers_switch_active_changed_cb" object="CcAppPermissions" swapped="no" />
-          </object>
-        </child>
-
-      </object>
-      <packing>
-        <property name="top-attach">5</property>
-        <property name="left-attach">0</property>
-        <property name="width">2</property>
-      </packing>
-    </child>
-
     <!-- App Center Restrictions -->
     <child>
       <object class="GtkLabel">
@@ -156,7 +82,7 @@
         </attributes>
       </object>
       <packing>
-        <property name="top-attach">6</property>
+        <property name="top-attach">3</property>
         <property name="left-attach">0</property>
       </packing>
     </child>
@@ -191,7 +117,7 @@
 
       </object>
       <packing>
-        <property name="top-attach">7</property>
+        <property name="top-attach">4</property>
         <property name="left-attach">0</property>
         <property name="width">2</property>
       </packing>
@@ -227,7 +153,7 @@
 
       </object>
       <packing>
-        <property name="top-attach">8</property>
+        <property name="top-attach">5</property>
         <property name="left-attach">0</property>
         <property name="width">2</property>
       </packing>
@@ -264,7 +190,7 @@
 
       </object>
       <packing>
-        <property name="top-attach">9</property>
+        <property name="top-attach">6</property>
         <property name="left-attach">0</property>
         <property name="width">2</property>
       </packing>
@@ -286,7 +212,6 @@
   <object class="GtkSizeGroup">
     <property name="mode">horizontal</property>
     <widgets>
-      <widget name="browsers_label" />
       <widget name="app_restriction_label" />
       <widget name="user_installation_label" />
       <widget name="system_installation_label" />

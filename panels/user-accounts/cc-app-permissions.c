@@ -29,8 +29,6 @@
 
 #include "cc-app-permissions.h"
 
-#define WEB_BROWSERS_CONTENT_TYPE "x-scheme-handler/http"
-
 /* The value which we store as an age to indicate that OARS filtering is disabled. */
 static const guint32 oars_disabled_age = (guint32) -1;
 
@@ -41,7 +39,6 @@ struct _CcAppPermissions
   GMenu      *age_menu;
   GtkSwitch  *allow_system_installation_switch;
   GtkSwitch  *allow_user_installation_switch;
-  GtkSwitch  *allow_web_browsers_switch;
   GtkListBox *listbox;
   GtkButton  *restriction_button;
   GtkPopover *restriction_popover;
@@ -78,10 +75,6 @@ static gint compare_app_info_cb (gconstpointer a,
                                  gpointer      user_data);
 
 static void on_allow_installation_switch_active_changed_cb (GtkSwitch        *s,
-                                                            GParamSpec       *pspec,
-                                                            CcAppPermissions *self);
-
-static void on_allow_web_browsers_switch_active_changed_cb (GtkSwitch        *s,
                                                             GParamSpec       *pspec,
                                                             CcAppPermissions *self);
 
@@ -191,12 +184,9 @@ reload_apps (CcAppPermissions *self)
     {
       GAppInfo *app;
       const gchar *app_name;
-      const gchar * const *supported_types;
 
       app = iter->data;
       app_name = g_app_info_get_name (app);
-
-      supported_types = g_app_info_get_supported_types (app);
 
       if (!G_IS_DESKTOP_APP_INFO (app) ||
           !g_app_info_should_show (app) ||
@@ -208,9 +198,7 @@ reload_apps (CcAppPermissions *self)
            * reliably support blacklisting system programs. See
            * https://phabricator.endlessm.com/T25080. */
           (!g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Flatpak") &&
-           !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Parental-Controls")) ||
-          /* Web browsers are special cased */
-          (supported_types && g_strv_contains (supported_types, WEB_BROWSERS_CONTENT_TYPE)))
+           !g_desktop_app_info_has_key (G_DESKTOP_APP_INFO (app), "X-Parental-Controls")))
         {
           continue;
         }
@@ -490,27 +478,6 @@ update_allow_app_installation (CcAppPermissions *self)
 }
 
 static void
-update_allow_web_browsers (CcAppPermissions *self)
-{
-  gboolean allow_web_browsers;
-
-  allow_web_browsers = mct_app_filter_is_content_type_allowed (self->filter,
-                                                               WEB_BROWSERS_CONTENT_TYPE);
-
-  g_signal_handlers_block_by_func (self->allow_web_browsers_switch,
-                                   on_allow_web_browsers_switch_active_changed_cb,
-                                   self);
-
-  gtk_switch_set_active (self->allow_web_browsers_switch, allow_web_browsers);
-
-  g_debug ("Allow web browsers: %s", allow_web_browsers ? "yes" : "no");
-
-  g_signal_handlers_unblock_by_func (self->allow_web_browsers_switch,
-                                     on_allow_web_browsers_switch_active_changed_cb,
-                                     self);
-}
-
-static void
 setup_parental_control_settings (CcAppPermissions *self)
 {
   gboolean is_authorized;
@@ -534,7 +501,6 @@ setup_parental_control_settings (CcAppPermissions *self)
   update_oars_level (self);
   update_categories_from_language (self);
   update_allow_app_installation (self);
-  update_allow_web_browsers (self);
   reload_apps (self);
 }
 
@@ -591,7 +557,6 @@ blacklist_apps_cb (gpointer data)
   CcAppPermissions *self = data;
   GDesktopAppInfo *app;
   GHashTableIter iter;
-  gboolean allow_web_browsers;
   gsize i;
 
   self->blacklist_apps_source_id = 0;
@@ -660,14 +625,6 @@ blacklist_apps_cb (gpointer data)
       mct_app_filter_builder_set_oars_value (&builder, oars_category, oars_value);
     }
 
-  /* Web browsers */
-  allow_web_browsers = gtk_switch_get_active (self->allow_web_browsers_switch);
-
-  g_debug ("\t → %s web browsers", allow_web_browsers ? "Enabling" : "Disabling");
-
-  if (!allow_web_browsers)
-    mct_app_filter_builder_blacklist_content_type (&builder, WEB_BROWSERS_CONTENT_TYPE);
-
   /* App installation */
   if (act_user_get_account_type (self->user) != ACT_USER_ACCOUNT_TYPE_ADMINISTRATOR)
     {
@@ -722,15 +679,6 @@ on_allow_installation_switch_active_changed_cb (GtkSwitch        *s,
                                          self);
     }
 
-  /* Save the changes. */
-  schedule_update_blacklisted_apps (self);
-}
-
-static void
-on_allow_web_browsers_switch_active_changed_cb (GtkSwitch        *s,
-                                                GParamSpec       *pspec,
-                                                CcAppPermissions *self)
-{
   /* Save the changes. */
   schedule_update_blacklisted_apps (self);
 }
@@ -1013,13 +961,11 @@ cc_app_permissions_class_init (CcAppPermissionsClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, age_menu);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, allow_system_installation_switch);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, allow_user_installation_switch);
-  gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, allow_web_browsers_switch);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, restriction_button);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, restriction_popover);
   gtk_widget_class_bind_template_child (widget_class, CcAppPermissions, listbox);
 
   gtk_widget_class_bind_template_callback (widget_class, on_allow_installation_switch_active_changed_cb);
-  gtk_widget_class_bind_template_callback (widget_class, on_allow_web_browsers_switch_active_changed_cb);
 }
 
 static void
