@@ -94,7 +94,7 @@
 
         <child>
           <object class="GtkLabel" id="user_installation_label">
-            <property name="visible" bind-source="allow_user_installation_switch" bind-property="visible" bind-flags="default|sync-create" />
+            <property name="visible">True</property>
             <property name="xalign">1.0</property>
             <property name="label" translatable="yes">App _Installation</property>
             <property name="wrap">True</property>
@@ -130,7 +130,7 @@
 
         <child>
           <object class="GtkLabel" id="system_installation_label">
-            <property name="visible" bind-source="allow_system_installation_switch" bind-property="visible" bind-flags="default|sync-create" />
+            <property name="visible">True</property>
             <property name="xalign">1.0</property>
             <property name="label" translatable="yes">Install Apps for All _Users</property>
             <property name="wrap">True</property>
