@@ -1086,6 +1086,13 @@ show_history (CcUserPanel *self)
 }
 
 static void
+launch_malcontent_control (CcUserPanel *self)
+{
+  const gchar *argv[] = { "malcontent-control", NULL };
+  g_spawn_async (NULL, (char **)argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
+}
+
+static void
 users_loaded (CcUserPanel *self)
 {
         GtkWidget *dialog;
@@ -1506,4 +1513,5 @@ cc_user_panel_class_init (CcUserPanelClass *klass)
         gtk_widget_class_bind_template_callback (widget_class, restart_now);
         gtk_widget_class_bind_template_callback (widget_class, set_selected_user);
         gtk_widget_class_bind_template_callback (widget_class, show_history);
+        gtk_widget_class_bind_template_callback (widget_class, launch_malcontent_control);
 }
