@@ -27,6 +27,7 @@
 
 #include "cc-info-overview-resources.h"
 #include "info-cleanup.h"
+#include "cc-util.h"
 
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -78,6 +79,18 @@ struct _CcInfoOverviewPanel
 };
 
 G_DEFINE_TYPE (CcInfoOverviewPanel, cc_info_overview_panel, CC_TYPE_PANEL)
+
+static gboolean
+on_attribution_label_link (GtkLinkButton       *link_button,
+                           CcInfoOverviewPanel *self)
+{
+  CcShell *shell;
+  GtkWindow *toplevel;
+
+  shell = cc_panel_get_shell (CC_PANEL (self));
+  toplevel = GTK_WINDOW (cc_shell_get_toplevel (shell));
+  return cc_util_show_endless_terms_of_use (toplevel);
+}
 
 static char *
 get_renderer_from_session (void)
@@ -960,6 +973,7 @@ cc_info_overview_panel_class_init (CcInfoOverviewPanelClass *klass)
   gtk_widget_class_bind_template_callback (widget_class, on_device_name_entry_changed);
   gtk_widget_class_bind_template_callback (widget_class, on_device_name_entry_activated_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_hostname_editor_dialog_response_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_attribution_label_link);
 
   g_type_ensure (CC_TYPE_LIST_ROW);
   g_type_ensure (CC_TYPE_HOSTNAME_ENTRY);

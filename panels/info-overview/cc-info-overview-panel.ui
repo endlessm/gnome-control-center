@@ -155,9 +155,24 @@
                     <property name="icon-name">adw-external-link-symbolic</property>
                   </object>
                 </child>
+
               </object>
             </child>
+          </object>
+        </child>
 
+        <child>
+          <object class="AdwPreferencesGroup">
+            <!-- Endless license attribution document -->
+            <child>
+              <object class="GtkLinkButton" id="attribution_link">
+                <property name="label" translatable="yes" comments="Translators: A link to the terms of use of Endless OS.">_Endless Terms of Use</property>
+                <property name="use_underline">1</property>
+                <property name="halign">center</property>
+                <property name="can_focus">False</property>
+                <signal name="activate-link" handler="on_attribution_label_link" swapped="no" />
+              </object>
+            </child>
           </object>
         </child>
 
