@@ -75,6 +75,7 @@ extern GType cc_microphone_panel_get_type (void);
 extern GType cc_usage_panel_get_type (void);
 extern GType cc_screen_panel_get_type (void);
 extern GType cc_diagnostics_panel_get_type (void);
+extern GType cc_metrics_panel_get_type (void);
 
 /* Static init functions */
 extern void cc_diagnostics_panel_static_init_func (void);
@@ -114,6 +115,7 @@ static CcPanelLoaderVtable default_panels[] =
   PANEL_TYPE("keyboard",         cc_keyboard_panel_get_type,             NULL),
   PANEL_TYPE("location",         cc_location_panel_get_type,             NULL),
   PANEL_TYPE("firmware-security",cc_firmware_security_panel_get_type,    cc_firmware_security_panel_static_init_func),
+  PANEL_TYPE("metrics",          cc_metrics_panel_get_type,              NULL),
   PANEL_TYPE("microphone",       cc_microphone_panel_get_type,           NULL),
   PANEL_TYPE("mouse",            cc_mouse_panel_get_type,                NULL),
   PANEL_TYPE("multitasking",     cc_multitasking_panel_get_type,         NULL),

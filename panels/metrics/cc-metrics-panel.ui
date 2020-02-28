@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CcMetricsPanel" parent="CcPanel">
+
+    <child type="titlebar-end">
+      <object class="GtkSwitch" id="enable_metrics_switch">
+        <property name="valign">center</property>
+        <signal name="state-set" handler="metrics_switch_active_changed_cb"/>
+        <accessibility>
+          <property name="label" translatable="yes">Enable Metrics</property>
+        </accessibility>
+      </object>
+    </child>
+
+    <child type="content">
+      <object class="GtkStack" id="stack">
+        <child>
+          <object class="AdwStatusPage" id="metrics_disabled_page">
+            <property name="icon-name">action-unavailable-symbolic</property>
+            <property name="title" translatable="yes">Metrics services turned off</property>
+            <property name="description" translatable="yes">No anonymous usage data will be sent to Endless.</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesPage" id="preferences_page">
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes">Metrics</property>
+                <property name="description" translatable="yes">Endless collects metrics on user behavior and actions. All data sent is anonymous. We use the data to improve the system.</property>
+                <!-- Endless license attribution document -->
+                <child>
+                  <object class="GtkLinkButton" id="attribution_link">
+                    <property name="label" translatable="yes" comments="Translators: A link to the terms of use of Endless OS.">_Endless Terms of Use</property>
+                    <property name="use_underline">1</property>
+                    <property name="halign">center</property>
+                    <property name="can_focus">False</property>
+                    <signal name="activate-link" handler="on_attribution_label_link" swapped="no" />
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

@@ -13,6 +13,7 @@ panels = [
   'info-overview',
   'keyboard',
   'location',
+  'metrics',
   'microphone',
   'mouse',
   'multitasking',
