@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.1 -->
+<interface>
+  <requires lib="gtk+" version="3.14"/>
+  <template class="CcMetricsPanel" parent="CcPanel">
+    <property name="visible">True</property>
+    <child>
+      <object class="GtkStack" id="stack">
+        <property name="visible">true</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">true</property>
+            <property name="orientation">vertical</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">true</property>
+                <property name="valign">start</property>
+                <property name="pixel-size">96</property>
+                <!-- FIXME: use proper icon -->
+                <property name="icon-name">action-unavailable-symbolic</property>
+                <style>
+                  <class name="dim-label" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">true</property>
+                <property name="margin-top">20</property>
+                <property name="margin-bottom">15</property>
+                <property name="label" translatable="yes">Metrics services turned off</property>
+                <attributes>
+                  <attribute name="scale" value="1.44" />
+                </attributes>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">true</property>
+                <property name="label" translatable="yes">No anonymous usage data will be sent to Endless.</property>
+                <style>
+                  <class name="dim-label" />
+                </style>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="name">empty</property>
+          </packing>
+        </child>
+        <child>
+          <object class="HdyPreferencesPage">
+            <property name="visible">true</property>
+            <child>
+              <object class="HdyPreferencesGroup">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes">Metrics</property>
+                <property name="description" translatable="yes">Endless collects metrics on user behavior and actions. All data sent is anonymous. We use the data to improve the system.</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">true</property>
+                    <property name="hexpand">true</property>
+                    <property name="halign">center</property>
+                    <property name="spacing">12</property>
+                    <!-- Endless license attribution document -->
+                    <child>
+                      <object class="GtkLinkButton" id="attribution_link">
+                        <property name="label" translatable="yes" comments="Translators: A link to the terms of use of Endless OS.">_Endless Terms of Use</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">true</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="uri">attribution-link</property>
+                        <signal name="activate-link" handler="on_attribution_label_link" object="CcMetricsPanel" swapped="no" />
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="name">content</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
