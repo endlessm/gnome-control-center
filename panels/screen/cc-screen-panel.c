@@ -29,6 +29,7 @@
 
 #include <adwaita.h>
 
+#include <act/act.h>
 #include <gio/gdesktopappinfo.h>
 #include <glib/gi18n.h>
 
@@ -47,6 +48,7 @@ struct _CcScreenPanel
 
   AdwComboRow         *blank_screen_row;
   AdwComboRow         *lock_after_row;
+  AdwComboRow         *lock_screen_row;
   AdwPreferencesGroup *screen_privacy_group;
   GDBusProxy          *usb_proxy;
   GtkListBoxRow       *usb_protection_row;
@@ -274,6 +276,7 @@ cc_screen_panel_class_init (CcScreenPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, automatic_screen_lock_switch);
   gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, blank_screen_row);
   gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, lock_after_row);
+  gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, lock_screen_row);
   gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, privacy_screen_switch);
   gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, screen_privacy_group);
   gtk_widget_class_bind_template_child (widget_class, CcScreenPanel, show_notifications_switch);
@@ -322,6 +325,9 @@ static void
 cc_screen_panel_init (CcScreenPanel *self)
 {
   guint value;
+  ActUserManager *um;
+  ActUser *user;
+  gboolean automatic_login;
 
   g_resources_register (cc_screen_get_resource ());
 
@@ -334,17 +340,30 @@ cc_screen_panel_init (CcScreenPanel *self)
   self->notification_settings = g_settings_new ("org.gnome.desktop.notifications");
   self->session_settings = g_settings_new ("org.gnome.desktop.session");
 
-  g_settings_bind (self->lock_settings,
-                   "lock-enabled",
-                   self->automatic_screen_lock_switch,
-                   "active",
-                   G_SETTINGS_BIND_DEFAULT);
+  um = act_user_manager_get_default ();
+  user = act_user_manager_get_user_by_id (um, getuid ());
+  automatic_login = act_user_get_automatic_login (user);
 
-  g_settings_bind (self->lock_settings,
-                   "lock-enabled",
-                   self->lock_after_row,
-                   "sensitive",
-                   G_SETTINGS_BIND_GET);
+  if (automatic_login)
+    {
+      gtk_switch_set_active (self->automatic_screen_lock_switch, FALSE);
+      gtk_widget_set_sensitive (GTK_WIDGET (self->lock_screen_row), FALSE);
+      gtk_widget_set_sensitive (GTK_WIDGET (self->lock_after_row), FALSE);
+    }
+  else
+    {
+      g_settings_bind (self->lock_settings,
+                       "lock-enabled",
+                       self->automatic_screen_lock_switch,
+                       "active",
+                       G_SETTINGS_BIND_DEFAULT);
+
+      g_settings_bind (self->lock_settings,
+                       "lock-enabled",
+                       self->lock_after_row,
+                       "sensitive",
+                       G_SETTINGS_BIND_GET);
+    }
 
   set_lock_value_for_combo (self->lock_after_row, self);
 
