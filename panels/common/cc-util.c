@@ -306,7 +306,7 @@ find_terms_document_for_languages (const gchar *product_name,
 }
 
 gboolean
-cc_util_show_endless_terms_of_use (GtkWidget *widget)
+cc_util_show_endless_terms_of_use (void)
 {
   g_autofree gchar *path = NULL;
   const gchar * const * languages;
@@ -335,12 +335,8 @@ cc_util_show_endless_terms_of_use (GtkWidget *widget)
       return TRUE;
     }
 
-  GtkWidget *toplevel = gtk_widget_get_toplevel (widget);
-  gtk_show_uri_on_window (GTK_WINDOW (toplevel), pdf_uri,
-                          gtk_get_current_event_time (), &error);
-
-  if (error)
-    g_warning ("Unable to display terms and conditions PDF: %s", error->message);
+  const gchar *argv[] = { "evince", pdf_uri, NULL };
+  g_spawn_async (NULL, (char **)argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
 
   return TRUE;
 }

@@ -89,7 +89,7 @@ on_attribution_label_link (GtkLinkButton       *link_button,
   if (g_strcmp0 (uri, "attribution-link") != 0)
     return FALSE;
 
-  return cc_util_show_endless_terms_of_use (GTK_WIDGET (link_button));
+  return cc_util_show_endless_terms_of_use ();
 }
 
 static char *
