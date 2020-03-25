@@ -12,7 +12,8 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		-Dprivileged_group=sudo \
 		-Dgnome_session_libexecdir=/usr/lib/gnome-session \
-		-Ddocumentation=true
+		-Ddocumentation=true \
+		-Dmalcontent=true
 
 override_dh_missing:
 	dh_missing --fail-missing
