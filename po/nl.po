@@ -1,40 +1,35 @@
-# Dutch translation for gnome-control-center
-# This file is distributed under the same license as the gnome-control-center package.
-# Bas Wagter <B.J.Wagter@bk.tudelft.nl>
-# Hein-Jan Leliveld <h.j.leliveld@student.tn.tudelft.nl>
-# desktop                  - werkblad
-# enroll (fingerprint)     - (vingerafruk) nemen
-# modifier keys            - optietoetsen
-# wallpaper                - achtergrond
-# calibrate                - kalibreren
-# keywords		   - Engelse keywords laten staan + enkele Nederlandse woorden die Rachid had toegevoegd.
-# Dennis Smit <synap@area101.penguin.nl>, 2000.
-# Almer S. Tigelaar <almer@gnome.org>, 2001.
-# Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2002.
-# Huib Kleinhout <huib@stack.nl>, 2002.
-# Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002.
-# Tino Meinen <tino.meinen@gmail.com>, 2004, 2006, 2007, 2009.
-# Wouter Bolsterlee <wbolster@gnome.org>, 2006, 2008, 2011–2012.
-# Rachid BM <rachidbm@ubuntu.com>, 2011.
-# Reinout van Schouwen <reinouts@gnome.org>, 2002–2008, 2011, 2012, 2014, 2016.
-# Nathan Follens <nthn@unseen.is>, 2015-2020.
-# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2011, 2012, 2013, 2014, 2015, 2017, 2018.
-# Justin van Steijn <jvs@fsfe.org>, 2016, 2018.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# Almer S. Tigelaar <almer@gnome.org>, 2001
+# Dennis Smit <synap@area101.penguin.nl>, 2000
+# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2011-2018
+# Heimen Stoffels <vistausss@outlook.com>, 2019
+# Huib Kleinhout <huib@stack.nl>, 2002
+# Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2002
+# Justin van Steijn <justin50@live.nl>, 2016
+# Justin van Steijn <jvs@fsfe.org>, 2016,2018
+# Nathan Follens <nthn@unseen.is>, 2015
+# Rachid BM <rachidbm@ubuntu.com>, 2011
+# Reinout van Schouwen <reinouts@gnome.org>, 2011-2012,2014,2016
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002
+# Tino Meinen <tino.meinen@gmail.com>, 2004,2006-2007,2009
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-13 22:09+0100\n"
-"PO-Revision-Date: 2020-02-25 00:57+0100\n"
-"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
-"Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
-"Language: nl\n"
+"PO-Revision-Date: 2020-04-13 21:27+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/endless-os/gnome-control-center/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
-"X-Project-Style: gnome\n"
 
 #: panels/applications/cc-applications-panel.c:747
 msgid "System Bus"
@@ -105,9 +100,7 @@ msgstr "Kan instellingen wijzigen"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"%s heeft volgende ingebouwde rechten. Deze kunnen niet gewijzigd worden. "
-"Indien u hier bezorgd om bent, kunt u de toepassing verwijderen."
+msgstr "%s heeft volgende ingebouwde rechten. Deze kunnen niet gewijzigd worden. Indien u hier bezorgd om bent, kunt u de toepassing verwijderen."
 
 #: panels/applications/cc-applications-panel.c:936
 msgid "Web Links"
@@ -179,7 +172,6 @@ msgstr "Toepassingen"
 msgid "No applications"
 msgstr "Geen toepassingen"
 
-# Geen context, dus moet misschien nog aangepast worden - Nathan
 #: panels/applications/cc-applications-panel.ui:59
 msgid "Install some…"
 msgstr "Installeer enkele…"
@@ -190,11 +182,9 @@ msgstr "Rechten & toegang"
 
 #: panels/applications/cc-applications-panel.ui:111
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"Gegevens en diensten waartoe deze toepassing toegang heeft gevraagd, en "
-"rechten die ze vereist."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "Gegevens en diensten waartoe deze toepassing toegang heeft gevraagd, en rechten die ze vereist."
 
 #: panels/applications/cc-applications-panel.ui:126
 #: panels/applications/cc-applications-panel.ui:132
@@ -204,7 +194,6 @@ msgstr "Camera"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -216,7 +205,8 @@ msgstr "Camera"
 #: panels/keyboard/cc-keyboard-option.c:259
 #: panels/keyboard/cc-keyboard-option.c:378
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:96
-#: panels/keyboard/keyboard-shortcuts.c:425 panels/network/network-proxy.ui:126
+#: panels/keyboard/keyboard-shortcuts.c:425
+#: panels/network/network-proxy.ui:126
 #: panels/user-accounts/cc-user-panel.c:926
 #: panels/user-accounts/um-fingerprint-dialog.c:211
 #: subprojects/gvc/gvc-mixer-control.c:1876
@@ -246,11 +236,9 @@ msgstr "Kunnen niet gewijzigd worden"
 
 #: panels/applications/cc-applications-panel.ui:180
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"Individuele rechten voor toepassingen kunnen aangepast worden in de <a href="
-"\"privacy\">Privacy</a>-instellingen."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "Individuele rechten voor toepassingen kunnen aangepast worden in de <a href=\"privacy\">Privacy</a>-instellingen."
 
 #: panels/applications/cc-applications-panel.ui:204
 msgid "Integration"
@@ -285,7 +273,6 @@ msgstr "Bureaubladachtergrond instellen"
 msgid "Sounds"
 msgstr "Geluiden"
 
-# 'handler' kan misschien een andere vertaling gebruiken - Nathan
 #: panels/applications/cc-applications-panel.ui:299
 msgid "Default Handlers"
 msgstr "Standaardverwerkers"
@@ -327,9 +314,7 @@ msgstr "Probeer een andere zoekopdracht"
 #: panels/applications/cc-applications-panel.ui:554
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr ""
-"Hoe veel opslagruimte deze toepassing bezet met toepassingsgegevens en "
-"cachegeheugen."
+msgstr "Hoe veel opslagruimte deze toepassing bezet met toepassingsgegevens en cachegeheugen."
 
 #: panels/applications/cc-applications-panel.ui:563
 msgid "Application"
@@ -461,9 +446,7 @@ msgstr "Netwerkinstellingen op laag niveau wijzigen"
 
 #: panels/applications/cc-snap-row.c:113
 msgid "Access the NetworkManager service to read and change network settings"
-msgstr ""
-"Toegang tot de NetworkManager-dienst om de netwerkinstellingen te lezen en "
-"te wijzigen"
+msgstr "Toegang tot de NetworkManager-dienst om de netwerkinstellingen te lezen en te wijzigen"
 
 #: panels/applications/cc-snap-row.c:115
 msgid "Read access to network settings"
@@ -481,9 +464,7 @@ msgstr "Netwerkinstellingen lezen"
 msgid ""
 "Access the ofono service to read and change network settings for mobile "
 "telephony"
-msgstr ""
-"Toegang tot de ofono-dienst om de netwerkinstellingen voor mobiele telefonie "
-"te lezen en te wijzigen"
+msgstr "Toegang tot de ofono-dienst om de netwerkinstellingen voor mobiele telefonie te lezen en te wijzigen"
 
 #: panels/applications/cc-snap-row.c:123
 msgid "Control Open vSwitch hardware"
@@ -501,9 +482,7 @@ msgstr "Opgeslagen wachtwoorden lezen, toevoegen, wijzigen of verwijderen"
 msgid ""
 "Access pppd and ppp devices for configuring Point-to-Point Protocol "
 "connections"
-msgstr ""
-"Toegang tot pppd- en ppp-apparaten om Point-to-Point-protocolverbindingen in "
-"te stellen"
+msgstr "Toegang tot pppd- en ppp-apparaten om Point-to-Point-protocolverbindingen in te stellen"
 
 #: panels/applications/cc-snap-row.c:131
 msgid "Pause or end any process on the system"
@@ -559,9 +538,7 @@ msgstr "De tijdzone wijzigen"
 
 #: panels/applications/cc-snap-row.c:159
 msgid "Access the UDisks2 service for configuring disks and removable media"
-msgstr ""
-"Toegang tot de UDisks2-dienst om schijven en verwijderbare media in te "
-"stellen"
+msgstr "Toegang tot de UDisks2-dienst om schijven en verwijderbare media in te stellen"
 
 #: panels/applications/cc-snap-row.c:161
 msgid "Read/change shared calendar events in Ubuntu Unity 8"
@@ -583,12 +560,11 @@ msgstr "Lees-/schrijftoegang tot U2F-apparaten"
 msgid "Control various application permissions and settings"
 msgstr "Beheer verschillende toepassingsrechten en -instellingen"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
-msgstr ""
-"application;flatpak;permission;setting;toepassing;rechten;machtigingen;"
-"instellingen;"
+msgstr "application;flatpak;permission;setting;toepassing;rechten;machtigingen;instellingen;"
 
 #. Nautilus puts wallpapers into this subdirectory:
 #: panels/background/bg-pictures-source.c:845
@@ -669,7 +645,8 @@ msgstr "Achtergrond"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "Wijzig je achtergrond in een achtergrondafbeelding of foto"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Achtergrondafbeelding;Scherm;Bureaublad;"
@@ -688,8 +665,7 @@ msgstr "Bluetooth uitgeschakeld"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:80
 msgid "Turn on to connect devices and receive file transfers."
-msgstr ""
-"Schakel in om apparaten aan te sluiten en bestandsoverdrachten te ontvangen."
+msgstr "Schakel in om apparaten aan te sluiten en bestandsoverdrachten te ontvangen."
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:107
 msgid "Airplane Mode is on"
@@ -721,7 +697,8 @@ msgstr "Bluetooth"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Schakel Bluetooth in en uit en verbind je apparaten"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "delen;deling;bluetooth;obex;"
@@ -736,12 +713,9 @@ msgstr "Er zijn geen toepassingen die foto’s of video’s kunnen maken."
 
 #: panels/camera/cc-camera-panel.ui:77
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
-msgstr ""
-"Gebruik van de camera geeft toepassingen de mogelijkheid foto’s en video’s "
-"(op) te nemen. De camera uitschakelen kan ertoe leiden dat sommige "
-"toepassingen niet correct functioneren."
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly."
+msgstr "Gebruik van de camera geeft toepassingen de mogelijkheid foto’s en video’s (op) te nemen. De camera uitschakelen kan ertoe leiden dat sommige toepassingen niet correct functioneren."
 
 #: panels/camera/cc-camera-panel.ui:87
 msgid "Allow the applications below to use your camera."
@@ -755,7 +729,8 @@ msgstr "Er hebben nog geen toepassingen toegang tot de camera gevraagd"
 msgid "Protect your pictures"
 msgstr "Bescherm uw foto’s"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:19
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
 #: panels/location/gnome-location-panel.desktop.in.in:19
@@ -763,8 +738,7 @@ msgstr "Bescherm uw foto’s"
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
 msgstr "index;name;network;identity;scherm;vergrendelen;privé;tijdelijk;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
@@ -778,8 +752,7 @@ msgstr "Plaats je kalibratieapparaat boven het vierkant en druk op ‘Starten’
 #: panels/color/cc-color-calibrate.c:354
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
-"Zet je kalibratieapparaat in de kalibratiepositie en druk op ‘Doorgaan’"
+msgstr "Zet je kalibratieapparaat in de kalibratiepositie en druk op ‘Doorgaan’"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -787,8 +760,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:360
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr ""
-"Zet je kalibratieapparaat in de oppervlaktepositie en druk op ‘Doorgaan’"
+msgstr "Zet je kalibratieapparaat in de oppervlaktepositie en druk op ‘Doorgaan’"
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -984,11 +956,8 @@ msgstr "Herstart deze computer en start je normale besturingssysteem op."
 
 #: panels/color/cc-color-panel.c:862
 msgid "Type the URL into your browser to download and install the profile."
-msgstr ""
-"Voer de URL in in je browser om het profiel te downloaden en installeren."
+msgstr "Voer de URL in in je browser om het profiel te downloaden en installeren."
 
-# bij een browser is dit bladwijzers, maar hier is
-# favorieten/favoriet beter (favoriete programma's) (tino)
 #. TRANSLATORS: this is the dialog to save the ICC profile
 #: panels/color/cc-color-panel.c:890
 msgid "Save Profile"
@@ -1009,15 +978,12 @@ msgstr "Kleurprofiel creëren voor geselecteerd apparaat"
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"Het meetinstrument is niet aangetroffen. Controleer of het is ingeschakeld "
-"en juist is aangesloten."
+msgstr "Het meetinstrument is niet aangetroffen. Controleer of het is ingeschakeld en juist is aangesloten."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1246
 msgid "The measuring instrument does not support printer profiling."
-msgstr ""
-"Het meetinstrument heeft geen ondersteuning voor het profileren van printers."
+msgstr "Het meetinstrument heeft geen ondersteuning voor het profileren van printers."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1257
@@ -1033,10 +999,7 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"Kalibratie levert een profiel op dat je kunt gebruiken voor kleurbeheer van "
-"je scherm. Hoe langer je kalibreert, hoe beter de kwaliteit van het "
-"kleurprofiel."
+msgstr "Kalibratie levert een profiel op dat je kunt gebruiken voor kleurbeheer van je scherm. Hoe langer je kalibreert, hoe beter de kwaliteit van het kleurprofiel."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -1059,9 +1022,7 @@ msgstr "Kalibratiekwaliteit"
 
 #: panels/color/cc-color-panel.ui:137
 msgid "Select the sensor device you want to use for calibration."
-msgstr ""
-"Kies het sensorapparaat dat je wilt gebruiken voor het uitvoeren van de "
-"kalibratie."
+msgstr "Kies het sensorapparaat dat je wilt gebruiken voor het uitvoeren van de kalibratie."
 
 #: panels/color/cc-color-panel.ui:174
 msgid "Calibration Device"
@@ -1077,11 +1038,9 @@ msgstr "Type beeldscherm"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
-"Kies een ‘target white point' voor het scherm. De meeste schermen moeten "
-"naar een ‘D65 illuminant’ gekalibreerd worden."
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "Kies een ‘target white point' voor het scherm. De meeste schermen moeten naar een ‘D65 illuminant’ gekalibreerd worden."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
@@ -1091,17 +1050,13 @@ msgstr "Whitepoint-profiel"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
-"Stel de voor jouw juiste helderheid van het scherm in. Kleurbeheer zal het "
-"nauwkeurigst zijn bij deze helderheid."
+msgstr "Stel de voor jouw juiste helderheid van het scherm in. Kleurbeheer zal het nauwkeurigst zijn bij deze helderheid."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"Je kunt ook gebruikmaken van het helderheidsniveau dat gebruikt wordt met "
-"één van de andere profielen voor dit apparaat."
+msgstr "Je kunt ook gebruikmaken van het helderheidsniveau dat gebruikt wordt met één van de andere profielen voor dit apparaat."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -1111,9 +1066,7 @@ msgstr "Schermhelderheid"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"Je kunt een kleurprofiel gebruiken op verschillende computers, of zelfs een "
-"profiel creëren voor verschillende lichtomstandigheden."
+msgstr "Je kunt een kleurprofiel gebruiken op verschillende computers, of zelfs een profiel creëren voor verschillende lichtomstandigheden."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -1145,13 +1098,10 @@ msgstr "Internetverbinding vereist"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"De instructies over het gebruik van het profiel op <a href=\"linux\">GNU/"
-"Linux</a>, <a href=\"osx\">Apple macOS</a> en <a href=\"windows\">Microsoft "
-"Windows</a> kunnen nuttig zijn."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "De instructies over het gebruik van het profiel op <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple macOS</a> en <a href=\"windows\">Microsoft Windows</a> kunnen nuttig zijn."
 
 #: panels/color/cc-color-panel.ui:607
 #: panels/user-accounts/um-fingerprint-dialog.c:719
@@ -1178,15 +1128,11 @@ msgstr "_Toevoegen"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"Er zijn problemen ontdekt; het profiel werkt mogelijk niet goed. <a href="
-"\"\">Meer informatie.</a>"
+msgstr "Er zijn problemen ontdekt; het profiel werkt mogelijk niet goed. <a href=\"\">Meer informatie.</a>"
 
 #: panels/color/cc-color-panel.ui:790
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr ""
-"Elk apparaat heeft een actueel bijgewerkt kleurprofiel nodig om gebruik te "
-"maken van kleurbeheer."
+msgstr "Elk apparaat heeft een actueel bijgewerkt kleurprofiel nodig om gebruik te maken van kleurbeheer."
 
 #: panels/color/cc-color-panel.ui:844
 msgid "_Set for all users"
@@ -1213,8 +1159,6 @@ msgstr "_Kalibreren…"
 msgid "Calibrate the device"
 msgstr "Kalibreer het apparaat"
 
-# bij een browser is dit bladwijzers, maar hier is
-# favorieten/favoriet beter (favoriete programma's) (tino)
 #: panels/color/cc-color-panel.ui:918
 msgid "_Remove profile"
 msgstr "P_rofiel verwijderen"
@@ -1397,11 +1341,10 @@ msgstr "Kleur"
 #: panels/color/gnome-color-panel.desktop.in.in:4
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr ""
-"Kalibreer de kleur van je apparaten, zoals beeldschermen, camera's en "
-"printers"
+msgstr "Kalibreer de kleur van je apparaten, zoals beeldschermen, camera's en printers"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Kleur;Kalibreren;Weergave;ICC;Printer;Beeldscherm;"
@@ -1410,7 +1353,8 @@ msgstr "Kleur;Kalibreren;Weergave;ICC;Printer;Beeldscherm;"
 msgid "Other…"
 msgstr "Ander profiel…"
 
-#: panels/common/cc-language-chooser.c:127 panels/region/cc-input-chooser.c:178
+#: panels/common/cc-language-chooser.c:127
+#: panels/region/cc-input-chooser.c:178
 msgid "More…"
 msgstr "Meer…"
 
@@ -1436,9 +1380,7 @@ msgstr "Ontgrendel om instellingen te wijzigen"
 
 #: panels/common/cc-permission-infobar.ui:55
 msgid "Some settings must be unlocked before they can be changed."
-msgstr ""
-"Sommige instellingen moeten eerst ontgrendeld worden vooraleer ze gewijzigd "
-"kunnen worden."
+msgstr "Sommige instellingen moeten eerst ontgrendeld worden vooraleer ze gewijzigd kunnen worden."
 
 #: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:152
@@ -1500,7 +1442,8 @@ msgstr "%s %s"
 msgid "0 seconds"
 msgstr "0 seconden"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1640,7 +1583,6 @@ msgstr "∶"
 msgid "Minute"
 msgstr "Minuut"
 
-# Is dit intervaltijd uit de dubbelklik-pref of iets anders?
 #: panels/datetime/cc-datetime-panel.ui:219
 msgid "Time Zone"
 msgstr "Tijdzone"
@@ -1669,7 +1611,6 @@ msgstr "Vereist locatiediensten en internettoegang"
 msgid "Date & _Time"
 msgstr "Datum en _tijd"
 
-# Is dit intervaltijd uit de dubbelklik-pref of iets anders?
 #: panels/datetime/cc-datetime-panel.ui:366
 msgid "Time Z_one"
 msgstr "Tijdz_one"
@@ -1690,7 +1631,8 @@ msgstr "AM / PM"
 msgid "Change the date and time, including time zone"
 msgstr "Wijzig de datum en tijd, inclusief de tijdzone"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Klok;Tijdzone;Locatie;"
@@ -1701,8 +1643,7 @@ msgstr "Wijzig de datum en tijd van het systeem"
 
 #: panels/datetime/org.gnome.controlcenter.datetime.policy.in:12
 msgid "To change time or date settings, you need to authenticate."
-msgstr ""
-"Om de datum en tijd van het systeem te wijzigen, moet je je authenticeren."
+msgstr "Om de datum en tijd van het systeem te wijzigen, moet je je authenticeren."
 
 #: panels/default-apps/cc-default-apps-panel.ui:31
 msgid "_Web"
@@ -1737,7 +1678,9 @@ msgstr "Standaardtoepassingen"
 msgid "Configure Default Applications"
 msgstr "Stel de standaardtoepassingen in"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "standaard;toepassing;voorkeur;media;"
@@ -1747,16 +1690,14 @@ msgstr "standaard;toepassing;voorkeur;media;"
 msgid "Learn more"
 msgstr "Meer informatie"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:145
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr ""
-"Het sturen van rapporten over technische problemen helpt ons %s te "
-"verbeteren. Rapporten worden anoniem verstuurd en bevatten geen persoonlijke "
-"gegevens. %s"
+msgstr "Het sturen van rapporten over technische problemen helpt ons %s te verbeteren. Rapporten worden anoniem verstuurd en bevatten geen persoonlijke gegevens. %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:30
 msgid "Problem Reporting"
@@ -1766,8 +1707,6 @@ msgstr "Probleemrapportage"
 msgid "_Automatic Problem Reporting"
 msgstr "_Automatische probleemrapportage"
 
-# 'Bevindingen' stond in mijn vertaalgeheugen van andere GNOME-toepassingen,
-# anders zou ik iets met 'Diagnostiek' gebruiken - Nathan
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:3
 msgid "Diagnostics"
 msgstr "Bevindingen"
@@ -1822,11 +1761,8 @@ msgstr "Primair scherm"
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
-msgstr ""
-"Versleep schermen om overeen te komen met de fysieke opstelling van uw "
-"schermen. Selecteer een scherm om de instellingen ervan te wijzigen."
+msgstr "Versleep schermen om overeen te komen met de fysieke opstelling van uw schermen. Selecteer een scherm om de instellingen ervan te wijzigen."
 
-# Select a display language (change will be applied next time you log in)
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
 msgstr "Schermvolgorde"
@@ -1844,7 +1780,8 @@ msgstr "Schermconfiguratie"
 msgid "Displays"
 msgstr "Schermen"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:464
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1920,9 +1857,7 @@ msgstr "Tijdelijk uitgeschakeld tot morgen"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"Nachtverlichting maakt de schermkleur warmer. Dit kan helpen vermoeide ogen "
-"en slapeloosheid te voorkomen."
+msgstr "Nachtverlichting maakt de schermkleur warmer. Dit kan helpen vermoeide ogen en slapeloosheid te voorkomen."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1936,9 +1871,6 @@ msgstr "Zonsondergang tot zonsopgang"
 msgid "Manual Schedule"
 msgstr "Handmatige planning"
 
-# Is dit intervaltijd uit de dubbelklik-pref of iets anders?
-# Rachid: het wordt in de code gebruikt bij datum en de opmaak voor tijd
-# dingen dus het lijkt mij iets met TIJD te maken te hebben ;)
 #: panels/display/cc-night-light-page.ui:148
 #: panels/region/cc-format-chooser.ui:346
 msgid "Times"
@@ -1957,14 +1889,16 @@ msgstr ":"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:354
-#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "AM"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:250
 #: panels/display/cc-night-light-page.ui:370
-#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "PM"
 
@@ -1981,14 +1915,12 @@ msgstr "Kleurtemperatuur"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "Kies hoe aangesloten beeldschermen en projectoren gebruikt worden"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
-msgstr ""
-";Paneel;Scherm;Resolutie;Verversen;Beeldscherm;Nacht;Licht;Blauw;kleur;"
-"zonsondergang;zonsopgang;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
+msgstr ";Paneel;Scherm;Resolutie;Verversen;Beeldscherm;Nacht;Licht;Blauw;kleur;zonsondergang;zonsopgang;"
 
 #: panels/info-overview/cc-info-overview-panel.c:301
 #: panels/info-overview/cc-info-overview-panel.c:315
@@ -2081,9 +2013,7 @@ msgstr "Apparaat hernoemen"
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr ""
-"De apparaatnaam wordt gebruikt om dit apparaat te identificeren in het "
-"netwerk, of bij het koppelen van Bluetooth-apparaten."
+msgstr "De apparaatnaam wordt gebruikt om dit apparaat te identificeren in het netwerk, of bij het koppelen van Bluetooth-apparaten."
 
 #: panels/info-overview/cc-info-overview-panel.ui:230
 msgid "_Rename"
@@ -2097,8 +2027,6 @@ msgstr "Info"
 msgid "View information about your system"
 msgstr "Bekijk informatie over je systeem"
 
-# The user can search on this keywords. Thereby we chose to let the
-# translation contain both English and Dutch words.
 #. Translators: Search terms to find the About panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
@@ -2106,13 +2034,8 @@ msgstr "Bekijk informatie over je systeem"
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-"apparaat;informatie;geheugen;versie;standaard;toepassing;voorkeur;hostnaam;"
-"automatisch;uitvoeren;verwijderbaar;verwijderbare;toestel;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;apparaat;informatie;geheugen;versie;standaard;toepassing;voorkeur;hostnaam;automatisch;uitvoeren;verwijderbaar;verwijderbare;toestel;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2294,9 +2217,7 @@ msgstr "Toets voor alternatieve tekens"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr ""
-"De alternatievetekenstoets kan gebruikt worden om extra tekens in te voeren. "
-"Deze worden soms als derde teken op uw toetsenbord gedrukt."
+msgstr "De alternatievetekenstoets kan gebruikt worden om extra tekens in te voeren. Deze worden soms als derde teken op uw toetsenbord gedrukt."
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:45
 msgid "Left Alt"
@@ -2331,7 +2252,6 @@ msgstr "Aangepaste sneltoetsen"
 #. Translators: This key is also known as 'third level
 #. * chooser'. AltGr is often used for this purpose. See
 #. * https://live.gnome.org/Design/SystemSettings/RegionAndLanguage
-#.
 #: panels/keyboard/cc-keyboard-option.c:337
 msgid "Alternative Characters Key"
 msgstr "Toets voor alternatieve tekens"
@@ -2339,7 +2259,6 @@ msgstr "Toets voor alternatieve tekens"
 #. Translators: The Compose key is used to initiate key
 #. * sequences that are combined to form a single character.
 #. * See http://en.wikipedia.org/wiki/Compose_key
-#.
 #: panels/keyboard/cc-keyboard-option.c:346
 msgid "Compose Key"
 msgstr "Samensteltoets"
@@ -2386,9 +2305,7 @@ msgstr "Alle sneltoetsen herstellen?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"Het herstellen van de sneltoetsen kan invloed hebben op je aangepaste "
-"sneltoetsen. Dit kan niet ongedaan worden gemaakt."
+msgstr "Het herstellen van de sneltoetsen kan invloed hebben op je aangepaste sneltoetsen. Dit kan niet ongedaan worden gemaakt."
 
 #: panels/keyboard/cc-keyboard-panel.c:208
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:346
@@ -2423,10 +2340,9 @@ msgstr "Geen sneltoets gevonden"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:413
 #, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr ""
-"%s wordt al gebruikt voor %s. Als u deze vervangt, zal %s worden "
-"uitgeschakeld"
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
+msgstr "%s wordt al gebruikt voor %s. Als u deze vervangt, zal %s worden uitgeschakeld"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:581
 msgid "Set Custom Shortcut"
@@ -2449,8 +2365,7 @@ msgstr "Aangepaste sneltoets toevoegen"
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:68
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:318
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr ""
-"Druk op Esc om te annuleren, of Backspace om de sneltoets uit te schakelen."
+msgstr "Druk op Esc om te annuleren, of Backspace om de sneltoets uit te schakelen."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:156
 #: panels/printers/pp-details-dialog.ui:40
@@ -2502,7 +2417,8 @@ msgstr "Sneltoetsen"
 msgid "View and change keyboard shortcuts and set your typing preferences"
 msgstr "Sneltoetsen bekijken en wijzigen en typvoorkeuren instellen"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
@@ -2520,17 +2436,13 @@ msgstr "Er zijn geen toepassingen die locatie-informatie kunnen verkrijgen."
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy."
-msgstr ""
-"Met locatiediensten kunnen toepassingen je locatie opvragen. Gebruik van Wi-"
-"Fi en mobiel internet verhoogt de nauwkeurigheid."
+msgstr "Met locatiediensten kunnen toepassingen je locatie opvragen. Gebruik van Wi-Fi en mobiel internet verhoogt de nauwkeurigheid."
 
 #: panels/location/cc-location-panel.ui:83
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"Gebruikt de Mozilla-locatiedienst: <a href='https://location.services."
-"mozilla.com/privacy'>privacybeleid</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "Gebruikt de Mozilla-locatiedienst: <a href='https://location.services.mozilla.com/privacy'>privacybeleid</a>"
 
 #: panels/location/cc-location-panel.ui:95
 msgid "Allow the applications below to determine your location."
@@ -2548,9 +2460,7 @@ msgstr "Beveilig uw locatie-informatie"
 msgid ""
 "Automatically locking the screen prevents others from access the computer "
 "while you're away."
-msgstr ""
-"Door het scherm automatisch te vergrendelen kunnen anderen uw computer niet "
-"gebruiken terwijl u weg bent."
+msgstr "Door het scherm automatisch te vergrendelen kunnen anderen uw computer niet gebruiken terwijl u weg bent."
 
 #: panels/lock/cc-lock-panel.ui:46
 msgid "Blank Screen Delay"
@@ -2569,58 +2479,65 @@ msgid "Automatic _Screen Lock Delay"
 msgstr "Vertraging voor automatische _schermvergrendeling"
 
 #: panels/lock/cc-lock-panel.ui:85
-msgid "Period after the screen blanks when the screen is automatically locked."
-msgstr ""
-"Punt waarop het scherm automatisch wordt vergrendeld na op zwart gestaan te "
-"hebben."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
+msgstr "Punt waarop het scherm automatisch wordt vergrendeld na op zwart gestaan te hebben."
 
 #: panels/lock/cc-lock-panel.ui:105
 msgid "Show _Notifications on Lock Screen"
 msgstr "_Notificaties tonen op vergrendelingsscherm"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:149
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Scherm wordt uitgeschakeld"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:153
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 seconden"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:157
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 minuut"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:161
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 minuten"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:165
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 minuten"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:169
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 minuten"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:173
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 minuten"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:177
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2695,18 +2612,16 @@ msgid "Lock your screen"
 msgstr "Vergrendel uw scherm"
 
 #: panels/metrics/cc-metrics-panel.ui:32
-#, fuzzy
 msgid "Metrics services turned off"
-msgstr "Locatiediensten zijn uitgeschakeld"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:41
 msgid "No anonymous usage data will be sent to Endless."
 msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:75
-#, fuzzy
 msgid "_Metrics"
-msgstr "Metrisch"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:93
 msgid ""
@@ -2735,10 +2650,7 @@ msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
 "properly."
-msgstr ""
-"Gebruik van de microfoon geeft toepassingen de mogelijkheid om geluid op te "
-"nemen en te beluisteren. De microfoon uitschakelen kan ertoe leiden dat "
-"sommige toepassingen niet correct functioneren."
+msgstr "Gebruik van de microfoon geeft toepassingen de mogelijkheid om geluid op te nemen en te beluisteren. De microfoon uitschakelen kan ertoe leiden dat sommige toepassingen niet correct functioneren."
 
 #: panels/microphone/cc-microphone-panel.ui:87
 msgid "Allow the applications below to use your microphone."
@@ -2784,8 +2696,10 @@ msgstr "Aanwijzersnelheid"
 msgid "Double-click timeout"
 msgstr "Intervaltijd voor dubbelklik"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:267 panels/mouse/cc-mouse-panel.ui:430
 msgid "Natural Scrolling"
 msgstr "Natuurlijk scrollen"
@@ -2802,7 +2716,6 @@ msgstr "Touchpad"
 msgid "Touchpad Speed"
 msgstr "Touchpadsnelheid"
 
-# op het touchpad tikken om te klikken
 #: panels/mouse/cc-mouse-panel.ui:560
 msgid "Tap to Click"
 msgstr "Tikken om te klikken"
@@ -2858,19 +2771,18 @@ msgstr "Muis en touchpad"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr ""
-"De gevoeligheid van muis of touchpad wijzigen en rechts- of linkshandig "
-"kiezen"
+msgstr "De gevoeligheid van muis of touchpad wijzigen en rechts- of linkshandig kiezen"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr "TrackpadTrackball;Scroll;Aanwijzer;Klik;Tik;Dubbel;Knop;"
 
 #: panels/network/cc-network-panel.c:648 panels/network/cc-wifi-panel.ui:306
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr ""
-"Oeps, er is iets misgegaan. Neem contact op met je softwareleverancier."
+msgstr "Oeps, er is iets misgegaan. Neem contact op met je softwareleverancier."
 
 #: panels/network/cc-network-panel.c:654
 msgid "NetworkManager needs to be running."
@@ -2889,7 +2801,8 @@ msgstr "VPN"
 msgid "Not set up"
 msgstr "Niet ingesteld"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:198
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2930,9 +2843,7 @@ msgstr "Opties…"
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr ""
-"Door de hotspot in te schakelen verbreekt u de verbinding met %s, en zult u "
-"geen toegang tot het internet hebben via wifi."
+msgstr "Door de hotspot in te schakelen verbreekt u de verbinding met %s, en zult u geen toegang tot het internet hebben via wifi."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:248
 msgid "Must have a minimum of 8 characters"
@@ -2944,13 +2855,10 @@ msgstr "Wi-Fi-hotspot inschakelen?"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr ""
-"Een wifihotspot maakt het mogelijk om uw internetverbinding te delen met "
-"anderen, door een wifi-netwerk te maken waarmee ze kunnen verbinden. "
-"Hiervoor heeft u een internetverbinding via een andere bron dan wifi nodig."
+msgstr "Een wifihotspot maakt het mogelijk om uw internetverbinding te delen met anderen, door een wifi-netwerk te maken waarmee ze kunnen verbinden. Hiervoor heeft u een internetverbinding via een andere bron dan wifi nodig."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
 #: panels/network/network-wifi.ui:105
@@ -3045,12 +2953,9 @@ msgstr "Stabiel"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"Het ingevoerde MAC-adres zal gebruikt worden als het hardware-adres voor het "
-"netwerkapparaat waarop deze verbinding is geactiveerd. Dit wordt ‘MAC "
-"cloning’ of ‘spoofing’ genoemd. Voorbeeld: 00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "Het ingevoerde MAC-adres zal gebruikt worden als het hardware-adres voor het netwerkapparaat waarop deze verbinding is geactiveerd. Dit wordt ‘MAC cloning’ of ‘spoofing’ genoemd. Voorbeeld: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3302,10 +3207,9 @@ msgstr "Verbinding _met datalimiet: houdt mogelijk kosten in"
 
 #: panels/network/connection-editor/details-page.ui:439
 msgid ""
-"Software updates and other large downloads will not be started automatically."
-msgstr ""
-"Software-updates en andere grote downloads zullen niet automatisch gestart "
-"worden."
+"Software updates and other large downloads will not be started "
+"automatically."
+msgstr "Software-updates en andere grote downloads zullen niet automatisch gestart worden."
 
 #: panels/network/connection-editor/ethernet-page.ui:25
 #: panels/network/connection-editor/vpn-page.ui:23
@@ -3465,15 +3369,10 @@ msgstr "Kan VPN-verbinding niet importeren"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
-"Het bestand ‘%s’ kan niet worden uitgelezen of bevat geen bekende informatie "
-"over de VPN-verbinding\n"
-"\n"
-"Fout: %s."
+msgstr "Het bestand ‘%s’ kan niet worden uitgelezen of bevat geen bekende informatie over de VPN-verbinding\n\nFout: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3503,10 +3402,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
-"De VPN-verbinding ‘%s’ kan niet worden geëxporteerd naar %s.\n"
-"\n"
-"Fout: %s."
+msgstr "De VPN-verbinding ‘%s’ kan niet worden geëxporteerd naar %s.\n\nFout: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3528,22 +3424,21 @@ msgstr "_BSSID"
 msgid "Control how you connect to the Internet"
 msgstr "Regel hoe je verbinding maakt met het internet"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr ""
-"Network;Netwerk;IP;LAN;Proxy;WAN;Broadband;Breedband;Modem;Bluetooth;vpn;DNS;"
+msgstr "Network;Netwerk;IP;LAN;Proxy;WAN;Broadband;Breedband;Modem;Bluetooth;vpn;DNS;"
 
 #: panels/network/gnome-wifi-panel.desktop.in.in:4
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "Regel hoe je verbinding maakt met Wi-Fi-netwerken"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
-msgstr ""
-"Network;Netwerk;Wireless;Draadloos;Wi-Fi;Wifi;IP;LAN;Broadband;Breedband;DNS;"
-"Hotspot;"
+msgstr "Network;Netwerk;Wireless;Draadloos;Wi-Fi;Wifi;IP;LAN;Broadband;Breedband;DNS;Hotspot;"
 
 #: panels/network/net-device-ethernet.c:96
 msgid "never"
@@ -3565,9 +3460,9 @@ msgstr "Laatst gebruikt"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
 #: panels/network/net-device-ethernet.c:252
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "Bekabeld"
 
@@ -3587,9 +3482,7 @@ msgstr "Hotspot uit_schakelen"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr ""
-"Netwerkgegevens van de geselecteerde netwerken, inclusief wachtwoord en "
-"aangepaste configuratie, gaan verloren."
+msgstr "Netwerkgegevens van de geselecteerde netwerken, inclusief wachtwoord en aangepaste configuratie, gaan verloren."
 
 #: panels/network/net-device-wifi.c:909
 msgid "_Forget"
@@ -3599,7 +3492,8 @@ msgstr "_Vergeten"
 msgid "Known Wi-Fi Networks"
 msgstr "Bekende Wi-Fi-netwerken"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1107
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3636,9 +3530,7 @@ msgstr "Uit"
 #: panels/network/net-proxy.c:113
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"Automatisch ontdekken van de webproxy wordt gebruikt als er geen "
-"configuratie-url is opgegeven."
+msgstr "Automatisch ontdekken van de webproxy wordt gebruikt als er geen configuratie-url is opgegeven."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3652,7 +3544,6 @@ msgstr "Dit wordt afgeraden voor niet-vertrouwde publieke netwerken."
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:66 panels/network/net-vpn.c:163
 #, c-format
 msgid "%s VPN"
@@ -4060,12 +3951,6 @@ msgstr "MSCHAPv2"
 msgid "Anonymous"
 msgstr "Anoniem"
 
-# dit is de knop die naast het veld 'huidige wachtwoord' staat
-# als je je huidige wachtwoord hebt ingevuld en op 'Authenticate'
-# klikt (en het wachtwoord is juist) kun je je huidige wachtwoord
-# gaan wijzigen.
-# Dus letterlijke vertaling is 'Aanmeldingscontrole' maar in dit
-# geval houden we het kort en gebruiken we alleen 'Controle' (tino)
 #: panels/network/wireless-security/eap-method-fast.ui:32
 msgid "Authenticated"
 msgstr "Met authenticatie"
@@ -4158,12 +4043,6 @@ msgstr "Versie 0"
 msgid "Version 1"
 msgstr "Versie 1"
 
-# dit is de knop die naast het veld 'huidige wachtwoord' staat
-# als je je huidige wachtwoord hebt ingevuld en op 'Authenticate'
-# klikt (en het wachtwoord is juist) kun je je huidige wachtwoord
-# gaan wijzigen.
-# Dus letterlijke vertaling is 'Aanmeldingscontrole' maar in dit
-# geval houden we het kort en gebruiken we alleen 'Controle' (tino)
 #: panels/network/wireless-security/eap-method-peap.ui:78
 #: panels/network/wireless-security/eap-method-tls.ui:68
 #: panels/network/wireless-security/eap-method-ttls.ui:102
@@ -4217,17 +4096,10 @@ msgstr "Onversleutelde privésleutels zijn onveilig"
 
 #: panels/network/wireless-security/eap-method-tls.c:269
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"De geselecteerde privésleutel lijkt niet te zijn beveiligd met een "
-"wachtwoord. Dit kan leiden ertoe leiden dat je beveiligingsgegevens in "
-"gevaar komen. Kies een privésleutel die met een wachtwoord is beveiligd.\n"
-"\n"
-"(je kunt je privésleutel beveiligen via openssl)"
+msgstr "De geselecteerde privésleutel lijkt niet te zijn beveiligd met een wachtwoord. Dit kan leiden ertoe leiden dat je beveiligingsgegevens in gevaar komen. Kies een privésleutel die met een wachtwoord is beveiligd.\n\n(je kunt je privésleutel beveiligen via openssl)"
 
 #: panels/network/wireless-security/eap-method-tls.c:500
 msgid "Choose your personal certificate"
@@ -4313,12 +4185,6 @@ msgstr "Getunnelde TLS"
 msgid "Protected EAP (PEAP)"
 msgstr "Beveiligde EAP (PEAP)"
 
-# dit is de knop die naast het veld 'huidige wachtwoord' staat
-# als je je huidige wachtwoord hebt ingevuld en op 'Authenticate'
-# klikt (en het wachtwoord is juist) kun je je huidige wachtwoord
-# gaan wijzigen.
-# Dus letterlijke vertaling is 'Aanmeldingscontrole' maar in dit
-# geval houden we het kort en gebruiken we alleen 'Controle' (tino)
 #: panels/network/wireless-security/ws-dynamic-wep.ui:56
 #: panels/network/wireless-security/ws-wep-key.ui:102
 #: panels/network/wireless-security/ws-wpa-eap.ui:61
@@ -4340,26 +4206,20 @@ msgstr "wep-sleutel ontbreekt"
 #: panels/network/wireless-security/ws-wep-key.c:116
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
-"ongeldige wep-sleutel: sleutel met een lengte van %zu kan enkel hex-cijfers "
-"bevatten"
+msgstr "ongeldige wep-sleutel: sleutel met een lengte van %zu kan enkel hex-cijfers bevatten"
 
 #: panels/network/wireless-security/ws-wep-key.c:124
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
-"ongeldige wep-sleutel: sleutel met een lengte van %zu kan enkel ascii-tekens "
-"bevatten"
+msgstr "ongeldige wep-sleutel: sleutel met een lengte van %zu kan enkel ascii-tekens bevatten"
 
 #: panels/network/wireless-security/ws-wep-key.c:130
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
-"ongeldige wep-sleutel: verkeerde sleutellengte %zu. Een sleutle moet ofwel "
-"5/13 tekens (ascii) of 10/26 tekens (hex) lang zijn"
+msgstr "ongeldige wep-sleutel: verkeerde sleutellengte %zu. Een sleutle moet ofwel 5/13 tekens (ascii) of 10/26 tekens (hex) lang zijn"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4398,9 +4258,7 @@ msgstr "WEP-inde_x"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
-"ongeldige wpa-psk: ongeldige sleutellengte %zu. Moet [8,63] bytes of 64 hex-"
-"cijfers zijn"
+msgstr "ongeldige wpa-psk: ongeldige sleutellengte %zu. Moet [8,63] bytes of 64 hex-cijfers zijn"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:79
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
@@ -4431,11 +4289,10 @@ msgstr "Meldings_ballonnen"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
-"Als meldingsballonnen zijn uitgeschakeld, dan verschijnen meldingen nog "
-"steeds in de meldingslijst."
+msgstr "Als meldingsballonnen zijn uitgeschakeld, dan verschijnen meldingen nog steeds in de meldingslijst."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4473,7 +4330,8 @@ msgstr "Me_ldingen tonen op vergrendelscherm"
 msgid "Control which notifications are displayed and what they show"
 msgstr "Regel welke meldingen moeten worden getoond en wat ze moeten tonen"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Meldingen;Banieren;Bericht;Systeemvak;Pop-up;Meldingen;Ballonnen;"
@@ -4496,7 +4354,6 @@ msgstr "Kan account niet verwijderen"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:991
 #, c-format
 msgid "%s removed"
@@ -4513,16 +4370,15 @@ msgstr "Voeg je online-accounts toe en bepaal waarvoor je ze gebruikt"
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Agenda;Pocket;ReadItLater;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Agenda;Pocket;ReadItLater;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:54
 msgid "Undo"
 msgstr "Ongedaan maken"
@@ -4533,9 +4389,7 @@ msgstr "Koppel je cloudgegevens"
 
 #: panels/online-accounts/online-accounts.ui:111
 msgid "No internet connection — connect to set up new online accounts"
-msgstr ""
-"Geen internetverbinding — maak verbinding om nieuwe online-accounts in te "
-"stellen"
+msgstr "Geen internetverbinding — maak verbinding om nieuwe online-accounts in te stellen"
 
 #: panels/online-accounts/online-accounts.ui:136
 msgid "Add an account"
@@ -4768,9 +4622,7 @@ msgstr "_Mobiel internet"
 
 #: panels/power/cc-power-panel.c:1958
 msgid "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
-msgstr ""
-"Mobiele breedband (LTE, 4G, 3G, etc.) kan worden uitgeschakeld om energie te "
-"besparen."
+msgstr "Mobiele breedband (LTE, 4G, 3G, etc.) kan worden uitgeschakeld om energie te besparen."
 
 #: panels/power/cc-power-panel.c:2008
 msgid "_Bluetooth"
@@ -4906,23 +4758,17 @@ msgstr "Energie"
 msgid "View your battery status and change power saving settings"
 msgstr "Bekijk de accustatus en wijzig de instellingen voor energiebesparing"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-msgstr ""
-"Helderheid;Dim;Monitor;Beeldscherm;DPMS;Energie;Slaapstand;Pauzestand;Accu;"
+msgstr "Helderheid;Dim;Monitor;Beeldscherm;DPMS;Energie;Slaapstand;Pauzestand;Accu;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
 msgstr " "
 
-# dit is de knop die naast het veld 'huidige wachtwoord' staat
-# als je je huidige wachtwoord hebt ingevuld en op 'Authenticate'
-# klikt (en het wachtwoord is juist) kun je je huidige wachtwoord
-# gaan wijzigen.
-# Dus letterlijke vertaling is 'Aanmeldingscontrole' maar in dit
-# geval houden we het kort en gebruiken we alleen 'Controle' (tino)
 #: panels/printers/authentication-dialog.ui:42
 msgid "Authenticate"
 msgstr "Controleren"
@@ -4964,7 +4810,8 @@ msgstr "Printers"
 msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr "Voeg printers toe, bekijk afdruktaken en regel hoe je wilt printen"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Printer;Print;Toner;Wachtrij;Papier;Inkt;"
@@ -4988,16 +4835,15 @@ msgstr "_Ontgrendelen"
 msgid "No Printers Found"
 msgstr "Geen printers aangetroffen"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "Voer een netwerkadres in of zoek naar een printer"
 
 #: panels/printers/new-printer-dialog.ui:353
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"Voer je gebruikersnaam en wachtwoord in om printers te bekijken op de "
-"printserver."
+msgstr "Voer je gebruikersnaam en wachtwoord in om printers te bekijken op de printserver."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:75
@@ -5006,7 +4852,6 @@ msgstr ""
 msgid "%s Details"
 msgstr "Details van %s"
 
-# geen/zonder
 #: panels/printers/pp-details-dialog.c:122
 msgid "No suitable driver found"
 msgstr "Geen geschikt stuurprogramma aangetroffen"
@@ -5017,13 +4862,12 @@ msgstr "PPD-bestand selecteren"
 
 #: panels/printers/pp-details-dialog.c:258
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
-msgstr ""
-"PostScript Printer Description-bestanden (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
 "*.PPD.GZ)"
+msgstr "PostScript Printer Description-bestanden (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "Locatie"
 
@@ -5062,8 +4906,6 @@ msgstr "Selecteren"
 msgid "Loading drivers database…"
 msgstr "Bezig met laden van stuurprogrammadatabank..."
 
-# bij een browser is dit bladwijzers, maar hier is
-# favorieten/favoriet beter (favoriete programma's) (tino)
 #. Translators: The found device is a JetDirect printer
 #: panels/printers/pp-host.c:479
 msgid "JetDirect Printer"
@@ -5160,7 +5002,8 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "Voltooid"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:363
 #, c-format
 msgid "%u Job Requires Authentication"
@@ -5168,7 +5011,8 @@ msgid_plural "%u Jobs Require Authentication"
 msgstr[0] "%u taak vereist authenticatie"
 msgstr[1] "%u taken vereisen authenticatie"
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:520
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -5186,22 +5030,26 @@ msgstr "Voer uw aanmeldgegevens in om af te drukken op %s."
 msgid "Domain"
 msgstr "Domein"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "A_uthenticeren"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "Alles wissen"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "_Authenticeren"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "Geen actieve afdruktaken"
@@ -5210,13 +5058,15 @@ msgstr "Geen actieve afdruktaken"
 msgid "Unlock Print Server"
 msgstr "Printserver ontgrendelen"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:384
 #, c-format
 msgid "Unlock %s."
 msgstr "%s ontgrendelen."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:388
 #, c-format
 msgid "Enter username and password to view printers on %s."
@@ -5253,7 +5103,8 @@ msgstr "Locatie: %s"
 msgid "Address: %s"
 msgstr "Adres: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1783
 msgid "Server requires authentication"
 msgstr "Server vereist authenticatie"
@@ -5304,13 +5155,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Algemeen"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:658
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "Pagina-instellingen"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:661
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5322,7 +5175,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "Taak"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:667
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5334,7 +5188,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Kleur"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:673
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5534,13 +5389,12 @@ msgstr "Details van de printer"
 msgid "Use Printer by Default"
 msgstr "Instellen als standaardprinter"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "Printkoppen schoonmaken"
 
-# bij een browser is dit bladwijzers, maar hier is
-# favorieten/favoriet beter (favoriete programma's) (tino)
 #: panels/printers/printer-entry.ui:61
 msgid "Remove Printer"
 msgstr "Printer verwijderen"
@@ -5582,11 +5436,8 @@ msgstr "Printer toevoegen…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"De systeemdienst voor\n"
-"afdrukken is niet beschikbaar."
+msgstr "De systeemdienst voor\nafdrukken is niet beschikbaar."
 
-# Maatsysteem dat in de VS wordt gebruikt met inch, foot en pound.
 #: panels/region/cc-format-chooser.c:148
 msgctxt "measurement format"
 msgid "Imperial"
@@ -5611,9 +5462,7 @@ msgstr "Terug"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"Kies de formattering voor getallen, datums en munteenheden. De wijzigingen "
-"worden doorgevoerd bij uw volgende aanmelding."
+msgstr "Kies de formattering voor getallen, datums en munteenheden. De wijzigingen worden doorgevoerd bij uw volgende aanmelding."
 
 #: panels/region/cc-format-chooser.ui:119
 msgid "Search locales..."
@@ -5715,9 +5564,7 @@ msgstr "Geen invoerbron geselecteerd"
 
 #: panels/region/cc-region-panel.ui:344
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"Inloginstellingen worden gebruikt door alle gebruikers die inloggen op het "
-"systeem"
+msgstr "Inloginstellingen worden gebruikt door alle gebruikers die inloggen op het systeem"
 
 #: panels/region/cc-region-panel.ui:381
 msgid "Keyboard Layout Options"
@@ -5764,7 +5611,9 @@ msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
 msgstr "Kies je schermtaal, formaten, toetsenbordindelingen en invoerbronnen"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Taal;Indeling;Toetsenbord;"
@@ -5795,14 +5644,11 @@ msgstr "Kies een toepassing voor video-dvd's"
 
 #: panels/removable-media/cc-removable-media-panel.c:364
 msgid "Select an application to run when a music player is connected"
-msgstr ""
-"Kies de toepassing die moet worden geopend bij het aansluiten van een "
-"muziekspeler"
+msgstr "Kies de toepassing die moet worden geopend bij het aansluiten van een muziekspeler"
 
 #: panels/removable-media/cc-removable-media-panel.c:365
 msgid "Select an application to run when a camera is connected"
-msgstr ""
-"Kies de toepassing die moet worden geopend bij het aansluiten van een camera"
+msgstr "Kies de toepassing die moet worden geopend bij het aansluiten van een camera"
 
 #: panels/removable-media/cc-removable-media-panel.c:366
 msgid "Select an application for software CDs"
@@ -5812,7 +5658,6 @@ msgstr "Kies een toepassing voor software-cd's"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "audio-dvd"
@@ -5887,8 +5732,7 @@ msgstr "_Andere media…"
 
 #: panels/removable-media/cc-removable-media-panel.ui:288
 msgid "_Never prompt or start programs on media insertion"
-msgstr ""
-"_Nooit vragen en ook geen toepassingen starten als media wordt ingevoerd"
+msgstr "_Nooit vragen en ook geen toepassingen starten als media wordt ingevoerd"
 
 #: panels/removable-media/cc-removable-media-panel.ui:342
 msgid "Select how other media should be handled"
@@ -5910,13 +5754,12 @@ msgstr "Verwijderbare media"
 msgid "Configure Removable Media settings"
 msgstr "Stel de instellingen voor verwijderbare media in"
 
-# The user can search on this keywords. Thereby we chose to let the
-# translation contain both English and Dutch words.
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgstr "apparaat;standaard;toepassing;voorkeur;schijf;verwijderbaar;media;"
 
 #: panels/search/cc-search-locations-dialog.c:635
@@ -5936,11 +5779,9 @@ msgstr "Zoeklocaties"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"Mappen die door systeemtoepassingen doorzocht worden, zoals Bestanden, "
-"Foto’s en Video’s."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "Mappen die door systeemtoepassingen doorzocht worden, zoals Bestanden, Foto’s en Video’s."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -5968,20 +5809,17 @@ msgstr "Naar beneden"
 
 #: panels/search/cc-search-panel.ui:33
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"Bepaal welke zoekresultaten weergegeven worden in het activiteitenoverzicht. "
-"De volgorde van de zoekresultaten kan ook aangepast worden door de rijen in "
-"de lijst te verplaatsen."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "Bepaal welke zoekresultaten weergegeven worden in het activiteitenoverzicht. De volgorde van de zoekresultaten kan ook aangepast worden door de rijen in de lijst te verplaatsen."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr ""
-"Regelen welke toepassingen zoekresultaten tonen in het activiteitenoverzicht"
+msgstr "Regelen welke toepassingen zoekresultaten tonen in het activiteitenoverzicht"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Zoeken;Verbergen;Resultaten;Privacy;"
@@ -6025,21 +5863,16 @@ msgstr "Kies een map"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr ""
-"Met ‘Delen van persoonlijke bestanden’ kunt u de map ‘Openbaar’ delen met "
-"anderen op uw huidige netwerk via: %s"
+msgstr "Met ‘Delen van persoonlijke bestanden’ kunt u de map ‘Openbaar’ delen met anderen op uw huidige netwerk via: %s"
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:717
 #, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
-msgstr ""
-"Wanneer aanmelden op afstand is ingeschakeld kunnen gebruikers op afstand "
-"verbinding maken via de Secure Shell-opdracht:\n"
-"%s"
+msgstr "Wanneer aanmelden op afstand is ingeschakeld kunnen gebruikers op afstand verbinding maken via de Secure Shell-opdracht:\n%s"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:723
@@ -6047,9 +5880,7 @@ msgstr ""
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
-msgstr ""
-"Met scherm delen kunnen gebruikers op afstand uw scherm te bekijken of "
-"besturen door te verbinden met %s"
+msgstr "Met scherm delen kunnen gebruikers op afstand uw scherm te bekijken of besturen door te verbinden met %s"
 
 #: panels/sharing/cc-sharing-panel.c:828
 msgid "Copy"
@@ -6144,14 +5975,12 @@ msgstr "Mappen"
 msgid "Control what you want to share with others"
 msgstr "Bepaal wat je wilt delen met anderen"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
-msgstr ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;delen;afbeeldingen;films;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
+msgstr "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;delen;afbeeldingen;films;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -6159,8 +5988,7 @@ msgstr "Inloggen op afstand in- of uitschakelen"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:12
 msgid "Authentication is required to enable or disable remote login"
-msgstr ""
-"Er is authenticatie vereist om inloggen op afstand in of uit te schakelen"
+msgstr "Er is authenticatie vereist om inloggen op afstand in of uit te schakelen"
 
 #: panels/sound/cc-alert-chooser.c:151
 msgid "Custom"
@@ -6264,13 +6092,12 @@ msgstr "Geluid"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Wijzig volumeniveaus, in- en uitvoerapparaten en gebeurtenisgeluiden"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"Card;Kaart;Microphone;Microfoon;Volume;Fade;Balance;Balans;Bluetooth;Headset;"
-"Audio;Output;Uitvoer;Input;Invoer;"
+msgstr "Card;Kaart;Microphone;Microfoon;Volume;Fade;Balance;Balans;Bluetooth;Headset;Audio;Output;Uitvoer;Input;Invoer;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6365,8 +6192,6 @@ msgstr "UUID:"
 msgid "Authorize and Connect"
 msgstr "Autoriseren en verbinden"
 
-# bij een browser is dit bladwijzers, maar hier is
-# favorieten/favoriet beter (favoriete programma's) (tino)
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:346
 msgid "Forget Device"
 msgstr "Apparaat vergeten"
@@ -6376,12 +6201,6 @@ msgctxt "Thunderbolt Device Status"
 msgid "Error"
 msgstr "Fout"
 
-# dit is de knop die naast het veld 'huidige wachtwoord' staat
-# als je je huidige wachtwoord hebt ingevuld en op 'Authenticate'
-# klikt (en het wachtwoord is juist) kun je je huidige wachtwoord
-# gaan wijzigen.
-# Dus letterlijke vertaling is 'Aanmeldingscontrole' maar in dit
-# geval houden we het kort en gebruiken we alleen 'Controle' (tino)
 #: panels/thunderbolt/cc-bolt-device-entry.c:146
 msgctxt "Thunderbolt Device Status"
 msgid "Authorized"
@@ -6390,20 +6209,13 @@ msgstr "Geautoriseerd"
 #: panels/thunderbolt/cc-bolt-panel.c:175
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr ""
-"Het Thunderbolt-subsysteem (boltd) is niet geïnstalleerd of niet correct "
-"ingesteld."
+msgstr "Het Thunderbolt-subsysteem (boltd) is niet geïnstalleerd of niet correct ingesteld."
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
-"Thunderbolt kon niet worden gedetecteerd.\n"
-"Of het systeem ondersteunt Thunderbolt niet, of het is uitgeschakeld in de "
-"BIOS, of het is ingesteld op een niet-ondersteund beveiligingsniveau in de "
-"BIOS."
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "Thunderbolt kon niet worden gedetecteerd.\nOf het systeem ondersteunt Thunderbolt niet, of het is uitgeschakeld in de BIOS, of het is ingesteld op een niet-ondersteund beveiligingsniveau in de BIOS."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6450,7 +6262,9 @@ msgstr "Thunderbolt"
 msgid "Manage Thunderbolt devices"
 msgstr "Thunderbolt-apparaten beheren"
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;"
 msgstr "Thunderbolt;"
@@ -6556,8 +6370,6 @@ msgstr "Aanwijzen-en-klikken"
 msgid "_Mouse Keys"
 msgstr "_Muistoetsen"
 
-# bij een browser is dit bladwijzers, maar hier is
-# favorieten/favoriet beter (favoriete programma's) (tino)
 #: panels/universal-access/cc-ua-panel.ui:900
 msgid "_Locate Pointer"
 msgstr "_Locatie van muisaanwijzer weergeven"
@@ -6581,9 +6393,7 @@ msgstr "Cursorgrootte"
 #: panels/universal-access/cc-ua-panel.ui:1095
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
-"De cursorgrootte kan worden gecombineerd met zoomen zodat de cursor beter "
-"zichtbaar wordt."
+msgstr "De cursorgrootte kan worden gecombineerd met zoomen zodat de cursor beter zichtbaar wordt."
 
 #: panels/universal-access/cc-ua-panel.ui:1131
 msgid "Screen Reader"
@@ -6815,19 +6625,13 @@ msgstr "Groot"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "Vergemakkelijk zien, horen, typen en aanwijzen-en-klikken"
 
-#. Translators: Search terms to find the Universal Access panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Universal Access panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;"
-"big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;"
-"click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
-"Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;big;high;large;"
-"groot;hoog;text;font;size;AccessX;Sticky;Keys;Plaktoetsen;Slow;Trage toetsen;"
-"Bounce;Springende toetsen;Mouse;Double;click;Delay;Speed;snelheid;Assist;"
-"Repeat;Blink;Visual;visueel;hearing;horen;hoor;luisteren;audio;typing;typen;"
-"Muistoetsen;Toetsenbord;Toegankelijkheid;Tekst;Lettertype;vergroten;Dubbel;"
-"klik;Cursor;Sound;geluid;"
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;big;high;large;groot;hoog;text;font;size;AccessX;Sticky;Keys;Plaktoetsen;Slow;Trage toetsen;Bounce;Springende toetsen;Mouse;Double;click;Delay;Speed;snelheid;Assist;Repeat;Blink;Visual;visueel;hearing;horen;hoor;luisteren;audio;typing;typen;Muistoetsen;Toetsenbord;Toegankelijkheid;Tekst;Lettertype;vergroten;Dubbel;klik;Cursor;Sound;geluid;"
 
 #: panels/universal-access/zoom-options.c:305
 msgctxt "Distance"
@@ -7035,13 +6839,10 @@ msgstr "Bestandsgeschiedenis"
 
 #: panels/usage/cc-usage-panel.ui:43
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr ""
-"Bestandsgeschiedenis bewaart een log van de bestanden die u hebt gebruikt. "
-"Deze informatie wordt gedeeld tussen apparaten, en maakt het u eenvoudiger "
-"om bestanden die u zou kunnen willen gebruiken terug te vinden."
+msgstr "Bestandsgeschiedenis bewaart een log van de bestanden die u hebt gebruikt. Deze informatie wordt gedeeld tussen apparaten, en maakt het u eenvoudiger om bestanden die u zou kunnen willen gebruiken terug te vinden."
 
 #: panels/usage/cc-usage-panel.ui:58
 msgid "File H_istory"
@@ -7063,10 +6864,7 @@ msgstr "Prullenbak & tijdelijke bestanden"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr ""
-"In de prullenbak en tijdelijke bestanden kan er zich soms persoonlijke of "
-"gevoelige informatie bevinden. Deze bestanden automatisch laten verwijderen "
-"kan uw privacy helpen beschermen."
+msgstr "In de prullenbak en tijdelijke bestanden kan er zich soms persoonlijke of gevoelige informatie bevinden. Deze bestanden automatisch laten verwijderen kan uw privacy helpen beschermen."
 
 #: panels/usage/cc-usage-panel.ui:161
 msgid "Automatically Delete _Trash Content"
@@ -7088,61 +6886,71 @@ msgstr "Prullenbak l_eegmaken…"
 msgid "_Delete Temporary Files…"
 msgstr "Tijdelijke bestanden verwij_deren"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:280
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 uur"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:284
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 dag"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:288
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:292
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:296
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:300
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:304
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:308
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:312
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 dagen"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:316
 msgctxt "purge_files"
 msgid "30 days"
@@ -7206,9 +7014,7 @@ msgstr "Automatische updates"
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
-msgstr ""
-"Sta automatische achtergrondupdates toe via deze verbinding. Dit zijn "
-"meestal upgrades van apps, nieuwe inhoud of systeemupdates."
+msgstr "Sta automatische achtergrondupdates toe via deze verbinding. Dit zijn meestal upgrades van apps, nieuwe inhoud of systeemupdates."
 
 #: panels/updates/cc-updates-panel.ui:217
 msgid "Scheduled Updates"
@@ -7222,7 +7028,8 @@ msgstr "Creëer een dagschema voor automatische updates."
 msgid "Schedule automatic updates"
 msgstr "Automatische updates inplannen"
 
-#. Translators: those are keywords for the automatic updates control-center panel
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
 msgstr "Updates;Automatisch;Achtergrond;Beperkt;"
@@ -7258,17 +7065,13 @@ msgstr "Kan niet toetreden tot domein"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"Ongeldige gebruikersnaam.\n"
-"Probeer het opnieuw."
+msgstr "Ongeldige gebruikersnaam.\nProbeer het opnieuw."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1275
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"Ongeldig wachtwoord.\n"
-"Probeer het opnieuw."
+msgstr "Ongeldig wachtwoord.\nProbeer het opnieuw."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1283
 msgid "Failed to log into domain"
@@ -7329,10 +7132,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"Met enterprise-aanmelding kan een bestaand, centraal beheerd "
-"gebruikersaccount op dit apparaat gebruikt worden. Je kunt dit account ook "
-"gebruiken om toegang te krijgen tot bedrijfsbronnen op het internet."
+msgstr "Met enterprise-aanmelding kan een bestaand, centraal beheerd gebruikersaccount op dit apparaat gebruikt worden. Je kunt dit account ook gebruiken om toegang te krijgen tot bedrijfsbronnen op het internet."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:777
 msgid "You are Offline"
@@ -7340,9 +7140,7 @@ msgstr "Je bent offline"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:796
 msgid "You must be online in order to add enterprise users."
-msgstr ""
-"Je moet online gaan om enterprise-\n"
-"gebruikers toe te voegen."
+msgstr "Je moet online gaan om enterprise-\ngebruikers toe te voegen."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:827
 msgid "_Enterprise Login"
@@ -7507,9 +7305,7 @@ msgstr "%s is nog ingelogd"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
-"Het verwijderen van een gebruiker die nog ingelogd is, kan leiden tot een "
-"inconsistente systeemstatus."
+msgstr "Het verwijderen van een gebruiker die nog ingelogd is, kan leiden tot een inconsistente systeemstatus."
 
 #: panels/user-accounts/cc-user-panel.c:642
 #, c-format
@@ -7520,9 +7316,7 @@ msgstr "Moeten de bestanden van %s bewaard blijven?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"Het is mogelijk om de persoonlijke map, e-mailmap en tijdelijke bestanden te "
-"bewaren als een account verwijderd wordt."
+msgstr "Het is mogelijk om de persoonlijke map, e-mailmap en tijdelijke bestanden te bewaren als een account verwijderd wordt."
 
 #: panels/user-accounts/cc-user-panel.c:649
 msgid "_Delete Files"
@@ -7535,8 +7329,7 @@ msgstr "Bestanden be_waren"
 #: panels/user-accounts/cc-user-panel.c:664
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr ""
-"Weet je zeker dat je het op afstand beheerde account van %s wilt verwijderen?"
+msgstr "Weet je zeker dat je het op afstand beheerde account van %s wilt verwijderen?"
 
 #: panels/user-accounts/cc-user-panel.c:668
 msgid "_Delete"
@@ -7583,9 +7376,7 @@ msgstr "Zorg ervoor dat AccountService geïnstalleerd en ingeschakeld is."
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"Klik op het het *-pictogram\n"
-"om wijzigingen aan te brengen"
+msgstr "Klik op het het *-pictogram\nom wijzigingen aan te brengen"
 
 #: panels/user-accounts/cc-user-panel.c:1347
 msgid "Create a user account"
@@ -7596,9 +7387,7 @@ msgstr "Gebruikersaccount creëren"
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
-msgstr ""
-"Klik op het *-pictogram\n"
-"om een gebruikersaccount te creëren"
+msgstr "Klik op het *-pictogram\nom een gebruikersaccount te creëren"
 
 #: panels/user-accounts/cc-user-panel.c:1367
 msgid "Delete the selected user account"
@@ -7609,9 +7398,7 @@ msgstr "Geselecteerde gebruiker verwijderen"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"Klik op het het *-pictogram om de geselecteerde\n"
-"gebruiker te verwijderen"
+msgstr "Klik op het het *-pictogram om de geselecteerde\ngebruiker te verwijderen"
 
 #: panels/user-accounts/cc-user-panel.ui:5
 msgid "_Add User…"
@@ -7642,9 +7429,7 @@ msgstr "_Beheerder"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr ""
-"Beheerders kunnen gebruikers toevoegen en verwijderen, en de instellingen "
-"voor alle gebruikers wijzigen."
+msgstr "Beheerders kunnen gebruikers toevoegen en verwijderen, en de instellingen voor alle gebruikers wijzigen."
 
 #: panels/user-accounts/cc-user-panel.ui:313
 msgid "_Parental Controls"
@@ -7670,7 +7455,8 @@ msgstr "Accountactiviteit"
 msgid "Remove User…"
 msgstr "Gebruiker verwijderen…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:635
 msgid "No Users Found"
 msgstr "Geen gebruikers gevonden"
@@ -7681,8 +7467,8 @@ msgstr "Ontgrendel om een gebruikersaccount toe te voegen."
 
 #: panels/user-accounts/cc-user-panel.ui:678
 msgid ""
-"Parental controls can now only be applied to non-administrator accounts. See "
-"the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
+"Parental controls can now only be applied to non-administrator accounts. See"
+" the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
 "changed-in-endless-os-3-8/12313\">FAQ entry</a>."
 msgstr ""
 
@@ -7739,9 +7525,7 @@ msgstr "An_dere vinger:"
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
-msgstr ""
-"Je vingerafdruk is opgeslagen. Je kunt nu inloggen met behulp van je "
-"vingerafdruklezer."
+msgstr "Je vingerafdruk is opgeslagen. Je kunt nu inloggen met behulp van je vingerafdruklezer."
 
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:3
 msgid "Users"
@@ -7751,14 +7535,14 @@ msgstr "Gebruikers"
 msgid "Add or remove users and change your password"
 msgstr "Gebruikers toevoegen of verwijderen en je wachtwoord wijzigen"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr ""
-"Login;Name;Fingerprint;Avatar;Logo;Face;Password;Aanmelden;Inloggen;"
-"Vingerafdruk;Gezicht;Wachtwoord;"
+msgstr "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Aanmelden;Inloggen;Vingerafdruk;Gezicht;Wachtwoord;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "R_egistreren"
@@ -7772,10 +7556,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"Voor enterprise-aanmelding moet deze computer\n"
-"ingeschreven zijn bij het domein. Laat je netwerkbeheerder\n"
-"hier het wachtwoord voor het domein intypen."
+msgstr "Voor enterprise-aanmelding moet deze computer\ningeschreven zijn bij het domein. Laat je netwerkbeheerder\nhier het wachtwoord voor het domein intypen."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -7803,7 +7584,6 @@ msgctxt "Password hint"
 msgid "Try changing some letters and numbers."
 msgstr "Probeer enkele letters en cijfers te wijzigen."
 
-# venstertitel
 #: panels/user-accounts/pw-utils.c:98 panels/user-accounts/pw-utils.c:106
 msgctxt "Password hint"
 msgid "Try changing the password a bit more."
@@ -7857,8 +7637,7 @@ msgstr "Probeer meer speciale tekens, zoals interpunctie, te gebruiken."
 #: panels/user-accounts/pw-utils.c:120
 msgctxt "Password hint"
 msgid "Try to use a mixture of letters, numbers and punctuation."
-msgstr ""
-"Probeer een combinatie van letters, cijfers en interpunctie te gebruiken."
+msgstr "Probeer een combinatie van letters, cijfers en interpunctie te gebruiken."
 
 #: panels/user-accounts/pw-utils.c:122
 msgctxt "Password hint"
@@ -7870,9 +7649,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"Probeer herhaling van hetzelfde soort teken te vermijden: je moet letters, "
-"cijfers en interpunctie combineren."
+msgstr "Probeer herhaling van hetzelfde soort teken te vermijden: je moet letters, cijfers en interpunctie combineren."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7884,24 +7661,19 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"Het wachtwoord moet langer zijn. Probeer meer letters, cijfers en leestekens "
-"toe te voegen."
+msgstr "Het wachtwoord moet langer zijn. Probeer meer letters, cijfers en leestekens toe te voegen."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
 msgid "Mix uppercase and lowercase and try to use a number or two."
-msgstr ""
-"Gebruik zowel hoofdletters als kleine letters en probeer een paar cijfers te "
-"gebruiken."
+msgstr "Gebruik zowel hoofdletters als kleine letters en probeer een paar cijfers te gebruiken."
 
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
-msgstr ""
-"Toevoegen van meer letters, cijfers en leestekens maakt het wachtwoord nóg "
-"sterker."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
+msgstr "Toevoegen van meer letters, cijfers en leestekens maakt het wachtwoord nóg sterker."
 
 #: panels/user-accounts/run-passwd.c:424
 msgid "Authentication failed"
@@ -7955,9 +7727,7 @@ msgstr "Onbekende fout"
 #: panels/user-accounts/um-fingerprint-dialog.c:139
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
-msgstr ""
-"Je hebt geen toegang tot het apparaat. Neem contact op met je "
-"systeembeheerder."
+msgstr "Je hebt geen toegang tot het apparaat. Neem contact op met je systeembeheerder."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:141
 msgid "The device is already in use."
@@ -7975,14 +7745,11 @@ msgstr "Geregistreerde vingerafdrukken verwijderen?"
 msgid "_Delete Fingerprints"
 msgstr "Vingerafdrukken ver_wijderen"
 
-# geregistreerde/opgeslagen
 #: panels/user-accounts/um-fingerprint-dialog.c:269
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
-"Wil je je geregistreerde vingerafdrukken verwijderen zodat inloggen met "
-"vingerafdruk uitgeschakeld wordt?"
+msgstr "Wil je je geregistreerde vingerafdrukken verwijderen zodat inloggen met vingerafdruk uitgeschakeld wordt?"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:439
 msgid "Done!"
@@ -8015,17 +7782,15 @@ msgstr "Neem contact op met je systeembeheerder voor hulp."
 
 #. translators:
 #. * The variable is the name of the device, for example:
-#. * "To enable fingerprint login, you need to save one of your fingerprints, using the
+#. * "To enable fingerprint login, you need to save one of your fingerprints,
+#. using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#.
 #: panels/user-accounts/um-fingerprint-dialog.c:710
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the “%s” device."
-msgstr ""
-"Om inloggen met vingerafdruk aan te zetten, moet je één van je "
-"vingerafdrukken opslaan met het ‘%s’-apparaat."
+msgstr "Om inloggen met vingerafdruk aan te zetten, moet je één van je vingerafdrukken opslaan met het ‘%s’-apparaat."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:717
 msgid "Selecting finger"
@@ -8039,9 +7804,7 @@ msgstr "Vingerafdrukken opnemen"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"De gebruikersnaam bestaat doorgaans enkel uit kleine letters van a t/m z, "
-"cijfers en de volgende tekens: - _"
+msgstr "De gebruikersnaam bestaat doorgaans enkel uit kleine letters van a t/m z, cijfers en de volgende tekens: - _"
 
 #: panels/user-accounts/user-utils.c:443
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -8053,9 +7816,7 @@ msgstr "De gebruikersnaam is te lang."
 
 #: panels/user-accounts/user-utils.c:550
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr ""
-"Dit wordt gebruikt om je persoonlijke map een naam te geven en kan niet "
-"worden gewijzigd."
+msgstr "Dit wordt gebruikt om je persoonlijke map een naam te geven en kan niet worden gewijzigd."
 
 #: panels/wacom/button-mapping.ui:9
 msgid "Map Buttons"
@@ -8074,18 +7835,13 @@ msgstr "Knoppen toewijzen aan functies"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"Kies, om een sneltoets te bewerken, de actie ‘Toetsaanslag sturen’, druk op "
-"de sneltoetsknop en houd de nieuwe toetsen ingedrukt, of druk op Backspace "
-"om hem te wissen."
+msgstr "Kies, om een sneltoets te bewerken, de actie ‘Toetsaanslag sturen’, druk op de sneltoetsknop en houd de nieuwe toetsen ingedrukt, of druk op Backspace om hem te wissen."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
-"Tik op de referentiepunten die op het scherm verschijnen om het tablet te "
-"kalibreren."
+msgstr "Tik op de referentiepunten die op het scherm verschijnen om het tablet te kalibreren."
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
@@ -8135,7 +7891,6 @@ msgstr "Toewijzen aan één monitor"
 msgid "%d of %d"
 msgstr "%d van %d"
 
-# Select a display language (change will be applied next time you log in)
 #: panels/wacom/cc-wacom-page.c:516
 msgid "Display Mapping"
 msgstr "Schermtoewijzing"
@@ -8155,11 +7910,10 @@ msgstr "Wacom-tablet"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
-"Knoptoewijzingen instellen en gevoeligheid van stylus voor  grafische "
-"tabletten aanpassen"
+msgstr "Knoptoewijzingen instellen en gevoeligheid van stylus voor  grafische tabletten aanpassen"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Stylus;Tekenen;Gum;Muis;"
@@ -8261,7 +8015,6 @@ msgstr "Gevoeligheid van gum"
 msgid "Soft"
 msgstr "Zacht"
 
-# ??? (Wouter Bolsterlee)
 #: panels/wacom/wacom-stylus-page.ui:211 panels/wacom/wacom-stylus-page.ui:372
 msgid "Firm"
 msgstr "Stevig"
@@ -8347,16 +8100,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"Deze versie van Instellingen moet alleen voor ontwikkelingsdoeleinden "
-"gebruikt worden. U kunt onjuist systeemgedrag, gegevensverlies en andere "
-"onverwachte problemen tegenkomen. "
+msgstr "Deze versie van Instellingen moet alleen voor ontwikkelingsdoeleinden gebruikt worden. U kunt onjuist systeemgedrag, gegevensverlies en andere onverwachte problemen tegenkomen. "
 
 #: shell/cc-window.ui:331
 msgid "Help"
 msgstr "Hulp"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "Voorkeuren;Instellingen;"
@@ -8397,24 +8148,18 @@ msgstr "De identificatie voor het laatst geopende paneel van Instellingen"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
-"De identificatie voor het laatst geopende paneel van Instellingen. Niet-"
-"herkende waarden worden genegeerd, en het eerste paneel in de lijst wordt "
-"geselecteerd."
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "De identificatie voor het laatst geopende paneel van Instellingen. Niet-herkende waarden worden genegeerd, en het eerste paneel in de lijst wordt geselecteerd."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
-msgstr ""
-"Waarschuwing tonen wanneer er een ontwikkelversie van Instellingen draait"
+msgstr "Waarschuwing tonen wanneer er een ontwikkelversie van Instellingen draait"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr ""
-"Of Instellingen een waarschuwing moet tonen wanneer er een ontwikkelversie "
-"draait."
+msgstr "Of Instellingen een waarschuwing moet tonen wanneer er een ontwikkelversie draait."
 
 #. translators:
 #. * The number of sound outputs on a particular device
@@ -8437,1160 +8182,3 @@ msgstr[1] "%u invoerapparaten"
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
 msgstr "Systeemgeluiden"
-
-#~ msgid "Open in Software"
-#~ msgstr "Openen met Software"
-
-#~ msgid "Learn more about color management"
-#~ msgstr "Meer te weten komen over kleurbeheer"
-
-#~ msgid "%s; Build ID: %s"
-#~ msgstr "%s; build-ID: %s"
-
-#~ msgid "OS Name"
-#~ msgstr "Naam besturingssysteem"
-
-#~ msgid "GNOME Version"
-#~ msgstr "Gnome-versie"
-
-#~ msgctxt "Input Source"
-#~ msgid "Other"
-#~ msgstr "Overige"
-
-#~ msgid "Add an Input Source"
-#~ msgstr "Invoerbron toevoegen"
-
-#~ msgid "Input Sources"
-#~ msgstr "Invoerbron"
-
-#~ msgid "Input Source Options"
-#~ msgstr "Instellingen invoerbron"
-
-#~ msgid "Allow user to change their password on next login"
-#~ msgstr "Gebruiker kan wachtwoord wijzigen bij de volgende keer aanmelden"
-
-#~ msgid "Set a password now"
-#~ msgstr "Nu een wachtwoord instellen"
-
-#~ msgid "Set Background and Lock Screen"
-#~ msgstr "Bureaubladachtergrond en vergrendelingsscherm instellen"
-
-#~ msgid "Set Background"
-#~ msgstr "Bureaubladachtergrond instellen"
-
-# Dit is een zelfstandig naamwoord!
-#~ msgid "Set Lock Screen"
-#~ msgstr "Vergrendelingsscherm instellen"
-
-#~ msgid "Remove Background"
-#~ msgstr "Achtergrond verwijderen"
-
-#~ msgid "Version %s"
-#~ msgstr "Versie %s"
-
-#~ msgid "OS name"
-#~ msgstr "Naam besturingssysteem"
-
-#~ msgid "OS type"
-#~ msgstr "Type besturingssysteem"
-
-#~ msgid "Disk"
-#~ msgstr "Schijf"
-
-#~ msgid "Check for updates"
-#~ msgstr "Zoeken naar updates"
-
-#~ msgid "Network proxy"
-#~ msgstr "Netwerkproxy"
-
-#~ msgid "page 1"
-#~ msgstr "pagina 1"
-
-#~ msgid "Inner _authentication"
-#~ msgstr "Interne _aanmeldingscontrole"
-
-#~ msgid "page 2"
-#~ msgstr "pagina 2"
-
-#~ msgid "Restrict _background data usage"
-#~ msgstr "Gegevensge_bruik op achtergrond beperken"
-
-#~ msgid "Appropriate for connections that have data charges or limits."
-#~ msgstr "Nuttig voor verbinden met gegevenskosten of -limieten."
-
-#~ msgid "Twisted Pair (TP)"
-#~ msgstr "Twisted Pair (TP)"
-
-#~ msgid "Attachment Unit Interface (AUI)"
-#~ msgstr "Attachment Unit Interface (AUI)"
-
-#~ msgid "BNC"
-#~ msgstr "BNC"
-
-#~ msgid "Media Independent Interface (MII)"
-#~ msgstr "Media Independent Interface (MII)"
-
-#~ msgid "10 Mb/s"
-#~ msgstr "10 Mb/s"
-
-#~ msgid "100 Mb/s"
-#~ msgstr "100 Mb/s"
-
-#~ msgid "1 Gb/s"
-#~ msgstr "1 Gb/s"
-
-#~ msgid "10 Gb/s"
-#~ msgstr "10 Gb/s"
-
-#~ msgid ""
-#~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-#~ msgstr ""
-#~ "Door de draadloze hotspot in te schakelen wordt je verbinding met <b>%s</"
-#~ "b> verbroken."
-
-#~ msgid ""
-#~ "It is not possible to access the Internet through your wireless while the "
-#~ "hotspot is active."
-#~ msgstr ""
-#~ "Zolang de hotspot geactiveerd is, heb je geen toegang tot internet via je "
-#~ "draadloze verbinding."
-
-#~ msgid ""
-#~ "Wi-Fi hotspots are usually used to share an additional Internet "
-#~ "connection over Wi-Fi."
-#~ msgstr ""
-#~ "Wi-Fi-hotspots worden meestal gebruikt om een extra internetverbinding te "
-#~ "delen via Wi-Fi."
-
-#~ msgid "Automatic _Connect"
-#~ msgstr "Automatis_ch verbinden"
-
-#~ msgid "details"
-#~ msgstr "details"
-
-#~ msgid "Show P_assword"
-#~ msgstr "Wachtwoord _tonen"
-
-#~ msgid "Make available to other users"
-#~ msgstr "Beschikbaar maken voor andere gebruikers"
-
-#~ msgid "identity"
-#~ msgstr "identiteit"
-
-#~ msgid "IPv_4"
-#~ msgstr "IPv_4"
-
-#~ msgid "_Addresses"
-#~ msgstr "_Adressen"
-
-#~ msgid "Automatic (DHCP) addresses only"
-#~ msgstr "Alleen automatische (DHCP) adressen"
-
-#~ msgid "Link-local only"
-#~ msgstr "Alleen Link-Local"
-
-#~ msgid "_Ignore automatically obtained routes"
-#~ msgstr "Automatisch verkregen routes _negeren"
-
-#~ msgid "ipv4"
-#~ msgstr "ipv4"
-
-#~ msgid "IPv_6"
-#~ msgstr "IPv_6"
-
-#~ msgid "ipv6"
-#~ msgstr "ipv6"
-
-#~ msgid "_Cloned MAC Address"
-#~ msgstr "Ge_kloond MAC-adres"
-
-#~ msgid "_Reset"
-#~ msgstr "Standaa_rdwaarden"
-
-#~ msgid ""
-#~ "Reset the settings for this connection to their defaults, but remember as "
-#~ "a preferred connection."
-#~ msgstr ""
-#~ "Zet de standaardinstellingen van deze verbinding terug, maar sla het "
-#~ "netwerk op als voorkeursnetwerk."
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect to it."
-#~ msgstr ""
-#~ "Verwijder alle gegevens met betrekking tot dit netwerk en probeer niet "
-#~ "automatisch te verbinden."
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgctxt "tab"
-#~ msgid "Reset"
-#~ msgstr "Herstellen"
-
-#~ msgid "Connected Devices"
-#~ msgstr "Verbonden apparaten"
-
-#~ msgid "Ad-hoc"
-#~ msgstr "Ad-hoc"
-
-#~ msgid "Infrastructure"
-#~ msgstr "Infrastructuur"
-
-#~ msgid "Not connected"
-#~ msgstr "Niet verbonden"
-
-#~ msgid "Notification _Popups"
-#~ msgstr "Meldings_ballonnen"
-
-#~ msgid "In use"
-#~ msgstr "In gebruik"
-
-#~ msgctxt "Location services status"
-#~ msgid "On"
-#~ msgstr "Aan"
-
-#~ msgctxt "Location services status"
-#~ msgid "Off"
-#~ msgstr "Uit"
-
-#~ msgctxt "Camera status"
-#~ msgid "Off"
-#~ msgstr "Uit"
-
-#~ msgctxt "Camera status"
-#~ msgid "On"
-#~ msgstr "Aan"
-
-#~ msgctxt "Microphone status"
-#~ msgid "Off"
-#~ msgstr "Uit"
-
-#~ msgctxt "Microphone status"
-#~ msgid "On"
-#~ msgstr "Aan"
-
-#~ msgid "Usage & History"
-#~ msgstr "Gebruik en geschiedenis"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "Privacybeleid"
-
-#~ msgid ""
-#~ "Remembering your history makes things easier to find again. These items "
-#~ "are never shared over the network."
-#~ msgstr ""
-#~ "Door je geschiedenis te onthouden, kun je dingen makkelijker terugvinden. "
-#~ "Deze items worden nooit gedeeld via het netwerk."
-
-#~ msgid "_Recently Used"
-#~ msgstr "Onlangs geb_ruikt"
-
-#~ msgid "Retain _History"
-#~ msgstr "Gesc_hiedenis behouden"
-
-#~ msgid "The Screen Lock protects your privacy when you are away."
-#~ msgstr "Schermvergrendeling beschermt je privacy als je weg bent."
-
-#~ msgid "Lock screen _after blank for"
-#~ msgstr "Scherm _vergrendelen na zwart scherm gedurende"
-
-#~ msgid "Lock Screen _Notifications"
-#~ msgstr "_Notificaties op vergrendelingsscherm"
-
-#~ msgid ""
-#~ "Automatically purge the Trash and temporary files to help keep your "
-#~ "computer free of unnecessary sensitive information."
-#~ msgstr ""
-#~ "Schoon de prullenbak en tijdelijke bestanden automatisch op om ervoor te "
-#~ "zorgen dat er geen gevoelige informatie achterblijft op je computer."
-
-#~ msgid "Purge _After"
-#~ msgstr "Verwijderen _na"
-
-#~ msgid ""
-#~ "Sending us information about which software you use helps us provide you "
-#~ "with more accurate recommendations. It also helps us to improve our "
-#~ "software.\n"
-#~ "\n"
-#~ "All the information we collect is made anonymous, and we will never share "
-#~ "your data with third parties."
-#~ msgstr ""
-#~ "Als je ons informatie stuurt over je gebruikte software, dan help je ons "
-#~ "om je van accuratere aanbevelingen te voorzien. Daarnaast helpt het ons "
-#~ "onze software te verbeteren.\n"
-#~ "\n"
-#~ "Alle verzamelde informatie is geanonimiseerd en wordt nooit gedeeld met "
-#~ "externe partijen."
-
-#~ msgid "_Send software usage statistics"
-#~ msgstr "_Statistieken over softwaregebruik versturen"
-
-#~ msgid "_Camera"
-#~ msgstr "_Camera"
-
-#~ msgid "_Microphone"
-#~ msgstr "_Microfoon"
-
-#~ msgid "_Location Services"
-#~ msgstr "_Locatiediensten"
-
-#~ msgid "Protect your personal information and control what others might see"
-#~ msgstr "Bescherm je persoonlijke gegevens en bepaal wat anderen mogen zien"
-
-#~ msgid "No regions found"
-#~ msgstr "Geen regio’s gevonden"
-
-# laten knipperen/oplichten
-#~ msgid "Flash the _window title"
-#~ msgstr "_Titelbalk laten knipperen"
-
-#~ msgid "Last Login"
-#~ msgstr "Vorige inlog"
-
-#~ msgid "Delete Background"
-#~ msgstr "Bureaubladachtergrond verwijderen"
-
-#~ msgid "Preferences"
-#~ msgstr "Voorkeuren"
-
-#~ msgid "The username cannot start with a “-”."
-#~ msgstr "De gebruikersnaam mag niet met een ‘-’ beginnen."
-
-#~ msgid "application-x-executable"
-#~ msgstr "application-x-executable"
-
-#~ msgid "_Background"
-#~ msgstr "_Achtergrond"
-
-#~ msgid "Changes throughout the day"
-#~ msgstr "Verandert gedurende de dag"
-
-#~ msgctxt "background, style"
-#~ msgid "Tile"
-#~ msgstr "Tegelen"
-
-#~ msgctxt "background, style"
-#~ msgid "Zoom"
-#~ msgstr "Zoomen"
-
-#~ msgctxt "background, style"
-#~ msgid "Center"
-#~ msgstr "Centreren"
-
-#~ msgctxt "background, style"
-#~ msgid "Scale"
-#~ msgstr "Schalen"
-
-#~ msgctxt "background, style"
-#~ msgid "Fill"
-#~ msgstr "Vullen"
-
-# ??? (Wouter Bolsterlee)
-#~ msgctxt "background, style"
-#~ msgid "Span"
-#~ msgstr "Omspannen"
-
-#~ msgid "Colors"
-#~ msgstr "Kleuren"
-
-# het gaat hier om de mapnaam -Justin
-#~ msgid "Pictures"
-#~ msgstr "Afbeeldingen"
-
-#~ msgid "No Pictures Found"
-#~ msgstr "Er zijn geen afbeeldingen aangetroffen"
-
-#~ msgid "You can add images to your %s folder and they will show up here"
-#~ msgstr ""
-#~ "U kunt afbeeldingen toevoegen aan uw %s-map waarna ze hier weergegeven "
-#~ "zullen worden"
-
-#~ msgid "preferences-desktop-wallpaper"
-#~ msgstr "preferences-desktop-wallpaper"
-
-#~ msgid "bluetooth"
-#~ msgstr "bluetooth"
-
-#~ msgid "preferences-color"
-#~ msgstr "preferences-color"
-
-#~ msgid "preferences-system-time"
-#~ msgstr "preferences-system-time"
-
-#~ msgid "_Off"
-#~ msgstr "_Uit"
-
-#~ msgid "preferences-desktop-display"
-#~ msgstr "preferences-desktop-display"
-
-#~ msgid "starred"
-#~ msgstr "starred"
-
-#~ msgid "help-about"
-#~ msgstr "help-about"
-
-#~ msgid "media-removable"
-#~ msgstr "media-removable"
-
-#~ msgid "Keyboard"
-#~ msgstr "Toetsenbord"
-
-#~ msgid "input-keyboard"
-#~ msgstr "input-keyboard"
-
-#~ msgid "input-mouse"
-#~ msgstr "input-mouse"
-
-#~ msgid "Connection/SSID"
-#~ msgstr "Verbinding/SSID"
-
-#~ msgid "network-workgroup"
-#~ msgstr "network-workgroup"
-
-#~ msgid "network-wireless"
-#~ msgstr "network-wireless"
-
-#~ msgid "preferences-system-notifications"
-#~ msgstr "preferences-system-notifications"
-
-#~ msgid "goa-panel"
-#~ msgstr "goa-panel"
-
-#~ msgid "_Automatic suspend"
-#~ msgstr "_Automatisch in pauzestand zetten"
-
-#~ msgid "_When the Power Button is pressed"
-#~ msgstr "Als de _aan-/uitknop wordt ingedrukt"
-
-#~ msgid "gnome-power-manager"
-#~ msgstr "gnome-power-manager"
-
-#~ msgid "printer"
-#~ msgstr "printer"
-
-#~ msgid "preferences-system-privacy"
-#~ msgstr "preferences-system-privacy"
-
-#~ msgid "preferences-desktop-locale"
-#~ msgstr "preferences-desktop-locale"
-
-#~ msgid "preferences-system-search"
-#~ msgstr "preferences-system-search"
-
-#~ msgid "preferences-system-sharing"
-#~ msgstr "preferences-system-sharing"
-
-#~ msgid "multimedia-volume-control"
-#~ msgstr "multimedia-volume-control"
-
-#~ msgid "thunderbolt"
-#~ msgstr "thunderbolt"
-
-#~ msgid "preferences-desktop-accessibility"
-#~ msgstr "preferences-desktop-accessibility"
-
-#~ msgid "system-users"
-#~ msgstr "system-users"
-
-#~ msgid "input-tablet"
-#~ msgstr "input-tablet"
-
-#~ msgid "org.gnome.Settings"
-#~ msgstr "org.gnome.Settings"
-
-#~ msgid "_Night Light"
-#~ msgstr "_Nachtlicht"
-
-# beeldscherm
-#~ msgid "Could not get screen information"
-#~ msgstr "Kon informatie over het scherm niet verkrijgen"
-
-#~ msgid "Switch to previous source"
-#~ msgstr "Overschakelen naar vorige bron"
-
-#~ msgid "Switch to next source"
-#~ msgstr "Overschakelen naar volgende bron"
-
-#~ msgid "Alternative switch to next source"
-#~ msgstr "Alternatieve overschakeling naar volgende bron"
-
-#~ msgid "_Options"
-#~ msgstr "_Opties"
-
-#~ msgid "Add input source"
-#~ msgstr "Invoerbron toevoegen"
-
-#~ msgid "Remove input source"
-#~ msgstr "Invoerbron verwijderen"
-
-#~ msgid "Move input source up"
-#~ msgstr "Invoerbron naar boven verplaatsen"
-
-#~ msgid "Move input source down"
-#~ msgstr "Invoerbron naar beneden verplaatsen"
-
-#~ msgid "Show input source keyboard layout"
-#~ msgstr "Invoerbron toetsenbordindeling tonen"
-
-#~ msgctxt "balance"
-#~ msgid "Left"
-#~ msgstr "Links"
-
-#~ msgctxt "balance"
-#~ msgid "Right"
-#~ msgstr "Rechts"
-
-#~ msgctxt "balance"
-#~ msgid "Minimum"
-#~ msgstr "Minimum"
-
-#~ msgctxt "balance"
-#~ msgid "Maximum"
-#~ msgstr "Maximum"
-
-#~ msgid "_Subwoofer:"
-#~ msgstr "_Subwoofer:"
-
-#~ msgctxt "volume"
-#~ msgid "Unamplified"
-#~ msgstr "Onversterkt"
-
-#~ msgid "_Profile:"
-#~ msgstr "_Profiel:"
-
-#~ msgid "_Test Speakers"
-#~ msgstr "Speakers _testen"
-
-#~ msgid "Peak detect"
-#~ msgstr "Piekdetectie"
-
-#~ msgid "Device"
-#~ msgstr "Apparaat"
-
-#~ msgid "Speaker Testing for %s"
-#~ msgstr "Speakers testen voor %s"
-
-#~ msgid "C_hoose a device for sound output:"
-#~ msgstr "Kies een apparaat voor geluids_weergave:"
-
-#~ msgid "Settings for the selected device:"
-#~ msgstr "Instellingen voor het gekozen apparaat:"
-
-#~ msgid "_Input volume:"
-#~ msgstr "I_nvoervolume:"
-
-#~ msgid "C_hoose a device for sound input:"
-#~ msgstr "Kies een a_pparaat voor geluidsopname:"
-
-#~ msgid "Sound Effects"
-#~ msgstr "Geluidseffecten"
-
-#~ msgid "Built-in"
-#~ msgstr "Ingebouwd"
-
-#~ msgid "Sound Preferences"
-#~ msgstr "Geluidsvoorkeuren"
-
-#~ msgid "Testing event sound"
-#~ msgstr "Evenementgeluid testen"
-
-#~ msgid "From theme"
-#~ msgstr "Van thema"
-
-#~ msgid "C_hoose an alert sound:"
-#~ msgstr "_Kies een evenementgeluid:"
-
-#~ msgid "Stop"
-#~ msgstr "Stoppen"
-
-#~ msgctxt "Account type"
-#~ msgid "Standard"
-#~ msgstr "Standaard"
-
-#~ msgctxt "Account type"
-#~ msgid "Administrator"
-#~ msgstr "Beheerder"
-
-#~ msgid "GNOME Control Center"
-#~ msgstr "Gnome-configuratiecentrum"
-
-#~ msgid ""
-#~ "The control center is GNOME’s main interface for configuration of various "
-#~ "aspects of your desktop."
-#~ msgstr ""
-#~ "Het configuratiecentrum is de hoofdinterface van Gnome om verschillende "
-#~ "aspecten van uw desktop te configureren."
-
-#~ msgid "Quit"
-#~ msgstr "Afsluiten"
-
-#~ msgid "gnome-control-center"
-#~ msgstr "gnome-control-center"
-
-#~ msgid "My Home Network"
-#~ msgstr "Mijn thuisnetwerk"
-
-#~ msgid "hardware"
-#~ msgstr "hardware"
-
-#~ msgid "English (United Kingdom)"
-#~ msgstr "Engels (Verenigd Koninkrijk)"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Verenigd Koninkrijk"
-
-#~ msgid "page 3"
-#~ msgstr "pagina 3"
-
-#~ msgid "_Verify New Password"
-#~ msgstr "_Nieuw wachtwoord verifiëren"
-
-#~ msgid "Passwords do not match."
-#~ msgstr "Wachtwoorden komen niet overeen."
-
-#~ msgid "Show the overview"
-#~ msgstr "Overzicht tonen"
-
-#~ msgid "Back­ground"
-#~ msgstr "Achtergrond"
-
-#~ msgid "Blue­tooth"
-#~ msgstr "Bluetooth"
-
-#~ msgid "Co­lor"
-#~ msgstr "Kleur"
-
-#~ msgid "Section"
-#~ msgstr "Sectie"
-
-#~ msgid "Overview"
-#~ msgstr "Overzicht"
-
-#~ msgid "Defa­ult Applications"
-#~ msgstr "Standaardtoepassingen"
-
-#~ msgid "Ab­out"
-#~ msgstr "Info"
-
-#~ msgid "De­tails"
-#~ msgstr "Details"
-
-#~ msgid "Remo­vable Media"
-#~ msgstr "Verwijderbare media"
-
-#~ msgid "Net­work"
-#~ msgstr "Netwerk"
-
-#~ msgid "invalid EAP-TLS password: missing"
-#~ msgstr "ongeldig EAP-TLS-wachtwoord: ontbreekt"
-
-#~ msgid "No­ti­fi­ca­tions"
-#~ msgstr "Notificaties"
-
-#~ msgid "Po­wer"
-#~ msgstr "Energie"
-
-#~ msgid "Pri­va­cy"
-#~ msgstr "Pri­va­cy"
-
-#~ msgid "Sha­ring"
-#~ msgstr "Delen"
-
-#~ msgid "Uni­ver­sal Access"
-#~ msgstr "Universele toegang"
-
-#~ msgid "Disable image"
-#~ msgstr "Afbeelding uitschakelen"
-
-#~ msgid "Browse for more pictures…"
-#~ msgstr "Bladeren naar meer afbeeldingen…"
-
-#~ msgid "Used by %s"
-#~ msgstr "Gebruikt door %s"
-
-#~ msgid "Wa­com Tab­let"
-#~ msgstr "Wacom­-tablet"
-
-#~ msgctxt "category"
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgctxt "category"
-#~ msgid "System"
-#~ msgstr "Systeem"
-
-#~ msgid "Lid Closed"
-#~ msgstr "Deksel gesloten"
-
-#~ msgid "Mirrored"
-#~ msgstr "Gespiegeld"
-
-#~ msgid "Secondary"
-#~ msgstr "Secundair"
-
-#~ msgid "Arrange Combined Displays"
-#~ msgstr "Gecombineerde schermen rangschikken"
-
-#~ msgid "Drag displays to rearrange them"
-#~ msgstr "Schermen slepen om ze te rangschikken"
-
-#~ msgid "%d Hz (NTSC)"
-#~ msgstr "%d Hz (NTSC)"
-
-#~ msgid "%d Hz"
-#~ msgstr "%d Hz"
-
-#~ msgid "Rotate counterclockwise by 90°"
-#~ msgstr "90° linksom draaien"
-
-#~ msgid "Rotate by 180°"
-#~ msgstr "180° draaien"
-
-#~ msgid "Rotate clockwise by 90°"
-#~ msgstr "90° rechtsom draaien"
-
-#~ msgid "Size"
-#~ msgstr "Grootte"
-
-#~ msgid "Aspect Ratio"
-#~ msgstr "Beeldverhouding"
-
-#~ msgid "Show the top bar and Activities Overview on this display"
-#~ msgstr "Menubalk en activiteitenoverzicht op het scherm tonen"
-
-#~ msgid "Join this display with another to create an extra workspace"
-#~ msgstr ""
-#~ "Dit scherm met een ander scherm samenvoegen om extra werkruimte te krijgen"
-
-#~ msgid "Presentation"
-#~ msgstr "Presentatie"
-
-#~ msgid "Show slideshows and media only"
-#~ msgstr "Alleen diavoorstellingen en media tonen"
-
-#~ msgid "Show your existing view on both displays"
-#~ msgstr "Huidige beeld op beide schermen tonen"
-
-#~ msgid "Turn Off"
-#~ msgstr "_Uitschakelen"
-
-# 'display' hier ook maar als scherm vertaald (RvS)
-#~ msgid "Don’t use this display"
-#~ msgstr "Dit scherm niet gebruiken"
-
-#~ msgid "_Arrange Combined Displays"
-#~ msgstr "_Gecombineerde schermen rangschikken"
-
-#~ msgid "%s %d-bit (Build ID: %s)"
-#~ msgstr "%s %d-bit (build-ID: %s)"
-
-#~ msgid "%s %d-bit"
-#~ msgstr "%s %d-bit"
-
-#~ msgid "Base system"
-#~ msgstr "Basissysteem"
-
-#~ msgid "Shortcut;Repeat;Blink;"
-#~ msgstr "Shortcut;Repeat;Blink;Sneltoets;Herhalen;Knipperen;"
-
-#~ msgid "Press Esc to cancel."
-#~ msgstr "Druk op Esc om te annuleren."
-
-#~ msgid "Edit"
-#~ msgstr "Bewerken"
-
-#~ msgctxt "button"
-#~ msgid "Set Shortcut"
-#~ msgstr "Sneltoets instellen"
-
-#~ msgid "Server"
-#~ msgstr "Server"
-
-#~ msgid "Delete DNS Server"
-#~ msgstr "DNS-server verwijderen"
-
-#~ msgid "Make available to other _users"
-#~ msgstr "Beschikbaar maken voor andere _gebruikers"
-
-#~ msgid "Firewall _Zone"
-#~ msgstr "Firewall-_zone"
-
-#~ msgctxt "Firewall zone"
-#~ msgid "Default"
-#~ msgstr "Standaard"
-
-#~ msgid "The zone defines the trust level of the connection"
-#~ msgstr "De zone bepaalt het vertrouwensniveau van de verbinding"
-
-#~ msgid ""
-#~ "Reset the settings for this network, including passwords, but remember it "
-#~ "as a preferred network"
-#~ msgstr ""
-#~ "Instellingen voor dit netwerk opnieuw instellen, inclusief wachtwoorden, "
-#~ "maar onthouden als een voorkeursnetwerk"
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect"
-#~ msgstr ""
-#~ "Alle details met betrekking tot dit netwerk verwijderen, en niet proberen "
-#~ "automatisch verbinding te maken"
-
-#~ msgid ""
-#~ "If you have a connection to the Internet other than wireless, you can set "
-#~ "up a wireless hotspot to share the connection with others."
-#~ msgstr ""
-#~ "Als u een andere dan een draadloze verbinding met het internet heeft, "
-#~ "kunt u een draadloze hotspot instellen om de verbinding met anderen te "
-#~ "delen."
-
-#~ msgid "Proxy"
-#~ msgstr "Proxy"
-
-#~ msgid "_Add Profile…"
-#~ msgstr "Profiel toe_voegen…"
-
-#~ msgctxt "proxy method"
-#~ msgid "None"
-#~ msgstr "Geen"
-
-#~ msgctxt "proxy method"
-#~ msgid "Manual"
-#~ msgstr "Handmatig"
-
-#~ msgctxt "proxy method"
-#~ msgid "Automatic"
-#~ msgstr "Automatisch"
-
-#~ msgid "Group Name"
-#~ msgstr "Groepsnaam"
-
-#~ msgid "_Use as Hotspot…"
-#~ msgstr "_Als hotspot gebruiken…"
-
-#~ msgid "_History"
-#~ msgstr "_Geschiedenis"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgctxt "notifications"
-#~ msgid "Notification _Banners"
-#~ msgstr "Notificatie_banieren"
-
-#~ msgid "Notification _Banners"
-#~ msgstr "Notificatie_banieren"
-
-#~ msgid "Add Account"
-#~ msgstr "Account toevoegen"
-
-#~ msgid "Mail"
-#~ msgstr "E-mail"
-
-#~ msgid "Calendar"
-#~ msgstr "Agenda"
-
-#~ msgid "Contacts"
-#~ msgstr "Contacten"
-
-#~ msgid "Chat"
-#~ msgstr "Chatten"
-
-#~ msgid "Error creating account"
-#~ msgstr "Fout tijdens aanmaken van het account"
-
-#~ msgid "Are you sure you want to remove the account?"
-#~ msgstr "Weet u zeker dat u dit account wilt verwijderen?"
-
-#~ msgid "This will not remove the account on the server."
-#~ msgstr "Dit zal niet het account op de server verwijderen."
-
-#~ msgid "_Remove"
-#~ msgstr "_Verwijderen"
-
-#~ msgid "No online accounts configured"
-#~ msgstr "Geen online-accounts geconfigureerd"
-
-#~ msgid ""
-#~ "Adding an account allows your applications to access it for documents, "
-#~ "mail, contacts, calendar, chat and more."
-#~ msgstr ""
-#~ "Door het toevoegen van een account kunnen uw toepassingen er toegang toe "
-#~ "krijgen voor documenten, e-mail, contacten, agenda, chatten en meer."
-
-#~ msgctxt "printer state"
-#~ msgid "Configuring"
-#~ msgstr "Bezig met configureren"
-
-#~ msgid "Toner Level"
-#~ msgstr "Toner-niveau"
-
-#~ msgid "Supply Level"
-#~ msgstr "Voorraad-niveau"
-
-#~ msgctxt "printer state"
-#~ msgid "Installing"
-#~ msgstr "Bezig met installeren"
-
-#~ msgid "%u active"
-#~ msgid_plural "%u active"
-#~ msgstr[0] "%u actief"
-#~ msgstr[1] "%u actief"
-
-#~ msgid "Loading options…"
-#~ msgstr "Opties worden geladen…"
-
-#~ msgid "Supply"
-#~ msgstr "Voorraad"
-
-#~ msgid "Jobs"
-#~ msgstr "Taken"
-
-#~ msgid "Show _Jobs"
-#~ msgstr "_Taken tonen"
-
-#~ msgid "label"
-#~ msgstr "label"
-
-#~ msgid "Setting new driver…"
-#~ msgstr "Een nieuw stuurprogramma instellen…"
-
-#~ msgid "Print _Test Page"
-#~ msgstr "_Testpagina afdrukken"
-
-#~ msgctxt "Password hint"
-#~ msgid "Try to add more letters, numbers and symbols."
-#~ msgstr "Probeer meer letters, cijfers en symbolen toe te voegen."
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Weak"
-#~ msgstr "Sterkte: zwak"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Low"
-#~ msgstr "Sterkte: laag"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Medium"
-#~ msgstr "Sterkte: medium"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Good"
-#~ msgstr "Sterkte: goed"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: High"
-#~ msgstr "Sterkte: hoog"
-
-#~ msgid "Other Accounts"
-#~ msgstr "Andere accounts"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Up"
-#~ msgstr "Omhoog"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Down"
-#~ msgstr "Omlaag"
-
-#~ msgctxt "Wacom action-type"
-#~ msgid "None"
-#~ msgstr "Geen"
-
-#~ msgid "Left Ring"
-#~ msgstr "Linker ring"
-
-#~ msgid "Left Ring Mode #%d"
-#~ msgstr "Linker ring-modus #%d"
-
-#~ msgid "Right Ring Mode #%d"
-#~ msgstr "Rechter ring-modus #%d"
-
-#~ msgid "Left Touchstrip"
-#~ msgstr "Linker aanraakstrook"
-
-#~ msgid "Left Touchstrip Mode #%d"
-#~ msgstr "Linker aanraakstrookmodus #%d"
-
-#~ msgid "Right Touchstrip"
-#~ msgstr "Rechter aanraakstrook"
-
-#~ msgid "Right Touchstrip Mode #%d"
-#~ msgstr "Rechter aanraakstrookmodus #%d"
-
-#~ msgid "Left Touchring Mode Switch"
-#~ msgstr "Schakelaar linker aanraakringmodus"
-
-#~ msgid "Right Touchring Mode Switch"
-#~ msgstr "Schakelaar rechter aanraakringmodus"
-
-#~ msgid "Left Touchstrip Mode Switch"
-#~ msgstr "Schakelaar linker aanraakstrookmodus"
-
-#~ msgid "Right Touchstrip Mode Switch"
-#~ msgstr "Schakelaar rechter aanraakstrookmodus"
-
-#~ msgid "Mode Switch #%d"
-#~ msgstr "Modusschakelaar #%d"
-
-#~ msgid "Left Button #%d"
-#~ msgstr "Linkerknop #%d"
-
-#~ msgid "Right Button #%d"
-#~ msgstr "Rechterknop #%d"
-
-#~ msgid "Top Button #%d"
-#~ msgstr "Bovenste knop #%d"
-
-#~ msgid "Bottom Button #%d"
-#~ msgstr "Onderste knop #%d"
-
-#~ msgid "No Action"
-#~ msgstr "Geen actie"
-
-#~ msgid "Left Mouse Button Click"
-#~ msgstr "Linkermuisknop-klik"
-
-#~ msgid "Scroll Up"
-#~ msgstr "Omhoog schuiven"
-
-#~ msgid "Scroll Down"
-#~ msgstr "Omlaag schuiven"
-
-#~ msgid "Scroll Left"
-#~ msgstr "Naar links schuiven"
-
-#~ msgid "Scroll Right"
-#~ msgstr "Naar rechts schuiven"
-
-#~ msgid "Add a New Printer"
-#~ msgstr "Nieuwe printer toevoegen"
-
-#~ msgid "No printers detected."
-#~ msgstr "Geen printers gedetecteerd."
-
-#~ msgctxt "login history week label"
-#~ msgid "%s - %s"
-#~ msgstr "%s - %s"
-
-#~ msgid "Remove Shortcut"
-#~ msgstr "Sneltoets verwijderen"
-
-#~ msgid ""
-#~ "To edit a shortcut, click the row and hold down the new keys or press "
-#~ "Backspace to clear."
-#~ msgstr ""
-#~ "Om een sneltoets te bewerken, klikt u op de corresponderende rij en voert "
-#~ "u een nieuwe toetscombinatie in of drukt u op Backspace om hem te wissen."
-
-#~ msgid "<Unknown Action>"
-#~ msgstr "<Onbekende actie>"
-
-#~ msgid ""
-#~ "The shortcut \"%s\" cannot be used because it will become impossible to "
-#~ "type using this key.\n"
-#~ "Please try with a key such as Control, Alt or Shift at the same time."
-#~ msgstr ""
-#~ "De sneltoets ‘%s’ kan niet gebruikt worden, omdat het dan onmogelijk "
-#~ "wordt deze toets te gebruiken om te typen.\n"
-#~ "Probeer het eens met een toets als Control, Alt of Shift tegelijkertijd."
-
-#~ msgid ""
-#~ "The shortcut \"%s\" is already used for\n"
-#~ "\"%s\""
-#~ msgstr ""
-#~ "De sneltoets ‘%s’ is reeds in gebruik voor:\n"
-#~ "‘%s’"
-
-#~ msgid ""
-#~ "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~ "disabled."
-#~ msgstr ""
-#~ "Als u de aan ‘%s’ toegewezen sneltoets opnieuw instelt, zal de sneltoets "
-#~ "‘%s’ uitgeschakeld zijn."
-
-# Geen aparte vertaling voor assign/reassign
-#~ msgid "_Reassign"
-#~ msgstr "_Opnieuw toewijzen"
-
-#~ msgid ""
-#~ "The \"%s\" shortcut has an associated \"%s\" shortcut. Do you want to "
-#~ "automatically set it to \"%s\"?"
-#~ msgstr ""
-#~ "De \"%s\" sneltoets heeft een geassocieerde \"%s\" sneltoets. Wilt u deze "
-#~ "automatisch veranderen naar \"%s\"?"
-
-#~ msgid ""
-#~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
-#~ "disabled if you move forward."
-#~ msgstr ""
-#~ "\"%s\" is op dit moment geassocieerd met \"%s\", deze sneltoets zal "
-#~ "worden uitgeschakeld indien u verder gaat."
-
-# Geen aparte vertaling voor assign/reassign
-#~ msgid "_Assign"
-#~ msgstr "_Toewijzen"
-
-#~ msgid "Error logging into the account"
-#~ msgstr "Fout tijdens het aanmelden"
-
-#~ msgid "Credentials have expired."
-#~ msgstr "Aanmeldgegevens zijn verlopen."
-
-#~ msgid "Sign in to enable this account."
-#~ msgstr "Aanmelden om deze account in te schakelen."
-
-#~ msgid "_Sign In"
-#~ msgstr "_Aanmelden"
-
-#~ msgid "Login History"
-#~ msgstr "Aanmeldgeschiedenis"
-
-#~ msgid "Add User Account"
-#~ msgstr "Gebruikersaccount toevoegen"
-
-#~ msgid "Add Network Connection"
-#~ msgstr "Netwerkverbinding toevoegen"
-
-#~ msgid "No Certificate Authority certificate chosen"
-#~ msgstr "Geen Certificate Authority-certificaat gekozen"
-
-#~ msgid ""
-#~ "Not using a Certificate Authority (CA) certificate can result in "
-#~ "connections to insecure, rogue Wi-Fi networks.  Would you like to choose "
-#~ "a Certificate Authority certificate?"
-#~ msgstr ""
-#~ "Het niet gebruiken van een Certificate Authority (CA) certificaat kan "
-#~ "leiden tot verbindingen met onveilige, malafide WiFi-netwerken. Wilt u "
-#~ "een Certificate Authority-certificaat kiezen?"
-
-#~ msgid "Ignore"
-#~ msgstr "Negeren"
-
-#~ msgid "Choose CA Certificate"
-#~ msgstr "CA-certificaat kiezen"
-
-#~ msgid "As_k for this password every time"
-#~ msgstr "Elke keer naar dit wachtwoord _vragen"
-
-#~ msgid "Don't _warn me again"
-#~ msgstr "Mij niet meer _waarschuwen"
-
-#~ msgid "No"
-#~ msgstr "Nee"
-
-#~ msgid "Yes"
-#~ msgstr "Ja"
-
-#~ msgid "Personal File Sharing"
-#~ msgstr "Delen van persoonlijke bestanden"
-
-#~ msgid "_Allow Remote Control"
-#~ msgstr "Bediening op afstand _toestaan"

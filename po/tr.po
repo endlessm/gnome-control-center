@@ -1,35 +1,37 @@
-# Turkish translation of gnome-control-center.
-#
-# Copyright (C) 2000-2003, 2004, 2005, 2008, 2009, 2011 Free Software Foundation, Inc.
-# Copyright (C) 2012-2019 gnome-control-center'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-control-center package.
-#
-# Nilgün Belma Bugüner <nilgun@fide.org>, 2001.
-# Fatih Demir <kabalak@gtranslator.org>, 2000.
-# Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
-# Erçin EKER <ercin@linux.org.tr>, 2011.
-# ztugcesirin <ztugcesirin@gmail.com>, 2014.
-# Furkan Tokaç <developmentft@gmail.com>, 2017.
-# Muhammet Kara <muhammetk@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
-# Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2018.
-# Çağatay Yiğit Şahin <cyigitsahin@outlook.com>, 2018.
-# Sabri Ünal <libreajans@gmail.com>, 2014, 2019.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2013-2020.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# Baris Cicek <baris@teamforce.name.tr>, 2004-2005,2008-2009
+# Burcu Özacar <13urcu@gmail.com>, 2017
+# Çağatay Yiğit Şahin <cyigitsahin@outlook.com>, 2018
+# Emin Tufan <etcetin@gmail.com>, 2013,2016-2017
+# Erçin EKER <ercin@linux.org.tr>, 2011
+# Fatih Demir <kabalak@gtranslator.org>, 2000
+# Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2018
+# furkantokac <developmentft@gmail.com>, 2017
+# Koray KIRCAOĞLU <koraym@gmail.com>, 2017
+# Muha Aliss <muhaaliss@gmail.com>, 2019-2020
+# Muhammet Kara <muhammetk@gmail.com>, 2011-2017
+# Nilgün Belma Bugüner <nilgun@fide.org>, 2001
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Sabri Ünal <libreajans@gmail.com>, 2014,2019
+# Sabri Ünal <yakushabb@gmail.com>, 2014
+# ztugcesirin <ztugcesirin@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-13 22:09+0100\n"
-"PO-Revision-Date: 2020-02-14 18:20+0300\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
-"Language-Team: Turkish <gnome-turk@gnome.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: 2020-04-13 21:15+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/endless-os/gnome-control-center/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.3\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: panels/applications/cc-applications-panel.c:747
 msgid "System Bus"
@@ -100,9 +102,7 @@ msgstr "Ayarları değiştirebilir"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"%s, aşağıdaki izinlere yerleşik olarak sahiptir. Bunlar değiştirilemez. Bu "
-"izinlerden kaygılıysanız bu uygulamayı kaldırmayı düşünün."
+msgstr "%s, aşağıdaki izinlere yerleşik olarak sahiptir. Bunlar değiştirilemez. Bu izinlerden kaygılıysanız bu uygulamayı kaldırmayı düşünün."
 
 #: panels/applications/cc-applications-panel.c:936
 msgid "Web Links"
@@ -184,11 +184,9 @@ msgstr "İzinler ve Erişim"
 
 #: panels/applications/cc-applications-panel.ui:111
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"Bu uygulamanın erişmek istediği veri ve hizmetler ayrıca gereksindiği "
-"izinler."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "Bu uygulamanın erişmek istediği veri ve hizmetler ayrıca gereksindiği izinler."
 
 #: panels/applications/cc-applications-panel.ui:126
 #: panels/applications/cc-applications-panel.ui:132
@@ -198,7 +196,6 @@ msgstr "Kamera"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -210,7 +207,8 @@ msgstr "Kamera"
 #: panels/keyboard/cc-keyboard-option.c:259
 #: panels/keyboard/cc-keyboard-option.c:378
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:96
-#: panels/keyboard/keyboard-shortcuts.c:425 panels/network/network-proxy.ui:126
+#: panels/keyboard/keyboard-shortcuts.c:425
+#: panels/network/network-proxy.ui:126
 #: panels/user-accounts/cc-user-panel.c:926
 #: panels/user-accounts/um-fingerprint-dialog.c:211
 #: subprojects/gvc/gvc-mixer-control.c:1876
@@ -240,11 +238,9 @@ msgstr "Değiştirilemez"
 
 #: panels/applications/cc-applications-panel.ui:180
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"Uygulamalar için tekil izinler <a href=\"privacy\">Gizlilik</a> Ayarlarında "
-"gözden geçirilebilir."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "Uygulamalar için tekil izinler <a href=\"privacy\">Gizlilik</a> Ayarlarında gözden geçirilebilir."
 
 #: panels/applications/cc-applications-panel.ui:204
 msgid "Integration"
@@ -320,9 +316,7 @@ msgstr "Farklı bir arama deneyin"
 #: panels/applications/cc-applications-panel.ui:554
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr ""
-"Bu uygulamanın uygulama verisi ve önbelleklerle ne kadar disk alanı "
-"kapladığı."
+msgstr "Bu uygulamanın uygulama verisi ve önbelleklerle ne kadar disk alanı kapladığı."
 
 #: panels/applications/cc-applications-panel.ui:563
 msgid "Application"
@@ -472,9 +466,7 @@ msgstr "Ağ ayarlarını oku"
 msgid ""
 "Access the ofono service to read and change network settings for mobile "
 "telephony"
-msgstr ""
-"Mobil telefon iletimi için ofono hizmetine ağ ayarlarını okuma ve değiştirme "
-"erişimi ver"
+msgstr "Mobil telefon iletimi için ofono hizmetine ağ ayarlarını okuma ve değiştirme erişimi ver"
 
 #: panels/applications/cc-snap-row.c:123
 msgid "Control Open vSwitch hardware"
@@ -492,9 +484,7 @@ msgstr "Kayıtlı parolaları oku, ekle, değiştir veya kaldır"
 msgid ""
 "Access pppd and ppp devices for configuring Point-to-Point Protocol "
 "connections"
-msgstr ""
-"Point-to-Point İletişim Kuralı bağlantılarını yapılandırmak için pppd ve ppp "
-"aygıtlarına eriş"
+msgstr "Point-to-Point İletişim Kuralı bağlantılarını yapılandırmak için pppd ve ppp aygıtlarına eriş"
 
 #: panels/applications/cc-snap-row.c:131
 msgid "Pause or end any process on the system"
@@ -550,8 +540,7 @@ msgstr "Zaman dilimini değiştir"
 
 #: panels/applications/cc-snap-row.c:159
 msgid "Access the UDisks2 service for configuring disks and removable media"
-msgstr ""
-"Diskler ve çıkarılabilir ortamları yapılandırmak için UDisks2 hizmetine eriş"
+msgstr "Diskler ve çıkarılabilir ortamları yapılandırmak için UDisks2 hizmetine eriş"
 
 #: panels/applications/cc-snap-row.c:161
 msgid "Read/change shared calendar events in Ubuntu Unity 8"
@@ -573,7 +562,8 @@ msgstr "Açıktaki U2F aygıtlarına okuma/yazma erişimi"
 msgid "Control various application permissions and settings"
 msgstr "Türlü uygulama izinlerini ve ayarlarını denetle"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "uygulama;flatpak;izin;yetki;ayar;"
@@ -657,7 +647,8 @@ msgstr "Arka Plan"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "Arka plan görüntünüzü duvar kağıdıyla veya fotoğrafla değiştirin"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Duvar kağıdı;Ekran;Masaüstü;"
@@ -708,7 +699,8 @@ msgstr "Bluetooth"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Bluetooth’u açıp kapatın ve aygıtlarınızı bağlayın"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "paylaş;paylaşım;bluetooth;obex;"
@@ -723,12 +715,9 @@ msgstr "Hiçbir uygulama fotoğraf veya video yakalayamıyor."
 
 #: panels/camera/cc-camera-panel.ui:77
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
-msgstr ""
-"Kamera kullanımı uygulamaların fotoğraf ve video yakalamasını sağlar. "
-"Kamerayı devre dışı bırakmak bazı uygulamaların işlevini yerine "
-"getirememesine neden olabilir."
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly."
+msgstr "Kamera kullanımı uygulamaların fotoğraf ve video yakalamasını sağlar. Kamerayı devre dışı bırakmak bazı uygulamaların işlevini yerine getirememesine neden olabilir."
 
 #: panels/camera/cc-camera-panel.ui:87
 msgid "Allow the applications below to use your camera."
@@ -742,7 +731,8 @@ msgstr "Hiçbir Uygulama Kamera Erişimi İsteği Yapmadı"
 msgid "Protect your pictures"
 msgstr "Fotoğraflarınızı koruyun"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:19
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
 #: panels/location/gnome-location-panel.desktop.in.in:19
@@ -750,11 +740,8 @@ msgstr "Fotoğraflarınızı koruyun"
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
-msgstr ""
-"ekran;kilit;tanılama;kırılma;bozulma;çökme;özel;son;geçici;tmp;endeks;isim;"
-"ad;ağ;kimlik;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
+msgstr "ekran;kilit;tanılama;kırılma;bozulma;çökme;özel;son;geçici;tmp;endeks;isim;ad;ağ;kimlik;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:348
@@ -967,8 +954,7 @@ msgstr "Bu URL’yi not edin."
 
 #: panels/color/cc-color-panel.c:861
 msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"Bu bilgisayarı yeniden başlatın ve olağan işletim sisteminizi başlatın."
+msgstr "Bu bilgisayarı yeniden başlatın ve olağan işletim sisteminizi başlatın."
 
 #: panels/color/cc-color-panel.c:862
 msgid "Type the URL into your browser to download and install the profile."
@@ -994,9 +980,7 @@ msgstr "Seçilen aygıt için bir renk profili oluştur"
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"Ölçüm aygıtı algılanamadı. Lütfen açık durumda olduğundan ve doğru "
-"bağlandığından emin olunuz."
+msgstr "Ölçüm aygıtı algılanamadı. Lütfen açık durumda olduğundan ve doğru bağlandığından emin olunuz."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1246
@@ -1017,10 +1001,7 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"Kalibrasyon ekran renk ayarlarınızı yönetebileceğiniz bir profil "
-"üretecektir. Kalibrasyon için ne kadar vakit harcarsanız, renk profiliniz o "
-"kadar nitelikli olacaktır."
+msgstr "Kalibrasyon ekran renk ayarlarınızı yönetebileceğiniz bir profil üretecektir. Kalibrasyon için ne kadar vakit harcarsanız, renk profiliniz o kadar nitelikli olacaktır."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -1059,11 +1040,9 @@ msgstr "Ekran Türü"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
-"Ekran için bir hedef beyaz nokta seçin. Çoğu ekran D65 parlaklığına "
-"ayarlanmalıdır."
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "Ekran için bir hedef beyaz nokta seçin. Çoğu ekran D65 parlaklığına ayarlanmalıdır."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
@@ -1073,17 +1052,13 @@ msgstr "Profil Beyaznoktası"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
-"Lütfen ekran parlaklığını kişisel tercihinize göre ayarlayın. Renk yönetimi "
-"ayarladığınız düzeyde en doğru olacaktır."
+msgstr "Lütfen ekran parlaklığını kişisel tercihinize göre ayarlayın. Renk yönetimi ayarladığınız düzeyde en doğru olacaktır."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"Alternatif olarak, bu aygıt için diğer profillerde kullanılan parlaklık "
-"düzeyini kullanabilirsiniz."
+msgstr "Alternatif olarak, bu aygıt için diğer profillerde kullanılan parlaklık düzeyini kullanabilirsiniz."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -1093,9 +1068,7 @@ msgstr "Ekran Parlaklığı"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"Bir renk profilini farklı bilgisayarlarda kullanabilir ya da farklı "
-"ışıklandırma koşulları için bile profiller oluşturabilirsiniz."
+msgstr "Bir renk profilini farklı bilgisayarlarda kullanabilir ya da farklı ışıklandırma koşulları için bile profiller oluşturabilirsiniz."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -1127,13 +1100,10 @@ msgstr "İnternet bağlantısı gerektirir"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"Profili <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> ve "
-"<a href=\"windows\">Microsoft Windows</a> sistemleri üzerinde nasıl "
-"kullanacağınıza dair bu yönergeleri yararlı bulabilirsiniz."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "Profili <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> ve <a href=\"windows\">Microsoft Windows</a> sistemleri üzerinde nasıl kullanacağınıza dair bu yönergeleri yararlı bulabilirsiniz."
 
 #: panels/color/cc-color-panel.ui:607
 #: panels/user-accounts/um-fingerprint-dialog.c:719
@@ -1160,14 +1130,11 @@ msgstr "_Ekle"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"Bazı sorunlar saptandı. Bu profil düzgün çalışmayabilir. <a href="
-"\"\">Ayrıntıları göster.</a>"
+msgstr "Bazı sorunlar saptandı. Bu profil düzgün çalışmayabilir. <a href=\"\">Ayrıntıları göster.</a>"
 
 #: panels/color/cc-color-panel.ui:790
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr ""
-"Her aygıt, renk yönetimleri için güncel bir renk profiline gereksinim duyar."
+msgstr "Her aygıt, renk yönetimleri için güncel bir renk profiline gereksinim duyar."
 
 #: panels/color/cc-color-panel.ui:844
 msgid "_Set for all users"
@@ -1376,10 +1343,10 @@ msgstr "Renk"
 #: panels/color/gnome-color-panel.desktop.in.in:4
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr ""
-"Ekran, kamera veya yazıcı gibi aygıtlarınızın renk kalibrasyonunu yapın"
+msgstr "Ekran, kamera veya yazıcı gibi aygıtlarınızın renk kalibrasyonunu yapın"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Renk;ICC;Profil;Ayar;Yazıcı;Ekran;"
@@ -1388,7 +1355,8 @@ msgstr "Renk;ICC;Profil;Ayar;Yazıcı;Ekran;"
 msgid "Other…"
 msgstr "Diğer…"
 
-#: panels/common/cc-language-chooser.c:127 panels/region/cc-input-chooser.c:178
+#: panels/common/cc-language-chooser.c:127
+#: panels/region/cc-input-chooser.c:178
 msgid "More…"
 msgstr "Daha çok…"
 
@@ -1476,7 +1444,8 @@ msgstr "%s %s"
 msgid "0 seconds"
 msgstr "0 saniye"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1664,7 +1633,8 @@ msgstr "ÖÖ / ÖS"
 msgid "Change the date and time, including time zone"
 msgstr "Tarihi, saati ve saat dilimini değiştir"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Saat;Saat Dilimi;Zaman Dilimi;Yer;Konum;"
@@ -1675,9 +1645,7 @@ msgstr "Sistem saatini ve tarihini değiştir"
 
 #: panels/datetime/org.gnome.controlcenter.datetime.policy.in:12
 msgid "To change time or date settings, you need to authenticate."
-msgstr ""
-"Saat ya da tarih ayarlarını değiştirmek için kimliğinizi doğrulamanız "
-"gerekiyor."
+msgstr "Saat ya da tarih ayarlarını değiştirmek için kimliğinizi doğrulamanız gerekiyor."
 
 #: panels/default-apps/cc-default-apps-panel.ui:31
 msgid "_Web"
@@ -1712,7 +1680,9 @@ msgstr "Öntanımlı Uygulamalar"
 msgid "Configure Default Applications"
 msgstr "Öntanımlı Uygulamaları Yapılandır"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "öntanımlı;uygulama;tercihen;yeğlenen;ortam;"
@@ -1722,15 +1692,14 @@ msgstr "öntanımlı;uygulama;tercihen;yeğlenen;ortam;"
 msgid "Learn more"
 msgstr "Daha çoğunu öğren"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:145
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr ""
-"Teknik sorunları bildirmeniz %s gelişimine yaramaktadır. Bu bildirimler, "
-"anonim olarak gönderilir ve kişisel veriden arındırılmıştır. %s"
+msgstr "Teknik sorunları bildirmeniz %s gelişimine yaramaktadır. Bu bildirimler, anonim olarak gönderilir ve kişisel veriden arındırılmıştır. %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:30
 msgid "Problem Reporting"
@@ -1794,9 +1763,7 @@ msgstr "Birincil Ekran"
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
-msgstr ""
-"Ekranları fiziksel kurulumunuzla eşleşecek biçimde sürükleyin. Ayarlarını "
-"değiştirmek için ekran seçin."
+msgstr "Ekranları fiziksel kurulumunuzla eşleşecek biçimde sürükleyin. Ayarlarını değiştirmek için ekran seçin."
 
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
@@ -1815,7 +1782,8 @@ msgstr "Ekran Yapılandırması"
 msgid "Displays"
 msgstr "Ekranlar"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:464
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1891,9 +1859,7 @@ msgstr "Yarına Dek Geçici Olarak Devre Dışı Bırakıldı"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"Gece ışığı, ekran rengini daha sıcak yapar. Bu, göz yorgunluğunu ve "
-"uykusuzluğu önlemeye yardımcı olur."
+msgstr "Gece ışığı, ekran rengini daha sıcak yapar. Bu, göz yorgunluğunu ve uykusuzluğu önlemeye yardımcı olur."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1925,14 +1891,16 @@ msgstr ":"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:354
-#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "ÖÖ"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:250
 #: panels/display/cc-night-light-page.ui:370
-#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "ÖS"
 
@@ -1949,14 +1917,12 @@ msgstr "Renk Sıcaklığı"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "Bağlanan ekranların ya da projektörlerin nasıl kullanılacağını seçin"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
-msgstr ""
-"Panel;Projektör;Gösterici;xrandr;Ekran;Çözünürlük;Tazele;Yenile;Monitör;Gece;"
-"Işık;Mavi;redshift;renk;gün doğumu;gün batımı;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
+msgstr "Panel;Projektör;Gösterici;xrandr;Ekran;Çözünürlük;Tazele;Yenile;Monitör;Gece;Işık;Mavi;redshift;renk;gün doğumu;gün batımı;"
 
 #: panels/info-overview/cc-info-overview-panel.c:301
 #: panels/info-overview/cc-info-overview-panel.c:315
@@ -2049,9 +2015,7 @@ msgstr "Aygıtı Yeniden Adlandır"
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr ""
-"Aygıt adı, aygıt ağ üzerinden görüntülendiğinde veya Bluetooth aygıtları "
-"eşleştirirken tanımlamada kullanılır."
+msgstr "Aygıt adı, aygıt ağ üzerinden görüntülendiğinde veya Bluetooth aygıtları eşleştirirken tanımlamada kullanılır."
 
 #: panels/info-overview/cc-info-overview-panel.ui:230
 msgid "_Rename"
@@ -2072,12 +2036,8 @@ msgstr "Sisteminiz hakkında bilgi edinin"
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
-"aygıt;sistem;bilgi;makineadı;anamakineadı;bellek;işlemci;sürüm;öntanımlı;"
-"uygulama;korumalı;tercihedilen;yeğlenen;cd;dvd;usb;ses;video;disk;"
-"çıkarılabilir;ortam;otomatikçalıştır;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "aygıt;sistem;bilgi;makineadı;anamakineadı;bellek;işlemci;sürüm;öntanımlı;uygulama;korumalı;tercihedilen;yeğlenen;cd;dvd;usb;ses;video;disk;çıkarılabilir;ortam;otomatikçalıştır;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2259,9 +2219,7 @@ msgstr "Karakterler Tuşunu Değiştir"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr ""
-"Alternatif harfler tuşu, ek karakterler girmek için kullanılabilir. Bunlar "
-"bazen klavyenize üçüncü seçenek olarak basılmış olabilir."
+msgstr "Alternatif harfler tuşu, ek karakterler girmek için kullanılabilir. Bunlar bazen klavyenize üçüncü seçenek olarak basılmış olabilir."
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:45
 msgid "Left Alt"
@@ -2296,7 +2254,6 @@ msgstr "Özel Kısayollar"
 #. Translators: This key is also known as 'third level
 #. * chooser'. AltGr is often used for this purpose. See
 #. * https://live.gnome.org/Design/SystemSettings/RegionAndLanguage
-#.
 #: panels/keyboard/cc-keyboard-option.c:337
 msgid "Alternative Characters Key"
 msgstr "Alternatif Harfler Tuşu"
@@ -2304,7 +2261,6 @@ msgstr "Alternatif Harfler Tuşu"
 #. Translators: The Compose key is used to initiate key
 #. * sequences that are combined to form a single character.
 #. * See http://en.wikipedia.org/wiki/Compose_key
-#.
 #: panels/keyboard/cc-keyboard-option.c:346
 msgid "Compose Key"
 msgstr "Birleştirme Tuşu"
@@ -2351,8 +2307,7 @@ msgstr "Tüm Kısayolları Sıfırla?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"Kısayolları sıfırlamak özel kısayollarınızı etkileyebilir. Bu geri alınamaz."
+msgstr "Kısayolları sıfırlamak özel kısayollarınızı etkileyebilir. Bu geri alınamaz."
 
 #: panels/keyboard/cc-keyboard-panel.c:208
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:346
@@ -2387,10 +2342,9 @@ msgstr "Klavye kısayolu bulunamadı"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:413
 #, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr ""
-"%s, %s için kullanılıyor. Eğer yerine başka bir şey koyarsanız, %s devre "
-"dışı bırakılacak"
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
+msgstr "%s, %s için kullanılıyor. Eğer yerine başka bir şey koyarsanız, %s devre dışı bırakılacak"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:581
 msgid "Set Custom Shortcut"
@@ -2413,9 +2367,7 @@ msgstr "Özel Kısayol Ekle"
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:68
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:318
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr ""
-"İptal etmek için Esc’ye veya klavye kısayolunu devre dışı bırakmak için "
-"Backspace’e bas."
+msgstr "İptal etmek için Esc’ye veya klavye kısayolunu devre dışı bırakmak için Backspace’e bas."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:156
 #: panels/printers/pp-details-dialog.ui:40
@@ -2465,17 +2417,14 @@ msgstr "Klavye Kısayolları"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
 msgid "View and change keyboard shortcuts and set your typing preferences"
-msgstr ""
-"Klavye kısayollarını görün ve değiştirin ayrıca yazım tercihlerinizi "
-"belirleyin"
+msgstr "Klavye kısayollarını görün ve değiştirin ayrıca yazım tercihlerinizi belirleyin"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
-"Kısayol;Çalışma alanı;Pencere;Yeniden boyutlandır;Yakınlaşma;Karşıtlık;Girdi;"
-"Kaynak;Kilit;Ses;"
+msgstr "Kısayol;Çalışma alanı;Pencere;Yeniden boyutlandır;Yakınlaşma;Karşıtlık;Girdi;Kaynak;Kilit;Ses;"
 
 #: panels/location/cc-location-panel.ui:31
 msgid "Location services turned off"
@@ -2489,17 +2438,13 @@ msgstr "Hiçbir uygulama konum bilgisi toplayamıyor."
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy."
-msgstr ""
-"Konum hizmetleri, uygulamaların konumunuzu bilmesine olanak tanır. Wi-Fi ve "
-"mobil genişbant kullanmak hassasiyeti artırır."
+msgstr "Konum hizmetleri, uygulamaların konumunuzu bilmesine olanak tanır. Wi-Fi ve mobil genişbant kullanmak hassasiyeti artırır."
 
 #: panels/location/cc-location-panel.ui:83
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"Mozilla Konum Hizmetiʼni Kullanır: <a href='https://location.services."
-"mozilla.com/privacy'>Gizlilik Politikası</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "Mozilla Konum Hizmetiʼni Kullanır: <a href='https://location.services.mozilla.com/privacy'>Gizlilik Politikası</a>"
 
 #: panels/location/cc-location-panel.ui:95
 msgid "Allow the applications below to determine your location."
@@ -2517,9 +2462,7 @@ msgstr "Konum bilginizi koruyun"
 msgid ""
 "Automatically locking the screen prevents others from access the computer "
 "while you're away."
-msgstr ""
-"Ekranı kendiliğinden kilitlemek, siz uzaktayken bilgisayarınıza erişilmesini "
-"önler."
+msgstr "Ekranı kendiliğinden kilitlemek, siz uzaktayken bilgisayarınıza erişilmesini önler."
 
 #: panels/lock/cc-lock-panel.ui:46
 msgid "Blank Screen Delay"
@@ -2538,57 +2481,65 @@ msgid "Automatic _Screen Lock Delay"
 msgstr "Kendiliğinden _Ekran Kilidi Gecikmesi"
 
 #: panels/lock/cc-lock-panel.ui:85
-msgid "Period after the screen blanks when the screen is automatically locked."
-msgstr ""
-"Ekran kendiliğinden kilitlendikten sonra ekranın kararması için gereken süre."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
+msgstr "Ekran kendiliğinden kilitlendikten sonra ekranın kararması için gereken süre."
 
 #: panels/lock/cc-lock-panel.ui:105
 msgid "Show _Notifications on Lock Screen"
 msgstr "_Bildirimleri Kilit Ekranında Göster"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:149
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Ekran Kapanınca"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:153
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 saniye"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:157
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 dakika"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:161
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 dakika"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:165
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 dakika"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:169
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 dakika"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:173
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 dakika"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:177
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2663,18 +2614,16 @@ msgid "Lock your screen"
 msgstr "Ekranını kilitle"
 
 #: panels/metrics/cc-metrics-panel.ui:32
-#, fuzzy
 msgid "Metrics services turned off"
-msgstr "Konum hizmetleri kapalı"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:41
 msgid "No anonymous usage data will be sent to Endless."
 msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:75
-#, fuzzy
 msgid "_Metrics"
-msgstr "Metrik"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:93
 msgid ""
@@ -2703,9 +2652,7 @@ msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
 "properly."
-msgstr ""
-"Mikrofon kullanımı uygulamaların sesleri kaydetmesini sağlar. Mikrofonu "
-"devre dışı bırakmak bazı uygulamaların düzgün çalışmamasına neden olabilir."
+msgstr "Mikrofon kullanımı uygulamaların sesleri kaydetmesini sağlar. Mikrofonu devre dışı bırakmak bazı uygulamaların düzgün çalışmamasına neden olabilir."
 
 #: panels/microphone/cc-microphone-panel.ui:87
 msgid "Allow the applications below to use your microphone."
@@ -2729,8 +2676,7 @@ msgstr "Birincil Düğme"
 
 #: panels/mouse/cc-mouse-panel.ui:94
 msgid "Sets the order of physical buttons on mice and touchpads."
-msgstr ""
-"Fare ve dokunmatik yüzeyler üzerindeki fiziksel tuşların sırasını ayarlar."
+msgstr "Fare ve dokunmatik yüzeyler üzerindeki fiziksel tuşların sırasını ayarlar."
 
 #: panels/mouse/cc-mouse-panel.ui:123 panels/sound/cc-balance-slider.ui:13
 msgid "Left"
@@ -2752,8 +2698,10 @@ msgstr "Fare Hızı"
 msgid "Double-click timeout"
 msgstr "Çift tıklama zaman aşımı"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:267 panels/mouse/cc-mouse-panel.ui:430
 msgid "Natural Scrolling"
 msgstr "Doğal Kaydırma"
@@ -2825,15 +2773,14 @@ msgstr "Fare ve Dokunmatik Yüzey"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr ""
-"Farenizin veya dokunmatik yüzeyin duyarlılığını değiştirin ve sağ veya sol "
-"elle kullanımı ayarlayın"
+msgstr "Farenizin veya dokunmatik yüzeyin duyarlılığını değiştirin ve sağ veya sol elle kullanımı ayarlayın"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr ""
-"Trackpad;İzleme Yüzeyi;İşaretçi;Tıklama;Vurma;Çift;Düğme;Trackball;Kaydırma;"
+msgstr "Trackpad;İzleme Yüzeyi;İşaretçi;Tıklama;Vurma;Çift;Düğme;Trackball;Kaydırma;"
 
 #: panels/network/cc-network-panel.c:648 panels/network/cc-wifi-panel.ui:306
 msgid "Oops, something has gone wrong. Please contact your software vendor."
@@ -2856,7 +2803,8 @@ msgstr "VPN"
 msgid "Not set up"
 msgstr "Ayarlanmamış"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:198
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2897,9 +2845,7 @@ msgstr "Seçenekler…"
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr ""
-"Erişim noktasını açmak %s bağlantısını kesecek ve internete Wi-Fi üzerinden "
-"erişilemeyecek."
+msgstr "Erişim noktasını açmak %s bağlantısını kesecek ve internete Wi-Fi üzerinden erişilemeyecek."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:248
 msgid "Must have a minimum of 8 characters"
@@ -2911,13 +2857,10 @@ msgstr "Kablosuz Erişim Noktasını Aç?"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr ""
-"Wi-Fi erişim noktası, bağlanabilecekleri bir Wi-Fi ağı oluşturarak "
-"başkalarının internet bağlantınızı paylaşmasına izin verir. Bunun için Wi-Fi "
-"dışındaki bir kaynaktan internet bağlantınızın olması gerekir."
+msgstr "Wi-Fi erişim noktası, bağlanabilecekleri bir Wi-Fi ağı oluşturarak başkalarının internet bağlantınızı paylaşmasına izin verir. Bunun için Wi-Fi dışındaki bir kaynaktan internet bağlantınızın olması gerekir."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
 #: panels/network/network-wifi.ui:105
@@ -3012,12 +2955,9 @@ msgstr "Kararlı"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"Buraya girilen MAC adresi, bu bağlantı kurulduğunda, ağ aygıtının donanım "
-"adresi olarak kullanılacak. Bu özellik MAC klonlama veya hilekarlığı olarak "
-"bilinir. Örnek: 00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "Buraya girilen MAC adresi, bu bağlantı kurulduğunda, ağ aygıtının donanım adresi olarak kullanılacak. Bu özellik MAC klonlama veya hilekarlığı olarak bilinir. Örnek: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3269,10 +3209,9 @@ msgstr "_Ölçülen bağlantı: veri sınırı vardır veya ücrete neden olabil
 
 #: panels/network/connection-editor/details-page.ui:439
 msgid ""
-"Software updates and other large downloads will not be started automatically."
-msgstr ""
-"Yazılım güncellemeleri ve diğer büyük indirmeler kendiliğinden "
-"başlamayacaktır."
+"Software updates and other large downloads will not be started "
+"automatically."
+msgstr "Yazılım güncellemeleri ve diğer büyük indirmeler kendiliğinden başlamayacaktır."
 
 #: panels/network/connection-editor/ethernet-page.ui:25
 #: panels/network/connection-editor/vpn-page.ui:23
@@ -3432,14 +3371,10 @@ msgstr "VPN bağlantısı içe aktarılamıyor"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
-"“%s” dosyası okunamadı ya da herhangi bir VPN bağlantı bilgisi içermiyor\n"
-"\n"
-"Hata: %s."
+msgstr "“%s” dosyası okunamadı ya da herhangi bir VPN bağlantı bilgisi içermiyor\n\nHata: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3457,9 +3392,7 @@ msgstr "Değişti_r"
 #: panels/network/connection-editor/vpn-helpers.c:229
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
-msgstr ""
-"%s bağlantısını kaydetmek istediğiniz VPN bağlantısıyla değiştirmek istiyor "
-"musunuz?"
+msgstr "%s bağlantısını kaydetmek istediğiniz VPN bağlantısıyla değiştirmek istiyor musunuz?"
 
 #: panels/network/connection-editor/vpn-helpers.c:264
 msgid "Cannot export VPN connection"
@@ -3471,10 +3404,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
-"“%s” VPN bağlantısı %s’a aktarılamıyor.\n"
-"\n"
-"Hata: %s."
+msgstr "“%s” VPN bağlantısı %s’a aktarılamıyor.\n\nHata: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3496,7 +3426,8 @@ msgstr "_BSSID"
 msgid "Control how you connect to the Internet"
 msgstr "İnternete nasıl bağlandığınızı denetleyin"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr "Ağ;IP;LAN;Proxy;WAN;Broadband;Genişbant;Modem;Bluetooth;vpn;DNS;"
@@ -3505,12 +3436,11 @@ msgstr "Ağ;IP;LAN;Proxy;WAN;Broadband;Genişbant;Modem;Bluetooth;vpn;DNS;"
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "Wi-Fi ağlarına nasıl bağlandığınızı denetleyin"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
-msgstr ""
-"Ağ;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;Genişbant;DNS;Hotspot;Bağlantı "
-"Noktası;"
+msgstr "Ağ;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;Genişbant;DNS;Hotspot;Bağlantı Noktası;"
 
 #: panels/network/net-device-ethernet.c:96
 msgid "never"
@@ -3532,9 +3462,9 @@ msgstr "Son kullanım"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
 #: panels/network/net-device-ethernet.c:252
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "Kablolu"
 
@@ -3554,9 +3484,7 @@ msgstr "Erişim Noktasını _Durdur"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr ""
-"Seçilen ağlar için ağ ayrıntıları, parolalar ve her türlü özel "
-"yapılandırmalar kaybolacak."
+msgstr "Seçilen ağlar için ağ ayrıntıları, parolalar ve her türlü özel yapılandırmalar kaybolacak."
 
 #: panels/network/net-device-wifi.c:909
 msgid "_Forget"
@@ -3566,7 +3494,8 @@ msgstr "_Unut"
 msgid "Known Wi-Fi Networks"
 msgstr "Bilinen Wi-Fi Ağları"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1107
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3603,9 +3532,7 @@ msgstr "Kapalı"
 #: panels/network/net-proxy.c:113
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"Yapılandırma URL’si verilmediğinde Vekil Sunucuyu Kendiliğinden Bulma "
-"kullanılır."
+msgstr "Yapılandırma URL’si verilmediğinde Vekil Sunucuyu Kendiliğinden Bulma kullanılır."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3619,7 +3546,6 @@ msgstr "Bu güvenli olmayan açık ağlarda önerilmez."
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:66 panels/network/net-vpn.c:163
 #, c-format
 msgid "%s VPN"
@@ -4172,16 +4098,10 @@ msgstr "Şifrelenmemiş özel anahtarlar güvensizdir"
 
 #: panels/network/wireless-security/eap-method-tls.c:269
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"Seçilen özel anahtar bir parolayla korunmuyor. Bu sizin güvenliğinizi "
-"tehlikeye atabilir. Lütfen parola ile korunan bir özel anahtar seçin.\n"
-"\n"
-"(OpenSSL ile özel anahtarınızı şifreleyebilirsiniz)"
+msgstr "Seçilen özel anahtar bir parolayla korunmuyor. Bu sizin güvenliğinizi tehlikeye atabilir. Lütfen parola ile korunan bir özel anahtar seçin.\n\n(OpenSSL ile özel anahtarınızı şifreleyebilirsiniz)"
 
 #: panels/network/wireless-security/eap-method-tls.c:500
 msgid "Choose your personal certificate"
@@ -4288,26 +4208,20 @@ msgstr "wep-anahtarı eksik"
 #: panels/network/wireless-security/ws-wep-key.c:116
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
-"geçersiz wep-anahtarı: %zu uzunluğundaki bir anahtar yalnızca onaltılı (hex) "
-"rakamlardan oluşmalı"
+msgstr "geçersiz wep-anahtarı: %zu uzunluğundaki bir anahtar yalnızca onaltılı (hex) rakamlardan oluşmalı"
 
 #: panels/network/wireless-security/ws-wep-key.c:124
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
-"geçersiz wep-anahtarı: %zu uzunluğundaki bir anahtar yalnızca ascii "
-"karakterler içermelidir"
+msgstr "geçersiz wep-anahtarı: %zu uzunluğundaki bir anahtar yalnızca ascii karakterler içermelidir"
 
 #: panels/network/wireless-security/ws-wep-key.c:130
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
-"geçersiz wep-anahtarı: geçersiz anahtar uzunluğu %zu. Bir anahtar ya 5/13 "
-"(ascii) ya da 10/26 (onaltılık) uzunluğunda olmalıdır"
+msgstr "geçersiz wep-anahtarı: geçersiz anahtar uzunluğu %zu. Bir anahtar ya 5/13 (ascii) ya da 10/26 (onaltılık) uzunluğunda olmalıdır"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4346,9 +4260,7 @@ msgstr "WEP ende_ksi"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
-"geçersiz wpa-psk: geçersiz anahtar uzunluğu %zu. [8,63] bayt ya da 64 "
-"onaltılık rakam olmalıdır"
+msgstr "geçersiz wpa-psk: geçersiz anahtar uzunluğu %zu. [8,63] bayt ya da 64 onaltılık rakam olmalıdır"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:79
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
@@ -4379,11 +4291,10 @@ msgstr "Bildirim _Pencerecikleri"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
-"Pencerecikler devre dışı bırakıldığında bildirimler bildirim listesinde "
-"gözükmeye devam edecek."
+msgstr "Pencerecikler devre dışı bırakıldığında bildirimler bildirim listesinde gözükmeye devam edecek."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4421,7 +4332,8 @@ msgstr "Ki_lit Ekranı Bildirimleri"
 msgid "Control which notifications are displayed and what they show"
 msgstr "Hangi bildirimlerin gösterileceğini ve ne göstereceklerini ayarlayın"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Bildirimler;Pencerecik;İleti;Mesaj;Tepsi;Açılır Pencere;"
@@ -4444,7 +4356,6 @@ msgstr "Hesap silinirken hata oluştu"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:991
 #, c-format
 msgid "%s removed"
@@ -4456,23 +4367,20 @@ msgstr "Çevrim İçi Hesaplar"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
-msgstr ""
-"Çevrim içi hesaplarınıza bağlanın ve ne için kullanacağınızı belirleyin"
+msgstr "Çevrim içi hesaplarınıza bağlanın ve ne için kullanacağınızı belirleyin"
 
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;Çevrimiçi;Çevrim içi,Sohbet;Takvim;"
-"Mektup;Posta;Bağlantı;Kişi;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;Çevrimiçi;Çevrim içi,Sohbet;Takvim;Mektup;Posta;Bağlantı;Kişi;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:54
 msgid "Undo"
 msgstr "Geri Al"
@@ -4852,7 +4760,8 @@ msgstr "Güç"
 msgid "View your battery status and change power saving settings"
 msgstr "Pil durumunuzu görüntüleyin ve güç koruma ayarlarını değiştirin"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
@@ -4901,11 +4810,10 @@ msgstr "Yazıcılar"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr ""
-"Yazıcı ekleyin, yazıcı görevlerini görüntüleyin ve nasıl çıktı alacağınıza "
-"karar verin"
+msgstr "Yazıcı ekleyin, yazıcı görevlerini görüntüleyin ve nasıl çıktı alacağınıza karar verin"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Yazıcı;Kuyruk;Yazdır;Kâğıt;Mürekkep;Toner;"
@@ -4929,16 +4837,15 @@ msgstr "_Kilidi Aç"
 msgid "No Printers Found"
 msgstr "Yazıcı Bulunamadı"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "Ağ adresi girin ya da yazıcı arayın"
 
 #: panels/printers/new-printer-dialog.ui:353
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"Yazıcı Sunucusu üzerindeki yazıcıları görmek için kullanıcı adı ve parola "
-"gir."
+msgstr "Yazıcı Sunucusu üzerindeki yazıcıları görmek için kullanıcı adı ve parola gir."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:75
@@ -4957,13 +4864,12 @@ msgstr "PPD Dosyası Seç"
 
 #: panels/printers/pp-details-dialog.c:258
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
-msgstr ""
-"PostScript Yazıcı Tanımlama dosyaları (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
+msgstr "PostScript Yazıcı Tanımlama dosyaları (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "Konum"
 
@@ -5098,7 +5004,8 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "Tamamlandı"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:363
 #, c-format
 msgid "%u Job Requires Authentication"
@@ -5106,7 +5013,8 @@ msgid_plural "%u Jobs Require Authentication"
 msgstr[0] "%u  Kimlik Doğrulama Gerektiren İş"
 msgstr[1] "%u Kimlik Doğrulama Gerektiren İş"
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:520
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -5124,22 +5032,26 @@ msgstr "%s üzerinden yazdırmak için kimlik bilgilerini gir."
 msgid "Domain"
 msgstr "Etki Alanı"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "Kimlik doğr_ulama"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "Tümünü Temizle"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "Kimlik doğrul_ama"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "Etkin Yazıcı Görevi Yok"
@@ -5148,13 +5060,15 @@ msgstr "Etkin Yazıcı Görevi Yok"
 msgid "Unlock Print Server"
 msgstr "Yazıcı Sunucusu Kilidini Aç"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:384
 #, c-format
 msgid "Unlock %s."
 msgstr "%s Kilidini Aç."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:388
 #, c-format
 msgid "Enter username and password to view printers on %s."
@@ -5191,7 +5105,8 @@ msgstr "Konum: %s"
 msgid "Address: %s"
 msgstr "Adres: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1783
 msgid "Server requires authentication"
 msgstr "Sunucu kimlik doğrulaması gerektiriyor"
@@ -5242,13 +5157,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Genel"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:658
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "Sayfa Ayarları"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:661
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5260,7 +5177,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "Görev"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:667
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5272,7 +5190,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Renk"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:673
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5472,7 +5391,8 @@ msgstr "Yazıcı Ayrıntıları"
 msgid "Use Printer by Default"
 msgstr "Yazıcıyı Öntanımlı Olarak Kullan"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "Yazdırma Başlıklarını Temizle"
@@ -5518,9 +5438,7 @@ msgstr "Yazıcı Ekle…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"Üzgünüm! Sistem yazdırma hizmeti\n"
-"kullanılamıyor."
+msgstr "Üzgünüm! Sistem yazdırma hizmeti\nkullanılamıyor."
 
 #: panels/region/cc-format-chooser.c:148
 msgctxt "measurement format"
@@ -5546,9 +5464,7 @@ msgstr "Geri"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"Sayılar, tarihler ve para birimleri biçimini seçin. Değişiklikler sonraki "
-"oturum açımında görünecek."
+msgstr "Sayılar, tarihler ve para birimleri biçimini seçin. Değişiklikler sonraki oturum açımında görünecek."
 
 #: panels/region/cc-format-chooser.ui:119
 msgid "Search locales..."
@@ -5650,8 +5566,7 @@ msgstr "Girdi kaynağı seçilmedi"
 
 #: panels/region/cc-region-panel.ui:344
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"Girdi ayarları sisteme giriş esnasında tüm kullanıcılar tarafından kullanılır"
+msgstr "Girdi ayarları sisteme giriş esnasında tüm kullanıcılar tarafından kullanılır"
 
 #: panels/region/cc-region-panel.ui:381
 msgid "Keyboard Layout Options"
@@ -5696,11 +5611,11 @@ msgstr "Bölge ve Dil"
 #: panels/region/gnome-region-panel.desktop.in.in:4
 msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
-msgstr ""
-"Görüntüleme dilinizi, biçimlerinizi, klavye düzenlerinizi ve girdi "
-"kaynaklarınızı ayarlayın"
+msgstr "Görüntüleme dilinizi, biçimlerinizi, klavye düzenlerinizi ve girdi kaynaklarınızı ayarlayın"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Dil;Yerleşim;Düzen;Klavye;Girdi;"
@@ -5745,7 +5660,6 @@ msgstr "Yazılım CD’leri için bir uygulama seç"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "ses DVD’si"
@@ -5842,14 +5756,13 @@ msgstr "Çıkarılabilir Ortam"
 msgid "Configure Removable Media settings"
 msgstr "Çıkarılabilir Ortam ayarlarını yapılandır"
 
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
-msgstr ""
-"aygıt;sistem;öntanımlı;uygulama;tercihedilen;yeğlenen;cd;dvd;usb;ses;video;"
-"disk;çıkarılabilir;ortam;otomatikçalıştır;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "aygıt;sistem;öntanımlı;uygulama;tercihedilen;yeğlenen;cd;dvd;usb;ses;video;disk;çıkarılabilir;ortam;otomatikçalıştır;"
 
 #: panels/search/cc-search-locations-dialog.c:635
 msgid "Select Location"
@@ -5868,11 +5781,9 @@ msgstr "Arama Konumları"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"Dosyalar, Fotoğraflar ve Videolar gibi sistem uygulamaları tarafından aranan "
-"klasörler."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "Dosyalar, Fotoğraflar ve Videolar gibi sistem uygulamaları tarafından aranan klasörler."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -5900,21 +5811,17 @@ msgstr "Aşağı Taşı"
 
 #: panels/search/cc-search-panel.ui:33
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"Etkinlikler Genel Görünümünde hangi arama sonuçlarının gösterileceğini "
-"denetleyin. Arama sonuçlarının sırası, listedeki satırlar taşınarak "
-"değiştirilebilir."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "Etkinlikler Genel Görünümünde hangi arama sonuçlarının gösterileceğini denetleyin. Arama sonuçlarının sırası, listedeki satırlar taşınarak değiştirilebilir."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr ""
-"Hangi uygulamaların arama sonuçlarını Etkinlikler Genel Görünümünde "
-"göstereceğini belirleyin"
+msgstr "Hangi uygulamaların arama sonuçlarını Etkinlikler Genel Görünümünde göstereceğini belirleyin"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Ara;Bul;Endeks;Gizle;Gizlilik;Sonuçlar;"
@@ -5958,21 +5865,16 @@ msgstr "Klasör Seç"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr ""
-"Dosya Paylaşımı, Genel dizininizi ağınızdaki diğer kişilerle şunu kullanarak "
-"paylaşmanızı sağlar: %s"
+msgstr "Dosya Paylaşımı, Genel dizininizi ağınızdaki diğer kişilerle şunu kullanarak paylaşmanızı sağlar: %s"
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:717
 #, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
-msgstr ""
-"Uzaktan oturum açma etkinleştirildiğinde, uzak kullanıcılar Güvenli Kabuk "
-"komutunu kullanarak bağlanabilirler:\n"
-"%s"
+msgstr "Uzaktan oturum açma etkinleştirildiğinde, uzak kullanıcılar Güvenli Kabuk komutunu kullanarak bağlanabilirler:\n%s"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:723
@@ -5980,9 +5882,7 @@ msgstr ""
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
-msgstr ""
-"Ekran paylaşımı, uzak kullanıcıların %s adresine bağlanarak ekranınızı "
-"izlemesini veya denetlemesini sağlar"
+msgstr "Ekran paylaşımı, uzak kullanıcıların %s adresine bağlanarak ekranınızı izlemesini veya denetlemesini sağlar"
 
 #: panels/sharing/cc-sharing-panel.c:828
 msgid "Copy"
@@ -6077,14 +5977,12 @@ msgstr "Klasörler"
 msgid "Control what you want to share with others"
 msgstr "Diğerleri ile ne paylaşacağınızı denetleyin"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
-msgstr ""
-"paylaş;paylaşım;ssh;makine;host;isim;ad;uzak;masaüstü;ortam;ses;video;"
-"görüntü;resimler;fotoğraflar;filmler;sunucu;renderer;yorumlayıcı;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
+msgstr "paylaş;paylaşım;ssh;makine;host;isim;ad;uzak;masaüstü;ortam;ses;video;görüntü;resimler;fotoğraflar;filmler;sunucu;renderer;yorumlayıcı;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -6092,8 +5990,7 @@ msgstr "Uzaktan bağlanmayı aç"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:12
 msgid "Authentication is required to enable or disable remote login"
-msgstr ""
-"Uzaktan bağlantıyı açmak veya kapamak için kimlik doğrulaması gerekiyor"
+msgstr "Uzaktan bağlantıyı açmak veya kapamak için kimlik doğrulaması gerekiyor"
 
 #: panels/sound/cc-alert-chooser.c:151
 msgid "Custom"
@@ -6197,12 +6094,12 @@ msgstr "Ses"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Ses düzeylerini, girdileri, çıktıları ve uyarı seslerini değiştir"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"Kart;Mikrofon;Ses;Kaybolma;Denge;Bluetooth;Kulaklık Seti;Ses;Çıktı;Girdi;"
+msgstr "Kart;Mikrofon;Ses;Kaybolma;Denge;Bluetooth;Kulaklık Seti;Ses;Çıktı;Girdi;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6278,7 +6175,8 @@ msgstr "Aygıt unutulamadı: "
 #, c-format
 msgid "Depends on %u other device"
 msgid_plural "Depends on %u other devices"
-msgstr[0] "%u diğer aygıta bağımlıdır"
+msgstr[0] ""
+msgstr[1] ""
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:109
 msgid "Name:"
@@ -6313,18 +6211,13 @@ msgstr "Yetkilendirilmiş"
 #: panels/thunderbolt/cc-bolt-panel.c:175
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr ""
-"Thunderbolt altsistemi (boltd) yüklenmemiş veya doğru şekilde ayarlanmamış."
+msgstr "Thunderbolt altsistemi (boltd) yüklenmemiş veya doğru şekilde ayarlanmamış."
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
-"Thunderbolt algılanamadı.\n"
-"Sistemin Thunderbolt desteği yok, BIOS’tan devre dışı bırakılmış veya "
-"BIOS’tan desteklenmeyen bir güvenlik düzeyine ayarlanmış."
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "Thunderbolt algılanamadı.\nSistemin Thunderbolt desteği yok, BIOS’tan devre dışı bırakılmış veya BIOS’tan desteklenmeyen bir güvenlik düzeyine ayarlanmış."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6349,9 +6242,7 @@ msgstr "Doğrudan Erişim"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:269
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr ""
-"Bağlantı istasyonları ve haricî grafik işlemciler gibi aygıtlara doğrudan "
-"erişim tanı."
+msgstr "Bağlantı istasyonları ve haricî grafik işlemciler gibi aygıtlara doğrudan erişim tanı."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:289
 msgid "Only USB and Display Port devices can attach."
@@ -6373,7 +6264,9 @@ msgstr "Thunderbolt"
 msgid "Manage Thunderbolt devices"
 msgstr "Thunderbolt aygıtlarını yönet"
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;"
 msgstr "Thunderbolt;"
@@ -6502,9 +6395,7 @@ msgstr "İmleç Boyutu"
 #: panels/universal-access/cc-ua-panel.ui:1095
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
-"İmleç boyutu, imleci görmeyi kolaylaştırması için yakınlaştırma ile "
-"birleştirilebilir."
+msgstr "İmleç boyutu, imleci görmeyi kolaylaştırması için yakınlaştırma ile birleştirilebilir."
 
 #: panels/universal-access/cc-ua-panel.ui:1131
 msgid "Screen Reader"
@@ -6736,17 +6627,13 @@ msgstr "Büyük"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "Görme, duyma, yazma, işaretleme ve tıklamayı kolaylaştır"
 
-#. Translators: Search terms to find the Universal Access panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Universal Access panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;"
-"big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;"
-"click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
-"Klavye;Fare;a11y;e13k;Erişilebilirlik;Karşıtlık;İmleç;Ses;Yakınlaştırma;"
-"Ekran;Okuyucusu;büyük;yüksek;geniş;metin;yazıtipi;boyut;AccessX;Yapışkan;"
-"Tuşlar;Yavaş;Seken;Fare;Çift;tıklama;Gecikme;Hız;Yardım;Tekrar;Yinelenen;"
-"Yanıp sönme;Görsel;Duyma;Yazım;"
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "Klavye;Fare;a11y;e13k;Erişilebilirlik;Karşıtlık;İmleç;Ses;Yakınlaştırma;Ekran;Okuyucusu;büyük;yüksek;geniş;metin;yazıtipi;boyut;AccessX;Yapışkan;Tuşlar;Yavaş;Seken;Fare;Çift;tıklama;Gecikme;Hız;Yardım;Tekrar;Yinelenen;Yanıp sönme;Görsel;Duyma;Yazım;"
 
 #: panels/universal-access/zoom-options.c:305
 msgctxt "Distance"
@@ -6954,13 +6841,10 @@ msgstr "Dosya Geçmişi"
 
 #: panels/usage/cc-usage-panel.ui:43
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr ""
-"Dosya geçmişi, kullandığınız dosyaların kaydını tutar. Bu bilgiler "
-"uygulamalar arasında paylaşılır ve kullanmak isteyebileceğiniz dosyaları "
-"bulmayı kolaylaştırır."
+msgstr "Dosya geçmişi, kullandığınız dosyaların kaydını tutar. Bu bilgiler uygulamalar arasında paylaşılır ve kullanmak isteyebileceğiniz dosyaları bulmayı kolaylaştırır."
 
 #: panels/usage/cc-usage-panel.ui:58
 msgid "File H_istory"
@@ -6982,9 +6866,7 @@ msgstr "Çöp Kutusu ve Geçici Dosyalar"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr ""
-"Çöp kutusu ve geçici dosyalar kişisel veya hassas bilgiler içerebilir. "
-"Bunları kendiliğinden silmek gizliliğin korunmasına yardımcı olabilir."
+msgstr "Çöp kutusu ve geçici dosyalar kişisel veya hassas bilgiler içerebilir. Bunları kendiliğinden silmek gizliliğin korunmasına yardımcı olabilir."
 
 #: panels/usage/cc-usage-panel.ui:161
 msgid "Automatically Delete _Trash Content"
@@ -7006,61 +6888,71 @@ msgstr "Çöpü _Boşalt…"
 msgid "_Delete Temporary Files…"
 msgstr "Geçici Dosyaları _Sil…"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:280
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 saat"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:284
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:288
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:292
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:296
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:300
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:304
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:308
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:312
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 gün"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:316
 msgctxt "purge_files"
 msgid "30 days"
@@ -7124,10 +7016,7 @@ msgstr "Otomatik Güncellemeler"
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
-msgstr ""
-"Arka plan güncellemelerinin bu bağlantıda otomatik olarak gerçekleşmesine "
-"izin ver. Bunlar genellikle Endless OS için güncellenmiş uygulamalar, yeni "
-"içerik veya güncellemelerdir."
+msgstr "Arka plan güncellemelerinin bu bağlantıda otomatik olarak gerçekleşmesine izin ver. Bunlar genellikle Endless OS için güncellenmiş uygulamalar, yeni içerik veya güncellemelerdir."
 
 #: panels/updates/cc-updates-panel.ui:217
 msgid "Scheduled Updates"
@@ -7135,15 +7024,14 @@ msgstr "Zamanlanmış Güncelleştirmeleri"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
-"Güncellemelerin otomatik olarak gerçekleşmesi için bir günlük pencere "
-"oluşturun."
+msgstr "Güncellemelerin otomatik olarak gerçekleşmesi için bir günlük pencere oluşturun."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
 msgid "Schedule automatic updates"
 msgstr "Otomatik güncellemeleri zamanla"
 
-#. Translators: those are keywords for the automatic updates control-center panel
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
 msgstr "Güncellemeler;Otomatik;Arkaplan;Ölçülü;"
@@ -7179,17 +7067,13 @@ msgstr "Etki alanına katılma başarısız"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"Oturum açma adı işe yaramadı.\n"
-"Lütfen yeniden deneyin."
+msgstr "Oturum açma adı işe yaramadı.\nLütfen yeniden deneyin."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1275
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"Oturum açma parolası işe yaramadı.\n"
-"Lütfen yeniden deneyin."
+msgstr "Oturum açma parolası işe yaramadı.\nLütfen yeniden deneyin."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1283
 msgid "Failed to log into domain"
@@ -7250,10 +7134,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"Kurumsal giriş, merkezi olarak yönetilen mevcut bir kullanıcı hesabının bu "
-"aygıtta kullanılmasına olanak sağlar. Ayrıca bu hesabı internet üzerindeki "
-"şirket kaynaklarına erişmek için de kullanabilirsiniz."
+msgstr "Kurumsal giriş, merkezi olarak yönetilen mevcut bir kullanıcı hesabının bu aygıtta kullanılmasına olanak sağlar. Ayrıca bu hesabı internet üzerindeki şirket kaynaklarına erişmek için de kullanabilirsiniz."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:777
 msgid "You are Offline"
@@ -7426,8 +7307,7 @@ msgstr "%s halen sisteme giriş yapmış durumda"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
-"Giriş yapmış bir kullanıcıyı silmek sistemi tutarsız bir duruma sokabilir."
+msgstr "Giriş yapmış bir kullanıcıyı silmek sistemi tutarsız bir duruma sokabilir."
 
 #: panels/user-accounts/cc-user-panel.c:642
 #, c-format
@@ -7438,9 +7318,7 @@ msgstr "%s’in dosyalarını saklamak ister misiniz?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"Kullanıcı silerken ev klasörünü, postalarını ve geçici dosyalarını bırakmak "
-"mümkün."
+msgstr "Kullanıcı silerken ev klasörünü, postalarını ve geçici dosyalarını bırakmak mümkün."
 
 #: panels/user-accounts/cc-user-panel.c:649
 msgid "_Delete Files"
@@ -7453,9 +7331,7 @@ msgstr "Dosyaları _Tut"
 #: panels/user-accounts/cc-user-panel.c:664
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr ""
-"Uzaktan yönetilen %s kullanıcısının hesabını iptal etmek istediğinizden emin "
-"misiniz?"
+msgstr "Uzaktan yönetilen %s kullanıcısının hesabını iptal etmek istediğinizden emin misiniz?"
 
 #: panels/user-accounts/cc-user-panel.c:668
 msgid "_Delete"
@@ -7502,9 +7378,7 @@ msgstr "Lütfen AccountService’in kurulu ve etkin olduğundan emin olun."
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"Değişiklik yapmak için,\n"
-"önce * simgesine tıklayın"
+msgstr "Değişiklik yapmak için,\nönce * simgesine tıklayın"
 
 #: panels/user-accounts/cc-user-panel.c:1347
 msgid "Create a user account"
@@ -7515,9 +7389,7 @@ msgstr "Kullanıcı hesabı oluştur"
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
-msgstr ""
-"Kullanıcı hesabı oluşturmak için,\n"
-"önce * simgesine tıklayın"
+msgstr "Kullanıcı hesabı oluşturmak için,\nönce * simgesine tıklayın"
 
 #: panels/user-accounts/cc-user-panel.c:1367
 msgid "Delete the selected user account"
@@ -7528,9 +7400,7 @@ msgstr "Seçilen kullanıcı hesabını sil"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"Seçilen kullanıcı hesabını silmek için,\n"
-"önce * simgesine tıklayın"
+msgstr "Seçilen kullanıcı hesabını silmek için,\nönce * simgesine tıklayın"
 
 #: panels/user-accounts/cc-user-panel.ui:5
 msgid "_Add User…"
@@ -7538,8 +7408,7 @@ msgstr "Kullanıcı _Ekle…"
 
 #: panels/user-accounts/cc-user-panel.ui:52
 msgid "Your session needs to be restarted for changes to take effect"
-msgstr ""
-"Değişikliklerin etkin olması için oturumunuzu yeniden başlatmanız gerekiyor"
+msgstr "Değişikliklerin etkin olması için oturumunuzu yeniden başlatmanız gerekiyor"
 
 #: panels/user-accounts/cc-user-panel.ui:60
 msgid "Restart Now"
@@ -7562,9 +7431,7 @@ msgstr "_Yönetici"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr ""
-"Yöneticiler diğer kullanıcıları ekleyebilir veya kaldırabilir ve diğer tüm "
-"kullanıcılar için ayarları değiştirebilir."
+msgstr "Yöneticiler diğer kullanıcıları ekleyebilir veya kaldırabilir ve diğer tüm kullanıcılar için ayarları değiştirebilir."
 
 #: panels/user-accounts/cc-user-panel.ui:313
 msgid "_Parental Controls"
@@ -7590,7 +7457,8 @@ msgstr "Hesap Etkinliği"
 msgid "Remove User…"
 msgstr "Kullanıcı Hesabını Kaldır…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:635
 msgid "No Users Found"
 msgstr "Kullanıcı Bulunamadı"
@@ -7601,8 +7469,8 @@ msgstr "Kullanıcı hesabı eklemek için kilidi kaldır."
 
 #: panels/user-accounts/cc-user-panel.ui:678
 msgid ""
-"Parental controls can now only be applied to non-administrator accounts. See "
-"the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
+"Parental controls can now only be applied to non-administrator accounts. See"
+" the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
 "changed-in-endless-os-3-8/12313\">FAQ entry</a>."
 msgstr ""
 
@@ -7659,9 +7527,7 @@ msgstr "_Diğer parmak:"
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
-msgstr ""
-"Parmak iziniz başarıyla kaydedildi. Artık parmak izi okuyucusunu kullanarak "
-"giriş yapabilirsiniz."
+msgstr "Parmak iziniz başarıyla kaydedildi. Artık parmak izi okuyucusunu kullanarak giriş yapabilirsiniz."
 
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:3
 msgid "Users"
@@ -7671,12 +7537,14 @@ msgstr "Kullanıcılar"
 msgid "Add or remove users and change your password"
 msgstr "Kullanıcı ekleyip kaldırın veya parolanızı değiştirin"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "Giriş;İsim;Ad;Parmak izi;Kullanıcı simgesi;Logo;Yüz;Parola;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "Kayd_et"
@@ -7690,10 +7558,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"Kurumsal girişleri kullanmak için bu bilgisayarın etki alanına\n"
-"kayıtlı olması gerekiyor. Lütfen ağ yöneticinizin etki alanı\n"
-"parolasını buraya girmesini sağlayın."
+msgstr "Kurumsal girişleri kullanmak için bu bilgisayarın etki alanına\nkayıtlı olması gerekiyor. Lütfen ağ yöneticinizin etki alanı\nparolasını buraya girmesini sağlayın."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -7786,9 +7651,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"Aynı türdeki karakterleri yinelemeden deneyin: harfleri, sayıları ve "
-"noktalama işaretlerini karıştırmalısınız."
+msgstr "Aynı türdeki karakterleri yinelemeden deneyin: harfleri, sayıları ve noktalama işaretlerini karıştırmalısınız."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7800,9 +7663,7 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"Parolanın daha uzun olması gerekiyor. Harf, sayı ve noktalama işareti "
-"karışımları kullanmayı deneyin."
+msgstr "Parolanın daha uzun olması gerekiyor. Harf, sayı ve noktalama işareti karışımları kullanmayı deneyin."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -7812,10 +7673,9 @@ msgstr "Büyük, küçük karakter karıştırın ve bir iki de sayı kullanın.
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
-msgstr ""
-"Daha çok harf, sayı ve noktalama işareti kullanmak parolanızı daha güçlü "
-"yapacaktır."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
+msgstr "Daha çok harf, sayı ve noktalama işareti kullanmak parolanızı daha güçlü yapacaktır."
 
 #: panels/user-accounts/run-passwd.c:424
 msgid "Authentication failed"
@@ -7869,8 +7729,7 @@ msgstr "Bilinmeyen hata"
 #: panels/user-accounts/um-fingerprint-dialog.c:139
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
-msgstr ""
-"Aygıta erişiminize izin verilmedi. Sistem yöneticinizle bağlantıya geçin."
+msgstr "Aygıta erişiminize izin verilmedi. Sistem yöneticinizle bağlantıya geçin."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:141
 msgid "The device is already in use."
@@ -7892,8 +7751,7 @@ msgstr "Parmak İzlerini _Sil"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
-"Kayıtlı parmak izlerini silerek parmak izi girişini kapatmak ister misiniz?"
+msgstr "Kayıtlı parmak izlerini silerek parmak izi girişini kapatmak ister misiniz?"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:439
 msgid "Done!"
@@ -7926,17 +7784,15 @@ msgstr "Lütfen yardım için sistem yöneticinizle bağlantıya geçin."
 
 #. translators:
 #. * The variable is the name of the device, for example:
-#. * "To enable fingerprint login, you need to save one of your fingerprints, using the
+#. * "To enable fingerprint login, you need to save one of your fingerprints,
+#. using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#.
 #: panels/user-accounts/um-fingerprint-dialog.c:710
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the “%s” device."
-msgstr ""
-"Parmak izi ile oturum açmayı etkinleştirmek için, parmak izlerinizden bir "
-"tanesini “%s” aygıtını kullanarak kaydetmelisiniz."
+msgstr "Parmak izi ile oturum açmayı etkinleştirmek için, parmak izlerinizden bir tanesini “%s” aygıtını kullanarak kaydetmelisiniz."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:717
 msgid "Selecting finger"
@@ -7950,9 +7806,7 @@ msgstr "Parmak izleri kaydediliyor"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"Kullanıcı adı yalnızca a’dan z’ye küçük ya da büyük harfler, rakamlar ve şu "
-"karakterlerin herhangi birinden oluşmalıdır: . - _"
+msgstr "Kullanıcı adı yalnızca a’dan z’ye küçük ya da büyük harfler, rakamlar ve şu karakterlerin herhangi birinden oluşmalıdır: . - _"
 
 #: panels/user-accounts/user-utils.c:443
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -7964,9 +7818,7 @@ msgstr "Kullanıcı adı fazlasıyla uzun."
 
 #: panels/user-accounts/user-utils.c:550
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr ""
-"Başlangıç klasörünüzün adlandırılmasında kullanılacaktır ve sonradan "
-"değiştirilemez."
+msgstr "Başlangıç klasörünüzün adlandırılmasında kullanılacaktır ve sonradan değiştirilemez."
 
 #: panels/wacom/button-mapping.ui:9
 msgid "Map Buttons"
@@ -7985,18 +7837,13 @@ msgstr "Düğmeleri işlevlerle eşleştir"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"Bir kısayolu düzenlemek için, “Tuş Vuruşu Gönder” eylemini seçin, klavye "
-"kısayol düğmesine basın ve yeni tuşlara basılı tutun ya da temizlemek için "
-"Backspace tuşuna basın."
+msgstr "Bir kısayolu düzenlemek için, “Tuş Vuruşu Gönder” eylemini seçin, klavye kısayol düğmesine basın ve yeni tuşlara basılı tutun ya da temizlemek için Backspace tuşuna basın."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
-"Tabletinizi kalibre etmek için lütfen hedef işaretçilerine ekranda "
-"göründükçe dokunun."
+msgstr "Tabletinizi kalibre etmek için lütfen hedef işaretçilerine ekranda göründükçe dokunun."
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
@@ -8065,10 +7912,10 @@ msgstr "Wacom Tablet"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
-"Düğme eşlemelerini ve grafik tabletler için kalem hassasiyetini ayarlayın"
+msgstr "Düğme eşlemelerini ve grafik tabletler için kalem hassasiyetini ayarlayın"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Kalem;Silgi;Fare;"
@@ -8160,8 +8007,7 @@ msgstr "Taş kalem (stilus) bulunamadı"
 
 #: panels/wacom/wacom-stylus-page.ui:93
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr ""
-"Yapılandırmak için taş kaleminizi (stilus) lütfen tablete yakınlaştırın"
+msgstr "Yapılandırmak için taş kaleminizi (stilus) lütfen tablete yakınlaştırın"
 
 #: panels/wacom/wacom-stylus-page.ui:159
 msgid "Eraser Pressure Feel"
@@ -8256,16 +8102,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"Ayarlarʼın bu sürümü yalnızca geliştirme amaçları için kullanılmalıdır. "
-"Doğru olmayan sistem davranışları, veri kaybı ve diğer beklenmeyen "
-"sorunlarla karşılaşabilirsiniz. "
+msgstr "Ayarlarʼın bu sürümü yalnızca geliştirme amaçları için kullanılmalıdır. Doğru olmayan sistem davranışları, veri kaybı ve diğer beklenmeyen sorunlarla karşılaşabilirsiniz. "
 
 #: shell/cc-window.ui:331
 msgid "Help"
 msgstr "Yardım"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "Tercihler;Ayarlar;"
@@ -8306,11 +8150,9 @@ msgstr "En son açılan Ayarlar paneli için tanımlayıcı"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
-"En son açılan Ayarlar paneli için tanımlayıcı. Tanınmayan değerler göz ardı "
-"edilecek ve listedeki ilk panel seçilecek."
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "En son açılan Ayarlar paneli için tanımlayıcı. Tanınmayan değerler göz ardı edilecek ve listedeki ilk panel seçilecek."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
@@ -8342,1399 +8184,3 @@ msgstr[1] "%u giriş"
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
 msgstr "Sistem Sesleri"
-
-#~ msgid "Open in Software"
-#~ msgstr "Yazılımlarʼda Aç"
-
-#~ msgid "Set Background and Lock Screen"
-#~ msgstr "Arka Plan ve Kilit Ekranı Belirle"
-
-#~ msgid "Set Background"
-#~ msgstr "Arka Plan Belirle"
-
-#~ msgid "Set Lock Screen"
-#~ msgstr "Kilit Ekranı Belirle"
-
-#~ msgid "Remove Background"
-#~ msgstr "Arka Planı Kaldır"
-
-#~ msgid "Learn more about color management"
-#~ msgstr "Renk yönetimi hakkında daha çok bilgi edin"
-
-#~ msgid "%s; Build ID: %s"
-#~ msgstr "%s; İnşa Kimliği: %s"
-
-#~ msgid "OS Name"
-#~ msgstr "İşletim Sistemi Adı"
-
-#~ msgid "GNOME Version"
-#~ msgstr "GNOME Sürümü"
-
-#~ msgctxt "Input Source"
-#~ msgid "Other"
-#~ msgstr "Diğer"
-
-#~ msgid "Add an Input Source"
-#~ msgstr "Girdi Kaynağı Ekle"
-
-#~ msgid "Input Sources"
-#~ msgstr "Girdi Kaynakları"
-
-#~ msgid "Input Source Options"
-#~ msgstr "Girdi Kaynağı Seçenekleri"
-
-#~ msgid "Allow user to change their password on next login"
-#~ msgstr "Sonraki girişte kullanıcının parolasını değiştirmesine olanak tanı"
-
-#~ msgid "Set a password now"
-#~ msgstr "Şimdi parola belirle"
-
-#~ msgid "Reports are sent anonymously and are scrubbed of personal data."
-#~ msgstr ""
-#~ "Raporlar anonim olarak gönderilir ve kişisel verilerden arındırılmıştır."
-
-#~ msgid ""
-#~ "Sending reports of technical problems help us improve this operating "
-#~ "system."
-#~ msgstr ""
-#~ "Teknik sorunların raporlarınızı bildirmeniz bu işletim sistemini "
-#~ "geliştirmemize yaramaktadır."
-
-#~ msgid "Restrict _background data usage"
-#~ msgstr "_Arka plan veri kullanımını kısıtla"
-
-#~ msgid "Appropriate for connections that have data charges or limits."
-#~ msgstr "Veri ücreti veya sınırı olan bağlantılar için uygundur."
-
-#~ msgid "Notification _Popups"
-#~ msgstr "Bildirim _Pencerecikleri"
-
-#~ msgid "No regions found"
-#~ msgstr "Bölge bulunamadı"
-
-#~ msgid "Flash the _window title"
-#~ msgstr "_Pencere başlığı yanıp sönsün"
-
-#~ msgid "Last Login"
-#~ msgstr "Son Giriş"
-
-#~ msgid "Version %s"
-#~ msgstr "Sürüm %s"
-
-#~ msgid "OS name"
-#~ msgstr "İşletim sistemi adı"
-
-#~ msgid "OS type"
-#~ msgstr "İşletim sistemi türü"
-
-#~ msgid "Disk"
-#~ msgstr "Disk"
-
-#~ msgid "Check for updates"
-#~ msgstr "Güncellemeleri denetle"
-
-#~ msgid "Network proxy"
-#~ msgstr "Ağ Vekili"
-
-#~ msgid "page 1"
-#~ msgstr "sayfa 1"
-
-#~ msgid "Inner _authentication"
-#~ msgstr "Dahili _kimlik denetimi"
-
-#~ msgid "page 2"
-#~ msgstr "sayfa 2"
-
-#~ msgid "Twisted Pair (TP)"
-#~ msgstr "Bükülü Tel Çifti (TP)"
-
-#~ msgid "Attachment Unit Interface (AUI)"
-#~ msgstr "Eklenti Birimi Arayüzü (AUI)"
-
-#~ msgid "BNC"
-#~ msgstr "BNC"
-
-#~ msgid "Media Independent Interface (MII)"
-#~ msgstr "Ortam Bağımsız Arayüz (MII)"
-
-#~ msgid "10 Mb/s"
-#~ msgstr "%d Mb/sn"
-
-#~ msgid "100 Mb/s"
-#~ msgstr "%d Mb/sn"
-
-#~ msgid "1 Gb/s"
-#~ msgstr "1 Gb/s"
-
-#~ msgid "10 Gb/s"
-#~ msgstr "10 Gb/s"
-
-#~ msgid ""
-#~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-#~ msgstr ""
-#~ "Kablosuz erişim noktası açmak sizi <b>%s</b> bağlantısından koparacak."
-
-#~ msgid ""
-#~ "It is not possible to access the Internet through your wireless while the "
-#~ "hotspot is active."
-#~ msgstr ""
-#~ "Kablosuz aygıtınız erişim noktası olarak etkinken internete erişmek "
-#~ "mümkün olmaz."
-
-#~ msgid ""
-#~ "Wi-Fi hotspots are usually used to share an additional Internet "
-#~ "connection over Wi-Fi."
-#~ msgstr ""
-#~ "Kablosuz erişim noktaları çoğunlukla ek İnternet bağlantısını kablosuz ağ "
-#~ "üzerinden paylaşmakta kullanılır."
-
-#~ msgid "Automatic _Connect"
-#~ msgstr "Kendiliğinden _Bağlan"
-
-#~ msgid "details"
-#~ msgstr "ayrıntılar"
-
-#~ msgid "Show P_assword"
-#~ msgstr "P_arolayı Göster"
-
-#~ msgid "Make available to other users"
-#~ msgstr "Diğer kullanıcılar için de kullanılabilir kıl"
-
-#~ msgid "identity"
-#~ msgstr "kimlik"
-
-#~ msgid "IPv_4"
-#~ msgstr "IPv_4"
-
-#~ msgid "_Addresses"
-#~ msgstr "_Adresler"
-
-#~ msgid "Automatic (DHCP) addresses only"
-#~ msgstr "Yalnızca kendiliğinden (DHCP) adresler"
-
-#~ msgid "Link-local only"
-#~ msgstr "Yalnızca yerel bağlantı"
-
-#~ msgid "_Ignore automatically obtained routes"
-#~ msgstr "Kendiliğinden eklenenleri _yok say"
-
-#~ msgid "ipv4"
-#~ msgstr "ipv4"
-
-#~ msgid "IPv_6"
-#~ msgstr "IPv_6"
-
-#~ msgid "ipv6"
-#~ msgstr "ipv6"
-
-#~ msgid "_Cloned MAC Address"
-#~ msgstr "Klonlanmış MA_C Adresi"
-
-#~ msgid "_Reset"
-#~ msgstr "Sıfı_rla"
-
-#~ msgid ""
-#~ "Reset the settings for this connection to their defaults, but remember as "
-#~ "a preferred connection."
-#~ msgstr ""
-#~ "Bağlantıyı öntanımlı ayarlara sıfırlayın, ancak bunun yeğlenen bir "
-#~ "bağlantı olduğunu unutmayın."
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect to it."
-#~ msgstr ""
-#~ "Bu ağ ile ilgili tüm ayrıntıları sil ve kendiliğinden bağlanmayı deneme."
-
-#~ msgid "Hardware"
-#~ msgstr "Donanım"
-
-#~ msgctxt "tab"
-#~ msgid "Reset"
-#~ msgstr "Sıfırla"
-
-#~ msgid "Connected Devices"
-#~ msgstr "Bağlı Aygıtlar"
-
-#~ msgid "Ad-hoc"
-#~ msgstr "Ad-hoc"
-
-#~ msgid "Infrastructure"
-#~ msgstr "Altyapı"
-
-#~ msgid "Not connected"
-#~ msgstr "Bağlı değil"
-
-#~ msgid "In use"
-#~ msgstr "Kullanımda"
-
-#~ msgctxt "Location services status"
-#~ msgid "On"
-#~ msgstr "Açık"
-
-#~ msgctxt "Location services status"
-#~ msgid "Off"
-#~ msgstr "Kapalı"
-
-#~ msgctxt "Camera status"
-#~ msgid "Off"
-#~ msgstr "Kapalı"
-
-#~ msgctxt "Camera status"
-#~ msgid "On"
-#~ msgstr "Açık"
-
-#~ msgctxt "Microphone status"
-#~ msgid "Off"
-#~ msgstr "Kapalı"
-
-#~ msgctxt "Microphone status"
-#~ msgid "On"
-#~ msgstr "Açık"
-
-#~ msgid "Usage & History"
-#~ msgstr "Kullanım ve Geçmiş"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "Gizlilik İlkesi"
-
-#~ msgid ""
-#~ "Remembering your history makes things easier to find again. These items "
-#~ "are never shared over the network."
-#~ msgstr ""
-#~ "Unutmayın ki geçmişiniz yeniden arayacaklarınızı kolay bulmanızı sağlar. "
-#~ "Bu içerikler hiçbir zaman ağ üzerinde paylaşılmamaktadır."
-
-#~ msgid "_Recently Used"
-#~ msgstr "Son Kullanılanla_r"
-
-#~ msgid "Retain _History"
-#~ msgstr "_Geçmişi Tut"
-
-#~ msgid "The Screen Lock protects your privacy when you are away."
-#~ msgstr "Ekran Kilidi, siz uzaktayken gizliliğinizi korur."
-
-#~ msgid "Lock screen _after blank for"
-#~ msgstr "Şu süre geçince ekr_anı kilitle"
-
-#~ msgid "Lock Screen _Notifications"
-#~ msgstr "Kilit Ekranı _Bildirimleri"
-
-#~ msgid ""
-#~ "Automatically purge the Trash and temporary files to help keep your "
-#~ "computer free of unnecessary sensitive information."
-#~ msgstr ""
-#~ "Çöp ve geçici dosyaların kendiliğinden temizlenmesi bilgisayarınızın "
-#~ "gereksiz hassas bilgilerden arınmasına yardımcı olur."
-
-#~ msgid "Purge _After"
-#~ msgstr "Şundan _Sonra Temizle"
-
-#~ msgid ""
-#~ "Sending us information about which software you use helps us provide you "
-#~ "with more accurate recommendations. It also helps us to improve our "
-#~ "software.\n"
-#~ "\n"
-#~ "All the information we collect is made anonymous, and we will never share "
-#~ "your data with third parties."
-#~ msgstr ""
-#~ "Hangi yazılımları kullandığınızla ilgili bilgileri bize göndermek, size "
-#~ "daha isabetli tavsiyelerde bulunmamızda bize yardımcı olur. Ayrıca "
-#~ "yazılımımızı geliştirmemize de yardım eder.\n"
-#~ "\n"
-#~ "Topladığımız tüm bilgiler anonim hale getirilmektedir ve verilerinizi "
-#~ "asla üçüncü kişilerle paylaşmayacağız."
-
-#~ msgid "_Send software usage statistics"
-#~ msgstr "Yazılım kullanım istatistiklerini _gönder"
-
-#~ msgid "_Camera"
-#~ msgstr "_Kamera"
-
-#~ msgid "_Microphone"
-#~ msgstr "_Mikrofon"
-
-#~ msgid "_Location Services"
-#~ msgstr "_Konum Hizmetleri"
-
-#~ msgid "Protect your personal information and control what others might see"
-#~ msgstr ""
-#~ "Kişisel bilgilerinizi koruyun ve başkalarının ne görebileceğini denetleyin"
-
-#~ msgid "The username cannot start with a “-”."
-#~ msgstr "Kullanıcı adı “-” ile başlayamaz."
-
-#~ msgid "application-x-executable"
-#~ msgstr "application-x-executable"
-
-#~ msgid "_Background"
-#~ msgstr "_Arka Plan"
-
-#~ msgid "Changes throughout the day"
-#~ msgstr "Gün içinde değişir"
-
-#~ msgctxt "background, style"
-#~ msgid "Tile"
-#~ msgstr "Döşe"
-
-#~ msgctxt "background, style"
-#~ msgid "Zoom"
-#~ msgstr "Yakınlaştır"
-
-#~ msgctxt "background, style"
-#~ msgid "Center"
-#~ msgstr "Ortala"
-
-#~ msgctxt "background, style"
-#~ msgid "Scale"
-#~ msgstr "Ölçekle"
-
-#~ msgctxt "background, style"
-#~ msgid "Fill"
-#~ msgstr "Doldur"
-
-#~ msgctxt "background, style"
-#~ msgid "Span"
-#~ msgstr "Yay"
-
-#~ msgid "Colors"
-#~ msgstr "Renkler"
-
-#~ msgid "Pictures"
-#~ msgstr "Resimler"
-
-#~ msgid "No Pictures Found"
-#~ msgstr "Hiç Resim Bulunamadı"
-
-#~ msgid "You can add images to your %s folder and they will show up here"
-#~ msgstr ""
-#~ "Resimlerinizi %s klasörüne ekleyebilirsiniz, eklenenler burada "
-#~ "gözükecektir"
-
-#~ msgid "preferences-desktop-wallpaper"
-#~ msgstr "preferences-desktop-wallpaper"
-
-#~ msgid "bluetooth"
-#~ msgstr "bluetooth"
-
-#~ msgid "preferences-color"
-#~ msgstr "preferences-color"
-
-#~ msgid "preferences-system-time"
-#~ msgstr "preferences-system-time"
-
-#~ msgid "_Off"
-#~ msgstr "_Kapalı"
-
-#~ msgid "preferences-desktop-display"
-#~ msgstr "preferences-desktop-display"
-
-#~ msgid "starred"
-#~ msgstr "starred"
-
-#~ msgid "help-about"
-#~ msgstr "help-about"
-
-#~ msgid "media-removable"
-#~ msgstr "media-removable"
-
-#~ msgid "Keyboard"
-#~ msgstr "Klavye"
-
-#~ msgid "input-keyboard"
-#~ msgstr "input-keyboard"
-
-#~ msgid "input-mouse"
-#~ msgstr "input-mouse"
-
-#~ msgid "Connection/SSID"
-#~ msgstr "Bağlantı/SSID"
-
-#~ msgid "network-workgroup"
-#~ msgstr "network-workgroup"
-
-#~ msgid "network-wireless"
-#~ msgstr "network-wireless"
-
-#~ msgid "preferences-system-notifications"
-#~ msgstr "preferences-system-notifications"
-
-#~ msgid "goa-panel"
-#~ msgstr "goa-panel"
-
-#~ msgid "_Automatic suspend"
-#~ msgstr "Kendiliğinden _askıya al"
-
-#~ msgid "_When the Power Button is pressed"
-#~ msgstr "Gü_ç düğmesine basıldığında"
-
-#~ msgid "gnome-power-manager"
-#~ msgstr "gnome-power-manager"
-
-#~ msgid "printer"
-#~ msgstr "printer"
-
-#~ msgid "preferences-system-privacy"
-#~ msgstr "preferences-system-privacy"
-
-#~ msgid "preferences-desktop-locale"
-#~ msgstr "preferences-desktop-locale"
-
-#~ msgid "Preferences"
-#~ msgstr "Tercihler"
-
-#~ msgid "preferences-system-search"
-#~ msgstr "preferences-system-search"
-
-#~ msgid "preferences-system-sharing"
-#~ msgstr "preferences-system-sharing"
-
-#~ msgid "multimedia-volume-control"
-#~ msgstr "multimedia-volume-control"
-
-#~ msgid "thunderbolt"
-#~ msgstr "thunderbolt"
-
-#~ msgid "preferences-desktop-accessibility"
-#~ msgstr "preferences-desktop-accessibility"
-
-#~ msgid "system-users"
-#~ msgstr "system-users"
-
-#~ msgid "input-tablet"
-#~ msgstr "input-tablet"
-
-#~ msgid "org.gnome.Settings"
-#~ msgstr "org.gnome.Settings"
-
-#~ msgid "Drag displays to match your setup."
-#~ msgstr "Ekranları kurulumunuza uydurmak için sürükleyin."
-
-#~ msgid "_Night Light"
-#~ msgstr "_Gece Işığı"
-
-#~ msgid "Could not get screen information"
-#~ msgstr "Ekran bilgisi alınamadı"
-
-#~ msgid "Add input source"
-#~ msgstr "Girdi kaynağı ekle"
-
-#~ msgid "Remove input source"
-#~ msgstr "Girdi kaynağını kaldır"
-
-#~ msgid "Move input source up"
-#~ msgstr "Girdi kaynağını yukarı taşı"
-
-#~ msgid "Move input source down"
-#~ msgstr "Girdi kaynağını aşağı taşı"
-
-#~ msgid "Show input source keyboard layout"
-#~ msgstr "Girdi kaynağı klavye düzenini göster"
-
-#~ msgctxt "balance"
-#~ msgid "Left"
-#~ msgstr "Sol"
-
-#~ msgctxt "balance"
-#~ msgid "Right"
-#~ msgstr "Sağ"
-
-#~ msgctxt "balance"
-#~ msgid "Minimum"
-#~ msgstr "En Az"
-
-#~ msgctxt "balance"
-#~ msgid "Maximum"
-#~ msgstr "En Çok"
-
-#~ msgid "_Subwoofer:"
-#~ msgstr "_Subwoofer:"
-
-#~ msgctxt "volume"
-#~ msgid "Unamplified"
-#~ msgstr "Yükseltilmemiş"
-
-#~ msgid "_Profile:"
-#~ msgstr "_Profil:"
-
-#~ msgid "_Test Speakers"
-#~ msgstr "Hoparlörleri _Sına"
-
-#~ msgid "Peak detect"
-#~ msgstr "Tepe algılama"
-
-#~ msgid "Device"
-#~ msgstr "Aygıt"
-
-#~ msgid "Speaker Testing for %s"
-#~ msgstr "%s için Hoparlör Sınaması"
-
-#~ msgid "C_hoose a device for sound output:"
-#~ msgstr "Ses çıktısı için aygıt _seçin:"
-
-#~ msgid "Settings for the selected device:"
-#~ msgstr "Seçili aygıt ayarları:"
-
-#~ msgid "_Input volume:"
-#~ msgstr "G_irdi ses düzeyi:"
-
-#~ msgid "C_hoose a device for sound input:"
-#~ msgstr "Ses girdisi için aygıt se_çin:"
-
-#~ msgid "Sound Effects"
-#~ msgstr "Ses Etkileri"
-
-#~ msgid "Built-in"
-#~ msgstr "Dahili"
-
-#~ msgid "Sound Preferences"
-#~ msgstr "Ses Tercihleri"
-
-#~ msgid "Testing event sound"
-#~ msgstr "Olay sesi sınanıyor"
-
-#~ msgid "From theme"
-#~ msgstr "Temadan"
-
-#~ msgid "C_hoose an alert sound:"
-#~ msgstr "Uyarı sesi se_çin:"
-
-#~ msgid "Stop"
-#~ msgstr "Dur"
-
-#~ msgid "GNOME Control Center"
-#~ msgstr "GNOME Denetim Merkezi"
-
-#~ msgid ""
-#~ "The control center is GNOME’s main interface for configuration of various "
-#~ "aspects of your desktop."
-#~ msgstr ""
-#~ "Denetim merkezi, masaüstünüzün çeşitli yönlerini yapılandırmak için "
-#~ "GNOME’un temel arabirimidir."
-
-#~ msgctxt "Account type"
-#~ msgid "Standard"
-#~ msgstr "Standart"
-
-#~ msgctxt "Account type"
-#~ msgid "Administrator"
-#~ msgstr "Yönetici"
-
-#~ msgid "Quit"
-#~ msgstr "Çık"
-
-#~ msgid "Switch to previous source"
-#~ msgstr "Önceki kaynağa geç"
-
-#~ msgid "Switch to next source"
-#~ msgstr "Sonraki kaynağa geç"
-
-#~ msgid "Alternative switch to next source"
-#~ msgstr "Sonraki kaynağa geçiş alternatifi"
-
-#~ msgid "_Options"
-#~ msgstr "_Seçenekler"
-
-#~ msgid "gnome-control-center"
-#~ msgstr "gnome-control-center"
-
-#~ msgid "My Home Network"
-#~ msgstr "Ev Ağı"
-
-#~ msgid "hardware"
-#~ msgstr "donanım"
-
-#~ msgid "English (United Kingdom)"
-#~ msgstr "İngilizce (Birleşik Krallık)"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Birleşik Krallık"
-
-#~ msgid "page 3"
-#~ msgstr "sayfa 3"
-
-#~ msgid "_Verify New Password"
-#~ msgstr "Yeni Parolayı _Doğrula"
-
-#~ msgid "Passwords do not match."
-#~ msgstr "Parolalar uyuşmuyor."
-
-#~ msgid "Show the overview"
-#~ msgstr "Genel görünümü göster"
-
-#~ msgid "Back­ground"
-#~ msgstr "Arka plan"
-
-#~ msgid "Blue­tooth"
-#~ msgstr "Bluetooth"
-
-#~ msgid "Co­lor"
-#~ msgstr "Renk"
-
-#~ msgid "Section"
-#~ msgstr "Bölüm"
-
-#~ msgid "Overview"
-#~ msgstr "Genel Görünüm"
-
-#~ msgid "Defa­ult Applications"
-#~ msgstr "Öntanımlı Uygulamalar"
-
-#~ msgid "Ab­out"
-#~ msgstr "Hakkında"
-
-#~ msgid "De­tails"
-#~ msgstr "Ayrıntılar"
-
-#~ msgid "Remo­vable Media"
-#~ msgstr "Çıkarılabilir Ortam"
-
-#~ msgid "Net­work"
-#~ msgstr "Ağ"
-
-#~ msgid "invalid EAP-TLS password: missing"
-#~ msgstr "geçersiz EAP-TLS parolası: eksik"
-
-#~ msgid "No­ti­fi­ca­tions"
-#~ msgstr "Bildirimler"
-
-#~ msgid "Po­wer"
-#~ msgstr "Güç"
-
-#~ msgid "Pri­va­cy"
-#~ msgstr "Gizlilik"
-
-#~ msgid "Sha­ring"
-#~ msgstr "Paylaşım"
-
-#~ msgid "Uni­ver­sal Access"
-#~ msgstr "Evrensel Erişim"
-
-#~ msgid "Disable image"
-#~ msgstr "Resmi etkisizleştir"
-
-#~ msgid "Browse for more pictures…"
-#~ msgstr "Daha çok resim için göz at…"
-
-#~ msgid "Used by %s"
-#~ msgstr "%s tarafından kullanılıyor"
-
-#~ msgid "Wa­com Tab­let"
-#~ msgstr "Wacom Tablet"
-
-#~ msgctxt "category"
-#~ msgid "Hardware"
-#~ msgstr "Donanım"
-
-#~ msgctxt "category"
-#~ msgid "System"
-#~ msgstr "Sistem"
-
-#~ msgid "Apply"
-#~ msgstr "Uygula"
-
-#~ msgid "Lid Closed"
-#~ msgstr "Kapak Kapatıldı"
-
-#~ msgid "Mirrored"
-#~ msgstr "Aynalandı"
-
-#~ msgid "Secondary"
-#~ msgstr "İkincil"
-
-#~ msgid "Arrange Combined Displays"
-#~ msgstr "Birleştirilmiş Ekranları Düzenle"
-
-#~ msgid "%d Hz (NTSC)"
-#~ msgstr "%d Hz (NTSC)"
-
-#~ msgid "%d Hz"
-#~ msgstr "%d Hz"
-
-#~ msgid "Rotate counterclockwise by 90°"
-#~ msgstr "Saat yönünün tersine 90° döndür"
-
-#~ msgid "Rotate by 180°"
-#~ msgstr "180° döndür"
-
-#~ msgid "Rotate clockwise by 90°"
-#~ msgstr "Saat yönünde 90° döndür"
-
-#~ msgid "Size"
-#~ msgstr "Boyut"
-
-#~ msgid "Aspect Ratio"
-#~ msgstr "En-Boy Oranı"
-
-#~ msgid "Show the top bar and Activities Overview on this display"
-#~ msgstr "Üst çubuğu ve Etkinlikler Genel Görünümünü bu ekranda göster"
-
-#~ msgid "Join this display with another to create an extra workspace"
-#~ msgstr "Ek çalışma alanı oluşturmak için bu ekranla başka birini birleştir"
-
-#~ msgid "Presentation"
-#~ msgstr "Sunum"
-
-#~ msgid "Show slideshows and media only"
-#~ msgstr "Yalnızca slayt gösterilerini ve ortamı göster"
-
-#~ msgid "Show your existing view on both displays"
-#~ msgstr "Var olan görüntünüzü her iki ekranda gösterin"
-
-#~ msgid "Turn Off"
-#~ msgstr "Kapat"
-
-#~ msgid "Don’t use this display"
-#~ msgstr "Bu ekranı kullanma"
-
-#~ msgid "_Arrange Combined Displays"
-#~ msgstr "Birleştirilmiş Ekranları _Düzenle"
-
-#~ msgid "Air_plane Mode"
-#~ msgstr "Uçak Ki_pi"
-
-#~ msgid "Server"
-#~ msgstr "Sunucu"
-
-#~ msgid "Delete DNS Server"
-#~ msgstr "DNS Sunucuyu Sil"
-
-#~ msgid "Proxy"
-#~ msgstr "Vekil"
-
-#~ msgid "_Add Profile…"
-#~ msgstr "Profil _Ekle…"
-
-#~ msgctxt "proxy method"
-#~ msgid "None"
-#~ msgstr "Hiçbiri"
-
-#~ msgctxt "proxy method"
-#~ msgid "Manual"
-#~ msgstr "El ile"
-
-#~ msgctxt "proxy method"
-#~ msgid "Automatic"
-#~ msgstr "Otomatik"
-
-#~ msgid "_Method"
-#~ msgstr "Yönte_m"
-
-#~ msgid "Group Name"
-#~ msgstr "Grup Adı"
-
-#~ msgid "_Use as Hotspot…"
-#~ msgstr "Erişim noktası olarak k_ullan…"
-
-#~ msgid "_History"
-#~ msgstr "_Geçmiş"
-
-#~ msgid "Make available to other _users"
-#~ msgstr "Diğer k_ullanıcılar için de kullanılabilir kıl"
-
-#~ msgid ""
-#~ "Reset the settings for this network, including passwords, but remember it "
-#~ "as a preferred network"
-#~ msgstr ""
-#~ "Bu ağ için ayarları sıfırla, parolalar dahil. Bunun tercih edilen bir ağ "
-#~ "olduğunu unutmayın."
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect"
-#~ msgstr "Bu ağ için tüm ayrıntıları sil ve otomatik olarak bağlanmayı deneme"
-
-#~ msgid "%s %d-bit (Build ID: %s)"
-#~ msgstr "%s %d-bit (İnşa Kimliği: %s)"
-
-#~ msgid "%s %d-bit"
-#~ msgstr "%s %d-bit"
-
-#~ msgid "Base system"
-#~ msgstr "Temel sistem"
-
-#~ msgid "Shortcut;Repeat;Blink;"
-#~ msgstr "Kısayol;Tekrar;Kırpma;"
-
-#~ msgid "Press Esc to cancel."
-#~ msgstr "İptal etmek için Esc'ye basın."
-
-#~ msgid "Firewall _Zone"
-#~ msgstr "Güvenlik Duvarı _Bölgesi"
-
-#~ msgctxt "Firewall zone"
-#~ msgid "Default"
-#~ msgstr "Öntanımlı"
-
-#~ msgid "The zone defines the trust level of the connection"
-#~ msgstr "Bölge; bağlantının güvenilirlik düzeyini tanımlar"
-
-#~ msgid ""
-#~ "If you have a connection to the Internet other than wireless, you can set "
-#~ "up a wireless hotspot to share the connection with others."
-#~ msgstr ""
-#~ "Eğer kablosuzdan başka bir İnternet bağlantısına sahipseniz, kablosuz "
-#~ "erişim noktası kurarak bağlantınızı diğerleriyle paylaşabilirsiniz."
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgid "Loading options…"
-#~ msgstr "Seçenekler yükleniyor..."
-
-#~ msgctxt "Password hint"
-#~ msgid "Try to add more letters, numbers and symbols."
-#~ msgstr "Daha fazla harf, sayı ve simge ekleyerek deneyin."
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Weak"
-#~ msgstr "Zorluk: Zayıf"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Low"
-#~ msgstr "Zorluk: Düşük"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Medium"
-#~ msgstr "Zorluk: Orta"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Good"
-#~ msgstr "Zorluk: İyi"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: High"
-#~ msgstr "Zorluk: Yüksek"
-
-#~ msgid "<small>Your account</small>"
-#~ msgstr "<small>Hesabınız</small>"
-
-#~ msgid "Edit"
-#~ msgstr "Düzenle"
-
-#~ msgctxt "button"
-#~ msgid "Set Shortcut"
-#~ msgstr "Kısayol Belirle"
-
-#~ msgctxt "notifications"
-#~ msgid "Notification _Banners"
-#~ msgstr "_Bildirim Pencerecikleri"
-
-#~ msgid "Notification _Banners"
-#~ msgstr "_Bildirim Pencerecikleri"
-
-#~ msgid "Add Account"
-#~ msgstr "Hesap Ekle"
-
-#~ msgid "Mail"
-#~ msgstr "E-Posta"
-
-#~ msgid "Calendar"
-#~ msgstr "Takvim"
-
-#~ msgid "Contacts"
-#~ msgstr "Kişiler"
-
-#~ msgid "Chat"
-#~ msgstr "Sohbet"
-
-#~ msgid "Error creating account"
-#~ msgstr "Hesap oluşturulurken hata meydana geldi"
-
-#~ msgid "Are you sure you want to remove the account?"
-#~ msgstr "Hesabı silmek istediğinizden emin misiniz?"
-
-#~ msgid "This will not remove the account on the server."
-#~ msgstr "Bu işlem, sunucudaki hesabı silmeyecektir."
-
-#~ msgid "_Remove"
-#~ msgstr "_Sil"
-
-#~ msgid "No online accounts configured"
-#~ msgstr "Yapılandırılmış çevrimiçi hesap yok"
-
-#~ msgid ""
-#~ "Adding an account allows your applications to access it for documents, "
-#~ "mail, contacts, calendar, chat and more."
-#~ msgstr ""
-#~ "Bir hesap eklemek uygulamaların dökümanlarınıza, postanıza, kişilerinize, "
-#~ "takvime, sohbet gibi içeriklere ulaşmasını sağlar"
-
-#~ msgctxt "printer state"
-#~ msgid "Configuring"
-#~ msgstr "Yapılandırılıyor"
-
-#~ msgid "Toner Level"
-#~ msgstr "Toner Seviyesi"
-
-#~ msgid "Supply Level"
-#~ msgstr "Malzeme Seviyesi"
-
-#~ msgctxt "printer state"
-#~ msgid "Installing"
-#~ msgstr "Kuruluyor"
-
-#~ msgid "%u active"
-#~ msgid_plural "%u active"
-#~ msgstr[0] "%u etkin"
-
-#~ msgid "Supply"
-#~ msgstr "Malzeme"
-
-#~ msgid "Jobs"
-#~ msgstr "İşler"
-
-#~ msgid "Show _Jobs"
-#~ msgstr "_İşleri Göster"
-
-#~ msgid "label"
-#~ msgstr "etiket"
-
-#~ msgid "Setting new driver…"
-#~ msgstr "Yeni sürücü ayarlanıyor..."
-
-#~ msgid "Print _Test Page"
-#~ msgstr "_Sınama Sayfası Yazdır"
-
-#~ msgid "Other Accounts"
-#~ msgstr "Diğer Hesaplar"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Up"
-#~ msgstr "Yukarı"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Down"
-#~ msgstr "Aşağı"
-
-#~ msgctxt "Wacom action-type"
-#~ msgid "None"
-#~ msgstr "Hiçbiri"
-
-#~ msgid "Left Ring"
-#~ msgstr "Sol Yüzük Parmağı"
-
-#~ msgid "Left Ring Mode #%d"
-#~ msgstr "Sol Yüzük Parmağı Kipi #%d"
-
-#~ msgid "Right Ring Mode #%d"
-#~ msgstr "Sağ Yüzük Parmağı Kipi #%d"
-
-#~ msgid "Left Touchstrip"
-#~ msgstr "Sol Birleştirme"
-
-#~ msgid "Left Touchstrip Mode #%d"
-#~ msgstr "Sol Birleştirme Kipi #%d"
-
-#~ msgid "Right Touchstrip"
-#~ msgstr "Sağ Birleştirme"
-
-#~ msgid "Right Touchstrip Mode #%d"
-#~ msgstr "Sağ Birleştirme Kipi #%d"
-
-#~ msgid "Left Touchring Mode Switch"
-#~ msgstr "Sol Dokunmatik Halka Kipi Anahtarı"
-
-#~ msgid "Right Touchring Mode Switch"
-#~ msgstr "Sağ Dokunmatik Halka Kipi Anahtarı"
-
-#~ msgid "Left Touchstrip Mode Switch"
-#~ msgstr "Sol Birleştirme Kipi Anahtarı"
-
-#~ msgid "Right Touchstrip Mode Switch"
-#~ msgstr "Sağ Birleştirme Kipi Anahtarı"
-
-#~ msgid "Mode Switch #%d"
-#~ msgstr "Kip Anahtarı #%d"
-
-#~ msgid "Left Button #%d"
-#~ msgstr "Sol Düğme #%d"
-
-#~ msgid "Right Button #%d"
-#~ msgstr "Sağ Düğme #%d"
-
-#~ msgid "Top Button #%d"
-#~ msgstr "Üst Düğme #%d"
-
-#~ msgid "Bottom Button #%d"
-#~ msgstr "Alt Düğme #%d"
-
-#~ msgid "No Action"
-#~ msgstr "Eylem Yok"
-
-#~ msgid "Left Mouse Button Click"
-#~ msgstr "Sol Fare Düğmesi Tıklaması"
-
-#~ msgid "Scroll Up"
-#~ msgstr "Yukarı Kaydır"
-
-#~ msgid "Scroll Down"
-#~ msgstr "Aşağı Kaydır"
-
-#~ msgid "Scroll Left"
-#~ msgstr "Sola Kaydır"
-
-#~ msgid "Scroll Right"
-#~ msgstr "Sağa Kaydır"
-
-#~ msgid "Add a New Printer"
-#~ msgstr "Yeni Yazıcı Ekle"
-
-#~ msgid "No printers detected."
-#~ msgstr "Yazıcı algılanamadı."
-
-#~ msgctxt "login history week label"
-#~ msgid "%s - %s"
-#~ msgstr "%s - %s"
-
-#~ msgid "Keyboard shortcut for <b>%s</b>. Enter new shortcut to change."
-#~ msgstr ""
-#~ "<b>%s</b> için klavye kısayolu. Değiştirmek için yeni kısayol girin."
-
-#~ msgid ""
-#~ "To edit a shortcut, click the row and hold down the new keys or press "
-#~ "Backspace to clear."
-#~ msgstr ""
-#~ "Bir kısayolu düzenlemek için, ilgili satıra tıklayın ve tuşlara ya da "
-#~ "temizlemek için Backspace tuşuna basın."
-
-#~ msgid "Add Shortcut"
-#~ msgstr "Kısayol Ekle"
-
-#~ msgid "Remove Shortcut"
-#~ msgstr "Kısayolu Kaldır"
-
-#~ msgid "<Unknown Action>"
-#~ msgstr "<Bilinmeyen Eylem>"
-
-#~ msgid ""
-#~ "The shortcut \"%s\" cannot be used because it will become impossible to "
-#~ "type using this key.\n"
-#~ "Please try with a key such as Control, Alt or Shift at the same time."
-#~ msgstr ""
-#~ "Kısayol tuşu \"%s\" kullanılamıyor çünkü kullanımı halinde bu tuş "
-#~ "kullanılarak yazmak mümkün olmayacak.\n"
-#~ "Lütfen Control, Alt ya da Shift gibi tuşlar ile aynı anda deneyin."
-
-#~ msgid ""
-#~ "The shortcut \"%s\" is already used for\n"
-#~ "\"%s\""
-#~ msgstr ""
-#~ "\"%s\" kısayolu zaten kullanılıyor:\n"
-#~ "\"%s\""
-
-#~ msgid ""
-#~ "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~ "disabled."
-#~ msgstr ""
-#~ "Eğer kısayolu \"%s\" olarak tekrar atarsanız, \"%s\" kısayolu "
-#~ "etkinsizleştirilecek."
-
-#~ msgid "_Reassign"
-#~ msgstr "Tek_rar ata"
-
-#~ msgid ""
-#~ "The \"%s\" shortcut has an associated \"%s\" shortcut. Do you want to "
-#~ "automatically set it to \"%s\"?"
-#~ msgstr ""
-#~ "\"%s\" kısayoluyla ilişkili bir \"%s\" kısayolu var. Otomatik olarak \"%s"
-#~ "\"e ayarlamak ister misiniz?"
-
-#~ msgid ""
-#~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
-#~ "disabled if you move forward."
-#~ msgstr ""
-#~ "\"%s\" şu anda \"%s\" ile ilişkilendirilmiş; eğer devam ederseniz, bu "
-#~ "kısayol devre dışı bırakılacak."
-
-#~ msgid "_Assign"
-#~ msgstr "_Ata"
-
-#~ msgid "Error logging into the account"
-#~ msgstr "Hesaba giriş yapılırken hata oluştu"
-
-#~ msgid "Credentials have expired."
-#~ msgstr "Kimlik bilgilerinin süresi dolmuş."
-
-#~ msgid "Sign in to enable this account."
-#~ msgstr "Bu hesabı etkinleştirmek için giriş yap."
-
-#~ msgid "_Sign In"
-#~ msgstr "Giri_ş Yap"
-
-#~ msgid "Login History"
-#~ msgstr "Giriş Geçmişi"
-
-#~ msgid "Add User Account"
-#~ msgstr "Kullanıcı Hesabı Ekle"
-
-#~ msgid "Add Network Connection"
-#~ msgstr "Ağ Bağlantısı Ekle"
-
-#~ msgid "Personal File Sharing"
-#~ msgstr "Kişisel Dosya Paylaşımı"
-
-#~ msgid "_Allow Remote Control"
-#~ msgstr "Uz_aktan Denetime İzin Ver"
-
-#~ msgid "Welcome to the Control Center"
-#~ msgstr "Denetim Merkezine Hoş Geldiniz"
-
-#~ msgid "Select a panel in the sidelist to see the available options"
-#~ msgstr ""
-#~ "Kullanılabilir seçenekleri görmek için yandaki listeden bir panel seçin"
-
-#~ msgid "Bond"
-#~ msgstr "Bağla"
-
-#~ msgid "Team"
-#~ msgstr "Takım"
-
-#~ msgid "Bridge"
-#~ msgstr "Köprü"
-
-#~ msgid "VLAN"
-#~ msgstr "VLAN"
-
-#~ msgid "Could not load VPN plugins"
-#~ msgstr "VPN eklentileri yüklenemedi"
-
-#~ msgid "Bond slaves"
-#~ msgstr "Yamakları bağla"
-
-#~ msgid "(none)"
-#~ msgstr "(yok)"
-
-#~ msgid "Bridge slaves"
-#~ msgstr "Yamakları köprüle"
-
-#~ msgid "Team slaves"
-#~ msgstr "Yamaklardan takım oluştur"
-
-#~ msgid "InfiniBand device does not support connected mode"
-#~ msgstr "InfiniBand aygıtı bağlantılı kipi desteklemiyor"
-
-#~ msgid "No Certificate Authority certificate chosen"
-#~ msgstr "Sertifika Yetkilisi (CA) sertifikası seçilmedi"
-
-#~ msgid ""
-#~ "Not using a Certificate Authority (CA) certificate can result in "
-#~ "connections to insecure, rogue Wi-Fi networks.  Would you like to choose "
-#~ "a Certificate Authority certificate?"
-#~ msgstr ""
-#~ "Sertifika Yetkilisi (CA) tarafından onaylanmış bir sertifika kullanmamak; "
-#~ "güvensiz, kötü niyetli Wi-Fi ağlarına bağlanmanıza neden olabilir. "
-#~ "Sertfika Yetkilisi tarafından onaylanmış bir sertifika seçmek ister "
-#~ "misiniz?"
-
-#~ msgid "Ignore"
-#~ msgstr "Yoksay"
-
-#~ msgid "Choose CA Certificate"
-#~ msgstr "CA Sertifikası seçin"
-
-#~ msgid "As_k for this password every time"
-#~ msgstr "Parolayı her seferinde so_r"
-
-#~ msgid "Don't _warn me again"
-#~ msgstr "Beni tekrar _uyarma"
-
-#~ msgid "No"
-#~ msgstr "Hayır"
-
-#~ msgid "Yes"
-#~ msgstr "Evet"
-
-#~ msgctxt "Search Location"
-#~ msgid "Other"
-#~ msgstr "Diğer"
-
-#~ msgid "_Verify"
-#~ msgstr "_Doğrula"
-
-#~ msgid "A user with the username '%s' already exists."
-#~ msgstr "'%s' adlı bir kullanıcı zaten var."
-
-#~ msgid "Done"
-#~ msgstr "Tamamlandı!"
-
-#~ msgid "Time _Zone"
-#~ msgstr "Saat _Dilimi"
-
-#~ msgid "Close"
-#~ msgstr "Kapat"
-
-#~ msgid "Resume Printing"
-#~ msgstr "Yazdırmayı Devam Ettir"
-
-#~ msgid "Pause Printing"
-#~ msgstr "Yazdırmayı Duraklat"
-
-#~ msgctxt "print job"
-#~ msgid "Held"
-#~ msgstr "Bekliyor"
-
-#~ msgid "Job Title"
-#~ msgstr "İş Adı"
-
-#~ msgid "Job State"
-#~ msgstr "İş Durumu"
-
-#~ msgid "Time"
-#~ msgstr "Zaman"
-
-#~ msgid "Used to determine your geographical location"
-#~ msgstr "Coğrafi konumunuzu belirlemek için kullanılır"
-
-#~ msgid "Options"
-#~ msgstr "Seçenekler"
-
-#~ msgid "Password:"
-#~ msgstr "Parola:"
-
-#~ msgid "_Repeat Keys"
-#~ msgstr "Tuşları Tek_rarla"
-
-#~ msgid "_Cursor Blinking"
-#~ msgstr "_İmleç Yanıp Sönmesi"
-
-#~ msgid "Zoom"
-#~ msgstr "Yakınlaş"
-
-#~ msgctxt "universal access, contrast"
-#~ msgid "Color"
-#~ msgstr "Renk"
-
-#~ msgid "_Delay:"
-#~ msgstr "_Gecikme:"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Short"
-#~ msgstr "Kısa"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Slow"
-#~ msgstr "Yavaş"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Long"
-#~ msgstr "Uzun"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Fast"
-#~ msgstr "Hızlı"
-
-#~ msgid "S_peed:"
-#~ msgstr "_Hız:"
-
-#~ msgid "Test Your Settings"
-#~ msgstr "Ayarlarınızı Sınayın"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Slow"
-#~ msgstr "Yavaş"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Fast"
-#~ msgstr "Hızlı"
-
-#~ msgctxt "mouse, left button as primary"
-#~ msgid "_Left"
-#~ msgstr "So_l"
-
-#~ msgctxt "mouse, right button as primary"
-#~ msgid "_Right"
-#~ msgstr "_Sağ"
-
-#~ msgid "_Pointer speed"
-#~ msgstr "_İmleç hızı"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "Yavaş"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "Hızlı"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "Yavaş"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "Hızlı"
-
-#~ msgid "No printers available"
-#~ msgstr "Mevcut yazıcı bulunmuyor"
-
-#~ msgid "Add New Printer"
-#~ msgstr "Yeni Yazıcı Ekle"
-
-#~ msgid "Bluetooth is disabled"
-#~ msgstr "Bluetooth devre dışı"
-
-#~ msgid "Wireless devices require extra power"
-#~ msgstr "Kablosuz aygıtlar ek güç gerektirir"
-
-#~ msgid ""
-#~ "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
-#~ "devices"
-#~ msgstr ""
-#~ "Bluetooth Paylaşımı diğer Bluetooth aygıtları ile dosya paylaşmanızı "
-#~ "sağlar"
-
-#~ msgid "Only Receive From Trusted Devices"
-#~ msgstr "Sadece Güvenilen Aygıtlardan Dosya Al"
-
-#~ msgid "Save Received Files to Downloads Folder"
-#~ msgstr "Alınan Dosyaları İndirilenler Klasörüne Kaydet"
-
-#~ msgid "Show help options"
-#~ msgstr "Yardım seçeneklerini göster"
-
-#~ msgid ""
-#~ "%s\n"
-#~ "Run '%s --help' to see a full list of available command line options.\n"
-#~ msgstr ""
-#~ "%s\n"
-#~ "Kullanılabilir komut satırı seçeneklerini görmek için '%s --help' "
-#~ "komutunu çalıştırın.\n"
-
-#~ msgid "When battery power is _critical"
-#~ msgstr "Pil gücü _kritik olduğunda"
-
-#~ msgid "Power off"
-#~ msgstr "Kapat"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "_Yazarken devre dışı bırak"
-
-#~ msgid "The system network services are not compatible with this version."
-#~ msgstr "Sistem ağ hizmetleri bu sürümle uyumlu değil."
-
-#~ msgctxt "notifications"
-#~ msgid "Show Popup Banners"
-#~ msgstr "Açılır Bildirimleri Göster"
-
-#~ msgctxt "notifications"
-#~ msgid "View in Lock Screen"
-#~ msgstr "Kilit Ekranında göster"
-
-#~ msgid "Show Pop Up Banners"
-#~ msgstr "Açılır Bildirimleri Göster"
-
-#~ msgid "Turns off wireless devices"
-#~ msgstr "Kablosuz aygıtları kapatır"
-
-#~ msgid "Enter address of a printer or a text to filter results"
-#~ msgstr "Sonuçları süzmek için yazıcı adresi ya da metin girin"
-
-#~ msgid "Sorry"
-#~ msgstr "Üzgünüm"

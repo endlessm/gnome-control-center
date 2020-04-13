@@ -1,31 +1,33 @@
-# translation of gnome-control-center to Arabic
-# This file is under the same license as the gnome-control-center package.
-# Copyright (C) Listed translators
-# Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
-# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
-# Arafat Medini <lumina@silverpen.de>, 2003.
-# Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>, 2004.
-# Anas Husseini <linux.anas@gmail.com>, 2007.
-# Djihed Afifi <djihed@gmail.com>, 2006.
-# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019.
-# Abderrahim Kitouni <a.kitouni@gmail.com>, 2011, 2012.
-# Ibrahim Saed <ibraheem5000@gmail.com>, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# abderrahim <a.kitouni@gmail.com>, 2011-2012
+# Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>, 2004
+# Anas El Husseini <linux.anas@gmail.com>, 2007
+# Anas El Husseini <linux.anas@gmail.com>, 2007
+# Arafat Medini <lumina@silverpen.de>, 2003
+# Djihed Afifi <djihed@gmail.com>, 2006
+# Ibrahim Saed <ibraheem5000@gmail.com>, 2012
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002
+# Khaled Hosny, 2006-2019
+# Roddy Shuler <roddy@stanfordalumni.org>, 2014-2015,2017-2018
+# Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002
+# Will Thompson <wjt@endlessm.com>, 2019
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-13 22:09+0100\n"
-"PO-Revision-Date: 2019-03-17 17:07+0200\n"
-"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
-"Language-Team: Arabic <doc@arabeyes.org>\n"
-"Language: ar\n"
+"PO-Revision-Date: 2020-04-13 21:17+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/endless-os/gnome-control-center/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.7.1\n"
-"X-Project-Style: gnome\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: panels/applications/cc-applications-panel.c:747
 msgid "System Bus"
@@ -96,9 +98,7 @@ msgstr "يستطيع تغيير الإعدادات"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"الصلاحيات التالية مبنية في %s، ولا يمكن تغييرها. إذا كنت قلقا من هذا "
-"الصلاحيات، فربما تود إزالة التطبيق."
+msgstr "الصلاحيات التالية مبنية في %s، ولا يمكن تغييرها. إذا كنت قلقا من هذا الصلاحيات، فربما تود إزالة التطبيق."
 
 #: panels/applications/cc-applications-panel.c:936
 msgid "Web Links"
@@ -180,10 +180,9 @@ msgstr "الصلاحيات والوصول"
 
 #: panels/applications/cc-applications-panel.ui:111
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"البيانات والخدمات التي طلب هذا التطبيق الوصول إليها والصلاحيات التي يحتاجها."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "البيانات والخدمات التي طلب هذا التطبيق الوصول إليها والصلاحيات التي يحتاجها."
 
 #: panels/applications/cc-applications-panel.ui:126
 #: panels/applications/cc-applications-panel.ui:132
@@ -193,7 +192,6 @@ msgstr "كمرة"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -205,7 +203,8 @@ msgstr "كمرة"
 #: panels/keyboard/cc-keyboard-option.c:259
 #: panels/keyboard/cc-keyboard-option.c:378
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:96
-#: panels/keyboard/keyboard-shortcuts.c:425 panels/network/network-proxy.ui:126
+#: panels/keyboard/keyboard-shortcuts.c:425
+#: panels/network/network-proxy.ui:126
 #: panels/user-accounts/cc-user-panel.c:926
 #: panels/user-accounts/um-fingerprint-dialog.c:211
 #: subprojects/gvc/gvc-mixer-control.c:1876
@@ -235,11 +234,9 @@ msgstr "لا يمكن تغييرها"
 
 #: panels/applications/cc-applications-panel.ui:180
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"يمكن مراجعة صلاحيات التطبيق كل على حدة في إعدادات <a href=\"privacy"
-"\">الخصوصية</a>."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "يمكن مراجعة صلاحيات التطبيق كل على حدة في إعدادات <a href=\"privacy\">الخصوصية</a>."
 
 #: panels/applications/cc-applications-panel.ui:204
 msgid "Integration"
@@ -262,14 +259,12 @@ msgid "Notifications"
 msgstr "التنبيهات"
 
 #: panels/applications/cc-applications-panel.ui:248
-#, fuzzy
 msgid "Run in background"
-msgstr "الخلفية الحالية"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:254
-#, fuzzy
 msgid "Set Desktop Background"
-msgstr "لا خلفية لسطح المكتب"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:260
 #: panels/applications/cc-applications-panel.ui:266
@@ -340,9 +335,8 @@ msgid "Clear Cache…"
 msgstr "امسح الخبيئة…"
 
 #: panels/applications/cc-snap-row.c:55
-#, fuzzy
 msgid "Add user accounts and change passwords"
-msgstr "أضف أو احذف مستخدمين و غيّر كلمة السر"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:57 panels/applications/cc-snap-row.c:133
 msgid "Play and record sound"
@@ -357,46 +351,40 @@ msgid "Access bluetooth hardware directly"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:63
-#, fuzzy
 msgid "Use bluetooth devices"
-msgstr "إعدادات بلوتوث"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:65
 msgid "Use your camera"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:67
-#, fuzzy
 msgid "Print documents"
-msgstr "الطابعات"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:69
 msgid "Use any connected joystick"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:71
-#, fuzzy
 msgid "Allow connecting to the Docker service"
-msgstr "ا_سمح للاتصالات بالتحكم في الشاشة"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:75
-#, fuzzy
 msgid "Configure network firewall"
-msgstr "اضبط مصْدَر الإدخال"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:77
 msgid "Setup and use privileged FUSE filesystems"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:79
-#, fuzzy
 msgid "Update firmware on this device"
-msgstr "عاير الجهاز"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:81
-#, fuzzy
 msgid "Access hardware information"
-msgstr "معلومات الحساب"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:83
 msgid "Provide entropy to hardware random number generator"
@@ -415,18 +403,16 @@ msgid "Access libvirt service"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:91
-#, fuzzy
 msgid "Change system language and region settings"
-msgstr "غيّر إعدادات الوقت والتاريخ للنظام"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:93
 msgid "Change location settings and providers"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:95
-#, fuzzy
 msgid "Access your location"
-msgstr "خيارات النفاذ"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:97
 msgid "Read system and application logs"
@@ -453,28 +439,24 @@ msgid "Control music and video players"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:111
-#, fuzzy
 msgid "Change low-level network settings"
-msgstr "غيّر إعدادات لوحة المفاتيح"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:113
 msgid "Access the NetworkManager service to read and change network settings"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:115
-#, fuzzy
 msgid "Read access to network settings"
-msgstr "إعدادات الشّبكة"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:117
-#, fuzzy
 msgid "Change network settings"
-msgstr "غيّر إعدادات لوحة المفاتيح"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:119
-#, fuzzy
 msgid "Read network settings"
-msgstr "إعدادات الشّبكة"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:121
 msgid ""
@@ -533,28 +515,24 @@ msgid "Access Storage Framework service"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:149
-#, fuzzy
 msgid "Read process and system information"
-msgstr "معلومات النظام"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:151
 msgid "Monitor and control any running program"
 msgstr ""
 
 #: panels/applications/cc-snap-row.c:153
-#, fuzzy
 msgid "Change the date and time"
-msgstr "غيّر الوقت والتاريخ، بما فيها المنطقة الزمنية"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:155
-#, fuzzy
 msgid "Change time server settings"
-msgstr "غيّر إعدادات لوحة المفاتيح"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:157
-#, fuzzy
 msgid "Change the time zone"
-msgstr "غيّر الخلفية"
+msgstr ""
 
 #: panels/applications/cc-snap-row.c:159
 msgid "Access the UDisks2 service for configuring disks and removable media"
@@ -580,7 +558,8 @@ msgstr ""
 msgid "Control various application permissions and settings"
 msgstr "تحكم في مختلف صلاحيات وإعدادات التطبيقات"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "تطبيق;صلاحيات;إعداد;application;flatpak;permission;setting;"
@@ -653,9 +632,8 @@ msgid "Add Picture…"
 msgstr "جاري إضافة الصورة…"
 
 #: panels/background/cc-background-preview.ui:55
-#, fuzzy
 msgid "Activities"
-msgstr "نشِط"
+msgstr "الأنشطة"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
@@ -665,7 +643,8 @@ msgstr "الخلفية"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "غيّر صورة الخلفية"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "خلفية;شاشة;سطح المكتب;"
@@ -716,7 +695,8 @@ msgstr "بلوتوث"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "شغّل أو أغلق بلوتوث لتوصيل جهازك بالأجهزة الأخرى"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "share;sharing;bluetooth;obex;مشاركة;شارك;بلوتوث;"
@@ -726,17 +706,14 @@ msgid "Camera is turned off"
 msgstr ""
 
 #: panels/camera/cc-camera-panel.ui:43
-#, fuzzy
 msgid "No applications can capture photos or video."
-msgstr "لا تطبيقات تشغل أو تسجل صوتا حاليا."
+msgstr ""
 
 #: panels/camera/cc-camera-panel.ui:77
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
-msgstr ""
-"استخدام الكمرة يتيح للتطبيقات التقاط الصور والفيديو. تعطيل الكمرة قد يتسبب "
-"في ألا تعمل بعض التطبيقات كما يجب."
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly."
+msgstr "استخدام الكمرة يتيح للتطبيقات التقاط الصور والفيديو. تعطيل الكمرة قد يتسبب في ألا تعمل بعض التطبيقات كما يجب."
 
 #: panels/camera/cc-camera-panel.ui:87
 msgid "Allow the applications below to use your camera."
@@ -747,11 +724,11 @@ msgid "No Applications Have Asked for Camera Access"
 msgstr ""
 
 #: panels/camera/gnome-camera-panel.desktop.in.in:4
-#, fuzzy
 msgid "Protect your pictures"
-msgstr "تصفّح لمزيد من الصور"
+msgstr ""
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:19
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
 #: panels/location/gnome-location-panel.desktop.in.in:19
@@ -759,8 +736,7 @@ msgstr "تصفّح لمزيد من الصور"
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
 msgstr "شاشة;قفل;تشخيص;تحطم;خاص;حديث;مؤقت;شبكة;هوية;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
@@ -1021,9 +997,7 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"ستنتج المعايرة إعدادات يمكنك استخدامها للتحكم في ألوان شاشتك. كلما قضيت وقتا "
-"أطول في المعايرة كلما كانت جودة الإعدادات الناتجة أفضل."
+msgstr "ستنتج المعايرة إعدادات يمكنك استخدامها للتحكم في ألوان شاشتك. كلما قضيت وقتا أطول في المعايرة كلما كانت جودة الإعدادات الناتجة أفضل."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -1062,25 +1036,25 @@ msgstr "نوع جهاز العرض"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "حدد نقطة العرض البيضاء المستهدَفة. يجب معايرة معظم شاشات العرض إلى المعيار مضيء D65."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
-msgstr ""
+msgstr "النقطة المرجعية البيضاء للملف"
 
 #: panels/color/cc-color-panel.ui:293
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
+msgstr "يرجى ضبط الشاشة على السطوع المناسب بالنسبة لك. ستكون إدارة الألوان أكثر دقةً في مستوى السطوع هذا."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
+msgstr "بدلاً من ذلك، يمكنك استخدام مستوى السطوع المستخدم مع أحد الملفات الشخصية الأخرى لهذا الجهاز."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -1090,9 +1064,7 @@ msgstr "سطوع جهاز العرض"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"يمكنك استخدام تشكيلات ألوان مستقلة على الحواسيب المختلفة، أو حتى تشكيلات "
-"مستقلة لدرجات الإضاءة المختلفة."
+msgstr "يمكنك استخدام تشكيلات ألوان مستقلة على الحواسيب المختلفة، أو حتى تشكيلات مستقلة لدرجات الإضاءة المختلفة."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -1124,13 +1096,10 @@ msgstr "يحتاج اتصالًا بالإنترنت"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"قد ترغب بالاطلاع على تعليمات استخدام إعدادات الألوان على <a href=\"linux"
-"\">جنوم\\لينكس</a> و <a href=\"osx\">أبل ماك</a> و <a href=\"windows"
-"\">ميكروسوفت وندوز</a>."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "قد ترغب بالاطلاع على تعليمات استخدام إعدادات الألوان على <a href=\"linux\">جنوم\\لينكس</a> و <a href=\"osx\">أبل ماك</a> و <a href=\"windows\">ميكروسوفت وندوز</a>."
 
 #: panels/color/cc-color-panel.ui:607
 #: panels/user-accounts/um-fingerprint-dialog.c:719
@@ -1157,8 +1126,7 @@ msgstr "أ_ضف"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"وجدت مشاكل ولن يعمل ملف الإعداد كما يجب. <a href=\"\">أظهر التفاصيل.</a>"
+msgstr "وجدت مشاكل ولن يعمل ملف الإعداد كما يجب. <a href=\"\">أظهر التفاصيل.</a>"
 
 #: panels/color/cc-color-panel.ui:790
 msgid "Each device needs an up to date color profile to be color managed."
@@ -1223,23 +1191,23 @@ msgstr "شاشة بلازما"
 
 #: panels/color/cc-color-panel.ui:1036
 msgid "LCD (CCFL backlight)"
-msgstr ""
+msgstr "شاشة العرض البلوري السائل LCD (إضاءة خلفية فلورسنت CCFL)"
 
 #: panels/color/cc-color-panel.ui:1041
 msgid "LCD (RGB LED backlight)"
-msgstr ""
+msgstr "شاشة العرض البلوري السائل LCD (إضاءة خلفية من صمام ثنائي باعث للضوء يعمل بالنموذج اللوني RGB أحمر أخضر أزرق)"
 
 #: panels/color/cc-color-panel.ui:1046
 msgid "LCD (white LED backlight)"
-msgstr ""
+msgstr "شاشة العرض البلوري السائل LCD (إضاءة خلفية بيضاء من صمام ثنائي LED)"
 
 #: panels/color/cc-color-panel.ui:1051
 msgid "Wide gamut LCD (CCFL backlight)"
-msgstr ""
+msgstr "شاشة LCD ذات سلسلة لونية كبيرة (إضاءة خلفية فلورسنت CCFL)"
 
 #: panels/color/cc-color-panel.ui:1056
 msgid "Wide gamut LCD (RGB LED backlight)"
-msgstr ""
+msgstr "شاشة LCD ذات سلسلة لونية كبيرة (إضاءة خلفية من صمام ثنائي يعمل بالنموذج اللوني RGB أحمر أخضر أزرق)"
 
 #: panels/color/cc-color-panel.ui:1073
 msgctxt "Calibration quality"
@@ -1373,7 +1341,8 @@ msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
 msgstr "عاير ألوان أجهزتك، مثل أجهزة العرض و الكمرات و الطابعات"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "لون;ألوان;إعداد;تشكيل;معايرة;طابعة;شاشة;"
@@ -1382,7 +1351,8 @@ msgstr "لون;ألوان;إعداد;تشكيل;معايرة;طابعة;شاشة
 msgid "Other…"
 msgstr "آخر…"
 
-#: panels/common/cc-language-chooser.c:127 panels/region/cc-input-chooser.c:178
+#: panels/common/cc-language-chooser.c:127
+#: panels/region/cc-input-chooser.c:178
 msgid "More…"
 msgstr "المزيد…"
 
@@ -1399,14 +1369,12 @@ msgid "_Select"
 msgstr "ا_ختر"
 
 #: panels/common/cc-permission-infobar.ui:20
-#, fuzzy
 msgid "Unlock…"
-msgstr "ا_فتح"
+msgstr ""
 
 #: panels/common/cc-permission-infobar.ui:45
-#, fuzzy
 msgid "Unlock to Change Settings"
-msgstr "يستطيع تغيير الإعدادات"
+msgstr ""
 
 #: panels/common/cc-permission-infobar.ui:55
 msgid "Some settings must be unlocked before they can be changed."
@@ -1484,7 +1452,8 @@ msgstr "%s %s"
 msgid "0 seconds"
 msgstr "أقل من ثانية"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1672,7 +1641,8 @@ msgstr "ص \\ م"
 msgid "Change the date and time, including time zone"
 msgstr "غيّر الوقت والتاريخ، بما فيها المنطقة الزمنية"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "ساعة;توقيت;منطقة زمنية;منطقة;"
@@ -1718,7 +1688,9 @@ msgstr "التطبيقات المبدئية"
 msgid "Configure Default Applications"
 msgstr "اضبط التطبيقات المبدئية"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "مبدئي;تطبيق;مفضل;وسائط;"
@@ -1728,15 +1700,14 @@ msgstr "مبدئي;تطبيق;مفضل;وسائط;"
 msgid "Learn more"
 msgstr "اعرف المزيد"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:145
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
 msgstr ""
-"الإبلاغ عن المشاكل التقنية يساعدنا على تحسين %s. ترسل البلاغات مُجهّلة بدون أي "
-"معلومات شخصية."
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:30
 msgid "Problem Reporting"
@@ -1819,7 +1790,8 @@ msgstr "إعدادات الشاشة"
 msgid "Displays"
 msgstr "الشاشات"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:464
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1895,9 +1867,7 @@ msgstr "عطّل مؤقتًا حتى الغد"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"تجعل الإضاءة الليلية ألوان الشاشة أدفأ. يساعد هذا على تفادي إجهاد العين "
-"و الأرق."
+msgstr "تجعل الإضاءة الليلية ألوان الشاشة أدفأ. يساعد هذا على تفادي إجهاد العين و الأرق."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1929,14 +1899,16 @@ msgstr ":"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:354
-#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "ص"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:250
 #: panels/display/cc-night-light-page.ui:370
-#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "م"
 
@@ -1953,11 +1925,11 @@ msgstr "حرارة اللون"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "اختر كيف تستخدم الشاشات و أجهزة عرض الشرائح"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
 msgstr "لوحة;عرض;شاشة;ميز;ليل;إضاءة;شروق;غروب;لون;"
 
 #: panels/info-overview/cc-info-overview-panel.c:301
@@ -1988,15 +1960,13 @@ msgid "Wayland"
 msgstr "وايلاند"
 
 #: panels/info-overview/cc-info-overview-panel.c:548
-#, fuzzy
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "غير معروف"
 
 #: panels/info-overview/cc-info-overview-panel.ui:54
-#, fuzzy
 msgid "Device Name"
-msgstr "اسم الجهاز"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:76
 msgid "Memory"
@@ -2024,23 +1994,20 @@ msgid "Version"
 msgstr "الإصدار"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
-#, fuzzy
 msgid "OS Type"
-msgstr "النوع"
+msgstr "نوع نظام التشغيل"
 
 #: panels/info-overview/cc-info-overview-panel.ui:144
-#, fuzzy
 msgid "Windowing System"
-msgstr "برمجيات وندوز"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:152
 msgid "Virtualization"
 msgstr "المحاكاة"
 
 #: panels/info-overview/cc-info-overview-panel.ui:161
-#, fuzzy
 msgid "Software Updates"
-msgstr "استخدام البرمجيات"
+msgstr ""
 
 #. Translators: A link to the terms of use of Endless OS.
 #: panels/info-overview/cc-info-overview-panel.ui:172
@@ -2049,9 +2016,8 @@ msgid "_Endless Terms of Use"
 msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:195
-#, fuzzy
 msgid "Rename Device"
-msgstr "أزِل جهازا"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:212
 msgid ""
@@ -2060,9 +2026,8 @@ msgid ""
 msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:230
-#, fuzzy
 msgid "_Rename"
-msgstr "ا_سم المستخدم"
+msgstr "غيّر الا_سم"
 
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:3
 msgid "About"
@@ -2078,13 +2043,9 @@ msgstr "اعرض معلومات عن نظامك"
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
-#, fuzzy
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgstr ""
-"جهاز;نظام;معلومات;ذاكرة;معالج;إصدارة;تطبيق;مبدئي;مفضل;قرص مضغوط;دي في دي;يو "
-"اس بي;صوت;فيديو;قرص;قابل للفصل;وسائط;تشغيل تلقائي;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2259,9 +2220,8 @@ msgstr "شغّل أو عطّل التباين العال"
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:8
 #: panels/keyboard/cc-keyboard-panel.ui:72
-#, fuzzy
 msgid "Alternate Characters Key"
-msgstr "مفتاح الحروف البديلة"
+msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:28
 msgid ""
@@ -2270,34 +2230,28 @@ msgid ""
 msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:45
-#, fuzzy
 msgid "Left Alt"
-msgstr "Left+Right Alt"
+msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:61
-#, fuzzy
 msgid "Right Alt"
-msgstr "Left+Right Alt"
+msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:77
-#, fuzzy
 msgid "Left Super"
-msgstr "الإبهام الأيسر"
+msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:93
-#, fuzzy
 msgid "Right Super"
-msgstr "الإبهام الأيمن"
+msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:109
-#, fuzzy
 msgid "Menu key"
-msgstr "مفتاح الأمن"
+msgstr ""
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:125
-#, fuzzy
 msgid "Right Ctrl"
-msgstr "النصف الأيمن"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-manager.c:501
 #: panels/keyboard/cc-keyboard-manager.c:509
@@ -2308,7 +2262,6 @@ msgstr "اختصارات مخصصة"
 #. Translators: This key is also known as 'third level
 #. * chooser'. AltGr is often used for this purpose. See
 #. * https://live.gnome.org/Design/SystemSettings/RegionAndLanguage
-#.
 #: panels/keyboard/cc-keyboard-option.c:337
 msgid "Alternative Characters Key"
 msgstr "مفتاح الحروف البديلة"
@@ -2316,51 +2269,43 @@ msgstr "مفتاح الحروف البديلة"
 #. Translators: The Compose key is used to initiate key
 #. * sequences that are combined to form a single character.
 #. * See http://en.wikipedia.org/wiki/Compose_key
-#.
 #: panels/keyboard/cc-keyboard-option.c:346
 msgid "Compose Key"
 msgstr "مفتاح التركيب"
 
 #: panels/keyboard/cc-keyboard-option.c:351
-#, fuzzy
 msgid "Modifiers-only switch to next source"
-msgstr "تحول إلى المصدر التالي"
+msgstr "المُعدِلات-انتقل فقط للمصدر التالي"
 
 #: panels/keyboard/cc-keyboard-panel.c:94
-#, fuzzy
 msgctxt "keyboard key"
 msgid "Right Ctrl"
-msgstr "النصف الأيمن"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:95
-#, fuzzy
 msgctxt "keyboard key"
 msgid "Menu Key"
-msgstr "مفاتيح ال_فأرة"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:96
-#, fuzzy
 msgctxt "keyboard key"
 msgid "Left Super"
-msgstr "الإبهام الأيسر"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:97
-#, fuzzy
 msgctxt "keyboard key"
 msgid "Right Super"
-msgstr "الإبهام الأيمن"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:98
-#, fuzzy
 msgctxt "keyboard key"
 msgid "Left Alt"
-msgstr "Left+Right Alt"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:99
-#, fuzzy
 msgctxt "keyboard key"
 msgid "Right Alt"
-msgstr "Left+Right Alt"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:201
 msgid "Reset All Shortcuts?"
@@ -2370,8 +2315,7 @@ msgstr "أتريد تصفير كل الاختصارات؟"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"تصفير الاختصارات قد يؤثر على اختصاراتك المخصوصة. لا يمكن التراجع عن هذا."
+msgstr "تصفير الاختصارات قد يؤثر على اختصاراتك المخصوصة. لا يمكن التراجع عن هذا."
 
 #: panels/keyboard/cc-keyboard-panel.c:208
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:346
@@ -2389,9 +2333,8 @@ msgid "Reset the shortcut to its default value"
 msgstr "أعِد الاختصار إلى قيمته المبدئية"
 
 #: panels/keyboard/cc-keyboard-panel.ui:73
-#, fuzzy
 msgid "Hold down and type to enter different characters"
-msgstr "لا تحتوي كلمة السر الجديدة على حروف مختلفة كفاية"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.ui:147
 msgid "Reset All…"
@@ -2406,9 +2349,10 @@ msgid "No keyboard shortcut found"
 msgstr "لم يُعثر على أي اختصارات للوحة المفاتيح"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:413
-#, fuzzy, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr "الاختصار %s مستخدم حاليا من أجل <b>%s</b>. إذا استبدلته، فيُعطّل %s."
+#, c-format
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:581
 msgid "Set Custom Shortcut"
@@ -2420,9 +2364,9 @@ msgstr "حدد اختصارًا"
 
 #. TRANSLATORS: %s is replaced with a description of the keyboard shortcut
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:592
-#, fuzzy, c-format
+#, c-format
 msgid "Enter new shortcut to change %s."
-msgstr "أدخل اختصارًا جديدًا لتغيير <b>%s</b>."
+msgstr ""
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:1016
 msgid "Add Custom Shortcut"
@@ -2483,37 +2427,32 @@ msgstr "اختصارات لوحة المفاتيح"
 msgid "View and change keyboard shortcuts and set your typing preferences"
 msgstr "اعرض و غيّر اختصارات لوحة المفاتيح و اضبط خيارات الكتابة"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr "اختصار;منطقة عمل;نافذة;تحجيم;تقريب;تباين;إدخال;مصدر;قفل;"
 
 #: panels/location/cc-location-panel.ui:31
-#, fuzzy
 msgid "Location services turned off"
-msgstr "خدمات التموضع"
+msgstr ""
 
 #: panels/location/cc-location-panel.ui:40
-#, fuzzy
 msgid "No applications can obtain location information."
-msgstr "لا تطبيقات تشغل أو تسجل صوتا حاليا."
+msgstr ""
 
 #: panels/location/cc-location-panel.ui:74
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy."
-msgstr ""
-"تسمح خدمات التموضع للتطبيقات بمعرفة مكانك. استخدام الشبكات اللاسلكية "
-"و الهاتف المحمول يزيد من دقة هذه الخدمات."
+msgstr "تسمح خدمات التموضع للتطبيقات بمعرفة مكانك. استخدام الشبكات اللاسلكية و الهاتف المحمول يزيد من دقة هذه الخدمات."
 
 #: panels/location/cc-location-panel.ui:83
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"يستخدم خدمة تموضع موزيلا: <a href='https://location.services.mozilla.com/"
-"privacy'>سياسة الخصوصية</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "يستخدم خدمة تموضع موزيلا: <a href='https://location.services.mozilla.com/privacy'>سياسة الخصوصية</a>"
 
 #: panels/location/cc-location-panel.ui:95
 msgid "Allow the applications below to determine your location."
@@ -2534,9 +2473,8 @@ msgid ""
 msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:46
-#, fuzzy
 msgid "Blank Screen Delay"
-msgstr "شاشة _فارغة"
+msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:47
 msgid "Period of inactivity after which the screen will go blank."
@@ -2547,62 +2485,69 @@ msgid "Automatic Screen _Lock"
 msgstr "إي_صاد تلقائي للشاشة"
 
 #: panels/lock/cc-lock-panel.ui:84
-#, fuzzy
 msgid "Automatic _Screen Lock Delay"
-msgstr "إي_صاد تلقائي للشاشة"
+msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:85
-msgid "Period after the screen blanks when the screen is automatically locked."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
 msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:105
-#, fuzzy
 msgid "Show _Notifications on Lock Screen"
-msgstr "أظهر ال_تنبيهات عندما يكون موصدًا"
+msgstr ""
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:149
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "تطفأ الشاشة"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:153
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "٣٠ ثانية"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:157
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "دقيقة واحدة"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:161
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "دقيقتين"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:165
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "٣ دقائق"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:169
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "٥ دقائق"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:173
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "٣٠ دقيقة"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:177
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2673,9 +2618,8 @@ msgid "Screen Lock"
 msgstr "قفل الشاشة"
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:4
-#, fuzzy
 msgid "Lock your screen"
-msgstr "أوصد الشاشة"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:32
 msgid "Metrics services turned off"
@@ -2686,9 +2630,8 @@ msgid "No anonymous usage data will be sent to Endless."
 msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:75
-#, fuzzy
 msgid "_Metrics"
-msgstr "المعيار"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:93
 msgid ""
@@ -2705,24 +2648,19 @@ msgid "_Reset Metrics Identifier"
 msgstr ""
 
 #: panels/microphone/cc-microphone-panel.ui:34
-#, fuzzy
 msgid "Microphone is turned off"
-msgstr "إطفاء الشاشة"
+msgstr ""
 
 #: panels/microphone/cc-microphone-panel.ui:43
-#, fuzzy
 msgid "No applications can record sound."
-msgstr "لا يوجد أي تطبيقات"
+msgstr ""
 
 #: panels/microphone/cc-microphone-panel.ui:77
-#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
 "properly."
 msgstr ""
-"استخدام الميكروفون يتيح للتطبيقات تسجيل الصوت. تعطيل الميكروفون قد يتسبب في "
-"ألا تعمل بعض التطبيقات كما يجب."
 
 #: panels/microphone/cc-microphone-panel.ui:87
 msgid "Allow the applications below to use your microphone."
@@ -2768,8 +2706,10 @@ msgstr "سرعة الفأرة"
 msgid "Double-click timeout"
 msgstr "مهلة النقر المزدوج"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:267 panels/mouse/cc-mouse-panel.ui:430
 msgid "Natural Scrolling"
 msgstr "تمرير طبيعي"
@@ -2808,7 +2748,7 @@ msgstr "جرب النقر والنقر المزدوج والتمرير"
 
 #: panels/mouse/cc-mouse-test.c:137
 msgid "Five clicks, GEGL time!"
-msgstr ""
+msgstr "خمس نقرات، ويحين وقت GEGL!"
 
 #: panels/mouse/cc-mouse-test.c:142
 msgid "Double click, primary button"
@@ -2843,7 +2783,9 @@ msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
 msgstr "غيّر حساسية الشاشة و لوح اللمس و اختر اليد اليمنى أم اليسرى"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr "فأرة;مؤشر;نقر;مزدوج;زر;لمس;"
@@ -2869,7 +2811,8 @@ msgstr "‏VPN"
 msgid "Not set up"
 msgstr "غير مُعَد"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:198
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2922,8 +2865,8 @@ msgstr "أتريد تشغيل نقطة بث واي فاي؟"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
 msgstr ""
 
@@ -2942,14 +2885,12 @@ msgid "Password"
 msgstr "كلمة السر"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:83
-#, fuzzy
 msgid "Generate Random Password"
-msgstr "ولِّد كلمة سر"
+msgstr ""
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:84
-#, fuzzy
 msgid "Autogenerate Password"
-msgstr "ولِّد كلمة سر"
+msgstr ""
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:130
 msgid "_Turn On"
@@ -3022,12 +2963,9 @@ msgstr "مستقر"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"سيتم استخدام عنوان التحكم بالنفاذ للوسط أو عنوان MAC الذي تم إدخاله هنا "
-"كعنوان الجهاز الخاص بجهاز الشبكة الذي يتم تنشيط هذا الاتصال عليه. تُعرف هذه "
-"الميزة باستنساخ أو محاكاة عنوان MAC. مثال: 00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "سيتم استخدام عنوان التحكم بالنفاذ للوسط أو عنوان MAC الذي تم إدخاله هنا كعنوان الجهاز الخاص بجهاز الشبكة الذي يتم تنشيط هذا الاتصال عليه. تُعرف هذه الميزة باستنساخ أو محاكاة عنوان MAC. مثال: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3206,7 +3144,7 @@ msgstr "لا شيء"
 
 #: panels/network/connection-editor/ce-page-security.c:283
 msgid "WEP 40/128-bit Key (Hex or ASCII)"
-msgstr ""
+msgstr "مفتاح WEP 40/128-بت (نظام عد ستة عشري أو أسكي)"
 
 #: panels/network/connection-editor/ce-page-security.c:293
 msgid "WEP 128-bit Passphrase"
@@ -3216,11 +3154,11 @@ msgstr "عبارة سر WEP‏ 128-بتة"
 #: panels/network/wireless-security/ws-dynamic-wep.ui:20
 #: panels/network/wireless-security/ws-wpa-eap.ui:25
 msgid "LEAP"
-msgstr ""
+msgstr "LEAP"
 
 #: panels/network/connection-editor/ce-page-security.c:319
 msgid "Dynamic WEP (802.1x)"
-msgstr ""
+msgstr "ديناميكية الويب (802.1x)"
 
 #: panels/network/connection-editor/ce-page-security.c:333
 msgid "WPA & WPA2 Personal"
@@ -3231,9 +3169,8 @@ msgid "WPA & WPA2 Enterprise"
 msgstr "‏WPA و WPA2 للمؤسسات"
 
 #: panels/network/connection-editor/ce-page-security.c:361
-#, fuzzy
 msgid "WPA3 Personal"
-msgstr "شخصي"
+msgstr ""
 
 #: panels/network/connection-editor/details-page.ui:18
 msgid "Signal Strength"
@@ -3249,9 +3186,8 @@ msgid "Hardware Address"
 msgstr "عنوان العتاد"
 
 #: panels/network/connection-editor/details-page.ui:162
-#, fuzzy
 msgid "Supported Frequencies"
-msgstr "تشكيلات ICC المدعومة"
+msgstr ""
 
 #: panels/network/connection-editor/details-page.ui:180
 #: panels/network/net-device-ethernet.c:155
@@ -3285,7 +3221,8 @@ msgstr ""
 
 #: panels/network/connection-editor/details-page.ui:439
 msgid ""
-"Software updates and other large downloads will not be started automatically."
+"Software updates and other large downloads will not be started "
+"automatically."
 msgstr ""
 
 #: panels/network/connection-editor/ethernet-page.ui:25
@@ -3300,7 +3237,7 @@ msgstr "عنوان _MAC"
 
 #: panels/network/connection-editor/ethernet-page.ui:105
 msgid "M_TU"
-msgstr ""
+msgstr "M_TU"
 
 #: panels/network/connection-editor/ethernet-page.ui:122
 #: panels/network/connection-editor/wifi-page.ui:102
@@ -3322,7 +3259,7 @@ msgstr "تلقائي (DHCP)"
 #: panels/network/connection-editor/ip4-page.ui:55
 #: panels/network/connection-editor/ip6-page.ui:69
 msgid "Link-Local Only"
-msgstr ""
+msgstr "رابط محلي فقط"
 
 #: panels/network/connection-editor/ip4-page.ui:69
 #: panels/network/connection-editor/ip6-page.ui:83
@@ -3337,9 +3274,8 @@ msgstr "عطّل"
 
 #: panels/network/connection-editor/ip4-page.ui:97
 #: panels/network/connection-editor/ip6-page.ui:111
-#, fuzzy
 msgid "Shared to other computers"
-msgstr "مشتركة مع حواسيب أخرى"
+msgstr ""
 
 #: panels/network/connection-editor/ip4-page.ui:125
 #: panels/network/connection-editor/ip6-page.ui:139
@@ -3447,11 +3383,10 @@ msgstr "تعذّر استيراد اتصال VPN"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
+msgstr "تعذر قراءة ملف '%s' أو ربما لا يحتوي على معلومات اتصال VPN (شبكة خاصة افتراضية) معروفة\n\nخطأ: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3481,7 +3416,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
+msgstr "تعذر تصدير اتصال الشبكة الخاصة الافتراضية '%s' إلى %s.\n\nخطأ: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3493,33 +3428,31 @@ msgstr "(عطل: تعذّر تحميل محرر اتصالات VPN)"
 
 #: panels/network/connection-editor/wifi-page.ui:20
 msgid "_SSID"
-msgstr ""
+msgstr "_SSID"
 
 #: panels/network/connection-editor/wifi-page.ui:36
 msgid "_BSSID"
-msgstr ""
+msgstr "_BSSID"
 
 #: panels/network/gnome-network-panel.desktop.in.in:4
 msgid "Control how you connect to the Internet"
 msgstr "تحكم في اتصالك بالإنترنت"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr ""
-"الشبكة; عنوان الآي بي; بروكسي/حاسب وكيل; شبكة واسعة; نطاق عريض; موديم; "
-"بلوتوث; شبكة خاصة افتراضية; نظام أسماء الخوادم;"
+msgstr "الشبكة; عنوان الآي بي; بروكسي/حاسب وكيل; شبكة واسعة; نطاق عريض; موديم; بلوتوث; شبكة خاصة افتراضية; نظام أسماء الخوادم;"
 
 #: panels/network/gnome-wifi-panel.desktop.in.in:4
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "تحكم في اتصالك بشبكات واي فاي"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
-msgstr ""
-"الشبكة; الاتصال اللاسلكي; خدمة الواي فاي; واي فاي; عنوان الآي بي; الشبكة "
-"المحلية; النطاق العريض; أسماء النطاقات; نقطة الاتصال النقالة;"
+msgstr "الشبكة; الاتصال اللاسلكي; خدمة الواي فاي; واي فاي; عنوان الآي بي; الشبكة المحلية; النطاق العريض; أسماء النطاقات; نقطة الاتصال النقالة;"
 
 #: panels/network/net-device-ethernet.c:96
 msgid "never"
@@ -3541,9 +3474,9 @@ msgstr "آخر استخدام"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
 #: panels/network/net-device-ethernet.c:252
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "سلكية"
 
@@ -3573,7 +3506,8 @@ msgstr "ان_سَ"
 msgid "Known Wi-Fi Networks"
 msgstr "شبكات واي فاي المعروفة"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1107
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3624,7 +3558,6 @@ msgstr "لا يُنصَح بهذا مع الشبكات العامة غير ال�
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:66 panels/network/net-vpn.c:163
 #, c-format
 msgid "%s VPN"
@@ -3792,22 +3725,22 @@ msgstr "الأسرار مطلوبة لكن لم تُعطَ"
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:112
 msgid "802.1x supplicant disconnected"
-msgstr ""
+msgstr "802.1x تم فصل طلب المصادقة"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:116
 msgid "802.1x supplicant configuration failed"
-msgstr ""
+msgstr "فشلت تهيئة البرنامج الملتمس 802.1x supplicant"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:120
 msgid "802.1x supplicant failed"
-msgstr ""
+msgstr "802.1x فشل طلب المصادقة"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:124
 msgid "802.1x supplicant took too long to authenticate"
-msgstr ""
+msgstr "استغرق الطالب 802.1x وقتاً طويلاً لإجراء المصادقة"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:128
@@ -3877,7 +3810,7 @@ msgstr "الخط مقطوع"
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:180
 msgid "No carrier could be established"
-msgstr ""
+msgstr "ليست هناك موجة حاملة يمكن إرساء الاتصال بها"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:184
@@ -3937,7 +3870,7 @@ msgstr "اختفى الاتصال"
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:228
 msgid "Existing connection was assumed"
-msgstr ""
+msgstr "تم افتراض الاتصال الحالي"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:232
@@ -3957,17 +3890,17 @@ msgstr "لم تُدرج شريحة الهاتف"
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:244
 msgid "SIM Pin required"
-msgstr ""
+msgstr "رمز Pin الخاص ببطاقة SIM مطلوب"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:248
 msgid "SIM Puk required"
-msgstr ""
+msgstr "رقم Puk الخاص ببطاقة SIM مطلوب"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:252
 msgid "SIM wrong"
-msgstr ""
+msgstr "بطاقة SIM خاطئة"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:256
@@ -3986,7 +3919,7 @@ msgstr "الكبل مفصول"
 
 #: panels/network/wireless-security/eap-method.c:92
 msgid "undefined error in 802.1X security (wpa-eap)"
-msgstr ""
+msgstr "خطأ غير معروف في تأمين 802.1X (wpa-eap)  "
 
 #: panels/network/wireless-security/eap-method.c:195
 msgid "no file selected"
@@ -3994,19 +3927,19 @@ msgstr "لم تحدد أي ملف"
 
 #: panels/network/wireless-security/eap-method.c:222
 msgid "unspecified error validating eap-method file"
-msgstr ""
+msgstr "خطأ غير محدد أثناء التحقق من صحة ملف طريقة eap"
 
 #: panels/network/wireless-security/eap-method.c:397
 msgid "DER, PEM, or PKCS#12 private keys (*.der, *.pem, *.p12, *.key)"
-msgstr ""
+msgstr "DER, PEM, أو PKCS#12 مفتاح خاص (*.der, *.pem, *.p12, *.key)"
 
 #: panels/network/wireless-security/eap-method.c:400
 msgid "DER or PEM certificates (*.der, *.pem, *.crt, *.cer)"
-msgstr ""
+msgstr "شهادات DER أو PEM (*.der, *.pem, *.crt, *.cer)"
 
 #: panels/network/wireless-security/eap-method-fast.c:87
 msgid "missing EAP-FAST PAC file"
-msgstr ""
+msgstr "ملف PAC EAP-FAST مفقود"
 
 #: panels/network/wireless-security/eap-method-fast.c:347
 msgid "Choose a PAC file"
@@ -4020,13 +3953,13 @@ msgstr "ملفات PAC‏ (*.pac)"
 #: panels/network/wireless-security/eap-method-peap.ui:21
 #: panels/network/wireless-security/eap-method-ttls.ui:37
 msgid "GTC"
-msgstr ""
+msgstr "GTC"
 
 #: panels/network/wireless-security/eap-method-fast.ui:17
 #: panels/network/wireless-security/eap-method-peap.ui:13
 #: panels/network/wireless-security/eap-method-ttls.ui:21
 msgid "MSCHAPv2"
-msgstr ""
+msgstr "MSCHAPv2"
 
 #: panels/network/wireless-security/eap-method-fast.ui:29
 msgid "Anonymous"
@@ -4058,15 +3991,15 @@ msgstr "الاستيثاق ال_داخلي"
 
 #: panels/network/wireless-security/eap-method-fast.ui:144
 msgid "Allow automatic PAC pro_visioning"
-msgstr ""
+msgstr "السماح بالعرض التلقائي للحزمة الاحترافية"
 
 #: panels/network/wireless-security/eap-method-leap.c:64
 msgid "missing EAP-LEAP username"
-msgstr ""
+msgstr "اسم مستخدم EAP-LEAP مفقود"
 
 #: panels/network/wireless-security/eap-method-leap.c:73
 msgid "missing EAP-LEAP password"
-msgstr ""
+msgstr "كلمة مرور EAP-LEAP مفقودة"
 
 #: panels/network/wireless-security/eap-method-leap.ui:17
 #: panels/network/wireless-security/eap-method-simple.ui:17
@@ -4098,11 +4031,11 @@ msgstr "أظهر _كلمة السر"
 #: panels/network/wireless-security/eap-method-peap.c:87
 #, c-format
 msgid "invalid EAP-PEAP CA certificate: %s"
-msgstr ""
+msgstr "شهادة بروتكول EAP-PEAP غير صالحة: %s"
 
 #: panels/network/wireless-security/eap-method-peap.c:96
 msgid "invalid EAP-PEAP CA certificate: no certificate specified"
-msgstr ""
+msgstr "شهادة EAP-PEAP CA غير صحيحة: لم يتم تحديد الشهادة"
 
 #: panels/network/wireless-security/eap-method-peap.c:328
 #: panels/network/wireless-security/eap-method-tls.c:507
@@ -4114,7 +4047,7 @@ msgstr "اختر شهادة \"سلطة شهادات\""
 #: panels/network/wireless-security/eap-method-ttls.ui:33
 #: panels/network/wireless-security/ws-wpa-eap.ui:15
 msgid "MD5"
-msgstr ""
+msgstr "MD5"
 
 #: panels/network/wireless-security/eap-method-peap.ui:36
 msgid "Version 0"
@@ -4142,34 +4075,34 @@ msgstr "إ_صدارة PEAP:"
 
 #: panels/network/wireless-security/eap-method-simple.c:78
 msgid "missing EAP username"
-msgstr ""
+msgstr "اسم المستخدم EAP مفقود"
 
 #: panels/network/wireless-security/eap-method-simple.c:91
 msgid "missing EAP password"
-msgstr ""
+msgstr "كلمة مرور EAP مفقودة"
 
 #: panels/network/wireless-security/eap-method-tls.c:91
 msgid "missing EAP-TLS identity"
-msgstr ""
+msgstr "هوية EAP-TLS مفقودة"
 
 #: panels/network/wireless-security/eap-method-tls.c:101
 #, c-format
 msgid "invalid EAP-TLS CA certificate: %s"
-msgstr ""
+msgstr "شهادة EAP-TLS CA غير صحيحة: %s"
 
 #: panels/network/wireless-security/eap-method-tls.c:111
 msgid "invalid EAP-TLS CA certificate: no certificate specified"
-msgstr ""
+msgstr "شهادة بروتكول EAP-TLS غير صالحة: لم يتم تحديد أي شهادة"
 
 #: panels/network/wireless-security/eap-method-tls.c:125
 #, c-format
 msgid "invalid EAP-TLS private-key: %s"
-msgstr ""
+msgstr "مفتاح EAP-TLS الخاص غير صحيح: %s"
 
 #: panels/network/wireless-security/eap-method-tls.c:135
 #, c-format
 msgid "invalid EAP-TLS user-certificate: %s"
-msgstr ""
+msgstr "شهادة مستخدم EAP-TLS غير صحيحة: %s"
 
 #: panels/network/wireless-security/eap-method-tls.c:266
 msgid "Unencrypted private keys are insecure"
@@ -4177,16 +4110,10 @@ msgstr "المفاتيح السرية غير المُعمّاة ليست آمن�
 
 #: panels/network/wireless-security/eap-method-tls.c:269
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"المفتاح السري المحدد ليس محميًا بكلمة سر.  قد يتسبب هذا في تقويض اعتمادات "
-"الأمان. رجاء اختر مفتاحًا محميًا بكلمة سر.\n"
-"\n"
-"(يمكنك حماية مفتاحك بكلمة سر باستخدام openssl)"
+msgstr "المفتاح السري المحدد ليس محميًا بكلمة سر.  قد يتسبب هذا في تقويض اعتمادات الأمان. رجاء اختر مفتاحًا محميًا بكلمة سر.\n\n(يمكنك حماية مفتاحك بكلمة سر باستخدام openssl)"
 
 #: panels/network/wireless-security/eap-method-tls.c:500
 msgid "Choose your personal certificate"
@@ -4215,11 +4142,11 @@ msgstr "كل_مة سر المفتاح السري"
 #: panels/network/wireless-security/eap-method-ttls.c:98
 #, c-format
 msgid "invalid EAP-TTLS CA certificate: %s"
-msgstr ""
+msgstr "شهادة مرجع مصدق EAP-TTLS غير صالحة: %s"
 
 #: panels/network/wireless-security/eap-method-ttls.c:106
 msgid "invalid EAP-TTLS CA certificate: no certificate specified"
-msgstr ""
+msgstr "شهادة EAP-TTLS CA غير صحيحة: لم يتم تحديد أية شهادة"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:13
 msgid "PAP"
@@ -4231,7 +4158,7 @@ msgstr "MSCHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:25
 msgid "MSCHAPv2 (no EAP)"
-msgstr ""
+msgstr "MSCHAPv2 (بدون EAP)"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:29
 msgid "CHAP"
@@ -4245,7 +4172,7 @@ msgstr "الن_طاق"
 
 #: panels/network/wireless-security/wireless-security.c:71
 msgid "Unknown error validating 802.1X security"
-msgstr ""
+msgstr "حدث خطأ غير معروف أثناء التحقق من أمان 802.1X"
 
 #: panels/network/wireless-security/ws-dynamic-wep.ui:15
 #: panels/network/wireless-security/ws-wpa-eap.ui:20
@@ -4255,12 +4182,12 @@ msgstr "TLS"
 #: panels/network/wireless-security/ws-dynamic-wep.ui:25
 #: panels/network/wireless-security/ws-wpa-eap.ui:30
 msgid "PWD"
-msgstr ""
+msgstr "PWD"
 
 #: panels/network/wireless-security/ws-dynamic-wep.ui:30
 #: panels/network/wireless-security/ws-wpa-eap.ui:35
 msgid "FAST"
-msgstr ""
+msgstr "سريع"
 
 #: panels/network/wireless-security/ws-dynamic-wep.ui:35
 #: panels/network/wireless-security/ws-wpa-eap.ui:40
@@ -4280,41 +4207,41 @@ msgstr "الا_ستيثاق"
 
 #: panels/network/wireless-security/ws-leap.c:65
 msgid "missing leap-username"
-msgstr ""
+msgstr "اسم المستخدم مفقود"
 
 #: panels/network/wireless-security/ws-leap.c:74
 msgid "missing leap-password"
-msgstr ""
+msgstr "كلمة المرور مفقودة"
 
 #: panels/network/wireless-security/ws-wep-key.c:107
 msgid "missing wep-key"
-msgstr ""
+msgstr "مفتاح ويب مفقود"
 
 #: panels/network/wireless-security/ws-wep-key.c:116
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
+msgstr "مفتاح wep غير صالح: يجب أن يحتوي مفتاح بطول %zu على أرقام هيكس فقط"
 
 #: panels/network/wireless-security/ws-wep-key.c:124
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
+msgstr "مفتاح wep غير صالح: يجب أن يحتوي مفتاح بطول %zu على رموز أسكي فقط"
 
 #: panels/network/wireless-security/ws-wep-key.c:130
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
+msgstr "مفتاح wep غير صالح: طول مفتاح خاطئ %zu. يجب أن يكون مفتاح أي من طول 13/05 (أسكي) أو 10/26 (هيكس)"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 msgid "invalid wep-key: passphrase must be non-empty"
-msgstr ""
+msgstr "مفتاح ويب غير صحيح: يجب أن تكون عبارة المرور غير فارغة"
 
 #: panels/network/wireless-security/ws-wep-key.c:139
 msgid "invalid wep-key: passphrase must be shorter than 64 characters"
-msgstr ""
+msgstr "مفتاح wep غير صالح: يجب أن تكون عبارة المرور أقصر من 64 حرف"
 
 #: panels/network/wireless-security/ws-wep-key.ui:11
 msgid "1 (Default)"
@@ -4345,11 +4272,11 @@ msgstr "_فهرس WEP"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
+msgstr "wpa-psk غير صحيح: طول مفتاح غير صحيح %zu. يجب أن يكون [8,63] بايت أو 64 رقماً سداسياً"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:79
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr ""
+msgstr "wpa-psk غير صالح: لا يمكن تفسير المفتاح مع 64 بايت كرقم هيكس"
 
 #: panels/network/wireless-security/ws-wpa-psk.ui:42
 msgid "_Type"
@@ -4378,7 +4305,8 @@ msgid ""
 "are disabled."
 msgstr "ستظل التنبيهات ظاهرة في قائمة التنبيهات عند تعطيل النوافذ المنبثقة."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4416,7 +4344,8 @@ msgstr "تنبيهات شاشة ال_قفل"
 msgid "Control which notifications are displayed and what they show"
 msgstr "تحكم في أي التنبيهات تُعرض و ماذا تعرِض"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "تنبيهات;لوحة;رسالة;منبثق;"
@@ -4439,11 +4368,10 @@ msgstr "خطأ أثناء إزالة الحساب"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:991
-#, fuzzy, c-format
+#, c-format
 msgid "%s removed"
-msgstr "أزيل <b>%s</b>"
+msgstr ""
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:3
 msgid "Online Accounts"
@@ -4456,14 +4384,15 @@ msgstr "اتصل بحساباتك على الإنترنت و اختر ما ال
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 msgstr "جوجل;جووجل;فيسبوك;تويتر;ياهو;وب;ويب;محادثة;تقويم;بريد;اتصال;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:54
 msgid "Undo"
 msgstr "تراجع"
@@ -4859,7 +4788,8 @@ msgstr "الطاقة"
 msgid "View your battery status and change power saving settings"
 msgstr "اعرض حالة البطارية و غيّر إعدادات توفير الطاقة"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
@@ -4910,7 +4840,8 @@ msgstr "الطابعات"
 msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr "أضف الطابعات و اعرض مهام الطباعة و اختر ما الذي تطبعه"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "طابعة;طباعة;طبع;ورق;حبر;"
@@ -4934,15 +4865,15 @@ msgstr "ا_فتح"
 msgid "No Printers Found"
 msgstr "لم يُعثر على أي طابعات"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "أدخل عنوان شبكة للبحث عن الطابعة"
 
 #: panels/printers/new-printer-dialog.ui:353
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"أدخل اسم المستخدم و كلمة السر لعرض الطابعات المتوفرة على خادوم الطباعة."
+msgstr "أدخل اسم المستخدم و كلمة السر لعرض الطابعات المتوفرة على خادوم الطباعة."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:75
@@ -4961,11 +4892,12 @@ msgstr "اختر ملف PPD"
 
 #: panels/printers/pp-details-dialog.c:258
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
 msgstr "ملفت وصف طابعة بوست‌سكربت (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "المكان"
 
@@ -5100,7 +5032,8 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "مُنجزَة"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:363
 #, c-format
 msgid "%u Job Requires Authentication"
@@ -5112,7 +5045,8 @@ msgstr[3] "تتطلب %u مهمات الاستيثاق"
 msgstr[4] "تتطلب %u مهمة الاستيثاق"
 msgstr[5] "تتطلب %u مهمة الاستيثاق"
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:520
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -5130,22 +5064,26 @@ msgstr "أدخل اسم المستخدم و كلمة السر للطباعة م
 msgid "Domain"
 msgstr "النطاق"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "اس_توثق"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "امسح الكل"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "ا_ستوثق"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "لا مهام طابعة نشطة"
@@ -5154,13 +5092,15 @@ msgstr "لا مهام طابعة نشطة"
 msgid "Unlock Print Server"
 msgstr "افتح خادوم الطباعة"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:384
 #, c-format
 msgid "Unlock %s."
 msgstr "افتح %s."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:388
 #, c-format
 msgid "Enter username and password to view printers on %s."
@@ -5197,7 +5137,8 @@ msgstr "المكان: %s"
 msgid "Address: %s"
 msgstr "العنوان: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1783
 msgid "Server requires authentication"
 msgstr "يتطلب الخادوم الاستيثاق"
@@ -5248,13 +5189,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "عام"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:658
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "إعداد الصفحة"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:661
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5266,7 +5209,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "المهام"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:667
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5278,7 +5222,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "الألوان"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:673
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5482,7 +5427,8 @@ msgstr "تفاصيل الطابعة"
 msgid "Use Printer by Default"
 msgstr "استخدم الطابعة مبدئيًا"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "نظف رؤوس الطابعة"
@@ -5528,9 +5474,7 @@ msgstr "أضِف طابعة…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"آسف، يبدو أن خدمة الطباعة\n"
-"في النظام غير متاحة."
+msgstr "آسف، يبدو أن خدمة الطباعة\nفي النظام غير متاحة."
 
 #: panels/region/cc-format-chooser.c:148
 msgctxt "measurement format"
@@ -5559,24 +5503,20 @@ msgid ""
 msgstr ""
 
 #: panels/region/cc-format-chooser.ui:119
-#, fuzzy
 msgid "Search locales..."
-msgstr "أماكن البحث"
+msgstr ""
 
 #: panels/region/cc-format-chooser.ui:160
-#, fuzzy
 msgid "Common Formats"
-msgstr "النُسق"
+msgstr ""
 
 #: panels/region/cc-format-chooser.ui:191
-#, fuzzy
 msgid "All Formats"
-msgstr "النُسق"
+msgstr ""
 
 #: panels/region/cc-format-chooser.ui:244
-#, fuzzy
 msgid "No Search Results"
-msgstr "إعدادات البحث"
+msgstr ""
 
 #: panels/region/cc-format-chooser.ui:257
 msgid "Searches can be for countries or languages."
@@ -5709,7 +5649,9 @@ msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
 msgstr "اختر لغة العرض و التنسيق و تخطيط لوحة المفاتيح و مصادر الإدخال"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "اللغة;التخطيط;مفاتيح;"
@@ -5754,7 +5696,6 @@ msgstr "اختر تطبيقا لاسطوانات البرامج"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "دي‌ڤي‌دي صوتي"
@@ -5851,14 +5792,13 @@ msgstr "الوسائط المنفصلة"
 msgid "Configure Removable Media settings"
 msgstr "اضبط إعدادات الوسائط المنفصلة"
 
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
-msgstr ""
-"جهاز;نظام;تطبيق;مبدئي;مفضل;قرص مضغوط;دي في دي;يو اس بي;صوت;فيديو;قرص;قابل "
-"للفصل;وسائط;تشغيل تلقائي;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "جهاز;نظام;تطبيق;مبدئي;مفضل;قرص مضغوط;دي في دي;يو اس بي;صوت;فيديو;قرص;قابل للفصل;وسائط;تشغيل تلقائي;"
 
 #: panels/search/cc-search-locations-dialog.c:635
 msgid "Select Location"
@@ -5877,11 +5817,9 @@ msgstr "أماكن البحث"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"المجلدات التي يتم البحث فيها بواسطة تطبيقات النظام، مثل الملفات والصور "
-"ومقاطع الفيديو."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "المجلدات التي يتم البحث فيها بواسطة تطبيقات النظام، مثل الملفات والصور ومقاطع الفيديو."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -5909,18 +5847,17 @@ msgstr "انقل لأسفل"
 
 #: panels/search/cc-search-panel.ui:33
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"التحكم في نتائج البحث التي تظهر في نظرة عامة على الأنشطة. يمكن أيضاً تغيير "
-"ترتيب نتائج البحث عن طريق تحريك الصفوف في القائمة."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "التحكم في نتائج البحث التي تظهر في نظرة عامة على الأنشطة. يمكن أيضاً تغيير ترتيب نتائج البحث عن طريق تحريك الصفوف في القائمة."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
 msgstr "تحكم في التطبيقات التي ستُعرض نتائج البحث منها في منظور الأنشطة"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "بحث;إخفاء;نتائج;خصوصية;"
@@ -5960,35 +5897,28 @@ msgstr "اختر مجلّدًا"
 
 #. TRANSLATORS: %s is replaced with a link to a dav://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:711
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
 msgstr ""
-"تتيح لك ”مشاركة الملفات“ مشاركة المجلد العام مع الآخرين على الشبكة الحالية "
-"باستخدام: <a href=\"dav://%s\">‪dav://%s‬</a>"
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:717
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
 msgstr ""
-"عند تفعيل بالولوج عن بعد، يمكن للمستخدمين الولوج عن بعد باستخدام أمر الصدفة "
-"الآمنة:\n"
-"<a href=\"ssh %s\">ssh %s</a>"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:723
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
 msgstr ""
-"مشاركة الشاشة تسمح للمستخدمين عن بعد بالتحكم في شاشتك باستخدام: <a href="
-"\"vnc://%s\">‪vnc://%s‬</a>"
 
 #: panels/sharing/cc-sharing-panel.c:828
 msgid "Copy"
@@ -6083,11 +6013,11 @@ msgstr "المجلدات"
 msgid "Control what you want to share with others"
 msgstr "تحكم في ما تريد مشاركته مع الآخرين"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
 msgstr "مشاركة;شارك;اسم;مكتب;بعيد;بلوتوث;صوت;صورة;وسائط;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
@@ -6200,13 +6130,12 @@ msgstr "الصوت"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "غيّر شدة الصوت و أصوات التنبيهات"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"بطاقة; ميكروفون; حجم الصوت; تلاشى; توازن; بلوتوث; سماعات الرأس; صوت; مخرج; "
-"مدخل;"
+msgstr "بطاقة; ميكروفون; حجم الصوت; تلاشى; توازن; بلوتوث; سماعات الرأس; صوت; مخرج; مدخل;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6299,7 +6228,7 @@ msgstr "الحالة:"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:174
 msgid "UUID:"
-msgstr ""
+msgstr "المعرّف الفريد عالمياً UUID:"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:324
 msgid "Authorize and Connect"
@@ -6322,32 +6251,30 @@ msgstr "مخوّل"
 #: panels/thunderbolt/cc-bolt-panel.c:175
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr ""
+msgstr "إنّ النظام الفرعي لمنفذ الصاعقة وهو (boltd) غير مثبت أو لم يتم إعداده بشكل صحيح."
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "لم يتم الكشف عن \"منفذ الصاعقة\".\nإما أن النظام يفتقر إلى دعم \"منفذ الصاعقة\"، فقد تم تعطيله في \"البيوس\" أو تم ضبطه على مستوى أمان غير مدعوم في \"البيوس\"."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
-msgstr ""
+msgstr "تم تعطيل دعم \"منفذ الصاعقة\" في \"البيوس\"."
 
 #: panels/thunderbolt/cc-bolt-panel.c:516
-#, fuzzy
 msgid "Thunderbolt security level could not be determined."
-msgstr "تعذّر توليد الإعدادات."
+msgstr "لا يمكن تحديد مستوى أمان منفذ الصاعقة."
 
 #: panels/thunderbolt/cc-bolt-panel.c:621
-#, fuzzy, c-format
+#, c-format
 msgid "Error switching direct mode: %s"
-msgstr "عطل في تحديد مُرسِل البريد المبدئي: %s"
+msgstr "خطأ أثناء التبديل للوضع المباشر: %s"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:143
 msgid "No Thunderbolt support"
-msgstr ""
+msgstr "لا يوجد دعم لمنفذ الصاعقة"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:246
 msgid "Direct Access"
@@ -6355,33 +6282,34 @@ msgstr "وصول مباشرة"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:269
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr ""
+msgstr "اسمح بالوصول المباشر إلى أجهزة مثل موصلات الدوك ووحدات معالجة الرسومات الخارجية."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:289
 msgid "Only USB and Display Port devices can attach."
-msgstr ""
+msgstr "يمكن فقط توصيل الأجهزة ذات منفذ العرض وأجهزة يو إس بي."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:397
-#, fuzzy
 msgid "Pending Devices"
-msgstr "يجلب الأجهزة..."
+msgstr "الأجهزة قيد الانتظار"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:535
 msgid "No devices attached"
-msgstr ""
+msgstr "لا توجد أجهزة متصلة"
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:3
 msgid "Thunderbolt"
-msgstr ""
+msgstr "ثندربُلت"
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:4
 msgid "Manage Thunderbolt devices"
-msgstr ""
+msgstr "إدارة أجهزة \"منفذ الصاعقة\""
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;"
-msgstr ""
+msgstr "منفذ الصاعقة;"
 
 #. translators: the labels will read:
 #. * Cursor Size: Default
@@ -6489,9 +6417,8 @@ msgid "_Mouse Keys"
 msgstr "مفاتيح ال_فأرة"
 
 #: panels/universal-access/cc-ua-panel.ui:900
-#, fuzzy
 msgid "_Locate Pointer"
-msgstr "حدد موقع المؤشر"
+msgstr ""
 
 #: panels/universal-access/cc-ua-panel.ui:932
 msgid "_Click Assist"
@@ -6547,9 +6474,8 @@ msgid "Use a visual indication when an alert sound occurs."
 msgstr "أظهر مؤشرًا بصريًا عند حدوث تنبيه صوتي."
 
 #: panels/universal-access/cc-ua-panel.ui:1392
-#, fuzzy
 msgid "Flash the entire _window"
-msgstr "أومض _كل الشاشة"
+msgstr ""
 
 #: panels/universal-access/cc-ua-panel.ui:1410
 msgid "Flash the entire _screen"
@@ -6745,15 +6671,13 @@ msgstr "كبير"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "اجعل الرؤية و السماع و الكتابة و المؤشر أسهل"
 
-#. Translators: Search terms to find the Universal Access panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Universal Access panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;"
-"big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;"
-"click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
-"لوحة المفاتيح;الفأرة;الإتاحة;التباين;التقريب;التكبير;قارئ الشاشة;النص;الخط;"
-"الحجم;مفاتيح ملتصقة;مفاتيح بطيئة;مفاتيح قافزة;مفاتيح الفأرة;"
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "لوحة المفاتيح;الفأرة;الإتاحة;التباين;التقريب;التكبير;قارئ الشاشة;النص;الخط;الحجم;مفاتيح ملتصقة;مفاتيح بطيئة;مفاتيح قافزة;مفاتيح الفأرة;"
 
 #: panels/universal-access/zoom-options.c:305
 msgctxt "Distance"
@@ -6956,35 +6880,31 @@ msgid "_Purge Temporary Files"
 msgstr "ت_خلّص من الملفات المؤقتة"
 
 #: panels/usage/cc-usage-panel.ui:31
-#, fuzzy
 msgid "File History"
-msgstr "التأريخ"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:43
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
 msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:58
-#, fuzzy
 msgid "File H_istory"
-msgstr "التأريخ"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:80
 msgid "File _History Duration"
 msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:121
-#, fuzzy
 msgid "_Clear History…"
-msgstr "امسح التأريخ ال_حالي"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:137
-#, fuzzy
 msgid "Trash & Temporary Files"
-msgstr "أفرغ المهملات والملفات المؤقتة"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:147
 msgid ""
@@ -6993,84 +6913,90 @@ msgid ""
 msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:161
-#, fuzzy
 msgid "Automatically Delete _Trash Content"
-msgstr "أفرغ ال_مهملات تلقائيا"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:176
-#, fuzzy
 msgid "Automatically Delete Temporary _Files"
-msgstr "تخلّص من الملفات المؤ_قتة تلقائيا"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:198
-#, fuzzy
 msgid "Automatically Delete _Period"
-msgstr "أفرغ ال_مهملات تلقائيا"
+msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:240
 msgid "_Empty Trash…"
 msgstr "أ_فرغ المهملات…"
 
 #: panels/usage/cc-usage-panel.ui:252
-#, fuzzy
 msgid "_Delete Temporary Files…"
-msgstr "ت_خلّص من الملفات المؤقتة…"
+msgstr ""
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:280
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "ساعة واحدة"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:284
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "يوم واحد"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:288
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "يومين"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:292
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "٣ أيام"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:296
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "٤ أيام"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:300
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "٥ أيام"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:304
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "٦ أيام"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:308
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "٧ أيام"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:312
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "١٤ يومًا"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:316
 msgctxt "purge_files"
 msgid "30 days"
@@ -7134,9 +7060,7 @@ msgstr "التحديث التلقائي"
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
-msgstr ""
-"السماح بالتحديث في الخلفية تلقائياً أثناء استخدام هذا الاتصال. توجد عادةً "
-"تطبيقات مزودة بترقياتٍ جديدة، أو محتوى جديد أو تحديثات لنظام Endless OS."
+msgstr "السماح بالتحديث في الخلفية تلقائياً أثناء استخدام هذا الاتصال. توجد عادةً تطبيقات مزودة بترقياتٍ جديدة، أو محتوى جديد أو تحديثات لنظام Endless OS."
 
 #: panels/updates/cc-updates-panel.ui:217
 msgid "Scheduled Updates"
@@ -7150,7 +7074,8 @@ msgstr "إنشاء نافذة يومية للتحديثات، بحيث تُنَ�
 msgid "Schedule automatic updates"
 msgstr "جدولة التحديث التلقائي"
 
-#. Translators: those are keywords for the automatic updates control-center panel
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
 msgstr "التحديثات;تلقائي;"
@@ -7186,17 +7111,13 @@ msgstr "فشل الانضمام إلى النطاق"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"اسم الولوج لم يعمل.\n"
-"من فضلك أعد المحاولة"
+msgstr "اسم الولوج لم يعمل.\nمن فضلك أعد المحاولة"
 
 #: panels/user-accounts/cc-add-user-dialog.c:1275
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"كلمة سر الولوج لم تعمل.\n"
-"من فضلك أعد المحاولة"
+msgstr "كلمة سر الولوج لم تعمل.\nمن فضلك أعد المحاولة"
 
 #: panels/user-accounts/cc-add-user-dialog.c:1283
 msgid "Failed to log into domain"
@@ -7257,9 +7178,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"ولوج المؤسسات يسمح باستخدام حساب مستخدم مدار مركزيًا على هذا الجهاز. يمكنك "
-"أيضًا استخدام هذا الحساب للوصول إلى موارد الشركة على الإنترنت."
+msgstr "ولوج المؤسسات يسمح باستخدام حساب مستخدم مدار مركزيًا على هذا الجهاز. يمكنك أيضًا استخدام هذا الحساب للوصول إلى موارد الشركة على الإنترنت."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:777
 msgid "You are Offline"
@@ -7443,9 +7362,7 @@ msgstr "أتريد إبقاء ملفات %s؟"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"من الممكن الإبقاء على مجلد المنزل وخزانة البريد والملفات المؤقتة عند حذف "
-"حساب مستخدم."
+msgstr "من الممكن الإبقاء على مجلد المنزل وخزانة البريد والملفات المؤقتة عند حذف حساب مستخدم."
 
 #: panels/user-accounts/cc-user-panel.c:649
 msgid "_Delete Files"
@@ -7505,9 +7422,7 @@ msgstr "رجاء تأكّد من أن AccountService مثبّتة ومفعّلة
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"انقر على أيقونة *\n"
-"لعمل أي تغييرات"
+msgstr "انقر على أيقونة *\nلعمل أي تغييرات"
 
 #: panels/user-accounts/cc-user-panel.c:1347
 msgid "Create a user account"
@@ -7518,9 +7433,7 @@ msgstr "أنشئ حساب مستخدِم"
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
-msgstr ""
-"لإنشاء حساب مستخدِم،\n"
-"انقر أولًا على أيقونة *"
+msgstr "لإنشاء حساب مستخدِم،\nانقر أولًا على أيقونة *"
 
 #: panels/user-accounts/cc-user-panel.c:1367
 msgid "Delete the selected user account"
@@ -7531,9 +7444,7 @@ msgstr "احذف حساب المستخدِم المختار"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"لحذف حساب المستخدم المختار،\n"
-"انقر أولًا على أيقونة *"
+msgstr "لحذف حساب المستخدم المختار،\nانقر أولًا على أيقونة *"
 
 #: panels/user-accounts/cc-user-panel.ui:5
 msgid "_Add User…"
@@ -7553,14 +7464,12 @@ msgid "User Icon"
 msgstr "أيقونة المستخدم"
 
 #: panels/user-accounts/cc-user-panel.ui:238
-#, fuzzy
 msgid "Account Settings"
-msgstr "إعدادات الصوت"
+msgstr "إعدادات الحساب"
 
 #: panels/user-accounts/cc-user-panel.ui:265
-#, fuzzy
 msgid "_Administrator"
-msgstr "إداري"
+msgstr ""
 
 #: panels/user-accounts/cc-user-panel.ui:285
 msgid ""
@@ -7573,9 +7482,8 @@ msgid "_Parental Controls"
 msgstr ""
 
 #: panels/user-accounts/cc-user-panel.ui:414
-#, fuzzy
 msgid "Authentication & Login"
-msgstr "الا_ستيثاق"
+msgstr ""
 
 #: panels/user-accounts/cc-user-panel.ui:483
 msgid "_Fingerprint Login"
@@ -7586,15 +7494,15 @@ msgid "A_utomatic Login"
 msgstr "الولوج الت_لقائي"
 
 #: panels/user-accounts/cc-user-panel.ui:555
-#, fuzzy
 msgid "Account Activity"
-msgstr "‏%s – نشاط الحساب"
+msgstr ""
 
 #: panels/user-accounts/cc-user-panel.ui:596
 msgid "Remove User…"
 msgstr "أزِل المستخدِم…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:635
 msgid "No Users Found"
 msgstr "لم يُعثر على أي مستخدمين"
@@ -7605,8 +7513,8 @@ msgstr "افتح لإضافة حساب مستخدِم."
 
 #: panels/user-accounts/cc-user-panel.ui:678
 msgid ""
-"Parental controls can now only be applied to non-administrator accounts. See "
-"the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
+"Parental controls can now only be applied to non-administrator accounts. See"
+" the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
 "changed-in-endless-os-3-8/12313\">FAQ entry</a>."
 msgstr ""
 
@@ -7673,12 +7581,14 @@ msgstr "المستخدمين"
 msgid "Add or remove users and change your password"
 msgstr "أضف أو احذف مستخدمين و غيّر كلمة السر"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "ولوج;اسم;بصمة;أيقونة;شعار;وجه;كلمة سر;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "_سجّل"
@@ -7692,9 +7602,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"تحتاج أن تكون مسجّلا في النطاق لاستخدام ولوج المؤسسات على هذا الحاسوب.\n"
-"من فضلك اطلب من مدير الشبكة أن يكتب كلمة سر النطاق هنا."
+msgstr "تحتاج أن تكون مسجّلا في النطاق لاستخدام ولوج المؤسسات على هذا الحاسوب.\nمن فضلك اطلب من مدير الشبكة أن يكتب كلمة سر النطاق هنا."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -7787,9 +7695,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"حاول تفادي تكرار نفس النوع من الحروف: عليك الخلط بين الحروف و الأرقام "
-"و علامات الترقيم."
+msgstr "حاول تفادي تكرار نفس النوع من الحروف: عليك الخلط بين الحروف و الأرقام و علامات الترقيم."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7801,9 +7707,7 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"على كلمة السر أن تكون أطول. حاول استخدام خليط من الحروف و الأرقام و علامات "
-"الترقيم."
+msgstr "على كلمة السر أن تكون أطول. حاول استخدام خليط من الحروف و الأرقام و علامات الترقيم."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -7813,9 +7717,9 @@ msgstr "اخلط الحروف الكبيرة مع الصغيرة و استخد�
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
-msgstr ""
-"إضافة المزيد من الحروف و الأرقام و علامات الترقيم ستجعل كلمة السر أقوى."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
+msgstr "إضافة المزيد من الحروف و الأرقام و علامات الترقيم ستجعل كلمة السر أقوى."
 
 #: panels/user-accounts/run-passwd.c:424
 msgid "Authentication failed"
@@ -7924,9 +7828,9 @@ msgstr "من فضلك راجع مدير النظام للمساعدة."
 
 #. translators:
 #. * The variable is the name of the device, for example:
-#. * "To enable fingerprint login, you need to save one of your fingerprints, using the
+#. * "To enable fingerprint login, you need to save one of your fingerprints,
+#. using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#.
 #: panels/user-accounts/um-fingerprint-dialog.c:710
 #, c-format
 msgid ""
@@ -7946,9 +7850,7 @@ msgstr "يسجّل البصمات"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"يجب أن يتكون اسم المستخدم عادةً فقط من أحرف صغيرة من a-z والأرقام والأحرف "
-"التالية: - _"
+msgstr "يجب أن يتكون اسم المستخدم عادةً فقط من أحرف صغيرة من a-z والأرقام والأحرف التالية: - _"
 
 #: panels/user-accounts/user-utils.c:443
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -7979,9 +7881,7 @@ msgstr "تعيين وظائف للأزرار"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"لتعديل مفتاح اختصار، اختر ”أرسل ضغطة الزر“ ثم اضغط على الأزرار الجديدة أو "
-"اضغط مفتاح التّراجع لمسحها."
+msgstr "لتعديل مفتاح اختصار، اختر ”أرسل ضغطة الزر“ ثم اضغط على الأزرار الجديدة أو اضغط مفتاح التّراجع لمسحها."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
@@ -8058,7 +7958,8 @@ msgstr "لوح واكوم"
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr "اضبط استخدام أزرار و حساسية قلم ألواح الرسوميات"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "لوحة;واكوم;قلم;ممحاة;فأرة;"
@@ -8121,9 +8022,8 @@ msgid "Adjust display resolution"
 msgstr "اضبط ميز الشاشة"
 
 #: panels/wacom/gnome-wacom-properties.ui:376
-#, fuzzy
 msgid "Decouple Display"
-msgstr "اكتشف ال_شاشات"
+msgstr ""
 
 #: panels/wacom/gsd-wacom-key-shortcut-button.c:217
 msgid "New shortcut…"
@@ -8191,11 +8091,11 @@ msgstr "أدوات لضبط سطح مكتب جنوم"
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:10
 msgid "Settings is the primary interface for configuring your system."
-msgstr ""
+msgstr "الإعدادات هي الواجهة الأساسية لتهيئة نظامك."
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:20
 msgid "The GNOME Project"
-msgstr ""
+msgstr "مشروع جنوم"
 
 #: shell/cc-application.c:58
 msgid "Display version number"
@@ -8211,7 +8111,7 @@ msgstr "ابحث عن نصّ"
 
 #: shell/cc-application.c:61
 msgid "List possible panel names and exit"
-msgstr ""
+msgstr "اذكر أسماء محتملة للوحات  واخرج"
 
 #: shell/cc-application.c:62
 msgid "Panel to display"
@@ -8219,7 +8119,7 @@ msgstr "لوحة لعرضها"
 
 #: shell/cc-application.c:62
 msgid "[PANEL] [ARGUMENT…]"
-msgstr ""
+msgstr "[اللوحة][المُعَامِل...]"
 
 #: shell/cc-panel-list.ui:45 shell/cc-window.c:277
 msgid "Privacy"
@@ -8246,15 +8146,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"هذه الإصدارة من تطبيق الإعدادات مخصصة للتطوير. قد تواجه مشاكل في سلوك "
-"النظام، أو تتعرض لفقد البيانات، أو أي مشاكل أخرى غير متوقعة."
+msgstr "هذه الإصدارة من تطبيق الإعدادات مخصصة للتطوير. قد تواجه مشاكل في سلوك النظام، أو تتعرض لفقد البيانات، أو أي مشاكل أخرى غير متوقعة."
 
 #: shell/cc-window.ui:331
 msgid "Help"
 msgstr "مساعدة"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "تفضيلات;إعدادات;"
@@ -8291,22 +8190,22 @@ msgstr "ألغِ البحث"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:5
 msgid "The identifier for the last Settings panel to be opened"
-msgstr ""
+msgstr "يتم فتح معرف لوحة الإعدادات الأخيرة"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "يتم فتح معرف لوحة الإعدادات الأخيرة. سيتم تجاهل القيم غير المعترف بها وتحديد اللوحة الأولى في القائمة."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
-msgstr ""
+msgstr "إظهار التحذير عند تشغيل بنية تطوير الإعدادات"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr ""
+msgstr "ما إذا كان يجب أن تُظهر الإعدادات تحذيراً عند تشغيل بنية التطوير."
 
 #. translators:
 #. * The number of sound outputs on a particular device
@@ -8337,3067 +8236,3 @@ msgstr[5] "%u مَدْخَل"
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
 msgstr "أصوات النظام"
-
-#~ msgid "Open in Software"
-#~ msgstr "افتح في «البرمجيات»"
-
-#~ msgid "application-x-executable"
-#~ msgstr "application-x-executable"
-
-#~ msgid "_Background"
-#~ msgstr "ال_خلفية"
-
-#~ msgid "Changes throughout the day"
-#~ msgstr "تتغير خلال اليوم"
-
-#~ msgid "_Lock Screen"
-#~ msgstr "أو_صد الشاشة"
-
-#~ msgctxt "background, style"
-#~ msgid "Tile"
-#~ msgstr "مبلّطة"
-
-#~ msgctxt "background, style"
-#~ msgid "Zoom"
-#~ msgstr "مُقرَّبة"
-
-#~ msgctxt "background, style"
-#~ msgid "Center"
-#~ msgstr "موسَّطة"
-
-#~ msgctxt "background, style"
-#~ msgid "Scale"
-#~ msgstr "محجّمة"
-
-#~ msgctxt "background, style"
-#~ msgid "Fill"
-#~ msgstr "مملوءة"
-
-#~ msgctxt "background, style"
-#~ msgid "Span"
-#~ msgstr "موسّعة"
-
-#~ msgid "Colors"
-#~ msgstr "ألوان"
-
-#~ msgid "Select Background"
-#~ msgstr "اختر خلفية"
-
-#~ msgid "Pictures"
-#~ msgstr "صور"
-
-#~ msgid "No Pictures Found"
-#~ msgstr "لم يُعثر على أي صور"
-
-#~ msgid "You can add images to your %s folder and they will show up here"
-#~ msgstr "يمكنك إضافة الصور إلى مجلد %s و ستظهر هنا"
-
-#~ msgid "preferences-desktop-wallpaper"
-#~ msgstr "preferences-desktop-wallpaper"
-
-#~ msgid "bluetooth"
-#~ msgstr "bluetooth"
-
-#~ msgid "Learn more about color management"
-#~ msgstr "اعرف المزيد عن إدارة الألوان"
-
-#~ msgid "preferences-color"
-#~ msgstr "preferences-color"
-
-#~ msgid "preferences-system-time"
-#~ msgstr "preferences-system-time"
-
-#~ msgid "_Off"
-#~ msgstr "مع_طّل"
-
-#~ msgid "preferences-desktop-display"
-#~ msgstr "preferences-desktop-display"
-
-#~ msgid "%s; Build ID: %s"
-#~ msgstr "%s؛ معرف البناء: %s"
-
-#~ msgid "Version %s"
-#~ msgstr "الإصدارة %s"
-
-#~ msgid "OS name"
-#~ msgstr "اسم نظام التشغيل"
-
-#~ msgid "OS type"
-#~ msgstr "نوع نظام التشغيل"
-
-#~ msgid "Disk"
-#~ msgstr "القرص"
-
-#~ msgid "Check for updates"
-#~ msgstr "التمس التحديثات"
-
-#~ msgid "starred"
-#~ msgstr "starred"
-
-#~ msgid "help-about"
-#~ msgstr "help-about"
-
-#~ msgid "media-removable"
-#~ msgstr "media-removable"
-
-#~ msgid "Keyboard"
-#~ msgstr "لوحة المفاتيح"
-
-#~ msgid "input-keyboard"
-#~ msgstr "input-keyboard"
-
-#~ msgid "input-mouse"
-#~ msgstr "input-mouse"
-
-#~ msgid "Network proxy"
-#~ msgstr "وسيط الشبكة"
-
-#~ msgid "Connection/SSID"
-#~ msgstr "الاتصال/SSID"
-
-#~ msgid "page 1"
-#~ msgstr "صفحة 1"
-
-#~ msgid "Inner _authentication"
-#~ msgstr "الاستيثاق ال_داخلي"
-
-#~ msgid "page 2"
-#~ msgstr "صفحة 2"
-
-#~ msgid "Restrict background data usage"
-#~ msgstr "قلل استخدام البيانات في الخلفية"
-
-#~ msgid "Appropriate for connections that have data charges or limits."
-#~ msgstr "مناسب لخطط اتصالات البيانات المحدودة أو المكلفة."
-
-#~ msgid "10 Mb/s"
-#~ msgstr "10 م.بايت\\ث"
-
-#~ msgid "100 Mb/s"
-#~ msgstr "100 م.بايت\\ث"
-
-#~ msgid "1 Gb/s"
-#~ msgstr "1 ج.بايت/ث"
-
-#~ msgid "10 Gb/s"
-#~ msgstr "10 ج.بايت/ث"
-
-#~ msgid "network-workgroup"
-#~ msgstr "network-workgroup"
-
-#~ msgid "network-wireless"
-#~ msgstr "network-wireless"
-
-#~ msgid ""
-#~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-#~ msgstr "تشغيل نقطة بث اللاسلكي ستفصلك عن <b>%s</b>."
-
-#~ msgid ""
-#~ "It is not possible to access the Internet through your wireless while the "
-#~ "hotspot is active."
-#~ msgstr ""
-#~ "لا يمكن استخدام الاتصال اللاسلكي للوصول إلى الإنترنت عند تفعيل نقطة البث."
-
-#~ msgid ""
-#~ "Wi-Fi hotspots are usually used to share an additional Internet "
-#~ "connection over Wi-Fi."
-#~ msgstr "تستخدم نقاط بث واي فاي عادة لمشاركة اتصال إنترنت إضافي عبر واي فاي."
-
-#~ msgid "Automatic _Connect"
-#~ msgstr "اتّ_صل تلقائيا"
-
-#~ msgid "details"
-#~ msgstr "التفاصيل"
-
-#~ msgid "Show P_assword"
-#~ msgstr "أ_ظهر كلمة السر"
-
-#~ msgid "Make available to other users"
-#~ msgstr "اجعله متاحا للمستخدمين الآخرين"
-
-#~ msgid "identity"
-#~ msgstr "الهوية"
-
-#~ msgid "IPv_4"
-#~ msgstr "IPv_4"
-
-#~ msgid "_Addresses"
-#~ msgstr "ال_عنوان"
-
-#~ msgid "Automatic (DHCP) addresses only"
-#~ msgstr "عناوين (DHCP) تلقائية فقط"
-
-#~ msgid "_Ignore automatically obtained routes"
-#~ msgstr "_تجاهل السُبُل المُضافة آليًا"
-
-#~ msgid "ipv4"
-#~ msgstr "ipv4"
-
-#~ msgid "IPv_6"
-#~ msgstr "IPv_6"
-
-#~ msgid "ipv6"
-#~ msgstr "ipv6"
-
-#~ msgid "_Cloned MAC Address"
-#~ msgstr "عنوان MAC _منسوخ"
-
-#~ msgid "_Reset"
-#~ msgstr "_صفّر"
-
-#~ msgid ""
-#~ "Reset the settings for this connection to their defaults, but remember as "
-#~ "a preferred connection."
-#~ msgstr ""
-#~ "صفّر كل إعدادات هذا الاتصال لقيمها المبدئية و لكن تذكّر أنها الاتصال المُفضّل."
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect to it."
-#~ msgstr ""
-#~ "احذف كل التفاصيل المتعلقة بهذه الشبكة و لا تحاول الاتصال بها تلقائيا."
-
-#~ msgid "Hardware"
-#~ msgstr "العتاد"
-
-#~ msgctxt "tab"
-#~ msgid "Reset"
-#~ msgstr "صفّر"
-
-#~ msgid "Connected Devices"
-#~ msgstr "الأجهزة الموصّلة"
-
-#~ msgid "Ad-hoc"
-#~ msgstr "لا مركزية"
-
-#~ msgid "Infrastructure"
-#~ msgstr "مركزية"
-
-#~ msgid "Not connected"
-#~ msgstr "غير متّصِل"
-
-#~ msgid "Notification _Popups"
-#~ msgstr "_نوافذ التنبيهات المنبثقة"
-
-#~ msgid "preferences-system-notifications"
-#~ msgstr "preferences-system-notifications"
-
-#~ msgid "goa-panel"
-#~ msgstr "goa-panel"
-
-#~ msgid "_Mobile broadband"
-#~ msgstr "شبكة هاتف م_حمول"
-
-#~ msgid "_Automatic suspend"
-#~ msgstr "ت_عليق تلقائي"
-
-#~ msgid "_When the Power Button is pressed"
-#~ msgstr "عند _ضغط زر الطاقة"
-
-#~ msgid "gnome-power-manager"
-#~ msgstr "gnome-power-manager"
-
-#~ msgid "printer"
-#~ msgstr "printer"
-
-#~ msgid "In use"
-#~ msgstr "قيد الاستعمال"
-
-#~ msgctxt "Location services status"
-#~ msgid "On"
-#~ msgstr "مشغلة"
-
-#~ msgctxt "Location services status"
-#~ msgid "Off"
-#~ msgstr "مغلقة"
-
-#~ msgctxt "Camera status"
-#~ msgid "Off"
-#~ msgstr "معطّل"
-
-#~ msgctxt "Camera status"
-#~ msgid "On"
-#~ msgstr "مفعّل"
-
-#~ msgctxt "Microphone status"
-#~ msgid "Off"
-#~ msgstr "معطّل"
-
-#~ msgctxt "Microphone status"
-#~ msgid "On"
-#~ msgstr "مفعّل"
-
-#~ msgid "Usage & History"
-#~ msgstr "الاستخدام والتأريخ"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "سياسة الخصوصية"
-
-#~ msgid ""
-#~ "Remembering your history makes things easier to find again. These items "
-#~ "are never shared over the network."
-#~ msgstr ""
-#~ "تذكر التأريخ يسهل الوصول إلى الأشياء في ما بعد. لا تُشارك هذه العناصر أبدا "
-#~ "عبر الشبكة."
-
-#~ msgid "_Recently Used"
-#~ msgstr "مستخدمة مؤ_خرا"
-
-#~ msgid "Retain _History"
-#~ msgstr "احتف_ظ بالتأريخ"
-
-#~ msgid "The Screen Lock protects your privacy when you are away."
-#~ msgstr "قفل الشاشة يحفظ خصوصيتك حين تبتعد عن حاسوبك."
-
-#~ msgid "Lock screen _after blank for"
-#~ msgstr "أ_وصِد الشاشة بعد إطفائها لمدة"
-
-#~ msgid "Show _Notifications"
-#~ msgstr "أظهر ال_تنبيهات"
-
-#~ msgid ""
-#~ "Automatically purge the Trash and temporary files to help keep your "
-#~ "computer free of unnecessary sensitive information."
-#~ msgstr ""
-#~ "تخلص من المهملات والملفات المؤقتة تلقائيا للمحافظة على خلو حاسوبك من "
-#~ "المعلومات الحساسة."
-
-#~ msgid "Purge _After"
-#~ msgstr "أفرف ب_عد"
-
-#~ msgid ""
-#~ "Sending us information about which software you use helps us provide you "
-#~ "with more accurate recommendations. It also helps us to improve our "
-#~ "software.\n"
-#~ "\n"
-#~ "All the information we collect is made anonymous, and we will never share "
-#~ "your data with third parties."
-#~ msgstr ""
-#~ "إرسال معلومات لنا عن البرمجيات التي تستخدمها يساعدنا على إمدادك بتوصيات "
-#~ "أدق، كما يساعدنا أيضًا على تسحين برمجياتنا.\n"
-#~ "\n"
-#~ "كل المعلومات التي نجمعها مُجهّلة و لن نشاركها أبدًا مع أي طرف ثالث."
-
-#~ msgid "_Send software usage statistics"
-#~ msgstr "أر_سل إحصائيات استخدام البرمجيات"
-
-#~ msgid "_Camera"
-#~ msgstr "_كمرة"
-
-#~ msgid "_Microphone"
-#~ msgstr "_ميكروفون"
-
-#~ msgid "_Location Services"
-#~ msgstr "خدمات ال_تموضع"
-
-#~ msgid "Protect your personal information and control what others might see"
-#~ msgstr "احمِ بياناتك الشخصية و تحكم في ما يمكن للآخرين الاطلاع عليه منها"
-
-#~ msgid "preferences-system-privacy"
-#~ msgstr "preferences-system-privacy"
-
-#~ msgid "No regions found"
-#~ msgstr "لا يوجد أي مناطق"
-
-#~ msgctxt "Input Source"
-#~ msgid "Other"
-#~ msgstr "أخرى"
-
-#~ msgid "Add an Input Source"
-#~ msgstr "أضف مصْدَر إدخال"
-
-#~ msgid "Input Sources"
-#~ msgstr "مصادر الإدخال"
-
-#~ msgid "Input Source Options"
-#~ msgstr "خيارات مصْدَر الإدخال"
-
-#~ msgid "preferences-desktop-locale"
-#~ msgstr "preferences-desktop-locale"
-
-#~ msgid "Preferences"
-#~ msgstr "التفضيلات"
-
-#~ msgid "preferences-system-search"
-#~ msgstr "preferences-system-search"
-
-#~ msgid "preferences-system-sharing"
-#~ msgstr "preferences-system-sharing"
-
-#~ msgid "multimedia-volume-control"
-#~ msgstr "multimedia-volume-control"
-
-#~ msgid "Flash the _window title"
-#~ msgstr "أومض _عنوان النافذة"
-
-#~ msgid "preferences-desktop-accessibility"
-#~ msgstr "preferences-desktop-accessibility"
-
-#~ msgid "Allow user to change their password on next login"
-#~ msgstr "اسمح للمستخدم بتغيير كلمة السر عند الولوج التالي"
-
-#~ msgid "Set a password now"
-#~ msgstr "ضع كلمة سر الآن"
-
-#~ msgid "Last Login"
-#~ msgstr "آخر ولوج"
-
-#~ msgid "system-users"
-#~ msgstr "system-users"
-
-#~ msgid "The username cannot start with a “-”."
-#~ msgstr "لا يمكن أن يبدأ اسم المستخدم بعلامة ”-“."
-
-#~ msgid "input-tablet"
-#~ msgstr "input-tablet"
-
-#~ msgid "org.gnome.Settings"
-#~ msgstr "org.gnome.Settings"
-
-#~ msgid "Language"
-#~ msgstr "اللغة"
-
-#~ msgid "_Night Light"
-#~ msgstr "الإ_ضاءة الليلية"
-
-#~ msgid "Could not get screen information"
-#~ msgstr "تعذّرت معرفة معلومات الشاشة"
-
-#~ msgid "My Home Network"
-#~ msgstr "شبكتي المنزلية"
-
-#~ msgid "hardware"
-#~ msgstr "العتاد"
-
-#~ msgid "Switch to previous source"
-#~ msgstr "تحول إلى المصدر السابق"
-
-#~ msgid "Switch to next source"
-#~ msgstr "تحول إلى المصدر التالي"
-
-#~ msgid "Alternative switch to next source"
-#~ msgstr "تحول إلى المصدر التالي البديل"
-
-#~ msgid "English (United Kingdom)"
-#~ msgstr "إنجليزي (المملكة المتحدة)"
-
-#~ msgid "United Kingdom"
-#~ msgstr "المملكة المتحدة"
-
-#~ msgid "_Options"
-#~ msgstr "ال_خيارات"
-
-#~ msgid "Add input source"
-#~ msgstr "أضف مصْدَر إدخال"
-
-#~ msgid "Remove input source"
-#~ msgstr "احذف مصْدَر الإدخال"
-
-#~ msgid "Move input source up"
-#~ msgstr "انقل مصْدَر الإدخال لأعلى"
-
-#~ msgid "Move input source down"
-#~ msgstr "انقل مصْدَر الإدخال لأسفل"
-
-#~ msgid "Show input source keyboard layout"
-#~ msgstr "أظهر تخطيط لوحة مفاتيح مصْدَر الإدخال"
-
-#~ msgctxt "balance"
-#~ msgid "Left"
-#~ msgstr "يسار"
-
-#~ msgctxt "balance"
-#~ msgid "Right"
-#~ msgstr "يمين"
-
-#~ msgctxt "balance"
-#~ msgid "Minimum"
-#~ msgstr "أدنى"
-
-#~ msgctxt "balance"
-#~ msgid "Maximum"
-#~ msgstr "أقصى"
-
-#~ msgid "_Subwoofer:"
-#~ msgstr "_سماعات كبيرة:"
-
-#~ msgctxt "volume"
-#~ msgid "Unamplified"
-#~ msgstr "غير مكبّر"
-
-#~ msgid "_Profile:"
-#~ msgstr "ال_طور:"
-
-#~ msgid "_Test Speakers"
-#~ msgstr "ا_ختبر السماعات"
-
-#~ msgid "Peak detect"
-#~ msgstr "التعرف على الذروة"
-
-#~ msgid "Device"
-#~ msgstr "الجهاز"
-
-#~ msgid "Speaker Testing for %s"
-#~ msgstr "اختبار سماعات %s"
-
-#~ msgid "C_hoose a device for sound output:"
-#~ msgstr "اخ_تر جهاز إخراج الصوت:"
-
-#~ msgid "Settings for the selected device:"
-#~ msgstr "إعدادات الجهاز المختار:"
-
-#~ msgid "_Input volume:"
-#~ msgstr "شدة صوت المَ_دْخَل:"
-
-#~ msgid "C_hoose a device for sound input:"
-#~ msgstr "اخ_تر جهاز إدخال الصوت:"
-
-#~ msgid "Sound Effects"
-#~ msgstr "المؤثرات الصوتية"
-
-#~ msgid "Built-in"
-#~ msgstr "مدمج"
-
-#~ msgid "Sound Preferences"
-#~ msgstr "تفضيلات الصوت"
-
-#~ msgid "Testing event sound"
-#~ msgstr "يختبر صوت الحدث"
-
-#~ msgid "From theme"
-#~ msgstr "من السمة"
-
-#~ msgid "C_hoose an alert sound:"
-#~ msgstr "اختر صوت تنبي_ه:"
-
-#~ msgid "Stop"
-#~ msgstr "أوقِف"
-
-#~ msgid "_Verify New Password"
-#~ msgstr "أ_كّد كلمة السر الجديدة"
-
-#~ msgid "Passwords do not match."
-#~ msgstr "لا تتطابق كلمتا السر."
-
-#~ msgctxt "Account type"
-#~ msgid "Standard"
-#~ msgstr "عادي"
-
-#~ msgctxt "Account type"
-#~ msgid "Administrator"
-#~ msgstr "إداري"
-
-#~ msgid "page 3"
-#~ msgstr "صفحة 3"
-
-#~ msgid "GNOME Control Center"
-#~ msgstr "مركز تحكم جنوم"
-
-#~ msgid ""
-#~ "The control center is GNOME’s main interface for configuration of various "
-#~ "aspects of your desktop."
-#~ msgstr "مركز التحكم هو واجهة جنوم الرئيسة لضبط مختلف خصائص حاسوبك."
-
-#~ msgid "Show the overview"
-#~ msgstr "اعرض الملخص"
-
-#~ msgid "Quit"
-#~ msgstr "أنهِ"
-
-#~ msgid "Back­ground"
-#~ msgstr "الخلفية"
-
-#~ msgid "Blue­tooth"
-#~ msgstr "بلوتوث"
-
-#~ msgid "Co­lor"
-#~ msgstr "الألوان"
-
-#~ msgid "Section"
-#~ msgstr "القسم"
-
-#~ msgid "Overview"
-#~ msgstr "عام"
-
-#~ msgid "Defa­ult Applications"
-#~ msgstr "التطبيقات المبدئية"
-
-#~ msgid "Ab­out"
-#~ msgstr "عن"
-
-#~ msgid "De­tails"
-#~ msgstr "التفاصيل"
-
-#~ msgid "Remo­vable Media"
-#~ msgstr "الوسائط المنفصلة"
-
-#~ msgid "Net­work"
-#~ msgstr "الشبكة"
-
-#~ msgid "No­ti­fi­ca­tions"
-#~ msgstr "التنبيهات"
-
-#~ msgid "Po­wer"
-#~ msgstr "الطاقة"
-
-#~ msgid "Pri­va­cy"
-#~ msgstr "الخصوصية"
-
-#~ msgid "Sha­ring"
-#~ msgstr "المشاركة"
-
-#~ msgid "Uni­ver­sal Access"
-#~ msgstr "الإتاحة"
-
-#~ msgid "Disable image"
-#~ msgstr "عطّل الصورة"
-
-#~ msgid "Browse for more pictures…"
-#~ msgstr "تصفّح لمزيد من الصور…"
-
-#~ msgid "Used by %s"
-#~ msgstr "يستخدمها %s"
-
-#~ msgid "Wa­com Tab­let"
-#~ msgstr "لوح واكوم"
-
-#~ msgctxt "category"
-#~ msgid "Hardware"
-#~ msgstr "العتاد"
-
-#~ msgctxt "category"
-#~ msgid "System"
-#~ msgstr "النظام"
-
-#~ msgid "Lid Closed"
-#~ msgstr "الغطاء مغلق"
-
-#~ msgid "Mirrored"
-#~ msgstr "متطابقة"
-
-#~ msgid "Secondary"
-#~ msgstr "الثانوي"
-
-#~ msgid "Arrange Combined Displays"
-#~ msgstr "رتب الشاشات المركبة"
-
-#~ msgid "Drag displays to rearrange them"
-#~ msgstr "اسحب الشاشات لترتيبها"
-
-#~ msgid "%d Hz (NTSC)"
-#~ msgstr "%d هرتز (NTSC)"
-
-#~ msgid "%d Hz"
-#~ msgstr "%d هرتز"
-
-#~ msgid "Rotate counterclockwise by 90°"
-#~ msgstr "أدِر ٩٠° عكس عقارب الساعة"
-
-#~ msgid "Rotate by 180°"
-#~ msgstr "أدِر ١٨٠°"
-
-#~ msgid "Rotate clockwise by 90°"
-#~ msgstr "أدِر ٩٠° باتجاه عقارب الساعة"
-
-#~ msgid "Size"
-#~ msgstr "الحجم"
-
-#~ msgid "Aspect Ratio"
-#~ msgstr "نسبة العرض"
-
-#~ msgid "Show the top bar and Activities Overview on this display"
-#~ msgstr "اعرض الشريط العلوي و تجميعة الأنشطة على هذه الشاشة"
-
-#~ msgid "Join this display with another to create an extra workspace"
-#~ msgstr "ضم هذه الشاشة على شاشة أخرى لإنشاء مساحة عمل إضافية"
-
-#~ msgid "Presentation"
-#~ msgstr "العروض التقديمة"
-
-#~ msgid "Show slideshows and media only"
-#~ msgstr "اعرض عروض الشرائح و الوسائط فقط"
-
-#~ msgid "Show your existing view on both displays"
-#~ msgstr "اعرض المنظور الخالي على الشاشتين"
-
-#~ msgid "Turn Off"
-#~ msgstr "أطفئ"
-
-#~ msgid "Don’t use this display"
-#~ msgstr "لا تستخدم هذه الشاشة"
-
-#~ msgid "_Arrange Combined Displays"
-#~ msgstr "ر_تب الشاشات المركبة"
-
-#~ msgid "Server"
-#~ msgstr "الخادوم"
-
-#~ msgid "Delete DNS Server"
-#~ msgstr "احذف خادوك DNS"
-
-#~ msgid "Make available to other _users"
-#~ msgstr "اجعله م_تاحا للمستخدمين الآخرين"
-
-#~ msgid ""
-#~ "Reset the settings for this network, including passwords, but remember it "
-#~ "as a preferred network"
-#~ msgstr ""
-#~ "صفّر إعدادات هذه الشبكة بما فيها كلمات السر، لكن تذكر كونها الشبكة المُفضّلة"
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect"
-#~ msgstr ""
-#~ "احذف كل التفاصيل المتعلقة بهذه الشبكة و لا تحاول الاتصال بها تلقائيا"
-
-#~ msgid ""
-#~ "If you have a connection to the Internet other than wireless, you can set "
-#~ "up a wireless hotspot to share the connection with others."
-#~ msgstr ""
-#~ "إذا كان لديك اتصال بالإنترنت غير الاتصال اللاسلكي فيمكنك إعداد نقطة بث "
-#~ "لمشاركة اتصالك بالإنترنت مع الآخرين."
-
-#~ msgid "Proxy"
-#~ msgstr "الوسيط"
-
-#~ msgid "_Add Profile…"
-#~ msgstr "أضف إ_عدادًا…"
-
-#~ msgctxt "proxy method"
-#~ msgid "None"
-#~ msgstr "لا شيء"
-
-#~ msgctxt "proxy method"
-#~ msgid "Manual"
-#~ msgstr "يدوي"
-
-#~ msgctxt "proxy method"
-#~ msgid "Automatic"
-#~ msgstr "تلقائي"
-
-#~ msgid "Add Device"
-#~ msgstr "أضف جهازًا"
-
-#~ msgid "VPN Type"
-#~ msgstr "نوع VPN"
-
-#~ msgid "Group Name"
-#~ msgstr "اسم المجموعة"
-
-#~ msgid "Group Password"
-#~ msgstr "كلمة سر المجموعة"
-
-#~ msgid "_Use as Hotspot…"
-#~ msgstr "ا_ستخدم كنقطة بث…"
-
-#~ msgid "_History"
-#~ msgstr "ال_تأريخ"
-
-#~ msgid "Loading options…"
-#~ msgstr "يُحمّل الخيارات…"
-
-#~ msgid "%s %d-bit (Build ID: %s)"
-#~ msgstr "‏%s ‏%d-بتة (معرف البناء: %s)"
-
-#~ msgid "%s %d-bit"
-#~ msgstr "‏%s‏ %d بتة"
-
-#~ msgid "Base system"
-#~ msgstr "النظام الأساسي"
-
-#~ msgid "Shortcut;Repeat;Blink;"
-#~ msgstr "اختصار;تكرار;وميض;"
-
-#~ msgid "Press Esc to cancel."
-#~ msgstr "اضغط Esc للإلغاء."
-
-#~ msgid "Firewall _Zone"
-#~ msgstr "_طبقة الجدار الناري"
-
-#~ msgctxt "Firewall zone"
-#~ msgid "Default"
-#~ msgstr "المبدئية"
-
-#~ msgid "The zone defines the trust level of the connection"
-#~ msgstr "تحدد الطبقة مستوى الثقة في الاتصال"
-
-#~ msgid "2"
-#~ msgstr "٢"
-
-#~ msgid "3"
-#~ msgstr "٣"
-
-#~ msgid "4"
-#~ msgstr "٤"
-
-#~ msgctxt "Password hint"
-#~ msgid "Try to add more letters, numbers and symbols."
-#~ msgstr "حاول إضافة حروف و أرقام و رموز أكثر."
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Weak"
-#~ msgstr "القوّة: ضعيفة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Low"
-#~ msgstr "القوّة: منخفضة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Medium"
-#~ msgstr "القوّة: متوسطة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Good"
-#~ msgstr "القوّة: جيدة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: High"
-#~ msgstr "القوّة: قوية"
-
-#~ msgid "Edit"
-#~ msgstr "حرِّر"
-
-#~ msgctxt "notifications"
-#~ msgid "Notification _Banners"
-#~ msgstr "أ_شرطة التنبيهات"
-
-#~ msgid "Notification _Banners"
-#~ msgstr "أشر_طة التنبيهات"
-
-#~ msgid "Add Account"
-#~ msgstr "أضف حسابا"
-
-#~ msgid "Mail"
-#~ msgstr "البريد"
-
-#~ msgid "Calendar"
-#~ msgstr "التقويم"
-
-#~ msgid "Contacts"
-#~ msgstr "المتراسلين"
-
-#~ msgid "Chat"
-#~ msgstr "الدردشة"
-
-#~ msgid "Error creating account"
-#~ msgstr "خطأ أثناء إنشاء الحساب"
-
-#~ msgid "Are you sure you want to remove the account?"
-#~ msgstr "أمتأكد أنك تريد إزالة الحساب؟"
-
-#~ msgid "This will not remove the account on the server."
-#~ msgstr "هذا لن يزيل الحساب على الخادوم."
-
-#~ msgid "_Remove"
-#~ msgstr "أ_زل"
-
-#~ msgid "No online accounts configured"
-#~ msgstr "لم تُعد أي حسابات إنترنت"
-
-#~ msgid "Add an online account"
-#~ msgstr "أضِف حساب إنترنت"
-
-#~ msgid ""
-#~ "Adding an account allows your applications to access it for documents, "
-#~ "mail, contacts, calendar, chat and more."
-#~ msgstr ""
-#~ "إضافة حساب تتيح للتطبيقات استخدامه للوصول إلى المستندات، والبريد، "
-#~ "والمتراسلين، والتقويم، والدردشة، وغيرها."
-
-#~ msgctxt "printer state"
-#~ msgid "Configuring"
-#~ msgstr "تُضبط"
-
-#~ msgid "Toner Level"
-#~ msgstr "مستوى الحبر"
-
-#~ msgid "Supply Level"
-#~ msgstr "مستوى المداد"
-
-#~ msgctxt "printer state"
-#~ msgid "Installing"
-#~ msgstr "تُثبّت"
-
-#~ msgid "%u active"
-#~ msgid_plural "%u active"
-#~ msgstr[0] "لا مهام نشطة"
-#~ msgstr[1] "%u نشطة"
-#~ msgstr[2] "%u نشطتين"
-#~ msgstr[3] "%u نشطة"
-#~ msgstr[4] "%u نشطة"
-#~ msgstr[5] "%u نشطة"
-
-#~ msgid "Add a New Printer"
-#~ msgstr "أضِف طابعة جديدة"
-
-#~ msgid "No printers detected."
-#~ msgstr "لم تُكتشف أي طابعة."
-
-#~ msgid "Supply"
-#~ msgstr "المداد"
-
-#~ msgid "Jobs"
-#~ msgstr "المهام"
-
-#~ msgid "Show _Jobs"
-#~ msgstr "أظهر ال_مهام"
-
-#~ msgid "label"
-#~ msgstr "العنوان"
-
-#~ msgid "Setting new driver…"
-#~ msgstr "يُعدّ المُشغّل الجديد…"
-
-#~ msgid "Print _Test Page"
-#~ msgstr "اطبع صفحة ا_ختبار"
-
-#~ msgctxt "login history week label"
-#~ msgid "%s - %s"
-#~ msgstr "%s - %s"
-
-#~ msgid "Other Accounts"
-#~ msgstr "الحسابات الأخرى"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Up"
-#~ msgstr "أعلى"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Down"
-#~ msgstr "أسفل"
-
-#~ msgctxt "Wacom action-type"
-#~ msgid "None"
-#~ msgstr "لا شيء"
-
-#~ msgid "Left Ring"
-#~ msgstr "البنصر الأيسر"
-
-#~ msgid "No Action"
-#~ msgstr "دون إجراء"
-
-#~ msgid "Left Mouse Button Click"
-#~ msgstr "نقرة بزر الفأرة الأيسر"
-
-#~ msgid "Scroll Up"
-#~ msgstr "تمرير للأعلى"
-
-#~ msgid "Scroll Down"
-#~ msgstr "تمرير للأسفل"
-
-#~ msgid "Scroll Left"
-#~ msgstr "تمرير لليسار"
-
-#~ msgid "Scroll Right"
-#~ msgstr "تمرير لليمين"
-
-#~ msgid "Add Shortcut"
-#~ msgstr "أضف اختصارًا"
-
-#~ msgid "Remove Shortcut"
-#~ msgstr "أزِل اختصارًا"
-
-#~ msgid ""
-#~ "To edit a shortcut, click the row and hold down the new keys or press "
-#~ "Backspace to clear."
-#~ msgstr ""
-#~ "لتعديل مفتاح اختصار، انقر على السّطر ثم اضغط على الأزرار الجديدة أو اضغط "
-#~ "مفتاح التّراجع لمسحها."
-
-#~ msgid "<Unknown Action>"
-#~ msgstr "<إجراء غير معروف>"
-
-#~ msgid ""
-#~ "The shortcut \"%s\" cannot be used because it will become impossible to "
-#~ "type using this key.\n"
-#~ "Please try with a key such as Control, Alt or Shift at the same time."
-#~ msgstr ""
-#~ "الاختصار \"%s\" لا يمكن استخدامه لأن الطباعة بهذا المفتاح ستصبح متعذرة.\n"
-#~ "حاول رجاءً استخدام مفتاح مع Ctrl أو Alt أو Shift في نفس الوقت."
-
-#~ msgid ""
-#~ "The shortcut \"%s\" is already used for\n"
-#~ "\"%s\""
-#~ msgstr ""
-#~ "الاختصار \"%s\" مستخدم في:\n"
-#~ "\"%s\""
-
-#~ msgid ""
-#~ "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~ "disabled."
-#~ msgstr "إذا أعدت تعيين الاختصار \"%s\" فسيُعطّل الاختصار \"%s\"."
-
-#~ msgid "_Reassign"
-#~ msgstr "أعِد ال_تعيين"
-
-#~ msgid ""
-#~ "The \"%s\" shortcut has an associated \"%s\" shortcut. Do you want to "
-#~ "automatically set it to \"%s\"?"
-#~ msgstr ""
-#~ "الاختصار \"%s\" مرتبط بالاختصار \"%s\". هل تريد ضبطه تلقائيا إلى \"%s\"؟"
-
-#~ msgid ""
-#~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
-#~ "disabled if you move forward."
-#~ msgstr ""
-#~ "الاختصار \"%s\" مرتبط حاليًا بالاختصار \"%s\"، سيُعطّل الاختصار إذا أكملت."
-
-#~ msgid "_Assign"
-#~ msgstr "ا_ضبط"
-
-#~ msgid "Team"
-#~ msgstr "فريق"
-
-#~ msgid "Bridge"
-#~ msgstr "جسر"
-
-#~ msgid "VLAN"
-#~ msgstr "شبكة محلية ظاهرية"
-
-#~ msgid "Could not load VPN plugins"
-#~ msgstr "تعذّر تحميل ملحقات VPN"
-
-#~ msgid "Add Network Connection"
-#~ msgstr "أضف اتصالًا شبكيّا"
-
-#~ msgid "Bond slaves"
-#~ msgstr "أجهزة تابعة للربط"
-
-#~ msgid "(none)"
-#~ msgstr "(لا شيء)"
-
-#~ msgid "Bridge slaves"
-#~ msgstr "تابعي الجسر"
-
-#~ msgid "Team slaves"
-#~ msgstr "تابعي الفريق"
-
-#~ msgid "No Certificate Authority certificate chosen"
-#~ msgstr "لم تُختر أي شهادة سُلْطة استيثاق"
-
-#~ msgid ""
-#~ "Not using a Certificate Authority (CA) certificate can result in "
-#~ "connections to insecure, rogue Wi-Fi networks.  Would you like to choose "
-#~ "a Certificate Authority certificate?"
-#~ msgstr ""
-#~ "عدم استخدام شهادة أمنيّة من جهة معتمدة قد يتسبّب باتصالات لا سلكية غير آمنة "
-#~ "واحتيالية. هل تريد اختيار شهادة أمنية من جهة معتمدة؟"
-
-#~ msgid "Ignore"
-#~ msgstr "تجاهل"
-
-#~ msgid "Choose CA Certificate"
-#~ msgstr "اختر شهادة سُلْطة استيثاق"
-
-#~ msgid "As_k for this password every time"
-#~ msgstr "ا_طلب كلمة السر هذه في كل مرة"
-
-#~ msgid "Don't _warn me again"
-#~ msgstr "لا _تنبهني ثانيةً"
-
-#~ msgid "No"
-#~ msgstr "لا"
-
-#~ msgid "Yes"
-#~ msgstr "نعم"
-
-#~ msgid "Error logging into the account"
-#~ msgstr "خطأ عند الولوج إلى الحساب"
-
-#~ msgid "Credentials have expired."
-#~ msgstr "انتهت صلاحية بيانات الاستيثاق."
-
-#~ msgid "Sign in to enable this account."
-#~ msgstr "ادخل لتفعيل هذا الحساب."
-
-#~ msgid "_Sign In"
-#~ msgstr "اد_خل"
-
-#~ msgctxt "Search Location"
-#~ msgid "Other"
-#~ msgstr "أخرى"
-
-#~ msgid "Personal File Sharing"
-#~ msgstr "مشاركة الملفات الشخصية"
-
-#~ msgid "_Allow Remote Control"
-#~ msgstr "اسمح بالتحكم عن بع_د"
-
-#~ msgid "_Verify"
-#~ msgstr "أ_كّد"
-
-#~ msgid "Login History"
-#~ msgstr "تأريخ الولوج"
-
-#~ msgid "Add User Account"
-#~ msgstr "أضِف حساب مستخدِم"
-
-#~ msgid "Login Options"
-#~ msgstr "خيارات الولوج"
-
-#~ msgid "A user with the username '%s' already exists."
-#~ msgstr "اسم المستخدم '%s' موجود بالفعل."
-
-#~ msgid "Done"
-#~ msgstr "تمّ"
-
-#~ msgid "Time _Zone"
-#~ msgstr "المن_طقة الزمنية"
-
-#~ msgid "_Delay:"
-#~ msgstr "ال_تأخير:"
-
-#~ msgid "_Speed:"
-#~ msgstr "ال_سرعة:"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Short"
-#~ msgstr "قصير"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Slow"
-#~ msgstr "بطيء"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Long"
-#~ msgstr "طويل"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Fast"
-#~ msgstr "سريع"
-
-#~ msgid "S_peed:"
-#~ msgstr "ال_سرعة:"
-
-#~ msgid "Shortcuts"
-#~ msgstr "الاختصارات"
-
-#~ msgid "Test Your Settings"
-#~ msgstr "اختبر إعداداتك"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Slow"
-#~ msgstr "بطيء"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Fast"
-#~ msgstr "سريع"
-
-#~ msgctxt "mouse, left button as primary"
-#~ msgid "_Left"
-#~ msgstr "الأي_سر"
-
-#~ msgctxt "mouse, right button as primary"
-#~ msgid "_Right"
-#~ msgstr "الأي_من"
-
-#~ msgid "_Pointer speed"
-#~ msgstr "سرعة المؤ_شر"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "بطيء"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "سريع"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "بطيء"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "سريع"
-
-#~ msgid "No printers available"
-#~ msgstr "لا تتوفر أي طابعات"
-
-#~ msgid "Close"
-#~ msgstr "أغلق"
-
-#~ msgid "Resume Printing"
-#~ msgstr "تابع الطباعة"
-
-#~ msgid "Pause Printing"
-#~ msgstr "ألبِث الطباعة"
-
-#~ msgid "Cancel Print Job"
-#~ msgstr "ألغِ مهمة الطباعة"
-
-#~ msgctxt "print job"
-#~ msgid "Held"
-#~ msgstr "مُعلَّقة"
-
-#~ msgid "Job Title"
-#~ msgstr "عنوان المهمة"
-
-#~ msgid "Job State"
-#~ msgstr "حالة المهمة"
-
-#~ msgid "Time"
-#~ msgstr "الوقت"
-
-#~ msgid "Add New Printer"
-#~ msgstr "أضِف طابعة جديدة"
-
-#~ msgid "Used to determine your geographical location"
-#~ msgstr "تستخدم لتحديد موقعك الجغرافي"
-
-#~ msgid "Options"
-#~ msgstr "الخيارات"
-
-#~ msgid "Password:"
-#~ msgstr "كلمة السر:"
-
-#~ msgid "Zoom"
-#~ msgstr "التقريب"
-
-#~ msgctxt "universal access, contrast"
-#~ msgid "Color"
-#~ msgstr "اللون"
-
-#~ msgid "Bluetooth is disabled"
-#~ msgstr "بلوتوث معطّل"
-
-#~ msgid "Wireless devices require extra power"
-#~ msgstr "يحتاج الجهاز اللاسلكي طاقة إضافية"
-
-#~ msgid "When battery power is _critical"
-#~ msgstr "عندما تكون الطاقة من_خفضة جدا"
-
-#~ msgid "Power off"
-#~ msgstr "أطفئ التشغيل"
-
-#~ msgid ""
-#~ "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
-#~ "devices"
-#~ msgstr ""
-#~ "تتيح لك مشاركة بلوتوث مشاركة الملفات مع الأجهزة الأخرى التي تحتوي على "
-#~ "بلوتوث"
-
-#~ msgid "Only Receive From Trusted Devices"
-#~ msgstr "استلم من الأجهزة الموثوق بها فقط"
-
-#~ msgid "Save Received Files to Downloads Folder"
-#~ msgstr "احفظ الملفات المستلمة في مجلد التنزيلات"
-
-#~ msgid "Show help options"
-#~ msgstr "اعرض خيارات المساعدة"
-
-#~ msgid ""
-#~ "%s\n"
-#~ "Run '%s --help' to see a full list of available command line options.\n"
-#~ msgstr ""
-#~ "%s\n"
-#~ "شغّل '%s --help' لترى قائمة كاملة بخيارات سطر الأوامر المتاحة.\n"
-
-#~ msgid "United States"
-#~ msgstr "الولايات المتّحدة"
-
-#~ msgid "Germany"
-#~ msgstr "ألمانيا"
-
-#~ msgid "France"
-#~ msgstr "فرنسا"
-
-#~ msgid "Spain"
-#~ msgstr "إسبانيا"
-
-#~ msgid "China"
-#~ msgstr "الصّين"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "_عطّل أثناء الكتابة"
-
-#~ msgid "The system network services are not compatible with this version."
-#~ msgstr "لا تتوافق خدمات الشبكة في النظام مع هذه الإصدارة."
-
-#~ msgctxt "notifications"
-#~ msgid "Show Popup Banners"
-#~ msgstr "أظهر لوحات منبثقة"
-
-#~ msgctxt "notifications"
-#~ msgid "View in Lock Screen"
-#~ msgstr "أظهر في شاشة القفل"
-
-#~ msgid "Show Pop Up Banners"
-#~ msgstr "أظهر لوحات منبثقة"
-
-#~ msgid "Show in Lock Screen"
-#~ msgstr "أظهر في شاشة القفل"
-
-#~ msgid "Turns off wireless devices"
-#~ msgstr "أطفئ الأجهزة اللاسلكية"
-
-#~ msgid "Enter address of a printer or a text to filter results"
-#~ msgstr "أدخل عنوان طابعًا أو نصًا لترشيح النتائج"
-
-#~ msgid "Immediately"
-#~ msgstr "حالًا"
-
-#~ msgid "Sorry"
-#~ msgstr "آسف"
-
-#~ msgid "Share Media On This Network"
-#~ msgstr "شارك الوسائط على هذه الشبكة"
-
-#~ msgid "Shared Folders"
-#~ msgstr "المجلدات المُشاركة"
-
-#~ msgid "column"
-#~ msgstr "عمود"
-
-#~ msgid "Remove Folder"
-#~ msgstr "أزِل المجلد"
-
-#~ msgid "Share Public Folder On This Network"
-#~ msgstr "شارك المجلد العام على هذه الشبكة"
-
-#~ msgid "Flickr"
-#~ msgstr "فلِكَر"
-
-#~ msgid "Set Up New Device"
-#~ msgstr "إعداد جهاز جديد"
-
-#~ msgid "Paired"
-#~ msgstr "مقترن"
-
-#~ msgid "Mouse & Touchpad Settings"
-#~ msgstr "إعدادات الفأرة ولوحة اللمس"
-
-#~ msgid "Send Files…"
-#~ msgstr "أرسل ملفات…"
-
-#~ msgid "Visibility"
-#~ msgstr "الظهور"
-
-#~ msgid "Visibility of “%s”"
-#~ msgstr "ظهور ”%s“"
-
-#~ msgid "Remove '%s' from the list of devices?"
-#~ msgstr "أأزيل '%s' من قائمة الأجهزة؟"
-
-#~ msgid ""
-#~ "If you remove the device, you will have to set it up again before next "
-#~ "use."
-#~ msgstr "إذا أزلت الجهاز، فستحتاج لإعداده مرة أخرى قبل استخدامه مجددا."
-
-#~ msgid "Install Updates"
-#~ msgstr "ثبّت التّحديثات"
-
-#~ msgid "System Up-To-Date"
-#~ msgstr "النظام مُحدّث"
-
-#~ msgid "Search for network printers or filter result"
-#~ msgstr "ابحث عن طابعات على الشبكة أو رشّح النتائج"
-
-#~ msgid "_Default"
-#~ msgstr "الم_بدئية"
-
-#~ msgctxt "Language"
-#~ msgid "None"
-#~ msgstr "لا شيء"
-
-#~ msgid "Share Public Folder"
-#~ msgstr "شارك المجلد العام"
-
-#~ msgid "Only share with Trusted Devices"
-#~ msgstr "شارك مع الأجهزة الموثوق بها فقط"
-
-#~ msgid "Remote View"
-#~ msgstr "العرض عن بعد"
-
-#~ msgid "Approve All Connections"
-#~ msgstr "اسم بكل الاتصالات"
-
-#~ msgid "Device type:"
-#~ msgstr "نوع الجهاز:"
-
-#~ msgid "Manufacturer:"
-#~ msgstr "المُصنّع:"
-
-#~ msgid "Model:"
-#~ msgstr "الطراز:"
-
-#~ msgid ""
-#~ "Image files can be dragged on this window to auto-complete the above "
-#~ "fields."
-#~ msgstr "يمكن سحب ملفات الصور على هذه النافذة لإكمال الحقول أعلاه آليًا."
-
-#~ msgid "Switch between AM and PM."
-#~ msgstr "بدّل بين صباحا و مساءا."
-
-#~ msgid "Show your primary display on this screen also"
-#~ msgstr "اعرض المنظور الأساسي على هذه الشاشة أيضًا"
-
-#~ msgid "Combine"
-#~ msgstr "ركّب"
-
-#~ msgid "Join with the primary display to create an extra space"
-#~ msgstr "ضم على الشاشة الأساسية لإنشاء مساحة إضافية"
-
-#~ msgid "Mouse Preferences"
-#~ msgstr "تفضيلات الفأرة"
-
-#~ msgid "Select the interface to use for the new service"
-#~ msgstr "اختر الواجهة التي ستُستخدم للخدمة الجديدة"
-
-#~ msgid "C_reate…"
-#~ msgstr "أن_شئ…"
-
-#~ msgid "_Interface"
-#~ msgstr "الوا_جهة"
-
-#~ msgid "Estimated battery capacity: %s"
-#~ msgstr "قدرة استيعاب البطارية المُقدّرة: %s"
-
-#~ msgid "Changing photo for:"
-#~ msgstr "تغيير صورة:"
-
-#~ msgid ""
-#~ "Choose a picture that will be shown at the login screen for this account."
-#~ msgstr "اختر صورة هذا الحساب في شاشة الولوج."
-
-#~ msgid "Gallery"
-#~ msgstr "المعرض"
-
-#~ msgid "Take a photograph"
-#~ msgstr "التقط صورة"
-
-#~ msgid "Browse"
-#~ msgstr "تصفّح"
-
-#~ msgid "Photograph"
-#~ msgstr "صورة"
-
-#~ msgid "_Region:"
-#~ msgstr "الم_نطقة:"
-
-#~ msgid "_City:"
-#~ msgstr "الم_دينة:"
-
-#~ msgid "_Network Time"
-#~ msgstr "وقت ال_شبكة"
-
-#~ msgid "Set the time one hour ahead."
-#~ msgstr "قدّم الوقت ساعة واحدة."
-
-#~ msgid "Set the time one hour back."
-#~ msgstr "أخّر الوقت ساعة واحدة."
-
-#~ msgid "Set the time one minute ahead."
-#~ msgstr "قدّم الوقت دقيقة واحدة."
-
-#~ msgid "Set the time one minute back."
-#~ msgstr "أخّر الوقت دقيقة واحدة."
-
-#~ msgid "AM/PM"
-#~ msgstr "ص\\م"
-
-#~ msgctxt "display panel, rotation"
-#~ msgid "Normal"
-#~ msgstr "طبيعي"
-
-#~ msgctxt "display panel, rotation"
-#~ msgid "Clockwise"
-#~ msgstr "مع عقارب الساعة"
-
-#~ msgctxt "display panel, rotation"
-#~ msgid "180 Degrees"
-#~ msgstr "180 درجة"
-
-#~ msgid "Monitor"
-#~ msgstr "الشاشة"
-
-#~ msgid "Drag to change primary display."
-#~ msgstr "اسحب لتغيير جهاز العرض المبدئي."
-
-#~ msgid ""
-#~ "Select a monitor to change its properties; drag it to rearrange its "
-#~ "placement."
-#~ msgstr "اختر شاشة لتغيير خصائصها، واسحبها لتغيير ترتيبها."
-
-#~ msgid "%a %R"
-#~ msgstr "‏%a ‏%R"
-
-#~ msgid "Failed to apply configuration: %s"
-#~ msgstr "فشل تطبيق الإعداد: %s"
-
-#~ msgid "Could not save the monitor configuration"
-#~ msgstr "تعذّر حفظ إعدادات الشاشة"
-
-#~ msgid "_Resolution"
-#~ msgstr "ال_ميز"
-
-#~ msgid "R_otation"
-#~ msgstr "ال_دوران"
-
-#~ msgid "_Mirror displays"
-#~ msgstr "ا_نسخ الشاشات"
-
-#~ msgid "Note: may limit resolution options"
-#~ msgstr "ملاحظة: قد يقلل من خيارات الميز"
-
-#~ msgid "Hidden"
-#~ msgstr "خفي"
-
-#~ msgid "Visible"
-#~ msgstr "مرئي"
-
-#~ msgid "Name & Visibility"
-#~ msgstr "الاسم والظهور"
-
-#~ msgid "Control how you appear on the screen and the network."
-#~ msgstr "تحكم في كيفية ظهورك على الشاشة والشبكة."
-
-#~ msgid "Display _full name in top bar"
-#~ msgstr "أظهر ا_سمك بالكامل في الشريط العلوي"
-
-#~ msgid "Display full name in _lock screen"
-#~ msgstr "أظهر اسمك بالكامل في شاشة ال_قفل"
-
-#~ msgid "_Stealth Mode"
-#~ msgstr "وضع الت_خفي"
-
-#~ msgid "_Confirm Password"
-#~ msgstr "أ_كّد كلمة السر"
-
-#~ msgid "_Login Name"
-#~ msgstr "اسم ال_ولوج"
-
-#~ msgid "Login _Password"
-#~ msgstr "كلمة _سر الولوج"
-
-#~ msgid "Passwords do not match"
-#~ msgstr "لا تتطابق كلمتا السر"
-
-#, fuzzy
-#~ msgid "Domain not found."
-#~ msgstr "المودم غير موجود"
-
-#~ msgid "Export"
-#~ msgstr "صدِّر"
-
-#~ msgctxt "mouse, speed"
-#~ msgid "Slow"
-#~ msgstr "بطيئة"
-
-#~ msgctxt "mouse, speed"
-#~ msgid "Fast"
-#~ msgstr "سريعة"
-
-#~ msgid "C_ontent sticks to fingers"
-#~ msgstr "يلت_صق المحتوى بالإصابع"
-
-#~ msgctxt "Input source"
-#~ msgid "None"
-#~ msgstr "لا شيء"
-
-#~ msgid "No shortcut set"
-#~ msgstr "لم يُحدد أي اختصار"
-
-#~ msgctxt "universal access, contrast"
-#~ msgid "Normal"
-#~ msgstr "عادي"
-
-#~ msgctxt "universal access, contrast"
-#~ msgid "High/Inverse"
-#~ msgstr "عال\\معكوس"
-
-#~ msgid "On screen keyboard"
-#~ msgstr "لوحة مفاتيح على الشاشة"
-
-#~ msgid "OnBoard"
-#~ msgstr "OnBoard"
-
-#~ msgid "75%"
-#~ msgstr "75%"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgctxt "universal access, text size"
-#~ msgid "Normal"
-#~ msgstr "عادي"
-
-#~ msgid "125%"
-#~ msgstr "125%"
-
-#~ msgid "150%"
-#~ msgstr "150%"
-
-#~ msgid "Beep on Caps and Num Lock"
-#~ msgstr "صفّر عند ضغط مفتاح الحروف العالية وقفل الأرقام"
-
-#~ msgid "Turn on or off:"
-#~ msgstr "شغِّل أو عطِّل:"
-
-#~ msgctxt "universal access, zoom"
-#~ msgid "Zoom"
-#~ msgstr "تكبير"
-
-#~ msgid "Zoom in:"
-#~ msgstr "قرّب:"
-
-#~ msgid "Zoom out:"
-#~ msgstr "بعّد:"
-
-#~ msgid "Closed Captioning"
-#~ msgstr "كتابة الأصوات على الشاشة"
-
-#~ msgid "Display a textual description of speech and sounds"
-#~ msgstr "اعرض وصفا نصيا للكلام والصوت"
-
-#~ msgid "On Screen Keyboard"
-#~ msgstr "لوحة مفاتيح على الشاشة"
-
-#~ msgctxt "universal access, delay"
-#~ msgid "Short"
-#~ msgstr "قصير"
-
-#~ msgctxt "universal access, delay"
-#~ msgid "Long"
-#~ msgstr "طويل"
-
-#~ msgid "Beep when a key is"
-#~ msgstr "صفّر إذا كان المفتاح"
-
-#~ msgid "pressed"
-#~ msgstr "ضُغِطَ"
-
-#~ msgid "accepted"
-#~ msgstr "قُبِلَ"
-
-#~ msgid "rejected"
-#~ msgstr "رُفِضَ"
-
-#~ msgid "Acc_eptance delay:"
-#~ msgstr "تأخير ال_قبول:"
-
-#~ msgid "Control the pointer using the keypad"
-#~ msgstr "تحكم في المؤشر باستخدام لوحة المفاتيح"
-
-#~ msgid "Video Mouse"
-#~ msgstr "فأرة الفديو"
-
-#~ msgid "Control the pointer using the video camera."
-#~ msgstr "تحكم في المؤشر باستخدام كمرة فديو."
-
-#~ msgctxt "universal access, threshold"
-#~ msgid "Small"
-#~ msgstr "صغير"
-
-#~ msgctxt "universal access, threshold"
-#~ msgid "Large"
-#~ msgstr "كبير"
-
-#~ msgid "_Local Account"
-#~ msgstr "حساب _محلي"
-
-#~ msgid "Tip: Enterprise domain or realm name"
-#~ msgstr "تلميحة: نطاق مؤسسة أو اسم مجال"
-
-#~ msgid "C_ontinue"
-#~ msgstr "_تابع"
-
-#~ msgid "Previous Week"
-#~ msgstr "الأسبوع الماضي"
-
-#~ msgid "Next Week"
-#~ msgstr "الأسبوع القادم"
-
-#~ msgid "Next week"
-#~ msgstr "الأسبوع القادم"
-
-#~ msgid "Log in without a password"
-#~ msgstr "لُج دون كلمة سر"
-
-#~ msgid "Disable this account"
-#~ msgstr "عطّل هذا الحساب"
-
-#~ msgid "Enable this account"
-#~ msgstr "فعّل هذا الحساب"
-
-#~ msgid "_Action"
-#~ msgstr "الإ_جراء"
-
-#~ msgid "_Show password"
-#~ msgstr "أ_ظهر كلمة السر"
-
-#~ msgid "How to choose a strong password"
-#~ msgstr "كيف تضع كلمة سر قوية"
-
-#~ msgctxt "Password strength"
-#~ msgid "Too short"
-#~ msgstr "قصيرة جدا"
-
-#~ msgctxt "Password strength"
-#~ msgid "Not good enough"
-#~ msgstr "ليست جيدة كفاية"
-
-#~ msgctxt "Password strength"
-#~ msgid "Weak"
-#~ msgstr "ضعيفة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Fair"
-#~ msgstr "معقولة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Good"
-#~ msgstr "جيّدة"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strong"
-#~ msgstr "قوية"
-
-#~ msgid "_Generate a password"
-#~ msgstr "ولِّد _كلمة سر"
-
-#~ msgid "You need to enter a new password"
-#~ msgstr "عليك إدخال كلمة سر جديدة"
-
-#~ msgid "The new password is not strong enough"
-#~ msgstr "كلمة السّر الجديدة ليست قوية كفاية"
-
-#~ msgid "You need to confirm the password"
-#~ msgstr "عليك تأكيد كلمة السر"
-
-#~ msgid "You need to enter your current password"
-#~ msgstr "عليك إدخال كلمة السر الحالية"
-
-#~ msgid "The current password is not correct"
-#~ msgstr "كلمة السر الحالية خطأ"
-
-#~ msgid "Switch Modes"
-#~ msgstr "بدّل الأنماط"
-
-#~ msgid "Action"
-#~ msgstr "الإجراء"
-
-#~ msgctxt "Power"
-#~ msgid "Bluetooth"
-#~ msgstr "بلوتوث"
-
-#~ msgid "Color management settings"
-#~ msgstr "إعدادات إدارة الألوان"
-
-#~ msgid "British English"
-#~ msgstr "الإنجليزية البريطانية"
-
-#~ msgid "Spanish"
-#~ msgstr "الإسبانية"
-
-#~ msgid "Chinese (simplified)"
-#~ msgstr "الصينية (المبسطة)"
-
-#~ msgid "Select a region"
-#~ msgstr "اختر منطقة"
-
-#~ msgid "Date and Time preferences panel"
-#~ msgstr "لوحة تفضيلات التاريخ والوقت"
-
-#~ msgid "Layout Settings"
-#~ msgstr "إعدادات التخطيط"
-
-#~ msgid "Set your mouse and touchpad preferences"
-#~ msgstr "اضبط تفضيلات الفأرة ولوحة اللمس"
-
-#~ msgid "_Options…"
-#~ msgstr "ال_خيارات…"
-
-#~ msgid "Manage notifications"
-#~ msgstr "أدِر التنبيهات"
-
-#~ msgid "Expired credentials. Please log in again."
-#~ msgstr "بيانات اعتماد مُنتهية. رجاءً لُج مجددا."
-
-#~ msgid "_Log In"
-#~ msgstr "لُ_ج"
-
-#~ msgid "Manage online accounts"
-#~ msgstr "أدِر حسابات الإنترنت"
-
-#~ msgid "_Mark As Inactive After"
-#~ msgstr "اعتبرها خاملة ب_عد"
-
-#~ msgid "Power management settings"
-#~ msgstr "إعدادات إدارة الطاقة"
-
-#~ msgid "Manufacturers"
-#~ msgstr "المُصنّعين"
-
-#~ msgid "Drivers"
-#~ msgstr "المُشغّلات"
-
-#~ msgid "Privacy settings"
-#~ msgstr "إعدادات الخصوصية"
-
-#~ msgid "Don't retain history"
-#~ msgstr "لا تحتفظ بالتأريخ"
-
-#~ msgid "Lock Screen _After"
-#~ msgstr "أوصِد الشاشة ب_عد"
-
-#~ msgid "Change your region and language settings"
-#~ msgstr "غيّر إعدادات المنطقة واللغة"
-
-#~ msgid ""
-#~ "The login screen, system accounts and new user accounts use the system-"
-#~ "wide Region and Language settings."
-#~ msgstr ""
-#~ "شاشة الولوج، وحسابات النظام، وحسابات المستخدمين الجُدد تستخدم إعدادات "
-#~ "مُستوى-النظام بالنسبة للمنطقة وإعدادات اللغة."
-
-#~ msgid ""
-#~ "The login screen, system accounts and new user accounts use the system-"
-#~ "wide Region and Language settings. You may change the system settings to "
-#~ "match yours."
-#~ msgstr ""
-#~ "شاشة الولوج، وحسابات النظام، وحسابات المستخدمين الجُدد تستخدم إعدادات "
-#~ "مُستوى-النظام بالنسبة للمنطقة وإعدادات اللغة. يمكنك تغيير إعدادات النظام "
-#~ "لتطابق إعداداتك."
-
-#~ msgid "Copy Settings"
-#~ msgstr "انسخ الإعدادات"
-
-#~ msgid "Copy Settings…"
-#~ msgstr "انسخ الإعدادات…"
-
-#~ msgid "Region and Language"
-#~ msgstr "المنطقة واللغة"
-
-#~ msgid "Select a display language"
-#~ msgstr "اختر لغة العرض"
-
-#~ msgid "Add Language"
-#~ msgstr "أضِف لغة"
-
-#~ msgid "Select a region (change will be applied the next time you log in)"
-#~ msgstr "اختر منطقة (ستُتطبّق التغييرات مع الولوج التالي)"
-
-#~ msgid "Add Region"
-#~ msgstr "أضِف منطقة"
-
-#~ msgid "Remove Region"
-#~ msgstr "أزِل منطقة"
-
-#~ msgid "Currency"
-#~ msgstr "العملة"
-
-#~ msgid "Examples"
-#~ msgstr "أمثلة"
-
-#~ msgid "Select keyboards or other input sources"
-#~ msgstr "اختر لوحة المفاتيح أو غيرها من مصادر الإدخال"
-
-#~ msgid "Ctrl+Alt+Space"
-#~ msgstr "Ctrl+Alt+Space"
-
-#~ msgid "Shortcut Settings"
-#~ msgstr "إعدادات الاختصار"
-
-#~ msgid "Input source:"
-#~ msgstr "مصدر الإدخال:"
-
-#~ msgid "Format:"
-#~ msgstr "النُسق:"
-
-#~ msgid "Your settings"
-#~ msgstr "إعداداتك"
-
-#~ msgid "System settings"
-#~ msgstr "إعدادات النظام"
-
-#~ msgid "Universal Access Preferences"
-#~ msgstr "تفضيلات الإتاحة"
-
-#~ msgid "_Hint"
-#~ msgstr "ال_تلميح"
-
-#~ msgid ""
-#~ "This hint may be displayed at the login screen.  It will be visible to "
-#~ "all users of this system.  Do <b>not</b> include the password here."
-#~ msgstr ""
-#~ "قد تُعرض هذه التلميحة في شاشة الولوج، وستظهر لكل مستخدمي النظام.  <b>لا</"
-#~ "b> تضع كلمة السر هنا."
-
-#~ msgid "Fair"
-#~ msgstr "معقولة"
-
-#~ msgid "Set your Wacom tablet preferences"
-#~ msgstr "إعداد تفضيلات لوح واكوم"
-
-#~ msgid "Create virtual device"
-#~ msgstr "أنشئ جهاز افتراضي"
-
-#~ msgid "%i year"
-#~ msgid_plural "%i years"
-#~ msgstr[0] "أقلّ من سنة"
-#~ msgstr[1] "سنة واحدة"
-#~ msgstr[2] "سنتين"
-#~ msgstr[3] "%i سنوات"
-#~ msgstr[4] "%i سنة"
-#~ msgstr[5] "%i سنة"
-
-#~ msgid "%i month"
-#~ msgid_plural "%i months"
-#~ msgstr[0] "أقلّ من شهر"
-#~ msgstr[1] "شهر واحد"
-#~ msgstr[2] "شهرين"
-#~ msgstr[3] "%i شهور"
-#~ msgstr[4] "%i شهرا"
-#~ msgstr[5] "%i شهر"
-
-#~ msgid "%i week"
-#~ msgid_plural "%i weeks"
-#~ msgstr[0] "أقلّ من أسبوع"
-#~ msgstr[1] "أسبوع واحد"
-#~ msgstr[2] "أسبوعين"
-#~ msgstr[3] "%i أسابيع"
-#~ msgstr[4] "%i أسبوعا"
-#~ msgstr[5] "%i أسبوع"
-
-#~ msgid "Less than 1 week"
-#~ msgstr "أقلّ من أسبوع"
-
-#~ msgid "This device is not color managed."
-#~ msgstr "الجهاز ليس مُدار الألوان."
-
-#~ msgid "This device is using manufacturing calibrated data."
-#~ msgstr "هذا الجهاز يستخدم بيانات التصنيع المعايرة."
-
-#~ msgid ""
-#~ "This device does not have a profile suitable for whole-screen color "
-#~ "correction."
-#~ msgstr "ليس لهذا الجهاز إعداد مناسب لتصحيح ألون كامل الشاشة."
-
-#~ msgid "Not specified"
-#~ msgstr "غير محدّد"
-
-#~ msgid "No devices supporting color management detected"
-#~ msgstr "لم يُعثر على جهاز يدعم إدارة الألوان"
-
-#~ msgid "Add device"
-#~ msgstr "أضف جهازًا"
-
-#~ msgid "Add a virtual device"
-#~ msgstr "اضف جهازًا افتراضيًا"
-
-#~ msgid "Unspecified"
-#~ msgstr "غير محدّد"
-
-#~ msgid "Out of range"
-#~ msgstr "خارج المدى"
-
-#~ msgid "_Disconnect"
-#~ msgstr "ا_قطع الاتصال"
-
-#~ msgid "_Connect"
-#~ msgstr "اتّ_صل"
-
-#~ msgid "_Settings…"
-#~ msgstr "الإ_عدادات…"
-
-#~ msgid "Caution low battery, %s remaining"
-#~ msgstr "تحذير انخفاض البطارية، تبقى %s"
-
-#~ msgid "Using battery power - %s remaining"
-#~ msgstr "استخدام طاقة البطارية - تبقى %s"
-
-#~ msgid "Using battery power"
-#~ msgstr "استخدام طاقة البطارية"
-
-#~ msgid "Charging - fully charged"
-#~ msgstr "يشحن - اكتمل الشحن"
-
-#~ msgid "Using UPS power - %s remaining"
-#~ msgstr "استخدام مزود الطاقة الغير منقطعة - تبقى %s"
-
-#~ msgid "Caution low UPS"
-#~ msgstr "تحذير انخفاض مزود الطاقة الغير منقطعة"
-
-#~ msgid "Using UPS power"
-#~ msgstr "استخدام طاقة مزود الطاقة الغير منقطعة"
-
-#~ msgid "Your secondary battery is fully charged"
-#~ msgstr "بطاريتك الثانوية مكتملة الشحن"
-
-#~ msgid "Your secondary battery is empty"
-#~ msgstr "بطاريتك الثانوية فارغة"
-
-#~ msgctxt "Battery power"
-#~ msgid "Charging - fully charged"
-#~ msgstr "تشحن - مكتملة الشحن"
-
-#~ msgid ""
-#~ "Tip: <a href=\"screen\">screen brightness</a> affects how much power is "
-#~ "used"
-#~ msgstr "فائدة: يؤثّر <a href=\"screen\">سطوع الشاشة</a> على استهلاك الطاقة"
-
-#~ msgid "Don't suspend"
-#~ msgstr "لا تعلِّق"
-
-#~ msgid "Suspend when inactive for"
-#~ msgstr "علِّق عند الخمول لـ"
-
-#~ msgid "Brightness & Lock"
-#~ msgstr "السطوع والقفل"
-
-#~ msgid "Screen brightness and lock settings"
-#~ msgstr "إعدادات سطوع وقفل الشاشة"
-
-#~ msgid "Brightness;Lock;Dim;Blank;Monitor;"
-#~ msgstr "سطوع;قفل;فارغ;شاشة;"
-
-#~ msgid "_Dim screen to save power"
-#~ msgstr "أخفِت ضوء ال_شاشة لتوفير الطاقة"
-
-#~ msgid "Don't lock when at home"
-#~ msgstr "لا توصد عندما أكون في البيت"
-
-#~ msgid "Locations…"
-#~ msgstr "المكان…"
-
-#~ msgid "Lock"
-#~ msgstr "أوصِد"
-
-#~ msgid "No user with the name '%s' exists."
-#~ msgstr "اسم المستخدم '%s' موجود بالفعل."
-
-#~ msgid "This user does not exist."
-#~ msgstr "المستخدم غير موجود."
-
-#~ msgid "Browse Files..."
-#~ msgstr "تصفح الملفات..."
-
-#~ msgid "Available Profiles for Displays"
-#~ msgstr "التشكيلات المتوفرة لشاشات العرض"
-
-#~ msgid "Available Profiles for Scanners"
-#~ msgstr "التشكيلات المتوفرة للماسحات الضوئية"
-
-#~ msgid "Available Profiles for Printers"
-#~ msgstr "التشكيلات المتوفرة للطابعات"
-
-#~ msgid "Available Profiles for Cameras"
-#~ msgstr "التشكيلات المتوفرة للكاميرات"
-
-#~ msgid "Available Profiles for Webcams"
-#~ msgstr "التشكيلات المتوفرة لكاميرات الوِب"
-
-#~ msgid "English"
-#~ msgstr "الإنجليزية"
-
-#~ msgid "French"
-#~ msgstr "الفرنسيّة"
-
-#~ msgid "Russian"
-#~ msgstr "الروسية"
-
-#~ msgid "Arabic"
-#~ msgstr "العربية"
-
-#~ msgid "%d x %d"
-#~ msgstr "%d × %d"
-
-#~ msgid "VESA: %s"
-#~ msgstr "VESA: %s"
-
-#~ msgid "Unknown model"
-#~ msgstr "طِراز غير معروف"
-
-#~ msgid "The next login will attempt to use the standard experience."
-#~ msgstr "الولوج التالي سيحاول استخدام الواجهة الاعتيادية."
-
-#~ msgid ""
-#~ "The next login will use the fallback mode intended for unsupported "
-#~ "graphics hardware."
-#~ msgstr ""
-#~ "الولوج التالي سيستخدم النمط الاحتياطي والذي سيستخدم الواجهة التقليدية "
-#~ "المخصصة لعتاد الرسوميات غير المدعوم."
-
-#~ msgctxt "Experience"
-#~ msgid "Fallback"
-#~ msgstr "احتياطية"
-
-#~ msgctxt "Experience"
-#~ msgid "Standard"
-#~ msgstr "اعتيادية"
-
-#~ msgid "_Other Media..."
-#~ msgstr "وسائط أ_خرى..."
-
-#~ msgid "Experience"
-#~ msgstr "الواجهة"
-
-#~ msgid "Forced _Fallback Mode"
-#~ msgstr "أرغم النمط الا_حتياطي"
-
-#~ msgid "Network;Wireless;IP;LAN;Proxy;"
-#~ msgstr "الشبكة;لاسلكي;عنوان أي بي;بروتوكول الإنترنت;الشبكة المحلية;الوسيط"
-
-#~ msgid "_Options..."
-#~ msgstr "ال_خيارات..."
-
-#~ msgid "C_reate..."
-#~ msgstr "أ_نشئ..."
-
-#~ msgid "Wireless Hotspot"
-#~ msgstr "نقطة اتصال لا سلكية"
-
-#~ msgid "Wireless"
-#~ msgstr "لاسلكية"
-
-#~ msgid "Mesh"
-#~ msgstr "عُرَوِيّة"
-
-#~ msgid "_Show"
-#~ msgstr "أ_ظهر"
-
-#~ msgid "Copy Settings..."
-#~ msgstr "انسخ الإعدادات..."
-
-#~ msgid ""
-#~ "Select a display language (change will be applied next time you log in)"
-#~ msgstr "اختر لغة العرض (ستُتطبّق التغييرات مع الولوج التالي)"
-
-#~ msgid "Remove Language"
-#~ msgstr "أزِل لغة"
-
-#~ msgid "Install languages..."
-#~ msgstr "ثبّت اللغات..."
-
-#~ msgid "Locations..."
-#~ msgstr "الأماكن..."
-
-#~ msgid "Enable debugging code"
-#~ msgstr "فعلّ كود التنقيح"
-
-#~ msgid " — GNOME Volume Control Applet"
-#~ msgstr " — بريمج التحكم في شدة الصوت"
-
-#~ msgid "Show desktop volume control"
-#~ msgstr "اعرض التحكم في شدة الصوت"
-
-#~ msgid "Sound Output Volume"
-#~ msgstr "شدة مَخْرَج الصوت"
-
-#~ msgid "Failed to start Sound Preferences: %s"
-#~ msgstr "فشل بدء تفضيلات الصوت: %s"
-
-#~ msgid "_Mute"
-#~ msgstr "أص_مت"
-
-#~ msgid "_Sound Preferences"
-#~ msgstr "_تفضيلات الصوت"
-
-#~ msgid "Muted"
-#~ msgstr "مُصمَت"
-
-#~ msgid "Options..."
-#~ msgstr "الخيارات..."
-
-#~ msgctxt "Zoom Grayscale"
-#~ msgid "Color"
-#~ msgstr "اللون"
-
-#~ msgctxt "Zoom Grayscale"
-#~ msgid "None"
-#~ msgstr "بلا"
-
-#~ msgid "User Accounts"
-#~ msgstr "حسابات المستخدمين"
-
-#~ msgid "Browse for more pictures..."
-#~ msgstr "تصفّح لمزيد من الصور..."
-
-#~ msgid "Map Buttons..."
-#~ msgstr "تعيين أزرار..."
-
-#~ msgid "Calibrate..."
-#~ msgstr "عايِر..."
-
-#~ msgid "- System Settings"
-#~ msgstr "- إعدادات النظام"
-
-#~ msgid "System Settings"
-#~ msgstr "إعدادات النظام"
-
-#~ msgid "Security Key"
-#~ msgstr "مفتاح الأمن"
-
-#~ msgid "Subnet Mask"
-#~ msgstr "قناع الشبكة الفرعية"
-
-#~ msgid "_Search by Address"
-#~ msgstr "ا_بحث حسب العنوان"
-
-#~ msgid ""
-#~ "FirewallD is not running. Network printer detection needs services mdns, "
-#~ "ipp, ipp-client and samba-client enabled on firewall."
-#~ msgstr ""
-#~ "لا يعمل FirewallD. يحتاج اكتشاف طابعة الشبكة إلى تفعيل خدمات mdns و ipp و "
-#~ "ipp-client و samba-client في الجدار الناري."
-
-#~ msgctxt "printer type"
-#~ msgid "Local"
-#~ msgstr "محلية"
-
-#~ msgctxt "printer type"
-#~ msgid "Network"
-#~ msgstr "على الشبكة"
-
-#~ msgid "Device types"
-#~ msgstr "أنواع الأجهزة"
-
-#~ msgid "Automatic configuration"
-#~ msgstr "إعداد تلقائي"
-
-#~ msgid "Opening firewall for mDNS connections"
-#~ msgstr "يفتح الجدار الناري لاتصالات mDNS"
-
-#~ msgid "Opening firewall for Samba connections"
-#~ msgstr "يفتح الجدار الناري لاتصالات Samba"
-
-#~ msgid "Opening firewall for IPP connections"
-#~ msgstr "يفتح الجدار الناري لاتصالات IPP"
-
-#~ msgid "To test your settings, try to double-click on the face."
-#~ msgstr "لاختبار إعدادات النقر المزدوج، جرّب النقر المزدوج على الوجه."
-
-#~ msgid "Dasher"
-#~ msgstr "داشر"
-
-#~ msgid "Nomon"
-#~ msgstr "Nomon"
-
-#~ msgid "Caribou"
-#~ msgstr "كاريبو"
-
-#~ msgid "C_hoose a device to configure:"
-#~ msgstr "ا_ختر جهازا لإعداده:"
-
-#~ msgid "Add wallpaper"
-#~ msgstr "أضف خلفية"
-
-#~ msgid "Remove wallpaper"
-#~ msgstr "أزل الخلفية"
-
-#~ msgid "Swap colors"
-#~ msgstr "بدّل الألوان"
-
-#~ msgid "Horizontal Gradient"
-#~ msgstr "تدرج أفقي"
-
-#~ msgid "Vertical Gradient"
-#~ msgstr "تدرج رأسي"
-
-#~ msgid "Solid Color"
-#~ msgstr "لون سادة"
-
-#~ msgid "Colors & Gradients"
-#~ msgstr "ألوان وتدرجات"
-
-#~ msgid "Take a screenshot"
-#~ msgstr "التقط صورة للشاشة"
-
-#~ msgid "_Right-handed"
-#~ msgstr "فأرة لليد الي_منى"
-
-#~ msgid "_Left-handed"
-#~ msgstr "فأرة لليد اليسر_ى"
-
-#~ msgid "Sh_ow position of pointer when the Control key is pressed"
-#~ msgstr "أ_ظهر موقع الفأرة عند ضغط مفتاح Ctrl"
-
-#~ msgid "A_cceleration:"
-#~ msgstr "ال_تسارع:"
-
-#~ msgid "_Sensitivity:"
-#~ msgstr "الح_ساسية:"
-
-#~ msgid "Drag and Drop"
-#~ msgstr "السحب والإفلات"
-
-#~ msgid "Thr_eshold:"
-#~ msgstr "ال_عتبة:"
-
-#~ msgid "Drag Threshold"
-#~ msgstr "اسحب العتبة"
-
-#~ msgid "_Timeout:"
-#~ msgstr "ا_لمهلة:"
-
-#~ msgid "Enable _mouse clicks with touchpad"
-#~ msgstr "فعّل _نقرات الفأرة في لوحة اللمس"
-
-#~ msgid "_Disabled"
-#~ msgstr "مع_طّل"
-
-#~ msgid "Account _type"
-#~ msgstr "_نوع الحساب"
-
-#~ msgid "Acti_on:"
-#~ msgstr "الإ_جراء:"
-
-#~ msgctxt "Wireless access point"
-#~ msgid "Other..."
-#~ msgstr "أخرى..."
-
-#~ msgid "Create the hotspot anyway?"
-#~ msgstr "إنشاء نقطة اتصال على أي حال؟"
-
-#~ msgid "Disconnect from %s and create a new hotspot?"
-#~ msgstr "قطع الاتصال بـ %s وأنشئ نقطة اتصال جديدة؟"
-
-#~ msgid "This is your only connection to the internet."
-#~ msgstr "هذا اتصالك الوحيد بالإنترنت."
-
-#~ msgid "Create _Hotspot"
-#~ msgstr "أنشئ _نقطة اتصال"
-
-#~ msgid "_Network Name"
-#~ msgstr "اسم ال_شبكة"
-
-#~ msgid "_Stop Hotspot..."
-#~ msgstr "أو_قف نقطة الاتصال..."
-
-#~ msgid "_Back"
-#~ msgstr "ا_رجع"
-
-#~ msgid "Allowed users"
-#~ msgstr "المستخدمين المسموح لهم"
-
-#~ msgid "Disable VPN"
-#~ msgstr "عطّل VPN"
-
-#~ msgid "HTTP Port"
-#~ msgstr "منفذ HTTP"
-
-#~ msgid "HTTPS Port"
-#~ msgstr "منفذ HTTPS"
-
-#~ msgid "FTP Port"
-#~ msgstr "منفذ FTP"
-
-#~ msgid "Select an account"
-#~ msgstr "اختر حسابًا"
-
-#~ msgid "To add a new account, first select the account type"
-#~ msgstr "لإضافة حساب جديد، اختر أولًا نوع الحساب"
-
-#~ msgid "_Add..."
-#~ msgstr "أ_ضِف…"
-
-#~ msgid "Tip:"
-#~ msgstr "تلميح:"
-
-#~ msgid "affect how much power is used"
-#~ msgstr "تؤثر في كمية الطاقة المستهلكة"
-
-#~ msgid "Remove Layout"
-#~ msgstr "أزِل تخطيطا"
-
-#~ msgid "Preview Layout"
-#~ msgstr "معاينة التخطيط"
-
-#~ msgid "New windows use the default layout"
-#~ msgstr "النوافذ الجديدة تستخدم التخطيط المبدئي"
-
-#~ msgid "New windows use the previous window's layout"
-#~ msgstr "النوافذ الجديدة تستخدم تخطيط النافذة السابقة"
-
-#~ msgid "View and edit keyboard layout options"
-#~ msgstr "اعرض وعدّل خيارات تخطيط لوحة المفاتيح"
-
-#~ msgid "Reset to De_faults"
-#~ msgstr "ا_ستعد المبدئيات"
-
-#~ msgid ""
-#~ "Replace the current keyboard layout settings with the\n"
-#~ "default settings"
-#~ msgstr ""
-#~ "غيّر إعدادات لوحة المفاتيح الحالية إلى\n"
-#~ "الإعدادات المبدئية"
-
-#~ msgid "Layouts"
-#~ msgstr "التخطيطات"
-
-#~ msgid "Layout"
-#~ msgstr "التخطيط"
-
-#~ msgid "Change contrast:"
-#~ msgstr "غيّر التباين:"
-
-#~ msgid "_Text size:"
-#~ msgstr "حجم ال_نص:"
-
-#~ msgid "Increase size:"
-#~ msgstr "كبّر الحجم:"
-
-#~ msgid "Decrease size:"
-#~ msgstr "قلل الحجم:"
-
-#~ msgctxt "universal access, seeing"
-#~ msgid "Zoom"
-#~ msgstr "التقريب"
-
-#~ msgid "Type here to test settings"
-#~ msgstr "اكتب هنا لاختبار الإعدادات"
-
-#~ msgid "1/2 Screen"
-#~ msgstr "1/2 الشاشة"
-
-#~ msgid "3/4 Screen"
-#~ msgstr "3/4 الشاشة"
-
-#~ msgid "Create new account"
-#~ msgstr "أنشئ حسابا جديدا"
-
-#~ msgid "_Account Type"
-#~ msgstr "_نوع الحساب"
-
-#~ msgid "Cr_eate"
-#~ msgstr "أ_نشئ"
-
-#~ msgid "Choose a generated password"
-#~ msgstr "اختر كلمة سر مُوَلّدة"
-
-#~ msgid "More choices..."
-#~ msgstr "المزيد من الخيارات…"
-
-#~ msgid "Wacom Graphics Tablet"
-#~ msgstr "لوح رسوميات Wacom"
-
-#~ msgid "Could not get session bus while applying display configuration"
-#~ msgstr "تعذرت معرفة الجلسة أثناء تطبيق تضبيطات العرض"
-
-#~ msgid "System Info"
-#~ msgstr "معلومات النظام"
-
-#~ msgid "_Photos:"
-#~ msgstr "_صور:"
-
-#~ msgid "Toggle contrast"
-#~ msgstr "بدّل التباين"
-
-#~ msgid "Toggle magnifier"
-#~ msgstr "بدّل المكبرة"
-
-#~ msgid "Toggle screen reader"
-#~ msgstr "بدّل قارئ الشاشة"
-
-#~ msgid "Accelerator key"
-#~ msgstr "مفتاح اختصار"
-
-#~ msgid "Accelerator modifiers"
-#~ msgstr "مُغيِّرات مفاتيح الاختصار"
-
-#~ msgid "Accelerator keycode"
-#~ msgstr "رمز مفتاح الاختصار"
-
-#~ msgid "Accel Mode"
-#~ msgstr "نسق الاختصار"
-
-#~ msgid "The type of accelerator."
-#~ msgstr "نوع مفتاح الاختصار."
-
-#~ msgid "Too many custom shortcuts"
-#~ msgstr "الكثير من الاختصارات المخصصة"
-
-#~ msgid "Battery discharging"
-#~ msgstr "البطارية تُستخدم"
-
-#~ msgid "%s until charged (%.0lf%%)"
-#~ msgstr "%s حتى تُشحن (%.0lf%%)"
-
-#~ msgid "%s until empty (%.0lf%%)"
-#~ msgstr "%s حتى تفرغ (%.0lf%%)"
-
-#~ msgid "%.0lf%% charged"
-#~ msgstr "%.0lf%% مشحون"
-
-#~ msgid "Ask me"
-#~ msgstr "اسألني"
-
-#~ msgid "Shutdown"
-#~ msgstr "أطفئ"
-
-#~ msgid "Key"
-#~ msgstr "المفتاح"
-
-#~ msgid "GConf key to which this property editor is attached"
-#~ msgstr "مفتاح GConf الذي يتبعه محرّر الخاصية هذا."
-
-#~ msgid "Callback"
-#~ msgstr "اتصال معاكس"
-
-#~ msgid "Issue this callback when the value associated with key gets changed"
-#~ msgstr "فعّل هذا الاتصال المعاكس إثر تغيير قيمة بالمفتاح"
-
-#~ msgid "Change set"
-#~ msgstr "مجموعة التغييرات"
-
-#~ msgid ""
-#~ "GConf change set containing data to be forwarded to the gconf client on "
-#~ "apply"
-#~ msgstr ""
-#~ "مجموعة تغييرات GConf المحتوية على بيانات سترسل إلى عميل gconf عند التطبيق"
-
-#~ msgid "Conversion to widget callback"
-#~ msgstr "تحويل إلى نداء معاكس للودجة"
-
-#~ msgid ""
-#~ "Callback to be issued when data are to be converted from GConf to the "
-#~ "widget"
-#~ msgstr "الاتصال المعاكس الذي يتم تفعيله لتحويل البيانات من GConf للودجة"
-
-#~ msgid "Conversion from widget callback"
-#~ msgstr "تحويل من النداء المعاكس للودجة"
-
-#~ msgid ""
-#~ "Callback to be issued when data are to be converted to GConf from the "
-#~ "widget"
-#~ msgstr "الاتصال المعاكس الذي يتم تفعيله لتحويل البيانات من الودجة إلى GConf"
-
-#~ msgid "UI Control"
-#~ msgstr "كائن واجهة المستخدم"
-
-#~ msgid "Object that controls the property (normally a widget)"
-#~ msgstr "الكائن الذي يتحكم في الخاصية (عادة ودجة)"
-
-#~ msgid "Property editor object data"
-#~ msgstr "بيانات كائن محرّر الخاصيات"
-
-#~ msgid "Custom data required by the specific property editor"
-#~ msgstr "البيانات المعرفة المطلوبة من محرّر الخاصية المحدّد"
-
-#~ msgid "Property editor data freeing callback"
-#~ msgstr "الاتصال المعاكس المفرغ لمحرر الخاصيات من بياناته"
-
-#~ msgid ""
-#~ "Callback to be issued when property editor object data is to be freed"
-#~ msgstr "الاتصال المعاكس الذي يتم تفعيله عند تحرير بيانات جسم محرّر الخاصيات"
-
-#~ msgid ""
-#~ "Couldn't find the file '%s'.\n"
-#~ "\n"
-#~ "Please make sure it exists and try again, or choose a different "
-#~ "background picture."
-#~ msgstr ""
-#~ "تعذّر إيجاد الملف '%s'.\n"
-#~ "\n"
-#~ "رجاء تأكد من وجوده وأعد المحاولة مرّة اخرى، أو اختر صورةَ خلفية مغايرة."
-
-#~ msgid ""
-#~ "I don't know how to open the file '%s'.\n"
-#~ "Perhaps it's a kind of picture that is not yet supported.\n"
-#~ "\n"
-#~ "Please select a different picture instead."
-#~ msgstr ""
-#~ "لا أعرف كيف أفتح الملف '%s'.\n"
-#~ "قد يكون نوع الصورة غير مدعوم الآن.\n"
-#~ "\n"
-#~ "رجاء اختر صورة أخرى."
-
-#~ msgid "Please select an image."
-#~ msgstr "رجاء اختر صورة."
-
-#, fuzzy
-#~ msgid "Centered"
-#~ msgstr "موسَّطة"
-
-#, fuzzy
-#~ msgid "Show"
-#~ msgstr "أ_ظهر"
-
-#~ msgid "Create a user"
-#~ msgstr "أنشئ مستخدما"
-
-#~ msgid "Media and Autorun"
-#~ msgstr "الوسائط والتشغيل التلقائي"
-
-#~ msgid "Configure media and autorun preferences"
-#~ msgstr "اضبط تفضيلات الوسائط والتشغيل التلقائي"
-
-#~ msgid "cd;dvd;usb;audio;video;disc;"
-#~ msgstr "اسطوانة;قرص;صوت;صورة;فديو;"
-
-#, fuzzy
-#~ msgid "_Turn off after:"
-#~ msgstr "أ_طفئ بعد:"
-
-#~ msgid "Mute"
-#~ msgstr "أصمِت"
-
-#~ msgid "Current network location"
-#~ msgstr "مكان الشبكة الحالي"
-
-#~ msgid "More backgrounds URL"
-#~ msgstr "مسار جلب المزيد من الخلفيات"
-
-#~ msgid "More themes URL"
-#~ msgstr "مسار جلب المزيد من السمات"
-
-#~ msgid ""
-#~ "Set this to your current location name. This is used to determine the "
-#~ "appropriate network proxy configuration."
-#~ msgstr ""
-#~ "يحدد هذا اسما لمكانك الحالي. يستخدم هذا لتحديد إعدادات وسيط الشبكة "
-#~ "المناسبة."
-
-#~ msgid ""
-#~ "URL for where to get more desktop backgrounds. If set to an empty string "
-#~ "the link will not appear."
-#~ msgstr "مسار لجلب المزيد من خلفيات سطح المكتب. إذا ترك فارغا لن يظهر."
-
-#~ msgid ""
-#~ "URL for where to get more desktop themes. If set to an empty string the "
-#~ "link will not appear."
-#~ msgstr "مسار لجلب المزيد من سمات سطح المكتب. إذا ترك فارغا لن يظهر."
-
-#~ msgid "Locked"
-#~ msgstr "مُوصد"
-
-#~ msgid ""
-#~ "Dialog is unlocked.\n"
-#~ "Click to prevent further changes"
-#~ msgstr ""
-#~ "المربع الحواري غير مُوصَد.\n"
-#~ "انقر لمنع أي تغييرات"
-
-#~ msgid ""
-#~ "Dialog is locked.\n"
-#~ "Click to make changes"
-#~ msgstr ""
-#~ "المربع الحواري مُوصَد.\n"
-#~ "انقر للسماح بالتغييرات"
-
-#~ msgid ""
-#~ "System policy prevents changes.\n"
-#~ "Contact your system administrator"
-#~ msgstr ""
-#~ "تمنع سياسة النظام التعديلات.\n"
-#~ "راجع مدير النظام."
-
-#~ msgid "24-Hour Time"
-#~ msgstr "توقيت 24 ساعة"
-
-#~ msgid "Upside-down"
-#~ msgstr "رأسا على عقب"
-
-#~ msgid "%.1f KB"
-#~ msgstr "%.1f ك.بايت"
-
-#~ msgid "%.1f MB"
-#~ msgstr "%.1f م.بايت"
-
-#~ msgid "%.1f GB"
-#~ msgstr "%.1f ج.بايت"
-
-#~ msgid "%.1f TB"
-#~ msgstr "%.1f ت.بايت"
-
-#~ msgid "%.1f PB"
-#~ msgstr "%.1f ب.بايت"
-
-#~ msgid "%.1f EB"
-#~ msgstr "%.1f إ.بايت"
-
-#~ msgid "Photos"
-#~ msgstr "الصور"
-
-#~ msgid "Updates Available"
-#~ msgstr "يوجد تحديثات"
-
-#~ msgid "Web"
-#~ msgstr "الوب"
-
-#~ msgid "---"
-#~ msgstr "---"
-
-#~ msgid "Use default layout in new windows"
-#~ msgstr "استخدم التخطيط المبدئي في النوافذ الجديدة"
-
-#~ msgid "Use previous window's layout in new windows"
-#~ msgstr "استخدم تخطيط النافذة السابقة في النوافذ الجديدة"
-
-#~ msgid "On AC power:"
-#~ msgstr "على الطاقة الاعتيادية:"
-
-#~ msgid "Put the computer to sleep when inactive:"
-#~ msgstr "ضع الحاسوب لينام عندما لا يكون نشطا:"
-
-#~ msgid "When the sleep button is pressed:"
-#~ msgstr "عند ضغط زر الإسبات:"
-
-#~ msgid "Keyboard;Mouse;a11y;Accessibility;"
-#~ msgstr "لوحة;مفاتيح;فأرة;إتاحة;"
-
-#~ msgid "<span size=\"x-large\">High/Inverse</span>"
-#~ msgstr "<span size=\"x-large\">عال\\معكوس</span>"
-
-#~ msgid "<span size=\"x-large\">High</span>"
-#~ msgstr "<span size=\"x-large\">عال</span>"
-
-#~ msgid "<span size=\"x-large\">Low</span>"
-#~ msgstr "<span size=\"x-large\">منخفض</span>"
-
-#~ msgid "<span size=\"x-large\">Normal</span>"
-#~ msgstr "<span size=\"x-large\">عادي</span>"
-
-#~ msgid "An error has occured during a maintenance command."
-#~ msgstr "حدث عطل أثناء تنفيذ أمر الصيانة."
-
-#~ msgid "DSL"
-#~ msgstr "DSL"
-
-#~ msgid "16"
-#~ msgstr "16"
-
-#~ msgid "2010"
-#~ msgstr "2010"
-
-#~ msgid "Info"
-#~ msgstr "معلومات"
-
-#~ msgid "Set the system proxy settings"
-#~ msgstr "اضبط إعدادات وسيط الشبكة"
-
-#~ msgid "Virtual private network"
-#~ msgstr "شبكة خاصة افتراضية"
-
-#~ msgid "The running NetworkManager version is not compatible (too new)."
-#~ msgstr "نسخة NetworkManager التي تعمل غير متوافقة (حديثة جدا)"
-
-#~ msgid "The running NetworkManager version is not compatible (too old)."
-#~ msgstr "نسخة NetworkManager التي تعمل غير متوافقة (قديمة جدا)"
-
-#~ msgid "IP Address:"
-#~ msgstr "عنوان IP:"
-
-#~ msgid "Preparing"
-#~ msgstr "يُجهّز"
-
-#~ msgctxt "Account type"
-#~ msgid "Supervised"
-#~ msgstr "تحت الإشراف"
-
-#~ msgid "Supervised"
-#~ msgstr "تحت الإشراف"
-
-#~ msgid "Secure HTTP Proxy:"
-#~ msgstr "وسيط HTTP الآمن:"
-
-#~ msgid "Chipset"
-#~ msgstr "البطاقة"
-
-#~ msgid "LowContrast"
-#~ msgstr "تباين منخفض"
-
-#~ msgid "Use an alternative form of text input"
-#~ msgstr "استخدم صورة بديلة من الإدخال النصّي"
-
-#~ msgid "Language:"
-#~ msgstr "اللغة:"
-
-#~ msgid "Ctrl+Alt+0"
-#~ msgstr "Ctrl+Alt+0"
-
-#~ msgid "Ctrl+Alt+4"
-#~ msgstr "Ctrl+Alt+4"
-
-#~ msgid "Ctrl+Alt+8"
-#~ msgstr "Ctrl+Alt+8"
-
-#~ msgid "Ctrl+Alt+="
-#~ msgstr "Ctrl+Alt+="
-
-#~ msgid "Shift+Ctrl+Alt+-"
-#~ msgstr "Shift+Ctrl+Alt+-"
-
-#~ msgid "Shift+Ctrl+Alt+="
-#~ msgstr "Shift+Ctrl+Alt+="
-
-#~ msgid "%i kb/s"
-#~ msgstr "%i ك.بايت\\ث"
-
-#~ msgid "Graphics:"
-#~ msgstr "الرسوميات:"
-
-#, fuzzy
-#~ msgid "Always use fallback:"
-#~ msgstr "استخدم الاحتياط دائما:"
-
-#~ msgid "Error unsetting accelerator in configuration database: %s"
-#~ msgstr "خطأ عند إلغاء ضبط مفتاح الاختصار في قاعدة بيانات الإعدادات: %s"
-
-#~ msgid "More Info"
-#~ msgstr "المزيد من المعلومات"
-
-#~ msgctxt "printer state"
-#~ msgid "Idle"
-#~ msgstr "ساكنة"
-
-#~ msgid "By _country"
-#~ msgstr "بالب_لد"
-
-#~ msgid "By _language"
-#~ msgstr "بالل_غة"
-
-#~ msgid "_Country:"
-#~ msgstr "الب_لد:"
-
-#~ msgid "_Variants:"
-#~ msgstr "ال_تنويعات:"
-
-#~ msgid "Upside Down"
-#~ msgstr "رأسا على عقب"
-
-#~ msgid "Description:"
-#~ msgstr "الوصف:"
-
-#~ msgid "Hold"
-#~ msgstr "علّق"
-
-#~ msgid "Queue"
-#~ msgstr "الطابور"
-
-#~ msgid "Release"
-#~ msgstr "أطلِق"
-
-#~ msgid "Show / hide printer's jobs"
-#~ msgstr "أظهر أو أخفِ مهام الطابعة"
-
-#~ msgid "Keyboard _model:"
-#~ msgstr "_طراز لوحة المفاتيح:"
-
-#~ msgid "Move the selected keyboard layout up in the list"
-#~ msgstr "انقل تخطيط لوحة المفاتيح المحدد إلى أعلى"
-
-#~ msgid "Print a diagram of the selected keyboard layout"
-#~ msgstr "اطبع رسما لتخطيط لوحة المفاتيح المحدد"
-
-#~ msgid "Remove the selected keyboard layout from the list"
-#~ msgstr "احذف تخطيط لوحة المفاتيح المحدد من القائمة"
-
-#~ msgid "Select a keyboard layout to be added to the list"
-#~ msgstr "اختر تخطيط لوحة مفاتيح ليُضاف إلى القائمة"
-
-#~ msgid "Choose a Keyboard Model"
-#~ msgstr "اختر طراز لوحة المفاتيح"
-
-#~ msgid "_Models:"
-#~ msgstr "ال_طرُز:"
-
-#~ msgid "_Vendors:"
-#~ msgstr "ال_مُنتِج:"
-
-#~ msgid "Vendors"
-#~ msgstr "المُنتِج"
-
-#~ msgid "Battery power and inactive for:"
-#~ msgstr "البطارية غير نشطة منذ:"
-
-#~ msgid "Put the computer to sleep when on:"
-#~ msgstr "ضع الحاسوب لينام عندما يعمل على:"
-
-#~ msgid "Restrictions:"
-#~ msgstr "القيود:"
-
-#~ msgid ""
-#~ "A guest account will allow anyone to temporarily log in to this computer "
-#~ "without a password.  For security, remote logins to this account are not "
-#~ "allowed.\n"
-#~ "\n"
-#~ "                    <b>When the guest user logs out, all files and data "
-#~ "associated with the account will be deleted.</b>"
-#~ msgstr ""
-#~ "سيتيح حساب الضيف لأي كان أن يلج مؤقتا إلى هذا الحاسوب بدون كلمة سر. "
-#~ "للأمان، سن يُسمح لهذا الحساب بالولوج عن بعد.\n"
-#~ "\n"
-#~ "                    <b>عندما يخرج المستخدم الضيف فستحذف كل الملفات "
-#~ "والبيانات المتعلقة بهذا الحساب.</b>"
-
-#~ msgid "Accounts"
-#~ msgstr "الحسابات"
-
-#~ msgid "Address Book Card:"
-#~ msgstr "بطاقة دفتر العناوين:"
-
-#~ msgid "Allow guests to log in to this computer"
-#~ msgstr "اسمح للضيوف بالولوج إلى هذا الحاسوب"
-
-#~ msgid "E-mail address:"
-#~ msgstr "عنوان البريد الإلكتروني:"
-
-#~ msgid "Show Shutdown, Suspend and Restart actions"
-#~ msgstr "أظهر إجراءات الإطفاء والتعليق وإعادة التشغيل"
-
-#~ msgid "Show list of users"
-#~ msgstr "أظهر قائمة المستخدمين"
-
-#~ msgid "Show password hints"
-#~ msgstr "أظهر تلميحات كلمات السر"
-
-#~ msgid "2 GB"
-#~ msgstr "2 ج.بايت"
-
-#~ msgid "80 GB (4 GB free)"
-#~ msgstr "80 ج.بايت (4 ج.بايت خالية)"
-
-#~ msgid "_Pointer can be controlled using the keypad"
-#~ msgstr "يمكن ال_تحكم في المؤشر باستخدام لوحة المفاتيح"
-
-#~ msgid "_Type to test settings:"
-#~ msgstr "ا_كتب لاختبار الإعدادات:"
-
-#~ msgid "Desktop"
-#~ msgstr "سطح المكتب"
-
-#~ msgid "Choose type of click _beforehand"
-#~ msgstr "اختر نوع النقر م_سبقًا"
-
-#~ msgid "Choose type of click with mo_use gestures"
-#~ msgstr "اختر نو_ع النقر بحركات الفأرة"
-
-#~ msgid "D_rag click:"
-#~ msgstr "نقر ال_سحب:"
-
-#~ msgid "Dwell Click"
-#~ msgstr "النقر السلبي"
-
-#~ msgid "Show click type _window"
-#~ msgstr "أظ_هر نافذة نوع النقر"
-
-#~ msgid ""
-#~ "You can also use the Dwell Click panel applet to choose the click type."
-#~ msgstr "يمكنك أيضًا استخدام بريمج النقر السلبي لاختيار نوع النقر."
-
-#~ msgid "_Initiate click when stopping pointer movement"
-#~ msgstr "ابتد_ئ بالنقر عند توقف حركة المؤشر"
-
-#~ msgid "_Single click:"
-#~ msgstr "نقرة م_فردة:"
-
-#~ msgid "_Trigger secondary click by holding down the primary button"
-#~ msgstr "يسبب النقر ال_ثانوي عن طريق الاستمرار بضغط الزر الأولي"
-
-#~ msgid "Preferred Applications"
-#~ msgstr "التطبيقات المفضّلة"
-
-#~ msgid "Start the preferred visual assistive technology"
-#~ msgstr "ابدأ تقنية الإعانة المرئية المفضلة"
-
-#~ msgid "Visual Assistance"
-#~ msgstr "الإعانة المرئية"
-
-#~ msgid "Error setting default browser: %s"
-#~ msgstr "عطل في تحديد المتصفح المبدئي: %s"
-
-#~ msgid "All %s occurrences will be replaced with actual link"
-#~ msgstr "سيتم تبديل كل مصادفات %s بالرابط الحقيقي"
-
-#~ msgid "Co_mmand:"
-#~ msgstr "الأ_مر:"
-
-#~ msgid "E_xecute flag:"
-#~ msgstr "شا_رة التنفيذ:"
-
-#~ msgid "Instant Messenger"
-#~ msgstr "المرسال الفوري"
-
-#~ msgid "Mail Reader"
-#~ msgstr "قارئ البريد"
-
-#~ msgid "Mobility"
-#~ msgstr "الحركيّة"
-
-#~ msgid "Run at st_art"
-#~ msgstr "شغّ_ل عند البدء"
-
-#~ msgid "Run in t_erminal"
-#~ msgstr "شغّل في _طرفية"
-
-#~ msgid "Terminal Emulator"
-#~ msgstr "محاكي الطرفية"
-
-#~ msgid "Text Editor"
-#~ msgstr "محرّر النصوص"
-
-#~ msgid "Visual"
-#~ msgstr "مرئي"
-
-#~ msgid "Web Browser"
-#~ msgstr "متصفّح الوِب"
-
-#~ msgid "_Run at start"
-#~ msgstr "_شغل عند البدء"
-
-#~ msgid "Banshee Music Player"
-#~ msgstr "مشغل موسيقى بانشي"
-
-#~ msgid "Debian Terminal Emulator"
-#~ msgstr "محاكي طرفية دبيان"
-
-#~ msgid "ETerm"
-#~ msgstr "ETerm"
-
-#~ msgid "GNOME Magnifier without Screen Reader"
-#~ msgstr "مكبّر جنوم بدون قارئ الشاشة"
-
-#~ msgid "GNOME OnScreen Keyboard"
-#~ msgstr "لوحة مفاتيح جنوم على الشاشة"
-
-#~ msgid "GNOME Terminal"
-#~ msgstr "طرفية جنوم"
-
-#~ msgid "Gnopernicus"
-#~ msgstr "جنوبرنيكوس"
-
-#~ msgid "Gnopernicus with Magnifier"
-#~ msgstr "جنوبرنيكوس مع المكبّر"
-
-#~ msgid "KDE Magnifier without Screen Reader"
-#~ msgstr "مكبّر كدي بدون قارئ الشاشة"
-
-#~ msgid "Konsole"
-#~ msgstr "كونسول"
-
-#~ msgid "Linux Screen Reader"
-#~ msgstr "قارئ شاشة لينكس"
-
-#~ msgid "Linux Screen Reader with Magnifier"
-#~ msgstr "قارئ شاشة لينكس مع المكبّر"
-
-#~ msgid "Listen"
-#~ msgstr "استمع"
-
-#~ msgid "Muine Music Player"
-#~ msgstr "مشغل الموسيقى موين"
-
-#~ msgid "NXterm"
-#~ msgstr "NXterm"
-
-#~ msgid "Orca"
-#~ msgstr "أوركا"
-
-#~ msgid "Orca with Magnifier"
-#~ msgstr "أوركا مع المكبّر"
-
-#~ msgid "RXVT"
-#~ msgstr "RXVT"
-
-#~ msgid "Rhythmbox Music Player"
-#~ msgstr "مشغل الموسيقى أنغام"
-
-#~ msgid "Standard XTerminal"
-#~ msgstr "طرفيّة X القياسيّة"
-
-#~ msgid "Terminator"
-#~ msgstr "Terminator"
-
-#~ msgid "Totem Movie Player"
-#~ msgstr "مشغل الأفلام توتم"

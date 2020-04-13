@@ -1,33 +1,39 @@
-# Hungarian translation for gnome-control-center.
-# Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2017, 2018, 2019, 2020 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-control-center package.
-#
-# Szabolcs Ban <shooby at gnome dot hu>, 1998, 1999, 2000.
-# Emese Kovacs <emese at gnome dot hu>, 2001.
-# Peter Doma <zelin at pointernet dot hu>, 2002.
-# Andras Timar <timar at gnome dot hu>, 2001, 2002, 2003.
-# Gabor Sari <saga at gnome dot hu>, 2003.
-# Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2017, 2018.
-# Mate ORY <orymate at gmail d0t com>, 2006.
-# Richard Somloi <ricsipontaz at gmail dot com>, 2011, 2012.
-# Peter Trombitas <trombipeti at gmail dot com>, 2012.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
-# Balázs Meskó <mesko.balazs at fsf dot hu>, 2019, 2020.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# Andras Timar <timar at gnome dot hu>, 2001-2003
+# Balázs Meskó <mesko.balazs at fsf dot hu>, 2019-2020
+# Balázs Úr <ur.balazs at fsf dot hu>, 2013-2020
+# Balázs Úr <urbalazs at gmail dot com>, 2013-2017
+# bela erdei <bela@dandre.hu>, 2020
+# Emese Kovacs <emese at gnome dot hu>, 2001
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2004-2013,2015-2018
+# Gabor Sari <saga at gnome dot hu>, 2003
+# Gyula Szabó <gyhun95@gmail.com>, 2018
+# Laszlo Dvornik <dvornik at gnome dot hu>, 2004
+# Mate ORY <orymate at gmail d0t com>, 2006
+# Peter Doma <zelin at pointernet dot hu>, 2002
+# Peter Trombitas <trombipeti at gmail dot com>, 2012
+# Richard Somloi <ricsipontaz at gmail dot com>, 2011-2012
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Szabolcs Ban <shooby at gnome dot hu>, 1998-2000
+# Will Thompson <wjt@endlessm.com>, 2019
+# Zoltan Hoppar <hopparz@gmail.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-13 22:09+0100\n"
-"PO-Revision-Date: 2020-02-24 08:17+0100\n"
-"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
-"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
-"Language: hu\n"
+"PO-Revision-Date: 2020-04-13 21:22+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/endless-os/gnome-control-center/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.04.3\n"
 
 #: panels/applications/cc-applications-panel.c:747
 msgid "System Bus"
@@ -98,10 +104,7 @@ msgstr "Módosíthatja a beállításokat"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"A(z) %s ezket a jogosultságokat tartalmazza beépítve. Ezek nem "
-"módosíthatóak. Ha zavarják ezek a jogosultságok, akkor fontolja meg az "
-"alkalmazás eltávolítását."
+msgstr "A(z) %s ezket a jogosultságokat tartalmazza beépítve. Ezek nem módosíthatóak. Ha zavarják ezek a jogosultságok, akkor fontolja meg az alkalmazás eltávolítását."
 
 #: panels/applications/cc-applications-panel.c:936
 msgid "Web Links"
@@ -183,11 +186,9 @@ msgstr "Jogosultságok és hozzáférés"
 
 #: panels/applications/cc-applications-panel.ui:111
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"Adatok és szolgáltatások, melyekhez az alkalmazás hozzáférést és "
-"jogosultságot kért."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "Adatok és szolgáltatások, melyekhez az alkalmazás hozzáférést és jogosultságot kért."
 
 #: panels/applications/cc-applications-panel.ui:126
 #: panels/applications/cc-applications-panel.ui:132
@@ -197,7 +198,6 @@ msgstr "Kamera"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -209,7 +209,8 @@ msgstr "Kamera"
 #: panels/keyboard/cc-keyboard-option.c:259
 #: panels/keyboard/cc-keyboard-option.c:378
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:96
-#: panels/keyboard/keyboard-shortcuts.c:425 panels/network/network-proxy.ui:126
+#: panels/keyboard/keyboard-shortcuts.c:425
+#: panels/network/network-proxy.ui:126
 #: panels/user-accounts/cc-user-panel.c:926
 #: panels/user-accounts/um-fingerprint-dialog.c:211
 #: subprojects/gvc/gvc-mixer-control.c:1876
@@ -239,11 +240,9 @@ msgstr "Nem módosítható"
 
 #: panels/applications/cc-applications-panel.ui:180
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"Az alkalmazások egyes engedélyei az <a href=\"privacy\">Adatvédelmi</a> "
-"beállításokban vizsgálhatók felül."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "Az alkalmazások egyes engedélyei az <a href=\"privacy\">Adatvédelmi</a> beállításokban vizsgálhatók felül."
 
 #: panels/applications/cc-applications-panel.ui:204
 msgid "Integration"
@@ -319,8 +318,7 @@ msgstr "Próbáljon valami mást keresni"
 #: panels/applications/cc-applications-panel.ui:554
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr ""
-"Mennyi tárhelyet foglal ez az alkalmazás az adataival és a gyorsítótáraival."
+msgstr "Mennyi tárhelyet foglal ez az alkalmazás az adataival és a gyorsítótáraival."
 
 #: panels/applications/cc-applications-panel.ui:563
 msgid "Application"
@@ -352,8 +350,7 @@ msgstr "Hang lejátszása és rögzítése"
 
 #: panels/applications/cc-snap-row.c:59
 msgid "Detect network devices using mDNS/DNS-SD (Bonjour/zeroconf)"
-msgstr ""
-"Hálózati eszközök észlelése mDNS/DNS-SD használatával (Bonjour/zeroconf)"
+msgstr "Hálózati eszközök észlelése mDNS/DNS-SD használatával (Bonjour/zeroconf)"
 
 #: panels/applications/cc-snap-row.c:61
 msgid "Access bluetooth hardware directly"
@@ -453,9 +450,7 @@ msgstr "A rendszer alacsony szintű hálózati beállításainak módosítása"
 
 #: panels/applications/cc-snap-row.c:113
 msgid "Access the NetworkManager service to read and change network settings"
-msgstr ""
-"A NetworkManager szolgáltatás elérése a hálózati beállítások olvasásához és "
-"módosításához"
+msgstr "A NetworkManager szolgáltatás elérése a hálózati beállítások olvasásához és módosításához"
 
 #: panels/applications/cc-snap-row.c:115
 msgid "Read access to network settings"
@@ -473,9 +468,7 @@ msgstr "Hálózati beállítások olvasása"
 msgid ""
 "Access the ofono service to read and change network settings for mobile "
 "telephony"
-msgstr ""
-"Az ofono szolgáltatás elérése a hálózati és mobil telefóniás beállítások "
-"olvasásához és módosításához"
+msgstr "Az ofono szolgáltatás elérése a hálózati és mobil telefóniás beállítások olvasásához és módosításához"
 
 #: panels/applications/cc-snap-row.c:123
 msgid "Control Open vSwitch hardware"
@@ -493,9 +486,7 @@ msgstr "Mentett jelszavak olvasása, hozzáadása, módosítása vagy eltávolí
 msgid ""
 "Access pppd and ppp devices for configuring Point-to-Point Protocol "
 "connections"
-msgstr ""
-"A pppd és ppp-eszközök elérése Point-to-Point protokoll kapcsolatok "
-"beállításához"
+msgstr "A pppd és ppp-eszközök elérése Point-to-Point protokoll kapcsolatok beállításához"
 
 #: panels/applications/cc-snap-row.c:131
 msgid "Pause or end any process on the system"
@@ -551,8 +542,7 @@ msgstr "Időzóna módosítása"
 
 #: panels/applications/cc-snap-row.c:159
 msgid "Access the UDisks2 service for configuring disks and removable media"
-msgstr ""
-"A UDisks2 szolgáltatás elérése a lemezek és külső adathordozók beállításához"
+msgstr "A UDisks2 szolgáltatás elérése a lemezek és külső adathordozók beállításához"
 
 #: panels/applications/cc-snap-row.c:161
 msgid "Read/change shared calendar events in Ubuntu Unity 8"
@@ -574,7 +564,8 @@ msgstr "Olvasási/írási hozzáférés a szabad U2F eszközökhöz"
 msgid "Control various application permissions and settings"
 msgstr "Különböző alkalmazások jogosultságainak és beállításainak vezérlése"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "alkalmazás;flatpak;jogosultság;beállítás;"
@@ -658,7 +649,8 @@ msgstr "Háttér"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "Háttérkép módosítása tapétára vagy fényképre"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Háttérkép;Képernyő;Asztal;"
@@ -697,8 +689,7 @@ msgstr "Hardver repülőgép üzemmódja be"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:165
 msgid "Turn off the Airplane mode switch to enable Bluetooth."
-msgstr ""
-"Kapcsolja ki a Repülőgép üzemmód kapcsolót a Bluetooth bekapcsolásához."
+msgstr "Kapcsolja ki a Repülőgép üzemmód kapcsolót a Bluetooth bekapcsolásához."
 
 #. Translators: The found device is a printer connected via Bluetooth
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:3
@@ -710,7 +701,8 @@ msgstr "Bluetooth"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Kapcsolja be és ki a Bluetooth-t, majd csatlakoztassa eszközeit"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "share;megosztás;bluetooth;obex;"
@@ -721,17 +713,13 @@ msgstr "A kamera ki van kapcsolva"
 
 #: panels/camera/cc-camera-panel.ui:43
 msgid "No applications can capture photos or video."
-msgstr ""
-"Nincsenek alkalmazások, amelyek fényképet vagy videót tudnának rögzíteni."
+msgstr "Nincsenek alkalmazások, amelyek fényképet vagy videót tudnának rögzíteni."
 
 #: panels/camera/cc-camera-panel.ui:77
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
-msgstr ""
-"A kamera használata lehetővé teszi, hogy az alkalmazások képet és videót "
-"rögzítsenek. A kamera letiltása azt okozhatja, hogy egyes alkalmazások nem "
-"működnek megfelelően."
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly."
+msgstr "A kamera használata lehetővé teszi, hogy az alkalmazások képet és videót rögzítsenek. A kamera letiltása azt okozhatja, hogy egyes alkalmazások nem működnek megfelelően."
 
 #: panels/camera/cc-camera-panel.ui:87
 msgid "Allow the applications below to use your camera."
@@ -745,7 +733,8 @@ msgstr "Egyetlen alkalmazás sem kérte a kamera elérését"
 msgid "Protect your pictures"
 msgstr "A képei védelme"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:19
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
 #: panels/location/gnome-location-panel.desktop.in.in:19
@@ -753,17 +742,13 @@ msgstr "A képei védelme"
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
-msgstr ""
-"képernyő;zárolás;diagnosztika;összeomlás;magán;privát;legutóbbi;nemrégi;"
-"ideiglenes;temp;index;név;hálózat;azonosság;identitás;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
+msgstr "képernyő;zárolás;diagnosztika;összeomlás;magán;privát;legutóbbi;nemrégi;ideiglenes;temp;index;név;hálózat;azonosság;identitás;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:348
 msgid "Place your calibration device over the square and press “Start”"
-msgstr ""
-"Helyezze a kalibrálóeszközt a négyzetre, és nyomja meg a „Kezdés” gombot"
+msgstr "Helyezze a kalibrálóeszközt a négyzetre, és nyomja meg a „Kezdés” gombot"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -771,9 +756,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:354
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
-"Vigye a kalibrálóeszközt a kalibrálási pozícióba, és nyomja meg a „Tovább” "
-"gombot"
+msgstr "Vigye a kalibrálóeszközt a kalibrálási pozícióba, és nyomja meg a „Tovább” gombot"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -781,8 +764,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:360
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr ""
-"Vigye a kalibrálóeszközt a felület pozícióba, és nyomja meg a „Tovább” gombot"
+msgstr "Vigye a kalibrálóeszközt a felület pozícióba, és nyomja meg a „Tovább” gombot"
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -974,14 +956,11 @@ msgstr "Írja le ezt az URL-címet."
 
 #: panels/color/cc-color-panel.c:861
 msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"Indítsa újra a számítógépet, és indítsa el az általában használt operációs "
-"rendszerét."
+msgstr "Indítsa újra a számítógépet, és indítsa el az általában használt operációs rendszerét."
 
 #: panels/color/cc-color-panel.c:862
 msgid "Type the URL into your browser to download and install the profile."
-msgstr ""
-"Írja be az URL-címet a böngészőjébe a profil letöltéséhez és telepítéséhez."
+msgstr "Írja be az URL-címet a böngészőjébe a profil letöltéséhez és telepítéséhez."
 
 #. TRANSLATORS: this is the dialog to save the ICC profile
 #: panels/color/cc-color-panel.c:890
@@ -1003,9 +982,7 @@ msgstr "Színprofil létrehozása a kiválasztott eszközhöz"
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"A mérőkészülék nem található. Ellenőrizze, hogy be van-e kapcsolva, és "
-"megfelelően van-e csatlakoztatva."
+msgstr "A mérőkészülék nem található. Ellenőrizze, hogy be van-e kapcsolva, és megfelelően van-e csatlakoztatva."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1246
@@ -1026,9 +1003,7 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"A kalibrálás a képernyő színkezelésére használható profilt fog előállítani. "
-"Minél tovább tart a kalibrálás, a színprofil minősége annál jobb lesz."
+msgstr "A kalibrálás a képernyő színkezelésére használható profilt fog előállítani. Minél tovább tart a kalibrálás, a színprofil minősége annál jobb lesz."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -1067,11 +1042,9 @@ msgstr "Kijelző típusa"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
-"Válasszon egy cél fehér pontot. A legtöbb kijelzőt D65 fényforráshoz kell "
-"kalibrálni."
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "Válasszon egy cél fehér pontot. A legtöbb kijelzőt D65 fényforráshoz kell kalibrálni."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
@@ -1081,17 +1054,13 @@ msgstr "Profil fehér pontja"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
-"Állítsa be a kijelzőt az általában használt fényerőre. A színkezelés ezen a "
-"fényerőn lesz a legpontosabb."
+msgstr "Állítsa be a kijelzőt az általában használt fényerőre. A színkezelés ezen a fényerőn lesz a legpontosabb."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"Ennek alternatívájaként használhatja az eszköz valamely másik profiljához "
-"használt fényerőt."
+msgstr "Ennek alternatívájaként használhatja az eszköz valamely másik profiljához használt fényerőt."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -1101,9 +1070,7 @@ msgstr "Kijelző fényereje"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"A színprofilt használhatja különböző számítógépeken, vagy akár különböző "
-"fényviszonyokhoz is létrehozhat profilokat."
+msgstr "A színprofilt használhatja különböző számítógépeken, vagy akár különböző fényviszonyokhoz is létrehozhat profilokat."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -1135,13 +1102,10 @@ msgstr "Internetkapcsolatot igényel"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"A profil használatával kapcsolatos ezen utasításokat <a href=\"linux\">GNU/"
-"Linux</a>, <a href=\"osx\">Apple OS X</a> és <a href=\"windows\">Microsoft "
-"Windows</a> rendszereken is használhatja."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "A profil használatával kapcsolatos ezen utasításokat <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> és <a href=\"windows\">Microsoft Windows</a> rendszereken is használhatja."
 
 #: panels/color/cc-color-panel.ui:607
 #: panels/user-accounts/um-fingerprint-dialog.c:719
@@ -1168,9 +1132,7 @@ msgstr "_Hozzáadás"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"Problémák találhatók. A profil esetleg nem fog megfelelően működni. <a href="
-"\"\">Részletek megjelenítése.</a>"
+msgstr "Problémák találhatók. A profil esetleg nem fog megfelelően működni. <a href=\"\">Részletek megjelenítése.</a>"
 
 #: panels/color/cc-color-panel.ui:790
 msgid "Each device needs an up to date color profile to be color managed."
@@ -1385,7 +1347,8 @@ msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
 msgstr "Kijelzők, fényképezőgépek vagy nyomtatók színeinek kalibrálása"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Szín;ICC;Színek;Profilozás;Kalibrálás;Nyomtató;Kijelző;"
@@ -1394,7 +1357,8 @@ msgstr "Szín;ICC;Színek;Profilozás;Kalibrálás;Nyomtató;Kijelző;"
 msgid "Other…"
 msgstr "Egyéb…"
 
-#: panels/common/cc-language-chooser.c:127 panels/region/cc-input-chooser.c:178
+#: panels/common/cc-language-chooser.c:127
+#: panels/region/cc-input-chooser.c:178
 msgid "More…"
 msgstr "Tovább…"
 
@@ -1482,7 +1446,8 @@ msgstr "%s %s"
 msgid "0 seconds"
 msgstr "0 másodperc"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1644,9 +1609,7 @@ msgstr "Automatikus idő_zóna"
 
 #: panels/datetime/cc-datetime-panel.ui:335
 msgid "Requires location services enabled and internet access"
-msgstr ""
-"A helymeghatározó szolgáltatások engedélyezését és internetkapcsolatot "
-"igényel"
+msgstr "A helymeghatározó szolgáltatások engedélyezését és internetkapcsolatot igényel"
 
 #: panels/datetime/cc-datetime-panel.ui:350
 msgid "Date & _Time"
@@ -1672,7 +1635,8 @@ msgstr "12 órás"
 msgid "Change the date and time, including time zone"
 msgstr "Dátum, idő és időzóna módosítása"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Óra;Időzóna;Hely;"
@@ -1718,7 +1682,9 @@ msgstr "Alap alkalmazások"
 msgid "Configure Default Applications"
 msgstr "Alap alkalmazások beállítása"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "alap;alapértelmezett;alkalmazás;előnyben részesített;média;"
@@ -1728,16 +1694,14 @@ msgstr "alap;alapértelmezett;alkalmazás;előnyben részesített;média;"
 msgid "Learn more"
 msgstr "További információk"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:145
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr ""
-"A technikai problémák jelentéseinek elküldése segít nekünk a(z) %s "
-"továbbfejlesztésében. A jelentések névtelenül és személyes adatoktól "
-"mentesen lesznek elküldve. %s."
+msgstr "A technikai problémák jelentéseinek elküldése segít nekünk a(z) %s továbbfejlesztésében. A jelentések névtelenül és személyes adatoktól mentesen lesznek elküldve. %s."
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:30
 msgid "Problem Reporting"
@@ -1801,9 +1765,7 @@ msgstr "Elsődleges kijelző"
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
-msgstr ""
-"Húzza a kijelzőket, hogy illeszkedjenek a fizikai kijelző beállításaira. "
-"Válasszon egy kijelzőt a beállításai megváltoztatásához."
+msgstr "Húzza a kijelzőket, hogy illeszkedjenek a fizikai kijelző beállításaira. Válasszon egy kijelzőt a beállításai megváltoztatásához."
 
 #: panels/display/cc-display-panel.ui:252
 msgid "Display Arrangement"
@@ -1822,7 +1784,8 @@ msgstr "Kijelzőbeállítások"
 msgid "Displays"
 msgstr "Ki­jel­zők"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:464
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1898,9 +1861,7 @@ msgstr "Holnapig ideiglenesen letiltva"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"Az éjszakai fény melegebbé teszi a kijelző színét. Ez segít megakadályozni a "
-"szemfáradtságot és az álmatlanságot."
+msgstr "Az éjszakai fény melegebbé teszi a kijelző színét. Ez segít megakadályozni a szemfáradtságot és az álmatlanságot."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1932,14 +1893,16 @@ msgstr ":"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:354
-#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "de"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:250
 #: panels/display/cc-night-light-page.ui:370
-#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "du"
 
@@ -1956,14 +1919,12 @@ msgstr "Színhőmérséklet"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "Csatlakoztatott monitorok és projektorok beállítása"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
-msgstr ""
-"Panel;Projektor;xrandr;Képernyő;Felbontás;Frissítés;Monitor;Éjszakai;fény;"
-"redshift;szín;napkelte;napnyugta;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
+msgstr "Panel;Projektor;xrandr;Képernyő;Felbontás;Frissítés;Monitor;Éjszakai;fény;redshift;szín;napkelte;napnyugta;"
 
 #: panels/info-overview/cc-info-overview-panel.c:301
 #: panels/info-overview/cc-info-overview-panel.c:315
@@ -2056,9 +2017,7 @@ msgstr "Eszköz átnevezése"
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr ""
-"Az eszköznév az eszköz azonosításra szolgál, ha a hálózaton keresztül "
-"tekintik meg, vagy Bluetooth eszközökkel akarják párosítani."
+msgstr "Az eszköznév az eszköz azonosításra szolgál, ha a hálózaton keresztül tekintik meg, vagy Bluetooth eszközökkel akarják párosítani."
 
 #: panels/info-overview/cc-info-overview-panel.ui:230
 msgid "_Rename"
@@ -2079,12 +2038,8 @@ msgstr "Információk megjelenítése a rendszeréről"
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
-"eszköz;rendszer;információk;memória;processzor;verzió;alapértelmezett;"
-"alkalmazás;előnyben részesített;cd;dvd;usb;hang;video;lemez;eltávolítható;"
-"cserélhető;média;automatikus futtatás;autorun;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "eszköz;rendszer;információk;memória;processzor;verzió;alapértelmezett;alkalmazás;előnyben részesített;cd;dvd;usb;hang;video;lemez;eltávolítható;cserélhető;média;automatikus futtatás;autorun;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2266,10 +2221,7 @@ msgstr "Alternatív karakterek billentyű"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr ""
-"Az alternatív karakterek billentyű további karakterek bevitelére "
-"használható. Ezek néha harmadik lehetőségként vannak felfestve a "
-"billentyűzetre."
+msgstr "Az alternatív karakterek billentyű további karakterek bevitelére használható. Ezek néha harmadik lehetőségként vannak felfestve a billentyűzetre."
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:45
 msgid "Left Alt"
@@ -2304,7 +2256,6 @@ msgstr "Egyéni gyorsbillentyűk"
 #. Translators: This key is also known as 'third level
 #. * chooser'. AltGr is often used for this purpose. See
 #. * https://live.gnome.org/Design/SystemSettings/RegionAndLanguage
-#.
 #: panels/keyboard/cc-keyboard-option.c:337
 msgid "Alternative Characters Key"
 msgstr "Alternatív karakterek billentyű"
@@ -2312,7 +2263,6 @@ msgstr "Alternatív karakterek billentyű"
 #. Translators: The Compose key is used to initiate key
 #. * sequences that are combined to form a single character.
 #. * See http://en.wikipedia.org/wiki/Compose_key
-#.
 #: panels/keyboard/cc-keyboard-option.c:346
 msgid "Compose Key"
 msgstr "Kombináló billentyű"
@@ -2359,9 +2309,7 @@ msgstr "Minden gyorsbillentyű visszaállítása?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"A gyorsbillentyűk visszaállítása az egyéni gyorsbillentyűket is érintheti. "
-"Ez nem vonható vissza."
+msgstr "A gyorsbillentyűk visszaállítása az egyéni gyorsbillentyűket is érintheti. Ez nem vonható vissza."
 
 #: panels/keyboard/cc-keyboard-panel.c:208
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:346
@@ -2396,10 +2344,9 @@ msgstr "Nem található gyorsbillentyű"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:413
 #, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr ""
-"A(z) %s már használatban van ennél: %s. Ha lecseréli, akkor a(z) %s "
-"letiltásra kerül"
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
+msgstr "A(z) %s már használatban van ennél: %s. Ha lecseréli, akkor a(z) %s letiltásra kerül"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:581
 msgid "Set Custom Shortcut"
@@ -2422,9 +2369,7 @@ msgstr "Egyéni gyorsbillentyű hozzáadása"
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:68
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:318
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr ""
-"Nyomja meg az Esc billentyűt a megszakításhoz, vagy a Backspace billentyűt a "
-"gyorsbillentyű letiltásához."
+msgstr "Nyomja meg az Esc billentyűt a megszakításhoz, vagy a Backspace billentyűt a gyorsbillentyű letiltásához."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:156
 #: panels/printers/pp-details-dialog.ui:40
@@ -2474,16 +2419,14 @@ msgstr "Gyorsbillentyűk"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
 msgid "View and change keyboard shortcuts and set your typing preferences"
-msgstr ""
-"Gyorsbillentyűk megjelenítése és módosítása, gépelési beállítások megadása"
+msgstr "Gyorsbillentyűk megjelenítése és módosítása, gépelési beállítások megadása"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
-"Gyorsbillentyű;Munkaterület;Ablak;Átméretezés;Nagyítás;Kontraszt;Bemenet;"
-"Forrás;Zárolás;Kötet;"
+msgstr "Gyorsbillentyű;Munkaterület;Ablak;Átméretezés;Nagyítás;Kontraszt;Bemenet;Forrás;Zárolás;Kötet;"
 
 #: panels/location/cc-location-panel.ui:31
 msgid "Location services turned off"
@@ -2497,23 +2440,17 @@ msgstr "Egyetlen alkalmazás sem kérheti le a helyadatait."
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy."
-msgstr ""
-"A helymeghatározó szolgáltatások lehetővé teszik az alkalmazások számára, "
-"hogy megtudják a földrajzi helyzetét. A Wi-Fi és a mobil széles sáv "
-"használata javítja a pontosságot."
+msgstr "A helymeghatározó szolgáltatások lehetővé teszik az alkalmazások számára, hogy megtudják a földrajzi helyzetét. A Wi-Fi és a mobil széles sáv használata javítja a pontosságot."
 
 #: panels/location/cc-location-panel.ui:83
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"A Mozilla helymeghatározási szolgáltatást használja: <a href='https://"
-"location.services.mozilla.com/privacy'>adatvédelmi irányelvek</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "A Mozilla helymeghatározási szolgáltatást használja: <a href='https://location.services.mozilla.com/privacy'>adatvédelmi irányelvek</a>"
 
 #: panels/location/cc-location-panel.ui:95
 msgid "Allow the applications below to determine your location."
-msgstr ""
-"A helyadatok meghatározásának engedélyezése a lenti alkalmazások számára."
+msgstr "A helyadatok meghatározásának engedélyezése a lenti alkalmazások számára."
 
 #: panels/location/cc-location-panel.ui:115
 msgid "No Applications Have Asked for Location Access"
@@ -2527,9 +2464,7 @@ msgstr "A helyadatai védelme"
 msgid ""
 "Automatically locking the screen prevents others from access the computer "
 "while you're away."
-msgstr ""
-"A képernyő automatikus zárolása megakadályozza, hogy mások elérjék a "
-"számítógépét, amíg Ön távol van."
+msgstr "A képernyő automatikus zárolása megakadályozza, hogy mások elérjék a számítógépét, amíg Ön távol van."
 
 #: panels/lock/cc-lock-panel.ui:46
 msgid "Blank Screen Delay"
@@ -2548,58 +2483,65 @@ msgid "Automatic _Screen Lock Delay"
 msgstr "Automatikus _képernyőzárolás késleltetése"
 
 #: panels/lock/cc-lock-panel.ui:85
-msgid "Period after the screen blanks when the screen is automatically locked."
-msgstr ""
-"Időtartam, amely után a képernyő elsötétül, ha a képernyő automatikusan "
-"zárolásra kerül."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
+msgstr "Időtartam, amely után a képernyő elsötétül, ha a képernyő automatikusan zárolásra kerül."
 
 #: panels/lock/cc-lock-panel.ui:105
 msgid "Show _Notifications on Lock Screen"
 msgstr "É_rtesítések megjelenítése a zárolási képernyőn"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:149
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Képernyő kikapcsol"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:153
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 másodperc"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:157
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 perc"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:161
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 perc"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:165
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 perc"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:169
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 perc"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:173
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 perc"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:177
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2674,18 +2616,16 @@ msgid "Lock your screen"
 msgstr "Képernyő zárolása"
 
 #: panels/metrics/cc-metrics-panel.ui:32
-#, fuzzy
 msgid "Metrics services turned off"
-msgstr "A helymeghatározó szolgáltatások ki vannak kapcsolva"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:41
 msgid "No anonymous usage data will be sent to Endless."
 msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:75
-#, fuzzy
 msgid "_Metrics"
-msgstr "Metrika"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:93
 msgid ""
@@ -2714,10 +2654,7 @@ msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
 "properly."
-msgstr ""
-"A mikrofon használata lehetővé teszi, hogy az alkalmazások hangot "
-"rögzítsenek és figyeljenek. A mikrofon letiltása azt okozhatja, hogy egyes "
-"alkalmazások nem működnek megfelelően."
+msgstr "A mikrofon használata lehetővé teszi, hogy az alkalmazások hangot rögzítsenek és figyeljenek. A mikrofon letiltása azt okozhatja, hogy egyes alkalmazások nem működnek megfelelően."
 
 #: panels/microphone/cc-microphone-panel.ui:87
 msgid "Allow the applications below to use your microphone."
@@ -2763,8 +2700,10 @@ msgstr "Egér sebessége"
 msgid "Double-click timeout"
 msgstr "Dupla kattintás időköze"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:267 panels/mouse/cc-mouse-panel.ui:430
 msgid "Natural Scrolling"
 msgstr "Természetes görgetés"
@@ -2836,15 +2775,14 @@ msgstr "E­gér és é­rin­tő­táb­la"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr ""
-"Egér vagy érintőtábla érzékenységének, bal vagy jobb kezességének módosítása"
+msgstr "Egér vagy érintőtábla érzékenységének, bal vagy jobb kezességének módosítása"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr ""
-"Érintőtábla;Tapipad;Mutató;Kattintás;Koppintás;Dupla;Gomb;Hanyattegér;"
-"Görgetés;Gördítés;"
+msgstr "Érintőtábla;Tapipad;Mutató;Kattintás;Koppintás;Dupla;Gomb;Hanyattegér;Görgetés;Gördítés;"
 
 #: panels/network/cc-network-panel.c:648 panels/network/cc-wifi-panel.ui:306
 msgid "Oops, something has gone wrong. Please contact your software vendor."
@@ -2867,7 +2805,8 @@ msgstr "VPN"
 msgid "Not set up"
 msgstr "Nincs beállítva"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:198
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2908,9 +2847,7 @@ msgstr "Beállítások…"
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr ""
-"A hotspot bekapcsolása le fogja választani a(z) %s Wi-Fi hálózatról, és nem "
-"lesz lehetséges elérni az internetet Wi-Fi használatával."
+msgstr "A hotspot bekapcsolása le fogja választani a(z) %s Wi-Fi hálózatról, és nem lesz lehetséges elérni az internetet Wi-Fi használatával."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:248
 msgid "Must have a minimum of 8 characters"
@@ -2922,14 +2859,10 @@ msgstr "Bekapcsolja a Wi-Fi hotspotot?"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr ""
-"A Wi-Fi hotspot lehetővé teszi másoknak az internetkapcsolat megosztását egy "
-"olyan Wi-Fi hálózat létrehozásával, amelyhez mások kapcsolódhatnak. Ehhez "
-"rendelkeznie kell egy másik, a Wi-Fi hálózaton kívüli forráson keresztül "
-"elérhető internetkapcsolattal."
+msgstr "A Wi-Fi hotspot lehetővé teszi másoknak az internetkapcsolat megosztását egy olyan Wi-Fi hálózat létrehozásával, amelyhez mások kapcsolódhatnak. Ehhez rendelkeznie kell egy másik, a Wi-Fi hálózaton kívüli forráson keresztül elérhető internetkapcsolattal."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
 #: panels/network/network-wifi.ui:105
@@ -2977,8 +2910,7 @@ msgstr "Nem található Wi-Fi adapter"
 
 #: panels/network/cc-wifi-panel.ui:153
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
-msgstr ""
-"Győződjön meg róla, hogy a Wi-Fi adapter be van dugva, és be van kapcsolva"
+msgstr "Győződjön meg róla, hogy a Wi-Fi adapter be van dugva, és be van kapcsolva"
 
 #: panels/network/cc-wifi-panel.ui:188
 msgid "Airplane Mode On"
@@ -3025,12 +2957,9 @@ msgstr "Stabil"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"Az itt megadott MAC-cím lesz használva hardvercímként annál a hálózati "
-"eszköznél, amelyen ez a kapcsolat aktiválva van. Ez a funkció MAC-cím "
-"klónozás vagy hamisítás néven ismert. Példa: 00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "Az itt megadott MAC-cím lesz használva hardvercímként annál a hálózati eszköznél, amelyen ez a kapcsolat aktiválva van. Ez a funkció MAC-cím klónozás vagy hamisítás néven ismert. Példa: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3278,15 +3207,13 @@ msgstr "Elérhetővé tétel más _felhasználóknak"
 
 #: panels/network/connection-editor/details-page.ui:428
 msgid "_Metered connection: has data limits or can incur charges"
-msgstr ""
-"_Forgalomdíjas kapcsolat: adatkorlátokkal rendelkezik és költsége lehet"
+msgstr "_Forgalomdíjas kapcsolat: adatkorlátokkal rendelkezik és költsége lehet"
 
 #: panels/network/connection-editor/details-page.ui:439
 msgid ""
-"Software updates and other large downloads will not be started automatically."
-msgstr ""
-"A szoftverfrissítések és egyéb nagy letöltések nem fognak automatikusan "
-"elindulni."
+"Software updates and other large downloads will not be started "
+"automatically."
+msgstr "A szoftverfrissítések és egyéb nagy letöltések nem fognak automatikusan elindulni."
 
 #: panels/network/connection-editor/ethernet-page.ui:25
 #: panels/network/connection-editor/vpn-page.ui:23
@@ -3446,15 +3373,10 @@ msgstr "Nem lehet importálni a VPN kapcsolatot"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
-"A fájl („%s”) nem olvasható vagy nem tartalmaz ismert VPN "
-"kapcsolatinformációkat\n"
-"\n"
-"Hiba: %s."
+msgstr "A fájl („%s”) nem olvasható vagy nem tartalmaz ismert VPN kapcsolatinformációkat\n\nHiba: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3484,10 +3406,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
-"A VPN kapcsolat („%s”) nem exportálható ide: %s.\n"
-"\n"
-"Hiba: %s."
+msgstr "A VPN kapcsolat („%s”) nem exportálható ide: %s.\n\nHiba: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3509,7 +3428,8 @@ msgstr "BSS_ID"
 msgid "Control how you connect to the Internet"
 msgstr "Internetkapcsolatok beállítása"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr "Hálózat;IP;LAN;Proxy;WAN;Széles sáv;Szélessáv;Modem;Bluetooth;vpn;DNS;"
@@ -3518,11 +3438,11 @@ msgstr "Hálózat;IP;LAN;Proxy;WAN;Széles sáv;Szélessáv;Modem;Bluetooth;vpn;
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "Wi-Fi hálózati kapcsolat beállítása"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
-msgstr ""
-"Hálózat;Vezeték nélküli;Wi-Fi;Wifi;IP;LAN;Széles sáv;Szélessáv;DNS;Hotspot;"
+msgstr "Hálózat;Vezeték nélküli;Wi-Fi;Wifi;IP;LAN;Széles sáv;Szélessáv;DNS;Hotspot;"
 
 #: panels/network/net-device-ethernet.c:96
 msgid "never"
@@ -3544,9 +3464,9 @@ msgstr "Utolsó használat"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
 #: panels/network/net-device-ethernet.c:252
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "Vezetékes"
 
@@ -3566,9 +3486,7 @@ msgstr "_Hotspot leállítása"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr ""
-"A kijelölt hálózatok adatai elvesznek, beleértve a jelszavakat és az egyedi "
-"beállításokat is."
+msgstr "A kijelölt hálózatok adatai elvesznek, beleértve a jelszavakat és az egyedi beállításokat is."
 
 #: panels/network/net-device-wifi.c:909
 msgid "_Forget"
@@ -3578,7 +3496,8 @@ msgstr "_Elfelejtés"
 msgid "Known Wi-Fi Networks"
 msgstr "Ismert Wi-Fi hálózatok"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1107
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3615,9 +3534,7 @@ msgstr "Ki"
 #: panels/network/net-proxy.c:113
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"Az automatikus webproxy-felderítés akkor használatos, ha nincs megadva "
-"konfigurációs URL."
+msgstr "Az automatikus webproxy-felderítés akkor használatos, ha nincs megadva konfigurációs URL."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3631,7 +3548,6 @@ msgstr "Ez nem javasolt nyilvános, nem biztonságos hálózatokon."
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:66 panels/network/net-vpn.c:163
 #, c-format
 msgid "%s VPN"
@@ -4184,17 +4100,10 @@ msgstr "A nem titkosított személyes kulcsok nem biztonságosak"
 
 #: panels/network/wireless-security/eap-method-tls.c:269
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"Úgy tűnik, hogy a kiválasztott személyes kulcsot nem védi jelszó. Ez "
-"lehetővé teszi a hitelesítési adatok kompromittálását. Válasszon jelszóval "
-"védett személyes kulcsot.\n"
-"\n"
-"Személyes kulcsát az OpenSSL segítségével teheti jelszóval védetté."
+msgstr "Úgy tűnik, hogy a kiválasztott személyes kulcsot nem védi jelszó. Ez lehetővé teszi a hitelesítési adatok kompromittálását. Válasszon jelszóval védett személyes kulcsot.\n\nSzemélyes kulcsát az OpenSSL segítségével teheti jelszóval védetté."
 
 #: panels/network/wireless-security/eap-method-tls.c:500
 msgid "Choose your personal certificate"
@@ -4301,25 +4210,20 @@ msgstr "hiányzó wep-kulcs"
 #: panels/network/wireless-security/ws-wep-key.c:116
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
-"érvénytelen wep-kulcs: egy %zu hosszú kulcsban csak hexadecimális számjegyek "
-"lehetnek"
+msgstr "érvénytelen wep-kulcs: egy %zu hosszú kulcsban csak hexadecimális számjegyek lehetnek"
 
 #: panels/network/wireless-security/ws-wep-key.c:124
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
-"érvénytelen wep-kulcs: egy %zu hosszú kulcsban csak ascii karakterek lehetnek"
+msgstr "érvénytelen wep-kulcs: egy %zu hosszú kulcsban csak ascii karakterek lehetnek"
 
 #: panels/network/wireless-security/ws-wep-key.c:130
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
-"érvénytelen wep-kulcs: hibás kulcshossz: %zu. A kulcs hossza 5/13 (ascii) "
-"vagy 10/26 lehet (hex)"
+msgstr "érvénytelen wep-kulcs: hibás kulcshossz: %zu. A kulcs hossza 5/13 (ascii) vagy 10/26 lehet (hex)"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4327,8 +4231,7 @@ msgstr "érvénytelen wep-kulcs: a jelmondat nem lehet üres"
 
 #: panels/network/wireless-security/ws-wep-key.c:139
 msgid "invalid wep-key: passphrase must be shorter than 64 characters"
-msgstr ""
-"érvénytelen wep-kulcs: a jelmondatnak 64 karakternél rövidebbnek kell lennie"
+msgstr "érvénytelen wep-kulcs: a jelmondatnak 64 karakternél rövidebbnek kell lennie"
 
 #: panels/network/wireless-security/ws-wep-key.ui:11
 msgid "1 (Default)"
@@ -4359,14 +4262,11 @@ msgstr "WEP inde_x"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
-"érvénytelen wpa-psk: érvénytelen kulcshossz: %zu. [8,63] bájtnak, vagy 64 "
-"hexadecimális számjegynek kell lennie"
+msgstr "érvénytelen wpa-psk: érvénytelen kulcshossz: %zu. [8,63] bájtnak, vagy 64 hexadecimális számjegynek kell lennie"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:79
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr ""
-"érvénytelen wpa-psk: a 64 bájtos kulcs nem értelmezhető hexadecimálisként"
+msgstr "érvénytelen wpa-psk: a 64 bájtos kulcs nem értelmezhető hexadecimálisként"
 
 #: panels/network/wireless-security/ws-wpa-psk.ui:42
 msgid "_Type"
@@ -4393,11 +4293,10 @@ msgstr "_Felugró értesítések"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
-"Az értesítések továbbra is megjelennek az értesítések listájában, ha a "
-"felugrók le vannak tiltva."
+msgstr "Az értesítések továbbra is megjelennek az értesítések listájában, ha a felugrók le vannak tiltva."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4435,7 +4334,8 @@ msgstr "_Zárolási képernyő értesítések"
 msgid "Control which notifications are displayed and what they show"
 msgstr "Az értesítések megjelenítésének és tartalmuk beállítása"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Értesítések;Felugró sáv;Üzenet;Sáv;Tálca;Figyelmeztetés;"
@@ -4458,7 +4358,6 @@ msgstr "Hiba a fiók eltávolításakor"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:991
 #, c-format
 msgid "%s removed"
@@ -4475,16 +4374,15 @@ msgstr "Kapcsolódás online fiókjaihoz, és felhasználási módjuk kiválaszt
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Csevegés;Chat;Naptár;E-mail;Levél;"
-"Levelezés;Névjegyek;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr "Google;Facebook;Twitter;Yahoo;Web;Online;Csevegés;Chat;Naptár;E-mail;Levél;Levelezés;Névjegyek;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:54
 msgid "Undo"
 msgstr "Visszavonás"
@@ -4728,9 +4626,7 @@ msgstr "_Mobil széles sáv"
 
 #: panels/power/cc-power-panel.c:1958
 msgid "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
-msgstr ""
-"A mobil szélessáv (LTE, 4G, 3G stb.) kikapcsolható az energiatakarékosság "
-"érdekében."
+msgstr "A mobil szélessáv (LTE, 4G, 3G stb.) kikapcsolható az energiatakarékosság érdekében."
 
 #: panels/power/cc-power-panel.c:2008
 msgid "_Bluetooth"
@@ -4864,17 +4760,14 @@ msgstr "Energiagazdálkodás"
 
 #: panels/power/gnome-power-panel.desktop.in.in:4
 msgid "View your battery status and change power saving settings"
-msgstr ""
-"Akkumulátorállapot megjelenítése és energiagazdálkodási beállítások "
-"módosítása"
+msgstr "Akkumulátorállapot megjelenítése és energiagazdálkodási beállítások módosítása"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-msgstr ""
-"Energia;Energiagazdálkodás;Alvás;Felfüggesztés;Hibernálás;Akkumulátor;Telep;"
-"Elsötétítés;Elhalványítás;Monitor;DPMS;Üresjárat;"
+msgstr "Energia;Energiagazdálkodás;Alvás;Felfüggesztés;Hibernálás;Akkumulátor;Telep;Elsötétítés;Elhalványítás;Monitor;DPMS;Üresjárat;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
@@ -4919,11 +4812,10 @@ msgstr "Nyom­tatók"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr ""
-"Nyomtatók hozzáadása, nyomtatási feladatok megjelenítése és nyomtatás "
-"beállítása"
+msgstr "Nyomtatók hozzáadása, nyomtatási feladatok megjelenítése és nyomtatás beállítása"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Nyomtató;Sor;Nyomtatás;Papír;Tinta;Festékkazetta;"
@@ -4947,16 +4839,15 @@ msgstr "_Feloldás"
 msgid "No Printers Found"
 msgstr "Nem található nyomtató"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "Adja meg a hálózati címet vagy keressen egy nyomtatót"
 
 #: panels/printers/new-printer-dialog.ui:353
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"Adja meg felhasználónevét és jelszavát a nyomtatókiszolgálón lévő nyomtatók "
-"megjelenítéséhez."
+msgstr "Adja meg felhasználónevét és jelszavát a nyomtatókiszolgálón lévő nyomtatók megjelenítéséhez."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:75
@@ -4975,12 +4866,12 @@ msgstr "Válasszon PPD fájlt"
 
 #: panels/printers/pp-details-dialog.c:258
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
-msgstr ""
-"PostScript nyomtatóleíró fájlok (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
+msgstr "PostScript nyomtatóleíró fájlok (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "Hely"
 
@@ -5115,7 +5006,8 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "Befejezve"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:363
 #, c-format
 msgid "%u Job Requires Authentication"
@@ -5123,7 +5015,8 @@ msgid_plural "%u Jobs Require Authentication"
 msgstr[0] "%u feladat hitelesítést igényel"
 msgstr[1] "%u feladat hitelesítést igényel"
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:520
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -5141,22 +5034,26 @@ msgstr "Hitelesítési adatok megadása a következőről történő nyomtatásh
 msgid "Domain"
 msgstr "Tartomány"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "Hi_telesítés"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "Összes törlése"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "_Hitelesítés"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "Nincsenek aktív nyomtatási feladatok"
@@ -5165,18 +5062,19 @@ msgstr "Nincsenek aktív nyomtatási feladatok"
 msgid "Unlock Print Server"
 msgstr "Nyomtatókiszolgáló feloldása"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:384
 #, c-format
 msgid "Unlock %s."
 msgstr "%s feloldása."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:388
 #, c-format
 msgid "Enter username and password to view printers on %s."
-msgstr ""
-"Adja meg felhasználónevét és jelszavát a nyomtatók megjelenítéséhez ezen: %s."
+msgstr "Adja meg felhasználónevét és jelszavát a nyomtatók megjelenítéséhez ezen: %s."
 
 #: panels/printers/pp-new-printer-dialog.c:838
 msgid "Searching for Printers"
@@ -5209,7 +5107,8 @@ msgstr "Hely: %s"
 msgid "Address: %s"
 msgstr "Cím: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1783
 msgid "Server requires authentication"
 msgstr "A kiszolgáló hitelesítést igényel"
@@ -5260,13 +5159,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Általános"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:658
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "Oldalbeállítás"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:661
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5278,7 +5179,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "Feladat"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:667
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5290,7 +5192,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Szín"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:673
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5490,7 +5393,8 @@ msgstr "Nyomtató adatai"
 msgid "Use Printer by Default"
 msgstr "Nyomtató használata alapértelmezetten"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "Nyomtatófejek tisztítása"
@@ -5536,9 +5440,7 @@ msgstr "Nyomtató hozzáadása…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"Elnézést, a rendszer nyomtatószolgáltatása\n"
-"nem tűnik elérhetőnek."
+msgstr "Elnézést, a rendszer nyomtatószolgáltatása\nnem tűnik elérhetőnek."
 
 #: panels/region/cc-format-chooser.c:148
 msgctxt "measurement format"
@@ -5564,9 +5466,7 @@ msgstr "Vissza"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"Válassza ki a számok, dátumok és pénzösszegek formátumát. A módosítások a "
-"következő bejelentkezéskor lépnek életbe."
+msgstr "Válassza ki a számok, dátumok és pénzösszegek formátumát. A módosítások a következő bejelentkezéskor lépnek életbe."
 
 #: panels/region/cc-format-chooser.ui:119
 msgid "Search locales..."
@@ -5668,9 +5568,7 @@ msgstr "Nincs kiválasztva bemeneti forrás"
 
 #: panels/region/cc-region-panel.ui:344
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"A bejelentkezési beállításokat minden felhasználó használja a rendszerre "
-"való belépéskor"
+msgstr "A bejelentkezési beállításokat minden felhasználó használja a rendszerre való belépéskor"
 
 #: panels/region/cc-region-panel.ui:381
 msgid "Keyboard Layout Options"
@@ -5706,8 +5604,7 @@ msgstr "Bal+jobb Alt"
 
 #: panels/region/cc-region-panel.ui:538
 msgid "These keyboard shortcuts can be changed in the keyboard settings"
-msgstr ""
-"Ezeket a gyorsbillentyűket a billentyűzet beállításai között lehet módosítani"
+msgstr "Ezeket a gyorsbillentyűket a billentyűzet beállításai között lehet módosítani"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
 msgid "Region & Language"
@@ -5716,11 +5613,11 @@ msgstr "Terület és nyelv"
 #: panels/region/gnome-region-panel.desktop.in.in:4
 msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
-msgstr ""
-"Válassza ki a felület nyelvét, az adatformátumokat, billentyűkiosztásokat és "
-"beviteli forrásokat"
+msgstr "Válassza ki a felület nyelvét, az adatformátumokat, billentyűkiosztásokat és beviteli forrásokat"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Nyelv;kiosztás;billentyűzet;bevitel;"
@@ -5765,7 +5662,6 @@ msgstr "Válasszon alkalmazást szoftver CD-khez"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "hang DVD"
@@ -5840,8 +5736,7 @@ msgstr "_Egyéb adathordozók…"
 
 #: panels/removable-media/cc-removable-media-panel.ui:288
 msgid "_Never prompt or start programs on media insertion"
-msgstr ""
-"Soha _ne kérdezzen vagy indítson programokat adathordozó behelyezésekor"
+msgstr "Soha _ne kérdezzen vagy indítson programokat adathordozó behelyezésekor"
 
 #: panels/removable-media/cc-removable-media-panel.ui:342
 msgid "Select how other media should be handled"
@@ -5863,15 +5758,13 @@ msgstr "Külső adathordozók"
 msgid "Configure Removable Media settings"
 msgstr "Külső adathordozók beállításai"
 
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
-msgstr ""
-"eszköz;rendszer;információk;memória;processzor;verzió;alapértelmezett;"
-"alkalmazás;előnyben részesített;cd;dvd;usb;hang;videó;lemez;eltávolítható;"
-"cserélhető;média;automatikus futtatás;autorun;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "eszköz;rendszer;információk;memória;processzor;verzió;alapértelmezett;alkalmazás;előnyben részesített;cd;dvd;usb;hang;videó;lemez;eltávolítható;cserélhető;média;automatikus futtatás;autorun;"
 
 #: panels/search/cc-search-locations-dialog.c:635
 msgid "Select Location"
@@ -5890,11 +5783,9 @@ msgstr "Keresési helyek"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"Azok a mappák, amelyeket a rendszer alkalmazásai keresnek, például Fájlok, "
-"Képek és Videók."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "Azok a mappák, amelyeket a rendszer alkalmazásai keresnek, például Fájlok, Képek és Videók."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -5922,20 +5813,17 @@ msgstr "Mozgatás lefelé"
 
 #: panels/search/cc-search-panel.ui:33
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"Annak vezérlése, hogy mely keresési eredmények legyenek láthatók a "
-"Tevékenységek áttekintésben. A keresési eredmények sorrendje is "
-"megváltoztatható a soroknak a listában történő mozgatásával."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "Annak vezérlése, hogy mely keresési eredmények legyenek láthatók a Tevékenységek áttekintésben. A keresési eredmények sorrendje is megváltoztatható a soroknak a listában történő mozgatásával."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr ""
-"A Tevékenységek áttekintésben találatokat megjelenítő alkalmazások beállítása"
+msgstr "A Tevékenységek áttekintésben találatokat megjelenítő alkalmazások beállítása"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Keresés;Indexelés;Elrejtés;Magánszféra;Találatok;Eredmények;"
@@ -5979,21 +5867,16 @@ msgstr "Válasszon mappát"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr ""
-"A fájlmegosztás lehetővé teszi a Nyilvános mappájának megosztását másokkal a "
-"jelenlegi hálózaton a %s használatával."
+msgstr "A fájlmegosztás lehetővé teszi a Nyilvános mappájának megosztását másokkal a jelenlegi hálózaton a %s használatával."
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:717
 #, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
-msgstr ""
-"Ha a távoli bejelentkezés engedélyezett, akkor a távoli felhasználók a "
-"következő parancs használatával kapcsolódhatnak:\n"
-"%s"
+msgstr "Ha a távoli bejelentkezés engedélyezett, akkor a távoli felhasználók a következő parancs használatával kapcsolódhatnak:\n%s"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:723
@@ -6001,9 +5884,7 @@ msgstr ""
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
-msgstr ""
-"Távoli felhasználók megnézhetik és vezérelhetik a képernyőt a következőhöz "
-"csatlakozással: %s"
+msgstr "Távoli felhasználók megnézhetik és vezérelhetik a képernyőt a következőhöz csatlakozással: %s"
 
 #: panels/sharing/cc-sharing-panel.c:828
 msgid "Copy"
@@ -6098,14 +5979,12 @@ msgstr "Mappák"
 msgid "Control what you want to share with others"
 msgstr "Megosztások beállítása"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
-msgstr ""
-"megosztás;ssh;host;név;távoli;asztal;média;audio;hang;video;kép;fénykép;"
-"filmek;kiszolgáló;szerver;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
+msgstr "megosztás;ssh;host;név;távoli;asztal;média;audio;hang;video;kép;fénykép;filmek;kiszolgáló;szerver;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -6113,8 +5992,7 @@ msgstr "Távoli bejelentkezés engedélyezése vagy tiltása"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:12
 msgid "Authentication is required to enable or disable remote login"
-msgstr ""
-"Hitelesítés szükséges a távoli bejelentkezés engedélyezéséhez vagy tiltásához"
+msgstr "Hitelesítés szükséges a távoli bejelentkezés engedélyezéséhez vagy tiltásához"
 
 #: panels/sound/cc-alert-chooser.c:151
 msgid "Custom"
@@ -6218,13 +6096,12 @@ msgstr "Hang"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Hangerő, bemenetek, kimenetek és riasztáshangok módosítása"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"Kártya;Mikrofon;Hangerő;Elhalás;Egyensúly;Bluetooth;Fejhallgató;Audio;Hang;"
-"Kimenet;Bemenet;"
+msgstr "Kártya;Mikrofon;Hangerő;Elhalás;Egyensúly;Bluetooth;Fejhallgató;Audio;Hang;Kimenet;Bemenet;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6336,18 +6213,13 @@ msgstr "Engedélyezve"
 #: panels/thunderbolt/cc-bolt-panel.c:175
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr ""
-"A Thunderbolt alrendszer (boltd) nincs telepítve vagy rosszul van beállítva."
+msgstr "A Thunderbolt alrendszer (boltd) nincs telepítve vagy rosszul van beállítva."
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
-"A Thunderbolt nem észlelhető.\n"
-"Vagy hiányzik a rendszerből a Thunderbolt támogatás, vagy le lett tiltva a "
-"BIOS-ban, vagy nem támogatott biztonsági szintre van állítva a BIOS-ban."
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "A Thunderbolt nem észlelhető.\nVagy hiányzik a rendszerből a Thunderbolt támogatás, vagy le lett tiltva a BIOS-ban, vagy nem támogatott biztonsági szintre van állítva a BIOS-ban."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6372,9 +6244,7 @@ msgstr "Közvetlen hozzáférés"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:269
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr ""
-"Közvetlen hozzáférés engedélyezése az olyan eszközökhöz, mint a dokkolók és "
-"külső GPU-k."
+msgstr "Közvetlen hozzáférés engedélyezése az olyan eszközökhöz, mint a dokkolók és külső GPU-k."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:289
 msgid "Only USB and Display Port devices can attach."
@@ -6396,7 +6266,9 @@ msgstr "Thunderbolt"
 msgid "Manage Thunderbolt devices"
 msgstr "Thunderbolt eszközök kezelése"
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;"
 msgstr "Thunderbolt;"
@@ -6525,9 +6397,7 @@ msgstr "Kurzorméret"
 #: panels/universal-access/cc-ua-panel.ui:1095
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
-"A kurzorméret egyesíthető a nagyítással a kurzor könnyebben láthatóvá "
-"tételéhez."
+msgstr "A kurzorméret egyesíthető a nagyítással a kurzor könnyebben láthatóvá tételéhez."
 
 #: panels/universal-access/cc-ua-panel.ui:1131
 msgid "Screen Reader"
@@ -6535,9 +6405,7 @@ msgstr "Képernyőolvasó"
 
 #: panels/universal-access/cc-ua-panel.ui:1148
 msgid "The screen reader reads displayed text as you move the focus."
-msgstr ""
-"A képernyőolvasó felolvassa a megjelenített szöveget a fókusz mozgatása "
-"közben."
+msgstr "A képernyőolvasó felolvassa a megjelenített szöveget a fókusz mozgatása közben."
 
 #: panels/universal-access/cc-ua-panel.ui:1181
 msgid "_Screen Reader"
@@ -6693,8 +6561,7 @@ msgstr "Enge_délyezés billentyűzetről"
 
 #: panels/universal-access/cc-ua-panel.ui:2416
 msgid "Turn accessibility features on and off using the keyboard"
-msgstr ""
-"Akadálymentesítési szolgáltatások be- és kikapcsolása a billentyűzetről"
+msgstr "Akadálymentesítési szolgáltatások be- és kikapcsolása a billentyűzetről"
 
 #: panels/universal-access/cc-ua-panel.ui:2480
 msgid "Click Assist"
@@ -6762,16 +6629,13 @@ msgstr "Magas"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "A látás, hallás, gépelés, mutatás és kattintás egyszerűbbé tétele"
 
-#. Translators: Search terms to find the Universal Access panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Universal Access panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;"
-"big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;"
-"click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
-"Billentyűzet;Egér;a11y;Akadálymentesítés;Kontraszt;Nagyítás;Képernyő;Olvasó;"
-"szöveg;betű;méret;AccessX;Ragadós;Billentyűk;Lassú;Pattogó;Egér;Dupla;"
-"Kattintás;Késleltetés;Kisegítő;Ismétlés;Villogás;vizuális;hallás;hang;írás;"
+"Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "Billentyűzet;Egér;a11y;Akadálymentesítés;Kontraszt;Nagyítás;Képernyő;Olvasó;szöveg;betű;méret;AccessX;Ragadós;Billentyűk;Lassú;Pattogó;Egér;Dupla;Kattintás;Késleltetés;Kisegítő;Ismétlés;Villogás;vizuális;hallás;hang;írás;"
 
 #: panels/universal-access/zoom-options.c:305
 msgctxt "Distance"
@@ -6979,13 +6843,10 @@ msgstr "Fájlelőzmények"
 
 #: panels/usage/cc-usage-panel.ui:43
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr ""
-"A fájlelőzmények rögzítik a használt fájlokat. Ez az információ meg van "
-"osztva az alkalmazások között, így könnyebbé teszi azon fájlok megtalálását, "
-"amelyeket használni szeretne."
+msgstr "A fájlelőzmények rögzítik a használt fájlokat. Ez az információ meg van osztva az alkalmazások között, így könnyebbé teszi azon fájlok megtalálását, amelyeket használni szeretne."
 
 #: panels/usage/cc-usage-panel.ui:58
 msgid "File H_istory"
@@ -7007,9 +6868,7 @@ msgstr "Kuka és ideiglenes fájlok"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr ""
-"A kuka és ideiglenes fájlok gyakran személyes vagy érzékeny információkat "
-"tartalmazhatnak. Az automatikus törlésük segíthet az adatvédelemben."
+msgstr "A kuka és ideiglenes fájlok gyakran személyes vagy érzékeny információkat tartalmazhatnak. Az automatikus törlésük segíthet az adatvédelemben."
 
 #: panels/usage/cc-usage-panel.ui:161
 msgid "Automatically Delete _Trash Content"
@@ -7031,61 +6890,71 @@ msgstr "_Kuka ürítése…"
 msgid "_Delete Temporary Files…"
 msgstr "Ideiglenes fájlok _törlése…"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:280
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 óra"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:284
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:288
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:292
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:296
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:300
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:304
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:308
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:312
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 nap"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:316
 msgctxt "purge_files"
 msgid "30 days"
@@ -7149,10 +7018,7 @@ msgstr "Automatikus frissítések"
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
-msgstr ""
-"Engedélyezi, hogy a frissítések automatikusan a végbemenjenek a háttérben, "
-"ezen a kapcsolaton. Ezek általában fejlesztett alkalmazások, új tartalmak, "
-"vagy frissítések az Endless OS-hez. "
+msgstr "Engedélyezi, hogy a frissítések automatikusan a végbemenjenek a háttérben, ezen a kapcsolaton. Ezek általában fejlesztett alkalmazások, új tartalmak, vagy frissítések az Endless OS-hez. "
 
 #: panels/updates/cc-updates-panel.ui:217
 msgid "Scheduled Updates"
@@ -7160,14 +7026,14 @@ msgstr "Ütemezett frissítések"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
-"Hozzon létre egy napi ablakot a frissítések automatikus végrehajtásához."
+msgstr "Hozzon létre egy napi ablakot a frissítések automatikus végrehajtásához."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
 msgid "Schedule automatic updates"
 msgstr "Ütemezett automatikus frissítések"
 
-#. Translators: those are keywords for the automatic updates control-center panel
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
 msgstr ""
@@ -7203,17 +7069,13 @@ msgstr "Nem sikerült a tartományhoz csatlakozni"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"A bejelentkezési név nem működik.\n"
-"Próbálja újra."
+msgstr "A bejelentkezési név nem működik.\nPróbálja újra."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1275
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"A bejelentkezési jelszó nem működik.\n"
-"Próbálja újra."
+msgstr "A bejelentkezési jelszó nem működik.\nPróbálja újra."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1283
 msgid "Failed to log into domain"
@@ -7274,10 +7136,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"A vállalati bejelentkezés lehetővé teszi egy meglévő, központilag felügyelt "
-"felhasználói fiók használatát ezen az eszközön. A fiókot arra is "
-"használhatja, hogy céges erőforrásokhoz férjen hozzá az interneten."
+msgstr "A vállalati bejelentkezés lehetővé teszi egy meglévő, központilag felügyelt felhasználói fiók használatát ezen az eszközön. A fiókot arra is használhatja, hogy céges erőforrásokhoz férjen hozzá az interneten."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:777
 msgid "You are Offline"
@@ -7285,8 +7144,7 @@ msgstr "Kapcsolat nélkül"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:796
 msgid "You must be online in order to add enterprise users."
-msgstr ""
-"Csatlakoznia kell az internetre a vállalati felhasználók hozzáadásához."
+msgstr "Csatlakoznia kell az internetre a vállalati felhasználók hozzáadásához."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:827
 msgid "_Enterprise Login"
@@ -7451,9 +7309,7 @@ msgstr "%s még be van jelentkezve"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
-"A bejelentkezett felhasználók törlése a rendszert inkonzisztens állapotban "
-"hagyhatja."
+msgstr "A bejelentkezett felhasználók törlése a rendszert inkonzisztens állapotban hagyhatja."
 
 #: panels/user-accounts/cc-user-panel.c:642
 #, c-format
@@ -7464,9 +7320,7 @@ msgstr "Meg szeretné tartani %s fájljait?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"Felhasználói fiók törlésekor lehetősége van a saját könyvtár, a levelezési "
-"várólista és az ideiglenes fájlok megtartására."
+msgstr "Felhasználói fiók törlésekor lehetősége van a saját könyvtár, a levelezési várólista és az ideiglenes fájlok megtartására."
 
 #: panels/user-accounts/cc-user-panel.c:649
 msgid "_Delete Files"
@@ -7526,9 +7380,7 @@ msgstr "Győződjön meg róla, hogy az AccountService telepítve van és fut."
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"A módosítások végrehajtásához\n"
-"előbb kattintson a * ikonra"
+msgstr "A módosítások végrehajtásához\nelőbb kattintson a * ikonra"
 
 #: panels/user-accounts/cc-user-panel.c:1347
 msgid "Create a user account"
@@ -7539,9 +7391,7 @@ msgstr "Felhasználói fiók létrehozása"
 msgid ""
 "To create a user account,\n"
 "click the * icon first"
-msgstr ""
-"Felhasználói fiók létrehozásához\n"
-"először kattintson a * ikonra"
+msgstr "Felhasználói fiók létrehozásához\nelőször kattintson a * ikonra"
 
 #: panels/user-accounts/cc-user-panel.c:1367
 msgid "Delete the selected user account"
@@ -7552,9 +7402,7 @@ msgstr "Kijelölt felhasználói fiók törlése"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"A kijelölt felhasználói fiók törléséhez\n"
-"először kattintson a * ikonra"
+msgstr "A kijelölt felhasználói fiók törléséhez\nelőször kattintson a * ikonra"
 
 #: panels/user-accounts/cc-user-panel.ui:5
 msgid "_Add User…"
@@ -7585,9 +7433,7 @@ msgstr "_Rendszergazda"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr ""
-"A rendszergazdák hozzáadhatnak és eltávolíthatnak más felhasználókat, és "
-"módosíthatják az összes felhasználó beállításait."
+msgstr "A rendszergazdák hozzáadhatnak és eltávolíthatnak más felhasználókat, és módosíthatják az összes felhasználó beállításait."
 
 #: panels/user-accounts/cc-user-panel.ui:313
 msgid "_Parental Controls"
@@ -7613,7 +7459,8 @@ msgstr "Fióktevékenység"
 msgid "Remove User…"
 msgstr "Felhasználó eltávolítása…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:635
 msgid "No Users Found"
 msgstr "Nem találhatók felhasználók"
@@ -7624,8 +7471,8 @@ msgstr "Feloldás felhasználói fiók hozzáadásához."
 
 #: panels/user-accounts/cc-user-panel.ui:678
 msgid ""
-"Parental controls can now only be applied to non-administrator accounts. See "
-"the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
+"Parental controls can now only be applied to non-administrator accounts. See"
+" the <a href=\"https://community.endlessos.com/t/how-have-parental-controls-"
 "changed-in-endless-os-3-8/12313\">FAQ entry</a>."
 msgstr ""
 
@@ -7682,9 +7529,7 @@ msgstr "_Más ujj:"
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
-msgstr ""
-"Az ujjlenyomata sikeresen mentve. Mostantól bejelentkezhet az ujjlenyomat-"
-"olvasója segítségével."
+msgstr "Az ujjlenyomata sikeresen mentve. Mostantól bejelentkezhet az ujjlenyomat-olvasója segítségével."
 
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:3
 msgid "Users"
@@ -7694,12 +7539,14 @@ msgstr "Felhasználók"
 msgid "Add or remove users and change your password"
 msgstr "Felhasználók hozzáadása vagy eltávolítása és jelszómódosítás"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "Bejelentkezés;Név;Ujjlenyomat;Avatar;Logó;Arckép;Jelszó;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "B_ejegyzés"
@@ -7713,10 +7560,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"A vállalati bejelentkezések használatához a számítógépet be kell\n"
-"jegyezni a tartományba. Kérje meg a hálózati rendszergazdát,\n"
-"hogy írja be itt a tartomány jelszavát."
+msgstr "A vállalati bejelentkezések használatához a számítógépet be kell\njegyezni a tartományba. Kérje meg a hálózati rendszergazdát,\nhogy írja be itt a tartomány jelszavát."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -7809,9 +7653,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"Próbálja meg kerülni ugyanazon típusú karakterek ismétlését: keverjen "
-"betűket, számokat és írásjeleket."
+msgstr "Próbálja meg kerülni ugyanazon típusú karakterek ismétlését: keverjen betűket, számokat és írásjeleket."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7823,20 +7665,18 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"A jelszónak hosszabbnak kell lennie. Próbáljon meg több betűt, számot és "
-"írásjelet hozzáadni."
+msgstr "A jelszónak hosszabbnak kell lennie. Próbáljon meg több betűt, számot és írásjelet hozzáadni."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
 msgid "Mix uppercase and lowercase and try to use a number or two."
-msgstr ""
-"Használjon vegyesen kis- és nagybetűket, és tegyen közéjük egy-két számot is."
+msgstr "Használjon vegyesen kis- és nagybetűket, és tegyen közéjük egy-két számot is."
 
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
 msgstr "Több betű, szám és írásjel hozzáadása erősebbé fogja tenni a jelszót."
 
 #: panels/user-accounts/run-passwd.c:424
@@ -7866,8 +7706,7 @@ msgstr "Az új jelszót nemrég használta."
 #: panels/user-accounts/run-passwd.c:522
 #, c-format
 msgid "The new password must contain numeric or special characters"
-msgstr ""
-"Az új jelszónak számokat vagy speciális karaktereket is tartalmaznia kell"
+msgstr "Az új jelszónak számokat vagy speciális karaktereket is tartalmaznia kell"
 
 #: panels/user-accounts/run-passwd.c:526
 #, c-format
@@ -7914,9 +7753,7 @@ msgstr "Ujjlenyomatok _törlése"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
-"Törölni kívánja a regisztrált ujjlenyomatokat, ezzel letiltva az "
-"ujjlenyomatos bejelentkezést?"
+msgstr "Törölni kívánja a regisztrált ujjlenyomatokat, ezzel letiltva az ujjlenyomatos bejelentkezést?"
 
 #: panels/user-accounts/um-fingerprint-dialog.c:439
 msgid "Done!"
@@ -7949,17 +7786,15 @@ msgstr "Segítségért keresse meg rendszergazdáját."
 
 #. translators:
 #. * The variable is the name of the device, for example:
-#. * "To enable fingerprint login, you need to save one of your fingerprints, using the
+#. * "To enable fingerprint login, you need to save one of your fingerprints,
+#. using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#.
 #: panels/user-accounts/um-fingerprint-dialog.c:710
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the “%s” device."
-msgstr ""
-"Az ujjlenyomatos bejelentkezés engedélyezéséhez a(z) „%s” eszköz "
-"segítségével el kell mentenie az egyik ujjlenyomatát."
+msgstr "Az ujjlenyomatos bejelentkezés engedélyezéséhez a(z) „%s” eszköz segítségével el kell mentenie az egyik ujjlenyomatát."
 
 #: panels/user-accounts/um-fingerprint-dialog.c:717
 msgid "Selecting finger"
@@ -7973,9 +7808,7 @@ msgstr "Ujjlenyomatok regisztrálása"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"A felhasználónév általában csak a-z közötti kisbetűkből, számjegyekből és a "
-"következő karakterekből állhat: - _"
+msgstr "A felhasználónév általában csak a-z közötti kisbetűkből, számjegyekből és a következő karakterekből állhat: - _"
 
 #: panels/user-accounts/user-utils.c:443
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -7987,9 +7820,7 @@ msgstr "A felhasználónév túl hosszú."
 
 #: panels/user-accounts/user-utils.c:550
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr ""
-"Ez a saját mappájának elnevezésére lesz használva, és nem lehet "
-"megváltoztatni."
+msgstr "Ez a saját mappájának elnevezésére lesz használva, és nem lehet megváltoztatni."
 
 #: panels/wacom/button-mapping.ui:9
 msgid "Map Buttons"
@@ -8008,10 +7839,7 @@ msgstr "Gombok leképezése funkciókra"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"Gyorsbillentyű szerkesztéséhez válassza a „Billentyűleütés küldése” "
-"műveletet, nyomja meg a gyorsbillentyű gombot, majd nyomja le az új "
-"billentyűket vagy a Backspace billentyűt a törléshez."
+msgstr "Gyorsbillentyű szerkesztéséhez válassza a „Billentyűleütés küldése” műveletet, nyomja meg a gyorsbillentyű gombot, majd nyomja le az új billentyűket vagy a Backspace billentyűt a törléshez."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
@@ -8086,10 +7914,10 @@ msgstr "Wacom rajztábla"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
-"Rajztáblák gombleképezéseinek beállítása és a toll érzékenységének módosítása"
+msgstr "Rajztáblák gombleképezéseinek beállítása és a toll érzékenységének módosítása"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Rajztábla;Wacom;Stylus;Toll;Eraser;Radír;Egér;"
@@ -8276,16 +8104,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"A Beállítások ezen verziója csak fejlesztési célokra használandó. Nem "
-"megfelelő rendszerműködést, adatvesztést és más váratlan problémákat "
-"tapasztalhat."
+msgstr "A Beállítások ezen verziója csak fejlesztési célokra használandó. Nem megfelelő rendszerműködést, adatvesztést és más váratlan problémákat tapasztalhat."
 
 #: shell/cc-window.ui:331
 msgid "Help"
 msgstr "Súgó"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "Tulajdonságok;Beállítások;"
@@ -8326,24 +8152,18 @@ msgstr "Az azonosító a megnyitandó legutolsó Beállítások panelhez"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
-"Az azonosító a megnyitandó legutolsó Beállítások panelhez. A "
-"felismerhetetlen értékek mellőzve lesznek, és a listában lévő első panel "
-"kerül kiválasztásra."
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "Az azonosító a megnyitandó legutolsó Beállítások panelhez. A felismerhetetlen értékek mellőzve lesznek, és a listában lévő első panel kerül kiválasztásra."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
-msgstr ""
-"Figyelmeztetés megjelenítése, ha a Beállítások fejlesztői verzióját futtatja"
+msgstr "Figyelmeztetés megjelenítése, ha a Beállítások fejlesztői verzióját futtatja"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr ""
-"A Beállítások jelenítsen-e meg figyelmeztetést, ha fejlesztői kiadást "
-"használ."
+msgstr "A Beállítások jelenítsen-e meg figyelmeztetést, ha fejlesztői kiadást használ."
 
 #. translators:
 #. * The number of sound outputs on a particular device
@@ -8366,37 +8186,3 @@ msgstr[1] "%u bemenet"
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
 msgstr "Rendszerhangok"
-
-#~ msgid "Open in Software"
-#~ msgstr "Megnyitás a Szoftverekben"
-
-#~ msgid "Learn more about color management"
-#~ msgstr "Tudjon meg többet a színkezelésről"
-
-#~ msgid "%s; Build ID: %s"
-#~ msgstr "%s; Összeállítás-azonosító: %s"
-
-#~ msgid "OS Name"
-#~ msgstr "OS neve"
-
-#~ msgid "GNOME Version"
-#~ msgstr "GNOME verzió"
-
-#~ msgctxt "Input Source"
-#~ msgid "Other"
-#~ msgstr "Egyéb"
-
-#~ msgid "Add an Input Source"
-#~ msgstr "Bemeneti forrás hozzáadása"
-
-#~ msgid "Input Sources"
-#~ msgstr "Bemeneti források"
-
-#~ msgid "Input Source Options"
-#~ msgstr "Bemeneti forrás beállításai"
-
-#~ msgid "Allow user to change their password on next login"
-#~ msgstr "A felhasználó módosíthatja a jelszót a következő bejelentkezéskor"
-
-#~ msgid "Set a password now"
-#~ msgstr "Jelszó beállítása most"
