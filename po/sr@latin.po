@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2018-02-25 08:19+0100\n"
 "Last-Translator: Marko M. Kostić <marko.m.kostic@gmail.com>\n"
 "Language-Team: srpski <gnome-sr@googlegroups.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Project-Style: gnome\n"
 "X-Generator: Poedit 2.0.6\n"
+"X-Project-Style: gnome\n"
 
 #: panels/applications/cc-applications-panel.c:747
 #, fuzzy
@@ -73,9 +73,8 @@ msgstr "Lično"
 
 #: panels/applications/cc-applications-panel.c:764
 #: panels/applications/cc-applications-panel.c:769
-#, fuzzy
 msgid "Read-only"
-msgstr "Spreman"
+msgstr "Samo čitanje"
 
 #: panels/applications/cc-applications-panel.c:767
 #: panels/applications/cc-applications-panel.c:769
@@ -228,7 +227,7 @@ msgstr "Isključeno"
 #: panels/applications/cc-applications-panel.ui:144
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:3
 msgid "Microphone"
-msgstr ""
+msgstr "Mikrofon"
 
 #: panels/applications/cc-applications-panel.ui:150
 #: panels/applications/cc-applications-panel.ui:156
@@ -335,9 +334,8 @@ msgid ""
 msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:563
-#, fuzzy
 msgid "Application"
-msgstr "Programi"
+msgstr "Program"
 
 #: panels/applications/cc-applications-panel.ui:569
 msgid "Data"
@@ -1497,23 +1495,22 @@ msgstr[3] "30 sekundi"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:175
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr "%d %s %d %s"
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:180
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr "%d %s %d %s"
+msgstr "%s %s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:190
-#, fuzzy
 msgid "0 seconds"
-msgstr "30 sekundi"
+msgstr "0 sekundi"
 
 #. translators: This is the default hotspot name, need to be less than 32-bytes
 #: panels/common/hostname-helper.c:177
@@ -1890,13 +1887,11 @@ msgid "%.2lf Hz"
 msgstr "%.2lf Hz"
 
 #: panels/display/cc-display-settings.ui:15
-#, fuzzy
 msgctxt "display setting"
 msgid "Orientation"
 msgstr "Usmerenje"
 
 #: panels/display/cc-display-settings.ui:24
-#, fuzzy
 msgctxt "display setting"
 msgid "Resolution"
 msgstr "Rezolucija"
@@ -1910,7 +1905,6 @@ msgid "Adjust for TV"
 msgstr "Doterivanje za TV"
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgctxt "display setting"
 msgid "Scale"
 msgstr "Srazmerno"
@@ -2068,9 +2062,8 @@ msgstr "Izračunavam…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Izdanje 0"
+msgstr "Izdanje"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 #, fuzzy
@@ -2618,21 +2611,18 @@ msgstr "Prikaži _obaveštenja"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:149
-#, fuzzy
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Ekran se isključuje"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:153
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 sekundi"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:157
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 minut"
@@ -2640,7 +2630,6 @@ msgstr "1 minut"
 # bug(danilo): plural-forms
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:161
-#, fuzzy
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 minuta"
@@ -2648,7 +2637,6 @@ msgstr "2 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:165
-#, fuzzy
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 minuta"
@@ -2656,28 +2644,24 @@ msgstr "3 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:169
-#, fuzzy
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 minuta"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:173
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 minuta"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:177
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 hour"
 msgstr "1 sat"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:192 panels/power/cc-power-panel.ui:63
-#, fuzzy
 msgctxt "blank_screen"
 msgid "1 minute"
 msgstr "1 minut"
@@ -2685,7 +2669,6 @@ msgstr "1 minut"
 # bug(danilo): plural-forms
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:196 panels/power/cc-power-panel.ui:67
-#, fuzzy
 msgctxt "blank_screen"
 msgid "2 minutes"
 msgstr "2 minuta"
@@ -2693,14 +2676,12 @@ msgstr "2 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:200 panels/power/cc-power-panel.ui:71
-#, fuzzy
 msgctxt "blank_screen"
 msgid "3 minutes"
 msgstr "3 minuta"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:204 panels/power/cc-power-panel.ui:75
-#, fuzzy
 msgctxt "blank_screen"
 msgid "4 minutes"
 msgstr "4 minuta"
@@ -2708,7 +2689,6 @@ msgstr "4 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:208 panels/power/cc-power-panel.ui:79
-#, fuzzy
 msgctxt "blank_screen"
 msgid "5 minutes"
 msgstr "5 minuta"
@@ -2716,14 +2696,12 @@ msgstr "5 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:212 panels/power/cc-power-panel.ui:83
-#, fuzzy
 msgctxt "blank_screen"
 msgid "8 minutes"
 msgstr "8 minuta"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:216 panels/power/cc-power-panel.ui:87
-#, fuzzy
 msgctxt "blank_screen"
 msgid "10 minutes"
 msgstr "10 minuta"
@@ -2731,7 +2709,6 @@ msgstr "10 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:220 panels/power/cc-power-panel.ui:91
-#, fuzzy
 msgctxt "blank_screen"
 msgid "12 minutes"
 msgstr "12 minuta"
@@ -2739,17 +2716,15 @@ msgstr "12 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:224 panels/power/cc-power-panel.ui:95
-#, fuzzy
 msgctxt "blank_screen"
 msgid "15 minutes"
 msgstr "15 minuta"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:228 panels/power/cc-power-panel.ui:99
-#, fuzzy
 msgctxt "blank_screen"
 msgid "Never"
-msgstr "Nikad"
+msgstr "Nikada"
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:3
 msgid "Screen Lock"
@@ -3060,9 +3035,8 @@ msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgstr "Proverite da li ste priključili i upalili bežični adapter"
 
 #: panels/network/cc-wifi-panel.ui:188
-#, fuzzy
 msgid "Airplane Mode On"
-msgstr "Režim u avionu"
+msgstr "Avio režim uključen"
 
 #: panels/network/cc-wifi-panel.ui:200
 #, fuzzy
@@ -4896,7 +4870,6 @@ msgstr "Donje dugme"
 # bug(danilo): plural-forms
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "15 minutes"
 msgstr "15 minuta"
@@ -4904,7 +4877,6 @@ msgstr "15 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:17
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "20 minutes"
 msgstr "20 minuta"
@@ -4912,14 +4884,12 @@ msgstr "20 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:21
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "25 minutes"
 msgstr "25 minuta"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:25
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "30 minutes"
 msgstr "30 minuta"
@@ -4927,42 +4897,36 @@ msgstr "30 minuta"
 # bug(danilo): plural-forms
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:29
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "45 minutes"
 msgstr "45 minuta"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:33
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "1 hour"
 msgstr "1 sat"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:37
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "80 minutes"
 msgstr "80 minuta"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:41
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "90 minutes"
 msgstr "90 minuta"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:45
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "100 minutes"
 msgstr "100 minuta"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:49
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "2 hours"
 msgstr "2 sata"
@@ -5357,7 +5321,6 @@ msgid "Output Tray"
 msgstr "Izlazna traka"
 
 #: panels/printers/pp-options-dialog.c:95
-#, fuzzy
 msgctxt "printing option"
 msgid "Resolution"
 msgstr "Rezolucija"
@@ -5748,7 +5711,6 @@ msgid "No input sources found"
 msgstr "Nisam pronašao izvore ulaza"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Drugo"
@@ -5763,9 +5725,8 @@ msgid "Input methods can’t be used on the login screen"
 msgstr "Načini unosa ne mogu biti korišćeni u ekranu prijavljivanja"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "„%s“ nalog"
+msgstr "Moj nalog"
 
 #: panels/region/cc-region-panel.ui:55
 #, fuzzy
@@ -6278,12 +6239,10 @@ msgid "Sonar"
 msgstr "Sonar"
 
 #: panels/sound/cc-fade-slider.ui:13
-#, fuzzy
 msgid "Rear"
 msgstr "Iza"
 
 #: panels/sound/cc-fade-slider.ui:15
-#, fuzzy
 msgid "Front"
 msgstr "Ispred"
 
@@ -6348,9 +6307,8 @@ msgid "Input Device"
 msgstr "Nivo ulaza:"
 
 #: panels/sound/cc-sound-panel.ui:358
-#, fuzzy
 msgid "Volume"
-msgstr "Pojačava jačinu zvuka"
+msgstr "Jačina zvuka"
 
 #: panels/sound/cc-sound-panel.ui:380
 #, fuzzy
@@ -6387,7 +6345,6 @@ msgstr "Isključujem"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:97
 #: panels/thunderbolt/cc-bolt-device-entry.c:128
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connecting"
 msgstr "Povezujem se"
@@ -6395,7 +6352,6 @@ msgstr "Povezujem se"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:100
 #: panels/thunderbolt/cc-bolt-device-entry.c:132
 #: panels/thunderbolt/cc-bolt-device-entry.c:144
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connected"
 msgstr "Povezani ste"
@@ -6425,10 +6381,9 @@ msgstr "Priključeni uređaji"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:121
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
-msgstr "Nepoznato"
+msgstr "Nepoznat"
 
 #. Translators: The time point the device was authorized.
 #: panels/thunderbolt/cc-bolt-device-dialog.c:177
@@ -6491,10 +6446,9 @@ msgid "Forget Device"
 msgstr "Ukloni uređaj"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:135
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Error"
-msgstr "Preslikano"
+msgstr "Greška"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:146
 #, fuzzy
@@ -6556,7 +6510,7 @@ msgstr ""
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:3
 msgid "Thunderbolt"
-msgstr ""
+msgstr "Tanderbolt"
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:4
 msgid "Manage Thunderbolt devices"
@@ -7206,98 +7160,84 @@ msgstr "_Pročisti privremene datoteke…"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:280
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 sat"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:284
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 dan"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:288
-#, fuzzy
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:292
-#, fuzzy
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:296
-#, fuzzy
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:300
-#, fuzzy
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:304
-#, fuzzy
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:308
-#, fuzzy
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:312
-#, fuzzy
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 dana"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:316
-#, fuzzy
 msgctxt "purge_files"
 msgid "30 days"
 msgstr "30 dana"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:331
-#, fuzzy
 msgctxt "retain_history"
 msgid "1 day"
 msgstr "1 dan"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:335
-#, fuzzy
 msgctxt "retain_history"
 msgid "7 days"
 msgstr "7 dana"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:339
-#, fuzzy
 msgctxt "retain_history"
 msgid "30 days"
 msgstr "30 dana"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:343
-#, fuzzy
 msgctxt "retain_history"
 msgid "Forever"
 msgstr "Zauvek"
@@ -9176,7 +9116,6 @@ msgstr "Sistemski zvuci"
 #~ msgid "System"
 #~ msgstr "Sistem"
 
-#~| msgid "_Apply"
 #~ msgid "Apply"
 #~ msgstr "Primeni"
 

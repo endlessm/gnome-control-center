@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2017-09-12 22:26+0300\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -76,9 +76,8 @@ msgstr "Домашна папка"
 
 #: panels/applications/cc-applications-panel.c:764
 #: panels/applications/cc-applications-panel.c:769
-#, fuzzy
 msgid "Read-only"
-msgstr "в готовност"
+msgstr "Само за четене"
 
 #: panels/applications/cc-applications-panel.c:767
 #: panels/applications/cc-applications-panel.c:769
@@ -231,7 +230,7 @@ msgstr "изключено"
 #: panels/applications/cc-applications-panel.ui:144
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:3
 msgid "Microphone"
-msgstr ""
+msgstr "Микрофон"
 
 #: panels/applications/cc-applications-panel.ui:150
 #: panels/applications/cc-applications-panel.ui:156
@@ -274,9 +273,8 @@ msgstr "Тър­се­не"
 
 #: panels/applications/cc-applications-panel.ui:242
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:3
-#, fuzzy
 msgid "Notifications"
-msgstr "_Известия"
+msgstr "Известия"
 
 #: panels/applications/cc-applications-panel.ui:248
 #, fuzzy
@@ -304,7 +302,6 @@ msgid "Types of files and links that this application opens."
 msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:327
-#, fuzzy
 msgid "Reset"
 msgstr "Премахване"
 
@@ -340,7 +337,6 @@ msgid ""
 msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:563
-#, fuzzy
 msgid "Application"
 msgstr "Програми"
 
@@ -678,9 +674,8 @@ msgid "Activities"
 msgstr "Активна"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
-#, fuzzy
 msgid "Background"
-msgstr "_Фон"
+msgstr "Фон"
 
 #: panels/background/gnome-background-panel.desktop.in.in:4
 msgid "Change your background image to a wallpaper or photo"
@@ -1407,9 +1402,8 @@ msgid "This profile may no longer be accurate"
 msgstr "Профилът може вече да не е точен"
 
 #: panels/color/gnome-color-panel.desktop.in.in:3
-#, fuzzy
 msgid "Color"
-msgstr "Цвят"
+msgstr "Цветове"
 
 #: panels/color/gnome-color-panel.desktop.in.in:4
 msgid ""
@@ -1501,23 +1495,22 @@ msgstr[1] "30 секунди"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:175
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr "%i %s и %i %s"
+msgstr "%s, %s и %s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:180
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr "%i %s и %i %s"
+msgstr "%s и %s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:190
-#, fuzzy
 msgid "0 seconds"
-msgstr "30 секунди"
+msgstr "0 секунди"
 
 #. translators: This is the default hotspot name, need to be less than 32-bytes
 #: panels/common/hostname-helper.c:177
@@ -1861,7 +1854,6 @@ msgstr "Калибриране на екран"
 
 #: panels/display/cc-display-panel.ui:453
 #: panels/display/gnome-display-panel.desktop.in.in:3
-#, fuzzy
 msgid "Displays"
 msgstr "Ек­ра­ни"
 
@@ -1897,13 +1889,11 @@ msgid "%.2lf Hz"
 msgstr "%.2lf Hz"
 
 #: panels/display/cc-display-settings.ui:15
-#, fuzzy
 msgctxt "display setting"
 msgid "Orientation"
 msgstr "Ориентация"
 
 #: panels/display/cc-display-settings.ui:24
-#, fuzzy
 msgctxt "display setting"
 msgid "Resolution"
 msgstr "Разделителна способност"
@@ -1917,7 +1907,6 @@ msgid "Adjust for TV"
 msgstr "За телевизор"
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgctxt "display setting"
 msgid "Scale"
 msgstr "Мащабиране"
@@ -2073,9 +2062,8 @@ msgstr "Изчисляване…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Версия 0"
+msgstr "Версия"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 #, fuzzy
@@ -2622,129 +2610,111 @@ msgstr "Показване на _известия"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:149
-#, fuzzy
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Екранът се изключва"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:153
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 секунди"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:157
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 минута"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:161
-#, fuzzy
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 минути"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:165
-#, fuzzy
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 минути"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:169
-#, fuzzy
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 минути"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:173
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 минути"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:177
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 hour"
 msgstr "1 час"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:192 panels/power/cc-power-panel.ui:63
-#, fuzzy
 msgctxt "blank_screen"
 msgid "1 minute"
 msgstr "1 минута"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:196 panels/power/cc-power-panel.ui:67
-#, fuzzy
 msgctxt "blank_screen"
 msgid "2 minutes"
 msgstr "2 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:200 panels/power/cc-power-panel.ui:71
-#, fuzzy
 msgctxt "blank_screen"
 msgid "3 minutes"
 msgstr "3 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:204 panels/power/cc-power-panel.ui:75
-#, fuzzy
 msgctxt "blank_screen"
 msgid "4 minutes"
 msgstr "4 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:208 panels/power/cc-power-panel.ui:79
-#, fuzzy
 msgctxt "blank_screen"
 msgid "5 minutes"
 msgstr "5 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:212 panels/power/cc-power-panel.ui:83
-#, fuzzy
 msgctxt "blank_screen"
 msgid "8 minutes"
 msgstr "8 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:216 panels/power/cc-power-panel.ui:87
-#, fuzzy
 msgctxt "blank_screen"
 msgid "10 minutes"
 msgstr "10 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:220 panels/power/cc-power-panel.ui:91
-#, fuzzy
 msgctxt "blank_screen"
 msgid "12 minutes"
 msgstr "12 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:224 panels/power/cc-power-panel.ui:95
-#, fuzzy
 msgctxt "blank_screen"
 msgid "15 minutes"
 msgstr "15 минути"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:228 panels/power/cc-power-panel.ui:99
-#, fuzzy
 msgctxt "blank_screen"
 msgid "Never"
-msgstr "никога"
+msgstr "Никога"
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:3
 msgid "Screen Lock"
@@ -2909,7 +2879,6 @@ msgid "Single click, secondary button"
 msgstr "Натискане на втория бутон"
 
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:3
-#, fuzzy
 msgid "Mouse & Touchpad"
 msgstr "Миш­ка и сен­зо­рен па­нел"
 
@@ -3059,9 +3028,8 @@ msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgstr "Проверете дали адаптерът за Wi-Fi е включен правилно"
 
 #: panels/network/cc-wifi-panel.ui:188
-#, fuzzy
 msgid "Airplane Mode On"
-msgstr "Самолетен режим"
+msgstr "Самолетният режим е включен"
 
 #: panels/network/cc-wifi-panel.ui:200
 #, fuzzy
@@ -3797,7 +3765,6 @@ msgid "Security type"
 msgstr "Вид на сигурността"
 
 #: panels/network/network-wifi.ui:175
-#, fuzzy
 msgctxt "Wi-Fi passkey"
 msgid "Password"
 msgstr "Парола"
@@ -4574,9 +4541,8 @@ msgid "%s removed"
 msgstr "<b>%s</b> — изтрит"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:3
-#, fuzzy
 msgid "Online Accounts"
-msgstr "Ре­гис­т­ра­ции в сай­то­ве"
+msgstr "Регистрации в сайтове"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
@@ -4911,70 +4877,60 @@ msgstr "Долен бутон"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "15 minutes"
 msgstr "15 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:17
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "20 minutes"
-msgstr "2 минути"
+msgstr "20 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:21
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "25 minutes"
-msgstr "5 минути"
+msgstr "25 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:25
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "30 minutes"
 msgstr "30 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:29
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "45 minutes"
 msgstr "45 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:33
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "1 hour"
 msgstr "1 час"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:37
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "80 minutes"
 msgstr "80 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:41
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "90 minutes"
 msgstr "90 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:45
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "100 minutes"
 msgstr "100 минути"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:49
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "2 hours"
 msgstr "2 часа"
@@ -4997,9 +4953,8 @@ msgid "Delay"
 msgstr "Закъснение"
 
 #: panels/power/gnome-power-panel.desktop.in.in:3
-#, fuzzy
 msgid "Power"
-msgstr "Изключване"
+msgstr "Спиране"
 
 #: panels/power/gnome-power-panel.desktop.in.in:4
 msgid "View your battery status and change power saving settings"
@@ -5054,9 +5009,8 @@ msgid "Could not load ui: %s"
 msgstr "Неуспешно зареждане на файла с потребителския интерфейс „%s“"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:3
-#, fuzzy
 msgid "Printers"
-msgstr "Прин­те­ри"
+msgstr "Принтери"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
@@ -5223,7 +5177,6 @@ msgstr "На пауза"
 
 #. Translators: Job's state (job needs authentication to proceed further)
 #: panels/printers/pp-jobs-dialog.c:233
-#, fuzzy
 msgctxt "print job"
 msgid "Authentication required"
 msgstr "Изисква се удостоверяване"
@@ -5281,15 +5234,13 @@ msgstr "Въведете името и паролата си, за да види
 
 #. Translators: This is a windows domain used with SMB protocol.
 #: panels/printers/pp-jobs-dialog.ui:44
-#, fuzzy
 msgid "Domain"
-msgstr "_Област/домейн"
+msgstr "Домеин"
 
 #. Translators: This button authenticates all print jobs and send them for printing.
 #: panels/printers/pp-jobs-dialog.ui:129
-#, fuzzy
 msgid "A_uthenticate"
-msgstr "Удостоверяване"
+msgstr "_Удостоверяване"
 
 #. Translators: this action removes (purges) all the listed jobs from the list.
 #: panels/printers/pp-jobs-dialog.ui:169
@@ -5376,7 +5327,6 @@ msgid "Output Tray"
 msgstr "Изходяща тава"
 
 #: panels/printers/pp-options-dialog.c:95
-#, fuzzy
 msgctxt "printing option"
 msgid "Resolution"
 msgstr "Разделителна способност"
@@ -5765,10 +5715,9 @@ msgid "No input sources found"
 msgstr "Няма входни устройства"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
-msgstr "Друга"
+msgstr "Други"
 
 #: panels/region/cc-input-chooser.ui:5
 #, fuzzy
@@ -5780,9 +5729,8 @@ msgid "Input methods can’t be used on the login screen"
 msgstr "Методите за въвеждане не могат да се използват на екрана за вход"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Регистрация в „%s“"
+msgstr "Моята регистрация"
 
 #: panels/region/cc-region-panel.ui:55
 #, fuzzy
@@ -5866,7 +5814,6 @@ msgid "These keyboard shortcuts can be changed in the keyboard settings"
 msgstr "Можете да ги промените в настройките за клавишните комбинации"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
-#, fuzzy
 msgid "Region & Language"
 msgstr "Ре­ги­он и ез­ик"
 
@@ -6299,12 +6246,10 @@ msgid "Sonar"
 msgstr "Сонар"
 
 #: panels/sound/cc-fade-slider.ui:13
-#, fuzzy
 msgid "Rear"
 msgstr "отзад"
 
 #: panels/sound/cc-fade-slider.ui:15
-#, fuzzy
 msgid "Front"
 msgstr "отпред"
 
@@ -6369,9 +6314,8 @@ msgid "Input Device"
 msgstr "Ниво на входа:"
 
 #: panels/sound/cc-sound-panel.ui:358
-#, fuzzy
 msgid "Volume"
-msgstr "Увеличаване на звука"
+msgstr "Сила на звука"
 
 #: panels/sound/cc-sound-panel.ui:380
 #, fuzzy
@@ -6412,7 +6356,6 @@ msgstr "Прекъсване на връзката"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:97
 #: panels/thunderbolt/cc-bolt-device-entry.c:128
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connecting"
 msgstr "Свързване"
@@ -6420,7 +6363,6 @@ msgstr "Свързване"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:100
 #: panels/thunderbolt/cc-bolt-device-entry.c:132
 #: panels/thunderbolt/cc-bolt-device-entry.c:144
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connected"
 msgstr "Връзката е осъществена"
@@ -6450,10 +6392,9 @@ msgstr "Свързани устройства"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:121
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
-msgstr "Неизвестен"
+msgstr "Неизвестно"
 
 #. Translators: The time point the device was authorized.
 #: panels/thunderbolt/cc-bolt-device-dialog.c:177
@@ -6514,10 +6455,9 @@ msgid "Forget Device"
 msgstr "Свързани устройства"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:135
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Error"
-msgstr "Еднакво изображение"
+msgstr "Грешка"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:146
 #, fuzzy
@@ -7226,98 +7166,84 @@ msgstr "И_зчистване на временните файлове…"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:280
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 час"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:284
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 ден"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:288
-#, fuzzy
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:292
-#, fuzzy
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:296
-#, fuzzy
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:300
-#, fuzzy
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:304
-#, fuzzy
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:308
-#, fuzzy
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:312
-#, fuzzy
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 дена"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:316
-#, fuzzy
 msgctxt "purge_files"
 msgid "30 days"
 msgstr "30 дена"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:331
-#, fuzzy
 msgctxt "retain_history"
 msgid "1 day"
 msgstr "1 ден"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:335
-#, fuzzy
 msgctxt "retain_history"
 msgid "7 days"
 msgstr "7 дена"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:339
-#, fuzzy
 msgctxt "retain_history"
 msgid "30 days"
 msgstr "30 дена"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:343
-#, fuzzy
 msgctxt "retain_history"
 msgid "Forever"
 msgstr "Завинаги"
@@ -8477,9 +8403,8 @@ msgid "[PANEL] [ARGUMENT…]"
 msgstr "[ПАНЕЛ] [АРГУМЕНТ…]"
 
 #: shell/cc-panel-list.ui:45 shell/cc-window.c:277
-#, fuzzy
 msgid "Privacy"
-msgstr "Поверителност"
+msgstr "Лични данни"
 
 #: shell/cc-panel-loader.c:292
 msgid "Available panels:"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 3.3.91\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2014-08-25 14:05+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -72,9 +72,8 @@ msgstr "家"
 
 #: panels/applications/cc-applications-panel.c:764
 #: panels/applications/cc-applications-panel.c:769
-#, fuzzy
 msgid "Read-only"
-msgstr "準備就緒"
+msgstr "唯讀"
 
 #: panels/applications/cc-applications-panel.c:767
 #: panels/applications/cc-applications-panel.c:769
@@ -228,7 +227,7 @@ msgstr "已停用"
 #: panels/applications/cc-applications-panel.ui:144
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:3
 msgid "Microphone"
-msgstr ""
+msgstr "麥克風"
 
 #: panels/applications/cc-applications-panel.ui:150
 #: panels/applications/cc-applications-panel.ui:156
@@ -337,9 +336,8 @@ msgid ""
 msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:563
-#, fuzzy
 msgid "Application"
-msgstr "程式集"
+msgstr "應用程式"
 
 #: panels/applications/cc-applications-panel.ui:569
 msgid "Data"
@@ -718,9 +716,8 @@ msgid "Bluetooth is disabled when airplane mode is on."
 msgstr "藍牙已被硬件開關停用"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:124
-#, fuzzy
 msgid "Turn Off Airplane Mode"
-msgstr "飛安模式(_P)"
+msgstr "關閉飛安模式"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:154
 #, fuzzy
@@ -872,9 +869,8 @@ msgstr "顯示校準"
 
 #. This starts the calibration process
 #: panels/color/cc-color-calibrate.ui:40
-#, fuzzy
 msgid "_Start"
-msgstr "開始"
+msgstr "開啟(_S)"
 
 #. This resumes the calibration process
 #: panels/color/cc-color-calibrate.ui:54
@@ -1434,7 +1430,7 @@ msgstr "選擇語言"
 
 #: panels/common/cc-language-chooser.ui:12
 msgid "_Select"
-msgstr "選取(_S)"
+msgstr "選擇(_S)"
 
 #: panels/common/cc-permission-infobar.ui:20
 msgid "Unlock…"
@@ -1489,23 +1485,22 @@ msgstr[0] "30 秒"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:175
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr "%i %s %i %s"
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:180
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr "%i %s %i %s"
+msgstr "%s %s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:190
-#, fuzzy
 msgid "0 seconds"
-msgstr "30 秒"
+msgstr "0 秒"
 
 #. translators: This is the default hotspot name, need to be less than 32-bytes
 #: panels/common/hostname-helper.c:177
@@ -1859,7 +1854,6 @@ msgid "Night Light"
 msgstr "右環"
 
 #: panels/display/cc-display-settings.c:104
-#, fuzzy
 msgctxt "Display rotation"
 msgid "Landscape"
 msgstr "橫向"
@@ -1888,13 +1882,11 @@ msgid "%.2lf Hz"
 msgstr ""
 
 #: panels/display/cc-display-settings.ui:15
-#, fuzzy
 msgctxt "display setting"
 msgid "Orientation"
 msgstr "方向"
 
 #: panels/display/cc-display-settings.ui:24
-#, fuzzy
 msgctxt "display setting"
 msgid "Resolution"
 msgstr "解像度"
@@ -1908,7 +1900,6 @@ msgid "Adjust for TV"
 msgstr ""
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgctxt "display setting"
 msgid "Scale"
 msgstr "縮放"
@@ -2062,9 +2053,8 @@ msgstr "正在計算…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "版本 0"
+msgstr "版本"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 #, fuzzy
@@ -2485,9 +2475,8 @@ msgid "Name"
 msgstr "名稱"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:168
-#, fuzzy
 msgid "Command"
-msgstr "指令(_O)："
+msgstr "指令"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:180
 #, fuzzy
@@ -2508,18 +2497,16 @@ msgid "Enter the new shortcut"
 msgstr ""
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:357
-#, fuzzy
 msgid "Remove"
-msgstr "移除(_R)"
+msgstr "移除"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:367
 msgid "Add"
 msgstr "加入"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:382
-#, fuzzy
 msgid "Replace"
-msgstr "取代(_R)"
+msgstr "取代"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:395
 #, fuzzy
@@ -2610,126 +2597,108 @@ msgstr "在鎖定畫面中顯示詳細資料"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:149
-#, fuzzy
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "螢幕關閉"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:153
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 秒"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:157
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 分鐘"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:161
-#, fuzzy
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 分鐘"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:165
-#, fuzzy
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 分鐘"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:169
-#, fuzzy
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 分鐘"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:173
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 分鐘"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:177
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 hour"
 msgstr "1 小時"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:192 panels/power/cc-power-panel.ui:63
-#, fuzzy
 msgctxt "blank_screen"
 msgid "1 minute"
 msgstr "1 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:196 panels/power/cc-power-panel.ui:67
-#, fuzzy
 msgctxt "blank_screen"
 msgid "2 minutes"
 msgstr "2 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:200 panels/power/cc-power-panel.ui:71
-#, fuzzy
 msgctxt "blank_screen"
 msgid "3 minutes"
 msgstr "3 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:204 panels/power/cc-power-panel.ui:75
-#, fuzzy
 msgctxt "blank_screen"
 msgid "4 minutes"
 msgstr "4 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:208 panels/power/cc-power-panel.ui:79
-#, fuzzy
 msgctxt "blank_screen"
 msgid "5 minutes"
 msgstr "5 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:212 panels/power/cc-power-panel.ui:83
-#, fuzzy
 msgctxt "blank_screen"
 msgid "8 minutes"
 msgstr "8 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:216 panels/power/cc-power-panel.ui:87
-#, fuzzy
 msgctxt "blank_screen"
 msgid "10 minutes"
 msgstr "10 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:220 panels/power/cc-power-panel.ui:91
-#, fuzzy
 msgctxt "blank_screen"
 msgid "12 minutes"
 msgstr "12 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:224 panels/power/cc-power-panel.ui:95
-#, fuzzy
 msgctxt "blank_screen"
 msgid "15 minutes"
 msgstr "15 分鐘"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:228 panels/power/cc-power-panel.ui:99
-#, fuzzy
 msgctxt "blank_screen"
 msgid "Never"
 msgstr "永不"
@@ -2812,12 +2781,10 @@ msgid "Sets the order of physical buttons on mice and touchpads."
 msgstr ""
 
 #: panels/mouse/cc-mouse-panel.ui:123 panels/sound/cc-balance-slider.ui:13
-#, fuzzy
 msgid "Left"
 msgstr "左"
 
 #: panels/mouse/cc-mouse-panel.ui:133 panels/sound/cc-balance-slider.ui:15
-#, fuzzy
 msgid "Right"
 msgstr "右"
 
@@ -3411,9 +3378,8 @@ msgstr "手動"
 
 #: panels/network/connection-editor/ip4-page.ui:83
 #: panels/network/connection-editor/ip6-page.ui:97
-#, fuzzy
 msgid "Disable"
-msgstr "已停用"
+msgstr "停用"
 
 #: panels/network/connection-editor/ip4-page.ui:97
 #: panels/network/connection-editor/ip6-page.ui:111
@@ -3480,7 +3446,6 @@ msgstr "自動路由"
 #. Translators: Please see https://en.wikipedia.org/wiki/Metrics_(networking)
 #: panels/network/connection-editor/ip4-page.ui:368
 #: panels/network/connection-editor/ip6-page.ui:382
-#, fuzzy
 msgid "Metric"
 msgstr "公制"
 
@@ -3799,7 +3764,6 @@ msgid "Security type"
 msgstr "安全性類型"
 
 #: panels/network/network-wifi.ui:175
-#, fuzzy
 msgctxt "Wi-Fi passkey"
 msgid "Password"
 msgstr "密碼"
@@ -4581,7 +4545,7 @@ msgstr ""
 #. Translators: This is the button which allows undoing the removal of the printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:54
 msgid "Undo"
-msgstr ""
+msgstr "復原"
 
 #: panels/online-accounts/online-accounts.ui:96
 msgid "Connect to your data in the cloud"
@@ -4846,7 +4810,7 @@ msgstr "當插入電源線時"
 
 #: panels/power/cc-power-panel.c:2157
 msgid "Suspend"
-msgstr ""
+msgstr "暫停"
 
 #: panels/power/cc-power-panel.c:2158
 msgid "Power Off"
@@ -4868,14 +4832,12 @@ msgid "Suspend & Power Button"
 msgstr "暫停與關閉電源"
 
 #: panels/power/cc-power-panel.c:2301
-#, fuzzy
 msgid "_Automatic Suspend"
-msgstr "自動暫停"
+msgstr "自動暫停(_A)"
 
 #: panels/power/cc-power-panel.c:2302
-#, fuzzy
 msgid "Automatic suspend"
-msgstr "自動暫停(_A)"
+msgstr "自動暫停"
 
 #: panels/power/cc-power-panel.c:2360
 #, fuzzy
@@ -4884,70 +4846,60 @@ msgstr "較低的按鈕"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "15 minutes"
 msgstr "15 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:17
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "20 minutes"
-msgstr "2 分鐘"
+msgstr "20 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:21
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "25 minutes"
-msgstr "5 分鐘"
+msgstr "25 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:25
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "30 minutes"
 msgstr "30 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:29
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "45 minutes"
 msgstr "45 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:33
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "1 hour"
 msgstr "1 小時"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:37
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "80 minutes"
 msgstr "80 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:41
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "90 minutes"
 msgstr "90 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:45
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "100 minutes"
 msgstr "100 分鐘"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:49
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "2 hours"
 msgstr "2 小時"
@@ -5192,7 +5144,6 @@ msgstr "最後使用的"
 
 #. Translators: Job's state (job needs authentication to proceed further)
 #: panels/printers/pp-jobs-dialog.c:233
-#, fuzzy
 msgctxt "print job"
 msgid "Authentication required"
 msgstr "需要核對"
@@ -5346,7 +5297,6 @@ msgid "Output Tray"
 msgstr "出紙匣"
 
 #: panels/printers/pp-options-dialog.c:95
-#, fuzzy
 msgctxt "printing option"
 msgid "Resolution"
 msgstr "解像度"
@@ -5636,9 +5586,8 @@ msgstr ""
 
 #. Translators: This is the button which restarts the printer.
 #: panels/printers/printer-entry.ui:319
-#, fuzzy
 msgid "Restart"
-msgstr "立刻重新啟動"
+msgstr "重新啟動"
 
 #. Translators: This button adds new printer.
 #: panels/printers/printers.ui:8
@@ -5746,7 +5695,6 @@ msgid "No input sources found"
 msgstr "找不到輸入來源"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "其他"
@@ -6032,17 +5980,14 @@ msgid ""
 msgstr ""
 
 #: panels/search/cc-search-locations-dialog.ui:52
-#, fuzzy
 msgid "Places"
 msgstr "位置"
 
 #: panels/search/cc-search-locations-dialog.ui:91
-#, fuzzy
 msgid "Bookmarks"
 msgstr "書籤"
 
 #: panels/search/cc-search-locations-dialog.ui:156
-#, fuzzy
 msgid "Other"
 msgstr "其他"
 
@@ -6281,12 +6226,10 @@ msgid "Sonar"
 msgstr "聲納"
 
 #: panels/sound/cc-fade-slider.ui:13
-#, fuzzy
 msgid "Rear"
 msgstr "後"
 
 #: panels/sound/cc-fade-slider.ui:15
-#, fuzzy
 msgid "Front"
 msgstr "前"
 
@@ -6351,9 +6294,8 @@ msgid "Input Device"
 msgstr "輸入等級："
 
 #: panels/sound/cc-sound-panel.ui:358
-#, fuzzy
 msgid "Volume"
-msgstr "調高音量"
+msgstr "音量"
 
 #: panels/sound/cc-sound-panel.ui:380
 #, fuzzy
@@ -6391,7 +6333,6 @@ msgstr "斷線"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:97
 #: panels/thunderbolt/cc-bolt-device-entry.c:128
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connecting"
 msgstr "連線中"
@@ -6399,7 +6340,6 @@ msgstr "連線中"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:100
 #: panels/thunderbolt/cc-bolt-device-entry.c:132
 #: panels/thunderbolt/cc-bolt-device-entry.c:144
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connected"
 msgstr "已連線"
@@ -6429,7 +6369,6 @@ msgstr "已連線的裝置"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:121
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
 msgstr "不明"
@@ -6492,10 +6431,9 @@ msgid "Forget Device"
 msgstr "移除裝置"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:135
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Error"
-msgstr "鏡射"
+msgstr "錯誤"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:146
 #, fuzzy
@@ -6571,19 +6509,16 @@ msgstr ""
 #. translators: the labels will read:
 #. * Cursor Size: Default
 #: panels/universal-access/cc-ua-panel.c:500
-#, fuzzy
 msgctxt "cursor size"
 msgid "Default"
 msgstr "預設值"
 
 #: panels/universal-access/cc-ua-panel.c:503
-#, fuzzy
 msgctxt "cursor size"
 msgid "Medium"
 msgstr "中"
 
 #: panels/universal-access/cc-ua-panel.c:506
-#, fuzzy
 msgctxt "cursor size"
 msgid "Large"
 msgstr "大"
@@ -7093,9 +7028,8 @@ msgid "_White on black:"
 msgstr "白底黑字："
 
 #: panels/universal-access/zoom-options.ui:845
-#, fuzzy
 msgid "_Brightness:"
-msgstr "亮度："
+msgstr "亮度(_B):"
 
 #: panels/universal-access/zoom-options.ui:866
 #, fuzzy
@@ -7234,98 +7168,84 @@ msgstr "清理暫存檔案(_P)"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:280
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 小時"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:284
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:288
-#, fuzzy
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:292
-#, fuzzy
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:296
-#, fuzzy
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:300
-#, fuzzy
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:304
-#, fuzzy
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:308
-#, fuzzy
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:312
-#, fuzzy
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 天"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:316
-#, fuzzy
 msgctxt "purge_files"
 msgid "30 days"
 msgstr "30 天"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:331
-#, fuzzy
 msgctxt "retain_history"
 msgid "1 day"
 msgstr "1 天"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:335
-#, fuzzy
 msgctxt "retain_history"
 msgid "7 days"
 msgstr "7 天"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:339
-#, fuzzy
 msgctxt "retain_history"
 msgid "30 days"
 msgstr "30 天"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:343
-#, fuzzy
 msgctxt "retain_history"
 msgid "Forever"
 msgstr "永遠"
@@ -7454,12 +7374,10 @@ msgid "_Full Name"
 msgstr "全名(_F)"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:206
-#, fuzzy
 msgid "Standard"
 msgstr "標準"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:216
-#, fuzzy
 msgid "Administrator"
 msgstr "管理員"
 
@@ -7651,7 +7569,7 @@ msgid "Invalid password, please try again"
 msgstr "密碼錯誤，請再試一次"
 
 #: panels/user-accounts/cc-realm-manager.c:751
-#, fuzzy, c-format
+#, c-format
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "無法連接到 %s 網域：%s"
 
@@ -7711,9 +7629,8 @@ msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "確定要刪除這個帳號？"
 
 #: panels/user-accounts/cc-user-panel.c:668
-#, fuzzy
 msgid "_Delete"
-msgstr "刪除檔案(_D)"
+msgstr "刪除(_D)"
 
 #: panels/user-accounts/cc-user-panel.c:718
 msgctxt "Password mode"
@@ -8337,9 +8254,8 @@ msgid "Tablet Preferences"
 msgstr "繪圖板偏好設定"
 
 #: panels/wacom/gnome-wacom-properties.ui:44
-#, fuzzy
 msgid "_Help"
-msgstr "求助"
+msgstr "求助(_H)"
 
 #: panels/wacom/gnome-wacom-properties.ui:125
 msgid "No tablet detected"
@@ -8525,19 +8441,16 @@ msgid "Preferences;Settings;"
 msgstr "Preferences;Settings;偏好設定;設定值;"
 
 #: shell/help-overlay.ui:15
-#, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "一般"
 
 #: shell/help-overlay.ui:20
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "結束"
 
 #: shell/help-overlay.ui:27 shell/help-overlay.ui:48
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "搜尋"
@@ -8803,9 +8716,6 @@ msgstr "系統音效"
 #~ "automatically set it to \"%s\"?"
 #~ msgstr "捷徑鍵「%s」已指派「%s」捷徑。你想要自動將它設定為「%s」嗎？"
 
-#~| msgid ""
-#~| "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~| "disabled."
 #~ msgid ""
 #~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
 #~ "disabled if you move forward."

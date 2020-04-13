@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2020-02-14 18:20+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -306,7 +306,7 @@ msgstr "Biriktirme"
 
 #: panels/applications/cc-applications-panel.ui:425
 msgid "Open in App Center"
-msgstr ""
+msgstr "Uygulama Merkezi'nde aç"
 
 #: panels/applications/cc-applications-panel.ui:475 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -1441,18 +1441,21 @@ msgstr "%e %b, %Y"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d saat"
+msgstr[1] "%d saat"
 
 #: panels/common/cc-util.c:169
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d dakika"
+msgstr[0] "%ddakika"
+msgstr[1] "%d dakika"
 
 #: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d saniye"
+msgstr[1] "%d saniye"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:175
@@ -1801,7 +1804,7 @@ msgstr "Ekran Düzeni"
 
 #: panels/display/cc-display-panel.ui:387
 msgid "Active Display"
-msgstr "Etkin Ekran"
+msgstr "Aktif Ekran"
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -2013,9 +2016,8 @@ msgstr "Hesaplanıyor…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Sürüm 0"
+msgstr "Sürüm"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 msgid "OS Type"
@@ -3065,6 +3067,7 @@ msgstr "Asla"
 msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "%i gün önce"
+msgstr[1] "%i gün önce"
 
 #: panels/network/connection-editor/ce-page-details.c:281
 #, c-format
@@ -4499,12 +4502,14 @@ msgstr "Bilinmeyen süre"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i dakika"
+msgstr[1] "%i dakika"
 
 #: panels/power/cc-power-panel.c:340
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i saat"
+msgstr[1] "%i saat"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4517,11 +4522,13 @@ msgstr "%i %s %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "saat"
+msgstr[1] "saat"
 
 #: panels/power/cc-power-panel.c:350
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "dakika"
+msgstr[1] "dakika"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:368
@@ -5096,7 +5103,8 @@ msgstr "Tamamlandı"
 #, c-format
 msgid "%u Job Requires Authentication"
 msgid_plural "%u Jobs Require Authentication"
-msgstr[0] "%u Görev Kimlik Doğrulaması Gerektiriyor"
+msgstr[0] "%u  Kimlik Doğrulama Gerektiren İş"
+msgstr[1] "%u Kimlik Doğrulama Gerektiren İş"
 
 #. Translators: This is the printer name for which we are showing the active jobs
 #: panels/printers/pp-jobs-dialog.c:520
@@ -5340,6 +5348,7 @@ msgstr "Etkin Görev Yok"
 msgid "%u Job"
 msgid_plural "%u Jobs"
 msgstr[0] "%u İş"
+msgstr[1] "%u İş"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:745
@@ -5590,29 +5599,25 @@ msgid "No input sources found"
 msgstr "Girdi kaynağı bulunamadı"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Diğer"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Klavye Kısayolları"
+msgstr "Klavye Düzeni Ekle"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Girdi yöntemleri oturum açma ekranında kullanılamaz"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "%s Hesabı"
+msgstr "Hesabım"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Oturum A_çma Ekranı"
+msgstr "Giriş Ekranı"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:368
@@ -5632,9 +5637,8 @@ msgid "_Formats"
 msgstr "Bi_çimler"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Klavye Kısayolları"
+msgstr "Klavye Düzenleri"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5650,9 +5654,8 @@ msgstr ""
 "Girdi ayarları sisteme giriş esnasında tüm kullanıcılar tarafından kullanılır"
 
 #: panels/region/cc-region-panel.ui:381
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Klavye Kısayolları"
+msgstr "Klavye Düzeni Ayarlar"
 
 #: panels/region/cc-region-panel.ui:396
 msgid "Use the _same source for all windows"
@@ -6406,7 +6409,8 @@ msgstr "En Büyük"
 #, c-format
 msgid "%d pixel"
 msgid_plural "%d pixels"
-msgstr[0] "%d piksel"
+msgstr[0] "%d piksel "
+msgstr[1] "%d piksel"
 
 #: panels/universal-access/cc-ua-panel.ui:78
 msgid "_Always Show Universal Access Menu"
@@ -7095,56 +7099,54 @@ msgid "Don't leave traces"
 msgstr "İz bırakma"
 
 #: panels/updates/cc-updates-panel.c:521
-#, fuzzy
 msgid "Limited data plan connection"
-msgstr "Yeni bağlantı ekle"
+msgstr "Sınırlı veri planı bağlantısı"
 
 #: panels/updates/cc-updates-panel.c:523
-#, fuzzy
 msgid "Unlimited data plan connection"
-msgstr "Bağlantı düzenleyicisi açılamadı"
+msgstr "Sınırsız veri planı bağlantısı"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Yeni bağlantı ekle"
+msgstr "Aktif bağlantı yok"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Ağ ayarlarını değiştir"
+msgstr "Ağ Ayarlarını Değiştir…"
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Kendiliğinden Rota"
+msgstr "Otomatik Güncellemeler"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Arka plan güncellemelerinin bu bağlantıda otomatik olarak gerçekleşmesine "
+"izin ver. Bunlar genellikle Endless OS için güncellenmiş uygulamalar, yeni "
+"içerik veya güncellemelerdir."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Zamanlama"
+msgstr "Zamanlanmış Güncelleştirmeleri"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
 msgstr ""
+"Güncellemelerin otomatik olarak gerçekleşmesi için bir günlük pencere "
+"oluşturun."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Kendiliğinden Rota"
+msgstr "Otomatik güncellemeleri zamanla"
 
 #. Translators: those are keywords for the automatic updates control-center panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
-msgstr ""
+msgstr "Güncellemeler;Otomatik;Arkaplan;Ölçülü;"
 
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
@@ -7239,9 +7241,8 @@ msgstr "_Doğrula"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:490
 #: panels/user-accounts/cc-password-dialog.ui:308
-#, fuzzy
 msgid "Password _Reminder"
-msgstr "Parola"
+msgstr "Parola Hatırlatıcı"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:530
 #: panels/user-accounts/cc-add-user-dialog.ui:737
@@ -8326,7 +8327,8 @@ msgstr "Geliştirme inşası çalışırken Ayarlarʼın uyarı gösterip göste
 #, c-format
 msgid "%u Output"
 msgid_plural "%u Outputs"
-msgstr[0] "%u Çıktı"
+msgstr[0] "%u çıkış"
+msgstr[1] "%u çıkış"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8334,7 +8336,8 @@ msgstr[0] "%u Çıktı"
 #, c-format
 msgid "%u Input"
 msgid_plural "%u Inputs"
-msgstr[0] "%u Girdi"
+msgstr[0] "%u giriş"
+msgstr[1] "%u giriş"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
@@ -8398,7 +8401,7 @@ msgstr "Sistem Sesleri"
 #~ "geliştirmemize yaramaktadır."
 
 #~ msgid "Restrict _background data usage"
-#~ msgstr "Arka plan _veri kullanımını kısıtla"
+#~ msgstr "_Arka plan veri kullanımını kısıtla"
 
 #~ msgid "Appropriate for connections that have data charges or limits."
 #~ msgstr "Veri ücreti veya sınırı olan bağlantılar için uygundur."
@@ -8804,7 +8807,6 @@ msgstr "Sistem Sesleri"
 #~ msgid "org.gnome.Settings"
 #~ msgstr "org.gnome.Settings"
 
-#~| msgid "Drag displays to rearrange them"
 #~ msgid "Drag displays to match your setup."
 #~ msgstr "Ekranları kurulumunuza uydurmak için sürükleyin."
 
@@ -9028,7 +9030,6 @@ msgstr "Sistem Sesleri"
 #~ msgid "System"
 #~ msgstr "Sistem"
 
-#~| msgid "_Apply"
 #~ msgid "Apply"
 #~ msgstr "Uygula"
 
@@ -9482,7 +9483,6 @@ msgstr "Sistem Sesleri"
 #~ msgid "_Allow Remote Control"
 #~ msgstr "Uz_aktan Denetime İzin Ver"
 
-#~| msgid "GNOME Control Center"
 #~ msgid "Welcome to the Control Center"
 #~ msgstr "Denetim Merkezine Hoş Geldiniz"
 
@@ -9598,11 +9598,9 @@ msgstr "Sistem Sesleri"
 #~ msgid "Password:"
 #~ msgstr "Parola:"
 
-#~| msgid "Repeat Keys"
 #~ msgid "_Repeat Keys"
 #~ msgstr "Tuşları Tek_rarla"
 
-#~| msgid "Cursor Blinking"
 #~ msgid "_Cursor Blinking"
 #~ msgstr "_İmleç Yanıp Sönmesi"
 

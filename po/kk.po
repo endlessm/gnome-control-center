@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2019-03-09 17:12+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -1880,7 +1880,6 @@ msgid "Adjust for TV"
 msgstr "Теледидар үшін баптау"
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgctxt "display setting"
 msgid "Scale"
 msgstr "Созу"
@@ -2036,9 +2035,8 @@ msgstr "Есептеу…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Нұсқасы 0"
+msgstr "Нұсқасы"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 #, fuzzy
@@ -2110,9 +2108,8 @@ msgid "Sound and Media"
 msgstr "Дыбыс және медиа"
 
 #: panels/keyboard/00-multimedia.xml.in:4
-#, fuzzy
 msgid "Volume mute/unmute"
-msgstr "Дыбысын басу"
+msgstr "Дыбысты сөндіру/іске қосу"
 
 #: panels/keyboard/00-multimedia.xml.in:6
 msgid "Volume down"
@@ -2123,9 +2120,8 @@ msgid "Volume up"
 msgstr "Дыбысты көтеру"
 
 #: panels/keyboard/00-multimedia.xml.in:10
-#, fuzzy
 msgid "Microphone mute/unmute"
-msgstr "Микрофон"
+msgstr "Микрофонды сөндіру/іске қосу"
 
 #: panels/keyboard/00-multimedia.xml.in:12
 msgid "Launch media player"
@@ -3109,6 +3105,7 @@ msgstr "Ешқашан"
 msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "%i күн бұрын"
+msgstr[1] "%i күн бұрын"
 
 #: panels/network/connection-editor/ce-page-details.c:281
 #, c-format
@@ -4551,12 +4548,14 @@ msgstr "Уақыты белгісіз"
 msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i минут"
+msgstr[1] "%i минут"
 
 #: panels/power/cc-power-panel.c:340
 #, c-format
 msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i сағат"
+msgstr[1] "%i сағат"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4569,11 +4568,13 @@ msgstr "%i %s %i %s"
 msgid "hour"
 msgid_plural "hours"
 msgstr[0] "сағат"
+msgstr[1] "сағат"
 
 #: panels/power/cc-power-panel.c:350
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "минут"
+msgstr[1] "минут"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:368
@@ -5410,6 +5411,7 @@ msgstr "Белсенді тапсырмалар жоқ"
 msgid "%u Job"
 msgid_plural "%u Jobs"
 msgstr[0] "%u тапсырма"
+msgstr[1] "%u тапсырма"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:745
@@ -5662,7 +5664,6 @@ msgid "No input sources found"
 msgstr "Кіріс қайнар көздері табылмады"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Басқа"
@@ -6477,6 +6478,7 @@ msgstr "Ең үлкен"
 msgid "%d pixel"
 msgid_plural "%d pixels"
 msgstr[0] "%d пиксель"
+msgstr[1] "%d пиксель"
 
 #: panels/universal-access/cc-ua-panel.ui:78
 msgid "_Always Show Universal Access Menu"
@@ -7197,9 +7199,8 @@ msgstr "Желі баптаулары"
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Автоматты бағдарлар"
+msgstr "Автоматты жаңартулар"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
@@ -8418,6 +8419,7 @@ msgstr ""
 msgid "%u Output"
 msgid_plural "%u Outputs"
 msgstr[0] "%u шығыс"
+msgstr[1] "%u шығыс"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8426,6 +8428,7 @@ msgstr[0] "%u шығыс"
 msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u кіріс"
+msgstr[1] "%u кіріс"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
@@ -9971,26 +9974,21 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Export"
 #~ msgstr "И_мпорт"
 
-#~| msgid "Left"
 #~ msgid "Left Shift"
 #~ msgstr "Сол жақ"
 
-#~| msgid "Right"
 #~ msgid "Right Shift"
 #~ msgstr "Оң жақ"
 
-#~| msgid "Left"
 #~ msgid "Left Alt+Shift"
 #~ msgstr "Сол жақ"
 
-#~| msgid "Right"
 #~ msgid "Right Alt+Shift"
 #~ msgstr "Оң жақ"
 
 #~ msgid "Left Ctrl+Shift"
 #~ msgstr "Сол жақ Ctrl+Shift"
 
-#~| msgid "Right"
 #~ msgid "Right Ctrl+Shift"
 #~ msgstr "Оң жақ"
 
@@ -10062,7 +10060,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "R_otation"
 #~ msgstr "Кең_ейтілуі:"
 
-#~| msgid "Slow Keys"
 #~ msgctxt "mouse, speed"
 #~ msgid "Slow"
 #~ msgstr "Баяу пернелер"
@@ -10072,22 +10069,18 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Fast"
 #~ msgstr "Жылдам"
 
-#~| msgid "_Options"
 #~ msgid "_Options…"
 #~ msgstr "_Опциялар"
 
 #~ msgid "00:24:16:31:8G:7A"
 #~ msgstr "00:24:16:31:8G:7A"
 
-#~| msgid "Visibility"
 #~ msgid "Visible"
 #~ msgstr "Көрінуі"
 
-#~| msgid "Visibility"
 #~ msgid "Name & Visibility"
 #~ msgstr "Көрінуі"
 
-#~| msgid "None"
 #~ msgctxt "Input source"
 #~ msgid "None"
 #~ msgstr "Ешнәрсе"
@@ -10115,7 +10108,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "150%"
 #~ msgstr "150%"
 
-#~| msgid "Zoom"
 #~ msgctxt "universal access, zoom"
 #~ msgid "Zoom"
 #~ msgstr "Үлкейту"
@@ -10126,12 +10118,10 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Zoom out:"
 #~ msgstr "Кішірейту:"
 
-#~| msgid "Short"
 #~ msgctxt "universal access, delay"
 #~ msgid "Short"
 #~ msgstr "<i>Қысқа</i>"
 
-#~| msgid "Long"
 #~ msgctxt "universal access, delay"
 #~ msgid "Long"
 #~ msgstr "Ұзақ"
@@ -10140,28 +10130,23 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "rejected"
 #~ msgstr "Тайдырылған"
 
-#~| msgid "Mouse"
 #~ msgid "Video Mouse"
 #~ msgstr "Тышқан"
 
-#~| msgid "Small"
 #~ msgctxt "universal access, threshold"
 #~ msgid "Small"
 #~ msgstr "Кішкентай"
 
-#~| msgid "Large"
 #~ msgctxt "universal access, threshold"
 #~ msgid "Large"
 #~ msgstr "Үлкен"
 
-#~| msgid "Remove Account"
 #~ msgid "_Local Account"
 #~ msgstr "Тіркелгіні өшіру"
 
 #~ msgid "C_ontinue"
 #~ msgstr "Жа_лғастыру"
 
-#~| msgid "Preview"
 #~ msgid "Previous Week"
 #~ msgstr "Алдыңғы апта"
 
@@ -10191,7 +10176,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Weak"
 #~ msgstr "Әлсіз"
 
-#~| msgid "Filter"
 #~ msgctxt "Password strength"
 #~ msgid "Fair"
 #~ msgstr "Фильтр"
@@ -10200,19 +10184,16 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Good"
 #~ msgstr "Жақсы"
 
-#~| msgid "Scrolling"
 #~ msgctxt "Password strength"
 #~ msgid "Strong"
 #~ msgstr "Айналдыру"
 
-#~| msgid "Set a password now"
 #~ msgid "_Generate a password"
 #~ msgstr "Парольді қазір орнату"
 
 #~ msgid "You need to enter a new password"
 #~ msgstr "Сізге жаңа парольді енгізу керек"
 
-#~| msgid "The current password is not correct"
 #~ msgid "The new password is not strong enough"
 #~ msgstr "Ағымдағы пароль дұрыс көрсетілмеді"
 
@@ -10272,34 +10253,27 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "%d x %d"
 #~ msgstr "%d x %d"
 
-#~| msgid "Unknown"
 #~ msgid "Unknown model"
 #~ msgstr "Белгісіз"
 
-#~| msgid "Appearance"
 #~ msgid "Experience"
 #~ msgstr "Сыртқы түрі"
 
-#~| msgid "Out of toner"
 #~ msgid "Out of range"
 #~ msgstr "Тонер жоқ"
 
 #~ msgid "_Options..."
 #~ msgstr "_Опциялар..."
 
-#~| msgid "Create..."
 #~ msgid "C_reate..."
 #~ msgstr "Жаса_у..."
 
-#~| msgid "Hinting"
 #~ msgid "_Disconnect"
 #~ msgstr "Б_айланысты үзу"
 
-#~| msgid "Contact"
 #~ msgid "_Connect"
 #~ msgstr "<u>Байланысу</u>"
 
-#~| msgid "_Options..."
 #~ msgid "_Settings..."
 #~ msgstr "Ба_птаулар"
 
@@ -10310,22 +10284,18 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Manage online accounts"
 #~ msgstr "Желідегі тіркелгілерді басқару"
 
-#~| msgid "On battery power"
 #~ msgid "Using battery power - %s remaining"
 #~ msgstr "Батареядан"
 
-#~| msgid "On battery power"
 #~ msgid "Using battery power"
 #~ msgstr "Батареядан"
 
-#~| msgid "Suspend when inactive for:"
 #~ msgid "Suspend when inactive for"
 #~ msgstr "Ұйықтату үшін белсенді емес уақыты:"
 
 #~ msgid "Manufacturers"
 #~ msgstr "Өндірушілер"
 
-#~| msgid "_Show..."
 #~ msgid "_Show"
 #~ msgstr "Көр_сету"
 
@@ -10366,7 +10336,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "System settings"
 #~ msgstr "Жүйелік баптаулар"
 
-#~| msgid "Brightness and Lock"
 #~ msgid "Brightness & Lock"
 #~ msgstr "Жарықтылық пен блоктау"
 
@@ -10400,11 +10369,9 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Options..."
 #~ msgstr "Опциялар..."
 
-#~| msgid "Filter"
 #~ msgid "Fair"
 #~ msgstr "Фильтр"
 
-#~| msgid "_Options..."
 #~ msgid "Map Buttons..."
 #~ msgstr "_Опциялар..."
 
@@ -10426,7 +10393,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Colors & Gradients"
 #~ msgstr "Түстер мен градиенттер"
 
-#~| msgid "Action"
 #~ msgid "Acti_on:"
 #~ msgstr "Әре_кет:"
 
@@ -10436,7 +10402,6 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "_Left-handed"
 #~ msgstr "_Солақай"
 
-#~| msgid "_Acceleration:"
 #~ msgid "A_cceleration:"
 #~ msgstr "Үд_ету:"
 
@@ -10446,12 +10411,10 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "_Disabled"
 #~ msgstr "Сөн_дірулі"
 
-#~| msgid "Other"
 #~ msgctxt "Wireless access point"
 #~ msgid "Other..."
 #~ msgstr "Басқа..."
 
-#~| msgid "Disabled"
 #~ msgid "Disable VPN"
 #~ msgstr "Сөндірулі"
 
@@ -10470,15 +10433,12 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "%.0lf%% charged"
 #~ msgstr "%.0lf%% зарядталған"
 
-#~| msgid "_Language:"
 #~ msgid "Remove Language"
 #~ msgstr "Тілді өшіру"
 
-#~| msgid "Layout"
 #~ msgid "Remove Layout"
 #~ msgstr "Жайманы өшіру"
 
-#~| msgid "Preview:"
 #~ msgid "Preview Layout"
 #~ msgstr "Жайманы алдын-ала қарау"
 
@@ -10510,15 +10470,12 @@ msgstr "Жүйелік дыбыстар"
 #~ msgid "Dasher"
 #~ msgstr "Dasher"
 
-#~| msgid "None"
 #~ msgid "Nomon"
 #~ msgstr "Ешнәрсе"
 
-#~| msgid "Change your password"
 #~ msgid "Change contrast:"
 #~ msgstr "Контрастты өзгерту"
 
-#~| msgid "Zoom"
 #~ msgctxt "universal access, seeing"
 #~ msgid "Zoom"
 #~ msgstr "Масштаб"

@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2020-03-03 22:37+0100\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -323,7 +323,7 @@ msgstr "Stockage"
 
 #: panels/applications/cc-applications-panel.ui:425
 msgid "Open in App Center"
-msgstr ""
+msgstr "Ouvrir dans l'App Center"
 
 #: panels/applications/cc-applications-panel.ui:475 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -1840,7 +1840,7 @@ msgstr "Disposition des écrans"
 
 #: panels/display/cc-display-panel.ui:387
 msgid "Active Display"
-msgstr "Écran actif"
+msgstr "Affichage actif"
 
 #: panels/display/cc-display-panel.ui:434
 msgid "Display Configuration"
@@ -2053,9 +2053,8 @@ msgstr "Calcul en cours…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Version 0"
+msgstr "Version"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 msgid "OS Type"
@@ -5657,15 +5656,13 @@ msgid "No input sources found"
 msgstr "Aucune source de saisie trouvée"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Autre"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Raccourcis clavier"
+msgstr "Ajouter une disposition de clavier"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
@@ -5673,14 +5670,12 @@ msgstr ""
 "Les méthodes de saisie ne peuvent pas être utilisées sur l’écran de connexion"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Compte %s"
+msgstr "Mon compte"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Écran de conne_xion"
+msgstr "Écran de connexion"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:368
@@ -5700,9 +5695,8 @@ msgid "_Formats"
 msgstr "_Formats"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Raccourcis clavier"
+msgstr "Dispositions de claviers"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5719,9 +5713,8 @@ msgstr ""
 "accéder au système"
 
 #: panels/region/cc-region-panel.ui:381
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Raccourcis clavier"
+msgstr "Options de disposition du clavier"
 
 #: panels/region/cc-region-panel.ui:396
 msgid "Use the _same source for all windows"
@@ -7176,56 +7169,54 @@ msgid "Don't leave traces"
 msgstr "Ne laisser aucune trace"
 
 #: panels/updates/cc-updates-panel.c:521
-#, fuzzy
 msgid "Limited data plan connection"
-msgstr "Ajouter une nouvelle connexion"
+msgstr "Connexion forfait de données limité"
 
 #: panels/updates/cc-updates-panel.c:523
-#, fuzzy
 msgid "Unlimited data plan connection"
-msgstr "Impossible d’ouvrir l’éditeur de connexions"
+msgstr "Connexion forfait de données illimité"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Ajouter une nouvelle connexion"
+msgstr "Pas de connexion active"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Modifier les paramètres du réseau"
+msgstr "Modification des paramètres réseau…"
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Routes automatiques"
+msgstr "Mises à jour automatiques"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Autoriser les mises à jour automatique en arrière-plan sur cette connexion. "
+"Il s'agit généralement d'applis mises à jour, de nouveaux contenus ou de "
+"mises à jour d'Endless OS."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Horaires"
+msgstr "Mises à jour programmées"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
 msgstr ""
+"Créez une fenêtre quotidienne pour le téléchargement automatique des mises à "
+"jour."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Routes automatiques"
+msgstr "Paramétrer des mises à jour automatiques"
 
 #. Translators: those are keywords for the automatic updates control-center panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
-msgstr ""
+msgstr "Mises à jour;automatique;"
 
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
@@ -7308,7 +7299,7 @@ msgstr ""
 #: panels/user-accounts/cc-add-user-dialog.ui:284
 #: panels/user-accounts/cc-password-dialog.ui:266
 msgid "Do not re_quire a password when logging in"
-msgstr ""
+msgstr "Ne nécessite pas de mot de passe lors de la connexion"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:301
 #: panels/user-accounts/cc-password-dialog.ui:282
@@ -7321,9 +7312,8 @@ msgstr "_Confirmer"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:490
 #: panels/user-accounts/cc-password-dialog.ui:308
-#, fuzzy
 msgid "Password _Reminder"
-msgstr "Mot de passe"
+msgstr "Rappel_Mot de passe"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:530
 #: panels/user-accounts/cc-add-user-dialog.ui:737

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2020-03-07 19:25+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -1769,7 +1769,7 @@ msgstr "Один дисплей"
 #: panels/display/cc-display-panel.ui:110
 #: panels/display/cc-display-panel.ui:315
 msgid "Join Displays"
-msgstr "З'єднання дисплеїв"
+msgstr "Приєднання екранів"
 
 #: panels/display/cc-display-panel.ui:128
 msgid "Mirror"
@@ -1810,7 +1810,7 @@ msgstr "Налаштування дисплея"
 #: panels/display/cc-display-panel.ui:453
 #: panels/display/gnome-display-panel.desktop.in.in:3
 msgid "Displays"
-msgstr "Дисплеї"
+msgstr "Екрани"
 
 #. This is the redshift functionality where we suppress blue light when the sun has gone down
 #: panels/display/cc-display-panel.ui:464
@@ -1864,7 +1864,7 @@ msgstr "Підкоригувати для телебачення"
 #: panels/display/cc-display-settings.ui:59
 msgctxt "display setting"
 msgid "Scale"
-msgstr "Масштаб"
+msgstr "Шкала"
 
 #: panels/display/cc-night-light-page.c:622
 msgid "More Warm"
@@ -2013,9 +2013,8 @@ msgstr "Обчислення…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Версія 0"
+msgstr "Версія"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 msgid "OS Type"
@@ -2566,7 +2565,7 @@ msgstr "30 секунд"
 #: panels/lock/cc-lock-panel.ui:157
 msgctxt "lock_screen"
 msgid "1 minute"
-msgstr "1 хвилина"
+msgstr "1 хвилину"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:161
@@ -2602,7 +2601,7 @@ msgstr "1 година"
 #: panels/lock/cc-lock-panel.ui:192 panels/power/cc-power-panel.ui:63
 msgctxt "blank_screen"
 msgid "1 minute"
-msgstr "1 хвилина"
+msgstr "1 хвилину"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:196 panels/power/cc-power-panel.ui:67
@@ -2972,7 +2971,7 @@ msgstr "Впевніться, що адаптер Wi-Fi приєднано та 
 
 #: panels/network/cc-wifi-panel.ui:188
 msgid "Airplane Mode On"
-msgstr "Режим польоту увімкнено"
+msgstr "Режим «у літаку» ввімкнено"
 
 #: panels/network/cc-wifi-panel.ui:200
 msgid "Turn off to use Wi-Fi"
@@ -3072,6 +3071,7 @@ msgid_plural "%i days ago"
 msgstr[0] "%i день тому"
 msgstr[1] "%i дні тому"
 msgstr[2] "%i днів тому"
+msgstr[3] "%i днів тому"
 
 #: panels/network/connection-editor/ce-page-details.c:281
 #, c-format
@@ -4456,7 +4456,7 @@ msgstr "%s вилучений"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:3
 msgid "Online Accounts"
-msgstr "Облікові записи в інтернеті"
+msgstr "Мережевий обліковий запис"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
@@ -4488,7 +4488,7 @@ msgstr "З'єднати ваші дані з хмарою"
 #: panels/online-accounts/online-accounts.ui:111
 msgid "No internet connection — connect to set up new online accounts"
 msgstr ""
-"Немає інтернету — з'єднайтеся з мережею, щоб створювати облікові записи"
+"Немає інтернету — під'єднайтесь до мережі, щоб створювати облікові записи"
 
 #: panels/online-accounts/online-accounts.ui:136
 msgid "Add an account"
@@ -4509,6 +4509,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i хвилина"
 msgstr[1] "%i хвилини"
 msgstr[2] "%i хвилин"
+msgstr[3] "%i хвилин"
 
 #: panels/power/cc-power-panel.c:340
 #, c-format
@@ -4517,6 +4518,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i година"
 msgstr[1] "%i години"
 msgstr[2] "%i годин"
+msgstr[3] "%i годин"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4531,6 +4533,7 @@ msgid_plural "hours"
 msgstr[0] "година"
 msgstr[1] "години"
 msgstr[2] "годин"
+msgstr[3] "годин"
 
 #: panels/power/cc-power-panel.c:350
 msgid "minute"
@@ -4538,6 +4541,7 @@ msgid_plural "minutes"
 msgstr[0] "хвилина"
 msgstr[1] "хвилини"
 msgstr[2] "хвилин"
+msgstr[3] "хвилин"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:368
@@ -5076,7 +5080,7 @@ msgstr "Призупинено"
 #: panels/printers/pp-jobs-dialog.c:233
 msgctxt "print job"
 msgid "Authentication required"
-msgstr "Слід пройти розпізнавання"
+msgstr "Потрібна автентифікація"
 
 #. Translators: Job's state (job is currently printing)
 #: panels/printers/pp-jobs-dialog.c:238
@@ -5362,6 +5366,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u завдання"
 msgstr[1] "%u завдання"
 msgstr[2] "%u завдань"
+msgstr[3] "%u завдань"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:745
@@ -5612,7 +5617,6 @@ msgid "No input sources found"
 msgstr "Не знайдено жодного джерела введення"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Інше"
@@ -5627,9 +5631,8 @@ msgid "Input methods can’t be used on the login screen"
 msgstr "Способи введення неможливо використовувати у вікні входу"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Обліковий запис %s"
+msgstr "Мій обліковий запис"
 
 #: panels/region/cc-region-panel.ui:55
 #, fuzzy
@@ -6132,11 +6135,11 @@ msgstr "Сонар"
 
 #: panels/sound/cc-fade-slider.ui:13
 msgid "Rear"
-msgstr "Задній"
+msgstr "Тиловий"
 
 #: panels/sound/cc-fade-slider.ui:15
 msgid "Front"
-msgstr "Передній"
+msgstr "Фронтальний"
 
 #: panels/sound/cc-output-test-dialog.c:134
 #, c-format
@@ -6264,7 +6267,7 @@ msgstr "З'єднано та авторизовано"
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
-msgstr "Невідомо"
+msgstr "Невідома"
 
 #. Translators: The time point the device was authorized.
 #: panels/thunderbolt/cc-bolt-device-dialog.c:177
@@ -6407,7 +6410,7 @@ msgstr "Типовий"
 #: panels/universal-access/cc-ua-panel.c:503
 msgctxt "cursor size"
 msgid "Medium"
-msgstr "Середній"
+msgstr "Середня"
 
 #: panels/universal-access/cc-ua-panel.c:506
 msgctxt "cursor size"
@@ -7042,19 +7045,19 @@ msgstr "1 день"
 #: panels/usage/cc-usage-panel.ui:288
 msgctxt "purge_files"
 msgid "2 days"
-msgstr "2 дні"
+msgstr "2 днів"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:292
 msgctxt "purge_files"
 msgid "3 days"
-msgstr "3 дні"
+msgstr "3 днів"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:296
 msgctxt "purge_files"
 msgid "4 days"
-msgstr "4 дні"
+msgstr "4 днів"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:300
@@ -8352,6 +8355,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u вивід"
 msgstr[1] "%u виводи"
 msgstr[2] "%u виводів"
+msgstr[3] "%u виводів"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8362,27 +8366,24 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u вхід"
 msgstr[1] "%u входи"
 msgstr[2] "%u входів"
+msgstr[3] "%u входів"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
 msgstr "Системі звуки"
 
-#~| msgid "_Software"
 #~ msgid "Open in Software"
 #~ msgstr "Відкрити у «Програмах»"
 
 #~ msgid "Learn more about color management"
 #~ msgstr "Дізнатись більше про керування кольорами"
 
-#~| msgid "%d-bit (Build ID: %s)"
 #~ msgid "%s; Build ID: %s"
 #~ msgstr "%s; ідентифікатор збірки: %s"
 
-#~| msgid "Name"
 #~ msgid "OS Name"
 #~ msgstr "Назва ОС"
 
-#~| msgid "Version 0"
 #~ msgid "GNOME Version"
 #~ msgstr "Версія GNOME"
 

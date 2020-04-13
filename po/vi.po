@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2018-02-26 14:16+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
@@ -70,9 +70,8 @@ msgstr "Thư mục chứa ảnh"
 
 #: panels/applications/cc-applications-panel.c:764
 #: panels/applications/cc-applications-panel.c:769
-#, fuzzy
 msgid "Read-only"
-msgstr "Sẵn sàng"
+msgstr "Chỉ-đọc"
 
 #: panels/applications/cc-applications-panel.c:767
 #: panels/applications/cc-applications-panel.c:769
@@ -225,7 +224,7 @@ msgstr "Tắt"
 #: panels/applications/cc-applications-panel.ui:144
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:3
 msgid "Microphone"
-msgstr ""
+msgstr "Micrô"
 
 #: panels/applications/cc-applications-panel.ui:150
 #: panels/applications/cc-applications-panel.ui:156
@@ -332,7 +331,6 @@ msgid ""
 msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:563
-#, fuzzy
 msgid "Application"
 msgstr "Ứng dụng"
 
@@ -1423,9 +1421,8 @@ msgid "No languages found"
 msgstr "Không tìm thấy ngôn ngữ"
 
 #: panels/common/cc-language-chooser.ui:5
-#, fuzzy
 msgid "Select Language"
-msgstr "Ngôn ngữ"
+msgstr "Chọn ngôn ngữ"
 
 #: panels/common/cc-language-chooser.ui:12
 msgid "_Select"
@@ -1485,23 +1482,22 @@ msgstr[0] "30 giây"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:175
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr "%i %s %i %s"
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:180
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr "%i %s %i %s"
+msgstr "%s %s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:190
-#, fuzzy
 msgid "0 seconds"
-msgstr "30 giây"
+msgstr "0 giây"
 
 #. translators: This is the default hotspot name, need to be less than 32-bytes
 #: panels/common/hostname-helper.c:177
@@ -1880,13 +1876,11 @@ msgid "%.2lf Hz"
 msgstr "%.2lf Hz"
 
 #: panels/display/cc-display-settings.ui:15
-#, fuzzy
 msgctxt "display setting"
 msgid "Orientation"
 msgstr "Hướng"
 
 #: panels/display/cc-display-settings.ui:24
-#, fuzzy
 msgctxt "display setting"
 msgid "Resolution"
 msgstr "Độ phân giải"
@@ -1900,7 +1894,6 @@ msgid "Adjust for TV"
 msgstr "Chỉnh cho TV"
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgctxt "display setting"
 msgid "Scale"
 msgstr "Co giãn"
@@ -2057,9 +2050,8 @@ msgstr "Đang tính toán…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Phiên bản 0"
+msgstr "Phiên bản"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 #, fuzzy
@@ -2609,126 +2601,108 @@ msgstr "Hiện _thông báo"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:149
-#, fuzzy
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Màn hình tắt"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:153
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 giây"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:157
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 phút"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:161
-#, fuzzy
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 phút"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:165
-#, fuzzy
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 phút"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:169
-#, fuzzy
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 phút"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:173
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 phút"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:177
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 hour"
 msgstr "1 giờ"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:192 panels/power/cc-power-panel.ui:63
-#, fuzzy
 msgctxt "blank_screen"
 msgid "1 minute"
 msgstr "1 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:196 panels/power/cc-power-panel.ui:67
-#, fuzzy
 msgctxt "blank_screen"
 msgid "2 minutes"
 msgstr "2 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:200 panels/power/cc-power-panel.ui:71
-#, fuzzy
 msgctxt "blank_screen"
 msgid "3 minutes"
 msgstr "3 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:204 panels/power/cc-power-panel.ui:75
-#, fuzzy
 msgctxt "blank_screen"
 msgid "4 minutes"
 msgstr "4 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:208 panels/power/cc-power-panel.ui:79
-#, fuzzy
 msgctxt "blank_screen"
 msgid "5 minutes"
 msgstr "5 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:212 panels/power/cc-power-panel.ui:83
-#, fuzzy
 msgctxt "blank_screen"
 msgid "8 minutes"
 msgstr "8 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:216 panels/power/cc-power-panel.ui:87
-#, fuzzy
 msgctxt "blank_screen"
 msgid "10 minutes"
 msgstr "10 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:220 panels/power/cc-power-panel.ui:91
-#, fuzzy
 msgctxt "blank_screen"
 msgid "12 minutes"
 msgstr "12 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:224 panels/power/cc-power-panel.ui:95
-#, fuzzy
 msgctxt "blank_screen"
 msgid "15 minutes"
 msgstr "15 phút"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:228 panels/power/cc-power-panel.ui:99
-#, fuzzy
 msgctxt "blank_screen"
 msgid "Never"
 msgstr "Không bao giờ"
@@ -3043,9 +3017,8 @@ msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgstr "Hãy chắc chắn là bạn có thiết bị Wi-Fi và nó được bật"
 
 #: panels/network/cc-wifi-panel.ui:188
-#, fuzzy
 msgid "Airplane Mode On"
-msgstr "Chế độ máy bay"
+msgstr "Chế độ máy bay đang được bật"
 
 #: panels/network/cc-wifi-panel.ui:200
 #, fuzzy
@@ -4865,70 +4838,60 @@ msgstr "Nút thấp"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "15 minutes"
 msgstr "15 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:17
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "20 minutes"
 msgstr "20 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:21
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "25 minutes"
 msgstr "25 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:25
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "30 minutes"
 msgstr "30 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:29
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "45 minutes"
 msgstr "45 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:33
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "1 hour"
 msgstr "1 giờ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:37
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "80 minutes"
 msgstr "80 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:41
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "90 minutes"
 msgstr "90 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:45
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "100 minutes"
 msgstr "100 phút"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:49
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "2 hours"
 msgstr "2 giờ"
@@ -5318,7 +5281,6 @@ msgid "Output Tray"
 msgstr "Khay ra"
 
 #: panels/printers/pp-options-dialog.c:95
-#, fuzzy
 msgctxt "printing option"
 msgid "Resolution"
 msgstr "Độ phân giải"
@@ -5707,29 +5669,25 @@ msgid "No input sources found"
 msgstr "Không tìm thấy nguồn nhập liệu"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "Khác"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Phím tắt bàn phím"
+msgstr "Thêm một Bố cục Bàn phím"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Các phương thức nhập liệu không thể dùng tại màn hình đăng nhập"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Tài khoản %s"
+msgstr "Tài khoản của mình"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "_Màn hình đăng nhập"
+msgstr "Màn hình đăng nhập"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:368
@@ -5750,9 +5708,8 @@ msgid "_Formats"
 msgstr "Địn_h dạng"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Phím tắt bàn phím"
+msgstr "Bố cục Bàn phím"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5768,9 +5725,8 @@ msgstr ""
 "Cài đặt đăng nhập được dùng bởi mọi người dùng khi đăng nhập vào hệ thống"
 
 #: panels/region/cc-region-panel.ui:381
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Phím tắt bàn phím"
+msgstr "Tùy chọn Bố cục Bàn phím"
 
 #: panels/region/cc-region-panel.ui:396
 msgid "Use the _same source for all windows"
@@ -6237,12 +6193,10 @@ msgid "Sonar"
 msgstr "Tiếng vọng tàu ngầm"
 
 #: panels/sound/cc-fade-slider.ui:13
-#, fuzzy
 msgid "Rear"
 msgstr "Đằng sau"
 
 #: panels/sound/cc-fade-slider.ui:15
-#, fuzzy
 msgid "Front"
 msgstr "Đằng trước"
 
@@ -6308,9 +6262,8 @@ msgid "Input Device"
 msgstr "Mức đầu vào:"
 
 #: panels/sound/cc-sound-panel.ui:358
-#, fuzzy
 msgid "Volume"
-msgstr "Vặn to"
+msgstr "Khối tin"
 
 #: panels/sound/cc-sound-panel.ui:380
 #, fuzzy
@@ -6348,7 +6301,6 @@ msgstr "Đang ngắt kết nối"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:97
 #: panels/thunderbolt/cc-bolt-device-entry.c:128
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connecting"
 msgstr "Đang kết nối"
@@ -6356,7 +6308,6 @@ msgstr "Đang kết nối"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:100
 #: panels/thunderbolt/cc-bolt-device-entry.c:132
 #: panels/thunderbolt/cc-bolt-device-entry.c:144
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connected"
 msgstr "Đã kết nối"
@@ -6386,7 +6337,6 @@ msgstr "Thiết bị đã kết nối"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:121
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
 msgstr "Chưa biết"
@@ -6449,10 +6399,9 @@ msgid "Forget Device"
 msgstr "Gỡ bỏ thiết bị"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:135
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Error"
-msgstr "Giống nhau"
+msgstr "Lỗi"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:146
 #, fuzzy
@@ -6514,7 +6463,7 @@ msgstr ""
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:3
 msgid "Thunderbolt"
-msgstr ""
+msgstr "Thunderbolt"
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:4
 msgid "Manage Thunderbolt devices"
@@ -7160,98 +7109,84 @@ msgstr "_Dọn sạch các tập tin tạm…"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:280
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 giờ"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:284
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:288
-#, fuzzy
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:292
-#, fuzzy
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:296
-#, fuzzy
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:300
-#, fuzzy
 msgctxt "purge_files"
 msgid "5 days"
-msgstr "5 ngày"
+msgstr "5 ngày."
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:304
-#, fuzzy
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:308
-#, fuzzy
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:312
-#, fuzzy
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 ngày"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:316
-#, fuzzy
 msgctxt "purge_files"
 msgid "30 days"
 msgstr "30 ngày"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:331
-#, fuzzy
 msgctxt "retain_history"
 msgid "1 day"
 msgstr "1 ngày"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:335
-#, fuzzy
 msgctxt "retain_history"
 msgid "7 days"
 msgstr "7 ngày"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:339
-#, fuzzy
 msgctxt "retain_history"
 msgid "30 days"
 msgstr "30 ngày"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:343
-#, fuzzy
 msgctxt "retain_history"
 msgid "Forever"
 msgstr "Mãi mãi"
@@ -7265,50 +7200,46 @@ msgid "Don't leave traces"
 msgstr ""
 
 #: panels/updates/cc-updates-panel.c:521
-#, fuzzy
 msgid "Limited data plan connection"
-msgstr "Thêm kết nối mới"
+msgstr "Kết nối gói dữ liệu giới hạn"
 
 #: panels/updates/cc-updates-panel.c:523
-#, fuzzy
 msgid "Unlimited data plan connection"
-msgstr "Không thể mở cửa sổ điều chỉnh kết nối"
+msgstr "Kết nối gói dữ liệu không giới hạn"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Thêm kết nối mới"
+msgstr "Không có kết nối hoạt động"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "Thay đổi Cài đặt Mạng..."
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Định tuyến tự động"
+msgstr "Các cập nhật tự động"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Cho phép cập nhật chạy nền tự động trên kết nối này. Đây thường là các ứng "
+"dụng được nâng cấp, nội dung mới hoặc bản cập nhật cho HĐH Endless."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Lịch biểu"
+msgstr "Cập nhật theo Lịch"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Tạo một khoảng thời gian hàng ngày để cập nhật tự động."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Định tuyến tự động"
+msgstr "Lên lịch tự động cập nhật"
 
 #. Translators: those are keywords for the automatic updates control-center panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
@@ -7395,7 +7326,7 @@ msgstr "Cho phép người dùng đặt mật khẩu khi họ đăng nhậ_p l�
 #: panels/user-accounts/cc-add-user-dialog.ui:284
 #: panels/user-accounts/cc-password-dialog.ui:266
 msgid "Do not re_quire a password when logging in"
-msgstr ""
+msgstr "Không yêu cầu mật khẩu khi đăng nhập"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:301
 #: panels/user-accounts/cc-password-dialog.ui:282
@@ -7408,9 +7339,8 @@ msgstr "Xá_c nhận"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:490
 #: panels/user-accounts/cc-password-dialog.ui:308
-#, fuzzy
 msgid "Password _Reminder"
-msgstr "Mật khẩu"
+msgstr "Lời nhắc _Mật khẩu"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:530
 #: panels/user-accounts/cc-add-user-dialog.ui:737
@@ -8638,7 +8568,7 @@ msgstr "Âm thanh hệ thống"
 #~ msgstr "Hạn chế tiêu dùng dữ liệu ảnh nền"
 
 #~ msgid "Appropriate for connections that have data charges or limits."
-#~ msgstr "Dành riêng cho các kết nối mà có dữ liệu thay đổi hay giới hạn."
+#~ msgstr "Phù hợp cho các kết nối có tính phí dữ liệu hoặc giới hạn dữ liệu."
 
 #~ msgid "Twisted Pair (TP)"
 #~ msgstr "Dây xoắn đôi (TP)"

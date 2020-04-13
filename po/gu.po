@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center.master.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2014-09-22 11:54+0530\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -14,7 +14,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 "\n"
@@ -51,6 +50,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: panels/applications/cc-applications-panel.c:747
 #, fuzzy
@@ -100,9 +100,8 @@ msgstr "ઘર"
 
 #: panels/applications/cc-applications-panel.c:764
 #: panels/applications/cc-applications-panel.c:769
-#, fuzzy
 msgid "Read-only"
-msgstr "તૈયાર"
+msgstr "માત્ર-વાંચી શકાય તેવું"
 
 #: panels/applications/cc-applications-panel.c:767
 #: panels/applications/cc-applications-panel.c:769
@@ -257,9 +256,8 @@ msgstr "નિષ્ક્રિય"
 #: panels/applications/cc-applications-panel.ui:138
 #: panels/applications/cc-applications-panel.ui:144
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:3
-#, fuzzy
 msgid "Microphone"
-msgstr "માઇક્રોફોન વોલ્યુમ"
+msgstr "માઇક્રોફોન"
 
 #: panels/applications/cc-applications-panel.ui:150
 #: panels/applications/cc-applications-panel.ui:156
@@ -317,7 +315,8 @@ msgstr "હાલનાં પાશ્ર્વભાગો"
 msgid "Set Desktop Background"
 msgstr "ડેસ્કટોપ પાશ્વ ભાગ નથી"
 
-# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)  #-#-#-#-#
+# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)
+# #-#-#-#-#
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 #: panels/applications/cc-applications-panel.ui:260
@@ -372,9 +371,8 @@ msgid ""
 msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:563
-#, fuzzy
 msgid "Application"
-msgstr "કાર્યક્રમો"
+msgstr "કાર્યક્રમ"
 
 #: panels/applications/cc-applications-panel.ui:569
 msgid "Data"
@@ -753,9 +751,8 @@ msgid "Bluetooth is disabled when airplane mode is on."
 msgstr "હાર્ડવેર સ્વીચ દ્દારા બ્લુટુથ નિષ્ક્રિય થયેલ છે"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:124
-#, fuzzy
 msgid "Turn Off Airplane Mode"
-msgstr "ઍરપ્લેન સ્થિતિ (_p)"
+msgstr "ઍરપ્લેન સ્થિતિને બંધ કરો"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:154
 #, fuzzy
@@ -906,9 +903,8 @@ msgstr "કેલિબ્રેશન દર્શાવો"
 
 #. This starts the calibration process
 #: panels/color/cc-color-calibrate.ui:40
-#, fuzzy
 msgid "_Start"
-msgstr "શરૂ કરો"
+msgstr "શરૂ કરો (_S)"
 
 #. This resumes the calibration process
 #: panels/color/cc-color-calibrate.ui:54
@@ -1247,7 +1243,8 @@ msgstr ""
 msgid "Each device needs an up to date color profile to be color managed."
 msgstr "દરેક ઉપકરણને સંચાલિત રંગની રંગ રૂપરેખાને અદ્યતન રાખવાની જરૂર છે."
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #: panels/color/cc-color-panel.ui:844
 #, fuzzy
 msgid "_Set for all users"
@@ -1258,7 +1255,8 @@ msgstr "બધા વપરાશકર્તાઓ માટે સુયોજ
 msgid "Set this profile for all users on this computer"
 msgstr "આ કમ્પ્યૂટર પર બધા વપરાશકર્તાઓ માટે આ રૂપરેખાને સુયોજિત કરો"
 
-# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-# gtk/gtkinputdialog.c:238
+# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-#
+# gtk/gtkinputdialog.c:238
 #: panels/color/cc-color-panel.ui:859
 #, fuzzy
 msgid "_Enable"
@@ -1549,23 +1547,22 @@ msgstr[1] "30 સેકંડ"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:175
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s %s"
-msgstr "%i %s %i %s"
+msgstr "%s %s %s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:180
-#, fuzzy, c-format
+#, c-format
 msgctxt "time"
 msgid "%s %s"
-msgstr "%i %s %i %s"
+msgstr "%s %s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:190
-#, fuzzy
 msgid "0 seconds"
-msgstr "30 સેકંડ"
+msgstr "૦ સેકન્ડો"
 
 #. translators: This is the default hotspot name, need to be less than 32-bytes
 #: panels/common/hostname-helper.c:177
@@ -1919,7 +1916,6 @@ msgid "Night Light"
 msgstr "જમણી રીંગ"
 
 #: panels/display/cc-display-settings.c:104
-#, fuzzy
 msgctxt "Display rotation"
 msgid "Landscape"
 msgstr "લૅન્ડસ્કેપ"
@@ -1948,16 +1944,14 @@ msgid "%.2lf Hz"
 msgstr ""
 
 #: panels/display/cc-display-settings.ui:15
-#, fuzzy
 msgctxt "display setting"
 msgid "Orientation"
 msgstr "દિશા"
 
 #: panels/display/cc-display-settings.ui:24
-#, fuzzy
 msgctxt "display setting"
 msgid "Resolution"
-msgstr "રીઝોલ્યુશન"
+msgstr "રિઝોલ્યુશન"
 
 #: panels/display/cc-display-settings.ui:33
 msgid "Refresh Rate"
@@ -1968,7 +1962,6 @@ msgid "Adjust for TV"
 msgstr ""
 
 #: panels/display/cc-display-settings.ui:59
-#, fuzzy
 msgctxt "display setting"
 msgid "Scale"
 msgstr "માપ"
@@ -2546,9 +2539,8 @@ msgid "Name"
 msgstr "નામ"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:168
-#, fuzzy
 msgid "Command"
-msgstr "આદેશ (_o):"
+msgstr "આદેશ"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:180
 msgid "Shortcut"
@@ -2569,18 +2561,16 @@ msgid "Enter the new shortcut"
 msgstr "નવા ટુંકાણોનો સંગ્રહ કરવા દરમિયાન ભૂલ"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:357
-#, fuzzy
 msgid "Remove"
-msgstr "દૂર કરો (_R)"
+msgstr "દૂર કરો"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:367
 msgid "Add"
 msgstr "ઉમેરો"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:382
-#, fuzzy
 msgid "Replace"
-msgstr "બદલો (_R)"
+msgstr "બદલો"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:395
 #, fuzzy
@@ -2671,129 +2661,111 @@ msgstr "સ્ક્રીન તાળુમાં વિગતો બતાવ
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:149
-#, fuzzy
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "સ્ક્રીન બંધ થાય છે"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:153
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 સેકંડ"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:157
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 મિનિટ"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:161
-#, fuzzy
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 મિનિટો"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:165
-#, fuzzy
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 મિનિટો"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:169
-#, fuzzy
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 મિનિટો"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:173
-#, fuzzy
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 મિનિટો"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:177
-#, fuzzy
 msgctxt "lock_screen"
 msgid "1 hour"
 msgstr "1 કલાક"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:192 panels/power/cc-power-panel.ui:63
-#, fuzzy
 msgctxt "blank_screen"
 msgid "1 minute"
 msgstr "1 મિનિટ"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:196 panels/power/cc-power-panel.ui:67
-#, fuzzy
 msgctxt "blank_screen"
 msgid "2 minutes"
 msgstr "2 મિનિટો"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:200 panels/power/cc-power-panel.ui:71
-#, fuzzy
 msgctxt "blank_screen"
 msgid "3 minutes"
 msgstr "3 મિનિટો"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:204 panels/power/cc-power-panel.ui:75
-#, fuzzy
 msgctxt "blank_screen"
 msgid "4 minutes"
 msgstr "4 મિનિટ"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:208 panels/power/cc-power-panel.ui:79
-#, fuzzy
 msgctxt "blank_screen"
 msgid "5 minutes"
 msgstr "5 મિનિટો"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:212 panels/power/cc-power-panel.ui:83
-#, fuzzy
 msgctxt "blank_screen"
 msgid "8 minutes"
 msgstr "8 મિનિટ"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:216 panels/power/cc-power-panel.ui:87
-#, fuzzy
 msgctxt "blank_screen"
 msgid "10 minutes"
 msgstr "10 મિનિટો"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:220 panels/power/cc-power-panel.ui:91
-#, fuzzy
 msgctxt "blank_screen"
 msgid "12 minutes"
 msgstr "12 મિનિટ"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:224 panels/power/cc-power-panel.ui:95
-#, fuzzy
 msgctxt "blank_screen"
 msgid "15 minutes"
 msgstr "15 મિનિટ"
 
 #. Translators: Option for "Blank screen" in "Power" panel.
 #: panels/lock/cc-lock-panel.ui:228 panels/power/cc-power-panel.ui:99
-#, fuzzy
 msgctxt "blank_screen"
 msgid "Never"
-msgstr "કદી નહિં"
+msgstr "ક્યારેય નહિં"
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:3
 msgid "Screen Lock"
@@ -2874,12 +2846,10 @@ msgid "Sets the order of physical buttons on mice and touchpads."
 msgstr ""
 
 #: panels/mouse/cc-mouse-panel.ui:123 panels/sound/cc-balance-slider.ui:13
-#, fuzzy
 msgid "Left"
 msgstr "ડાબું"
 
 #: panels/mouse/cc-mouse-panel.ui:133 panels/sound/cc-balance-slider.ui:15
-#, fuzzy
 msgid "Right"
 msgstr "જમણું"
 
@@ -3157,7 +3127,8 @@ msgstr "જર્મન"
 msgid "Random"
 msgstr ""
 
-# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-# gtk/gtkinputdialog.c:238
+# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-#
+# gtk/gtkinputdialog.c:238
 #: panels/network/connection-editor/ce-page.c:237
 #, fuzzy
 msgid "Stable"
@@ -3477,7 +3448,6 @@ msgstr "પુસ્તિકા"
 # gtk/gtkinputdialog.c:238
 #: panels/network/connection-editor/ip4-page.ui:83
 #: panels/network/connection-editor/ip6-page.ui:97
-#, fuzzy
 msgid "Disable"
 msgstr "નિષ્ક્રિય"
 
@@ -3546,7 +3516,6 @@ msgstr "આપમેળે માર્ગ"
 #. Translators: Please see https://en.wikipedia.org/wiki/Metrics_(networking)
 #: panels/network/connection-editor/ip4-page.ui:368
 #: panels/network/connection-editor/ip6-page.ui:382
-#, fuzzy
 msgid "Metric"
 msgstr "મેટ્રીક"
 
@@ -3867,7 +3836,6 @@ msgid "Security type"
 msgstr "સુરક્ષા પ્રકાર"
 
 #: panels/network/network-wifi.ui:175
-#, fuzzy
 msgctxt "Wi-Fi passkey"
 msgid "Password"
 msgstr "પાસવર્ડ"
@@ -4649,7 +4617,7 @@ msgstr ""
 #. Translators: This is the button which allows undoing the removal of the printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:54
 msgid "Undo"
-msgstr ""
+msgstr "પાછું લાવો"
 
 #: panels/online-accounts/online-accounts.ui:96
 msgid "Connect to your data in the cloud"
@@ -4789,7 +4757,8 @@ msgstr "સેલફોન"
 msgid "Media player"
 msgstr "મીડિયા પ્લેયર"
 
-# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-# gtk/gtkinputdialog.c:238
+# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-#
+# gtk/gtkinputdialog.c:238
 #. TRANSLATORS: secondary battery
 #: panels/power/cc-power-panel.c:639 panels/wacom/cc-wacom-panel.c:802
 msgid "Tablet"
@@ -4918,13 +4887,13 @@ msgstr "જ્યારે બેટરી પાવર પર છે"
 msgid "When plugged in"
 msgstr "જ્યારે પ્લગ થયેલ હોય"
 
-# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)  #-#-#-#-#
+# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)
+# #-#-#-#-#
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 #: panels/power/cc-power-panel.c:2157
-#, fuzzy
 msgid "Suspend"
-msgstr "ધ્વનિ"
+msgstr "અટકાવો"
 
 #: panels/power/cc-power-panel.c:2158
 msgid "Power Off"
@@ -4946,14 +4915,12 @@ msgid "Suspend & Power Button"
 msgstr "સ્થગિત અને પાવર બંધ"
 
 #: panels/power/cc-power-panel.c:2301
-#, fuzzy
 msgid "_Automatic Suspend"
-msgstr "આપમેળે સ્થગિત"
+msgstr "આપમેળે સ્થગિત (_A)"
 
 #: panels/power/cc-power-panel.c:2302
-#, fuzzy
 msgid "Automatic suspend"
-msgstr "આપમેળે સ્થગિત (_A)"
+msgstr "આપમેળે સ્થગિત"
 
 #: panels/power/cc-power-panel.c:2360
 #, fuzzy
@@ -4962,70 +4929,60 @@ msgstr "નીચેનું બટન"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "15 minutes"
 msgstr "15 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:17
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "20 minutes"
-msgstr "2 મિનિટો"
+msgstr "20 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:21
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "25 minutes"
-msgstr "5 મિનિટો"
+msgstr "25 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:25
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "30 minutes"
 msgstr "30 મિનિટો"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:29
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "45 minutes"
 msgstr "45 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:33
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "1 hour"
 msgstr "1 કલાક"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:37
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "80 minutes"
 msgstr "80 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:41
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "90 minutes"
 msgstr "90 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:45
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "100 minutes"
 msgstr "100 મિનિટ"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:49
-#, fuzzy
 msgctxt "automatic_suspend"
 msgid "2 hours"
 msgstr "2 કલાક"
@@ -5270,7 +5227,6 @@ msgstr "અટકેલ"
 
 #. Translators: Job's state (job needs authentication to proceed further)
 #: panels/printers/pp-jobs-dialog.c:233
-#, fuzzy
 msgctxt "print job"
 msgid "Authentication required"
 msgstr "સત્તાધિકરણ જરૂરી"
@@ -5425,10 +5381,9 @@ msgid "Output Tray"
 msgstr "આઉટપુટ ટ્રે"
 
 #: panels/printers/pp-options-dialog.c:95
-#, fuzzy
 msgctxt "printing option"
 msgid "Resolution"
-msgstr "રીઝોલ્યુશન"
+msgstr "રિઝોલ્યુશન"
 
 #: panels/printers/pp-options-dialog.c:96
 msgid "GhostScript pre-filtering"
@@ -5720,9 +5675,8 @@ msgstr ""
 
 #. Translators: This is the button which restarts the printer.
 #: panels/printers/printer-entry.ui:319
-#, fuzzy
 msgid "Restart"
-msgstr "હવે પુન:શરૂ કરો"
+msgstr "પુન:શરૂ કરો"
 
 #. Translators: This button adds new printer.
 #: panels/printers/printers.ui:8
@@ -5827,7 +5781,6 @@ msgid "No input sources found"
 msgstr "ઇનપુટ સ્ત્રોત મળ્યા નથી"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
 msgstr "બીજુ"
@@ -6063,7 +6016,8 @@ msgstr "મીડિયા નિવેશ પર કદી પૂછો નહ�
 msgid "Select how other media should be handled"
 msgstr "પસંદ કરો કેવી રીતે બીજી મીડિયાને સંભાળવુ જોઇએ"
 
-# #-#-#-#-#  gnome-session.gnome-2-2.hi.po (gnome-session VERSION)  #-#-#-#-# gnome-session/logout.c:266
+# #-#-#-#-#  gnome-session.gnome-2-2.hi.po (gnome-session VERSION)  #-#-#-#-#
+# gnome-session/logout.c:266
 #: panels/removable-media/cc-removable-media-panel.ui:389
 msgid "_Action:"
 msgstr "ક્રિયા (_A):"
@@ -6091,7 +6045,8 @@ msgstr ""
 "ઉપકરણ;સિસ્ટમ;જાણકારી;મેમરી;પ્રોસેસર;આવૃત્તિ;મૂળભૂત;કાર્યક્રમ;પસંદ થયેલ;cd;dvd;usb;ઓડિયો;"
 "વિડિયો;ડિસ્ક;નિરાકરણ;મીડિયા;સ્વયં ચલાવો;"
 
-# #-#-#-#-#  gnome-session.gnome-2-2.hi.po (gnome-session VERSION)  #-#-#-#-# gnome-session/logout.c:266
+# #-#-#-#-#  gnome-session.gnome-2-2.hi.po (gnome-session VERSION)  #-#-#-#-#
+# gnome-session/logout.c:266
 #: panels/search/cc-search-locations-dialog.c:635
 msgid "Select Location"
 msgstr "સ્થાન પસંદ કરો"
@@ -6114,17 +6069,14 @@ msgid ""
 msgstr ""
 
 #: panels/search/cc-search-locations-dialog.ui:52
-#, fuzzy
 msgid "Places"
 msgstr "સ્થાનો"
 
 #: panels/search/cc-search-locations-dialog.ui:91
-#, fuzzy
 msgid "Bookmarks"
 msgstr "બુકમાર્કો"
 
 #: panels/search/cc-search-locations-dialog.ui:156
-#, fuzzy
 msgid "Other"
 msgstr "બીજુ"
 
@@ -6175,7 +6127,8 @@ msgctxt "service is disabled"
 msgid "Off"
 msgstr "બંધ"
 
-# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-# gtk/gtkinputdialog.c:238
+# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-#
+# gtk/gtkinputdialog.c:238
 #: panels/sharing/cc-sharing-panel.c:334
 msgctxt "service is enabled"
 msgid "Enabled"
@@ -6363,21 +6316,22 @@ msgstr "ઝરમર"
 msgid "Glass"
 msgstr "ગ્લાસ"
 
-# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)  #-#-#-#-# 48x48/emblems/emblem-sound.icon.in.h:1
+# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)
+# #-#-#-#-# 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 #: panels/sound/cc-alert-chooser.ui:33 panels/sound/cc-alert-selector.ui:27
 msgid "Sonar"
 msgstr "સોનાર"
 
 #: panels/sound/cc-fade-slider.ui:13
-#, fuzzy
 msgid "Rear"
 msgstr "પાછળનું"
 
-# #-#-#-#-#  libgnomecanvas.gnome-2-2.hi.po (libgnomecanvas)  #-#-#-#-# libgnomecanvas/gnome-canvas-text.c:238
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-font-picker.c:184 libgnomeui/gnome-font-picker.c:979
+# #-#-#-#-#  libgnomecanvas.gnome-2-2.hi.po (libgnomecanvas)  #-#-#-#-#
+# libgnomecanvas/gnome-canvas-text.c:238
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-font-picker.c:184 libgnomeui/gnome-font-picker.c:979
 #: panels/sound/cc-fade-slider.ui:15
-#, fuzzy
 msgid "Front"
 msgstr "આગળનું"
 
@@ -6442,9 +6396,8 @@ msgid "Input Device"
 msgstr "ઈનપુટ સ્તર:"
 
 #: panels/sound/cc-sound-panel.ui:358
-#, fuzzy
 msgid "Volume"
-msgstr "અવાજ વધારો"
+msgstr "અવાજ"
 
 #: panels/sound/cc-sound-panel.ui:380
 #, fuzzy
@@ -6456,7 +6409,8 @@ msgctxt "volume"
 msgid "100%"
 msgstr "100%"
 
-# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)  #-#-#-#-#
+# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)
+# #-#-#-#-#
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 #: panels/sound/gnome-sound-panel.desktop.in.in:3
@@ -6483,7 +6437,6 @@ msgstr "જોડાણ તૂટી ગયું"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:97
 #: panels/thunderbolt/cc-bolt-device-entry.c:128
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connecting"
 msgstr "જોડાઇ રહ્યા છે"
@@ -6491,7 +6444,6 @@ msgstr "જોડાઇ રહ્યા છે"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:100
 #: panels/thunderbolt/cc-bolt-device-entry.c:132
 #: panels/thunderbolt/cc-bolt-device-entry.c:144
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Connected"
 msgstr "જોડાયેલ"
@@ -6521,7 +6473,6 @@ msgstr "જોડાયેલ ઉપકરણો"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:121
 #: panels/thunderbolt/cc-bolt-device-entry.c:152
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
 msgstr "અજ્ઞાત"
@@ -6585,10 +6536,9 @@ msgid "Forget Device"
 msgstr "ઉપકરણ દૂર કરો"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:135
-#, fuzzy
 msgctxt "Thunderbolt Device Status"
 msgid "Error"
-msgstr "મિરર"
+msgstr "ભૂલ"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:146
 #, fuzzy
@@ -6664,19 +6614,16 @@ msgstr ""
 #. translators: the labels will read:
 #. * Cursor Size: Default
 #: panels/universal-access/cc-ua-panel.c:500
-#, fuzzy
 msgctxt "cursor size"
 msgid "Default"
 msgstr "મૂળભૂત"
 
 #: panels/universal-access/cc-ua-panel.c:503
-#, fuzzy
 msgctxt "cursor size"
 msgid "Medium"
 msgstr "મધ્યમ"
 
 #: panels/universal-access/cc-ua-panel.c:506
-#, fuzzy
 msgctxt "cursor size"
 msgid "Large"
 msgstr "વિશાળ"
@@ -7185,9 +7132,8 @@ msgid "_White on black:"
 msgstr "કાળા પર સફેદ:"
 
 #: panels/universal-access/zoom-options.ui:845
-#, fuzzy
 msgid "_Brightness:"
-msgstr "તેજસ્વીતા:"
+msgstr "તેજસ્વિતા (_B):"
 
 #: panels/universal-access/zoom-options.ui:866
 #, fuzzy
@@ -7326,98 +7272,84 @@ msgstr "કામચલાઉ ફાઇલોને સાફ કરો (_P)"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:280
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 કલાક"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:284
-#, fuzzy
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 દિવસ"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:288
-#, fuzzy
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:292
-#, fuzzy
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:296
-#, fuzzy
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:300
-#, fuzzy
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:304
-#, fuzzy
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:308
-#, fuzzy
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:312
-#, fuzzy
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 દિવસો"
 
 #. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
 #: panels/usage/cc-usage-panel.ui:316
-#, fuzzy
 msgctxt "purge_files"
 msgid "30 days"
 msgstr "30 દિવસો"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:331
-#, fuzzy
 msgctxt "retain_history"
 msgid "1 day"
 msgstr "1 દિવસ"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:335
-#, fuzzy
 msgctxt "retain_history"
 msgid "7 days"
 msgstr "7 દિવસો"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:339
-#, fuzzy
 msgctxt "retain_history"
 msgid "30 days"
 msgstr "30 દિવસો"
 
 #. Translators: Option for "Retain History" in "Usage & History" dialog.
 #: panels/usage/cc-usage-panel.ui:343
-#, fuzzy
 msgctxt "retain_history"
 msgid "Forever"
 msgstr "હંમેશા"
@@ -7546,12 +7478,10 @@ msgid "_Full Name"
 msgstr "સંપૂર્ણ નામ (_F)"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:206
-#, fuzzy
 msgid "Standard"
 msgstr "પ્રમાણભૂત"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:216
-#, fuzzy
 msgid "Administrator"
 msgstr "વહીવટકર્તા"
 
@@ -7745,7 +7675,7 @@ msgid "Invalid password, please try again"
 msgstr "અયોગ્ય પાસવર્ડ, મહેરબાની કરીને ફરી પ્રયત્ન કરો"
 
 #: panels/user-accounts/cc-realm-manager.c:751
-#, fuzzy, c-format
+#, c-format
 msgid "Couldn’t connect to the %s domain: %s"
 msgstr "%s ડોમેઇનમાં જોડાઇ શકાયુ નહિં: %s"
 
@@ -7808,9 +7738,8 @@ msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "શું તમે ખરેખર ખાતાને દૂર કરવા માંગો છો?"
 
 #: panels/user-accounts/cc-user-panel.c:668
-#, fuzzy
 msgid "_Delete"
-msgstr "ફાઇલોને કાઢી નાંખો (_D)"
+msgstr "કાઢી નાખો (_D)"
 
 #: panels/user-accounts/cc-user-panel.c:718
 msgctxt "Password mode"
@@ -8442,9 +8371,8 @@ msgid "Tablet Preferences"
 msgstr "ટૅબલેટ પસંદગીઓ"
 
 #: panels/wacom/gnome-wacom-properties.ui:44
-#, fuzzy
 msgid "_Help"
-msgstr "મદદ"
+msgstr "મદદ (_H)"
 
 #: panels/wacom/gnome-wacom-properties.ui:125
 msgid "No tablet detected"
@@ -8630,19 +8558,16 @@ msgid "Preferences;Settings;"
 msgstr "પસંદગીઓ;સુયોજનો;"
 
 #: shell/help-overlay.ui:15
-#, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "સામાન્ય"
 
 #: shell/help-overlay.ui:20
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "બહાર નીકળો"
 
 #: shell/help-overlay.ui:27 shell/help-overlay.ui:48
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "શોધો"
@@ -8708,7 +8633,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Changes throughout the day"
 #~ msgstr "દિવસ દરમ્યામ બદલે છે"
 
-#~| msgid "Lock screen"
 #~ msgid "Lock Screen"
 #~ msgstr "સ્ક્રીનને તાળુ મારો"
 
@@ -8747,7 +8671,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Bluetooth is disabled"
 #~ msgstr "બ્લુટુથ નિષ્ક્રિય થયેલ છે"
 
-#~| msgid "Done!"
 #~ msgid "Done"
 #~ msgstr "પૂર્ણ"
 
@@ -8775,19 +8698,15 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Time _Zone"
 #~ msgstr "ટાઈમ ઝોન (_Z)"
 
-#~| msgid "Close"
 #~ msgid "Lid Closed"
 #~ msgstr "ઢાંકણ બંધ થયેલ છે"
 
-#~| msgid "Mirrored Displays"
 #~ msgid "Mirrored"
 #~ msgstr "પ્રતિબિંબિત"
 
-#~| msgid "Secondary color"
 #~ msgid "Secondary"
 #~ msgstr "ગૌણ"
 
-#~| msgid "Mirrored Displays"
 #~ msgid "Arrange Combined Displays"
 #~ msgstr "સંયુક્ત દર્શાવોને ગોઠવો"
 
@@ -8806,7 +8725,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Join this display with another to create an extra workspace"
 #~ msgstr "વધારાની કાર્ય કરવાની જગ્યાને બનાવવા બીજા સાથે આ દર્શાવને જોડો"
 
-#~| msgid "Orientation"
 #~ msgid "Presentation"
 #~ msgstr "રજૂઆત"
 
@@ -8816,22 +8734,18 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Show your existing view on both displays"
 #~ msgstr "બંને દર્શાવ પર તમારું હાલનુ દૃશ્ય બતાવો"
 
-#~| msgid "_Turn On"
 #~ msgid "Turn Off"
 #~ msgstr "બંધ કરો"
 
-#~| msgid "Panel to display"
 #~ msgid "Don't use this display"
 #~ msgstr "આ દર્શાવને વાપરો નહિં"
 
 #~ msgid "Could not get screen information"
 #~ msgstr "સ્ક્રીન જાણકારી ને મેળવી શકાયુ નહિં"
 
-#~| msgid "Mirrored Displays"
 #~ msgid "_Arrange Combined Displays"
 #~ msgstr "સંયુક્ત દર્શાવને ગોઠવો (_A)"
 
-#~| msgid "%d-bit"
 #~ msgid "%s %d-bit"
 #~ msgstr "%s %d-બીટ"
 
@@ -8852,7 +8766,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Disk"
 #~ msgstr "ડિસ્ક"
 
-#~| msgid "Checking for Updates"
 #~ msgid "Check for updates"
 #~ msgstr "સુધારાઓ માટે ચકાસો"
 
@@ -8868,23 +8781,20 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "_Speed:"
 #~ msgstr "ઝડપ (_S):"
 
-#~| msgid "Short"
 #~ msgctxt "keyboard, delay"
 #~ msgid "Short"
 #~ msgstr "ટૂંકુ"
 
-#~| msgid "Slow"
 #~ msgctxt "keyboard, speed"
 #~ msgid "Slow"
 #~ msgstr "ધીમુ"
 
-#~| msgid "Long"
 #~ msgctxt "keyboard, delay"
 #~ msgid "Long"
 #~ msgstr "લાંબુ"
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
-#~| msgid "Fast"
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #~ msgctxt "keyboard, speed"
 #~ msgid "Fast"
 #~ msgstr "ઝડપી"
@@ -8942,40 +8852,32 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ "\"%s\" ટૂંકાણ એ \"%s\" ટૂંકાણ સાથે સંકળાયેલ છે. શું તમે \"%s\" માં તેને આપમેળે સુયોજિત "
 #~ "કરવા માંગો છો?"
 
-#~| msgid ""
-#~| "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~| "disabled."
 #~ msgid ""
 #~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
 #~ "disabled if you move forward."
 #~ msgstr ""
 #~ "\"%s\"  એ હાલમાં \"%s\" સાથે સંકળાયેલ છે, આ ટૂંકાણ એ નિષ્ક્રિય થશે જો તમે આગળ ખસો તો."
 
-#~| msgid "_Reassign"
 #~ msgid "_Assign"
 #~ msgstr "સોંપો (_A)"
 
-#~| msgid "_Test Your Settings"
 #~ msgid "Test Your Settings"
 #~ msgstr "તમારાં સુયોજનો ચકાસો"
 
-#~| msgid "Slow"
 #~ msgctxt "double click, speed"
 #~ msgid "Slow"
 #~ msgstr "ધીમુ"
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
-#~| msgid "Fast"
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #~ msgctxt "double click, speed"
 #~ msgid "Fast"
 #~ msgstr "ઝડપી"
 
-#~| msgid "_Left"
 #~ msgctxt "mouse, left button as primary"
 #~ msgid "_Left"
 #~ msgstr "ડાબું (_L)"
 
-#~| msgid "_Right"
 #~ msgctxt "mouse, right button as primary"
 #~ msgid "_Right"
 #~ msgstr "જમણું (_R)"
@@ -8983,24 +8885,22 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "_Pointer speed"
 #~ msgstr "પોઇન્ટર ઝડપ (_P)"
 
-#~| msgid "Slow"
 #~ msgctxt "mouse pointer, speed"
 #~ msgid "Slow"
 #~ msgstr "ધીમુ"
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
-#~| msgid "Fast"
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #~ msgctxt "mouse pointer, speed"
 #~ msgid "Fast"
 #~ msgstr "ઝડપી"
 
-#~| msgid "Slow"
 #~ msgctxt "touchpad pointer, speed"
 #~ msgid "Slow"
 #~ msgstr "ધીમુ"
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
-#~| msgid "Fast"
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #~ msgctxt "touchpad pointer, speed"
 #~ msgid "Fast"
 #~ msgstr "ઝડપી"
@@ -9014,7 +8914,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "page 1"
 #~ msgstr "પાનું 1"
 
-#~| msgid "Authentication failed"
 #~ msgid "Inner _authentication"
 #~ msgstr "આંતરિક સત્તાધિકરણ (_a)"
 
@@ -9024,7 +8923,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Server"
 #~ msgstr "સર્વર"
 
-#~| msgid "Delete device"
 #~ msgid "Delete DNS Server"
 #~ msgstr "DNS સર્વર કાઢી નાંખો"
 
@@ -9040,11 +8938,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Media Independent Interface (MII)"
 #~ msgstr "Media Independent Interface (MII)"
 
-#~| msgid "%d Mb/s"
 #~ msgid "10 Mb/s"
 #~ msgstr "10 Mb/s"
 
-#~| msgid "%d Mb/s"
 #~ msgid "100 Mb/s"
 #~ msgstr "100 Mb/s"
 
@@ -9060,7 +8956,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Firewall _Zone"
 #~ msgstr "ફાયરવોલ ઝોન (_Z)"
 
-#~| msgid "Default"
 #~ msgctxt "Firewall zone"
 #~ msgid "Default"
 #~ msgstr "મૂળભૂત"
@@ -9086,11 +8981,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "VLAN"
 #~ msgstr "VLAN"
 
-#~| msgid "Could not load ui: %s"
 #~ msgid "Could not load VPN plugins"
 #~ msgstr "VPN પ્લગઇનને લાવી શક્યા નહિં"
 
-#~| msgid "Add new connection"
 #~ msgid "Add Network Connection"
 #~ msgstr "નેટવર્ક જોડાણને ઉમેરો"
 
@@ -9109,7 +9002,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ "automatically connect"
 #~ msgstr "આ નેટવર્કને લગતી બધી વિગતોને દૂર કરો અને આપમેળે જોડાવા માટે પ્રયત્ન કરો નહિં"
 
-#~| msgid "_Forget Network"
 #~ msgid "My Home Network"
 #~ msgstr "મારું ઘર નેટવર્ક"
 
@@ -9125,9 +9017,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Team slaves"
 #~ msgstr "જૂથ સ્લેવ"
 
-#~| msgid ""
-#~| "If you have a connection to the Internet other than wireless, you can "
-#~| "use it to share your internet connection with others."
 #~ msgid ""
 #~ "If you have a connection to the Internet other than wireless, you can set "
 #~ "up a wireless hotspot to share the connection with others."
@@ -9139,9 +9028,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
 #~ msgstr "વાયરલેસ હૉટસ્પોટ પર અદલાબદલી કરવાથી <b>%s</b> માંથી તમારુ જોડાણ તૂટી જશે."
 
-#~| msgid ""
-#~| "It is not possible to access the internet through your wireless while "
-#~| "the hotspot is active."
 #~ msgid ""
 #~ "It is not possible to access the Internet through your wireless while the "
 #~ "hotspot is active."
@@ -9169,15 +9055,12 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Group Name"
 #~ msgstr "જૂથ નામ"
 
-#~| msgid "Details"
 #~ msgid "details"
 #~ msgstr "વિગતો"
 
-#~| msgid "_Show password"
 #~ msgid "Show P_assword"
 #~ msgstr "પાસવર્ડ બતાવો (_a)"
 
-#~| msgid "Failed to delete user"
 #~ msgid "Make available to other users"
 #~ msgstr "બીજા વપરાશકર્તાઓ માટે ઉપલબ્ધ બનાવો"
 
@@ -9190,7 +9073,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Link-local only"
 #~ msgstr "ફક્ત સ્થાનિક કડી"
 
-#~| msgid "Cannot remove automatically added profile"
 #~ msgid "_Ignore automatically obtained routes"
 #~ msgstr "પ્રાપ્ત થયેલ માર્ગને આપમેળે અવગણો (_I)"
 
@@ -9203,7 +9085,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "_Cloned MAC Address"
 #~ msgstr "ક્લોન થયેલ MAC સરનામું (_C)"
 
-#~| msgid "Hardware"
 #~ msgid "hardware"
 #~ msgstr "હાર્ડવેર"
 
@@ -9222,7 +9103,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Hardware"
 #~ msgstr "હાર્ડવેર"
 
-#~| msgid "_Use as Hotspot..."
 #~ msgid "_Use as Hotspot…"
 #~ msgstr "હૉટસ્પોટ તરીકે વાપરો (_U)..."
 
@@ -9288,7 +9168,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Show Details in Banners"
 #~ msgstr "બેનરમાં વિગતો બતાવો"
 
-#~| msgid "Lock screen"
 #~ msgctxt "notifications"
 #~ msgid "View in Lock Screen"
 #~ msgstr "સ્ક્રીન તાળુમાં જુઓ"
@@ -9296,18 +9175,15 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Show Pop Up Banners"
 #~ msgstr "પોપ અપ બેનરને બતાવો"
 
-#~| msgid "Lock screen"
 #~ msgid "Show in Lock Screen"
 #~ msgstr "સ્ક્રીન તાળુમાં બતાવો"
 
 #~ msgid "Add Account"
 #~ msgstr "ખાતુ ઉમેરો"
 
-#~| msgid "_Mail"
 #~ msgid "Mail"
 #~ msgstr "મેઈલ"
 
-#~| msgid "Contrast:"
 #~ msgid "Contacts"
 #~ msgstr "સંપર્કો"
 
@@ -9320,7 +9196,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Credentials have expired."
 #~ msgstr "શ્રેયની મર્યાદા પૂરી થઇ ગઇ."
 
-#~| msgid "Enable this account"
 #~ msgid "Sign in to enable this account."
 #~ msgstr "આ ખાતાને સક્રિય કરવા માટે પ્રવેશો."
 
@@ -9349,7 +9224,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 #~ msgstr "મોબાઇલ બ્રોડબેન્ડ (3G, 4G, WiMax, વગેરે.) ઉપકરણોને બંધ કરે છે"
 
-#~| msgid "When power is _critically low"
 #~ msgid "When battery power is _critical"
 #~ msgstr "જ્યારે બેટરી પાવર જટીલ હોય (_C)"
 
@@ -9393,11 +9267,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "No printers detected."
 #~ msgstr "પ્રિન્ટર શોધાયેલ નથી."
 
-#~| msgid "Search for network printers or filter result"
 #~ msgid "Enter address of a printer or a text to filter results"
 #~ msgstr "પરિણામોને ફિલ્ટર કરવા માટે પ્રિન્ટર અથવા લખાણનાં સરનામાંને દાખલ કરો"
 
-#~| msgid "Loading options..."
 #~ msgid "Loading options…"
 #~ msgstr "વિકલ્પો લાવી રહ્યા છે…"
 
@@ -9426,7 +9298,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "label"
 #~ msgstr "લેબલ"
 
-#~| msgid "Setting new driver..."
 #~ msgid "Setting new driver…"
 #~ msgstr "નવાં ડ્રાઇવરને સુયોજિત કરી રહ્યા છે…"
 
@@ -9465,11 +9336,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "The Screen Lock protects your privacy when you are away."
 #~ msgstr "તાળુ સ્ક્રીન તમારી ખાનગી જાણકારીને સુરક્ષિત રાખે છે જ્યારે તમે દૂર હોય."
 
-#~| msgid "_Lock screen after:"
 #~ msgid "Lock screen _after blank for"
 #~ msgstr "ખાલી પછી સ્ક્રીનને તાળુ મારો (_a)"
 
-#~| msgid "Show _notifications when locked"
 #~ msgid "Show _Notifications"
 #~ msgstr "સૂચનાઓ બતાવો (_N)"
 
@@ -9507,7 +9376,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Used to determine your geographical location"
 #~ msgstr "તમારાં ભૌગોલિક સ્થાનને નક્કી કરવા વાપરેલ છે"
 
-#~| msgid "Other..."
 #~ msgctxt "Input Source"
 #~ msgid "Other"
 #~ msgstr "બીજુ"
@@ -9515,18 +9383,15 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Sorry"
 #~ msgstr "દિલગીર છુ"
 
-#~| msgid "Add Input Source"
 #~ msgid "Add an Input Source"
 #~ msgstr "ઇનપુટ સ્ત્રોત ઉમેરો "
 
-#~| msgid "Input Source Settings"
 #~ msgid "Input Source Options"
 #~ msgstr "ઇનપુટ સ્ત્રોત વિકલ્પો"
 
 #~ msgid "Switch to next source"
 #~ msgstr "આગળનાં સ્ત્રોત પર જાવ"
 
-#~| msgid "Switch to next source"
 #~ msgid "Alternative switch to next source"
 #~ msgstr "આગળનાં સ્ત્રોત પર જાવ"
 
@@ -9539,12 +9404,10 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Options"
 #~ msgstr "વિકલ્પો"
 
-#~| msgid "Other..."
 #~ msgctxt "Search Location"
 #~ msgid "Other"
 #~ msgstr "બીજુ"
 
-#~| msgid "Mouse Preferences"
 #~ msgid "Preferences"
 #~ msgstr "પસંદગીઓ"
 
@@ -9560,11 +9423,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Save Received Files to Downloads Folder"
 #~ msgstr "ડાઉનલોડ ફોલ્ડરમાં મળેલ ફાઇલોને સંગ્રહો"
 
-#~| msgid "Volume Control"
 #~ msgid "Allow Remote Control"
 #~ msgstr "દૂરસ્થ નિયંત્રણને પરવાનગી આપો"
 
-#~| msgid "_Password"
 #~ msgid "Password:"
 #~ msgstr "પાસવર્ડ:"
 
@@ -9633,14 +9494,12 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Stop"
 #~ msgstr "બંધ કરો"
 
-#~| msgid "Flash the window title"
 #~ msgid "Flash the _window title"
 #~ msgstr "વિન્ડો શીર્ષકપટ્ટી ઝબકાવો (_w)"
 
 #~ msgid "Zoom"
 #~ msgstr "નાનુ મોટુ કરો"
 
-#~| msgid "Color"
 #~ msgctxt "universal access, contrast"
 #~ msgid "Color"
 #~ msgstr "રંગ"
@@ -9648,11 +9507,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "_Verify"
 #~ msgstr "ખાતરી કરો (_V)"
 
-#~| msgid "Login Options"
 #~ msgid "Login History"
 #~ msgstr "પ્રવેશ ઇતિહાસ"
 
-#~| msgid "_New password"
 #~ msgid "_Verify New Password"
 #~ msgstr "નવાં પાસવર્ડની ખાતરી કરો (_V)"
 
@@ -9662,7 +9519,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Remove User Account"
 #~ msgstr "વપરાશકર્તા ખાતુ દૂર કરો"
 
-#~| msgid "A_utomatic Login"
 #~ msgid "Last Login"
 #~ msgstr "છેલ્લો પ્રવેશ"
 
@@ -9670,32 +9526,26 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Try to add more letters, numbers and symbols."
 #~ msgstr "વધારે અક્ષરો, આંકડા અને સંકેતોને ઉમેરવાનો પ્રયત્ન કરો."
 
-#~| msgid "Strength"
 #~ msgctxt "Password strength"
 #~ msgid "Strength: Weak"
 #~ msgstr "મજબૂતાઇ: નબળી"
 
-#~| msgid "Strength"
 #~ msgctxt "Password strength"
 #~ msgid "Strength: Low"
 #~ msgstr "મજબૂતાઇ: ઓછી"
 
-#~| msgid "Strength"
 #~ msgctxt "Password strength"
 #~ msgid "Strength: Medium"
 #~ msgstr "મજબૂતાઇ: મધ્યમ"
 
-#~| msgid "Strength"
 #~ msgctxt "Password strength"
 #~ msgid "Strength: Good"
 #~ msgstr "મજબૂતાઇ: સરસ"
 
-#~| msgid "Strength"
 #~ msgctxt "Password strength"
 #~ msgid "Strength: High"
 #~ msgstr "મજબૂતાઇ: વધારે"
 
-#~| msgid "Passwords do not match"
 #~ msgid "Passwords do not match."
 #~ msgstr "પાસવર્ડ બંધબેસતો નથી."
 
@@ -9708,7 +9558,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Disable image"
 #~ msgstr "ઇમેજને નિષ્ક્રિય કરો"
 
-#~| msgid "Browse for more pictures"
 #~ msgid "Browse for more pictures…"
 #~ msgstr "વધારે ચિત્રો માટે બ્રાઉઝ કરો..."
 
@@ -9718,20 +9567,16 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Other Accounts"
 #~ msgstr "બીજા ખાતાઓ"
 
-#~| msgid "A user with the username '%s' already exists"
 #~ msgid "A user with the username '%s' already exists."
 #~ msgstr "વપરાશકર્તાનામ '%s' સાથે વપરાશકર્તા પહેલેથી જ અસ્તિત્વ ધરાવે છે."
 
-#~| msgid "The username cannot start with a '-'"
 #~ msgid "The username cannot start with a '-'."
 #~ msgstr "વપરાશકર્તાનામ '-' સાથે શરૂ કરી શકાતુ નથી."
 
-#~| msgid "Up"
 #~ msgctxt "Wacom tablet button"
 #~ msgid "Up"
 #~ msgstr "ઉપર"
 
-#~| msgid "Down"
 #~ msgctxt "Wacom tablet button"
 #~ msgid "Down"
 #~ msgstr "નીચે"
@@ -9740,7 +9585,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "None"
 #~ msgstr "કંઈ નહિં"
 
-#~| msgid "Left Ring Mode #%d"
 #~ msgid "Left Ring"
 #~ msgstr "ડાબી રીંગ"
 
@@ -9750,14 +9594,12 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Right Ring Mode #%d"
 #~ msgstr "જમણી રીંગ સ્થિતિ #%d"
 
-#~| msgid "Left Touchstrip Mode #%d"
 #~ msgid "Left Touchstrip"
 #~ msgstr "ડાબુ ટચસ્ટ્રીપ"
 
 #~ msgid "Left Touchstrip Mode #%d"
 #~ msgstr "ડાબી ટચસ્ટ્રીપ સ્થિતિ #%d"
 
-#~| msgid "Right Touchstrip Mode #%d"
 #~ msgid "Right Touchstrip"
 #~ msgstr "જમણી ટચસ્ટ્રીપ"
 
@@ -9791,7 +9633,8 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Bottom Button #%d"
 #~ msgstr "નીચેનું બટન #%d"
 
-# #-#-#-#-#  gnome-session.gnome-2-2.hi.po (gnome-session VERSION)  #-#-#-#-# gnome-session/logout.c:266
+# #-#-#-#-#  gnome-session.gnome-2-2.hi.po (gnome-session VERSION)  #-#-#-#-#
+# gnome-session/logout.c:266
 #~ msgid "No Action"
 #~ msgstr "ક્રિયા નથી"
 
@@ -9823,12 +9666,10 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ "%s\n"
 #~ "ઉપલબ્ધ આદેશ વાક્ય વિકલ્પોની સંપૂર્ણ યાદીને જોવા માટે  '%s --help' ચલાવો.\n"
 
-#~| msgid "Hardware"
 #~ msgctxt "category"
 #~ msgid "Hardware"
 #~ msgstr "હાર્ડવેર"
 
-#~| msgid "System"
 #~ msgctxt "category"
 #~ msgid "System"
 #~ msgstr "સિસ્ટમ"
@@ -10096,7 +9937,8 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Select the interface to use for the new service"
 #~ msgstr "નવી સેવા માટે વાપરવા ઇન્ટરફેસને પસંદ કરો"
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #~ msgid "C_reate..."
 #~ msgstr "બનાવો (_r)..."
 
@@ -10106,17 +9948,14 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Wireless"
 #~ msgstr "વાયરલેસ"
 
-#~| msgid "Disconnected"
 #~ msgid "_Disconnect"
 #~ msgstr "તૂટેલ જોડાણ (_D)"
 
-#~| msgid "Connected"
 #~ msgid "_Connect"
 #~ msgstr "જોડાવો (_C)"
 
 # libgnomeprintui/gpaui/add-printer-dialog.c:83
 # libgnomeprintui/gpaui/config-dialog.c:83
-#~| msgid "Models"
 #~ msgid "Mesh"
 #~ msgstr "મેશ"
 
@@ -10173,9 +10012,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Power management settings"
 #~ msgstr "પાવર સંચાલન સુયોજનો"
 
-# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)  #-#-#-#-# 48x48/emblems/emblem-sound.icon.in.h:1
+# #-#-#-#-#  gnome-icon-theme.gnome-2-2.hi.po (gnome-icon theme 2.2)
+# #-#-#-#-# 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
-#~| msgid "Sound"
 #~ msgid "Don't suspend"
 #~ msgstr "અટકાવો નહિં"
 
@@ -10261,7 +10100,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "System settings"
 #~ msgstr "સિસ્ટમ સુયોજનો"
 
-#~| msgid "Brightness"
 #~ msgid "Brightness & Lock"
 #~ msgstr "પ્રકાશતા અને તાળુ"
 
@@ -10307,7 +10145,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "No shortcut set"
 #~ msgstr "ટૂંકાણો સુયોજિત નથી"
 
-#~| msgid "Appearance Preferences"
 #~ msgid "Universal Access Preferences"
 #~ msgstr "સાર્વત્રિક વપરાશ પસંદગીઓ"
 
@@ -10346,7 +10183,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "150%"
 #~ msgstr "150%"
 
-#~| msgid "Beep when Caps and Num Lock are used"
 #~ msgid "Beep on Caps and Num Lock"
 #~ msgstr "Caps અને Num Lock વાપરેલ હોય ત્યારે બીપ વગાડો"
 
@@ -10387,7 +10223,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Acc_eptance delay:"
 #~ msgstr "સ્વીકૃતિ વિલંબ (_e):"
 
-#~| msgid "_Pointer can be controlled using the keypad"
 #~ msgid "Control the pointer using the keypad"
 #~ msgstr "કીપેડની મદદથી નિર્દેશકને નિયંત્રિત કરો"
 
@@ -10426,11 +10261,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Disable this account"
 #~ msgstr "આ ખાતાને નિષ્ક્રિય કરો"
 
-#~| msgid "C_ity:"
 #~ msgid "_Hint"
 #~ msgstr "ઇશારો (_H)"
 
-#~| msgid "Filter"
 #~ msgid "Fair"
 #~ msgstr "વ્યાજબી"
 
@@ -10469,7 +10302,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Weak"
 #~ msgstr "નબળુ"
 
-#~| msgid "Filter"
 #~ msgctxt "Password strength"
 #~ msgid "Fair"
 #~ msgstr "વ્યાજબી"
@@ -10514,12 +10346,11 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Set your Wacom tablet preferences"
 #~ msgstr "તમારાં Wacom ટૅબલેટ પસંદગીઓને સુયોજિત કરો"
 
-#~| msgid "Options..."
 #~ msgid "Map Buttons..."
 #~ msgstr "માપન બટનો..."
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-# libgnomeui/gnome-app-helper.c:166
-#~| msgid "Create..."
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:166
 #~ msgid "Calibrate..."
 #~ msgstr "માપદંડ કરો..."
 
@@ -10561,7 +10392,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Acti_on:"
 #~ msgstr "ક્રિયા (_o)"
 
-#~| msgid "Take a photo..."
 #~ msgid "Take a screenshot"
 #~ msgstr "સ્ક્રીનશોટ લો"
 
@@ -10574,7 +10404,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Sh_ow position of pointer when the Control key is pressed"
 #~ msgstr "જ્યારે Control કી દબાયેલ હોય ત્યારે પોઇંટરની જગ્યાને બતાવો"
 
-#~| msgid "_Acceleration:"
 #~ msgid "A_cceleration:"
 #~ msgstr "પ્રવેગ (_c):"
 
@@ -10588,7 +10417,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgstr "થ્રેશોલ્ડ (_e):"
 
 #, fuzzy
-#~| msgid "Thr_eshold:"
 #~ msgid "Drag Threshold"
 #~ msgstr "થ્રેશોલ્ડ (_e):"
 
@@ -10596,9 +10424,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgstr "સમય સમાપ્ત (_T):"
 
 #, fuzzy
-#~| msgid ""
-#~| "To test your double-click settings, try to double-click on the light "
-#~| "bulb."
 #~ msgid "To test your settings, try to double-click on the face."
 #~ msgstr "તમારી ડબલ-ક્લિક સુયોજનોને ચકાસો, લાઇટ બલ્બ પર ડબલ-ક્લિક નો પ્રયત્ન કરો."
 
@@ -10620,20 +10445,17 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "_Network Name"
 #~ msgstr "નેટવર્ક નામ (_N)"
 
-# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-# gtk/gtkinputdialog.c:238
-#~| msgid "Disabled"
+# #-#-#-#-#  gnome-applets.gnome-2-2.hi.po (gnome-applets 2.x)  #-#-#-#-#
+# gtk/gtkinputdialog.c:238
 #~ msgid "Disable VPN"
 #~ msgstr "VPN નિષ્ક્રિય કરો"
 
-#~| msgid "_HTTP Proxy"
 #~ msgid "HTTP Port"
 #~ msgstr "HTTP પોર્ટ"
 
-#~| msgid "H_TTPS Proxy"
 #~ msgid "HTTPS Port"
 #~ msgstr "HTTPS પોર્ટ"
 
-#~| msgid "_FTP Proxy"
 #~ msgid "FTP Port"
 #~ msgstr "FTP પોર્ટ"
 
@@ -10643,12 +10465,10 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "_Add..."
 #~ msgstr "ઉમેરો (_A)..."
 
-#~| msgid "_Type:"
 #~ msgid "Tip:"
 #~ msgstr "મદદ:"
 
 #, fuzzy
-#~| msgid "Brightness"
 #~ msgid "Brightness Settings"
 #~ msgstr "પ્રકાશતા"
 
@@ -10684,15 +10504,12 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Allowed users"
 #~ msgstr "પરવાનગી આપેવ વપરાશકર્તાઓ"
 
-#~| msgid "Layout"
 #~ msgid "Add Layout"
 #~ msgstr "લેઆઉટને ઉમેરો"
 
-#~| msgid "Choose a Layout"
 #~ msgid "Remove Layout"
 #~ msgstr "લેઆઉટ દૂર કરો"
 
-#~| msgid "Preview"
 #~ msgid "Preview Layout"
 #~ msgstr "લેઆઉટનું પૂર્વદર્શન"
 
@@ -10700,7 +10517,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgstr "નવી વિન્ડો મૂળભૂત લેઆઉટને વાપરે છે"
 
 #, fuzzy
-#~| msgid "Use previous window's layout in new windows"
 #~ msgid "New windows use the previous window's layout"
 #~ msgstr "નવી વિન્ડોમાં પહેલાંની વિન્ડોનાં લેઆઉટને વાપરો"
 
@@ -10728,12 +10544,10 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgstr "ડેશર"
 
 #, fuzzy
-#~| msgid "None"
 #~ msgid "Nomon"
 #~ msgstr "કંઈ જ નહિં"
 
 #, fuzzy
-#~| msgid "Change set"
 #~ msgid "Change contrast:"
 #~ msgstr "બદલનાર સમૂહ"
 
@@ -10753,11 +10567,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "Type here to test settings"
 #~ msgstr "સુયોજનોની ચકાસણી કરવા માટે અહિંયા ટાઇપ કરો"
 
-#~| msgid "Screen"
 #~ msgid "1/2 Screen"
 #~ msgstr "1/2 સ્ક્રીન"
 
-#~| msgid "Screen"
 #~ msgid "3/4 Screen"
 #~ msgstr "3/4 સ્ક્રીન"
 
@@ -10789,12 +10601,10 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgstr "સિસ્ટમ જાણકારી"
 
 #, fuzzy
-#~| msgid "Change set"
 #~ msgid "Toggle contrast"
 #~ msgstr "બદલનાર સમૂહ"
 
 #, fuzzy
-#~| msgid "Linux Screen Reader"
 #~ msgid "Toggle screen reader"
 #~ msgstr "Linux સ્ક્રીન વાંચક"
 
@@ -10829,7 +10639,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgstr "બંધ કરો"
 
 #, fuzzy
-#~| msgid "Turn off after:"
 #~ msgid "_Turn off after:"
 #~ msgstr "પછી બંધ કરો:"
 
@@ -10969,7 +10778,6 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ "બદલાવો કરવા માટે ક્લિક કરો"
 
 #, fuzzy
-#~| msgid "Please contact your system administrator for help."
 #~ msgid ""
 #~ "System policy prevents changes.\n"
 #~ "Contact your system administrator"
@@ -10996,11 +10804,9 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "%.1f EB"
 #~ msgstr "%.1f EB"
 
-#~| msgid "_Photos:"
 #~ msgid "Photos"
 #~ msgstr "ફોટા"
 
-#~| msgid "Update Available"
 #~ msgid "Updates Available"
 #~ msgstr "સુધારો ઉપલબ્ધ"
 
@@ -11016,26 +10822,21 @@ msgstr "સિસ્ટમ સાઉન્ડ"
 #~ msgid "When the power button is pressed:"
 #~ msgstr "જ્યારે પાવર બટન દબાયેલ હોય:"
 
-#~| msgid "_Keyboard Accessibility"
 #~ msgid "Keyboard;Mouse;a11y;Accessibility;"
 #~ msgstr "કીબોર્ડ;માઉસ;a11y;સુલભતા;"
 
-#~| msgid "<span size=\"x-large\">High</span>"
 #~ msgctxt "universal access, contrast"
 #~ msgid "<span size=\"x-large\">High/Inverse</span>"
 #~ msgstr "<span size=\"x-large\">વધારે/ઊલટું</span>"
 
-#~| msgid "<span size=\"x-large\">High</span>"
 #~ msgctxt "universal access, contrast"
 #~ msgid "<span size=\"x-large\">High</span>"
 #~ msgstr "<span size=\"x-large\">વધારે</span>"
 
-#~| msgid "<span size=\"x-large\">Low</span>"
 #~ msgctxt "universal access, contrast"
 #~ msgid "<span size=\"x-large\">Low</span>"
 #~ msgstr "<span size=\"x-large\">ઓછુ</span>"
 
-#~| msgid "<span size=\"x-large\">Normal</span>"
 #~ msgctxt "universal access, contrast"
 #~ msgid "<span size=\"x-large\">Normal</span>"
 #~ msgstr "<span size=\"x-large\">સામાન્ય</span>"

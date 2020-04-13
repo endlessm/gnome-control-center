@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 21:58+0100\n"
+"POT-Creation-Date: 2020-04-13 22:09+0100\n"
 "PO-Revision-Date: 2020-02-24 08:26+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
@@ -584,7 +584,7 @@ msgstr "aplikace;flatpak;oprávnění;nastavení;"
 #. Nautilus puts wallpapers into this subdirectory:
 #: panels/background/bg-pictures-source.c:845
 msgid "Wallpapers"
-msgstr ""
+msgstr "Tapety"
 
 #: panels/background/cc-background-chooser.c:340
 msgid "Select a picture"
@@ -2024,9 +2024,8 @@ msgstr "Počítá se…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:126
-#, fuzzy
 msgid "Version"
-msgstr "Verze 0"
+msgstr "Verze"
 
 #: panels/info-overview/cc-info-overview-panel.ui:135
 msgid "OS Type"
@@ -3079,6 +3078,7 @@ msgid_plural "%i days ago"
 msgstr[0] "před %i dnem"
 msgstr[1] "před %i dny"
 msgstr[2] "před %i dny"
+msgstr[3] "před %i dny"
 
 #: panels/network/connection-editor/ce-page-details.c:281
 #, c-format
@@ -4522,6 +4522,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minuta"
 msgstr[1] "%i minuty"
 msgstr[2] "%i minut"
+msgstr[3] "%i minut"
 
 #: panels/power/cc-power-panel.c:340
 #, c-format
@@ -4530,6 +4531,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i hodina"
 msgstr[1] "%i hodiny"
 msgstr[2] "%i hodin"
+msgstr[3] "%i hodin"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4544,6 +4546,7 @@ msgid_plural "hours"
 msgstr[0] "hodina"
 msgstr[1] "hodiny"
 msgstr[2] "hodin"
+msgstr[3] "hodin"
 
 #: panels/power/cc-power-panel.c:350
 msgid "minute"
@@ -4551,6 +4554,7 @@ msgid_plural "minutes"
 msgstr[0] "minuta"
 msgstr[1] "minuty"
 msgstr[2] "minut"
+msgstr[3] "minut"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:368
@@ -5378,6 +5382,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u úloha"
 msgstr[1] "%u úlohy"
 msgstr[2] "%u úloh"
+msgstr[3] "%u úloh"
 
 #. Translators: The printer is low on toner
 #: panels/printers/pp-printer-entry.c:745
@@ -5628,29 +5633,25 @@ msgid "No input sources found"
 msgstr "Žádné vstupní zdroje nenalezeny"
 
 #: panels/region/cc-input-chooser.c:948
-#, fuzzy
 msgctxt "Keyboard Layout"
 msgid "Other"
-msgstr "Ostatní"
+msgstr "Další"
 
 #: panels/region/cc-input-chooser.ui:5
-#, fuzzy
 msgid "Add a Keyboard Layout"
-msgstr "Klávesové zkratky"
+msgstr "Přidat nové rozložení klávesnice"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
 msgstr "Vstupní metody nemohou být použity na přihlašovací obrazovce"
 
 #: panels/region/cc-region-panel.ui:44
-#, fuzzy
 msgid "My Account"
-msgstr "Účet %s"
+msgstr "Můj účet"
 
 #: panels/region/cc-region-panel.ui:55
-#, fuzzy
 msgid "Login Screen"
-msgstr "Při_hlašovací obrazovka"
+msgstr "Obrazovka přihlašování"
 
 #: panels/region/cc-region-panel.ui:108
 #: panels/user-accounts/cc-user-panel.ui:368
@@ -5670,9 +5671,8 @@ msgid "_Formats"
 msgstr "_Formáty"
 
 #: panels/region/cc-region-panel.ui:239
-#, fuzzy
 msgid "Keyboard Layouts"
-msgstr "Klávesové zkratky"
+msgstr "Rozložení klávesnice"
 
 #: panels/region/cc-region-panel.ui:253
 msgid "Choose keyboard layouts or input methods."
@@ -5689,9 +5689,8 @@ msgstr ""
 "systému"
 
 #: panels/region/cc-region-panel.ui:381
-#, fuzzy
 msgid "Keyboard Layout Options"
-msgstr "Klávesové zkratky"
+msgstr "Možnosti rozložení klávesnice"
 
 #: panels/region/cc-region-panel.ui:396
 msgid "Use the _same source for all windows"
@@ -6453,6 +6452,7 @@ msgid_plural "%d pixels"
 msgstr[0] "%d pixel"
 msgstr[1] "%d pixely"
 msgstr[2] "%d pixelů"
+msgstr[3] "%d pixelů"
 
 #: panels/universal-access/cc-ua-panel.ui:78
 msgid "_Always Show Universal Access Menu"
@@ -7154,41 +7154,39 @@ msgid "Unlimited data plan connection"
 msgstr "Nelze otevřít editor připojení"
 
 #: panels/updates/cc-updates-panel.c:572
-#, fuzzy
 msgid "No active connection"
-msgstr "Přidat nové připojení"
+msgstr "Žádné aktivní připojení"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:785
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Měnit nastavení sítě"
+msgstr "Změnit nastavení sítě..."
 
 #: panels/updates/cc-updates-panel.ui:149
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Automatické směrování"
+msgstr "Automatické aktualizace"
 
 #: panels/updates/cc-updates-panel.ui:163
 msgid ""
 "Allow background updates to happen automatically on this connection. These "
 "are usually upgraded apps, new content or updates to Endless OS."
 msgstr ""
+"Povolit automatické aktualizace na pozadí na tomto připojení. Obvykle se "
+"jedná o aktualizace aplikací, stahování nového obsahu či aktualizací OS "
+"Endless."
 
 #: panels/updates/cc-updates-panel.ui:217
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Plánování"
+msgstr "Plánované aktualizace"
 
 #: panels/updates/cc-updates-panel.ui:231
 msgid "Create a daily window for updates to happen automatically."
-msgstr ""
+msgstr "Vyberte, kdy během dne mohou automatické aktualizace probíhat."
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Automatické směrování"
+msgstr "Naplánujte automatické aktualizace"
 
 #. Translators: those are keywords for the automatic updates control-center panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
@@ -8380,6 +8378,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u výstup"
 msgstr[1] "%u výstupy"
 msgstr[2] "%u výstupů"
+msgstr[3] "%u výstupů"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8390,6 +8389,7 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u vstup"
 msgstr[1] "%u vstupy"
 msgstr[2] "%u vstupů"
+msgstr[3] "%u vstupů"
 
 #: subprojects/gvc/gvc-mixer-control.c:2750
 msgid "System Sounds"
