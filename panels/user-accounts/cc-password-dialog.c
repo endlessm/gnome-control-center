@@ -227,7 +227,8 @@ ok_button_clicked_cb (CcPasswordDialog *self)
                         /* When setting the user password mode to none, when it
                          * was previously set-at-login, we need to reset the password,
                          * otherwise the mode will be set back to set-at-login */
-                        act_user_set_password (self->user, "", "");
+                        if (act_user_get_password_mode (self->user) == ACT_USER_PASSWORD_MODE_SET_AT_LOGIN)
+                                act_user_set_password (self->user, "", "");
                         act_user_set_password_mode (self->user, self->password_mode);
                         break;
 
