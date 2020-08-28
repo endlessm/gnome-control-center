@@ -22,7 +22,7 @@
 
 #include "cc-display-config-dbus.h"
 
-#define MODE_BASE_FORMAT "ssiiddad"
+#define MODE_BASE_FORMAT "siiddad"
 #define MODE_FORMAT "(" MODE_BASE_FORMAT "a{sv})"
 #define MODES_FORMAT "a" MODE_FORMAT
 #define MONITOR_SPEC_FORMAT "(ssss)"
@@ -197,7 +197,6 @@ cc_display_mode_dbus_new (GVariant *variant)
 
   g_variant_get (variant, "(" MODE_BASE_FORMAT "@a{sv})",
                  &self->id,
-                 &self->name,
                  &self->width,
                  &self->height,
                  &self->refresh_rate,
@@ -214,6 +213,8 @@ cc_display_mode_dbus_new (GVariant *variant)
     is_preferred = FALSE;
   if (!g_variant_lookup (properties_variant, "is-interlaced", "b", &is_interlaced))
     is_interlaced = FALSE;
+
+  g_variant_lookup (properties_variant, "mode-name", "s", &self->name);
 
   if (is_current)
     self->flags |= MODE_CURRENT;

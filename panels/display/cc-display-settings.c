@@ -180,10 +180,20 @@ make_resolution_string (CcDisplayMode *mode)
    */
   name = cc_display_mode_get_name (mode);
 
-  if (aspect != NULL)
-    return g_strdup_printf ("%s%s (%s)", name, interlaced, aspect);
+  if (name != NULL)
+    {
+      if (aspect != NULL)
+        return g_strdup_printf ("%s%s (%s)", name, interlaced, aspect);
+      else
+        return g_strdup_printf ("%s%s", name, interlaced);
+    }
   else
-    return g_strdup_printf ("%s%s", name, interlaced);
+    {
+      if (aspect != NULL)
+        return g_strdup_printf ("%d × %d%s (%s)", width, height, interlaced, aspect);
+      else
+        return g_strdup_printf ("%d × %d%s", width, height, interlaced);
+    }
 }
 
 static gchar *
