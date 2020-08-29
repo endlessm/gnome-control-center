@@ -237,7 +237,7 @@ local_create_user (CcAddUserDialog *self)
 
         manager = act_user_manager_get_default ();
         act_user_manager_create_user_async (manager,
-                                            username,
+                                            g_ascii_strdown (username, -1),
                                             name,
                                             account_type,
                                             self->cancellable,
