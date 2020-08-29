@@ -1,3 +1,16 @@
+gnome-control-center (1:3.37.90-1endless0) master; urgency=medium
+
+  * New upstream release
+  * Change packaging branch to be based on the debian/master git branch in
+    Debian Salsa: https://salsa.debian.org/gnome-team/gnome-control-center
+    rather than importing tarballs
+  * Cherry-pick Endless packaging changes
+  * debian/control.in:
+    - Update malcontent version to 0.7.0
+  * debian/patches: Drop all patches (as we did when using tarballs)
+
+ -- Matthew Leeds <matthew.leeds@endlessm.com>  Fri, 28 Aug 2020 18:00:00 -0700
+
 gnome-control-center (1:3.37.90-1) experimental; urgency=medium
 
   * New upstream release
