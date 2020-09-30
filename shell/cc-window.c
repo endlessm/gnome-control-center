@@ -49,6 +49,19 @@
 
 #define DEFAULT_WINDOW_ICON_NAME "gnome-control-center"
 
+#include <eosmetrics/eosmetrics.h>
+
+#define PANEL_OPENED_EVENT_ID "3c5d59d2-6c3f-474b-95f4-ac6fcc192655"
+
+static void
+send_setting_panel_metric (const gchar *id)
+{
+  EmtrEventRecorder *recorder = emtr_event_recorder_get_default ();
+
+  emtr_event_recorder_record_event (recorder, PANEL_OPENED_EVENT_ID,
+                                    g_variant_new_string (id));
+}
+
 struct _CcWindow
 {
   GtkApplicationWindow parent;
@@ -209,6 +222,8 @@ activate_panel (CcWindow          *self,
   ellapsed_time = g_timer_elapsed (timer, NULL);
 
   g_debug ("Time to open panel '%s': %lfs", name, ellapsed_time);
+
+  send_setting_panel_metric (id);
 
   CC_RETURN (TRUE);
 }

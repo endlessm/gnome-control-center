@@ -108,6 +108,7 @@ libshell_dep = declare_dependency(
 shell_sources = common_sources + files('main.c')
 
 shell_deps = common_deps + [
+  dependency('eosmetrics-0'),
   libdevice_dep,
   liblanguage_dep,
   libwidgets_dep,
