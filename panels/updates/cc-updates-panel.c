@@ -22,9 +22,12 @@
 #include "cc-updates-panel.h"
 #include "cc-updates-resources.h"
 
+#include <eosmetrics/eosmetrics.h>
 #include <glib/gi18n.h>
 #include <libmogwai-tariff/tariff-loader.h>
 #include <NetworkManager.h>
+
+static const gchar *CC_METRIC_AUTOMATIC_UPDATES = "510f9741-823e-41a9-af2d-048895f990c0";
 
 #define NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED "connection.allow-downloads-when-metered"
 #define NM_SETTING_ALLOW_DOWNLOADS              "connection.allow-downloads"
@@ -146,6 +149,23 @@ ensure_setting_user (NMConnection *connection)
 }
 
 static void
+send_automatic_updates_metric (gboolean  allow_downloads_when_metered,
+                               gboolean  automatic_updates_enabled,
+                               gboolean  tariff_enabled,
+                               GVariant *tariff_variant  /* (nullable) */)
+{
+  EmtrEventRecorder *recorder = emtr_event_recorder_get_default ();
+
+  emtr_event_recorder_record_event (recorder,
+                                    CC_METRIC_AUTOMATIC_UPDATES,
+                                    g_variant_new ("(bbbv)",
+                                                   allow_downloads_when_metered,
+                                                   automatic_updates_enabled,
+                                                   tariff_enabled,
+                                                   (tariff_variant != NULL) ? tariff_variant : g_variant_new_tuple (NULL, 0)));
+}
+
+static void
 store_automatic_updates_setting (CcUpdatesPanel *self,
                                  NMConnection   *connection,
                                  gboolean        automatic_updates_enabled,
@@ -237,6 +257,12 @@ store_automatic_updates_setting (CcUpdatesPanel *self,
                                              NULL,
                                              on_network_changes_committed_cb,
                                              NULL);
+
+  /* Send a metric */
+  send_automatic_updates_metric (allow_downloads_when_metered,
+                                 automatic_updates_enabled,
+                                 tariff_enabled,
+                                 tariff_variant);
 }
 
 /* All three out_* arguments are (optional) and (nullable) */
