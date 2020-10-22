@@ -156,6 +156,7 @@ store_automatic_updates_setting (CcUpdatesPanel *self,
   g_autofree gchar *tariff_string = NULL;
   g_autoptr(GError) error = NULL;
   gboolean errored = FALSE;
+  gboolean allow_downloads_when_metered = TRUE;
 
   setting_user = ensure_setting_user (connection);
   g_assert (setting_user != NULL);
@@ -170,7 +171,7 @@ store_automatic_updates_setting (CcUpdatesPanel *self,
 
   nm_setting_user_set_data (setting_user,
                             NM_SETTING_ALLOW_DOWNLOADS_WHEN_METERED,
-                            "1",
+                            allow_downloads_when_metered ? "1" : "0",
                             &error);
 
   if (error)
