@@ -36,6 +36,7 @@ sources = common_sources + files(
 )
 
 deps = common_deps + [
+  dependency('eosmetrics-0'),
   dependency('libnm', version: '>= 1.8.0'),
   dependency('libnma', version: '>= 1.8.0'),
   dependency('mogwai-tariff-0', version: '>=0.1.0'),
