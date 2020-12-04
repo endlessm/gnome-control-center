@@ -50,6 +50,7 @@ struct _CcUpdatesPanel
 
   /* Network Manager */
   NMClient           *nm_client;
+  gulong              nm_client_notify_id;
   NMDevice           *current_device;
   NMConnection       *current_connection;
 
@@ -745,6 +746,12 @@ cc_updates_panel_finalize (GObject *object)
 
   g_cancellable_cancel (self->cancellable);
   g_clear_object (&self->cancellable);
+
+  if (self->nm_client != NULL && self->nm_client_notify_id != 0)
+    {
+      g_signal_handler_disconnect (self->nm_client, self->nm_client_notify_id);
+      self->nm_client_notify_id = 0;
+    }
   g_clear_object (&self->nm_client);
 
   G_OBJECT_CLASS (cc_updates_panel_parent_class)->finalize (object);
@@ -818,5 +825,5 @@ cc_updates_panel_init (CcUpdatesPanel *self)
 
   update_active_network (self);
 
-  g_signal_connect_swapped (self->nm_client, "notify", G_CALLBACK (on_network_changed_cb), self);
+  self->nm_client_notify_id = g_signal_connect_swapped (self->nm_client, "notify", G_CALLBACK (on_network_changed_cb), self);
 }
