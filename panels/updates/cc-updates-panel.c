@@ -170,7 +170,7 @@ store_automatic_updates_setting (CcUpdatesPanel *self,
                                  NMConnection   *connection,
                                  gboolean        automatic_updates_enabled,
                                  gboolean        tariff_enabled,
-                                 GVariant       *tariff_variant)
+                                 GVariant       *tariff_variant  /* (nullable) */)
 {
   NMSettingUser *setting_user;
   g_autofree gchar *tariff_string = NULL;
