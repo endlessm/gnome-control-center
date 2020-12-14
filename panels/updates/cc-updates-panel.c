@@ -152,7 +152,7 @@ static void
 send_automatic_updates_metric (gboolean  allow_downloads_when_metered,
                                gboolean  automatic_updates_enabled,
                                gboolean  tariff_enabled,
-                               GVariant *tariff_variant)
+                               GVariant *tariff_variant  /* (nullable) */)
 {
   EmtrEventRecorder *recorder = emtr_event_recorder_get_default ();
 
@@ -162,7 +162,7 @@ send_automatic_updates_metric (gboolean  allow_downloads_when_metered,
                                                    allow_downloads_when_metered,
                                                    automatic_updates_enabled,
                                                    tariff_enabled,
-                                                   tariff_variant));
+                                                   (tariff_variant != NULL) ? tariff_variant : g_variant_new_tuple (NULL, 0)));
 }
 
 static void
