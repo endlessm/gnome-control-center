@@ -36,7 +36,7 @@ struct _CcTariffEditor
   GtkWidget          *stack_from;
   GtkWidget          *stack_to;
 
-  GVariant           *tariff_as_variant;
+  GVariant           *tariff_as_variant;  /* (nullable) */
 
   /* Clock format */
   GSettings          *settings_clock;
@@ -515,6 +515,15 @@ cc_tariff_editor_init (CcTariffEditor *self)
   update_tariff (self, FALSE);
 }
 
+/**
+ * cc_tariff_editor_get_tariff_as_variant:
+ * @self: a #CcTariffEditor
+ *
+ * Gets the #GVariant form of the tariff currently set in the UI.
+ *
+ * Returns: (transfer none) (nullable): the tariff, or %NULL if no valid tariff
+ *     is set
+ */
 GVariant*
 cc_tariff_editor_get_tariff_as_variant (CcTariffEditor *self)
 {
