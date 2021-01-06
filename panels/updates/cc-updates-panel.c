@@ -265,6 +265,7 @@ store_automatic_updates_setting (CcUpdatesPanel *self,
                                  tariff_variant);
 }
 
+/* All three out_* arguments are (optional) and (nullable) */
 static void
 get_active_connection_and_device (CcUpdatesPanel  *self,
                                   NMDevice       **out_device,
@@ -297,6 +298,8 @@ get_active_connection_and_device (CcUpdatesPanel  *self,
             ap = nm_device_wifi_get_active_access_point (NM_DEVICE_WIFI (active_device));
         }
     }
+
+  g_debug ("%s: got %p, %p, %p", G_STRFUNC, active_device, connection, ap);
 
   if (out_device)
     *out_device = active_device;
@@ -616,6 +619,12 @@ save_connection_settings (CcUpdatesPanel *self)
   g_debug ("Saving connection settings");
 
   get_active_connection_and_device (self, NULL, &connection, NULL);
+
+  if (connection == NULL)
+    {
+      g_debug ("No network connection to save settings to");
+      return;
+    }
 
   automatic_updates_enabled = gtk_switch_get_active (GTK_SWITCH (self->automatic_updates_switch));
   tariff_enabled = gtk_switch_get_active (GTK_SWITCH (self->scheduled_updates_switch));
