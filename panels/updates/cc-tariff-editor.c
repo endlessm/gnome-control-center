@@ -264,6 +264,9 @@ update_tariff (CcTariffEditor *self,
                                      "capacity-limit", 0,
                                      NULL);
 
+  g_assert (forbidden_start != NULL);
+  g_assert (forbidden_end != NULL);
+
   mwt_tariff_builder_add_period (tariff_builder, forbidden_period);
 
   /* 2. Allowed downloads period */
