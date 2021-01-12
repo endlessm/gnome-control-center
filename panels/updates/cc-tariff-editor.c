@@ -107,8 +107,10 @@ update_seconds_from_adjustments (CcTariffEditor *self)
       hour_end = hour_end % 12 + (self->time_period_to == AM ? 0 : 12);
     }
 
-  local_start = g_date_time_new_local (1970, 1, 1, hour_start, minute_start, 0);
-  local_end = g_date_time_new_local (1970, 1, 1, hour_end, minute_end, 0);
+  /* Use 2nd January 1970 so that there’s no chance of doing before UNIX
+   * timestamp 0 if the local timezone has a large negative offset. */
+  local_start = g_date_time_new_local (1970, 1, 2, hour_start, minute_start, 0);
+  local_end = g_date_time_new_local (1970, 1, 2, hour_end, minute_end, 0);
 
   /*
    * If 'from' > 'to', e.g. [22:15, 05:45), this period is crossing days and we
@@ -495,11 +497,15 @@ cc_tariff_editor_class_init (CcTariffEditorClass *klass)
 static void
 cc_tariff_editor_init (CcTariffEditor *self)
 {
+  const guint64 one_day_in_seconds = 24 * 60 * 60;
+
   gtk_widget_init_template (GTK_WIDGET (self));
 
-  /* Hardcode the default hours (22:00 and 6:00) */
-  self->seconds_to_start = 22 * 60 * 60;
-  self->seconds_to_end = (6 + 24) * 60 * 60;
+  /* Hardcode the default hours (22:00 and 6:00), adding a 24h buffer to ensure
+   * any large negative local timezone offsets don’t shift the UNIX timestamps
+   * below 0. */
+  self->seconds_to_start = 22 * 60 * 60 + one_day_in_seconds;
+  self->seconds_to_end = (6 + 24) * 60 * 60 + one_day_in_seconds;
 
   /* Clock settings */
   self->settings_clock = g_settings_new (CLOCK_SCHEMA);
