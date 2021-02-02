@@ -5,7 +5,7 @@
 # Translators:
 # Almer S. Tigelaar <almer@gnome.org>, 2001
 # Dennis Smit <synap@area101.penguin.nl>, 2000
-# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2011-2018
+# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2011-2018,2020
 # Heimen Stoffels <vistausss@outlook.com>, 2019-2020
 # Huib Kleinhout <huib@stack.nl>, 2002
 # Jan-Willem Harmanny <jwharmanny@hotmail.com>, 2002
@@ -15,6 +15,7 @@
 # Rachid BM <rachidbm@ubuntu.com>, 2011
 # Reinout van Schouwen <reinouts@gnome.org>, 2011-2012,2014,2016
 # Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
 # Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002
 # Tino Meinen <tino.meinen@gmail.com>, 2004,2006-2007,2009
 msgid ""
@@ -22,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-02 17:56+0000\n"
-"PO-Revision-Date: 2021-02-02 17:56+0000\n"
-"Last-Translator: endlessmobile_build <admin@endlessos.org>\n"
+"PO-Revision-Date: 2021-02-02 19:45+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
 "Language-Team: Dutch (http://www.transifex.com/endless-os/gnome-control-center/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -273,7 +274,7 @@ msgstr "Geluiden"
 
 #: panels/applications/cc-applications-panel.ui:267
 msgid "Inhibit system keyboard shortcuts"
-msgstr ""
+msgstr "Systeemsneltoetsen blokkeren"
 
 #: panels/applications/cc-applications-panel.ui:300
 msgid "Default Handlers"
@@ -1170,23 +1171,23 @@ msgstr "Sommige instellingen moeten eerst ontgrendeld worden vooraleer ze gewijz
 
 #: panels/common/cc-time-editor.ui:33
 msgid "Increment Hour"
-msgstr ""
+msgstr "Uur verhogen"
 
 #: panels/common/cc-time-editor.ui:65
 msgid "Increment Minute"
-msgstr ""
+msgstr "Minuut verhogen"
 
 #: panels/common/cc-time-editor.ui:80
 msgid "Time"
-msgstr ""
+msgstr "Tijd"
 
 #: panels/common/cc-time-editor.ui:113
 msgid "Decrement Hour"
-msgstr ""
+msgstr "Uur verlagen"
 
 #: panels/common/cc-time-editor.ui:145
 msgid "Decrement Minute"
-msgstr ""
+msgstr "Minuut verlagen"
 
 #: panels/common/cc-time-entry.c:219
 msgid "_Copy"
@@ -1256,7 +1257,7 @@ msgstr "%s %s"
 #, c-format
 msgctxt "hours"
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:195
@@ -1270,7 +1271,7 @@ msgstr "%s %s"
 #, c-format
 msgctxt "minutes"
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:211
@@ -1536,7 +1537,7 @@ msgstr "Meld uw problemen"
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;"
-msgstr ""
+msgstr "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;scherm;vergrendelen;privé;tijdelijk;naam;netwerk;identiteit;"
 
 #: panels/display/cc-display-panel.c:954
 #: panels/network/connection-editor/connection-editor.ui:27
@@ -2293,7 +2294,7 @@ msgstr "Beveilig uw locatie-informatie"
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer"
 " while you're away."
-msgstr ""
+msgstr "Door het scherm automatisch te vergrendelen kunnen anderen uw computer niet gebruiken terwijl u weg bent."
 
 #: panels/lock/cc-lock-panel.ui:44
 msgid "Blank Screen Delay"
@@ -2322,13 +2323,13 @@ msgstr "_Notificaties tonen op vergrendelingsscherm"
 
 #: panels/lock/cc-lock-panel.ui:120
 msgid "Forbid new _USB devices"
-msgstr ""
+msgstr "Nieuwe _USB-apparaten verbieden"
 
 #: panels/lock/cc-lock-panel.ui:121
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr ""
+msgstr "Voorkomen dat nieuwe USB-apparaten interactie hebben met het systeem wanneer het scherm is vergrendeld."
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock"
 #. dialog.
@@ -2782,15 +2783,15 @@ msgstr "Schakel uit om wifi te gebruiken"
 
 #: panels/network/cc-wifi-panel.ui:236
 msgid "Wi-Fi Hotspot Active"
-msgstr ""
+msgstr "Wifi-hotspot ingeschakeld"
 
 #: panels/network/cc-wifi-panel.ui:247
 msgid "Mobile devices can scan the QR code to connect."
-msgstr ""
+msgstr "Mobiele apparaten kunnen de QR-code scannen om verbinding te maken."
 
 #: panels/network/cc-wifi-panel.ui:257
 msgid "Turn Off Hotspot…"
-msgstr ""
+msgstr "Wifi-hotspot uitschakelen…"
 
 #: panels/network/cc-wifi-panel.ui:279
 msgid "Visible Networks"
@@ -2859,7 +2860,7 @@ msgstr "WPA3"
 #: panels/network/connection-editor/ce-page-details.c:108
 #: panels/network/connection-editor/ce-page-security.c:278
 msgid "Enhanced Open"
-msgstr ""
+msgstr "Enhanced Open"
 
 #. TRANSLATORS: this WPA WiFi security
 #: panels/network/connection-editor/ce-page-details.c:115
@@ -3491,7 +3492,7 @@ msgstr "Netwerknaam"
 #: panels/network/network-wifi.ui:28
 msgctxt "Wi-Fi Hotspot"
 msgid "Security type"
-msgstr "Soort beveiliging"
+msgstr "Beveiligingstype"
 
 #: panels/network/network-wifi.ui:34
 msgctxt "Wi-Fi Hotspot"
@@ -4538,7 +4539,7 @@ msgstr "Bluetooth kan worden uitgeschakeld om energie te besparen."
 
 #: panels/power/cc-power-panel.c:2144
 msgid "Show Battery _Percentage"
-msgstr ""
+msgstr "Accu_percentage tonen"
 
 #. Frame header
 #: panels/power/cc-power-panel.c:2170
@@ -4547,7 +4548,7 @@ msgstr "Pauzestand en uitschakelen"
 
 #: panels/power/cc-power-panel.c:2220
 msgid "Po_wer Button Behavior"
-msgstr ""
+msgstr "Aan-/uit_knopgedrag"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
@@ -4639,7 +4640,7 @@ msgstr "De accustatus bekijken en instellingen voor energiebesparing wijzigen"
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;"
-msgstr ""
+msgstr "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Helderheid;Dim;Blank;Monitor;Beeldscherm;DPMS;Idle;Energie;Slaapstand;Pauzestand;Accu;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
@@ -5392,11 +5393,11 @@ msgstr "Er zijn geen invoerbronnen aangetroffen"
 #: panels/region/cc-input-chooser.c:948
 msgctxt "Input Source"
 msgid "Other"
-msgstr ""
+msgstr "Overige"
 
 #: panels/region/cc-input-chooser.ui:5
 msgid "Add an Input Source"
-msgstr ""
+msgstr "Invoerbron toevoegen"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
@@ -5429,7 +5430,7 @@ msgstr "_Formaten"
 
 #: panels/region/cc-region-panel.ui:237
 msgid "Input Sources"
-msgstr ""
+msgstr "Invoerbron"
 
 #: panels/region/cc-region-panel.ui:251
 msgid "Choose keyboard layouts or input methods."
@@ -5445,7 +5446,7 @@ msgstr "Aanmeldinstellingen worden gebruikt door alle gebruikers die zich aanmel
 
 #: panels/region/cc-region-panel.ui:379
 msgid "Input Source Options"
-msgstr ""
+msgstr "Instellingen invoerbron"
 
 #: panels/region/cc-region-panel.ui:394
 msgid "Use the _same source for all windows"
@@ -6144,7 +6145,7 @@ msgstr "Thunderbolt-apparaten beheren"
 #. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
-msgstr ""
+msgstr "Thunderbolt;privacy;"
 
 #. translators: the labels will read:
 #. * Cursor Size: Default
@@ -6182,7 +6183,7 @@ msgstr[1] "%d pixels"
 
 #: panels/universal-access/cc-ua-panel.ui:76
 msgid "_Always Show Accessibility Menu"
-msgstr ""
+msgstr "Toegankelijkheidsmenu _altijd tonen"
 
 #: panels/universal-access/cc-ua-panel.ui:118
 msgid "Seeing"
@@ -6508,7 +6509,7 @@ msgstr "Zien, horen, typen, aanwijzen en klikken vergemakkelijken"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal "
 "Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
+msgstr "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Plaktoetsen;Slow;Trage toetsen;Bounce;Springende toetsen;Mouse;Double;click;Delay;Speed;snelheid;Assist;Repeat;Blink;Visual;visueel;hearing;horen;hoor;luisteren;audio;typing;typen;Muistoetsen;Toetsenbord;Toegankelijkheid;Tekst;Lettertype;vergroten;Dubbel;klik;geluid;groot;hoog;"
 
 #: panels/universal-access/zoom-options.c:303
 msgctxt "Distance"
@@ -7037,19 +7038,19 @@ msgstr "Selecteer een bestand…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:8
 msgid "Fingerprint Manager"
-msgstr ""
+msgstr "Vingerafdrukbeheer"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:23
 msgid "Fingerprint"
-msgstr ""
+msgstr "Vingerafdruk"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:118
 msgid "_No"
-msgstr ""
+msgstr "_Nee"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:128
 msgid "_Yes"
-msgstr ""
+msgstr "_Ja"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:155
 msgid ""
@@ -7061,29 +7062,29 @@ msgstr "Wilt u uw geregistreerde vingerafdruk verwijderen zodat vingerafdrukaanm
 #. no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 msgid "No Fingerprint device"
-msgstr ""
+msgstr "Geen vingerafdrukapparaat"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:259
 msgid "Ensure the device is properly connected."
-msgstr ""
+msgstr "Controleer of het apparaat correct verbonden is."
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:264
 msgid "No fingerprint device"
-msgstr ""
+msgstr "Geen vingerafdrukapparaat"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:280
 msgid "Choose the fingerprint device you want to configure"
-msgstr ""
+msgstr "Kies het vingerafdrukapparaat dat u wilt instellen"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:309
 msgid "Fingerprint Device"
-msgstr ""
+msgstr "Vingerafdrukapparaat"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:322
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr ""
+msgstr "Aanmelden met vingerafdruk biedt u de mogelijkheid om uw computer te ontgrendelen en aan te melden met uw vinger"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
 msgid "_Delete Fingerprints"
@@ -7091,25 +7092,25 @@ msgstr "Vingerafdrukken ver_wijderen"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:363
 msgid "Fingerprint Login"
-msgstr ""
+msgstr "Aanmelden met vingerafdruk"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:412
 msgid "Fingerprint Enroll"
-msgstr ""
+msgstr "Vingerafdruk registreren"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:436
 msgid "_Re-enroll this finger…"
-msgstr ""
+msgstr "Deze vinger opnieuw _registreren…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:470
 #, c-format
 msgid "Failed to list fingerprints: %s"
-msgstr ""
+msgstr "Oplijsten van vingerafdrukken mislukt: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:536
 #, c-format
 msgid "Failed to delete saved fingerprints: %s"
-msgstr ""
+msgstr "Verwijderen van opgeslagen vingerafdrukken mislukt: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:565
 msgid "Left thumb"
@@ -7153,70 +7154,70 @@ msgstr "Rechterpink"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:585
 msgid "Unknown Finger"
-msgstr ""
+msgstr "Onbekende vinger"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:719
 msgctxt "Fingerprint enroll state"
 msgid "Complete"
-msgstr ""
+msgstr "Klaar"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:729
 msgid "Fingerprint device disconnected"
-msgstr ""
+msgstr "Vingerafdrukapparaat niet verbonden"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:731
 msgid "Fingerprint device storage is full"
-msgstr ""
+msgstr "Vingerafdrukapparaatopslag is vol"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:733
 msgid "Failed to enroll new fingerprint"
-msgstr ""
+msgstr "Registreren van nieuwe vingerafdruk mislukt"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:764
 #, c-format
 msgid "Failed to start enrollment: %s"
-msgstr ""
+msgstr "Starten van registratie mislukt: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:772
 msgctxt "Fingerprint enroll state"
 msgid "Failed to enroll new fingerprint"
-msgstr ""
+msgstr "Registreren van nieuwe vingerafdruk mislukt"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:803
 #, c-format
 msgid "Failed to stop enrollment: %s"
-msgstr ""
+msgstr "Stoppen van registratie mislukt: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:847
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr ""
+msgstr "Plaats uw vinger herhaaldelijk op de lezer om uw vingerafdruk te registreren"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:989
 msgid "Scan new fingerprint"
-msgstr ""
+msgstr "Nieuwe vingerafdruk scannen"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1029
 #, c-format
 msgid "Failed to release fingerprint device %s: %s"
-msgstr ""
+msgstr "Loslaten van vingerafdrukapparaat %s mislukt: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1100
 msgctxt "Fingerprint enroll state"
 msgid "Problem Reading Device"
-msgstr ""
+msgstr "Probleem bij lezen van apparaat"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1133
 #, c-format
 msgid "Failed to claim fingerprint device %s: %s"
-msgstr ""
+msgstr "Toe-eigenen van vingerafdrukapparaat %s mislukt: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1270
 #, c-format
 msgid "Failed to get fingerprint devices: %s"
-msgstr ""
+msgstr "Opvragen van vingerafdrukapparaten mislukt: %s"
 
 #: panels/user-accounts/cc-login-history-dialog.c:69
 msgid "This Week"

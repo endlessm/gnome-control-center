@@ -4,20 +4,22 @@
 # 
 # Translators:
 # Abel Cheung <abel@oaka.org>, 2001-2003, 2005
+# byStarTW (pan93412) <pan93412@gmail.com>, 2019
 # Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2010
 # byStarTW (pan93412) <pan93412@gmail.com>, 2019
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
 # Roddy Shuler <roddy@stanfordalumni.org>, 2018
 # S.J. Luo <crystal@mickey.ee.nctu.edu.tw>, 1999
 # Wei-Lun Chao <chaoweilun@gmail.com>, 2010
 # Will Thompson <wjt@endlessos.org>, 2019
-# Will Thompson <wjt@endlessos.org>, 2020
+# Will Thompson <wjt@endlessos.org>, 2019-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-02 17:56+0000\n"
-"PO-Revision-Date: 2021-02-02 17:56+0000\n"
-"Last-Translator: endlessmobile_build <admin@endlessos.org>\n"
+"PO-Revision-Date: 2021-02-02 19:44+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/endless-os/gnome-control-center/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -267,7 +269,7 @@ msgstr "音效"
 
 #: panels/applications/cc-applications-panel.ui:267
 msgid "Inhibit system keyboard shortcuts"
-msgstr "禁止系統鍵盤捷徑"
+msgstr "抑制系統鍵盤快捷鍵"
 
 #: panels/applications/cc-applications-panel.ui:300
 msgid "Default Handlers"
@@ -1164,23 +1166,23 @@ msgstr "部份設定需要先解鎖才能變更。"
 
 #: panels/common/cc-time-editor.ui:33
 msgid "Increment Hour"
-msgstr "增量時數"
+msgstr "遞增小時"
 
 #: panels/common/cc-time-editor.ui:65
 msgid "Increment Minute"
-msgstr "增量分鐘數"
+msgstr "遞增分鐘"
 
 #: panels/common/cc-time-editor.ui:80
 msgid "Time"
-msgstr "時間"
+msgstr "時刻"
 
 #: panels/common/cc-time-editor.ui:113
 msgid "Decrement Hour"
-msgstr "減量時數"
+msgstr "遞減小時"
 
 #: panels/common/cc-time-editor.ui:145
 msgid "Decrement Minute"
-msgstr "減量分鐘數"
+msgstr "遞減分鐘"
 
 #: panels/common/cc-time-entry.c:219
 msgid "_Copy"
@@ -1998,7 +2000,7 @@ msgstr "鎖定畫面"
 #: panels/keyboard/50-accessibility.xml.in:2
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:3
 msgid "Accessibility"
-msgstr "無障礙功能"
+msgstr "無障礙輔助"
 
 #: panels/keyboard/50-accessibility.xml.in:4
 msgid "Turn zoom on or off"
@@ -2313,13 +2315,13 @@ msgstr "在鎖定螢幕顯示通知(_N)"
 
 #: panels/lock/cc-lock-panel.ui:120
 msgid "Forbid new _USB devices"
-msgstr "禁止新的 USB 裝置"
+msgstr "禁止新的 _USB 裝置"
 
 #: panels/lock/cc-lock-panel.ui:121
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr "螢幕鎖定時，防止新的 USB 裝置與系統互動。"
+msgstr "當螢幕鎖定時，防止新的 USB 裝置與系統互動。"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock"
 #. dialog.
@@ -2773,15 +2775,15 @@ msgstr "關閉以使用 Wi-Fi"
 
 #: panels/network/cc-wifi-panel.ui:236
 msgid "Wi-Fi Hotspot Active"
-msgstr "使用中 Wi-Fi 熱點"
+msgstr "Wi-Fi 熱點作用中"
 
 #: panels/network/cc-wifi-panel.ui:247
 msgid "Mobile devices can scan the QR code to connect."
-msgstr "行動裝置可以掃描 QR 代碼進行連線。"
+msgstr "行動裝置可以掃描 QR 碼來連線。"
 
 #: panels/network/cc-wifi-panel.ui:257
 msgid "Turn Off Hotspot…"
-msgstr "關閉熱點……"
+msgstr "關閉熱點…"
 
 #: panels/network/cc-wifi-panel.ui:279
 msgid "Visible Networks"
@@ -2850,7 +2852,7 @@ msgstr "WPA3"
 #: panels/network/connection-editor/ce-page-details.c:108
 #: panels/network/connection-editor/ce-page-security.c:278
 msgid "Enhanced Open"
-msgstr "增強開放"
+msgstr "Enhanced Open"
 
 #. TRANSLATORS: this WPA WiFi security
 #: panels/network/connection-editor/ce-page-details.c:115
@@ -4524,7 +4526,7 @@ msgstr "可以關閉藍牙以省電。"
 
 #: panels/power/cc-power-panel.c:2144
 msgid "Show Battery _Percentage"
-msgstr "顯示電池電量百分比"
+msgstr "顯示電池百分比(_P)"
 
 #. Frame header
 #: panels/power/cc-power-panel.c:2170
@@ -4533,7 +4535,7 @@ msgstr "暫停與電源按鈕"
 
 #: panels/power/cc-power-panel.c:2220
 msgid "Po_wer Button Behavior"
-msgstr "電源按鈕行為"
+msgstr "電源鍵行為(_W)"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
@@ -5376,11 +5378,11 @@ msgstr "找不到輸入來源"
 #: panels/region/cc-input-chooser.c:948
 msgctxt "Input Source"
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: panels/region/cc-input-chooser.ui:5
 msgid "Add an Input Source"
-msgstr ""
+msgstr "加入輸入來源"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
@@ -5413,7 +5415,7 @@ msgstr "格式(_F)"
 
 #: panels/region/cc-region-panel.ui:237
 msgid "Input Sources"
-msgstr ""
+msgstr "輸入來源"
 
 #: panels/region/cc-region-panel.ui:251
 msgid "Choose keyboard layouts or input methods."
@@ -5429,7 +5431,7 @@ msgstr "登入設定值是所有的使用者在登入系統時會用到的"
 
 #: panels/region/cc-region-panel.ui:379
 msgid "Input Source Options"
-msgstr ""
+msgstr "輸入來源選項"
 
 #: panels/region/cc-region-panel.ui:394
 msgid "Use the _same source for all windows"
@@ -6164,7 +6166,7 @@ msgstr[0] "%d 像素"
 
 #: panels/universal-access/cc-ua-panel.ui:76
 msgid "_Always Show Accessibility Menu"
-msgstr "永遠顯示協助工具功能表"
+msgstr "永遠顯示無障礙存取選單(_A)"
 
 #: panels/universal-access/cc-ua-panel.ui:118
 msgid "Seeing"
@@ -6490,7 +6492,7 @@ msgstr "讓電腦更容易看、聽、輸入、指向與點選"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal "
 "Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr "鍵盤;滑鼠;a11y;無障礙網頁;通用存取;對比度;游標;聲音;縮放;螢幕;閱讀器;巨型;高;大;文字;字型;大小;AccessX; 相黏;鍵;慢;退回;滑鼠;雙重;點擊;延遲;速度;輔助;重複;眨眼;視覺;聽覺;音訊;打字;"
+msgstr "Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;鍵盤;滑鼠;無障礙輔助存取;對比;螢幕;閱讀器;文字;字型;大小;相黏;遲緩;反彈;滑鼠;雙擊;兩下;點按;延遲;助理;輔助;重複;閃動;游標;音效;大;高;速度;視覺;聽覺;音訊;音樂;輸入;"
 
 #: panels/universal-access/zoom-options.c:303
 msgctxt "Distance"
@@ -7019,7 +7021,7 @@ msgstr "選擇檔案…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:8
 msgid "Fingerprint Manager"
-msgstr "指紋管理器"
+msgstr "指紋管理員"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:23
 msgid "Fingerprint"
@@ -7027,35 +7029,35 @@ msgstr "指紋"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:118
 msgid "_No"
-msgstr "否"
+msgstr "否(_N)"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:128
 msgid "_Yes"
-msgstr "是"
+msgstr "是(_Y)"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:155
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr "您確定要刪除註冊的指紋嗎？這麼一來將會停用指紋登入。"
+msgstr "您是否要刪除註冊的指紋？這將會停用指紋登入。"
 
 #. Translators: This is the empty state page label which states that there are
 #. no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 msgid "No Fingerprint device"
-msgstr "無指紋裝置"
+msgstr "沒有指紋裝置"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:259
 msgid "Ensure the device is properly connected."
-msgstr "請確保裝置已正確連線。"
+msgstr "請確認裝置已適當連接。"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:264
 msgid "No fingerprint device"
-msgstr "無指紋裝置"
+msgstr "沒有指紋裝置"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:280
 msgid "Choose the fingerprint device you want to configure"
-msgstr "請選擇您要設定的指紋裝置"
+msgstr "請選擇您想要設定的指紋裝置"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:309
 msgid "Fingerprint Device"
@@ -7065,7 +7067,7 @@ msgstr "指紋裝置"
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr "註冊指紋可讓您用手指解鎖並登入電腦"
+msgstr "指紋登入讓您可以用手指解鎖並登入電腦"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
 msgid "_Delete Fingerprints"
@@ -7077,11 +7079,11 @@ msgstr "指紋登入"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:412
 msgid "Fingerprint Enroll"
-msgstr "註冊指紋"
+msgstr "指紋登錄"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:436
 msgid "_Re-enroll this finger…"
-msgstr "重新註冊此手指……"
+msgstr "重新登錄這隻手指(_R)…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:470
 #, c-format
@@ -7091,7 +7093,7 @@ msgstr "無法列出指紋：%s"
 #: panels/user-accounts/cc-fingerprint-dialog.c:536
 #, c-format
 msgid "Failed to delete saved fingerprints: %s"
-msgstr "無法刪除已儲存的指紋：%s"
+msgstr "無法刪除儲存的指紋：%s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:565
 msgid "Left thumb"
@@ -7144,7 +7146,7 @@ msgstr "完成"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:729
 msgid "Fingerprint device disconnected"
-msgstr "指紋裝置已中斷連線"
+msgstr "指紋裝置已中斷連接"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:731
 msgid "Fingerprint device storage is full"
@@ -7152,48 +7154,48 @@ msgstr "指紋裝置儲存空間已滿"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:733
 msgid "Failed to enroll new fingerprint"
-msgstr "無法註冊新指紋"
+msgstr "無法登錄新的指紋"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:764
 #, c-format
 msgid "Failed to start enrollment: %s"
-msgstr "無法開始註冊：%s"
+msgstr "無法啟動登錄：%s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:772
 msgctxt "Fingerprint enroll state"
 msgid "Failed to enroll new fingerprint"
-msgstr "無法註冊新指紋"
+msgstr "無法登錄新的指紋"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:803
 #, c-format
 msgid "Failed to stop enrollment: %s"
-msgstr "無法停止註冊：%s"
+msgstr "無法停止登錄：%s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:847
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr "反覆抬起手指放在閱讀器上以註冊指紋"
+msgstr "請反複提起您的手指再重放到閱讀器上，以登錄您的指紋"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:989
 msgid "Scan new fingerprint"
-msgstr "掃描新指紋"
+msgstr "掃描新的指紋"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1029
 #, c-format
 msgid "Failed to release fingerprint device %s: %s"
-msgstr "無法解除指紋裝置 %s：%s"
+msgstr "無法釋放指紋裝置 %s：%s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1100
 msgctxt "Fingerprint enroll state"
 msgid "Problem Reading Device"
-msgstr "問題讀取裝置"
+msgstr "讀取裝置有問題"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1133
 #, c-format
 msgid "Failed to claim fingerprint device %s: %s"
-msgstr "無法主張指紋裝置 %s 的所有權：%s"
+msgstr "無法索取指紋裝置 %s：%s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1270
 #, c-format
@@ -7468,7 +7470,7 @@ msgstr "管理員可以加入與移除其他使用者，並且可以改變所有
 
 #: panels/user-accounts/cc-user-panel.ui:320
 msgid "_Parental Controls"
-msgstr "_分級控制"
+msgstr "家長控制(_P)"
 
 #: panels/user-accounts/cc-user-panel.ui:410
 msgid "Authentication & Login"
@@ -7993,7 +7995,7 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr "這版本的設定應只作為開發目的。您可能會遇到不正常的系統行為、資料遺失與其他無法預測的問題。"
+msgstr "這版本的《設定值》應只作為開發目的使用。您可能會遇到不正常的系統行為、資料遺失與其他預期之外的問題。"
 
 #: shell/cc-window.ui:330
 msgid "Help"

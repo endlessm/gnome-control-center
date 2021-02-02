@@ -4,8 +4,10 @@
 # 
 # Translators:
 # Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
 # Борисав Живановић <borisavzivanovic@gmail.com>, 2017
 # Данило Шеган <danilo@gnome.org>, 2005
+# Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>, 2016
 # Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>, 2016
 # Miloš Popović <gpopac@gmail.com>, 2010-2011
 # Слободан Д. Средојевић <slobo@akrep.be>, 2006
@@ -14,8 +16,8 @@ msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-02 17:56+0000\n"
-"PO-Revision-Date: 2021-02-02 17:56+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
+"PO-Revision-Date: 2021-02-02 19:42+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
 "Language-Team: Serbian (http://www.transifex.com/endless-os/gnome-control-center/language/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -265,7 +267,7 @@ msgstr "Звукови"
 
 #: panels/applications/cc-applications-panel.ui:267
 msgid "Inhibit system keyboard shortcuts"
-msgstr ""
+msgstr "Спречи системске пречице тастатуре"
 
 #: panels/applications/cc-applications-panel.ui:300
 msgid "Default Handlers"
@@ -910,7 +912,7 @@ msgstr "Сазнајте више"
 
 #: panels/color/cc-color-panel.ui:815
 msgid "Learn more about color management"
-msgstr ""
+msgstr "Сазнајте више о управљању бојама"
 
 #: panels/color/cc-color-panel.ui:863
 msgid "_Set for all users"
@@ -1162,23 +1164,23 @@ msgstr "Нека подешавања морају бити откључана �
 
 #: panels/common/cc-time-editor.ui:33
 msgid "Increment Hour"
-msgstr ""
+msgstr "Повећај сат"
 
 #: panels/common/cc-time-editor.ui:65
 msgid "Increment Minute"
-msgstr ""
+msgstr "Повећај минут"
 
 #: panels/common/cc-time-editor.ui:80
 msgid "Time"
-msgstr ""
+msgstr "Време"
 
 #: panels/common/cc-time-editor.ui:113
 msgid "Decrement Hour"
-msgstr ""
+msgstr "Смањи сат"
 
 #: panels/common/cc-time-editor.ui:145
 msgid "Decrement Minute"
-msgstr ""
+msgstr "Смањи минут"
 
 #: panels/common/cc-time-entry.c:219
 msgid "_Copy"
@@ -1251,7 +1253,7 @@ msgstr "%s %s"
 #, c-format
 msgctxt "hours"
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:195
@@ -1265,7 +1267,7 @@ msgstr "%s %s"
 #, c-format
 msgctxt "minutes"
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. 0 seconds
 #: panels/common/cc-util.c:211
@@ -1531,7 +1533,7 @@ msgstr "Пријавите ваше проблеме"
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;"
-msgstr ""
+msgstr "екран;закључај;дијагноза;пад;урушавање;лично;скорашње;недавно;привремен;тмп;попис;назив;мрежа;идентитет;приватност;screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;"
 
 #: panels/display/cc-display-panel.c:954
 #: panels/network/connection-editor/connection-editor.ui:27
@@ -2288,7 +2290,7 @@ msgstr "Заштитите ваше податке о месту станова�
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer"
 " while you're away."
-msgstr ""
+msgstr "Самостално закључавање екрана спречава неовлашћени приступ рачунару када сте одсутни."
 
 #: panels/lock/cc-lock-panel.ui:44
 msgid "Blank Screen Delay"
@@ -2317,13 +2319,13 @@ msgstr "Прикажи обавештења _на закључаном екра�
 
 #: panels/lock/cc-lock-panel.ui:120
 msgid "Forbid new _USB devices"
-msgstr ""
+msgstr "Забрани нове _УСБ уређаје"
 
 #: panels/lock/cc-lock-panel.ui:121
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr ""
+msgstr "Спречава нове УСБ уређаје да раде на систему док је екран закључан."
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock"
 #. dialog.
@@ -2777,15 +2779,15 @@ msgstr "Искључите да бисте користили бежичну к�
 
 #: panels/network/cc-wifi-panel.ui:236
 msgid "Wi-Fi Hotspot Active"
-msgstr ""
+msgstr "Бежична врућа тачка покренута"
 
 #: panels/network/cc-wifi-panel.ui:247
 msgid "Mobile devices can scan the QR code to connect."
-msgstr ""
+msgstr "Мобилни уређаји могу скенирати QR код за повезивање."
 
 #: panels/network/cc-wifi-panel.ui:257
 msgid "Turn Off Hotspot…"
-msgstr ""
+msgstr "Искључи врућу тачку…"
 
 #: panels/network/cc-wifi-panel.ui:279
 msgid "Visible Networks"
@@ -2854,7 +2856,7 @@ msgstr "ВПА3"
 #: panels/network/connection-editor/ce-page-details.c:108
 #: panels/network/connection-editor/ce-page-security.c:278
 msgid "Enhanced Open"
-msgstr ""
+msgstr "Побољшано отварање"
 
 #. TRANSLATORS: this WPA WiFi security
 #: panels/network/connection-editor/ce-page-details.c:115
@@ -4538,7 +4540,7 @@ msgstr "Искључите блутут да бисте уштедели бат�
 
 #: panels/power/cc-power-panel.c:2144
 msgid "Show Battery _Percentage"
-msgstr ""
+msgstr "Прикажи _проценат батерије"
 
 #. Frame header
 #: panels/power/cc-power-panel.c:2170
@@ -4547,7 +4549,7 @@ msgstr "Дугме за гашење и обуставу"
 
 #: panels/power/cc-power-panel.c:2220
 msgid "Po_wer Button Behavior"
-msgstr ""
+msgstr "Радња ду_гмета за напајање"
 
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:13
@@ -4639,7 +4641,7 @@ msgstr "Погледајте стање ваше батерије и измен�
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;"
-msgstr ""
+msgstr "напајање;спавање;обустава;замрзавање;батерија;осветљај;затамњење;монитор;ДПМС;мировање;Енергија;Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;napajanje;spavanje;obustava;zamrzavanje;baterija;osvetljaj;mirovanje;Energija;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
@@ -5398,7 +5400,7 @@ msgstr "Друго"
 
 #: panels/region/cc-input-chooser.ui:5
 msgid "Add an Input Source"
-msgstr ""
+msgstr "Додајте извор улаза"
 
 #: panels/region/cc-input-chooser.ui:77
 msgid "Input methods can’t be used on the login screen"
@@ -5447,7 +5449,7 @@ msgstr "Подешавања пријављивања користе сви ко
 
 #: panels/region/cc-region-panel.ui:379
 msgid "Input Source Options"
-msgstr ""
+msgstr "Избори извора улаза"
 
 #: panels/region/cc-region-panel.ui:394
 msgid "Use the _same source for all windows"
@@ -6147,7 +6149,7 @@ msgstr "Управљај Тандерболт уређајима"
 #. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
-msgstr ""
+msgstr "Thunderbolt;Тандерболт;Тхундерболт;Tanderbolt;приватност;privatnost;"
 
 #. translators: the labels will read:
 #. * Cursor Size: Default
@@ -6186,7 +6188,7 @@ msgstr[2] ""
 
 #: panels/universal-access/cc-ua-panel.ui:76
 msgid "_Always Show Accessibility Menu"
-msgstr ""
+msgstr "_Увек прикажи изборник приступачности"
 
 #: panels/universal-access/cc-ua-panel.ui:118
 msgid "Seeing"
@@ -6512,7 +6514,7 @@ msgstr "Олакшајте посматрање, слушање, куцање, �
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal "
 "Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
-msgstr ""
+msgstr "тастатура;миш;a11y;приступачност;контраст;универзални приступ;зум;читач;екран;текст;слова;величина;Икс_приступ;лепљиви;тастери;спори;одскочни;миш;двоструки;клик;застој;понови;трепни;визуелно;слух;аудио;звук;куцање;tastatura;miš;pristupačnost;kontrast;zum;čitač;ekran;tekst;slova;veličina;Iks_pristup;lepljivi;tasteri;spori;odskočni;miš;dvostruki;klik;zastoj;ponovi;trepni;vizuelno;univerzalni pristup;sluh;audio;zvuk;kucanje;Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;Universal Access;"
 
 #: panels/universal-access/zoom-options.c:303
 msgctxt "Distance"
@@ -7041,19 +7043,19 @@ msgstr "Изаберите датотеку…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:8
 msgid "Fingerprint Manager"
-msgstr ""
+msgstr "Управник отисцима прстију"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:23
 msgid "Fingerprint"
-msgstr ""
+msgstr "Отисак прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:118
 msgid "_No"
-msgstr ""
+msgstr "_Не"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:128
 msgid "_Yes"
-msgstr ""
+msgstr "_Да"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:155
 msgid ""
@@ -7065,29 +7067,29 @@ msgstr "Да ли желите да обришете забележене оти
 #. no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 msgid "No Fingerprint device"
-msgstr ""
+msgstr "Нема читача отиска прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:259
 msgid "Ensure the device is properly connected."
-msgstr ""
+msgstr "Проверите да ли је уређај исправно прикључен."
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:264
 msgid "No fingerprint device"
-msgstr ""
+msgstr "Нема читача отиска прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:280
 msgid "Choose the fingerprint device you want to configure"
-msgstr ""
+msgstr "Изаберите читач отиска прста којег желите подесити"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:309
 msgid "Fingerprint Device"
-msgstr ""
+msgstr "Читач отиска прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:322
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr ""
+msgstr "Пријава преко отиска прста вам омогућава да откључате и пријавите се на ваш рачунар преко прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
 msgid "_Delete Fingerprints"
@@ -7095,25 +7097,25 @@ msgstr "_Обриши отиске прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:363
 msgid "Fingerprint Login"
-msgstr ""
+msgstr "Пријављивање отиском прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:412
 msgid "Fingerprint Enroll"
-msgstr ""
+msgstr "Уписивање отиска прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:436
 msgid "_Re-enroll this finger…"
-msgstr ""
+msgstr "Поно_во упиши овај прст…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:470
 #, c-format
 msgid "Failed to list fingerprints: %s"
-msgstr ""
+msgstr "Неуспех при листању отисака прстију: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:536
 #, c-format
 msgid "Failed to delete saved fingerprints: %s"
-msgstr ""
+msgstr "Неуспех при брисању сачуваних отисака прстију: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:565
 msgid "Left thumb"
@@ -7157,70 +7159,70 @@ msgstr "Десни, мали прст"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:585
 msgid "Unknown Finger"
-msgstr ""
+msgstr "Непознат прст"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:719
 msgctxt "Fingerprint enroll state"
 msgid "Complete"
-msgstr ""
+msgstr "Завршено"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:729
 msgid "Fingerprint device disconnected"
-msgstr ""
+msgstr "Читач отиска прста није прикључен"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:731
 msgid "Fingerprint device storage is full"
-msgstr ""
+msgstr "Складиште на читачу отиска прста је пуно"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:733
 msgid "Failed to enroll new fingerprint"
-msgstr ""
+msgstr "Неуспех при упису новог отиска прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:764
 #, c-format
 msgid "Failed to start enrollment: %s"
-msgstr ""
+msgstr "Неуспех при покретању уписа: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:772
 msgctxt "Fingerprint enroll state"
 msgid "Failed to enroll new fingerprint"
-msgstr ""
+msgstr "Нисам успео да додам нови отисак прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:803
 #, c-format
 msgid "Failed to stop enrollment: %s"
-msgstr ""
+msgstr "Неуспех при заустављању уписа: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:847
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr ""
+msgstr "Непрестано подижите и спуштајте ваш прст на читач да бисте уписали ваш отисак прста"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:989
 msgid "Scan new fingerprint"
-msgstr ""
+msgstr "Скенирај нови отисак прста"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1029
 #, c-format
 msgid "Failed to release fingerprint device %s: %s"
-msgstr ""
+msgstr "Нисам успео да отпустим читач отиска прста %s: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1100
 msgctxt "Fingerprint enroll state"
 msgid "Problem Reading Device"
-msgstr ""
+msgstr "Проблем приликом читања уређаја"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1133
 #, c-format
 msgid "Failed to claim fingerprint device %s: %s"
-msgstr ""
+msgstr "Нисам успео да затражим читач отиска прста %s: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1270
 #, c-format
 msgid "Failed to get fingerprint devices: %s"
-msgstr ""
+msgstr "Нисам успео да добавим читаче отиска прста: %s"
 
 #: panels/user-accounts/cc-login-history-dialog.c:69
 msgid "This Week"
@@ -7490,7 +7492,7 @@ msgstr "Администратори могу додавати и уклањат
 
 #: panels/user-accounts/cc-user-panel.ui:320
 msgid "_Parental Controls"
-msgstr ""
+msgstr "Родитељско у_прављање"
 
 #: panels/user-accounts/cc-user-panel.ui:410
 msgid "Authentication & Login"
@@ -7534,7 +7536,7 @@ msgstr "Додајте или уклоните кориснике и измен�
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr "пријављивање;име;отисак прстију;аватар;лого;лице;лозинка;"
+msgstr "пријављивање;име;отисак прстију;аватар;лого;лице;лозинка;Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 
 #. Translators: This button enrolls the computer in the domain in order to use
 #. enterprise logins.
