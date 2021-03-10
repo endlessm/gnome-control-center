@@ -50,7 +50,6 @@
 #define MASTER_SCHEMA "org.gnome.desktop.notifications"
 #define APP_SCHEMA MASTER_SCHEMA ".application"
 #define APP_PREFIX "/org/gnome/desktop/notifications/application/"
-#define EOS_LINK_PREFIX "eos-link-"
 
 #define PORTAL_SNAP_PREFIX "snap."
 
@@ -1715,7 +1714,6 @@ populate_applications (CcApplicationsPanel *self)
 
       id = get_app_id (info);
       if (!g_app_info_should_show (info) ||
-          g_str_has_prefix (id, EOS_LINK_PREFIX) ||
           has_replaced_by (info))
         continue;
 
