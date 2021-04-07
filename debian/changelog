@@ -1,15 +1,66 @@
-gnome-control-center (1:3.38.0-1endless0) master; urgency=medium
+gnome-control-center (1:3.38.5-1) experimental; urgency=medium
 
   * New upstream release
-  * Change packaging branch to be based on the debian/master git branch in
-    Debian Salsa: https://salsa.debian.org/gnome-team/gnome-control-center
-    rather than importing tarballs
-  * Cherry-pick Endless packaging changes
-  * debian/control.in:
-    - Update malcontent version to 0.7.0
-  * debian/patches: Drop all patches (as we did when using tarballs)
 
- -- Phaedrus Leeds <mwleeds@endlessos.org>  Wed, 16 Sep 2020 09:26:00 -0700
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Mar 2021 08:46:50 +0100
+
+gnome-control-center (1:3.38.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 19 Feb 2021 11:59:19 +0100
+
+gnome-control-center (1:3.38.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Use upstream/3.38.x branch for packaging
+  * Standards-Version: 4.5.1 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 15 Jan 2021 09:34:04 +0000
+
+gnome-control-center (1:3.38.2-2) unstable; urgency=medium
+
+  * debian/control.in: Explicitly add libgoa-backend-1.0-dev to the BD
+  * debian/control.in: Explicitly add libsoup2.4-dev to the BD
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 25 Dec 2020 10:16:26 +0100
+
+gnome-control-center (1:3.38.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Applications: Fix a NULL pointer dereference
+    - Keyboard: Fix an assertion failure
+    - Network: Correctly detect when Ethernet devices are hotplugged
+    - Printers: Fix memory leaks
+    - Printers: Reduce panel's minimum width
+    - Sharing: When disabling Tracker, also disable Tracker 3
+    - Sound: Update libgvc to support UCM in recent ALSA and PulseAudio
+    - Users: Avoid freeing a const string
+    - Wacom: Fix a critical warning if loading a cursor fails
+  * Bump libpulse-dev dependency according to meson.build
+  * Preferentially build-depend on libgdk-pixbuf-2.0-dev.
+    We don't need the deprecated Xlib integration that is also pulled in
+    by the older libgdk-pixbuf2.0-dev package (see #974870).
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 23 Nov 2020 10:14:09 +0000
+
+gnome-control-center (1:3.38.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/rules:
+    - remove deprecated -Dgnome_session_libexecdir
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 05 Oct 2020 15:07:48 +0200
+
+gnome-control-center (1:3.38.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Revert "d/watch: Watch for development releases"
+  * Release to unstable
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 25 Sep 2020 10:27:01 +0100
 
 gnome-control-center (1:3.38.0-1) experimental; urgency=medium
 
