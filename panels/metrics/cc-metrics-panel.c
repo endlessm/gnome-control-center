@@ -18,11 +18,9 @@
  * Author: Umang Jain <umang@endlessm.com>
  */
 
-#include "list-box-helper.h"
 #include "cc-metrics-panel.h"
 #include "cc-metrics-resources.h"
 #include "cc-util.h"
-#include "cc-list-row.h"
 #include "shell/cc-application.h"
 
 #include <glib/gi18n.h>
@@ -33,8 +31,6 @@ struct _CcMetricsPanel
   CcPanel        parent_instance;
 
   GtkStack      *stack;
-  CcListRow     *metrics_identifier_row;
-  GtkListBox    *metrics_list_box;
   GtkWidget     *enable_metrics_switch;
 
   gboolean       metrics_active;
@@ -102,7 +98,6 @@ on_metrics_proxy_properties_changed (GDBusProxy     *proxy,
                                      CcMetricsPanel *self)
 {
   g_autoptr(GVariant) value = NULL;
-  const gchar *tracking_id;
   gboolean metrics_active;
 
   value = g_variant_lookup_value (changed_properties, "Enabled", G_VARIANT_TYPE_BOOLEAN);
@@ -118,28 +113,6 @@ on_metrics_proxy_properties_changed (GDBusProxy     *proxy,
         }
       g_clear_pointer (&value, g_variant_unref);
     }
-
-  value = g_variant_lookup_value (changed_properties, "TrackingId", G_VARIANT_TYPE_STRING);
-  if (value)
-    {
-      tracking_id = g_variant_get_string (value, NULL);
-      cc_list_row_set_secondary_label (self->metrics_identifier_row, tracking_id);
-      g_clear_pointer (&value, g_variant_unref);
-    }
-}
-
-static gboolean
-on_reset_metrics_id_button_clicked (GtkButton      *button,
-                                    CcMetricsPanel *self)
-{
-  g_dbus_proxy_call (self->metrics_proxy,
-                     "ResetTrackingId",
-                     g_variant_new ("()"),
-                     G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION, -1,
-                     cc_panel_get_cancellable (CC_PANEL (self)),
-                     NULL, NULL);
-
-  return TRUE;
 }
 
 static gboolean
@@ -188,7 +161,6 @@ cc_metrics_panel_constructed (GObject *object)
 {
   CcMetricsPanel *self = CC_METRICS_PANEL (object);
   g_autoptr(GError) error = NULL;
-  const gchar *tracking_id;
   gboolean metrics_can_change;
   GtkWidget *box;
   g_autoptr(GPermission) permission = NULL;
@@ -215,10 +187,6 @@ cc_metrics_panel_constructed (GObject *object)
       value = g_dbus_proxy_get_cached_property (self->metrics_proxy, "Enabled");
       self->metrics_active = g_variant_get_boolean (value);
       g_clear_pointer (&value, g_variant_unref);
-
-      value = g_dbus_proxy_get_cached_property (self->metrics_proxy, "TrackingId");
-      tracking_id = g_variant_get_string (value, NULL);
-      g_clear_pointer (&value, g_variant_unref);
     }
 
   permission = polkit_permission_new_sync ("com.endlessm.Metrics.SetEnabled",
@@ -240,8 +208,6 @@ cc_metrics_panel_constructed (GObject *object)
   gtk_switch_set_state (GTK_SWITCH (self->enable_metrics_switch), self->metrics_active);
   g_signal_connect (self->enable_metrics_switch, "state-set",
                     G_CALLBACK (metrics_switch_active_changed_cb), self);
-
-  cc_list_row_set_secondary_label (self->metrics_identifier_row, tracking_id);
 
   g_object_bind_property_full (self->enable_metrics_switch,
                                "active",
@@ -269,11 +235,8 @@ cc_metrics_panel_class_init (CcMetricsPanelClass *klass)
   gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/metrics/cc-metrics-panel.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CcMetricsPanel, stack);
-  gtk_widget_class_bind_template_child (widget_class, CcMetricsPanel, metrics_list_box);
-  gtk_widget_class_bind_template_child (widget_class, CcMetricsPanel, metrics_identifier_row);
 
   gtk_widget_class_bind_template_callback (widget_class, on_attribution_label_link);
-  gtk_widget_class_bind_template_callback (widget_class, on_reset_metrics_id_button_clicked);
 }
 
 static void
@@ -282,8 +245,4 @@ cc_metrics_panel_init (CcMetricsPanel *self)
   g_resources_register (cc_metrics_get_resource ());
 
   gtk_widget_init_template (GTK_WIDGET (self));
-
-  gtk_list_box_set_header_func (self->metrics_list_box,
-                                cc_list_box_update_header_func,
-                                NULL, NULL);
 }

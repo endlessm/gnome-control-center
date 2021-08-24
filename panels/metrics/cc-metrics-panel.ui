@@ -94,24 +94,10 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkListBox" id="metrics_list_box">
-                        <property name="visible">true</property>
-                        <property name="can-focus">true</property>
-                        <property name="selection-mode">none</property>
-                        <property name="margin_bottom">16</property>
-                        <child>
-                          <object class="CcListRow" id="metrics_identifier_row">
-                            <property name="visible">True</property>
-                            <property name="title" translatable="yes">Your Metrics Identifier</property>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
                       <object class="GtkBox">
                         <property name="visible">true</property>
                         <property name="hexpand">true</property>
-                        <property name="halign">end</property>
+                        <property name="halign">center</property>
                         <property name="spacing">12</property>
                         <!-- Endless license attribution document -->
                         <child>
@@ -120,21 +106,10 @@
                             <property name="visible">True</property>
                             <property name="use_underline">true</property>
                             <property name="can_focus">False</property>
-                            <property name="halign">start</property>
+                            <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="uri">attribution-link</property>
                             <signal name="activate-link" handler="on_attribution_label_link" object="CcMetricsPanel" swapped="no" />
-                          </object>
-                        </child>
-                        <!-- Reset metrics ID -->
-                        <child>
-                          <object class="GtkButton" id="reset_metrics_id_button">
-                            <property name="label" translatable="yes">_Reset Metrics Identifier</property>
-                            <property name="visible">true</property>
-                            <property name="use_underline">true</property>
-                            <property name="halign">end</property>
-                            <property name="valign">center</property>
-                            <signal name="clicked" handler="on_reset_metrics_id_button_clicked" object="CcMetricsPanel" swapped="no" />
                           </object>
                         </child>
                       </object>
