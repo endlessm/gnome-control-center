@@ -1,24 +1,25 @@
-# Friulian translation for gnome-control-center.
-# Copyright (C) 2015 gnome-control-center's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-control-center package.
-# Fabio Tomat <f.t.public@gmail.com>, 2015, 2017.
-# Tomat <f.t.public@gmail.com>, 2017.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# Fabio Tomat <f.t.public@gmail.com>, 2015,2017
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Fabio Tomat <f.t.public@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2020-09-08 07:43+0000\n"
-"PO-Revision-Date: 2020-09-11 16:58+0200\n"
-"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
-"Language-Team: Friulian <f.t.public@gmail.com>\n"
-"Language: fur\n"
+"Project-Id-Version: gnome-control-center\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-15 12:13+0000\n"
+"PO-Revision-Date: 2021-09-15 12:13+0000\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
+"Language-Team: Friulian (http://www.transifex.com/endless-os/gnome-control-center/language/fur/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fur\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.1\n"
 
 #: panels/applications/cc-applications-panel.c:815
 msgid "System Bus"
@@ -47,7 +48,7 @@ msgstr "Acès complet a /dev"
 
 #: panels/applications/cc-applications-panel.c:825
 #: panels/network/gnome-network-panel.desktop.in.in:3
-#: panels/network/network-mobile.ui:252
+#: panels/network/network-mobile.ui:288
 msgid "Network"
 msgstr "Rêt"
 
@@ -72,8 +73,8 @@ msgid "File System"
 msgstr "File System"
 
 #: panels/applications/cc-applications-panel.c:841
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:933 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:948 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "Impostazions"
@@ -87,9 +88,7 @@ msgstr "Al pues cambiâ lis impostazions"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"%s al à i permès integrâts chi daurman e no si puedin modificâ. Se chest ti "
-"preocupe, considere la opzion di gjavâ cheste aplicazion."
+msgstr "%s al à i permès integrâts chi daurman e no si puedin modificâ. Se chest ti preocupe, considere la opzion di gjavâ cheste aplicazion."
 
 #: panels/applications/cc-applications-panel.c:1016
 msgid "Web Links"
@@ -171,11 +170,9 @@ msgstr "Permès e acès"
 
 #: panels/applications/cc-applications-panel.ui:106
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"Dâts e servizis che cheste aplicazion e à domandât di vê acès e permès che e "
-"à dibisugne."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "Dâts e servizis che cheste aplicazion e à domandât di vê acès e permès che e à dibisugne."
 
 #: panels/applications/cc-applications-panel.ui:121
 #: panels/applications/cc-applications-panel.ui:127
@@ -185,7 +182,6 @@ msgstr "Fotocjamare"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -197,10 +193,11 @@ msgstr "Fotocjamare"
 #: panels/keyboard/cc-keyboard-option.c:259
 #: panels/keyboard/cc-keyboard-option.c:378
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:85
-#: panels/keyboard/keyboard-shortcuts.c:368 panels/network/network-proxy.ui:126
+#: panels/keyboard/keyboard-shortcuts.c:368
+#: panels/network/network-proxy.ui:126
 #: panels/user-accounts/cc-user-panel.c:865
 #: panels/user-accounts/cc-user-panel.c:957
-#: subprojects/gvc/gvc-mixer-control.c:1876
+#: subprojects/gvc/gvc-mixer-control.c:1900
 msgid "Disabled"
 msgstr "Disativât"
 
@@ -227,11 +224,9 @@ msgstr "No pues jessi cambiade"
 
 #: panels/applications/cc-applications-panel.ui:175
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"Si puedin tornâ a viodi i permès individuâi pes aplicazions intes "
-"impostazions de <a href=\"privacy\">Privacy</a>."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "Si puedin tornâ a viodi i permès individuâi pes aplicazions intes impostazions de <a href=\"privacy\">Privacy</a>."
 
 #: panels/applications/cc-applications-panel.ui:199
 msgid "Integration"
@@ -296,8 +291,8 @@ msgid "Storage"
 msgstr "Archiviazion"
 
 #: panels/applications/cc-applications-panel.ui:423
-msgid "Open in Software"
-msgstr "Vierç in Software"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:473 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -311,9 +306,7 @@ msgstr "Prove une ricercje diferente"
 #: panels/applications/cc-applications-panel.ui:552
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr ""
-"Trop spazi disc che cheste aplicazion e sta ocupant cun dâts de aplicazion e "
-"cache."
+msgstr "Trop spazi disc che cheste aplicazion e sta ocupant cun dâts de aplicazion e cache."
 
 #: panels/applications/cc-applications-panel.ui:561
 msgid "Application"
@@ -339,11 +332,16 @@ msgstr "Nete cache…"
 msgid "Control various application permissions and settings"
 msgstr "Controle i permès e lis impostazions des varis aplicazions"
 
-#. FIXME
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "aplicazion;flatpak;permès;impostazion;"
+
+#. Nautilus puts wallpapers into this subdirectory:
+#: panels/background/bg-pictures-source.c:843
+msgid "Wallpapers"
+msgstr "Rivestiments"
 
 #: panels/background/cc-background-chooser.c:346
 msgid "Select a picture"
@@ -353,8 +351,8 @@ msgstr "Selezione un imagjin"
 #: panels/color/cc-color-calibrate.ui:25 panels/color/cc-color-panel.c:238
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:24
-#: panels/display/cc-display-panel.c:943
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/display/cc-display-panel.c:947
+#: panels/info-overview/cc-info-overview-panel.ui:247
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:865
 #: panels/network/connection-editor/connection-editor.ui:17
@@ -408,10 +406,6 @@ msgstr "Fonts atuâl"
 msgid "Add Picture…"
 msgstr "Zonte imagjin…"
 
-#: panels/background/cc-background-preview.ui:55
-msgid "Activities"
-msgstr "Ativitâts"
-
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Background"
 msgstr "Fondâl"
@@ -420,8 +414,9 @@ msgstr "Fondâl"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "Cambie la tô imagjin di fonts cuntun rivestiment o une foto"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Rivestiment;Fonts;Scrivanie;Desktop;"
 
@@ -471,8 +466,9 @@ msgstr "Bluetooth"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Impie e distude il Bluetooth e conet i tiei dispositîfs"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "condividi;condivision;bluetooth;obex;"
 
@@ -486,11 +482,10 @@ msgstr "Nissune aplicazion e pues caturâ fotos o video."
 
 #: panels/camera/cc-camera-panel.ui:75
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
-"L'ûs de fotocjamare e permet aes aplicazions di caturâ fotos e videos. "
-"Cualchi aplicazion e podarès no funzionâ ben disabilitant la fotocjamare."
 
 #: panels/camera/cc-camera-panel.ui:85
 msgid "Allow the applications below to use your camera."
@@ -504,22 +499,18 @@ msgstr "Nissune aplicazion e à domandât di doprâ la fotocjamare"
 msgid "Protect your pictures"
 msgstr "Protêç lis tôs imagjins"
 
-#. FIXME
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
-msgstr ""
-"schermi;visôr;bloc;diagnostiche;crash;privât;recent;temporani;tmp;indiç;non;"
-"rêt;identitât;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
+msgstr "schermi;visôr;bloc;diagnostiche;crash;privât;recent;temporani;tmp;indiç;non;rêt;identitât;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:347
 msgid "Place your calibration device over the square and press “Start”"
-msgstr ""
-"Place il tô dispositîf di calibrazion parsore dal cuadrât e sclice «Start»"
+msgstr "Place il tô dispositîf di calibrazion parsore dal cuadrât e sclice «Start»"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -527,9 +518,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:353
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
-"Sposte il tô dispositîf di calibrazion su la posizion di calibradure e "
-"frache «Continue»"
+msgstr "Sposte il tô dispositîf di calibrazion su la posizion di calibradure e frache «Continue»"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -537,9 +526,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:359
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr ""
-"Sposte il tô dispositîf di calibrazion inte posizion di superficie e sclice "
-"«Continue»"
+msgstr "Sposte il tô dispositîf di calibrazion inte posizion di superficie e sclice «Continue»"
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -732,8 +719,7 @@ msgstr "Cjape note di cheste URL."
 
 #: panels/color/cc-color-panel.c:854
 msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"Torne invie il computer e eseguìs il boot dal abituâl sisteme operatîf."
+msgstr "Torne invie il computer e eseguìs il boot dal abituâl sisteme operatîf."
 
 #: panels/color/cc-color-panel.c:855
 msgid "Type the URL into your browser to download and install the profile."
@@ -759,9 +745,7 @@ msgstr "Cree un profîl di colôr pal dispositîf selezionât"
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"Nol è stât rilevât nissun strument di misure. Controle che al seti impiât e "
-"tacât te juste maniere."
+msgstr "Nol è stât rilevât nissun strument di misure. Controle che al seti impiât e tacât te juste maniere."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1245
@@ -782,16 +766,12 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"La calibradure e produsarà un profîl che tu puedis doprâ par gjestî i colôrs "
-"dal visôr. Plui tu stâs a calibrâ miôr a sarà la cualitât dal profîl colôr."
+msgstr "La calibradure e produsarà un profîl che tu puedis doprâ par gjestî i colôrs dal visôr. Plui tu stâs a calibrâ miôr a sarà la cualitât dal profîl colôr."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
 "You will not be able to use your computer while calibration takes place."
-msgstr ""
-"Nol sarà pussibil doprâ il computer fintremai che la calibrazion e je in "
-"vore."
+msgstr "Nol sarà pussibil doprâ il computer fintremai che la calibrazion e je in vore."
 
 #. This is the approximate time it takes to calibrate the display.
 #: panels/color/cc-color-panel.ui:58
@@ -825,11 +805,9 @@ msgstr "Gjenar di visôr"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
-"Selezione un pont blanc prefissât pal visôr. La plui part dai visôrs a "
-"varessin di jessi calibrâts tal illuminant D65."
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "Selezione un pont blanc prefissât pal visôr. La plui part dai visôrs a varessin di jessi calibrâts tal illuminant D65."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
@@ -839,17 +817,13 @@ msgstr "Pont blanc dal profîl"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
-"Stabilìs la luminositât dal visôr come chê che tu dopris normalmentri. La "
-"gjestion dal colôr e sarà plui precise a chel nivel di luminositât."
+msgstr "Stabilìs la luminositât dal visôr come chê che tu dopris normalmentri. La gjestion dal colôr e sarà plui precise a chel nivel di luminositât."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"In alternative al è pussibil doprâ il nivel di luminositât doprât cuntun di "
-"chei altris profîi par chest dispositîf."
+msgstr "In alternative al è pussibil doprâ il nivel di luminositât doprât cuntun di chei altris profîi par chest dispositîf."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -859,9 +833,7 @@ msgstr "Luminositât visôr"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"Al è pussibil doprâ un profîl colôr su diviers computer, o ancje creâ profîi "
-"par diviersis condizions di iluminazion."
+msgstr "Al è pussibil doprâ un profîl colôr su diviers computer, o ancje creâ profîi par diviersis condizions di iluminazion."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -893,13 +865,10 @@ msgstr "Si scugne vê une conession internet"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"A podaressin jessi utii chestis istruzions su cemût doprâ il profîl su <a "
-"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> e <a href="
-"\"windows\">Microsoft Windows</a>."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "A podaressin jessi utii chestis istruzions su cemût doprâ il profîl su <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> e <a href=\"windows\">Microsoft Windows</a>."
 
 #: panels/color/cc-color-panel.ui:607
 msgid "Summary"
@@ -925,15 +894,11 @@ msgstr "_Zonte"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"Rilevât un probleme. Il profîl al podarès no lavorà ben. <a href=\"\">Mostre "
-"detais.</a>"
+msgstr "Rilevât un probleme. Il profîl al podarès no lavorà ben. <a href=\"\">Mostre detais.</a>"
 
 #: panels/color/cc-color-panel.ui:788
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr ""
-"Ogni dispositîf al scugne vê un profîl di colôr inzornât par podê gjestî il "
-"colôr."
+msgstr "Ogni dispositîf al scugne vê un profîl di colôr inzornât par podê gjestî il colôr."
 
 #. translators: Text used in link to privacy policy
 #: panels/color/cc-color-panel.ui:810
@@ -1152,19 +1117,20 @@ msgstr "Colôr"
 #: panels/color/gnome-color-panel.desktop.in.in:4
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr ""
-"Calibre il colôr dai tiei dispositîfs, come visôrs, fotocjamaris o stampants"
+msgstr "Calibre il colôr dai tiei dispositîfs, come visôrs, fotocjamaris o stampants"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Colôr;ICC;Profîll;Calibrazion;Stampant;Visôr;Schermi;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "Altri…"
 
-#: panels/common/cc-language-chooser.c:127 panels/region/cc-input-chooser.c:178
+#: panels/common/cc-language-chooser.c:127
+#: panels/region/cc-input-chooser.c:178
 msgid "More…"
 msgstr "Plui…"
 
@@ -1220,41 +1186,41 @@ msgstr "_Copie"
 msgid "Select _All"
 msgstr "Selezione _dut"
 
-#: panels/common/cc-util.c:127
-#: panels/network/connection-editor/ce-page-details.c:158
+#: panels/common/cc-util.c:130
+#: panels/network/connection-editor/ce-page-details.c:160
 msgid "Today"
 msgstr "Vuê"
 
-#: panels/common/cc-util.c:131
-#: panels/network/connection-editor/ce-page-details.c:160
+#: panels/common/cc-util.c:134
+#: panels/network/connection-editor/ce-page-details.c:162
 msgid "Yesterday"
 msgstr "Îr"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%e %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%e %b %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d ore"
 msgstr[1] "%d oris"
 
-#: panels/common/cc-util.c:166
+#: panels/common/cc-util.c:169
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minût"
 msgstr[1] "%d minûts"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1262,46 +1228,47 @@ msgstr[0] "%d secont"
 msgstr[1] "%d seconts"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s, %s e %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s e %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s e %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr "%s"
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 seconts"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1472,8 +1439,9 @@ msgstr "AM / PM"
 msgid "Change the date and time, including time zone"
 msgstr "Cambie date e ore, cussì ancje il fûs orari"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Orloi;Ore;Timp;Date;Fûs;Posizion;Orari;"
 
@@ -1483,8 +1451,7 @@ msgstr "Cambie lis impostazions di sisteme pe ore e pe date"
 
 #: panels/datetime/org.gnome.controlcenter.datetime.policy.in:12
 msgid "To change time or date settings, you need to authenticate."
-msgstr ""
-"Par cambiâ lis impostazions de ore e de date al è necessari autenticâsi."
+msgstr "Par cambiâ lis impostazions de ore e de date al è necessari autenticâsi."
 
 #: panels/default-apps/cc-default-apps-panel.ui:31
 msgid "_Web"
@@ -1519,21 +1486,21 @@ msgstr "Aplicazions predefinidis"
 msgid "Configure Default Applications"
 msgstr "Configure lis aplicazions predefinidis"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "predefinît;aplicazion;preferît;multimedia;"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:145
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr ""
-"Inviâ lis segnalazions di problemis tecnics nus jude di miorâ %s. Lis "
-"segnalazions a vegnin inviadis in maniere anonime e privis di dâts personâi. "
-"%s"
+msgstr "Inviâ lis segnalazions di problemis tecnics nus jude di miorâ %s. Lis segnalazions a vegnin inviadis in maniere anonime e privis di dâts personâi. %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:28
 msgid "Problem Reporting"
@@ -1551,33 +1518,30 @@ msgstr "Diagnostiche"
 msgid "Report your problems"
 msgstr "Segnale i problemis"
 
-#. FIXME
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;privacy;"
-msgstr ""
-"schermi;visôr;bloc;diagnostiche;colàs;crash;privât;resint;temporani;tmp;"
-"indiç;tabele;non;rêt;identitât;privacy;riservatece;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;"
+msgstr "schermi;visôr;bloc;diagnostiche;colàs;crash;privât;resint;temporani;tmp;indiç;tabele;non;rêt;identitât;privacy;riservatece;"
 
-#: panels/display/cc-display-panel.c:954
+#: panels/display/cc-display-panel.c:958
 #: panels/network/connection-editor/connection-editor.ui:27
 msgid "_Apply"
 msgstr "_Apliche"
 
-#: panels/display/cc-display-panel.c:975
+#: panels/display/cc-display-panel.c:979
 msgid "Apply Changes?"
 msgstr "Aplicâ lis modifichis?"
 
-#: panels/display/cc-display-panel.c:980
+#: panels/display/cc-display-panel.c:984
 msgid "Changes Cannot be Applied"
 msgstr "Lis modifichis no puedin jessi aplicadis"
 
-#: panels/display/cc-display-panel.c:981
+#: panels/display/cc-display-panel.c:985
 msgid "This could be due to hardware limitations."
 msgstr "Chest al podarès jessi par vie di limitazions hardware."
 
@@ -1610,9 +1574,7 @@ msgstr "Visôr primari"
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
-msgstr ""
-"Strissine i visôrs par fâ corispuindi la tô configurazion fisiche dai "
-"visôrs. Selezione un visôr par cambiâ lis sôs impostazions."
+msgstr "Strissine i visôrs par fâ corispuindi la tô configurazion fisiche dai visôrs. Selezione un visôr par cambiâ lis sôs impostazions."
 
 #: panels/display/cc-display-panel.ui:250
 msgid "Display Arrangement"
@@ -1631,7 +1593,8 @@ msgstr "Configurazion visôr"
 msgid "Displays"
 msgstr "Visôrs"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:451
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1707,9 +1670,7 @@ msgstr "Disabilitât in maniere temporanie fintremai doman"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"La lûs noturne a rint i colôrs dal schermi plui cjalts. Chest al pues judâ a "
-"rilassâ i voi e prevignî la svearole."
+msgstr "La lûs noturne a rint i colôrs dal schermi plui cjalts. Chest al pues judâ a rilassâ i voi e prevignî la svearole."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1729,6 +1690,7 @@ msgid "Times"
 msgstr "Oraris"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "Di"
 
@@ -1750,16 +1712,21 @@ msgstr "Minût"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "AM"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "PM"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "A"
 
@@ -1771,20 +1738,18 @@ msgstr "Temperadure colôr"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "Sielç cemût doprâ i visôrs e i proietôrs tacâts"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
-msgstr ""
-"Panel;Proietôr;xrandr;Schermi;Risoluzion;Refresh;Visôr;Gnot;Lûs;Blu;inrossâ;"
-"colôr;tramont;cricâ;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
+msgstr "Panel;Proietôr;xrandr;Schermi;Risoluzion;Refresh;Visôr;Gnot;Lûs;Blu;inrossâ;colôr;tramont;cricâ;"
 
-#: panels/info-overview/cc-info-overview-panel.c:416
-#: panels/info-overview/cc-info-overview-panel.c:431
-#: panels/info-overview/cc-info-overview-panel.c:443
-#: panels/info-overview/cc-info-overview-panel.c:489
-#: panels/info-overview/cc-info-overview-panel.c:519
+#: panels/info-overview/cc-info-overview-panel.c:432
+#: panels/info-overview/cc-info-overview-panel.c:447
+#: panels/info-overview/cc-info-overview-panel.c:459
+#: panels/info-overview/cc-info-overview-panel.c:505
+#: panels/info-overview/cc-info-overview-panel.c:535
 msgid "Unknown"
 msgstr "No cognossût"
 
@@ -1792,32 +1757,32 @@ msgstr "No cognossût"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:451
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "%s; Build ID: %s"
-msgstr "%s; ID di costruzion: %s"
+msgstr ""
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:466
+#: panels/info-overview/cc-info-overview-panel.c:482
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:469
+#: panels/info-overview/cc-info-overview-panel.c:485
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:675
+#: panels/info-overview/cc-info-overview-panel.c:691
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:679
+#: panels/info-overview/cc-info-overview-panel.c:695
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:681
+#: panels/info-overview/cc-info-overview-panel.c:697
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "No cognossût"
@@ -1849,7 +1814,7 @@ msgstr "Calcul…"
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:124
 msgid "OS Name"
-msgstr "Non dal SO"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:133
 msgid "OS Type"
@@ -1857,7 +1822,7 @@ msgstr "Gjenar di SO"
 
 #: panels/info-overview/cc-info-overview-panel.ui:142
 msgid "GNOME Version"
-msgstr "Version di GNOME"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:152
 msgid "Windowing System"
@@ -1871,19 +1836,23 @@ msgstr "Virtualizazion"
 msgid "Software Updates"
 msgstr "Inzornaments software"
 
-#: panels/info-overview/cc-info-overview-panel.ui:190
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:180
+#: panels/metrics/cc-metrics-panel.ui:105
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:203
 msgid "Rename Device"
 msgstr "Cambie non al dispositîf"
 
-#: panels/info-overview/cc-info-overview-panel.ui:207
+#: panels/info-overview/cc-info-overview-panel.ui:220
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr ""
-"Il non dal dispositîf al ven doprât par identificâ chest dispositîf cuant "
-"che al ven viodût te rêt o cuant che si associe i dispositîfs Bluetooth."
+msgstr "Il non dal dispositîf al ven doprât par identificâ chest dispositîf cuant che al ven viodût te rêt o cuant che si associe i dispositîfs Bluetooth."
 
-#: panels/info-overview/cc-info-overview-panel.ui:225
+#: panels/info-overview/cc-info-overview-panel.ui:238
 msgid "_Rename"
 msgstr "_Cambie non"
 
@@ -1900,14 +1869,10 @@ msgstr "Mostre informazions su chest sisteme"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
-"dispositîf;sisteme;informazions;non;host;memorie;procesôr;version;predefinît;"
-"aplicazion;preferide;cd;dvd;usb;audio;video;disc;estraibil;removibil;"
-"multimedie;esecuzion;autorun;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "dispositîf;sisteme;informazions;non;host;memorie;procesôr;version;predefinît;aplicazion;preferide;cd;dvd;usb;audio;video;disc;estraibil;removibil;multimedie;esecuzion;autorun;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2089,10 +2054,7 @@ msgstr "Tast caratars alternatîfs"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr ""
-"Il tast dai caratars alternatîfs al pues jessi doprât par inserî caratars "
-"adizionâi. Chescj cualchi volte a son stampâts te tastiere come tierce "
-"opzion."
+msgstr "Il tast dai caratars alternatîfs al pues jessi doprât par inserî caratars adizionâi. Chescj cualchi volte a son stampâts te tastiere come tierce opzion."
 
 #: panels/keyboard/cc-alt-chars-key-dialog.ui:45
 msgid "Left Alt"
@@ -2127,7 +2089,6 @@ msgstr "Scurtis personalizadis"
 #. Translators: This key is also known as 'third level
 #. * chooser'. AltGr is often used for this purpose. See
 #. * https://live.gnome.org/Design/SystemSettings/RegionAndLanguage
-#.
 #: panels/keyboard/cc-keyboard-option.c:337
 msgid "Alternative Characters Key"
 msgstr "Tascj caratar alternatîfs"
@@ -2135,7 +2096,6 @@ msgstr "Tascj caratar alternatîfs"
 #. Translators: The Compose key is used to initiate key
 #. * sequences that are combined to form a single character.
 #. * See http://en.wikipedia.org/wiki/Compose_key
-#.
 #: panels/keyboard/cc-keyboard-option.c:346
 msgid "Compose Key"
 msgstr "Tast Compose"
@@ -2182,9 +2142,7 @@ msgstr "Ristabilìs dutis lis scurtis?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"Ristabilint lis scurtis al podarès influençâ lis tôs scurtis personalizadis. "
-"Cheste operazion no pues jessi anulade."
+msgstr "Ristabilint lis scurtis al podarès influençâ lis tôs scurtis personalizadis. Cheste operazion no pues jessi anulade."
 
 #: panels/keyboard/cc-keyboard-panel.c:208
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:275
@@ -2217,31 +2175,31 @@ msgstr "Torne met la scurte ae sô cumbinazion di tascj predefinide"
 msgid "No keyboard shortcut found"
 msgstr "Nissune scurte di tastiere cjatade"
 
-#: panels/keyboard/cc-keyboard-shortcut-editor.c:404
+#: panels/keyboard/cc-keyboard-shortcut-editor.c:405
 #, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr ""
-"%s al è za doprât par %s. Se tu lu rimplacis, %s al vignarà disabilitât"
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
+msgstr "%s al è za doprât par %s. Se tu lu rimplacis, %s al vignarà disabilitât"
 
-#: panels/keyboard/cc-keyboard-shortcut-editor.c:547
+#: panels/keyboard/cc-keyboard-shortcut-editor.c:549
 msgid "Enter the new shortcut"
 msgstr "Inserìs la gnove scurte"
 
-#: panels/keyboard/cc-keyboard-shortcut-editor.c:564
+#: panels/keyboard/cc-keyboard-shortcut-editor.c:566
 msgid "Set Custom Shortcut"
 msgstr "Stabilìs la scurte personalizade"
 
-#: panels/keyboard/cc-keyboard-shortcut-editor.c:564
+#: panels/keyboard/cc-keyboard-shortcut-editor.c:566
 msgid "Set Shortcut"
 msgstr "Met la scurte"
 
 #. TRANSLATORS: %s is replaced with a description of the keyboard shortcut
-#: panels/keyboard/cc-keyboard-shortcut-editor.c:575
+#: panels/keyboard/cc-keyboard-shortcut-editor.c:577
 #, c-format
 msgid "Enter new shortcut to change %s."
 msgstr "Inserìs la gnove scurte par cambiâ %s."
 
-#: panels/keyboard/cc-keyboard-shortcut-editor.c:1002
+#: panels/keyboard/cc-keyboard-shortcut-editor.c:1004
 msgid "Add Custom Shortcut"
 msgstr "Zonte scurte personalizade"
 
@@ -2282,7 +2240,7 @@ msgstr "Zonte"
 msgid "Replace"
 msgstr "Rimplace"
 
-#: panels/keyboard/cc-keyboard-shortcut-editor.ui:324
+#: panels/keyboard/cc-keyboard-shortcut-editor.ui:325
 msgid "Set"
 msgstr "Met"
 
@@ -2293,16 +2251,14 @@ msgstr "Scurte di tastiere"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
 msgid "View and change keyboard shortcuts and set your typing preferences"
-msgstr ""
-"Viôt e cambie la scurte di tastiere e stabilìs lis preferencis di digjitazion"
+msgstr "Viôt e cambie la scurte di tastiere e stabilìs lis preferencis di digjitazion"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
-"Scurte;Spazi di lavôr;Barcon;Ridimensione;Cambiâ dimension;Ingrandiment;"
-"Contrast;Inpunt;Jentrade;Sorzint;Bloche;Volum;"
+msgstr "Scurte;Spazi di lavôr;Barcon;Ridimensione;Cambiâ dimension;Ingrandiment;Contrast;Inpunt;Jentrade;Sorzint;Bloche;Volum;"
 
 #: panels/location/cc-location-panel.ui:31
 msgid "Location services turned off"
@@ -2315,18 +2271,15 @@ msgstr "Nissune aplicazion e pues otignî informazion su la posizion."
 #: panels/location/cc-location-panel.ui:72
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
-"I servizis su la localizazion a permetin a lis aplicazions di cognossi la tô "
-"posizion. Doprant il Wi-Fi e la bande largje mobile e aumente la precision."
 
 #: panels/location/cc-location-panel.ui:81
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"Al dopre il servizi di localizazion di Mozilla: <a href='https://location."
-"services.mozilla.com/privacy'>Politiche di Privacy</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "Al dopre il servizi di localizazion di Mozilla: <a href='https://location.services.mozilla.com/privacy'>Politiche di Privacy</a>"
 
 #: panels/location/cc-location-panel.ui:93
 msgid "Allow the applications below to determine your location."
@@ -2340,14 +2293,11 @@ msgstr "Nissune aplicazion e à domandât di doprâ la tô posizion"
 msgid "Protect your location information"
 msgstr "Protêç lis informazion su la tô posizion"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
-"Automatically locking the screen prevents others from accessing the computer "
-"while you're away."
-msgstr ""
-"Il blocâ in automatic il schermi al impedìs a altris di doprâ il computer "
-"intant che si è vie."
+"Automatically locking the screen prevents others from accessing the computer"
+" while you're away."
+msgstr "Il blocâ in automatic il schermi al impedìs a altris di doprâ il computer intant che si è vie."
 
 #: panels/lock/cc-lock-panel.ui:44
 msgid "Blank Screen Delay"
@@ -2366,10 +2316,9 @@ msgid "Automatic _Screen Lock Delay"
 msgstr "Ritart bloc _schermi automatic"
 
 #: panels/lock/cc-lock-panel.ui:83
-msgid "Period after the screen blanks when the screen is automatically locked."
-msgstr ""
-"Periodi di timp, dopo che il schermi si è scurît, par blocâ in automatic il "
-"schermi."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
+msgstr "Periodi di timp, dopo che il schermi si è scurît, par blocâ in automatic il schermi."
 
 #: panels/lock/cc-lock-panel.ui:103
 msgid "Show _Notifications on Lock Screen"
@@ -2383,53 +2332,59 @@ msgstr "Impedìs gnûfs dispositîfs _USB"
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr ""
-"Impedìs ai gnûfs dispositîfs USB di interagjî cul sisteme cuant che il "
-"schermi al è blocât."
+msgstr "Impedìs ai gnûfs dispositîfs USB di interagjî cul sisteme cuant che il schermi al è blocât."
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:166
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Sospension dal schermi"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:170
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 seconts"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:174
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 minût"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:178
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 minûts"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:182
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 minûts"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:186
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 minûts"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:190
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 minûts"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:194
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2503,7 +2458,38 @@ msgstr "Bloc schermi"
 msgid "Lock your screen"
 msgstr "Bloche il to schermi"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+msgid "Metrics services turned off"
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:75
+msgid "_Metrics"
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:93
+msgid ""
+"_Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+msgid "Metrics"
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+msgid "Enable or disable Endless metrics collection"
+msgstr ""
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "Il microfon al è distudât"
@@ -2516,10 +2502,8 @@ msgstr "Nissune aplicazion e pues regjistrâ suns."
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
-"L'ûs dal microfon al permet aes aplicazions di regjistrâ e scoltâ i suns. "
-"Cualchi aplicazion e podarès no funzionâ ben disabilitant il microfon."
 
 #: panels/microphone/cc-microphone-panel.ui:85
 msgid "Allow the applications below to use your microphone."
@@ -2533,7 +2517,6 @@ msgstr "Nissune aplicazion e à domandât di doprâ il microfon"
 msgid "Protect your conversations"
 msgstr "Protêç lis tôs conversazions"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 msgid "General"
 msgstr "Gjenerâl"
@@ -2566,8 +2549,10 @@ msgstr "Velocitât Mouse"
 msgid "Double-click timeout"
 msgstr "Timp util pal dopli-clic"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:267 panels/mouse/cc-mouse-panel.ui:430
 msgid "Natural Scrolling"
 msgstr "Scoriment naturâl"
@@ -2639,24 +2624,20 @@ msgstr "Mou­se­ e­ ­Touch­pad"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr ""
-"Cambie la sensibilitât di mouse e touchpad e selezione se par man diestre o "
-"çampe"
+msgstr "Cambie la sensibilitât di mouse e touchpad e selezione se par man diestre o çampe"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr ""
-"Trackpad;Cursôr;Cursôr;Clic;Tap;Dopli;Boton;Trackball;Cursôr;Scroll;"
-"Scoriment;"
+msgstr "Trackpad;Cursôr;Cursôr;Clic;Tap;Dopli;Boton;Trackball;Cursôr;Scroll;Scoriment;"
 
-#: panels/network/cc-network-panel.c:648 panels/network/cc-wifi-panel.ui:359
+#: panels/network/cc-network-panel.c:661 panels/network/cc-wifi-panel.ui:359
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr ""
-"Orpo, al semee che alc al sedi lât par stuart. Contate il furnidôr di "
-"software."
+msgstr "Orpo, al semee che alc al sedi lât par stuart. Contate il furnidôr di software."
 
-#: panels/network/cc-network-panel.c:654
+#: panels/network/cc-network-panel.c:667
 msgid "NetworkManager needs to be running."
 msgstr "NetworkManager al à di jessi in esecuzion."
 
@@ -2673,7 +2654,8 @@ msgstr "VPN"
 msgid "Not set up"
 msgstr "No configurade"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:207
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2701,9 +2683,9 @@ msgid "Secure network"
 msgstr "Rêt sigure"
 
 #: panels/network/cc-wifi-connection-row.ui:102
-#: panels/network/net-device-ethernet.c:316
+#: panels/network/net-device-ethernet.c:330
 #: panels/network/network-bluetooth.ui:76
-#: panels/network/network-ethernet.ui:111 panels/network/network-mobile.ui:414
+#: panels/network/network-ethernet.ui:111 panels/network/network-mobile.ui:450
 #: panels/network/network-vpn.ui:75
 msgid "Options…"
 msgstr "Opzions…"
@@ -2714,9 +2696,7 @@ msgstr "Opzions…"
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr ""
-"Impiant l'hotspot tu ti disconetarâs di %s e nol sarà pussibil acedi  su "
-"internet vie Wi-Fi."
+msgstr "Impiant l'hotspot tu ti disconetarâs di %s e nol sarà pussibil acedi  su internet vie Wi-Fi."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:248
 msgid "Must have a minimum of 8 characters"
@@ -2728,13 +2708,10 @@ msgstr "Impiâ hotspot Wi-Fi?"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr ""
-"L'hotspot Wi-Fi al permet a chei altris di doprâ la tô conession internet, "
-"creant une rêt Wi-Fi dulà che a puedin conetisi. Par fâlu tu scugnis vê une "
-"conession a internet cuntune sorzint divierse dal Wi-Fi."
+msgstr "L'hotspot Wi-Fi al permet a chei altris di doprâ la tô conession internet, creant une rêt Wi-Fi dulà che a puedin conetisi. Par fâlu tu scugnis vê une conession a internet cuntune sorzint divierse dal Wi-Fi."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
 msgid "Network Name"
@@ -2848,13 +2825,9 @@ msgstr "Stabile"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"La direzion MAC inseride chi e vignarà doprade come direzion hardware pal "
-"dispositîf di rêt dulà che cheste conession e je ativade. Cheste "
-"funzionalitât e je cognossude come clonazion MAC o spoofing. Esempli: "
-"00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "La direzion MAC inseride chi e vignarà doprade come direzion hardware pal dispositîf di rêt dulà che cheste conession e je ativade. Cheste funzionalitât e je cognossude come clonazion MAC o spoofing. Esempli: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -2862,49 +2835,49 @@ msgid "Profile %d"
 msgstr "Profîl %d"
 
 #. TRANSLATORS: this WEP WiFi security
-#: panels/network/connection-editor/ce-page-details.c:93
+#: panels/network/connection-editor/ce-page-details.c:95
 #: panels/network/net-device-wifi.c:229
 msgid "WEP"
 msgstr "WEP"
 
 #. TRANSLATORS: this WPA WiFi security
-#: panels/network/connection-editor/ce-page-details.c:97
+#: panels/network/connection-editor/ce-page-details.c:99
 #: panels/network/net-device-wifi.c:234
 msgid "WPA"
 msgstr "WPA"
 
 #. TRANSLATORS: this WPA3 WiFi security
-#: panels/network/connection-editor/ce-page-details.c:103
+#: panels/network/connection-editor/ce-page-details.c:105
 msgid "WPA3"
 msgstr "WPA3"
 
 #. TRANSLATORS: this Enhanced Open WiFi security
-#: panels/network/connection-editor/ce-page-details.c:108
+#: panels/network/connection-editor/ce-page-details.c:110
 #: panels/network/connection-editor/ce-page-security.c:278
 msgid "Enhanced Open"
 msgstr ""
 
 #. TRANSLATORS: this WPA WiFi security
-#: panels/network/connection-editor/ce-page-details.c:115
+#: panels/network/connection-editor/ce-page-details.c:117
 msgid "WPA2"
 msgstr "WPA2"
 
 #. TRANSLATORS: this Enterprise WiFi security
-#: panels/network/connection-editor/ce-page-details.c:121
+#: panels/network/connection-editor/ce-page-details.c:123
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: panels/network/connection-editor/ce-page-details.c:126
+#: panels/network/connection-editor/ce-page-details.c:128
 #: panels/network/net-device-wifi.c:219
 msgctxt "Wifi security"
 msgid "None"
 msgstr "Nissune"
 
-#: panels/network/connection-editor/ce-page-details.c:147
+#: panels/network/connection-editor/ce-page-details.c:149
 msgid "Never"
 msgstr "Mai"
 
-#: panels/network/connection-editor/ce-page-details.c:162
+#: panels/network/connection-editor/ce-page-details.c:164
 #: panels/network/net-device-ethernet.c:107
 #, c-format
 msgid "%i day ago"
@@ -2912,91 +2885,117 @@ msgid_plural "%i days ago"
 msgstr[0] "%i zornade indaûr"
 msgstr[1] "%i dîs indaûr"
 
-#: panels/network/connection-editor/ce-page-details.c:287
+#: panels/network/connection-editor/ce-page-details.c:291
 #, c-format
 msgid "%d Mb/s (%1.1f GHz)"
 msgstr "%d Mb/s (%1.1f GHz)"
 
 #. Translators: network device speed
-#: panels/network/connection-editor/ce-page-details.c:289
-#: panels/network/net-device-ethernet.c:201
+#: panels/network/connection-editor/ce-page-details.c:293
+#: panels/network/net-device-ethernet.c:215
 #, c-format
 msgid "%d Mb/s"
 msgstr "%d Mb/s"
 
-#: panels/network/connection-editor/ce-page-details.c:306
+#: panels/network/connection-editor/ce-page-details.c:310
 msgid "2.4 GHz / 5 GHz"
 msgstr "2.4 GHz / 5 GHz"
 
-#: panels/network/connection-editor/ce-page-details.c:308
+#: panels/network/connection-editor/ce-page-details.c:312
 msgid "2.4 GHz"
 msgstr "2.4 GHz"
 
-#: panels/network/connection-editor/ce-page-details.c:310
+#: panels/network/connection-editor/ce-page-details.c:314
 msgid "5 GHz"
 msgstr "5 GHz"
 
-#: panels/network/connection-editor/ce-page-details.c:330
+#: panels/network/connection-editor/ce-page-details.c:334
 msgctxt "Signal strength"
 msgid "None"
 msgstr "Nissune"
 
-#: panels/network/connection-editor/ce-page-details.c:332
+#: panels/network/connection-editor/ce-page-details.c:336
 msgctxt "Signal strength"
 msgid "Weak"
 msgstr "Debul"
 
-#: panels/network/connection-editor/ce-page-details.c:334
+#: panels/network/connection-editor/ce-page-details.c:338
 msgctxt "Signal strength"
 msgid "Ok"
 msgstr "Ok"
 
-#: panels/network/connection-editor/ce-page-details.c:336
+#: panels/network/connection-editor/ce-page-details.c:340
 msgctxt "Signal strength"
 msgid "Good"
 msgstr "Bon"
 
-#: panels/network/connection-editor/ce-page-details.c:338
+#: panels/network/connection-editor/ce-page-details.c:342
 msgctxt "Signal strength"
 msgid "Excellent"
 msgstr "Ecelent"
 
-#: panels/network/connection-editor/ce-page-details.c:396
+#: panels/network/connection-editor/ce-page-details.c:414
 #: panels/network/connection-editor/details-page.ui:108
-#: panels/network/net-device-ethernet.c:142
-#: panels/network/net-device-mobile.c:430
+#: panels/network/net-device-ethernet.c:149
+#: panels/network/net-device-mobile.c:447
 msgid "IPv4 Address"
 msgstr "Direzion IPv4"
 
-#: panels/network/connection-editor/ce-page-details.c:397
+#: panels/network/connection-editor/ce-page-details.c:415
 #: panels/network/connection-editor/details-page.ui:126
-#: panels/network/net-device-ethernet.c:143
-#: panels/network/net-device-ethernet.c:147
-#: panels/network/net-device-mobile.c:431 panels/network/network-mobile.ui:200
+#: panels/network/net-device-ethernet.c:150
+#: panels/network/net-device-mobile.c:448 panels/network/network-mobile.ui:218
 msgid "IPv6 Address"
 msgstr "Direzion IPv6"
 
-#: panels/network/connection-editor/ce-page-details.c:400
-#: panels/network/connection-editor/ce-page-details.c:401
-#: panels/network/net-device-ethernet.c:145
-#: panels/network/net-device-mobile.c:434
-#: panels/network/net-device-mobile.c:435 panels/network/network-mobile.ui:183
+#: panels/network/connection-editor/ce-page-details.c:418
+#: panels/network/connection-editor/ce-page-details.c:419
+#: panels/network/net-device-ethernet.c:152
+#: panels/network/net-device-ethernet.c:154
+#: panels/network/net-device-mobile.c:451
+#: panels/network/net-device-mobile.c:452 panels/network/network-mobile.ui:201
 msgid "IP Address"
 msgstr "Direzions IP"
 
-#: panels/network/connection-editor/ce-page-details.c:434
+#: panels/network/connection-editor/ce-page-details.c:423
+#: panels/network/net-device-ethernet.c:164
+#: panels/network/net-device-mobile.c:456
+msgid "DNS4"
+msgstr ""
+
+#: panels/network/connection-editor/ce-page-details.c:424
+#: panels/network/net-device-ethernet.c:165
+#: panels/network/net-device-mobile.c:457
+msgid "DNS6"
+msgstr ""
+
+#: panels/network/connection-editor/ce-page-details.c:427
+#: panels/network/connection-editor/ce-page-details.c:428
+#: panels/network/connection-editor/details-page.ui:199
+#: panels/network/connection-editor/details-page.ui:218
+#: panels/network/connection-editor/ip4-page.ui:211
+#: panels/network/connection-editor/ip6-page.ui:225
+#: panels/network/net-device-ethernet.c:167
+#: panels/network/net-device-ethernet.c:169
+#: panels/network/net-device-mobile.c:459
+#: panels/network/net-device-mobile.c:460 panels/network/network-mobile.ui:253
+#: panels/network/network-mobile.ui:271
+msgid "DNS"
+msgstr "DNS"
+
+#: panels/network/connection-editor/ce-page-details.c:461
 msgid "Forget Connection"
 msgstr "Dismentee conession"
 
-#: panels/network/connection-editor/ce-page-details.c:436
+#: panels/network/connection-editor/ce-page-details.c:463
 msgid "Remove Connection Profile"
 msgstr "Gjave profîl conession"
 
-#: panels/network/connection-editor/ce-page-details.c:438
+#: panels/network/connection-editor/ce-page-details.c:465
 msgid "Remove VPN"
 msgstr "Gjave VPN"
 
-#: panels/network/connection-editor/ce-page-details.c:456
+#: panels/network/connection-editor/ce-page-details.c:483
 msgid "Details"
 msgstr "Detais"
 
@@ -3072,7 +3071,7 @@ msgid "Link speed"
 msgstr "Velocitât colegament"
 
 #: panels/network/connection-editor/details-page.ui:144
-#: panels/network/net-device-ethernet.c:150
+#: panels/network/net-device-ethernet.c:157
 msgid "Hardware Address"
 msgstr "Direzion Hardware"
 
@@ -3081,42 +3080,32 @@ msgid "Supported Frequencies"
 msgstr "Frecuencis supuartadis"
 
 #: panels/network/connection-editor/details-page.ui:180
-#: panels/network/net-device-ethernet.c:154
-#: panels/network/network-mobile.ui:217
+#: panels/network/net-device-ethernet.c:161
+#: panels/network/network-mobile.ui:235
 msgid "Default Route"
 msgstr "Instradament predefinît"
 
-#: panels/network/connection-editor/details-page.ui:199
-#: panels/network/connection-editor/ip4-page.ui:211
-#: panels/network/connection-editor/ip6-page.ui:225
-#: panels/network/net-device-ethernet.c:156
-#: panels/network/network-mobile.ui:235
-msgid "DNS"
-msgstr "DNS"
-
-#: panels/network/connection-editor/details-page.ui:217
+#: panels/network/connection-editor/details-page.ui:236
 msgid "Last Used"
 msgstr "Ultime volte doprât"
 
-#: panels/network/connection-editor/details-page.ui:376
+#: panels/network/connection-editor/details-page.ui:415
 msgid "Connect _automatically"
 msgstr "Conet in _automatic"
 
-#: panels/network/connection-editor/details-page.ui:395
+#: panels/network/connection-editor/details-page.ui:434
 msgid "Make available to _other users"
 msgstr "Rindi disponibil a chei _altris utents"
 
-#: panels/network/connection-editor/details-page.ui:428
+#: panels/network/connection-editor/details-page.ui:467
 msgid "_Metered connection: has data limits or can incur charges"
-msgstr ""
-"Conession a _consum: e à un limit di dâts o si pues lâ cuintri a spesis"
+msgstr "Conession a _consum: e à un limit di dâts o si pues lâ cuintri a spesis"
 
-#: panels/network/connection-editor/details-page.ui:439
+#: panels/network/connection-editor/details-page.ui:478
 msgid ""
-"Software updates and other large downloads will not be started automatically."
-msgstr ""
-"I inzornaments dal software e altris grancj discjariaments no vignaran "
-"inviâts in automatic."
+"Software updates and other large downloads will not be started "
+"automatically."
+msgstr "I inzornaments dal software e altris grancj discjariaments no vignaran inviâts in automatic."
 
 #: panels/network/connection-editor/ethernet-page.ui:25
 #: panels/network/connection-editor/vpn-page.ui:23
@@ -3276,15 +3265,10 @@ msgstr "Impussibil impuartâ la conession VPN"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
-"Impussibil lei il file «%s» opûr nol ten informazions di conession VPN "
-"ricognossudis\n"
-"\n"
-"Erôr: %s."
+msgstr "Impussibil lei il file «%s» opûr nol ten informazions di conession VPN ricognossudis\n\nErôr: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3314,10 +3298,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
-"Impussibil espuartâ la conession VPN «%s» su %s.\n"
-"\n"
-"Erôr: %s."
+msgstr "Impussibil espuartâ la conession VPN «%s» su %s.\n\nErôr: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3339,22 +3320,21 @@ msgstr "_BSSID"
 msgid "Control how you connect to the Internet"
 msgstr "Controle cemût conetiti a Internet"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr ""
-"Rêt;Network;IP;LAN;Proxy;WAN;Broadband;Bande largje;Modem;Bluetooth;vpn;DNS;"
+msgstr "Rêt;Network;IP;LAN;Proxy;WAN;Broadband;Bande largje;Modem;Bluetooth;vpn;DNS;"
 
 #: panels/network/gnome-wifi-panel.desktop.in.in:4
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "Controle cemût conetiti aes rêts Wi-Fi"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
-msgstr ""
-"Rêt;Network;Wireless;Cence fîl;Wi-Fi;Wifi;IP;LAN;Broadband;Bande largje;DNS;"
-"Hotspot;"
+msgstr "Rêt;Network;Wireless;Cence fîl;Wi-Fi;Wifi;IP;LAN;Broadband;Bande largje;DNS;Hotspot;"
 
 #: panels/network/net-device-ethernet.c:95
 msgid "never"
@@ -3368,7 +3348,7 @@ msgstr "vuê"
 msgid "yesterday"
 msgstr "îr"
 
-#: panels/network/net-device-ethernet.c:161
+#: panels/network/net-device-ethernet.c:175
 msgid "Last used"
 msgstr "Ultime volte doprât"
 
@@ -3376,13 +3356,13 @@ msgstr "Ultime volte doprât"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
-#: panels/network/net-device-ethernet.c:250
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/net-device-ethernet.c:264
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "Fîl"
 
-#: panels/network/net-device-mobile.c:207
+#: panels/network/net-device-mobile.c:209
 msgid "Add new connection"
 msgstr "Zonte gnove conession"
 
@@ -3390,9 +3370,7 @@ msgstr "Zonte gnove conession"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr ""
-"A vegnaran pierdûts i detais par lis rêts selezionadis, includût lis "
-"password e ogni configurazion personalizade."
+msgstr "A vegnaran pierdûts i detais par lis rêts selezionadis, includût lis password e ogni configurazion personalizade."
 
 #: panels/network/net-device-wifi.c:855
 msgid "_Forget"
@@ -3402,7 +3380,8 @@ msgstr "_Dismentee"
 msgid "Known Wi-Fi Networks"
 msgstr "Rêts Wi-Fi cognossudis"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1053
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3439,9 +3418,7 @@ msgstr "Distudât"
 #: panels/network/net-proxy.c:113
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"La individuazion automatiche dal proxy web e ven doprade cuant che nol ven "
-"dât l'URL di configurazion."
+msgstr "La individuazion automatiche dal proxy web e ven doprade cuant che nol ven dât l'URL di configurazion."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3455,7 +3432,6 @@ msgstr "Nol è conseât par rêts publichis no fidadis."
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:66 panels/network/net-vpn.c:163
 #, c-format
 msgid "%s VPN"
@@ -3579,7 +3555,7 @@ msgid "Authentication required"
 msgstr "Autenticazion necessarie"
 
 #. TRANSLATORS: device status
-#: panels/network/panel-common.c:63
+#: panels/network/panel-common.c:63 panels/updates/cc-updates-panel.c:603
 msgid "Connected"
 msgstr "Tacât"
 
@@ -3901,7 +3877,7 @@ msgstr "e mancje la password EAP-LEAP"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "Non _utent"
 
@@ -3910,8 +3886,8 @@ msgstr "Non _utent"
 #: panels/network/wireless-security/ws-leap.ui:32
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:436
 msgid "_Password"
 msgstr "_Password"
@@ -4006,17 +3982,10 @@ msgstr "Lis clâfs privadis no cifradis no son siguris"
 
 #: panels/network/wireless-security/eap-method-tls.c:269
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"La clâf privade selezionade no semee jessi protete di une password. Chest al "
-"pues comprometi lis propris credenziâls di sigurece. Selezione une clâf "
-"privade protete di password.\n"
-"\n"
-"(Al è pussibil protezi lis propris clâfs privadis cun openssl)"
+msgstr "La clâf privade selezionade no semee jessi protete di une password. Chest al pues comprometi lis propris credenziâls di sigurece. Selezione une clâf privade protete di password.\n\n(Al è pussibil protezi lis propris clâfs privadis cun openssl)"
 
 #: panels/network/wireless-security/eap-method-tls.c:500
 msgid "Choose your personal certificate"
@@ -4068,7 +4037,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "_Domini"
@@ -4123,26 +4092,20 @@ msgstr "e mancje la clâf wep"
 #: panels/network/wireless-security/ws-wep-key.c:116
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
-"clâf wep no valide: une clâf di lungjece %zu e scugne contignî nome cifris "
-"esadecimâi"
+msgstr "clâf wep no valide: une clâf di lungjece %zu e scugne contignî nome cifris esadecimâi"
 
 #: panels/network/wireless-security/ws-wep-key.c:124
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
-"clâf wep no valide: une clâf di lungjece %zu e scugne contignî nome caratars "
-"ascii"
+msgstr "clâf wep no valide: une clâf di lungjece %zu e scugne contignî nome caratars ascii"
 
 #: panels/network/wireless-security/ws-wep-key.c:130
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
-"clâf wep no valide: lungjece %zu de clâf sbaliade. Une clâf e scugne jessi o "
-"di lungjece 5/13 (ascii) o 10/26 (esadecimâl)"
+msgstr "clâf wep no valide: lungjece %zu de clâf sbaliade. Une clâf e scugne jessi o di lungjece 5/13 (ascii) o 10/26 (esadecimâl)"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4150,8 +4113,7 @@ msgstr "clâf wep no valide: la passphrase no pues jessi vueide"
 
 #: panels/network/wireless-security/ws-wep-key.c:139
 msgid "invalid wep-key: passphrase must be shorter than 64 characters"
-msgstr ""
-"clâf wep no valide: la passphrase no pues jessi plui curte di 64 caratars"
+msgstr "clâf wep no valide: la passphrase no pues jessi plui curte di 64 caratars"
 
 #: panels/network/wireless-security/ws-wep-key.ui:11
 msgid "1 (Default)"
@@ -4182,14 +4144,11 @@ msgstr "Indi_ç WEP"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
-"wpa-psk no valit: lungjece %zu de clâf no valide. E scugne jessi [8,63] "
-"bytes o 64 cifris esadecimâi"
+msgstr "wpa-psk no valit: lungjece %zu de clâf no valide. E scugne jessi [8,63] bytes o 64 cifris esadecimâi"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:79
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr ""
-"wpa-psk no valit: impussibil interpretâ la clâf di 64 byte come esadecimâl"
+msgstr "wpa-psk no valit: impussibil interpretâ la clâf di 64 byte come esadecimâl"
 
 #: panels/network/wireless-security/ws-wpa-psk.ui:42
 msgid "_Type"
@@ -4216,11 +4175,10 @@ msgstr "Notifichis a com_parse"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
-"Lis notifichis a continuaran a vignî fûr inte liste des notifichis cuant che "
-"lis notifichis a comparse a son disabilitadis."
+msgstr "Lis notifichis a continuaran a vignî fûr inte liste des notifichis cuant che lis notifichis a comparse a son disabilitadis."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4258,8 +4216,9 @@ msgstr "Notifichis sul schermi b_locât"
 msgid "Control which notifications are displayed and what they show"
 msgstr "Controle cualis notifichis mostrâ e ce che a mostrin"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Notifichis;Banner;Messaç;Tray;Popup;"
 
@@ -4281,7 +4240,6 @@ msgstr "Erôr tal gjava l'account"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:984
 #, c-format
 msgid "%s removed"
@@ -4298,17 +4256,15 @@ msgstr "Conetiti ai tiei account online e decît cemût doprâju"
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Conversazions;Calendari;Mail;E-"
-"mail;Email;Pueste;Contat;Contats;ownCloud;Kerberos;IMAP;SMTP;Pocket;"
-"ReadItLater;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Conversazions;Calendari;Mail;E-mail;Email;Pueste;Contat;Contats;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:61
 msgid "Undo"
 msgstr "Disfe"
@@ -4319,8 +4275,7 @@ msgstr "Tachiti ai tiei dâts tal cloud"
 
 #: panels/online-accounts/online-accounts.ui:109
 msgid "No internet connection — connect to set up new online accounts"
-msgstr ""
-"Nissune conession a internet — conetiti par configurâ gnûfs account onlinie"
+msgstr "Nissune conession a internet — conetiti par configurâ gnûfs account onlinie"
 
 #: panels/online-accounts/online-accounts.ui:134
 msgid "Add an account"
@@ -4585,9 +4540,7 @@ msgstr "Bande largje _mobile"
 
 #: panels/power/cc-power-panel.c:2056
 msgid "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
-msgstr ""
-"Si pues distudâ la bande largje mobile (3G, 4G, LTE, ecc.) par sparagnâ "
-"curint."
+msgstr "Si pues distudâ la bande largje mobile (3G, 4G, LTE, ecc.) par sparagnâ curint."
 
 #: panels/power/cc-power-panel.c:2106
 msgid "_Bluetooth"
@@ -4693,17 +4646,14 @@ msgstr "Alimentazion"
 
 #: panels/power/gnome-power-panel.desktop.in.in:4
 msgid "View your battery status and change power saving settings"
-msgstr ""
-"Mostre il stât de batarie e cambie lis impostazions di sparagn energjetic"
+msgstr "Mostre il stât de batarie e cambie lis impostazions di sparagn energjetic"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
-"Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-"Energy;"
-msgstr ""
-"Alimentazion;Sleep;Sospension;Ibernazion;Batarie;Luminositât;Visôr;Dim;DPMS;"
-"Scûr;Vueit;Monitor;Inatîf;Energjie;"
+"Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;"
+msgstr "Alimentazion;Sleep;Sospension;Ibernazion;Batarie;Luminositât;Visôr;Dim;DPMS;Scûr;Vueit;Monitor;Inatîf;Energjie;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
@@ -4750,8 +4700,9 @@ msgstr "Stampants"
 msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr "Zonte stampants, mostre i lavôrs di stampe e decît cemût stampâ"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Stampant;Code;Stampe;Cjarte;Ingjustri;Toner;"
 
@@ -4774,15 +4725,15 @@ msgstr "_Sbloche"
 msgid "No Printers Found"
 msgstr "Nissune stampant cjatade"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "Scrîf une direzion di rêt o cîr une stampant"
 
 #: panels/printers/new-printer-dialog.ui:353
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"Scrîf non utent e password par viodi lis stampants su Servidôr Stampant."
+msgstr "Scrîf non utent e password par viodi lis stampants su Servidôr Stampant."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:74
@@ -4801,19 +4752,18 @@ msgstr "Selezione file PPD"
 
 #: panels/printers/pp-details-dialog.c:257
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
-msgstr ""
-"File PostScript Printer Description (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD."
-"GZ)"
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
+msgstr "File PostScript Printer Description (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "Colocazion"
 
 #. Translators: Name of column showing printer drivers
 #: panels/printers/pp-details-dialog.ui:122
-#: panels/printers/pp-ppd-selection-dialog.c:248
+#: panels/printers/pp-ppd-selection-dialog.c:250
 msgid "Driver"
 msgstr "Driver"
 
@@ -4942,7 +4892,8 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "Finît"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:363
 #, c-format
 msgid "%u Job Requires Authentication"
@@ -4950,7 +4901,8 @@ msgid_plural "%u Jobs Require Authentication"
 msgstr[0] "%u lavôr al domande autenticazion"
 msgstr[1] "%u lavôrs a domandin autenticazion"
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:520
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -4968,22 +4920,26 @@ msgstr "Inserìs lis credenziâls par stampâ di %s."
 msgid "Domain"
 msgstr "Domini"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "A_utentiche"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "Nete dut"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "_Autentiche"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "Nissun lavôr di stampe atîf"
@@ -4992,13 +4948,15 @@ msgstr "Nissun lavôr di stampe atîf"
 msgid "Unlock Print Server"
 msgstr "Sbloche servidôr di stampe"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:367
 #, c-format
 msgid "Unlock %s."
 msgstr "Sbloche %s."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:371
 #, c-format
 msgid "Enter username and password to view printers on %s."
@@ -5035,7 +4993,8 @@ msgstr "Colocazion: %s"
 msgid "Address: %s"
 msgstr "Direzion: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1697
 msgid "Server requires authentication"
 msgstr "Il server al domande autenticazion"
@@ -5086,13 +5045,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Gjenerâl"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:654
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "Impostazions pagjine"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:657
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5104,7 +5065,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "Lavôr"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:663
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5116,7 +5078,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Colôr"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:669
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5177,7 +5140,7 @@ msgid "No pre-filtering"
 msgstr "Nissune pre-filtradure"
 
 #. Translators: Name of column showing printer manufacturers
-#: panels/printers/pp-ppd-selection-dialog.c:231
+#: panels/printers/pp-ppd-selection-dialog.c:233
 msgid "Manufacturer"
 msgstr "Produtôr"
 
@@ -5316,7 +5279,8 @@ msgstr "Detais stampant"
 msgid "Use Printer by Default"
 msgstr "Dopre la stampant come impostazion predefinide"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "Nete testinis stampant"
@@ -5334,12 +5298,12 @@ msgid "Ink Level"
 msgstr "Nivel ingjustri"
 
 #. Translators: This is the message which follows the printer error.
-#: panels/printers/printer-entry.ui:312
+#: panels/printers/printer-entry.ui:313
 msgid "Please restart when the problem is resolved."
 msgstr "Torne invie cuant che il probleme al ven risolt."
 
 #. Translators: This is the button which restarts the printer.
-#: panels/printers/printer-entry.ui:319
+#: panels/printers/printer-entry.ui:320
 msgid "Restart"
 msgstr "Torne invie"
 
@@ -5362,9 +5326,7 @@ msgstr "Zonte une stampant…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"Il servizi di sisteme pe stampe\n"
-"nol semee jessi disponibil."
+msgstr "Il servizi di sisteme pe stampe\nnol semee jessi disponibil."
 
 #: panels/region/cc-format-chooser.c:149
 msgctxt "measurement format"
@@ -5391,9 +5353,7 @@ msgstr "Indaûr"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"Sielç il formât pai numars, pes datis e pe monede. Lis modifichis a "
-"deventaran ativis al prossim acès."
+msgstr "Sielç il formât pai numars, pes datis e pe monede. Lis modifichis a deventaran ativis al prossim acès."
 
 #: panels/region/cc-format-chooser.ui:117
 msgid "Search locales..."
@@ -5456,9 +5416,9 @@ msgstr "Zonte une sorzint input"
 msgid "Input methods can’t be used on the login screen"
 msgstr "Nol è pussibil doprâ i metodis di input te schermade di acès"
 
-#: panels/region/cc-region-panel.c:1507
+#: panels/region/cc-region-panel.c:1515
 msgid "Login _Screen"
-msgstr "_Schermade di acès"
+msgstr ""
 
 #: panels/region/cc-region-panel.ui:62
 #: panels/user-accounts/cc-user-panel.ui:364
@@ -5491,9 +5451,7 @@ msgstr "Nissune sorzint input selezionade"
 
 #: panels/region/cc-region-panel.ui:298
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"Lis impostazions di acès a vegnin dopradis di ducj i utents cuant che a "
-"fasin il login"
+msgstr "Lis impostazions di acès a vegnin dopradis di ducj i utents cuant che a fasin il login"
 
 #: panels/region/cc-region-panel.ui:335
 msgid "Input Source Options"
@@ -5529,9 +5487,7 @@ msgstr "Alt diestri + çampe"
 
 #: panels/region/cc-region-panel.ui:492
 msgid "These keyboard shortcuts can be changed in the keyboard settings"
-msgstr ""
-"Chestis scurtis di tastiere a puedin jessi cambiadis intes impostazions de "
-"tastiere"
+msgstr "Chestis scurtis di tastiere a puedin jessi cambiadis intes impostazions de tastiere"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
 msgid "Region & Language"
@@ -5540,12 +5496,12 @@ msgstr "Regjon e lenghe"
 #: panels/region/gnome-region-panel.desktop.in.in:4
 msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
-msgstr ""
-"Selezione la lenghe doprade, i formâts, lis disposizions de tastiere e lis "
-"sorzints input"
+msgstr "Selezione la lenghe doprade, i formâts, lis disposizions de tastiere e lis sorzints input"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Lenghe;Disposizion;Layout;Tastiere;Input;"
 
@@ -5589,7 +5545,6 @@ msgstr "Sielç une aplicazion par i CD di software"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "DVD audio"
@@ -5686,14 +5641,13 @@ msgstr "Dispositîfs estraibii"
 msgid "Configure Removable Media settings"
 msgstr "Configure lis impostazions dai dispositîfs estraibils"
 
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
-msgstr ""
-"dispositîf;sisteme;predefinît;preferît;preferide;cd;dvd;usb;audio;video;disc;"
-"estraibil;multimedia;esecuzion;autorun;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "dispositîf;sisteme;predefinît;preferît;preferide;cd;dvd;usb;audio;video;disc;estraibil;multimedia;esecuzion;autorun;"
 
 #: panels/search/cc-search-locations-dialog.c:635
 msgid "Select Location"
@@ -5712,11 +5666,9 @@ msgstr "Posizions di ricercje"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"Lis cartelis dulà che lis aplicazions di sisteme,, come File, Fotos e Video, "
-"a cirin."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "Lis cartelis dulà che lis aplicazions di sisteme,, come File, Fotos e Video, a cirin."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -5744,22 +5696,18 @@ msgstr "Sposte in jù"
 
 #: panels/search/cc-search-panel.ui:31
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"Controle cuai risultâts di ricercje a son mostrâts te Panoramiche Ativitâts. "
-"L'ordin dai risultâts di ricercje al pues jessi cambiât spostant lis riis "
-"inte liste."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "Controle cuai risultâts di ricercje a son mostrâts te Panoramiche Ativitâts. L'ordin dai risultâts di ricercje al pues jessi cambiât spostant lis riis inte liste."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr ""
-"Controle cualis aplicazions a mostrin risultâts di ricercje te panoramiche "
-"ativitâts"
+msgstr "Controle cualis aplicazions a mostrin risultâts di ricercje te panoramiche ativitâts"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Cîr;Cjate;Indiç;Plate;Privacy;Risultâts;"
 
@@ -5802,21 +5750,16 @@ msgstr "Sielzi une cartele"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr ""
-"La condivision di file e permet di condividi cun altris la proprie cartele "
-"Public su pe rêt atuâl doprant: %s"
+msgstr "La condivision di file e permet di condividi cun altris la proprie cartele Public su pe rêt atuâl doprant: %s"
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:702
 #, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
-msgstr ""
-"Cuant che l'acès rimot al è abilitât, i utents rimots a puedin tacâsi "
-"doprant il comant Secure Shell:\n"
-"%s"
+msgstr "Cuant che l'acès rimot al è abilitât, i utents rimots a puedin tacâsi doprant il comant Secure Shell:\n%s"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:708
@@ -5824,9 +5767,7 @@ msgstr ""
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
-msgstr ""
-"La condivision dal visôr e permet ai utents rimots di viodi o controlâ il to "
-"schermi conetintsi a %s"
+msgstr "La condivision dal visôr e permet ai utents rimots di viodi o controlâ il to schermi conetintsi a %s"
 
 #: panels/sharing/cc-sharing-panel.c:813
 msgid "Copy"
@@ -5921,14 +5862,12 @@ msgstr "Cartelis"
 msgid "Control what you want to share with others"
 msgstr "Controle ce che si vûl condividi cun altris"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
-msgstr ""
-"condivision;share;ssh;host;non;rimot;desktop;scritori;medie;multimedie;audio;"
-"video;imagjins;fotos;film;servidôr;server;renderer;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
+msgstr "condivision;share;ssh;host;non;rimot;desktop;scritori;medie;multimedie;audio;video;imagjins;fotos;film;servidôr;server;renderer;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -6040,13 +5979,12 @@ msgstr "Audio"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Comede i nivei dal audio, i ingrès, lis jessudis e i suns di alerte"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"Schede;Microfon;Volum;Sfantâ;Belançament;Bluetooth;Auricolâr;Scufis;Sun;"
-"Jessude;Jentrade;Ingrès;"
+msgstr "Schede;Microfon;Volum;Sfantâ;Belançament;Bluetooth;Auricolâr;Scufis;Sun;Jessude;Jentrade;Ingrès;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6158,19 +6096,13 @@ msgstr "Autorizât"
 #: panels/thunderbolt/cc-bolt-panel.c:175
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr ""
-"Il sot-sisteme Thunderbolt (boltd) nol è instalât o nol è stât configurât in "
-"maniere adate."
+msgstr "Il sot-sisteme Thunderbolt (boltd) nol è instalât o nol è stât configurât in maniere adate."
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
-"Nol è stât pussibil rilevât Thunderbolt.\n"
-"O al mancje tal sisteme il supuart par Thunderbolt, o al è stât disabilitât "
-"tal BIOS o al è stât configurât tal BIOS a un nivel di sigurece no supuartât."
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "Nol è stât pussibil rilevât Thunderbolt.\nO al mancje tal sisteme il supuart par Thunderbolt, o al è stât disabilitât tal BIOS o al è stât configurât tal BIOS a un nivel di sigurece no supuartât."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6195,8 +6127,7 @@ msgstr "Acès diret"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:269
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr ""
-"Permet l'acès diret a dispositîfs come supuarts (docks) e GPU esternis."
+msgstr "Permet l'acès diret a dispositîfs come supuarts (docks) e GPU esternis."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:289
 msgid "Only USB and Display Port devices can attach."
@@ -6218,8 +6149,10 @@ msgstr "Thunderbolt"
 msgid "Manage Thunderbolt devices"
 msgstr "Gjestìs i dispositîfs Thunderbolt"
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;privacy;riservatece;"
 
@@ -6347,9 +6280,7 @@ msgstr "Dimension cursôr"
 #: panels/universal-access/cc-ua-panel.ui:1093
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
-"La dimension dal cursôr e pues jessi cumbinade cul ingrandiment par fâ viodi "
-"miôr il cursôr."
+msgstr "La dimension dal cursôr e pues jessi cumbinade cul ingrandiment par fâ viodi miôr il cursôr."
 
 #: panels/universal-access/cc-ua-panel.ui:1129
 msgid "Screen Reader"
@@ -6369,8 +6300,7 @@ msgstr "Sun tascj"
 
 #: panels/universal-access/cc-ua-panel.ui:1236
 msgid "Beep when Num Lock or Caps Lock are turned on or off."
-msgstr ""
-"Fâs un sun cuant che BlocNum o BlocMaiusc a vegnin ativâts o disativâts."
+msgstr "Fâs un sun cuant che BlocNum o BlocMaiusc a vegnin ativâts o disativâts."
 
 #: panels/universal-access/cc-ua-panel.ui:1306
 msgid "Visual Alerts"
@@ -6582,19 +6512,13 @@ msgstr "Grant"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "Al fâs diventâ plui facil viodi, sintî, digjitâ e fâ clic"
 
-#. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#. Translators: Search terms to find the Accessibility panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
-"Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
-"Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
-"audio;typing;"
-msgstr ""
-"Tastiere;Mouse;a11y;Acessibilitât;Acès Universâl;Contrast;Cursôr;Sun;"
-"Ingrandiment;Zoom;Screen;Reader;Letôr;schermi;grant;alt;larc; test;caratar;"
-"font;dimension;AccessX;Tascj;Singui;Tacadiçs;Sticky;Lents;Slow;Sbalçâts;"
-"Bounce;Mouse;Dopli;clic;Ritart;Assist;Ripet;Lampâ;visuâl;sintî;audio;"
-"scriture;"
+"Keyboard;Mouse;a11y;Accessibility;Universal "
+"Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "Tastiere;Mouse;a11y;Acessibilitât;Acès Universâl;Contrast;Cursôr;Sun;Ingrandiment;Zoom;Screen;Reader;Letôr;schermi;grant;alt;larc; test;caratar;font;dimension;AccessX;Tascj;Singui;Tacadiçs;Sticky;Lents;Slow;Sbalçâts;Bounce;Mouse;Dopli;clic;Ritart;Assist;Ripet;Lampâ;visuâl;sintî;audio;scriture;"
 
 #: panels/universal-access/zoom-options.c:303
 msgctxt "Distance"
@@ -6778,8 +6702,7 @@ msgstr "Disvuedâ la scovacere?"
 
 #: panels/usage/cc-usage-panel.c:155
 msgid "All items in the Trash will be permanently deleted."
-msgstr ""
-"Ducj i elements te scovacere a vegnaran eliminâts in maniere definitive."
+msgstr "Ducj i elements te scovacere a vegnaran eliminâts in maniere definitive."
 
 #: panels/usage/cc-usage-panel.c:156
 msgid "_Empty Trash"
@@ -6803,13 +6726,10 @@ msgstr "Cronologjie dai file"
 
 #: panels/usage/cc-usage-panel.ui:41
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr ""
-"La cronologjie dai file e ten un regjistri dai file che tu âs doprât. Cheste "
-"informazion e ven condividude tra lis aplicazions e e rint plui facil cjatâ "
-"i file che tu podaressis vê bisugne di doprâ."
+msgstr "La cronologjie dai file e ten un regjistri dai file che tu âs doprât. Cheste informazion e ven condividude tra lis aplicazions e e rint plui facil cjatâ i file che tu podaressis vê bisugne di doprâ."
 
 #: panels/usage/cc-usage-panel.ui:56
 msgid "File H_istory"
@@ -6831,10 +6751,7 @@ msgstr "Scovacere e file temporanis"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr ""
-"Scovacere e file temporanis cualchi volte a puedin includi informazions "
-"sensibilis o personâls. Eliminâju in automatic al pues judâ a protezi la "
-"riservatece."
+msgstr "Scovacere e file temporanis cualchi volte a puedin includi informazions sensibilis o personâls. Eliminâju in automatic al pues judâ a protezi la riservatece."
 
 #: panels/usage/cc-usage-panel.ui:159
 msgid "Automatically Delete _Trash Content"
@@ -6856,61 +6773,71 @@ msgstr "Dis_vuede scovacere…"
 msgid "_Delete Temporary Files…"
 msgstr "_Elimine file temporanis…"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:278
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 ore"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:282
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 zornade"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:286
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:290
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:294
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:298
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:302
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:306
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:310
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 dîs"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:314
 msgctxt "purge_files"
 msgid "30 days"
@@ -6948,55 +6875,96 @@ msgstr "Cronologjie file e Scovacere"
 msgid "Don't leave traces"
 msgstr "No sta lassâ olmis"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:552
+msgid "Limited data plan connection"
+msgstr ""
+
+#: panels/updates/cc-updates-panel.c:554
+msgid "Unlimited data plan connection"
+msgstr ""
+
+#: panels/updates/cc-updates-panel.c:603
+msgid "No active connection"
+msgstr ""
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:828
+msgid "Change Network Settings…"
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:149
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+msgid "Automatic Updates"
+msgstr "Inzornaments automatics"
+
+#: panels/updates/cc-updates-panel.ui:163
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:217
+msgid "Scheduled Updates"
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:231
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+msgid "Schedule automatic updates"
+msgstr ""
+
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "Al varès di corispuindi ae direzion web dal to furnidôr di acès."
 
-#: panels/user-accounts/cc-add-user-dialog.c:205
+#: panels/user-accounts/cc-add-user-dialog.c:208
 msgid "Failed to add account"
 msgstr "Zonte dal account falide"
 
-#: panels/user-accounts/cc-add-user-dialog.c:676
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:694
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "Lis password no corispuindin."
 
-#: panels/user-accounts/cc-add-user-dialog.c:896
-#: panels/user-accounts/cc-add-user-dialog.c:942
-#: panels/user-accounts/cc-add-user-dialog.c:963
+#: panels/user-accounts/cc-add-user-dialog.c:936
+#: panels/user-accounts/cc-add-user-dialog.c:982
+#: panels/user-accounts/cc-add-user-dialog.c:1003
 msgid "Failed to register account"
 msgstr "Regjistrazion account falide"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1084
+#: panels/user-accounts/cc-add-user-dialog.c:1124
 msgid "No supported way to authenticate with this domain"
 msgstr "Nissun mût supuartât par autenticâsi cun chest domini"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1157
+#: panels/user-accounts/cc-add-user-dialog.c:1197
 msgid "Failed to join domain"
 msgstr "Falît a unîsi al domini"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1218
+#: panels/user-accounts/cc-add-user-dialog.c:1258
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"Non di acès no valit.\n"
-"Prove une altre volte."
+msgstr "Non di acès no valit.\nProve une altre volte."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1225
+#: panels/user-accounts/cc-add-user-dialog.c:1265
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"Password no valide.\n"
-"Prove une altre volte."
+msgstr "Password no valide.\nProve une altre volte."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1233
+#: panels/user-accounts/cc-add-user-dialog.c:1273
 msgid "Failed to log into domain"
 msgstr "Acès al domini falît"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1291
+#: panels/user-accounts/cc-add-user-dialog.c:1331
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "Impussibil cjatâ il domini. Isal stât scrit mâl?"
 
@@ -7022,37 +6990,41 @@ msgid "Account _Type"
 msgstr "_Gjenar di account"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "Permet al utent di stabilî une password al prossim _acès"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "Imposte une password _cumò"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "_Conferme"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"L'acès enterprise al permet di doprâ su chest dispositîf un account utent za "
-"esistent ministrât in maniere centrâl. Tu puedis ancje doprâ chest account "
-"par jentrâ tes risorsis de compagnie su internet."
+msgstr "L'acès enterprise al permet di doprâ su chest dispositîf un account utent za esistent ministrât in maniere centrâl. Tu puedis ancje doprâ chest account par jentrâ tes risorsis de compagnie su internet."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "Tu sês fûr rêt"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr "Tu scugnis jessi in rêt par zontâ utents enterprise."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "Account _enterprise"
 
@@ -7088,11 +7060,10 @@ msgstr "_Sì"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
-"Eliminâ lis improntis digjitâls regjistradis cussì di disabilitâ l'acès vie "
-"impronte?"
+msgstr "Eliminâ lis improntis digjitâls regjistradis cussì di disabilitâ l'acès vie impronte?"
 
-#. Translators: This is the empty state page label which states that there are no devices ready.
+#. Translators: This is the empty state page label which states that there are
+#. no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 msgid "No Fingerprint device"
 msgstr "Nissun dispositîf pes improntis"
@@ -7117,8 +7088,7 @@ msgstr "Dispositîf pes improntis"
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr ""
-"L'acès cun impronte ti permet di sblocâ e jentrâ sul to computer cul to dêt"
+msgstr "L'acès cun impronte ti permet di sblocâ e jentrâ sul to computer cul to dêt"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
 msgid "_Delete Fingerprints"
@@ -7136,74 +7106,74 @@ msgstr "Regjistrazion impronte"
 msgid "_Re-enroll this finger…"
 msgstr "_Torne regjistre chest dêt…"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:470
+#: panels/user-accounts/cc-fingerprint-dialog.c:471
 #, c-format
 msgid "Failed to list fingerprints: %s"
 msgstr "No si è rivâts a listâ lis improntis: %s"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:536
+#: panels/user-accounts/cc-fingerprint-dialog.c:537
 #, c-format
 msgid "Failed to delete saved fingerprints: %s"
 msgstr "No si è rivâts a eliminâ lis improntis salvadis: %s"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:565
+#: panels/user-accounts/cc-fingerprint-dialog.c:566
 msgid "Left thumb"
 msgstr "Poleâr çamp"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:567
+#: panels/user-accounts/cc-fingerprint-dialog.c:568
 msgid "Left middle finger"
 msgstr "Medi çamp"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:569
+#: panels/user-accounts/cc-fingerprint-dialog.c:570
 msgid "_Left index finger"
 msgstr "Dêt indiç _çamp"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:571
+#: panels/user-accounts/cc-fingerprint-dialog.c:572
 msgid "Left ring finger"
 msgstr "Anulâr çamp"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:573
+#: panels/user-accounts/cc-fingerprint-dialog.c:574
 msgid "Left little finger"
 msgstr "Dêt piçul çamp"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:575
+#: panels/user-accounts/cc-fingerprint-dialog.c:576
 msgid "Right thumb"
 msgstr "Poleâr diestri"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:577
+#: panels/user-accounts/cc-fingerprint-dialog.c:578
 msgid "Right middle finger"
 msgstr "Medi diestri"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:579
+#: panels/user-accounts/cc-fingerprint-dialog.c:580
 msgid "_Right index finger"
 msgstr "Dêt indiç _diestri"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:581
+#: panels/user-accounts/cc-fingerprint-dialog.c:582
 msgid "Right ring finger"
 msgstr "Anulâr diestri"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:583
+#: panels/user-accounts/cc-fingerprint-dialog.c:584
 msgid "Right little finger"
 msgstr "Dêt piçul diestri"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:585
+#: panels/user-accounts/cc-fingerprint-dialog.c:586
 msgid "Unknown Finger"
 msgstr "Impronte no cognossude"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:719
+#: panels/user-accounts/cc-fingerprint-dialog.c:720
 msgctxt "Fingerprint enroll state"
 msgid "Complete"
 msgstr "Completade"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:729
+#: panels/user-accounts/cc-fingerprint-dialog.c:730
 msgid "Fingerprint device disconnected"
 msgstr "Dispositîf pes improntis disconetût"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:731
+#: panels/user-accounts/cc-fingerprint-dialog.c:732
 msgid "Fingerprint device storage is full"
 msgstr "Il spazi di archiviazion dal dispositîf pes improntis al è plen"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:733
+#: panels/user-accounts/cc-fingerprint-dialog.c:734
 msgid "Failed to enroll new fingerprint"
 msgstr "No si è rivâts a regjistrâ la gnove impronte"
 
@@ -7226,8 +7196,7 @@ msgstr "No si è rivâts a fermâ la regjistrazion: %s"
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr ""
-"Alce e met tantis voltis il to dêt sul letôr par regjistrâ la tô impronte"
+msgstr "Alce e met tantis voltis il to dêt sul letôr par regjistrâ la tô impronte"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:989
@@ -7244,12 +7213,12 @@ msgctxt "Fingerprint enroll state"
 msgid "Problem Reading Device"
 msgstr "Probleme tal lei dal dispositîf"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:1133
+#: panels/user-accounts/cc-fingerprint-dialog.c:1136
 #, c-format
 msgid "Failed to claim fingerprint device %s: %s"
 msgstr "No si è rivâts a riclamâ il dispositîf pes improntis %s: %s"
 
-#: panels/user-accounts/cc-fingerprint-dialog.c:1270
+#: panels/user-accounts/cc-fingerprint-dialog.c:1279
 #, c-format
 msgid "Failed to get fingerprint devices: %s"
 msgstr "No si è rivâts a otignî i dispositîfs pes improntis: %s"
@@ -7319,15 +7288,15 @@ msgstr "Inizi session"
 msgid "%s — Account Activity"
 msgstr "%s — Ativitât dal account"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "Sielç une altre password."
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "Scrîf di gnûf la tô password atuâl."
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "Impussibil cambiâ la password"
 
@@ -7350,14 +7319,6 @@ msgstr "_Gnove password"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "_Password atuâl"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "Permet al utent di cambiâ la sô password al prossim acès"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "Imposte une password cumò"
 
 #: panels/user-accounts/cc-realm-manager.c:306
 msgid "Cannot automatically join this type of domain"
@@ -7409,9 +7370,7 @@ msgstr "%s nol à ancjemò terminât la session"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
-"Eliminâ un utent intant che la sô session e je ancjemò in cors, al pues "
-"lassâ il sisteme in stât incoerent."
+msgstr "Eliminâ un utent intant che la sô session e je ancjemò in cors, al pues lassâ il sisteme in stât incoerent."
 
 #: panels/user-accounts/cc-user-panel.c:643
 #, c-format
@@ -7422,9 +7381,7 @@ msgstr "Tignî i file di %s?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"Al è pussibil tegnî la cartele home, la code di pueste e i varis file "
-"temporanis cuant che si elimine un account utent."
+msgstr "Al è pussibil tegnî la cartele home, la code di pueste e i varis file temporanis cuant che si elimine un account utent."
 
 #: panels/user-accounts/cc-user-panel.c:650
 msgid "_Delete Files"
@@ -7484,9 +7441,7 @@ msgstr "Sigurâsi che AccountService al sedi instalât e abilitât."
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"Par aplicâ cambiaments,\n"
-"fâs prime clic su la icone *"
+msgstr "Par aplicâ cambiaments,\nfâs prime clic su la icone *"
 
 #: panels/user-accounts/cc-user-panel.c:1373
 msgid "Delete the selected user account"
@@ -7497,9 +7452,7 @@ msgstr "Elimine l'account utent selezionât"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"Par eliminâ l'account utent selezionât,\n"
-"fâs prime clic su la icone *"
+msgstr "Par eliminâ l'account utent selezionât,\nfâs prime clic su la icone *"
 
 #: panels/user-accounts/cc-user-panel.ui:5
 msgid "_Add User…"
@@ -7534,9 +7487,7 @@ msgstr "_Aministradôr"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr ""
-"I aministradôrs a puedin zontâ e gjavâ altris utents e a puedin cambiâ lis "
-"impostazions par ducj i utent."
+msgstr "I aministradôrs a puedin zontâ e gjavâ altris utents e a puedin cambiâ lis impostazions par ducj i utent."
 
 #: panels/user-accounts/cc-user-panel.ui:320
 msgid "_Parental Controls"
@@ -7562,7 +7513,8 @@ msgstr "Ativitât dal account"
 msgid "Remove User…"
 msgstr "Gjave utent…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:631
 msgid "No Users Found"
 msgstr "Nissun utent cjatât"
@@ -7579,12 +7531,14 @@ msgstr "Utents"
 msgid "Add or remove users and change your password"
 msgstr "Zonte o gjave utents e cambie la tô password"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "Login;Acès;Non;Impronte;Avatar;Logo;Muse;Password;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "_Regjistre"
@@ -7598,10 +7552,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"Par podê doprâ i acès aziendâi, il computer al à di jessi\n"
-" regjistrât tal domini. Domandâ al aministradôr di rêt\n"
-"di scrivi la password pal domini in chest cjamp."
+msgstr "Par podê doprâ i acès aziendâi, il computer al à di jessi\n regjistrât tal domini. Domandâ al aministradôr di rêt\ndi scrivi la password pal domini in chest cjamp."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -7694,9 +7645,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"Cîr di evitâ di ripeti il stes gjenar di caratar: tu scugnis miscliçâ "
-"letaris, numars e ponts."
+msgstr "Cîr di evitâ di ripeti il stes gjenar di caratar: tu scugnis miscliçâ letaris, numars e ponts."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7708,9 +7657,7 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"La password e scugne jessi plui lungje. Cîr di zontâ plui letaris, numars e "
-"ponts."
+msgstr "La password e scugne jessi plui lungje. Cîr di zontâ plui letaris, numars e ponts."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -7720,10 +7667,9 @@ msgstr "Misture letaris maiusculis e minusculis e cîr di doprâ un numar o doi.
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
-msgstr ""
-"Zontant plui letaris, numars e ponts si fasarà diventâ la password plui "
-"robuste."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
+msgstr "Zontant plui letaris, numars e ponts si fasarà diventâ la password plui robuste."
 
 #: panels/user-accounts/run-passwd.c:424
 msgid "Authentication failed"
@@ -7778,9 +7724,7 @@ msgstr "Erôr no cognossût"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"Il non utent di solit al à di jessi formât di letaris minusculis (de a ae "
-"z), numars e dai caratars chi daurman: - _"
+msgstr "Il non utent di solit al à di jessi formât di letaris minusculis (de a ae z), numars e dai caratars chi daurman: - _"
 
 #: panels/user-accounts/user-utils.c:439
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -7792,9 +7736,7 @@ msgstr "Il non utent al è masse lunc."
 
 #: panels/user-accounts/user-utils.c:546
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr ""
-"Chest al vignarà doprât par dâ un non ae tô cartele cjase (home) e nol "
-"podarà jessi cambiât."
+msgstr "Chest al vignarà doprât par dâ un non ae tô cartele cjase (home) e nol podarà jessi cambiât."
 
 #: panels/wacom/button-mapping.ui:9
 msgid "Map Buttons"
@@ -7813,18 +7755,13 @@ msgstr "Associe i botons a lis funzions"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"Par modificâ une scurte, sielzi la azion \"Invie pression tascj\", scliçâ il "
-"boton de scurte de tastiere e tignî scliçâts i gnûfs tascj, o se no scliçâ "
-"Backspace par scancelâle."
+msgstr "Par modificâ une scurte, sielzi la azion \"Invie pression tascj\", scliçâ il boton de scurte de tastiere e tignî scliçâts i gnûfs tascj, o se no scliçâ Backspace par scancelâle."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
-"Fâs \"tap\" sui segnepuest cuant che a vegnin fûr sul visôr par calibrâ la "
-"taulete grafiche."
+msgstr "Fâs \"tap\" sui segnepuest cuant che a vegnin fûr sul visôr par calibrâ la taulete grafiche."
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
@@ -7893,12 +7830,11 @@ msgstr "Taulete Wacom"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
-"Imposte la mapadure dai botons e juste la sensibilitât de pene pes taulutis "
-"grafichis"
+msgstr "Imposte la mapadure dai botons e juste la sensibilitât de pene pes taulutis grafichis"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;Taulete;Pene;Gome;"
 
@@ -8059,11 +7995,11 @@ msgstr "Panel di mostrâ"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[PANEL] [ARGOMENT…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "Privacy"
 
-#: shell/cc-panel-loader.c:288
+#: shell/cc-panel-loader.c:292
 msgid "Available panels:"
 msgstr "Panei disponibii:"
 
@@ -8084,16 +8020,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"Cheste version di Impostazions e à di jessi doprade dome par finalitâts di "
-"svilup. A puedin capitâ compuartaments dal sisteme sbaliâts, pierditis di "
-"dâts e altris problemis inspietâts. "
+msgstr "Cheste version di Impostazions e à di jessi doprade dome par finalitâts di svilup. A puedin capitâ compuartaments dal sisteme sbaliâts, pierditis di dâts e altris problemis inspietâts. "
 
 #: shell/cc-window.ui:330
 msgid "Help"
 msgstr "Jutori"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "Preferencis;Impostazions;"
@@ -8134,28 +8068,22 @@ msgstr "L'identificadôr pal ultin panel di Impostazions di vierzi"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
-"L'identificadôr pal ultin panel di Impostazions di vierzi. I valôrs no "
-"ricognossûts a vignaran ignorâts e al vignarà selezionât il prin panel inte "
-"liste."
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "L'identificadôr pal ultin panel di Impostazions di vierzi. I valôrs no ricognossûts a vignaran ignorâts e al vignarà selezionât il prin panel inte liste."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
-msgstr ""
-"Mostre avertiment cuant che si eseguìs une version di svilup di Impostazions"
+msgstr "Mostre avertiment cuant che si eseguìs une version di svilup di Impostazions"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr ""
-"Indiche se Impostazions al à di mostrâ un avertiment cuant che si eseguìs "
-"une version di svilup."
+msgstr "Indiche se Impostazions al à di mostrâ un avertiment cuant che si eseguìs une version di svilup."
 
 #. translators:
 #. * The number of sound outputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1883
+#: subprojects/gvc/gvc-mixer-control.c:1907
 #, c-format
 msgid "%u Output"
 msgid_plural "%u Outputs"
@@ -8164,1577 +8092,13 @@ msgstr[1] "%u jessudis"
 
 #. translators:
 #. * The number of sound inputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1893
+#: subprojects/gvc/gvc-mixer-control.c:1917
 #, c-format
 msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u ingrès"
 msgstr[1] "%u jentradis"
 
-#: subprojects/gvc/gvc-mixer-control.c:2750
+#: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Suns di sisteme"
-
-#~ msgid "Universal Access"
-#~ msgstr "Acès universâl"
-
-#~ msgid "Switch off to connect to a Wi-Fi network"
-#~ msgstr "Distude par tacâsi suntune rêt Wi-Fi"
-
-#~ msgctxt "Wi-Fi passkey"
-#~ msgid "Password"
-#~ msgstr "Password"
-
-#~ msgid "Add user accounts and change passwords"
-#~ msgstr "Zontâ i account utent e cambiâ lis password"
-
-#~ msgid "Play and record sound"
-#~ msgstr "Riprodusi e regjistrâ suns"
-
-#~ msgid "Detect network devices using mDNS/DNS-SD (Bonjour/zeroconf)"
-#~ msgstr "Rilevâ dispositîfs di rêt doprant mDNS/DNS-SD (Bonjour/zeroconf)"
-
-#~ msgid "Access bluetooth hardware directly"
-#~ msgstr "Acedi a hardware bluetooth in maniere direte"
-
-#~ msgid "Use bluetooth devices"
-#~ msgstr "Doprâ dispositîfs bluetooth"
-
-#~ msgid "Use your camera"
-#~ msgstr "Doprâ la vuestre fotocjamare"
-
-#~ msgid "Print documents"
-#~ msgstr "Stampâ documents"
-
-#~ msgid "Use any connected joystick"
-#~ msgstr "Doprâ cualsisei joystick tacât"
-
-#~ msgid "Allow connecting to the Docker service"
-#~ msgstr "Permeti la conession al servizi Docker"
-
-#~ msgid "Configure network firewall"
-#~ msgstr "Configurâ il firewall di rêt"
-
-#~ msgid "Setup and use privileged FUSE filesystems"
-#~ msgstr "Configurâ e doprâ i filesystem FUSE privilegjâts"
-
-#~ msgid "Update firmware on this device"
-#~ msgstr "Inzornâ il firmware su chest dispositîf"
-
-#~ msgid "Access hardware information"
-#~ msgstr "Acedi a informazions dal hardware"
-
-#~ msgid "Provide entropy to hardware random number generator"
-#~ msgstr "Furnî entropie al gjeneradôr di numars casuâi in hardware"
-
-#~ msgid "Use hardware-generated random numbers"
-#~ msgstr "Doprâ i numars casuâi gjenerâts in hardware"
-
-#~ msgid "Access files in your home folder"
-#~ msgstr "Acedi ai file inte vuestre cartele home"
-
-#~ msgid "Access libvirt service"
-#~ msgstr "Acedi al servizi libvirt"
-
-#~ msgid "Change system language and region settings"
-#~ msgstr "Cambiâ la lenghe dal sisteme e lis impostazions de regjon"
-
-#~ msgid "Change location settings and providers"
-#~ msgstr "Cambiâ lis impostazions di localizazion e i furnidôrs dal servizi"
-
-#~ msgid "Access your location"
-#~ msgstr "Acedi ae tô posizion"
-
-#~ msgid "Read system and application logs"
-#~ msgstr "Lei i regjistris dal sisteme e des aplicazions"
-
-#~ msgid "Access LXD service"
-#~ msgstr "Acedi al servizi LXD"
-
-#~ msgid "access the media-hub service"
-#~ msgstr "acedi al servizi di media-hub"
-
-#~ msgid "Use and configure modems"
-#~ msgstr "Doprâ e configurâ i modem"
-
-#~ msgid "Read system mount information and disk quotas"
-#~ msgstr "Lei lis informazions di montaç dal sisteme e lis cuotis dai discs"
-
-#~ msgid "Control music and video players"
-#~ msgstr "Controlâ i riprodutôrs musicâi e video"
-
-#~ msgid "Change low-level network settings"
-#~ msgstr "Cambiâ lis impostazions di rêt di bas nivel"
-
-#~ msgid ""
-#~ "Access the NetworkManager service to read and change network settings"
-#~ msgstr ""
-#~ "Acedi al servizi NetworkManager par lei e cambiâ lis impostazions di rêt"
-
-#~ msgid "Read access to network settings"
-#~ msgstr "Lei l'acès aes impostazions di rêt"
-
-#~ msgid "Change network settings"
-#~ msgstr "Cambiâ lis impostazions di rêt"
-
-#~ msgid "Read network settings"
-#~ msgstr "Lei lis impostazion di rêt"
-
-#~ msgid ""
-#~ "Access the ofono service to read and change network settings for mobile "
-#~ "telephony"
-#~ msgstr ""
-#~ "Acedi al servizi ofono par lei e cambiâ lis impostazions di rêt pe "
-#~ "telefonie mobile"
-
-#~ msgid "Control Open vSwitch hardware"
-#~ msgstr "Controlâ l'hardware Open vSwitch"
-
-#~ msgid "Read from CD/DVD"
-#~ msgstr "Lei di CD/DVD"
-
-#~ msgid "Read, add, change, or remove saved passwords"
-#~ msgstr "Lei, zontâ, cambiâ o gjavâ lis password salvadis"
-
-#~ msgid ""
-#~ "Access pppd and ppp devices for configuring Point-to-Point Protocol "
-#~ "connections"
-#~ msgstr ""
-#~ "Acedi ai dispositîfs pppd e ppp par configurâ lis conessions cul protocol "
-#~ "Pont-a-Pont (PPP)"
-
-#~ msgid "Pause or end any process on the system"
-#~ msgstr "Meti in pause o terminâ cualsisei procès sul sisteme"
-
-#~ msgid "Access USB hardware directly"
-#~ msgstr "Acedi al hardware USB in maniere direte"
-
-#~ msgid "Read/write files on removable storage devices"
-#~ msgstr "Lei/scrivi i file su dispositîfs di archiviazion estraibii"
-
-#~ msgid "Prevent screen sleep/lock"
-#~ msgstr "Impedî al schermi di polsâ/blocâsi"
-
-#~ msgid "Access serial port hardware"
-#~ msgstr "Acedi al hardware de puarte seriâl"
-
-#~ msgid "Restart or power off the device"
-#~ msgstr "Tornâ a inviâ o distudâ il dispositîf"
-
-#~ msgid "Install, remove and configure software"
-#~ msgstr "Instalâ, gjavâ e configurâ software"
-
-#~ msgid "Access Storage Framework service"
-#~ msgstr "Acedi al servizi de suaze di archiviazion"
-
-#~ msgid "Read process and system information"
-#~ msgstr "Lei i procès e lis informazions di sisteme"
-
-#~ msgid "Monitor and control any running program"
-#~ msgstr "Tignî monitorât e controlâ cualsisei program in esecuzion"
-
-#~ msgid "Change the date and time"
-#~ msgstr "Cambiâ la date e la ore"
-
-#~ msgid "Change time server settings"
-#~ msgstr "Cambiâ lis impostazions dal servidôr pe ore"
-
-#~ msgid "Change the time zone"
-#~ msgstr "Cambiâ il fûs orari"
-
-#~ msgid "Access the UDisks2 service for configuring disks and removable media"
-#~ msgstr ""
-#~ "Acedi al servizi UDisks2 par configurâ i discs e i supuarts estraibii"
-
-#~ msgid "Read/change shared calendar events in Ubuntu Unity 8"
-#~ msgstr "Lei/cambiâ i events condividûts dal calendari in Ubuntu Unity 8"
-
-#~ msgid "Read/change shared contacts in Ubuntu Unity 8"
-#~ msgstr "Lei/cambiâ i contats condividûts in Ubuntu Unity 8"
-
-#~ msgid "Access energy usage data"
-#~ msgstr "Acedi ai dâts su la energjie doprade"
-
-#~ msgid "Read/write access to U2F devices exposed"
-#~ msgstr "Lei/scrivi l'acès ai dispositîfs U2F esposcj"
-
-#~ msgid "∶"
-#~ msgstr "∶"
-
-#~ msgid ""
-#~ "To create a user account,\n"
-#~ "click the * icon first"
-#~ msgstr ""
-#~ "Par creâ un account utent,\n"
-#~ "fas prime clic su la icone *"
-
-#~ msgid "Enable Fingerprint Login"
-#~ msgstr "Abilite acès cun impronte"
-
-#~ msgid "_Other finger:"
-#~ msgstr "_Altri dêt:"
-
-#~ msgid ""
-#~ "Your fingerprint was successfully saved. You should now be able to log in "
-#~ "using your fingerprint reader."
-#~ msgstr ""
-#~ "La tô impronte digjitâl e je stade salvade. Cumò tu puedis jentrâ doprant "
-#~ "il letôr di improntis."
-
-#~ msgid ""
-#~ "You are not allowed to access the device. Contact your system "
-#~ "administrator."
-#~ msgstr ""
-#~ "L'acès al dispositîf nol è permetût. Contatâ l'aministradôr di sisteme."
-
-#~ msgid "The device is already in use."
-#~ msgstr "Il dispositîf al è za in ûs."
-
-#~ msgid "An internal error occurred."
-#~ msgstr "Al è vignût fûr un erôr interni."
-
-#~ msgid "Delete registered fingerprints?"
-#~ msgstr "Eliminâ lis improntis digjitâi regjistradis?"
-
-#~ msgid "Done!"
-#~ msgstr "Fat!"
-
-#~ msgid "Could not access “%s” device"
-#~ msgstr "Impussibil acedi al dispositîf “%s”"
-
-#~ msgid "Could not start finger capture on “%s” device"
-#~ msgstr "Impussibil tacâ la cature de impronte sul dispositîf “%s”"
-
-#~ msgid "Could not access any fingerprint readers"
-#~ msgstr "No rivi a acedi a nissun letôr di improntis digjitâi"
-
-#~ msgid "Please contact your system administrator for help."
-#~ msgstr "Contatâ l'aministradôr di sisteme par vê jutori."
-
-#~ msgid ""
-#~ "To enable fingerprint login, you need to save one of your fingerprints, "
-#~ "using the “%s” device."
-#~ msgstr ""
-#~ "Par abilitâ l'acès vie impronte digjitâl al covente salvâ une proprie "
-#~ "impronte digjitâl doprant il dispositîf «%s»."
-
-#~ msgid "Selecting finger"
-#~ msgstr "Sielç dêt"
-
-#~ msgid "Set Background and Lock Screen"
-#~ msgstr "Stabilìs Fonts e Bloc schermi"
-
-#~ msgid "Set Background"
-#~ msgstr "Stabilìs fonts"
-
-#~ msgid "Set Lock Screen"
-#~ msgstr "Stabilìs Bloc schermi"
-
-#~ msgid "Remove Background"
-#~ msgstr "Gjave fonts"
-
-#~ msgid "Reports are sent anonymously and are scrubbed of personal data."
-#~ msgstr ""
-#~ "Lis segnalazions a vegnin inviadis in maniere anonime e netadis di "
-#~ "cualsisei dât personâl."
-
-#~ msgid ""
-#~ "Sending reports of technical problems help us improve this operating "
-#~ "system."
-#~ msgstr ""
-#~ "Inviant segnalazions di problemis tecnics nus jude a miorâ chest sisteme "
-#~ "operatîf."
-
-#~ msgid "Notification _Popups"
-#~ msgstr "Notifichis a com_parse"
-
-#~ msgid "Last Login"
-#~ msgstr "Ultin acès"
-
-#~ msgid "Restrict _background data usage"
-#~ msgstr "Limite l'ûs di dâts in _sotfont"
-
-#~ msgid "Appropriate for connections that have data charges or limits."
-#~ msgstr "Indicât par conessions cun adebit o limits di dâts."
-
-#~ msgid "No regions found"
-#~ msgstr "Nissune regjon cjatade"
-
-#~ msgid "Flash the _window title"
-#~ msgstr "Ilumine il titul dal _barcon"
-
-#~ msgid "Version %s"
-#~ msgstr "Version %s"
-
-#~ msgid "OS name"
-#~ msgstr "Non SO"
-
-#~ msgid "OS type"
-#~ msgstr "Gjenar di SO"
-
-#~ msgid "Disk"
-#~ msgstr "Disc"
-
-#~ msgid "Check for updates"
-#~ msgstr "Controle inzornaments"
-
-#~ msgid "Network proxy"
-#~ msgstr "Proxy di rêt"
-
-#~ msgid "Inner _authentication"
-#~ msgstr "_Autenticazion interne"
-
-#~ msgid "Twisted Pair (TP)"
-#~ msgstr "Twisted Pair (TP)"
-
-#~ msgid "Attachment Unit Interface (AUI)"
-#~ msgstr "Attachment Unit Interface (AUI)"
-
-#~ msgid "BNC"
-#~ msgstr "BNC"
-
-#~ msgid "Media Independent Interface (MII)"
-#~ msgstr "Media Independent Interface (MII)"
-
-#~ msgid "10 Mb/s"
-#~ msgstr "10 Mb/s"
-
-#~ msgid "100 Mb/s"
-#~ msgstr "100 Mb/s"
-
-#~ msgid "1 Gb/s"
-#~ msgstr "1 Gb/s"
-
-#~ msgid "10 Gb/s"
-#~ msgstr "10 Gb/s"
-
-#~ msgid "Automatic _Connect"
-#~ msgstr "_Conet in automatic"
-
-#~ msgid "Show P_assword"
-#~ msgstr "Mostre p_assword"
-
-#~ msgid "Make available to other users"
-#~ msgstr "Rint disponibil a chei altris utents"
-
-#~ msgid "IPv_4"
-#~ msgstr "IPv_4"
-
-#~ msgid "_Addresses"
-#~ msgstr "_Direzions"
-
-#~ msgid "Automatic (DHCP) addresses only"
-#~ msgstr "Dome direzions automatichis (DHCP)"
-
-#~ msgid "Link-local only"
-#~ msgstr "Dome link-local"
-
-#~ msgid "_Ignore automatically obtained routes"
-#~ msgstr "_Ignore instradaments vûts in automatic"
-
-#~ msgid "IPv_6"
-#~ msgstr "IPv_6"
-
-#~ msgid "_Cloned MAC Address"
-#~ msgstr "Direzions MAC _clonadis"
-
-#~ msgid "_Reset"
-#~ msgstr "_Reset"
-
-#~ msgid ""
-#~ "Reset the settings for this connection to their defaults, but remember as "
-#~ "a preferred connection."
-#~ msgstr ""
-#~ "Puarte lis impostazions par cheste conession ai valôr predefinîts, ma "
-#~ "tegnile come conession predefinide."
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect to it."
-#~ msgstr ""
-#~ "Gjave ducj i detais relatîfs a cheste rêt e no cîr di conetisi in "
-#~ "automatic."
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgctxt "tab"
-#~ msgid "Reset"
-#~ msgstr "Reset"
-
-#~ msgid "Connected Devices"
-#~ msgstr "Dispositîfs tacâts"
-
-#~ msgid "In use"
-#~ msgstr "In ûs"
-
-#~ msgctxt "Location services status"
-#~ msgid "On"
-#~ msgstr "On"
-
-#~ msgctxt "Location services status"
-#~ msgid "Off"
-#~ msgstr "Off"
-
-#~ msgctxt "Camera status"
-#~ msgid "Off"
-#~ msgstr "Distudât"
-
-#~ msgctxt "Camera status"
-#~ msgid "On"
-#~ msgstr "Impiât"
-
-#~ msgctxt "Microphone status"
-#~ msgid "Off"
-#~ msgstr "Distudât"
-
-#~ msgctxt "Microphone status"
-#~ msgid "On"
-#~ msgstr "Impiât"
-
-#~ msgid "Usage & History"
-#~ msgstr "Ûs e Cronologjie"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "Informative su la privacy"
-
-#~ msgid ""
-#~ "Remembering your history makes things easier to find again. These items "
-#~ "are never shared over the network."
-#~ msgstr ""
-#~ "Tegnî une cronologjie al fâs diventâ plui facil cjatâ ce che al covente. "
-#~ "Chescj elements no saran mai condividûts in rêt."
-
-#~ msgid "_Recently Used"
-#~ msgstr "Doprâts di recent"
-
-#~ msgid "Retain _History"
-#~ msgstr "_Ten la cronologjie"
-
-#~ msgid "The Screen Lock protects your privacy when you are away."
-#~ msgstr ""
-#~ "Il bloc schermi al protêç la proprie privacy intant che si è assents."
-
-#~ msgid "Lock screen _after blank for"
-#~ msgstr "_Bloche schermi se neri par"
-
-#~ msgid "Lock Screen _Notifications"
-#~ msgstr "_Notifichis sul schermi blocât"
-
-#~ msgid ""
-#~ "Automatically purge the Trash and temporary files to help keep your "
-#~ "computer free of unnecessary sensitive information."
-#~ msgstr ""
-#~ "Nete in automatic la scovacere e i file temporanis par tegnî il computer "
-#~ "libar di informazions sensibilis no necessaris."
-
-#~ msgid "Purge _After"
-#~ msgstr "Nete _dopo"
-
-#~ msgid ""
-#~ "Sending us information about which software you use helps us provide you "
-#~ "with more accurate recommendations. It also helps us to improve our "
-#~ "software.\n"
-#~ "\n"
-#~ "All the information we collect is made anonymous, and we will never share "
-#~ "your data with third parties."
-#~ msgstr ""
-#~ "Inviâ informazions sul software doprât nus jude a furnî conseis plui "
-#~ "precîs e a miorâ il stes software.\n"
-#~ "\n"
-#~ "Dutis lis informazions a vegnin cjapadis in maniere anonime: chei dâts no "
-#~ "vegnaran mai condividûts cun tiercis parts."
-
-#~ msgid "_Send software usage statistics"
-#~ msgstr "Inviâ _statistichis sul ûs dal software"
-
-#~ msgid "_Camera"
-#~ msgstr "Foto_cjamare"
-
-#~ msgid "_Microphone"
-#~ msgstr "_Microfon"
-
-#~ msgid "_Location Services"
-#~ msgstr "Servizis di _localizazion"
-
-#~ msgid "Protect your personal information and control what others might see"
-#~ msgstr ""
-#~ "Protêç lis propris informazions personâi e controle ce che i altris a "
-#~ "puedin viodi"
-
-#~ msgid "page 1"
-#~ msgstr "pagjine 1"
-
-#~ msgid "page 2"
-#~ msgstr "pagjine 2"
-
-#~ msgid ""
-#~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-#~ msgstr ""
-#~ "Impiant il hotspot wireless tu ti gjavarâs de conession cun <b>%s</b>."
-
-#~ msgid ""
-#~ "It is not possible to access the Internet through your wireless while the "
-#~ "hotspot is active."
-#~ msgstr ""
-#~ "Al è impussibil conetisi a internet vie wireless fintremai che il "
-#~ "hotspost al è atîf."
-
-#~ msgid ""
-#~ "Wi-Fi hotspots are usually used to share an additional Internet "
-#~ "connection over Wi-Fi."
-#~ msgstr ""
-#~ "I hotspot Wi-Fi a son doprâts di solit par condividi une conession "
-#~ "internet adizionâl sore dal Wi-Fi."
-
-#~ msgid "details"
-#~ msgstr "detais"
-
-#~ msgid "identity"
-#~ msgstr "identitât"
-
-#~ msgid "ipv4"
-#~ msgstr "ipv4"
-
-#~ msgid "ipv6"
-#~ msgstr "ipv6"
-
-#~ msgid "Ad-hoc"
-#~ msgstr "Ad-hoc"
-
-#~ msgid "Infrastructure"
-#~ msgstr "Infrastructure"
-
-#~ msgid "Not connected"
-#~ msgstr "No tacât"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencis"
-
-#~ msgid "The username cannot start with a “-”."
-#~ msgstr "Il non utent nol pues tacâ cuntun “-”."
-
-#~ msgid "Delete Background"
-#~ msgstr "Elimine fonts"
-
-#~ msgid "_Off"
-#~ msgstr "_Distude"
-
-#~ msgid "_Automatic suspend"
-#~ msgstr "Sospension _Automatiche"
-
-#~ msgid "_When the Power Button is pressed"
-#~ msgstr "_Cuant che si frache il boton Distude"
-
-#~ msgid "_Background"
-#~ msgstr "_Sfont"
-
-#~ msgid "Changes throughout the day"
-#~ msgstr "Al cambie dilunc il dì"
-
-#~ msgctxt "background, style"
-#~ msgid "Tile"
-#~ msgstr "Mosaic"
-
-#~ msgctxt "background, style"
-#~ msgid "Zoom"
-#~ msgstr "Ingrandìs"
-
-#~ msgctxt "background, style"
-#~ msgid "Center"
-#~ msgstr "Centre"
-
-#~ msgctxt "background, style"
-#~ msgid "Scale"
-#~ msgstr "Scjale"
-
-#~ msgctxt "background, style"
-#~ msgid "Fill"
-#~ msgstr "Jemple"
-
-#~ msgctxt "background, style"
-#~ msgid "Span"
-#~ msgstr "Slargje"
-
-#~ msgid "Wallpapers"
-#~ msgstr "Rivestiments"
-
-#~ msgid "Colors"
-#~ msgstr "Colôrs"
-
-#~ msgid "Pictures"
-#~ msgstr "Imagjins"
-
-#~ msgid "No Pictures Found"
-#~ msgstr "Nissune imagjin cjatade"
-
-#~ msgid "You can add images to your %s folder and they will show up here"
-#~ msgstr ""
-#~ "Al è pussibil zontâ imagjins ae tô cartele %s e a vegnaran mostradis a chi"
-
-#~ msgid "Keyboard"
-#~ msgstr "Tastiere"
-
-#~ msgid "Connection/SSID"
-#~ msgstr "Conession/SSID"
-
-#~ msgid "application-x-executable"
-#~ msgstr "application-x-executable"
-
-#~ msgid "preferences-desktop-wallpaper"
-#~ msgstr "preferences-desktop-wallpaper"
-
-#~ msgid "bluetooth"
-#~ msgstr "bluetooth"
-
-#~ msgid "preferences-color"
-#~ msgstr "preferences-color"
-
-#~ msgid "preferences-system-time"
-#~ msgstr "preferences-system-time"
-
-#~ msgid "preferences-desktop-display"
-#~ msgstr "preferences-desktop-display"
-
-#~ msgid "starred"
-#~ msgstr "starred"
-
-#~ msgid "help-about"
-#~ msgstr "help-about"
-
-#~ msgid "media-removable"
-#~ msgstr "media-removable"
-
-#~ msgid "input-keyboard"
-#~ msgstr "input-keyboard"
-
-#~ msgid "input-mouse"
-#~ msgstr "input-mouse"
-
-#~ msgid "network-workgroup"
-#~ msgstr "network-workgroup"
-
-#~ msgid "network-wireless"
-#~ msgstr "network-wireless"
-
-#~ msgid "preferences-system-notifications"
-#~ msgstr "preferences-system-notifications"
-
-#~ msgid "goa-panel"
-#~ msgstr "goa-panel"
-
-#~ msgid "gnome-power-manager"
-#~ msgstr "gnome-power-manager"
-
-#~ msgid "printer"
-#~ msgstr "printer"
-
-#~ msgid "preferences-system-privacy"
-#~ msgstr "preferences-system-privacy"
-
-#~ msgid "preferences-desktop-locale"
-#~ msgstr "preferences-desktop-locale"
-
-#~ msgid "preferences-system-search"
-#~ msgstr "preferences-system-search"
-
-#~ msgid "preferences-system-sharing"
-#~ msgstr "preferences-system-sharing"
-
-#~ msgid "multimedia-volume-control"
-#~ msgstr "multimedia-volume-control"
-
-#~ msgid "thunderbolt"
-#~ msgstr "thunderbolt"
-
-#~ msgid "preferences-desktop-accessibility"
-#~ msgstr "preferences-desktop-accessibility"
-
-#~ msgid "system-users"
-#~ msgstr "system-users"
-
-#~ msgid "input-tablet"
-#~ msgstr "input-tablet"
-
-#~ msgid "org.gnome.Settings"
-#~ msgstr "org.gnome.Settings"
-
-#~ msgid "Drag displays to match your setup."
-#~ msgstr "Strissine i visôrs par fâju corispuindi ae to configurazion."
-
-#~ msgctxt "balance"
-#~ msgid "Left"
-#~ msgstr "Çampe"
-
-#~ msgctxt "balance"
-#~ msgid "Right"
-#~ msgstr "Diestre"
-
-#~ msgctxt "balance"
-#~ msgid "Minimum"
-#~ msgstr "Minim"
-
-#~ msgctxt "balance"
-#~ msgid "Maximum"
-#~ msgstr "Massim"
-
-#~ msgid "_Subwoofer:"
-#~ msgstr "Sub_woofer:"
-
-#~ msgctxt "volume"
-#~ msgid "Unamplified"
-#~ msgstr "No amplificât"
-
-#~ msgid "_Profile:"
-#~ msgstr "_Profîl:"
-
-#~ msgid "_Test Speakers"
-#~ msgstr "_Prove cassis"
-
-#~ msgid "Peak detect"
-#~ msgstr "Rilevament pic"
-
-#~ msgid "Device"
-#~ msgstr "Dispositîf"
-
-#~ msgid "Speaker Testing for %s"
-#~ msgstr "Prove cassis par %s"
-
-#~ msgid "C_hoose a device for sound output:"
-#~ msgstr "_Sielzi un dispositîf par la jessude audio:"
-
-#~ msgid "Settings for the selected device:"
-#~ msgstr "Impostazions pal dispositîf selezionât:"
-
-#~ msgid "_Input volume:"
-#~ msgstr "Volum di _ingrès:"
-
-#~ msgid "C_hoose a device for sound input:"
-#~ msgstr "_Sielzi un dispositîf par l'ingrès audio:"
-
-#~ msgid "Sound Effects"
-#~ msgstr "Efiets sonôrs"
-
-#~ msgid "Built-in"
-#~ msgstr "Integrât"
-
-#~ msgid "Sound Preferences"
-#~ msgstr "Preferencis sun"
-
-#~ msgid "Testing event sound"
-#~ msgstr "Prove event sonôr"
-
-#~ msgid "From theme"
-#~ msgstr "Dal teme"
-
-#~ msgid "C_hoose an alert sound:"
-#~ msgstr "_Sielzi un sun di avîs:"
-
-#~ msgid "Stop"
-#~ msgstr "Ferme"
-
-#~ msgid "Add input source"
-#~ msgstr "Zonte sorzint input"
-
-#~ msgid "Remove input source"
-#~ msgstr "Gjave sorzint input"
-
-#~ msgid "Move input source up"
-#~ msgstr "Sposte sorzint input in sù"
-
-#~ msgid "Move input source down"
-#~ msgstr "Sposte sorzint input in jù"
-
-#~ msgid "Show input source keyboard layout"
-#~ msgstr "Mostre disposizion tastiere de sorzint di input"
-
-#~ msgid "_Night Light"
-#~ msgstr "Lûs _noturne"
-
-#~ msgid "Could not get screen information"
-#~ msgstr "Impussibil vê informazions sul schermi"
-
-#~ msgid "GNOME Control Center"
-#~ msgstr "Centri di control GNOME"
-
-#~ msgid ""
-#~ "The control center is GNOME’s main interface for configuration of various "
-#~ "aspects of your desktop."
-#~ msgstr ""
-#~ "Il centri di control GNOME e je la interface principâl par configurâ "
-#~ "diviers aspiets dal to scritori."
-
-#~ msgid "My Home Network"
-#~ msgstr "La mê rêt di cjase"
-
-#~ msgid "hardware"
-#~ msgstr "hardware"
-
-#~ msgid "Switch to previous source"
-#~ msgstr "Passe ae sorzint precedent"
-
-#~ msgid "Switch to next source"
-#~ msgstr "Passe ae sorzint sucessive"
-
-#~ msgid "Alternative switch to next source"
-#~ msgstr "Passe ae sorzint sucessive (alternative)"
-
-#~ msgid "English (United Kingdom)"
-#~ msgstr "Inglês (Ream Unît)"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Ream Unît"
-
-#~ msgid "_Options"
-#~ msgstr "_Opzions"
-
-#~ msgctxt "Account type"
-#~ msgid "Standard"
-#~ msgstr "Normâl"
-
-#~ msgctxt "Account type"
-#~ msgid "Administrator"
-#~ msgstr "Aministradôr"
-
-#~ msgid "page 3"
-#~ msgstr "pagjine 3"
-
-#~ msgid "Quit"
-#~ msgstr "Jes"
-
-#~ msgid "gnome-control-center"
-#~ msgstr "gnome-control-center"
-
-#~ msgid "_Verify New Password"
-#~ msgstr "_Verifiche gnove password"
-
-#~ msgid "Passwords do not match."
-#~ msgstr "Lis password no corispuindin."
-
-#~ msgid "Show the overview"
-#~ msgstr "Mostre la panoramiche"
-
-#~ msgid "Back­ground"
-#~ msgstr "Sfont"
-
-#~ msgid "Blue­tooth"
-#~ msgstr "Blue­tooth"
-
-#~ msgid "Co­lor"
-#~ msgstr "Co­lôr"
-
-#~ msgid "Section"
-#~ msgstr "Sezion"
-
-#~ msgid "Overview"
-#~ msgstr "Panoramiche"
-
-#~ msgid "Defa­ult Applications"
-#~ msgstr "A­pli­ca­zions­ ­pre­de­fi­ni­dis"
-
-#~ msgid "Ab­out"
-#~ msgstr "In­for­ma­zions"
-
-#~ msgid "De­tails"
-#~ msgstr "De­tais"
-
-#~ msgid "Remo­vable Media"
-#~ msgstr "Dis­po­si­tîfs­ ­es­tra­i­bil"
-
-#~ msgid "Net­work"
-#~ msgstr "Rêt"
-
-#~ msgid "No­ti­fi­ca­tions"
-#~ msgstr "No­ti­fi­chis"
-
-#~ msgid "Po­wer"
-#~ msgstr "A­li­men­ta­zion"
-
-#~ msgid "Pri­va­cy"
-#~ msgstr "Pri­va­cy"
-
-#~ msgid "Sha­ring"
-#~ msgstr "Con­di­vi­sion"
-
-#~ msgid "Uni­ver­sal Access"
-#~ msgstr "A­cès­ ­u­ni­ver­sâl"
-
-#~ msgid "Disable image"
-#~ msgstr "Disabilite imagjin"
-
-#~ msgid "Browse for more pictures…"
-#~ msgstr "Esplore altris imagjins…"
-
-#~ msgid "Used by %s"
-#~ msgstr "Doprade di %s"
-
-#~ msgid "Wa­com Tab­let"
-#~ msgstr "Tau­lu­te­ ­Wa­com"
-
-#~ msgctxt "category"
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgctxt "category"
-#~ msgid "System"
-#~ msgstr "Sisteme"
-
-#~ msgid "invalid EAP-TLS password: missing"
-#~ msgstr "password EAP-TLS no valide: e mancje"
-
-#~ msgid "Apply"
-#~ msgstr "Apliche"
-
-#~ msgid "Lid Closed"
-#~ msgstr "Tapon sierât"
-
-#~ msgid "Mirrored"
-#~ msgstr "Duplicâts"
-
-#~ msgid "Secondary"
-#~ msgstr "Secondari"
-
-#~ msgid "Arrange Combined Displays"
-#~ msgstr "Disponi visôrs cumbinâts"
-
-#~ msgid "%d Hz (NTSC)"
-#~ msgstr "%d Hz (NTSC)"
-
-#~ msgid "%d Hz"
-#~ msgstr "%d Hz"
-
-#~ msgid "Rotate counterclockwise by 90°"
-#~ msgstr "Ribalte in sens antiorari di 90°"
-
-#~ msgid "Rotate by 180°"
-#~ msgstr "Ribalte di 180°"
-
-#~ msgid "Rotate clockwise by 90°"
-#~ msgstr "Ribalte in sens orari di 90°"
-
-#~ msgid "Size"
-#~ msgstr "Dimension"
-
-#~ msgid "Aspect Ratio"
-#~ msgstr "Rapuart"
-
-#~ msgid "Show the top bar and Activities Overview on this display"
-#~ msgstr "Mostre su chest visôr la sbare superiôr e la panoramiche ativitâts"
-
-#~ msgid "Join this display with another to create an extra workspace"
-#~ msgstr "Unìs chest visôr cuntun altri par creâ un spazi di lavôr in plui"
-
-#~ msgid "Presentation"
-#~ msgstr "Presentazion"
-
-#~ msgid "Show slideshows and media only"
-#~ msgstr "Mostre dome presentazions e elements multimediâi"
-
-#~ msgid "Show your existing view on both displays"
-#~ msgstr "Mostre su ducj i doi i visôrs ce che tu âs visibil"
-
-#~ msgid "Turn Off"
-#~ msgstr "Distude"
-
-#~ msgid "Don’t use this display"
-#~ msgstr "No sta doprâ chest visôr"
-
-#~ msgid "_Arrange Combined Displays"
-#~ msgstr "_Dispon visôrs cumbinâts"
-
-#~ msgid "Server"
-#~ msgstr "Server"
-
-#~ msgid "Delete DNS Server"
-#~ msgstr "Elimine server DNS"
-
-#~ msgid "Proxy"
-#~ msgstr "Proxy"
-
-#~ msgid "_Add Profile…"
-#~ msgstr "_Zonte profîl..."
-
-#~ msgctxt "proxy method"
-#~ msgid "None"
-#~ msgstr "Nissun"
-
-#~ msgctxt "proxy method"
-#~ msgid "Manual"
-#~ msgstr "Manuâl"
-
-#~ msgctxt "proxy method"
-#~ msgid "Automatic"
-#~ msgstr "Automatic"
-
-#~ msgid "_Method"
-#~ msgstr "_Maniere"
-
-#~ msgid "Group Name"
-#~ msgstr "Non grup"
-
-#~ msgid "Air_plane Mode"
-#~ msgstr "Modalitât a_vion"
-
-#~ msgid "_Use as Hotspot…"
-#~ msgstr "_Dopre come Hotspot..."
-
-#~ msgid "_History"
-#~ msgstr "_Cronologjie"
-
-#~ msgid "Make available to other _users"
-#~ msgstr "Rindi disponibil a chei altris _utents"
-
-#~ msgid ""
-#~ "Reset the settings for this network, including passwords, but remember it "
-#~ "as a preferred network"
-#~ msgstr ""
-#~ "Scancele lis impostazions par cheste rêt, comprindudis lis password, ma "
-#~ "tegnile come une rêt preferide"
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect"
-#~ msgstr ""
-#~ "Gjave ducj i detais di cheste rêt e no sta cirî di coneti in automatic"
-
-#~ msgid "Loading options…"
-#~ msgstr "Cjariament opzions..."
-
-#~ msgid "Press Esc to cancel."
-#~ msgstr "Frache Esc par anulâ."
-
-#~ msgid ""
-#~ "If you have a connection to the Internet other than wireless, you can set "
-#~ "up a wireless hotspot to share the connection with others."
-#~ msgstr ""
-#~ "Se tu âs une altre conession a internet oltri a chê wireless, tu puedis "
-#~ "impuestâ un hotspot wireless par condividi la conession cun altris."
-
-#~ msgid "%s %d-bit (Build ID: %s)"
-#~ msgstr "%s %d-bit (ID di costruzion: %s)"
-
-#~ msgid "%s %d-bit"
-#~ msgstr "%s %d-bit"
-
-#~ msgid "Base system"
-#~ msgstr "Sisteme base"
-
-#~ msgctxt "Password hint"
-#~ msgid "Try to add more letters, numbers and symbols."
-#~ msgstr "Cîr di zontâ plui letaris, numars e simbui."
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Weak"
-#~ msgstr "Robustece: Debule"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Low"
-#~ msgstr "Robustece: Basse"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Medium"
-#~ msgstr "Robustece: Medie"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Good"
-#~ msgstr "Robustece: Buine"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: High"
-#~ msgstr "Robustece: Alte"
-
-#~ msgid "Shortcut;Repeat;Blink;"
-#~ msgstr "Scurte;Ripet;Lampâ;"
-
-#~ msgid "Firewall _Zone"
-#~ msgstr "_Zone firewall"
-
-#~ msgctxt "Firewall zone"
-#~ msgid "Default"
-#~ msgstr "Predefinide"
-
-#~ msgid "The zone defines the trust level of the connection"
-#~ msgstr "La zone e definìs il nivel di fiducie de conession"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgid "<small>Your account</small>"
-#~ msgstr "<small>Il to account</small>"
-
-#~ msgid "Edit"
-#~ msgstr "Modifiche"
-
-#~ msgctxt "button"
-#~ msgid "Set Shortcut"
-#~ msgstr "Met la scurte"
-
-#~ msgid "Add Account"
-#~ msgstr "Zonte account"
-
-#~ msgid "Mail"
-#~ msgstr "E-mail"
-
-#~ msgid "Calendar"
-#~ msgstr "Calendari"
-
-#~ msgid "Contacts"
-#~ msgstr "Contats"
-
-#~ msgid "Chat"
-#~ msgstr "Chat"
-
-#~ msgctxt "printer state"
-#~ msgid "Configuring"
-#~ msgstr "In configurazion"
-
-#~ msgid "Toner Level"
-#~ msgstr "Nivel toner"
-
-#~ msgid "Supply Level"
-#~ msgstr "Nivel consumabii"
-
-#~ msgctxt "printer state"
-#~ msgid "Installing"
-#~ msgstr "Instalazion"
-
-#~ msgid "%u active"
-#~ msgid_plural "%u active"
-#~ msgstr[0] "%u atîf"
-#~ msgstr[1] "%u atîfs"
-
-#~ msgctxt "button"
-#~ msgid "Add Printer"
-#~ msgstr "Zonte stampant"
-
-#~ msgid "Supply"
-#~ msgstr "Nivei"
-
-#~ msgid "Jobs"
-#~ msgstr "Lavôrs"
-
-#~ msgid "Show _Jobs"
-#~ msgstr "Mostre _lavôrs"
-
-#~ msgid "label"
-#~ msgstr "etichete"
-
-#~ msgid "Setting new driver…"
-#~ msgstr "Impostazion gnûf driver..."
-
-#~ msgid "Print _Test Page"
-#~ msgstr "Stampe _pagjine di prove"
-
-#~ msgid "Other Accounts"
-#~ msgstr "Altris account"
-
-#~ msgid "My Account"
-#~ msgstr "Account personâl"
-
-#~ msgctxt "notifications"
-#~ msgid "Notification _Banners"
-#~ msgstr "_Banner di notifiche"
-
-#~ msgid "Notification _Banners"
-#~ msgstr "_Banner di notifiche"
-
-#~ msgid "Error creating account"
-#~ msgstr "Erôr tal creâ l'account"
-
-# Metût plurâl par risolvi masculin/feminin
-#~ msgid "Are you sure you want to remove the account?"
-#~ msgstr "Sigûrs di volê gjavâ chest account?"
-
-#~ msgid "This will not remove the account on the server."
-#~ msgstr "In cheste maniere nol vegnarà gjavât l'account tal server."
-
-#~ msgid "_Remove"
-#~ msgstr "_Gjave"
-
-#~ msgid "No online accounts configured"
-#~ msgstr "Nissun account online configurât"
-
-#~ msgid ""
-#~ "Adding an account allows your applications to access it for documents, "
-#~ "mail, contacts, calendar, chat and more."
-#~ msgstr ""
-#~ "Zontâ un account al permet a lis tôs aplicazions di podê acedi ai "
-#~ "relatîfs documents, e-mail, contats, calendaris, chat e altri."
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Up"
-#~ msgstr "Sù"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Down"
-#~ msgstr "Jù"
-
-#~ msgctxt "Wacom action-type"
-#~ msgid "None"
-#~ msgstr "Nissun"
-
-#~ msgid "Left Ring"
-#~ msgstr "Ring çamp"
-
-#~ msgid "Left Ring Mode #%d"
-#~ msgstr "Modalitât Ring çamp #%d"
-
-#~ msgid "Right Ring Mode #%d"
-#~ msgstr "Modalitât Ring diestri #%d"
-
-#~ msgid "Left Touchstrip"
-#~ msgstr "Touchstrip çamp"
-
-#~ msgid "Left Touchstrip Mode #%d"
-#~ msgstr "Modalitât Touchstrip çamp #%d"
-
-#~ msgid "Right Touchstrip"
-#~ msgstr "Touchstrip diestri"
-
-#~ msgid "Right Touchstrip Mode #%d"
-#~ msgstr "Modalitât Touchstrip diestri #%d"
-
-#~ msgid "Left Touchring Mode Switch"
-#~ msgstr "Interutôr modalitât Touchring çamp"
-
-#~ msgid "Right Touchring Mode Switch"
-#~ msgstr "Interutôr modalitât Touchring diestri"
-
-#~ msgid "Left Touchstrip Mode Switch"
-#~ msgstr "Interutôr modalitât Touchstrip çamp"
-
-#~ msgid "Right Touchstrip Mode Switch"
-#~ msgstr "Interutôr modalitât Touchstrip diestri"
-
-#~ msgid "Mode Switch #%d"
-#~ msgstr "Interutôr modalitât #%d"
-
-#~ msgid "Left Button #%d"
-#~ msgstr "Boton çamp #%d"
-
-#~ msgid "Right Button #%d"
-#~ msgstr "Boton diestri #%d"
-
-#~ msgid "Top Button #%d"
-#~ msgstr "Boton superiôr #%d"
-
-#~ msgid "Bottom Button #%d"
-#~ msgstr "Boton inferiôr #%d"
-
-#~ msgid "No Action"
-#~ msgstr "Nissune azion"
-
-#~ msgid "Left Mouse Button Click"
-#~ msgstr "Clic boton çamp dal mouse"
-
-#~ msgid "Scroll Up"
-#~ msgstr "Scor in sù"
-
-#~ msgid "Scroll Down"
-#~ msgstr "Scor in jù"
-
-#~ msgid "Scroll Left"
-#~ msgstr "Scor a çampe"
-
-#~ msgid "Scroll Right"
-#~ msgstr "Scor a drete"
-
-#~ msgid "Add a New Printer"
-#~ msgstr "Zonte une gnove stampant"
-
-#~ msgid "No printers detected."
-#~ msgstr "Nissune stampant rilevade."
-
-#~ msgctxt "login history week label"
-#~ msgid "%s - %s"
-#~ msgstr "%s - %s"
-
-#~ msgid "Keyboard shortcut for <b>%s</b>. Enter new shortcut to change."
-#~ msgstr ""
-#~ "Scurte di tastiere par <b>%s</b>. Inserìs une gnove scurte par cambiâle."
-
-#~ msgid ""
-#~ "To edit a shortcut, click the row and hold down the new keys or press "
-#~ "Backspace to clear."
-#~ msgstr ""
-#~ "Par modificâ une scurte fâs clic su la rie e sclice i gnûfs tascj o "
-#~ "sclice «Backspace» par scancelâle."
-
-#~ msgid "Error logging into the account"
-#~ msgstr "Erôr tal jentrâ tal account"
-
-#~ msgid "Credentials have expired."
-#~ msgstr "Lis credenziâi a son scjadudis."
-
-#~ msgid "Sign in to enable this account."
-#~ msgstr "Eseguìs acès par abilitâ chest account."
-
-#~ msgid "_Sign In"
-#~ msgstr "_Jentre"
-
-#~ msgid "Add Shortcut"
-#~ msgstr "Zonte scurte"
-
-#~ msgid "Remove Shortcut"
-#~ msgstr "Gjave scurte"
-
-#~ msgid "<Unknown Action>"
-#~ msgstr "<azion no cognossude>"
-
-#~ msgid ""
-#~ "The shortcut \"%s\" cannot be used because it will become impossible to "
-#~ "type using this key.\n"
-#~ "Please try with a key such as Control, Alt or Shift at the same time."
-#~ msgstr ""
-#~ "Nol è pussibil doprâ \"%s\" come scurte parcè che al deventarès "
-#~ "impussibil scrivi doprant chest tast.\n"
-#~ "Prove dopre in cumbinazion un tast come Ctrl, Alt o Maiusc."
-
-#~ msgid ""
-#~ "The shortcut \"%s\" is already used for\n"
-#~ "\"%s\""
-#~ msgstr ""
-#~ "La scurte \"%s\" e je za doprade par\n"
-#~ "\"%s\""
-
-#~ msgid ""
-#~ "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~ "disabled."
-#~ msgstr ""
-#~ "Se tu tornis a assegnâ le scurte a \"%s\", la scurte \"%s\" a vegnarà "
-#~ "disativade."
-
-#~ msgid "_Reassign"
-#~ msgstr "_Torne assegne"
-
-#~ msgid ""
-#~ "The \"%s\" shortcut has an associated \"%s\" shortcut. Do you want to "
-#~ "automatically set it to \"%s\"?"
-#~ msgstr ""
-#~ "La scurte \"%s\" e je associade ae scurte \"%s\". Impuestâle in maniere "
-#~ "automatiche a \"%s\"?"
-
-#~ msgid ""
-#~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
-#~ "disabled if you move forward."
-#~ msgstr ""
-#~ "\"%s\" e je atualmentri associade cun \"%s\", continuant chê scurte e "
-#~ "vegnarà disativade."
-
-#~ msgid "_Assign"
-#~ msgstr "_Assegne"
-
-#~ msgid "Add User Account"
-#~ msgstr "Zonte account utent"
-
-#~ msgid "Bond"
-#~ msgstr "Bond"
-
-#~ msgid "Team"
-#~ msgstr "Team"
-
-#~ msgid "Bridge"
-#~ msgstr "Bridge"
-
-#~ msgid "VLAN"
-#~ msgstr "VLAN"
-
-#~ msgid "Could not load VPN plugins"
-#~ msgstr "Impussibil cjamâ i plugin VPN"
-
-#~ msgid "Add Network Connection"
-#~ msgstr "Zonte conession di rêt"
-
-#~ msgid "Bond slaves"
-#~ msgstr "Bond slave"
-
-#~ msgid "(none)"
-#~ msgstr "(nissun)"
-
-#~ msgid "Bridge slaves"
-#~ msgstr "Bridge slave"
-
-#~ msgid "Team slaves"
-#~ msgstr "Team slave"
-
-#~ msgid "InfiniBand device does not support connected mode"
-#~ msgstr "Il dispositîf InfiniBand nol supuarte la modalitât colegade"
-
-#~ msgid "No Certificate Authority certificate chosen"
-#~ msgstr ""
-#~ "Nol è stât sielt nissun certificât di une Autoritât di Certificazion"
-
-#~ msgid ""
-#~ "Not using a Certificate Authority (CA) certificate can result in "
-#~ "connections to insecure, rogue Wi-Fi networks.  Would you like to choose "
-#~ "a Certificate Authority certificate?"
-#~ msgstr ""
-#~ "Il no doprâ un certificât mitût fûr di une Autoritât di Certificazion "
-#~ "(CA) al pues portâ a conessions Wi-Fi no siguris. Sielzi un certificât di "
-#~ "une Autoritât di Certificazion?"
-
-#~ msgid "Ignore"
-#~ msgstr "Ignore"
-
-#~ msgid "Choose CA Certificate"
-#~ msgstr "Sielç certificât CA"
-
-#~ msgid "As_k for this password every time"
-#~ msgstr "_Domande cheste password ogni volte"
-
-#~ msgid "Don't _warn me again"
-#~ msgstr "No stâ visâmi plui"
-
-#~ msgid "Yes"
-#~ msgstr "Sì"
-
-#~ msgctxt "Search Location"
-#~ msgid "Other"
-#~ msgstr "Altri"
-
-#~ msgid "Personal File Sharing"
-#~ msgstr "Condivision file personâi"
-
-#~ msgid "_Allow Remote Control"
-#~ msgstr "_Permet control rimot"
-
-#~ msgid "_Verify"
-#~ msgstr "_Verifiche"
-
-#~ msgid "Login History"
-#~ msgstr "Cronologjie acès"
-
-#~ msgid "A user with the username '%s' already exists."
-#~ msgstr "Un utent cul non utent '%s' al esist za."
-
-#~ msgid "Bluetooth is disabled"
-#~ msgstr "Bluetooth no abilitât"
-
-#~ msgid "Done"
-#~ msgstr "Eseguide"
-
-#~ msgid "Time _Zone"
-#~ msgstr "Fû_s orari"
-
-#~ msgid "_Delay:"
-#~ msgstr "_Ritart:"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Short"
-#~ msgstr "Curt"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Slow"
-#~ msgstr "Lent"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Long"
-#~ msgstr "Lunc"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Fast"
-#~ msgstr "Veloç"
-
-#~ msgid "S_peed:"
-#~ msgstr "_Velocitât:"
-
-#~ msgid "Test Your Settings"
-#~ msgstr "Test impostazions"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Slow"
-#~ msgstr "Lent"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Fast"
-#~ msgstr "Veloç"
-
-#~ msgctxt "mouse, left button as primary"
-#~ msgid "_Left"
-#~ msgstr "_Çamp"
-
-#~ msgctxt "mouse, right button as primary"
-#~ msgid "_Right"
-#~ msgstr "_Distri"
-
-#~ msgid "_Pointer speed"
-#~ msgstr "_Velocitât cursôr"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "Lent"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "Veloç"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "Lent"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "Veloç"
-
-#~ msgid "Wireless devices require extra power"
-#~ msgstr "I dispositîfs cence fîl a domandin plui energjie"
-
-#~ msgid "No printers available"
-#~ msgstr "Nissune stampant disponibile"
-
-#~ msgid "Close"
-#~ msgstr "Siere"
-
-#~ msgid "Resume Printing"
-#~ msgstr "Torne finìs le stampe"
-
-#~ msgid "Pause Printing"
-#~ msgstr "Pause le stampe"
-
-#~ msgctxt "print job"
-#~ msgid "Held"
-#~ msgstr "Stratignût"
-
-#~ msgid "Job Title"
-#~ msgstr "Titul lavôr"
-
-#~ msgid "Job State"
-#~ msgstr "Stât lavôr"
-
-#~ msgid "Add New Printer"
-#~ msgstr "Zonte gnove stampant"
-
-#~ msgid "Used to determine your geographical location"
-#~ msgstr "Doprâts par determinâ la posizion gjeografiche"
-
-#~ msgid "Options"
-#~ msgstr "Opzions"
-
-#~ msgid ""
-#~ "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
-#~ "devices"
-#~ msgstr ""
-#~ "La condivision Bluetooth a permet di condividi file cun altris "
-#~ "dispositîfs Bluetooth abilitâts"
-
-#~ msgid "Only Receive From Trusted Devices"
-#~ msgstr "Ricêf dome di dispositîfs fidâts"
-
-#~ msgid "Save Received Files to Downloads Folder"
-#~ msgstr "Salve i file ricevûts te cartele Scjariâts"
-
-#~ msgid "Password:"
-#~ msgstr "Password:"
-
-#~ msgid "Zoom"
-#~ msgstr "Ingrandiment"
-
-#~ msgctxt "universal access, contrast"
-#~ msgid "Color"
-#~ msgstr "Colôr"
