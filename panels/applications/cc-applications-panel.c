@@ -1,6 +1,6 @@
 /* cc-applications-panel.c
  *
- * Copyright 2018-2022 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>
+ * Copyright 2018 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1679,13 +1679,6 @@ update_panel (CcApplicationsPanel *self,
 
   self->current_app_id = get_app_id (info);
   self->current_portal_app_id = get_portal_app_id (info);
-
-  /* Don't show “Open in Software” button for Software itself. */
-  {
-    gboolean is_software = g_strcmp0 (self->current_app_id, "org.gnome.Software") == 0;
-    gtk_widget_set_visible (GTK_WIDGET (self->header_button),
-                            gtk_widget_get_visible (GTK_WIDGET (self->header_button)) && !is_software);
-  }
 }
 
 static void
