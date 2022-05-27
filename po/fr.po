@@ -33,15 +33,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-26 13:31+0000\n"
-"PO-Revision-Date: 2021-09-17 14:32+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
+"POT-Creation-Date: 2022-05-27 12:31+0000\n"
+"PO-Revision-Date: 2014-09-08 22:33+0000\n"
+"Last-Translator: Erwan Georget <dremor@dremor.info>, 2015\n"
 "Language-Team: French (http://www.transifex.com/endless-os/gnome-control-center/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: panels/applications/cc-applications-panel.c:815
 msgid "System Bus"
@@ -1234,6 +1234,7 @@ msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d heure"
 msgstr[1] "%d heures"
+msgstr[2] "%d heures"
 
 #: panels/common/cc-util.c:169
 #, c-format
@@ -1241,6 +1242,7 @@ msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minute"
 msgstr[1] "%d minutes"
+msgstr[2] "%d minutes"
 
 #: panels/common/cc-util.c:170
 #, c-format
@@ -1248,6 +1250,7 @@ msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d seconde"
 msgstr[1] "%d secondes"
+msgstr[2] "%d secondes"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:177
@@ -2906,6 +2909,7 @@ msgid "%i day ago"
 msgid_plural "%i days ago"
 msgstr[0] "Il y a %i jour"
 msgstr[1] "Il y a %i jours"
+msgstr[2] "Il y a %i jours"
 
 #: panels/network/connection-editor/ce-page-details.c:291
 #, c-format
@@ -4317,6 +4321,7 @@ msgid "%i minute"
 msgid_plural "%i minutes"
 msgstr[0] "%i minute"
 msgstr[1] "%i minutes"
+msgstr[2] "%i minutes"
 
 #: panels/power/cc-power-panel.c:349
 #, c-format
@@ -4324,6 +4329,7 @@ msgid "%i hour"
 msgid_plural "%i hours"
 msgstr[0] "%i heure"
 msgstr[1] "%i heures"
+msgstr[2] "%i heures"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4337,12 +4343,14 @@ msgid "hour"
 msgid_plural "hours"
 msgstr[0] "heure"
 msgstr[1] "heures"
+msgstr[2] "heures"
 
 #: panels/power/cc-power-panel.c:359
 msgid "minute"
 msgid_plural "minutes"
 msgstr[0] "minute"
 msgstr[1] "minutes"
+msgstr[2] "minutes"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-power-panel.c:377
@@ -4922,6 +4930,7 @@ msgid "%u Job Requires Authentication"
 msgid_plural "%u Jobs Require Authentication"
 msgstr[0] "%u tâche nécessite une authentification"
 msgstr[1] "%u tâches nécessitent une authentification"
+msgstr[2] "%u tâches nécessitent une authentification"
 
 #. Translators: This is the printer name for which we are showing the active
 #. jobs
@@ -5178,6 +5187,7 @@ msgid "%u Job"
 msgid_plural "%u Jobs"
 msgstr[0] "%u tâche"
 msgstr[1] "%u tâches"
+msgstr[2] "%u tâches"
 
 #. Translators: Name of job which makes printer to clean its heads
 #: panels/printers/pp-printer-entry.c:711
@@ -6084,6 +6094,7 @@ msgid "Depends on %u other device"
 msgid_plural "Depends on %u other devices"
 msgstr[0] "Dépend de %u autre périphérique"
 msgstr[1] "Dépend de %u autres périphériques"
+msgstr[2] "Dépend de %u autres périphériques"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:109
 msgid "Name:"
@@ -6211,6 +6222,7 @@ msgid "%d pixel"
 msgid_plural "%d pixels"
 msgstr[0] "%d pixel"
 msgstr[1] "%d pixels"
+msgstr[2] "%d pixels"
 
 #: panels/universal-access/cc-ua-panel.ui:76
 msgid "_Always Show Accessibility Menu"
@@ -8111,6 +8123,7 @@ msgid "%u Output"
 msgid_plural "%u Outputs"
 msgstr[0] "%u sortie"
 msgstr[1] "%u sorties"
+msgstr[2] "%u sorties"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8120,6 +8133,7 @@ msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u entrée"
 msgstr[1] "%u entrées"
+msgstr[2] "%u entrées"
 
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
