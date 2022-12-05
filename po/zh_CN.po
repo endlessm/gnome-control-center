@@ -32,9 +32,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2021-09-08 08:29+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-05 14:29-0700\n"
 "PO-Revision-Date: 2021-09-14 18:51+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
@@ -98,8 +97,8 @@ msgid "File System"
 msgstr "文件系统"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "设置"
@@ -223,7 +222,7 @@ msgstr "相机"
 #: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:129
 #: panels/user-accounts/cc-user-panel.c:848
 #: panels/user-accounts/cc-user-panel.c:938
-#: panels/wwan/cc-wwan-device-page.c:445
+#: panels/wwan/cc-wwan-device-page.c:479
 #: subprojects/gvc/gvc-mixer-control.c:1900
 msgid "Disabled"
 msgstr "已禁用"
@@ -319,8 +318,8 @@ msgid "Storage"
 msgstr "存储"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "在“软件”中打开"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -361,9 +360,8 @@ msgstr "清空缓存…"
 msgid "Control various application permissions and settings"
 msgstr "控制不同应用程序权限和设置"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "application;flatpak;permission;setting;应用程序;权限;设置;"
 
@@ -376,7 +374,7 @@ msgstr "选择图片"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -447,7 +445,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "将背景图片改为一张壁纸或照片"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Wallpaper;Screen;Desktop;壁纸;墙纸;屏幕;桌面;背景;"
 
@@ -498,7 +496,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "开关蓝牙及连接您的设备"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "share;sharing;bluetooth;obex;分享;共享;蓝牙;"
 
@@ -511,9 +509,11 @@ msgid "No applications can capture photos or video."
 msgstr "没有应用程序可以捕获照片或视频。"
 
 #: panels/camera/cc-camera-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
 "使用相机允许应用程序拍摄照片和视频。禁用相机可能会导致一些应用程序功能无法正"
 "常使用。"
@@ -530,10 +530,9 @@ msgstr "没有应用程序要求访问摄像头"
 msgid "Protect your pictures"
 msgstr "保护您的图片"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
@@ -1159,12 +1158,12 @@ msgid ""
 msgstr "校准显示器、相机、打印机等设备的色彩"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr ""
 "Color;ICC;Profile;Calibrate;Printer;Display;颜色;色彩;配置;校准;打印机;显示;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "其他…"
 
@@ -1225,82 +1224,82 @@ msgstr "复制(_C)"
 msgid "Select _All"
 msgstr "选择全部(_A)"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "今天"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "昨天"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%-m月%-d日"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%Y年%-m月%-d日"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d 小时"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d 分钟"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d 秒"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr "%s"
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 秒"
 
@@ -1473,7 +1472,7 @@ msgid "Change the date and time, including time zone"
 msgstr "改变日期、时间和时区"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Clock;Timezone;Location;时钟;时区;位置;"
 
@@ -1519,7 +1518,7 @@ msgid "Configure Default Applications"
 msgstr "配置默认应用程序"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "default;application;preferred;media;默认;应用程序;首选;偏好;媒体;介质;"
 
@@ -1547,12 +1546,11 @@ msgstr "诊断"
 msgid "Report your problems"
 msgstr "报告问题"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1723,6 +1721,7 @@ msgid "Times"
 msgstr "时间"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "从"
 
@@ -1744,16 +1743,19 @@ msgstr "分"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "上午"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "下午"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "到"
 
@@ -1766,7 +1768,7 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "选择如何使用接入的显示器和投影仪"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
@@ -1775,10 +1777,10 @@ msgstr ""
 "redshift;color;sunset;sunrise;面板;投影仪;屏幕;分辨率;刷新;夜晚;晚上;光;蓝;红"
 "移;颜色;日落;日出;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
 #: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "未知"
@@ -1787,32 +1789,32 @@ msgstr "未知"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s；构建 ID：%s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64 位"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32 位"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "未知"
@@ -1870,17 +1872,23 @@ msgstr "虚拟化"
 msgid "Software Updates"
 msgstr "软件更新"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
 msgstr "重命名设备"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
 msgstr "通过网络查看该设备或配对蓝牙设备时，设备名称用于标识该设备。"
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
 msgstr "重命名(_R)"
 
@@ -1897,7 +1905,7 @@ msgstr "查看系统信息"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -2272,7 +2280,7 @@ msgstr "重新设置快捷键可能影响您的自定义快捷键。此操作无
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:275
 #: panels/printers/authentication-dialog.ui:29
 #: panels/printers/ppd-selection-dialog.ui:27
-#: panels/wwan/cc-wwan-device-page.c:143
+#: panels/wwan/cc-wwan-device-page.c:190
 msgid "Cancel"
 msgstr "取消"
 
@@ -2387,14 +2395,13 @@ msgid "Keyboard"
 msgstr "键盘"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
-#| msgid "View and change keyboard shortcuts and set your typing preferences"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
 msgstr "更改键盘快捷键并设置您的输入首选项、键盘布局和输入源"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr ""
@@ -2410,9 +2417,11 @@ msgid "No applications can obtain location information."
 msgstr "没有应用程序可以获取位置信息。"
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
 "定位服务允许应用得知您的地理定位。使用 Wi-Fi 和移动宽带可以提高精确度。"
 
@@ -2436,7 +2445,6 @@ msgstr "没有应用程序要求访问位置"
 msgid "Protect your location information"
 msgstr "保护您的位置信息"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
@@ -2593,7 +2601,37 @@ msgstr "锁屏"
 msgid "Lock your screen"
 msgstr "锁定屏幕"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "定位服务已关闭"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "跃点"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "启用或禁用远程登录"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "麦克风已关闭"
@@ -2603,10 +2641,11 @@ msgid "No applications can record sound."
 msgstr "未找到音频录制应用。"
 
 #: panels/microphone/cc-microphone-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
 "使用麦克风允许应用程序录制声音。禁用麦克风可能会导致一些应用程序功能无法正常"
 "使用。"
@@ -2623,7 +2662,6 @@ msgstr "没有应用程序要求访问麦克风"
 msgid "Protect your conversations"
 msgstr "保护对话"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 #: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
@@ -2733,7 +2771,7 @@ msgid ""
 msgstr "改变鼠标和触摸板灵敏度，并选择右手或左手习惯"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr ""
 "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;触摸板;指针;触摸;单"
@@ -2813,7 +2851,7 @@ msgid "Manage preferences for productivity and multitasking"
 msgstr "管理生产力和多任务的首选项"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr ""
 "Multitasking;Multitask;Productivity;Customize;Desktop;多任务;多进程;生产力;自"
@@ -2869,6 +2907,7 @@ msgstr "安全网络"
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "已连接"
 
@@ -3529,7 +3568,7 @@ msgid "Control how you connect to the Internet"
 msgstr "控制连接到互联网的方式"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr ""
 "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;网络;互联网协议;局"
@@ -3540,7 +3579,7 @@ msgid "Control how you connect to Wi-Fi networks"
 msgstr "控制连接到 Wi-Fi 网络的方式"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr ""
 "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;网络;无线;无线保真;"
@@ -4082,7 +4121,7 @@ msgstr "缺失 EAP-LEAP 密码"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "用户名(_U)"
 
@@ -4092,8 +4131,8 @@ msgstr "用户名(_U)"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "密码(_P)"
@@ -4250,7 +4289,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "域(_D)"
@@ -4437,7 +4476,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "控制显示的通知种类及内容"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr ""
 "Notifications;Banner;Message;Tray;Popup;通知;横幅;条幅;消息;托盘;弹出;弹窗;"
@@ -4478,7 +4517,7 @@ msgstr "连接在线帐号并决定如何使用"
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
@@ -4909,7 +4948,7 @@ msgid "View your battery status and change power saving settings"
 msgstr "查看电池状态并更改省电设置"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -4967,7 +5006,7 @@ msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr "添加打印机，查看打印任务和管理打印"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr ""
 "Printer;Queue;Print;Paper;Ink;Toner;打印机;队列;打印;纸张;墨水;墨粉;硒鼓;墨"
@@ -5691,13 +5730,11 @@ msgid "Region & Language"
 msgstr "区域与语言"
 
 #: panels/region/gnome-region-panel.desktop.in.in:4
-#| msgid ""
-#| "Select your display language, formats, keyboard layouts and input sources"
 msgid "Select your display language and formats"
 msgstr "选择您的显示语言和格式"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Language;Layout;Keyboard;Input;语言;布局;键盘;输入;"
 
@@ -5840,7 +5877,7 @@ msgid "Configure Removable Media settings"
 msgstr "配置可移动介质设置"
 
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
@@ -5908,7 +5945,7 @@ msgid ""
 msgstr "控制在活动概览中显示哪些程序的搜索结果"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr ""
 "Search;Find;Index;Hide;Privacy;Results;搜索;查找;寻找;索引;隐藏;隐私;结果;"
@@ -6067,7 +6104,7 @@ msgid "Control what you want to share with others"
 msgstr "控制想要与其他用户共享的内容"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
@@ -6188,7 +6225,7 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "更改音频音量、音频输入输出和事件声音"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6362,7 +6399,7 @@ msgid "Manage Thunderbolt devices"
 msgstr "管理雷雳设备"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;privacy;雷雳;雷电;隐私;"
 
@@ -6902,7 +6939,7 @@ msgid "Make it easier to see, hear, type, point and click"
 msgstr "辅助视觉、听觉、打字和指点操作"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7089,35 +7126,86 @@ msgstr "文件历史与回收站"
 msgid "Don't leave traces"
 msgstr "不留痕迹"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "添加新连接"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "无法打开连接编辑器"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "数据连接"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "更改网络设置"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "自动路由"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "计划"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "自动路由"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "应与您登录提供商的网络地址相同。"
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "添加帐号失败"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "密码不匹配。"
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "注册用户失败"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "没有支持该域的验证方法"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "加入域失败"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7125,7 +7213,7 @@ msgstr ""
 "登录名不正确。\n"
 "请重试。"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7133,11 +7221,11 @@ msgstr ""
 "登录密码不正确。\n"
 "请重试。"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "登录到域失败"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "找不到该域名，也许拼写有误？"
 
@@ -7163,19 +7251,26 @@ msgid "Account _Type"
 msgstr "帐号类型(_T)"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "允许用户下次登录时更改密码(_L)"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "现在设置密码(_N)"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "确认(_C)"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
@@ -7184,15 +7279,15 @@ msgstr ""
 "企业登录允许在本设备上使用已有的、集中管理的用户帐号。您也可以使用此帐号访问"
 "公司在互联网上的资源。"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "您已离线"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr "您必须在线以添加企业用户。"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "企业登录(_E)"
 
@@ -7483,15 +7578,15 @@ msgstr "会话开始"
 msgid "%s — Account Activity"
 msgstr "%s — 帐号活动"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "请选择另一个密码。"
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "请再次输入当前密码。"
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "无法更改密码"
 
@@ -7514,14 +7609,6 @@ msgstr "新密码(_N)"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "当前密码(_P)"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "允许用户下次登录时更改密码"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "现在设置密码"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -7625,7 +7712,7 @@ msgstr "已登录"
 #. TRANSLATORS: Status of Parental Controls setup
 #: panels/user-accounts/cc-user-panel.c:846
 #: panels/user-accounts/cc-user-panel.c:935
-#: panels/wwan/cc-wwan-device-page.c:443
+#: panels/wwan/cc-wwan-device-page.c:477
 msgid "Enabled"
 msgstr "已启用"
 
@@ -7747,7 +7834,7 @@ msgid "Add or remove users and change your password"
 msgstr "添加或删除用户及更改密码"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
@@ -8056,7 +8143,7 @@ msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr "为绘图用平板设备设置按键映射并调整触控笔灵敏度"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr ""
 "Tablet;Wacom;Stylus;Eraser;Mouse;数位板;绘图板;绘画板;手绘板;手写板;触控笔;橡"
@@ -8321,61 +8408,61 @@ msgctxt "Network mode"
 msgid "Unknown"
 msgstr "未知"
 
-#: panels/wwan/cc-wwan-device-page.c:141
+#: panels/wwan/cc-wwan-device-page.c:188
 msgid "Unlock SIM card"
 msgstr "解锁 SIM 卡"
 
-#: panels/wwan/cc-wwan-device-page.c:142 panels/wwan/cc-wwan-device-page.c:190
+#: panels/wwan/cc-wwan-device-page.c:189 panels/wwan/cc-wwan-device-page.c:237
 msgid "Unlock"
 msgstr "解锁"
 
-#: panels/wwan/cc-wwan-device-page.c:147
+#: panels/wwan/cc-wwan-device-page.c:194
 #, c-format
 msgid "Please provide PIN code for SIM %d"
 msgstr "请提供 SIM 卡 %d 的 PIN 码"
 
-#: panels/wwan/cc-wwan-device-page.c:148
+#: panels/wwan/cc-wwan-device-page.c:195
 msgid "Enter PIN to unlock your SIM card"
 msgstr "输入 PIN 以解锁您的 SIM 卡"
 
-#: panels/wwan/cc-wwan-device-page.c:152
+#: panels/wwan/cc-wwan-device-page.c:199
 #, c-format
 msgid "Please provide PUK code for SIM %d"
 msgstr "请提供 SIM 卡 %d 的 PUK 码"
 
-#: panels/wwan/cc-wwan-device-page.c:153
+#: panels/wwan/cc-wwan-device-page.c:200
 msgid "Enter PUK to unlock your SIM card"
 msgstr "输入 PUK 以解锁您的 SIM 卡"
 
-#: panels/wwan/cc-wwan-device-page.c:171
+#: panels/wwan/cc-wwan-device-page.c:218
 #, c-format
 msgid "Wrong password entered. You have %1$u try left"
 msgid_plural "Wrong password entered. You have %1$u tries left"
 msgstr[0] "密码输入错误。您还有 %1$u 次尝试机会"
 
-#: panels/wwan/cc-wwan-device-page.c:174
+#: panels/wwan/cc-wwan-device-page.c:221
 #, c-format
 msgid "You have %u try left"
 msgid_plural "You have %u tries left"
 msgstr[0] "您还有 %u 次尝试机会"
 
-#: panels/wwan/cc-wwan-device-page.c:179
+#: panels/wwan/cc-wwan-device-page.c:226
 msgid "Wrong password entered."
 msgstr "密码输入错误。"
 
-#: panels/wwan/cc-wwan-device-page.c:224
+#: panels/wwan/cc-wwan-device-page.c:271
 msgid "PUK code should be an 8 digit number"
 msgstr "PUK 码应为 8 位数字"
 
-#: panels/wwan/cc-wwan-device-page.c:248
+#: panels/wwan/cc-wwan-device-page.c:295
 msgid "Enter New PIN"
 msgstr "输入新 PIN"
 
-#: panels/wwan/cc-wwan-device-page.c:252
+#: panels/wwan/cc-wwan-device-page.c:299
 msgid "PIN code should be a 4-8 digit number"
 msgstr "PIN 码应为 4 到 8 位数字"
 
-#: panels/wwan/cc-wwan-device-page.c:270
+#: panels/wwan/cc-wwan-device-page.c:317
 msgid "Unlocking..."
 msgstr "正在解锁…"
 
@@ -8607,9 +8694,8 @@ msgstr "移动网络"
 msgid "Configure Telephony and mobile data connections"
 msgstr "配置电话和移动数据连接"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wwan/gnome-wwan-panel.desktop.in.in:17
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr "cellular;wwan;telephony;sim;mobile;蜂窝;移动;无线;"
 
@@ -8653,11 +8739,11 @@ msgstr "要显示的面板"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[面板] [参数…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "隐私"
 
-#: shell/cc-panel-loader.c:299
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "可用面板："
 
@@ -8759,6 +8845,15 @@ msgstr[0] "%u 路输入"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "系统声音"
+
+#~ msgid "Open in Software"
+#~ msgstr "在“软件”中打开"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr "允许用户下次登录时更改密码"
+
+#~ msgid "Set a password now"
+#~ msgstr "现在设置密码"
 
 #~ msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 #~ msgstr ""
@@ -8966,9 +9061,6 @@ msgstr "系统声音"
 
 #~ msgid "Read access to network settings"
 #~ msgstr "对网络设置的读取权限"
-
-#~ msgid "Change network settings"
-#~ msgstr "更改网络设置"
 
 #~ msgid ""
 #~ "Access the ofono service to read and change network settings for mobile "

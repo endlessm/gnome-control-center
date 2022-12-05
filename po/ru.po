@@ -22,9 +22,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-01-05 22:33+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-05 14:29-0700\n"
 "PO-Revision-Date: 2022-01-09 13:20+0300\n"
 "Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
@@ -89,8 +88,8 @@ msgid "File System"
 msgstr "Файловая система"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "Параметры"
@@ -314,8 +313,8 @@ msgid "Storage"
 msgstr "Хранилище"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "Открыть в Центре приложений"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -358,9 +357,8 @@ msgstr "Очистить кэш…"
 msgid "Control various application permissions and settings"
 msgstr "Управление различными разрешениями и настройками приложения"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "приложение;flatpak;права;доступ;настройки;параметры;"
 
@@ -373,7 +371,7 @@ msgstr "Выберите изображение"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -444,7 +442,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "Изменить фоновое изображение на обои или фото"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Обои;Экран;Рабочий;"
 
@@ -495,7 +493,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Включение и отключение Bluetooth. Подключение устройств Bluetooth"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "общий;доступ;bluetooth;obex;"
 
@@ -508,9 +506,11 @@ msgid "No applications can capture photos or video."
 msgstr "Нет приложений способных снимать фото и видео."
 
 #: panels/camera/cc-camera-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
 "Использование камеры позволяет приложениям захватывать фотографии и видео. "
 "Отключение камеры может привести к неправильной работе некоторых приложений."
@@ -527,10 +527,9 @@ msgstr "Нет приложений запросивших доступ к ка�
 msgid "Protect your pictures"
 msgstr "Защитите ваши изображения"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
@@ -1179,11 +1178,11 @@ msgid ""
 msgstr "Калибровка цвета устройств, таких как экраны, камеры или принтеры"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Цвет;ICC;Профиль;Калибровка;Принтер;Экран;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "Другой…"
 
@@ -1244,27 +1243,27 @@ msgstr "_Копировать"
 msgid "Select _All"
 msgstr "Выбрать в_сё"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "Сегодня"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "Вчера"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%-d %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%-d %b %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -1273,7 +1272,7 @@ msgstr[1] "%d часа"
 msgstr[2] "%d часов"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
@@ -1282,7 +1281,7 @@ msgstr[1] "%d минуты"
 msgstr[2] "%d минут"
 
 # Блокировать экран после:
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1291,35 +1290,35 @@ msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
@@ -1327,7 +1326,7 @@ msgstr "%s"
 
 # Блокировать экран после:
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 секунд"
 
@@ -1500,7 +1499,7 @@ msgid "Change the date and time, including time zone"
 msgstr "Изменить дату и время, включая часовой пояс"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Часы;Часовой;пояс;Местоположение;"
 
@@ -1546,7 +1545,7 @@ msgid "Configure Default Applications"
 msgstr "Настроить приложения по умолчанию"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "по умолчанию;приложение;предпочтительное;носитель;"
 
@@ -1576,12 +1575,11 @@ msgstr "Диагностика"
 msgid "Report your problems"
 msgstr "Сообщить об ошибках"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1755,6 +1753,7 @@ msgid "Times"
 msgstr "Время"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "От"
 
@@ -1776,16 +1775,19 @@ msgstr "Минуты"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "ДП (AM)"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "ПП (PM)"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "До"
 
@@ -1798,7 +1800,7 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "Выберите, как использовать подключённые мониторы и проекторы"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
@@ -1806,10 +1808,10 @@ msgstr ""
 "Панель;Проектор;xrandr;Экран;Разрешение;Обновить;Монитор;Ночь;Подсветка;"
 "Синий;смещение;цвет;закат;рассвет;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
 #: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "Неизвестно"
@@ -1818,32 +1820,32 @@ msgstr "Неизвестно"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ID сборки: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64-бит"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32-бит"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Неизвестно"
@@ -1901,11 +1903,17 @@ msgstr "Виртуализация"
 msgid "Software Updates"
 msgstr "Обновление ПО"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
 msgstr "Переименовать устройство"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
@@ -1913,7 +1921,7 @@ msgstr ""
 "Имя устройства используется для идентификации этого устройства при просмотре "
 "в сети или при сопряжении устройств Bluetooth."
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
 msgstr "_Переименовать"
 
@@ -1931,7 +1939,7 @@ msgstr "Просмотр информации о системе"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -2438,7 +2446,7 @@ msgstr ""
 "клавиатуры и источников ввода"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr ""
@@ -2454,9 +2462,11 @@ msgid "No applications can obtain location information."
 msgstr "Нет приложений способных получить информацию о местоположении."
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
 "Сервисы местоположения позволяют приложениям видеть ваше географическое "
 "положение. Точность возрастает при использовании WiFi и мобильного "
@@ -2482,7 +2492,6 @@ msgstr "Нет приложений запросивших доступ к ме�
 msgid "Protect your location information"
 msgstr "Защитите вашу информацию о местоположении"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
@@ -2659,7 +2668,37 @@ msgstr "Блокировка экрана"
 msgid "Lock your screen"
 msgstr "Заблокировать экран"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "Сервисы местоположения отключены"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "Метрика"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "Включение или отключение удалённого входа в систему"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "Микрофон выключен"
@@ -2669,10 +2708,11 @@ msgid "No applications can record sound."
 msgstr "Нет приложений способных записывать звук."
 
 #: panels/microphone/cc-microphone-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
 "Использование микрофона позволяет приложениям записывать и прослушивать "
 "звуки. Отключение микрофона может привести к неправильной работе некоторых "
@@ -2690,7 +2730,6 @@ msgstr "Нет приложений запросивших доступ к ми�
 msgid "Protect your conversations"
 msgstr "Защитите ваш обмен сообщениями"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 #: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
@@ -2803,7 +2842,7 @@ msgstr ""
 "кнопок для правши или левши"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr "Трэкпад;Указатель;Щелчок;Нажатие;Двойной;Кнопка;Трэкбол;Прокрутка;"
 
@@ -2883,7 +2922,7 @@ msgid "Manage preferences for productivity and multitasking"
 msgstr "Управляйте предпочтениями продуктивности и многозадачности"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr "Многозадачность;Продуктивность;Фокус;Настройка;Рабочий стол;"
 
@@ -2939,6 +2978,7 @@ msgstr "Защищённая сеть"
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "Подключено"
 
@@ -3611,7 +3651,7 @@ msgid "Control how you connect to the Internet"
 msgstr "Управление подключением к Интернету"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr "Сеть;IP;LAN;Прокси;WAN;Мобильная;Модем;Bluetooth;vpn;DNS;"
 
@@ -3620,7 +3660,7 @@ msgid "Control how you connect to Wi-Fi networks"
 msgstr "Контролируйте, как вы подключаетесь к сетям Wi-Fi"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr "Сеть;Беспроводная;Wi-Fi;Wifi;IP;LAN;Мобильная;DNS;Точка;доступа;"
 
@@ -4164,7 +4204,7 @@ msgstr "отсутствует пароль EAP-LEAP"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "_Имя пользователя"
 
@@ -4174,8 +4214,8 @@ msgstr "_Имя пользователя"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "_Пароль"
@@ -4333,7 +4373,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "_Домен"
@@ -4530,7 +4570,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "Управление отображением и содержанием уведомлений"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Уведомления;Всплывающее;Сообщение;Лоток;Всплывающее;"
 
@@ -4571,7 +4611,7 @@ msgstr ""
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
@@ -5030,7 +5070,7 @@ msgid "View your battery status and change power saving settings"
 msgstr "Просмотр состояния батареи и изменение параметров энергосбережения"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -5088,7 +5128,7 @@ msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr "Добавление принтеров, просмотр текущих заданий и выбор способа печати"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Принтер;Очередь;Печать;Бумага;Чернила;Тонер;"
 
@@ -5825,7 +5865,7 @@ msgid "Select your display language and formats"
 msgstr "Выбор языка интерфейса и форматов"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Язык;Раскладка;Клавиатура;Ввод;"
 
@@ -5968,7 +6008,7 @@ msgid "Configure Removable Media settings"
 msgstr "Настроить съёмный носитель"
 
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
@@ -6037,7 +6077,7 @@ msgid ""
 msgstr "Какие приложения показывают результаты поиска в режиме «Обзор»"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Поиск;Найти;Индекс;Скрыть;Конфиденциальность;Результаты;"
 
@@ -6200,7 +6240,7 @@ msgid "Control what you want to share with others"
 msgstr "Общий доступ для других пользователей"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
@@ -6321,7 +6361,7 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Изменение громкости звука входов, выходов и уведомлений"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6500,7 +6540,7 @@ msgid "Manage Thunderbolt devices"
 msgstr "Управление устройствами Thunderbolt"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;приватность;"
 
@@ -7048,7 +7088,7 @@ msgstr ""
 "слышимости"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7238,35 +7278,86 @@ msgstr "История файлов и корзина"
 msgid "Don't leave traces"
 msgstr "Не оставлять следов"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "Добавить новое подключение"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "Не удалось открыть редактор соединений"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "Соединение данных"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "Может изменять настройки"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "Автоматические маршруты"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "Расписание"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "Автоматические маршруты"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "Должно совпадать с веб-адресом провайдера вашей учётной записи."
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "Не удалось добавить учётную запись"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "Пароли не совпадают."
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "Не удалось зарегистрировать учётную запись"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "Нет поддерживаемого метода аутентификации в этом домене"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "Не удалось подключить к домену"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7274,7 +7365,7 @@ msgstr ""
 "Неправильное имя пользователя.\n"
 "Попробуйте ещё раз."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7282,11 +7373,11 @@ msgstr ""
 "Неправильный пароль.\n"
 "Попробуйте ещё раз."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "Не удалось войти в домен"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "Не удалось найти домен. Может быть, он написан с ошибкой?"
 
@@ -7312,20 +7403,27 @@ msgid "Account _Type"
 msgstr "_Тип учётной записи"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr ""
 "_Разрешить пользователю установить пароль при следующем входе в систему"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "_Установите пароль сейчас"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "_Подтвердить"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
@@ -7336,16 +7434,16 @@ msgstr ""
 "использовать данную учётную запись для доступа к ресурсам компании в "
 "интернете."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "Сетевое подключение отсутствует"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr ""
 "Для добавления корпоративных учётных записей требуется подключение к сети."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "_Корпоративный вход"
 
@@ -7641,15 +7739,15 @@ msgstr "Сеанс начат"
 msgid "%s — Account Activity"
 msgstr "%s — активность учётной записи"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "Выберите другой пароль."
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "Введите пароль ещё раз."
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "Не удалось изменить пароль"
 
@@ -7672,14 +7770,6 @@ msgstr "_Новый пароль"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "Текущий па_роль"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "Разрешить пользователю изменить пароль при следующем входе в систему"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "Установите пароль сейчас"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -7911,7 +8001,7 @@ msgid "Add or remove users and change your password"
 msgstr "Добавить или удалить пользователей или изменить пароль"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
@@ -8236,7 +8326,7 @@ msgstr ""
 "графических планшетов"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Планшет;Wacom;Перо;Ластик;Мышь;"
 
@@ -8792,9 +8882,8 @@ msgstr "Мобильная сеть"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Настроить телефонию и соединения для мобильных данных"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wwan/gnome-wwan-panel.desktop.in.in:17
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr "сотовый;мобильник;мобильный;мобильная;wwan;телефония;телефон;sim;сим;"
 
@@ -8838,11 +8927,11 @@ msgstr "Область для отображения"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[ПАНЕЛЬ] [АРГУМЕНТ…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "Конфиденциальность"
 
-#: shell/cc-panel-loader.c:299
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Доступные панели:"
 
@@ -8955,3 +9044,12 @@ msgstr[2] "%u входов"
 msgid "System Sounds"
 msgstr "Системные звуки"
 
+#~ msgid "Open in Software"
+#~ msgstr "Открыть в Центре приложений"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr ""
+#~ "Разрешить пользователю изменить пароль при следующем входе в систему"
+
+#~ msgid "Set a password now"
+#~ msgstr "Установите пароль сейчас"

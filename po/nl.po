@@ -23,9 +23,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2021-09-13 15:00+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-05 14:29-0700\n"
 "PO-Revision-Date: 2021-09-13 17:08+0200\n"
 "Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
@@ -90,8 +89,8 @@ msgid "File System"
 msgstr "Bestandssysteem"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "Instellingen"
@@ -218,7 +217,7 @@ msgstr "Camera"
 #: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:129
 #: panels/user-accounts/cc-user-panel.c:848
 #: panels/user-accounts/cc-user-panel.c:938
-#: panels/wwan/cc-wwan-device-page.c:445
+#: panels/wwan/cc-wwan-device-page.c:479
 #: subprojects/gvc/gvc-mixer-control.c:1900
 msgid "Disabled"
 msgstr "Uitgeschakeld"
@@ -316,8 +315,8 @@ msgid "Storage"
 msgstr "Opslag"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "Openen met Software"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -360,9 +359,8 @@ msgstr "Cachegeheugen wissen…"
 msgid "Control various application permissions and settings"
 msgstr "Beheer verschillende toepassingsrechten en -instellingen"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr ""
 "application;flatpak;permission;setting;toepassing;rechten;machtigingen;"
@@ -377,7 +375,7 @@ msgstr "Selecteer een afbeelding"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -448,7 +446,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "Achtergrond wijzigen in een achtergrondafbeelding of foto"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Wallpaper;Screen;Desktop;Achtergrond;Scherm;Bureaublad;"
 
@@ -500,7 +498,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Bluetooth aan- en uitzetten en uw apparaten aansluiten"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "share;sharing;bluetooth;obex;delen;"
 
@@ -513,9 +511,11 @@ msgid "No applications can capture photos or video."
 msgstr "Er zijn geen toepassingen die foto’s of video’s kunnen maken."
 
 #: panels/camera/cc-camera-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
 "Gebruik van de camera geeft toepassingen de mogelijkheid foto’s en video’s "
 "(op) te nemen. De camera uitschakelen kan ertoe leiden dat sommige "
@@ -533,10 +533,9 @@ msgstr "Er hebben nog geen toepassingen toegang tot de camera gevraagd"
 msgid "Protect your pictures"
 msgstr "Bescherm uw foto’s"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
@@ -1187,11 +1186,11 @@ msgstr ""
 "kalibreren"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Color;ICC;Profile;Calibrate;Printer;Display;Kleur;Kalibreren;Weergave;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "Ander profiel…"
 
@@ -1256,27 +1255,27 @@ msgstr "_Kopiëren"
 msgid "Select _All"
 msgstr "_Alles selecteren"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "Vandaag"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "Gisteren"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%d %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%d %b %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -1284,14 +1283,14 @@ msgstr[0] "%d uur"
 msgstr[1] "%d uur"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minuut"
 msgstr[1] "%d minuten"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1299,42 +1298,42 @@ msgstr[0] "%d seconde"
 msgstr[1] "%d seconden"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr "%s"
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 seconden"
 
@@ -1509,7 +1508,7 @@ msgid "Change the date and time, including time zone"
 msgstr "Datum en tijd, inclusief tijdzone, wijzigen"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Clock;Timezone;Location;Klok;Tijdzone;Locatie;"
 
@@ -1557,7 +1556,7 @@ msgid "Configure Default Applications"
 msgstr "Standaardtoepassingen configureren"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "default;application;preferred;media;standaard;toepassing;voorkeur;"
 
@@ -1589,12 +1588,11 @@ msgstr "Bevindingen"
 msgid "Report your problems"
 msgstr "Meld uw problemen"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1772,6 +1770,7 @@ msgid "Times"
 msgstr "Tijden"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "Van"
 
@@ -1793,16 +1792,19 @@ msgstr "minuut"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "am"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "pm"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "tot"
 
@@ -1815,7 +1817,7 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "Kiezen hoe aangesloten beeldschermen en projectoren gebruikt worden"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
@@ -1824,10 +1826,10 @@ msgstr ""
 "redshift;color;sunset;sunrise;Paneel;Scherm;Resolutie;Verversen;Beeldscherm;"
 "Nacht;Licht;Blauw;kleur;zonsondergang;zonsopgang;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
 #: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "Onbekend"
@@ -1836,32 +1838,32 @@ msgstr "Onbekend"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; build-ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Onbekend"
@@ -1919,11 +1921,17 @@ msgstr "Virtualisatie"
 msgid "Software Updates"
 msgstr "Software-updates"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
 msgstr "Apparaat hernoemen"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
@@ -1931,7 +1939,7 @@ msgstr ""
 "De apparaatnaam wordt gebruikt om dit apparaat te identificeren in het "
 "netwerk, of bij het koppelen van Bluetooth-apparaten."
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
 msgstr "He_rnoemen"
 
@@ -1949,7 +1957,7 @@ msgstr "Systeeminformatie bekijken"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -2330,7 +2338,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:275
 #: panels/printers/authentication-dialog.ui:29
 #: panels/printers/ppd-selection-dialog.ui:27
-#: panels/wwan/cc-wwan-device-page.c:143
+#: panels/wwan/cc-wwan-device-page.c:190
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -2458,7 +2466,7 @@ msgstr ""
 "toetsenbordindelingen en invoerbronnen in"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr ""
@@ -2474,9 +2482,11 @@ msgid "No applications can obtain location information."
 msgstr "Er zijn geen toepassingen die locatie-informatie kunnen verkrijgen."
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
 "Met locatiediensten kunnen toepassingen uw locatie te weten komen. Gebruik "
 "van wifi en mobiele breedband verhoogt de nauwkeurigheid."
@@ -2501,7 +2511,6 @@ msgstr "Er hebben nog geen toepassingen toegang tot uw locatie gevraagd"
 msgid "Protect your location information"
 msgstr "Beveilig uw locatie-informatie"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
@@ -2664,7 +2673,37 @@ msgstr "Schermvergrendeling"
 msgid "Lock your screen"
 msgstr "Vergrendel uw scherm"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "Locatiediensten zijn uitgeschakeld"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "Metrisch"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "Aanmelden op afstand in- of uitschakelen"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "Microfoon is uitgeschakeld"
@@ -2674,10 +2713,11 @@ msgid "No applications can record sound."
 msgstr "Er zijn geen toepassingen die geluid kunnen opnemen."
 
 #: panels/microphone/cc-microphone-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
 "Gebruik van de microfoon geeft toepassingen de mogelijkheid om geluid op te "
 "nemen en te beluisteren. De microfoon uitschakelen kan ertoe leiden dat "
@@ -2695,7 +2735,6 @@ msgstr "Er hebben nog geen toepassingen toegang tot uw microfoon gevraagd"
 msgid "Protect your conversations"
 msgstr "Bescherm uw gesprekken"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 #: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
@@ -2808,7 +2847,7 @@ msgstr ""
 "kiezen"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr ""
 "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;Aanwijzer;Klik;Tik;"
@@ -2890,7 +2929,7 @@ msgid "Manage preferences for productivity and multitasking"
 msgstr "Beheer voorkeuren voor productiviteit en multitasken"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr ""
 "Multitasking;Multitask;Productivity;Customize;Desktop;Multitasken;"
@@ -2946,6 +2985,7 @@ msgstr "Beveiligd netwerk"
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "Verbonden"
 
@@ -3615,7 +3655,7 @@ msgid "Control how you connect to the Internet"
 msgstr "Regelen hoe u verbinding maakt met het internet"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr ""
 "Network;Netwerk;IP;LAN;Proxy;WAN;Broadband;Breedband;Modem;Bluetooth;vpn;DNS;"
@@ -3625,7 +3665,7 @@ msgid "Control how you connect to Wi-Fi networks"
 msgstr "Regelen hoe u verbinding maakt met wifi-netwerken"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr ""
 "Network;Netwerk;Wireless;Draadloos;Wi-Fi;Wifi;IP;LAN;Broadband;Breedband;DNS;"
@@ -4177,7 +4217,7 @@ msgstr "EAP-LEAP-wachtwoord ontbreekt"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "Gebr_uikersnaam"
 
@@ -4187,8 +4227,8 @@ msgstr "Gebr_uikersnaam"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "_Wachtwoord"
@@ -4352,7 +4392,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "_Domein"
@@ -4552,7 +4592,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "Regelen welke notificaties weergegeven worden en wat ze tonen"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr ""
 "Notifications;Notificaties;Banners;Banieren;Bericht;Message;Tray;Systeemvak;"
@@ -4594,7 +4634,7 @@ msgstr "Verbind met uw online-accounts en bepaal waar u ze voor gebruikt"
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
@@ -5035,7 +5075,7 @@ msgid "View your battery status and change power saving settings"
 msgstr "De accustatus bekijken en instellingen voor energiebesparing wijzigen"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -5100,7 +5140,7 @@ msgstr ""
 "Printers toevoegen, afdruktaken bekijken, en bepalen hoe u wilt afdrukken"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Printer;Queue;Print;Paper;Ink;Toner;Wachtrij;Papier;Inkt;"
 
@@ -5848,7 +5888,7 @@ msgid "Select your display language and formats"
 msgstr "Selecteer uw taal en formaten"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Language;Layout;Keyboard;Taal;Indeling;Toetsenbord;"
 
@@ -5993,7 +6033,7 @@ msgstr "Instellingen voor verwijderbare media configureren"
 
 # The user can search on this keywords. Thereby we chose to let the translation contain both English and Dutch words.
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
@@ -6065,7 +6105,7 @@ msgstr ""
 "Regelen welke toepassingen zoekresultaten tonen in het activiteitenoverzicht"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Search;Find;Index;Hide;Privacy;Results;Zoeken;Verbergen;"
 
@@ -6228,7 +6268,7 @@ msgid "Control what you want to share with others"
 msgstr "Regelen wat u met anderen wilt delen"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
@@ -6348,7 +6388,7 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Geluidsvolume, invoer, uitvoer en gebeurtenisgeluiden wijzigen"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6534,7 +6574,7 @@ msgid "Manage Thunderbolt devices"
 msgstr "Thunderbolt-apparaten beheren"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;privacy;"
 
@@ -7080,7 +7120,7 @@ msgid "Make it easier to see, hear, type, point and click"
 msgstr "Zien, horen, typen, aanwijzen en klikken vergemakkelijken"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7269,35 +7309,86 @@ msgstr "Bestandsgeschiedenis & prullenbak"
 msgid "Don't leave traces"
 msgstr "Geen sporen achterlaten"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "Nieuwe verbinding toevoegen"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "Openen van verbindingseditor mislukt"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "Dataverbinding"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "Netwerkinstellingen wijzigen"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "Automatische routes"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "Planning"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "Automatische routes"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "Dient overeen te komen met het internetadres van uw inlog-provider."
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "Toevoegen van account mislukt"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "De wachtwoorden komen niet overeen."
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "Registreren van account mislukt"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "Geen ondersteunde manier om met dit domein te authenticeren"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "Toetreden tot domein mislukt"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7305,7 +7396,7 @@ msgstr ""
 "Ongeldige gebruikersnaam.\n"
 "Probeer het opnieuw."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7313,11 +7404,11 @@ msgstr ""
 "Ongeldig wachtwoord.\n"
 "Probeer het opnieuw."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "Aanmelden bij domein mislukt"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "Domein niet gevonden. Heeft u het verkeerd gespeld?"
 
@@ -7343,19 +7434,26 @@ msgid "Account _Type"
 msgstr "Account-_type"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "Gebruiker kan wachtwoord instellen bij de volgende keer _aanmelden"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "_Nu een wachtwoord instellen"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "_Bevestigen"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
@@ -7365,17 +7463,17 @@ msgstr ""
 "gebruikersaccount op dit apparaat gebruikt worden. U kunt dit account ook "
 "gebruiken om toegang te krijgen tot bedrijfsbronnen op het internet."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "U bent offline"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr ""
 "U moet online gaan om enterprise-\n"
 "gebruikers toe te voegen."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "_Enterprise-aanmelding"
 
@@ -7672,15 +7770,15 @@ msgstr "Sessie gestart"
 msgid "%s — Account Activity"
 msgstr "%s — Accountactiviteit"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "Kies een ander wachtwoord."
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "Vul uw wachtwoord opnieuw in."
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "Wachtwoord kon niet gewijzigd worden"
 
@@ -7703,14 +7801,6 @@ msgstr "_Nieuw wachtwoord"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "_Huidige wachtwoord"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "Gebruiker kan wachtwoord wijzigen bij de volgende keer aanmelden"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "Nu een wachtwoord instellen"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -7819,7 +7909,7 @@ msgstr "Aangemeld"
 #. TRANSLATORS: Status of Parental Controls setup
 #: panels/user-accounts/cc-user-panel.c:846
 #: panels/user-accounts/cc-user-panel.c:935
-#: panels/wwan/cc-wwan-device-page.c:443
+#: panels/wwan/cc-wwan-device-page.c:477
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
@@ -7945,7 +8035,7 @@ msgid "Add or remove users and change your password"
 msgstr "Gebruikers toevoegen of verwijderen en uw wachtwoord wijzigen"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
@@ -8277,7 +8367,7 @@ msgstr ""
 "tabletten aanpassen"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;Tekenen;Gum;Muis;gom;"
 
@@ -8488,12 +8578,10 @@ msgid "2G, 3G, 4G (Preferred)"
 msgstr "2G, 3G, 4G (voorkeur)"
 
 #: panels/wwan/cc-wwan-device.c:1005
-#| msgid " (Preferred)"
 msgid "2G, 3G (Preferred), 4G"
 msgstr "2G, 3G (voorkeur), 4G"
 
 #: panels/wwan/cc-wwan-device.c:1007
-#| msgid " (Preferred)"
 msgid "2G (Preferred), 3G, 4G"
 msgstr "2G (voorkeur), 3G, 4G"
 
@@ -8506,7 +8594,6 @@ msgid "3G, 4G (Preferred)"
 msgstr "3G, 4G (voorkeur)"
 
 #: panels/wwan/cc-wwan-device.c:1017
-#| msgid " (Preferred)"
 msgid "3G (Preferred), 4G"
 msgstr "3G (voorkeur), 4G"
 
@@ -8515,7 +8602,6 @@ msgid "3G, 4G"
 msgstr "3G, 4G"
 
 #: panels/wwan/cc-wwan-device.c:1025
-#| msgid " (Preferred)"
 msgid "2G, 4G (Preferred)"
 msgstr "2G, 4G (voorkeur)"
 
@@ -8528,12 +8614,10 @@ msgid "2G, 4G"
 msgstr "2G, 4G"
 
 #: panels/wwan/cc-wwan-device.c:1035
-#| msgid " (Preferred)"
 msgid "2G, 3G (Preferred)"
 msgstr "2G, 3G (voorkeur)"
 
 #: panels/wwan/cc-wwan-device.c:1037
-#| msgid " (Preferred)"
 msgid "2G (Preferred), 3G"
 msgstr "2G (voorkeur), 3G"
 
@@ -8546,63 +8630,63 @@ msgctxt "Network mode"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: panels/wwan/cc-wwan-device-page.c:141
+#: panels/wwan/cc-wwan-device-page.c:188
 msgid "Unlock SIM card"
 msgstr "Simkaart ontgrendelen"
 
-#: panels/wwan/cc-wwan-device-page.c:142 panels/wwan/cc-wwan-device-page.c:190
+#: panels/wwan/cc-wwan-device-page.c:189 panels/wwan/cc-wwan-device-page.c:237
 msgid "Unlock"
 msgstr "Ontgrendelen"
 
-#: panels/wwan/cc-wwan-device-page.c:147
+#: panels/wwan/cc-wwan-device-page.c:194
 #, c-format
 msgid "Please provide PIN code for SIM %d"
 msgstr "Voer de pincode voor simkaart %d in"
 
-#: panels/wwan/cc-wwan-device-page.c:148
+#: panels/wwan/cc-wwan-device-page.c:195
 msgid "Enter PIN to unlock your SIM card"
 msgstr "Voer de pincode in om uw simkaart te ontgrendelen"
 
-#: panels/wwan/cc-wwan-device-page.c:152
+#: panels/wwan/cc-wwan-device-page.c:199
 #, c-format
 msgid "Please provide PUK code for SIM %d"
 msgstr "Voer de pukcode voor simkaart %d in"
 
-#: panels/wwan/cc-wwan-device-page.c:153
+#: panels/wwan/cc-wwan-device-page.c:200
 msgid "Enter PUK to unlock your SIM card"
 msgstr "Voer de pukcode in om uw simkaart te ontgrendelen"
 
-#: panels/wwan/cc-wwan-device-page.c:171
+#: panels/wwan/cc-wwan-device-page.c:218
 #, c-format
 msgid "Wrong password entered. You have %1$u try left"
 msgid_plural "Wrong password entered. You have %1$u tries left"
 msgstr[0] "Onjuist wachtwoord. U heeft nog resterende %1$u poging"
 msgstr[1] "Onjuist wachtwoord. U heeft nog resterende %1$u pogingen"
 
-#: panels/wwan/cc-wwan-device-page.c:174
+#: panels/wwan/cc-wwan-device-page.c:221
 #, c-format
 msgid "You have %u try left"
 msgid_plural "You have %u tries left"
 msgstr[0] "U heeft nog %u resterende poging"
 msgstr[1] "U heeft nog %u resterende pogingen"
 
-#: panels/wwan/cc-wwan-device-page.c:179
+#: panels/wwan/cc-wwan-device-page.c:226
 msgid "Wrong password entered."
 msgstr "Onjuist wachtwoord."
 
-#: panels/wwan/cc-wwan-device-page.c:224
+#: panels/wwan/cc-wwan-device-page.c:271
 msgid "PUK code should be an 8 digit number"
 msgstr "De pukcode moet een getal van 8 cijfers zijn"
 
-#: panels/wwan/cc-wwan-device-page.c:248
+#: panels/wwan/cc-wwan-device-page.c:295
 msgid "Enter New PIN"
 msgstr "Voer nieuwe pincode in"
 
-#: panels/wwan/cc-wwan-device-page.c:252
+#: panels/wwan/cc-wwan-device-page.c:299
 msgid "PIN code should be a 4-8 digit number"
 msgstr "De pincode moet een getal van 4 à 8 cijfers zijn"
 
-#: panels/wwan/cc-wwan-device-page.c:270
+#: panels/wwan/cc-wwan-device-page.c:317
 msgid "Unlocking..."
 msgstr "Bezig met ontgrendelen…"
 
@@ -8836,9 +8920,8 @@ msgstr "Mobiel netwerk"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Configureer telefonie en mobielegegevensverbindingen"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wwan/gnome-wwan-panel.desktop.in.in:17
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr ""
 "cellular;wwan;telephony;sim;mobile;mobiel;simkaart;telefonie;cellulair;"
@@ -8883,11 +8966,11 @@ msgstr "Te tonen paneel"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[PANEL] [ARGUMENT…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "Privacy"
 
-#: shell/cc-panel-loader.c:299
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Beschikbare panelen:"
 
@@ -8998,6 +9081,15 @@ msgstr[1] "%u invoeren"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Systeemgeluiden"
+
+#~ msgid "Open in Software"
+#~ msgstr "Openen met Software"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr "Gebruiker kan wachtwoord wijzigen bij de volgende keer aanmelden"
+
+#~ msgid "Set a password now"
+#~ msgstr "Nu een wachtwoord instellen"
 
 #~ msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 #~ msgstr ""
@@ -9266,9 +9358,6 @@ msgstr "Systeemgeluiden"
 
 #~ msgid "Read access to network settings"
 #~ msgstr "Leestoegang tot de netwerkinstellingen"
-
-#~ msgid "Change network settings"
-#~ msgstr "Netwerkinstellingen wijzigen"
 
 #~ msgid ""
 #~ "Access the ofono service to read and change network settings for mobile "

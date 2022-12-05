@@ -10,9 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2021-09-27 07:48+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-05 14:29-0700\n"
 "PO-Revision-Date: 2021-09-28 14:47+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
@@ -76,8 +75,8 @@ msgid "File System"
 msgstr "Hệ thống tập tin"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "Cài đặt"
@@ -300,8 +299,8 @@ msgid "Storage"
 msgstr "Lưu trữ"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "Mở trong Phần mềm"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -344,9 +343,8 @@ msgstr "Xóa bộ nhớ truy cập nhanh…"
 msgid "Control various application permissions and settings"
 msgstr "Điều khiển các phân quyền và cài đặt của ứng dụng nhiều thứ khác nhau"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr ""
 "application;flatpak;permission;setting;ứng dụng;ung dung;quyền;quyen;cài đặt;"
@@ -361,7 +359,7 @@ msgstr "Chọn một ảnh"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -432,7 +430,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "Thay đổi ảnh nền màn hình"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Wallpaper;Ảnh;nền;Anh;nen;Screen;Màn;hình;Man;hinh;Desktop;"
 
@@ -483,7 +481,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Bật/tắt Bluetooth và kết nối các thiết bị của bạn"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "share;chia sẻ;chia se;sharing;bluetooth;obex;"
 
@@ -496,9 +494,11 @@ msgid "No applications can capture photos or video."
 msgstr "Không có ứng dụng nào có thể chụp ảnh hoặc quay phim."
 
 #: panels/camera/cc-camera-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
 "Sử dụng máy ảnh cho phép các ứng dụng chụp ảnh và quay phim. Vô hiệu hóa máy "
 "ảnh có thể khiến một số ứng dụng không hoạt động bình thường."
@@ -515,10 +515,9 @@ msgstr "Không có ứng dụng nào yêu cầu truy cập máy ảnh"
 msgid "Protect your pictures"
 msgstr "Bảo vệ các ảnh của bạn"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
@@ -1164,13 +1163,13 @@ msgstr ""
 "Cân chỉnh màu sắc của thiết bị của bạn, như là màn hình, máy ảnh hay máy in"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr ""
 "Color;Màu;Mau;ICC;Profile;Calibrate;Chinh;Printer;Máy;in;May;Display;Màn;"
 "hình;Man;hinh;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "Khác…"
 
@@ -1231,82 +1230,82 @@ msgstr "_Sao chép"
 msgid "Select _All"
 msgstr "Chọn _Tất cả"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "Hôm nay"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "Hôm qua"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%e %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%e %b, %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d giờ"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d phút"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d giây"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr "%s"
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 giây"
 
@@ -1479,7 +1478,7 @@ msgid "Change the date and time, including time zone"
 msgstr "Thay đổi ngày giờ hay múi giờ"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr ""
 "Clock;Đồng;hồ;Dong;ho;Timezone;Múi;giờ;Mui;gio;Location;Vị;trí;Vi;tri;nước;"
@@ -1527,7 +1526,7 @@ msgid "Configure Default Applications"
 msgstr "Cấu hình ứng dụng mặc định"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr ""
 "default;application;preferred;media;mặc định;mac dinh;ứng dụng;ung dung;ưa "
@@ -1559,12 +1558,11 @@ msgstr "Chẩn đoán"
 msgid "Report your problems"
 msgstr "Báo cáo vấn đề trục trặc của bạn"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1740,6 +1738,7 @@ msgid "Times"
 msgstr "Thời gian"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "Từ"
 
@@ -1761,16 +1760,19 @@ msgstr "Phút"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "SA"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "CH"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "Tới"
 
@@ -1783,7 +1785,7 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "Chọn cách dùng màn hình và máy chiếu được kết nối"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
@@ -1793,10 +1795,10 @@ msgstr ""
 "sáng;anh sang;Blue;Xanh;redshift;color;màu;mau;sunset;hoàng hôn;hoang hon;"
 "sunrise;bình minh;binh minh;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
 #: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "Chưa biết"
@@ -1805,32 +1807,32 @@ msgstr "Chưa biết"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; Mã số biên dịch: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64-bít"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32-bít"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Chưa biết"
@@ -1888,11 +1890,17 @@ msgstr "Ảo hóa"
 msgid "Software Updates"
 msgstr "Cập nhật phần mềm"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
 msgstr "Đổi tên thiết bị"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
@@ -1900,7 +1908,7 @@ msgstr ""
 "Tên thiết bị được sử dụng để xác định thiết bị này khi nó được xem qua mạng "
 "hoặc khi ghép nối thiết bị Bluetooth."
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
 msgstr "Đổ_i tên"
 
@@ -1917,7 +1925,7 @@ msgstr "Xem thông tin về hệ thống của bạn"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -2422,7 +2430,7 @@ msgstr ""
 "nhập liệu"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr ""
@@ -2440,9 +2448,11 @@ msgid "No applications can obtain location information."
 msgstr "Không ứng dụng nào có thể thu thập thông tin vị trí của bạn."
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
 "Dịch vụ vị trí cho phép ứng dùng biết bạn ở đâu. Dùng Wi-Fi và di động băng "
 "thông rộng để gia tăng độ chính xác."
@@ -2467,7 +2477,6 @@ msgstr "Không có ứng dụng nào từng hỏi quyền truy cập vị trí c
 msgid "Protect your location information"
 msgstr "Bảo vệ thông tin vị trí của bạn"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
@@ -2626,7 +2635,37 @@ msgstr "Khóa màn hình"
 msgid "Lock your screen"
 msgstr "Khóa màn hình của bạn"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "Dịch vụ vị trí bị tắt"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "Metric"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "Bật hoặc tắt đăng nhập từ xa"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "Míc đang bị tắt"
@@ -2636,10 +2675,11 @@ msgid "No applications can record sound."
 msgstr "Không tìm thấy ứng dụng nào có thể ghi âm."
 
 #: panels/microphone/cc-microphone-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
 "Việc sử dụng micrô cho phép các ứng dụng ghi lại và nghe âm thanh. Vô hiệu "
 "hóa micrô có thể khiến một số ứng dụng không hoạt động bình thường."
@@ -2656,7 +2696,6 @@ msgstr "Không có ứng dụng nào từng hỏi quyền truy cập míc của 
 msgid "Protect your conversations"
 msgstr "Bảo vệ các cuộc chuyện trò của bạn"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 #: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
@@ -2766,7 +2805,7 @@ msgid ""
 msgstr "Thay đổi độ nhạy chuột và touchpad và chọn thuận tay phải/trái"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr ""
 "Trackpad;Pointer;Con;trỏ;tro;Click;Nhấn;Nhắp;Nhan;Nhap;Tap;Double;Dup;Button;"
@@ -2847,7 +2886,7 @@ msgid "Manage preferences for productivity and multitasking"
 msgstr "Quản lý các tùy chỉnh cho năng suất và đa nhiệm"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr ""
 "Multitasking;Multitask;Productivity;Customize;Desktop;Đa;nhiệm;Tùy;chọn;"
@@ -2904,6 +2943,7 @@ msgstr "Mạng an toàn"
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "Đã kết nối"
 
@@ -3574,7 +3614,7 @@ msgid "Control how you connect to the Internet"
 msgstr "Điều khiển cách kết nối Internet"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr ""
 "Network;mạng;mang;IP;LAN;Proxy;ủy nhiệm;uy nhiem;WAN;Broadband;Modem;"
@@ -3585,7 +3625,7 @@ msgid "Control how you connect to Wi-Fi networks"
 msgstr "Điều khiển cách kết nối đến mạng Wi-Fi"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr ""
 "Network;mạng;mang;Wireless;không dây;khong day;Wi-Fi;Wifi;IP;LAN;Broadband;"
@@ -4132,7 +4172,7 @@ msgstr "thiếu mật khẩu EAP-LEAP"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "_Tài khoản"
 
@@ -4142,8 +4182,8 @@ msgstr "_Tài khoản"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "_Mật khẩu"
@@ -4302,7 +4342,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "_Miền"
@@ -4497,7 +4537,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "Cấu hình xem cảnh báo nào sẽ được hiển thị và hiển thị nó như thế nào"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr ""
 "Notifications;Thông;báo;Thong;bao;Banner;Message;Nhắn;nhan;Tray;Khay;Popup;"
@@ -4540,7 +4580,7 @@ msgstr ""
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
@@ -4977,7 +5017,7 @@ msgid "View your battery status and change power saving settings"
 msgstr "Hiển thị trạng thái pin và thay đổi cài đặt chế độ tiết kiệm pin"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -5037,7 +5077,7 @@ msgstr ""
 "Thêm máy in, xem các công việc in và quyết định bạn muốn in như thế nào"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Printer;Máy;in;May;Queue;Print;In;Paper;Giấy;Giay;Ink;Mực;Muc;Toner;"
 
@@ -5772,7 +5812,7 @@ msgid "Select your display language and formats"
 msgstr "Chọn ngôn ngữ hiển thị, định dạng"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr ""
 "Language;Ngôn;ngữ;Ngon;ngu;Layout;Bố;trí;Bo;tri;Keyboard;Bàn;phím;Ban;phim;"
@@ -5918,7 +5958,7 @@ msgid "Configure Removable Media settings"
 msgstr "Cấu hình cho các cài đặt đĩa đa phương tiện"
 
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
@@ -5992,7 +6032,7 @@ msgstr ""
 "động”"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr ""
 "Search;Tìm;tim;Find;Index;Mục;lục;muc;luc;Hide;Ẩn;an;Privacy;Riêng;tư;rieng;"
@@ -6158,7 +6198,7 @@ msgstr ""
 "Điều khiển việc bạn muôn chia sẻ những gì với các máy tính hay thiết bị khác"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
@@ -6279,7 +6319,7 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Thay đổi âm lượng, đầu vào/ra và âm thanh cảnh báo"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6455,7 +6495,7 @@ msgid "Manage Thunderbolt devices"
 msgstr "Quản lý thiết bị Thunderbolt"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;privacy;riêng tư;rieng tu;"
 
@@ -6996,7 +7036,7 @@ msgid "Make it easier to see, hear, type, point and click"
 msgstr "Làm cho việc xem, nghe, gõ, di và bấm chuột trở nên dễ dàng hơn"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7186,35 +7226,86 @@ msgstr "Lịch sử tập tin & Thùng rác"
 msgid "Don't leave traces"
 msgstr "Đừng để lại dấu vết"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "Thêm kết nối mới"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "Không thể mở cửa sổ điều chỉnh kết nối"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "Kết nối dữ liệu"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "Không thể thay đổi các cài đặt"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "Định tuyến tự động"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "Lịch biểu"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "Định tuyến tự động"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "Nên khớp với địa chỉ web của nhà cung cấp tài khoản cho bạn."
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "Gặp lỗi khi thêm tài khoản"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "Mật khẩu không khớp nhau."
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "Gặp lỗi khi đăng ký tài khoản"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "Không có cách xác thực được hỗ trợ nào với miền này"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "Gặp lỗi khi gia nhập miền"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7222,7 +7313,7 @@ msgstr ""
 "Tên tài khoản đăng nhập đó không đúng.\n"
 "Vui lòng thử lại."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7230,11 +7321,11 @@ msgstr ""
 "Mật khẩu đăng nhập đó không đúng.\n"
 "Vui lòng thử lại."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "Gặp lỗi khi đăng nhập miền"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "Không thể tìm thấy miền. Có lẽ bạn gõ sai chăng?"
 
@@ -7260,19 +7351,26 @@ msgid "Account _Type"
 msgstr "Kiểu _tài khoản"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "Cho phép người dùng đặt mật khẩu khi họ đăng nhậ_p lần kế tiếp"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "Đặt mật khẩu mới _ngay"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "Xá_c nhận"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
@@ -7282,16 +7380,16 @@ msgstr ""
 "lý theo kiểu tập trung để sử dụng trên thiết bị này. Bạn có thể sử dụng tài "
 "khoản này để truy cập các nguồn tài nguyên của công ty trên mạng internet."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "Bạn đang Ngoại tuyến"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr ""
 "Bạn phải kết nối trực tuyến để thêm tài khoản đăng nhập kiểu doanh nghiệp."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "Đăng nhập _Kiểu doanh nghiệp"
 
@@ -7587,15 +7685,15 @@ msgstr "Phiên được bắt đầu"
 msgid "%s — Account Activity"
 msgstr "%s - Sự hoạt động của tài khoản"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "Vui lòng chọn mật khẩu khác."
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "Hãy gõ mật khẩu hiện tại một lần nữa."
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "Mật khẩu của bạn không thể bị thay đổi"
 
@@ -7618,14 +7716,6 @@ msgstr "Mật khẩu _mới"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "_Mật khẩu hiện tại"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "Cho phép người dùng thay đổi mật khẩu khi họ đăng nhập lần kế tiếp"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "Đặt mật khẩu mới ngay"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -7857,7 +7947,7 @@ msgid "Add or remove users and change your password"
 msgstr "Thêm, xóa người dùng và thay đổi mật khẩu"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
@@ -8173,7 +8263,7 @@ msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr "Đặt ảnh của nút và sửa kiểu dáng cho thích hợp dành cho bảng đồ họa"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr ""
 "Tablet;Bảng;bang;Wacom;Stylus;Bút;trỏ;but;tro;Eraser;Tẩy;Tay;Mouse;Chuột;"
@@ -8723,9 +8813,8 @@ msgstr "Mạng di động"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Cấu hình kết nối cho điện thoại và dữ liệu di động"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wwan/gnome-wwan-panel.desktop.in.in:17
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr "cellular;wwan;telephony;sim;mobile;di động;di dong;"
 
@@ -8769,11 +8858,11 @@ msgstr "Khung hiển thị"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[BẢNG] [Đ.SỐ…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "Riêng tư"
 
-#: shell/cc-panel-loader.c:299
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Bảng điều khiển hiện có:"
 
@@ -8882,6 +8971,15 @@ msgstr[0] "%u đầu vào"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Âm thanh hệ thống"
+
+#~ msgid "Open in Software"
+#~ msgstr "Mở trong Phần mềm"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr "Cho phép người dùng thay đổi mật khẩu khi họ đăng nhập lần kế tiếp"
+
+#~ msgid "Set a password now"
+#~ msgstr "Đặt mật khẩu mới ngay"
 
 #~ msgid "Keyboard Shortcut"
 #~ msgstr "Phím tắt bàn phím"
