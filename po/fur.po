@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2021-07-28 17:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-07 15:17-0700\n"
 "PO-Revision-Date: 2021-07-30 12:49+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
@@ -47,7 +46,8 @@ msgstr "Acès complet a /dev"
 
 #: panels/applications/cc-applications-panel.c:833
 #: panels/network/gnome-network-panel.desktop.in.in:3
-#: panels/network/network-mobile.ui:288
+#: panels/network/network-mobile.ui:288 panels/wwan/cc-wwan-device-page.ui:114
+#: panels/wwan/cc-wwan-network-dialog.ui:4
 msgid "Network"
 msgstr "Rêt"
 
@@ -72,8 +72,8 @@ msgid "File System"
 msgstr "File System"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "Impostazions"
@@ -197,8 +197,9 @@ msgstr "Fotocjamare"
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:85
 #: panels/keyboard/cc-xkb-modifier-dialog.c:353
 #: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:129
-#: panels/user-accounts/cc-user-panel.c:843
+#: panels/user-accounts/cc-user-panel.c:848
 #: panels/user-accounts/cc-user-panel.c:938
+#: panels/wwan/cc-wwan-device-page.c:479
 #: subprojects/gvc/gvc-mixer-control.c:1900
 msgid "Disabled"
 msgstr "Disativât"
@@ -295,8 +296,8 @@ msgid "Storage"
 msgstr "Archiviazion"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "Vierç in Software"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -339,9 +340,8 @@ msgstr "Nete cache…"
 msgid "Control various application permissions and settings"
 msgstr "Controle i permès e lis impostazions des varis aplicazions"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "aplicazion;flatpak;permès;impostazion;"
 
@@ -354,7 +354,7 @@ msgstr "Selezione un imagjin"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -372,9 +372,12 @@ msgstr "Selezione un imagjin"
 #: panels/user-accounts/cc-avatar-chooser.c:228
 #: panels/user-accounts/cc-fingerprint-dialog.ui:36
 #: panels/user-accounts/cc-password-dialog.ui:20
-#: panels/user-accounts/cc-user-panel.c:633
-#: panels/user-accounts/cc-user-panel.c:651
+#: panels/user-accounts/cc-user-panel.c:638
+#: panels/user-accounts/cc-user-panel.c:656
 #: panels/user-accounts/data/join-dialog.ui:20
+#: panels/wwan/cc-wwan-mode-dialog.ui:35
+#: panels/wwan/cc-wwan-network-dialog.ui:166
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:297
 msgid "_Cancel"
 msgstr "_Anule"
 
@@ -422,7 +425,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "Cambie la tô imagjin di fonts cuntun rivestiment o une foto"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Rivestiment;Fonts;Scrivanie;Desktop;"
 
@@ -473,7 +476,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Impie e distude il Bluetooth e conet i tiei dispositîfs"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "condividi;condivision;bluetooth;obex;"
 
@@ -486,9 +489,11 @@ msgid "No applications can capture photos or video."
 msgstr "Nissune aplicazion e pues caturâ fotos o video."
 
 #: panels/camera/cc-camera-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
 "L'ûs de fotocjamare e permet aes aplicazions di caturâ fotos e videos. "
 "Cualchi aplicazion e podarès no funzionâ ben disabilitant la fotocjamare."
@@ -505,10 +510,9 @@ msgstr "Nissune aplicazion e à domandât di doprâ la fotocjamare"
 msgid "Protect your pictures"
 msgstr "Protêç lis tôs imagjins"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
@@ -747,6 +751,7 @@ msgstr "Salve Profîl"
 
 #: panels/color/cc-color-panel.c:887
 #: panels/network/connection-editor/vpn-helpers.c:300
+#: panels/wwan/cc-wwan-apn-dialog.ui:64
 msgid "_Save"
 msgstr "_Salve"
 
@@ -1156,11 +1161,11 @@ msgstr ""
 "Calibre il colôr dai tiei dispositîfs, come visôrs, fotocjamaris o stampants"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Colôr;ICC;Profîll;Calibrazion;Stampant;Visôr;Schermi;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "Altri…"
 
@@ -1221,27 +1226,27 @@ msgstr "_Copie"
 msgid "Select _All"
 msgstr "Selezione _dut"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "Vuê"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "Îr"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%e %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%e %b %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -1249,14 +1254,14 @@ msgstr[0] "%d ore"
 msgstr[1] "%d oris"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minût"
 msgstr[1] "%d minûts"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1264,42 +1269,42 @@ msgstr[0] "%d secont"
 msgstr[1] "%d seconts"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s, %s e %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s e %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s e %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr "%s"
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 seconts"
 
@@ -1472,7 +1477,7 @@ msgid "Change the date and time, including time zone"
 msgstr "Cambie date e ore, cussì ancje il fûs orari"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Orloi;Ore;Timp;Date;Fûs;Posizion;Orari;"
 
@@ -1519,7 +1524,7 @@ msgid "Configure Default Applications"
 msgstr "Configure lis aplicazions predefinidis"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "predefinît;aplicazion;preferît;multimedia;"
 
@@ -1550,12 +1555,11 @@ msgstr "Diagnostiche"
 msgid "Report your problems"
 msgstr "Segnale i problemis"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1729,6 +1733,7 @@ msgid "Times"
 msgstr "Oraris"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "Di"
 
@@ -1750,16 +1755,19 @@ msgstr "Minût"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "AM"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "PM"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "A"
 
@@ -1772,7 +1780,7 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "Sielç cemût doprâ i visôrs e i proietôrs tacâts"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
@@ -1780,10 +1788,11 @@ msgstr ""
 "Panel;Proietôr;xrandr;Schermi;Risoluzion;Refresh;Visôr;Gnot;Lûs;Blu;inrossâ;"
 "colôr;tramont;cricâ;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
+#: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "No cognossût"
 
@@ -1791,32 +1800,32 @@ msgstr "No cognossût"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ID di costruzion: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "No cognossût"
@@ -1874,11 +1883,17 @@ msgstr "Virtualizazion"
 msgid "Software Updates"
 msgstr "Inzornaments software"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
 msgstr "Cambie non al dispositîf"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
@@ -1886,7 +1901,7 @@ msgstr ""
 "Il non dal dispositîf al ven doprât par identificâ chest dispositîf cuant "
 "che al ven viodût te rêt o cuant che si associe i dispositîfs Bluetooth."
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
 msgstr "_Cambie non"
 
@@ -1903,7 +1918,7 @@ msgstr "Mostre informazions su chest sisteme"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -2244,7 +2259,6 @@ msgstr "Passe a sorzints diviersis in maniere _individuâl par ogni barcon"
 
 #: panels/keyboard/cc-keyboard-panel.ui:177
 #, fuzzy
-#| msgid "Type Special Characters"
 msgid "Special Character Entry"
 msgstr "Digjite i caratars speciâi"
 
@@ -2286,6 +2300,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:275
 #: panels/printers/authentication-dialog.ui:29
 #: panels/printers/ppd-selection-dialog.ui:27
+#: panels/wwan/cc-wwan-device-page.c:190
 msgid "Cancel"
 msgstr "Anule"
 
@@ -2314,7 +2329,8 @@ msgstr "Nissune scurte di tastiere cjatade"
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:211
 #: panels/region/cc-format-chooser.ui:48
 #: panels/user-accounts/cc-fingerprint-dialog.ui:53
-#: panels/wacom/wacom-stylus-page.ui:37 shell/cc-window.ui:230
+#: panels/wacom/wacom-stylus-page.ui:37 panels/wwan/cc-wwan-apn-dialog.ui:21
+#: shell/cc-window.ui:230
 msgid "Back"
 msgstr "Indaûr"
 
@@ -2360,6 +2376,7 @@ msgstr "Frache Esc par anulâ o Backspace par disabilitâ la scurte di tastiere.
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:135
 #: panels/printers/pp-details-dialog.ui:40
+#: panels/wwan/cc-wwan-apn-dialog.ui:132
 msgid "Name"
 msgstr "Non"
 
@@ -2380,6 +2397,7 @@ msgid "None"
 msgstr "Nissun"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:296
+#: panels/wwan/cc-wwan-apn-dialog.ui:44
 msgid "Add"
 msgstr "Zonte"
 
@@ -2400,12 +2418,15 @@ msgid "Keyboard"
 msgstr "Tastiere"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
-msgid "View and change keyboard shortcuts and set your typing preferences"
+#, fuzzy
+msgid ""
+"Change keyboard shortcuts and set your typing preferences, keyboard layouts "
+"and input sources"
 msgstr ""
 "Viôt e cambie la scurte di tastiere e stabilìs lis preferencis di digjitazion"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr ""
@@ -2421,9 +2442,11 @@ msgid "No applications can obtain location information."
 msgstr "Nissune aplicazion e pues otignî informazion su la posizion."
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
 "I servizis su la localizazion a permetin a lis aplicazions di cognossi la tô "
 "posizion. Doprant il Wi-Fi e la bande largje mobile e aumente la precision."
@@ -2448,7 +2471,6 @@ msgstr "Nissune aplicazion e à domandât di doprâ la tô posizion"
 msgid "Protect your location information"
 msgstr "Protêç lis informazion su la tô posizion"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
@@ -2611,7 +2633,37 @@ msgstr "Bloc schermi"
 msgid "Lock your screen"
 msgstr "Bloche il to schermi"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "Servizis su la posizion distudâts"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "Metriche"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "Abilitâ o no l'acès esterni"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "Il microfon al è distudât"
@@ -2621,10 +2673,11 @@ msgid "No applications can record sound."
 msgstr "Nissune aplicazion e pues regjistrâ suns."
 
 #: panels/microphone/cc-microphone-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
 "L'ûs dal microfon al permet aes aplicazions di regjistrâ e scoltâ i suns. "
 "Cualchi aplicazion e podarès no funzionâ ben disabilitant il microfon."
@@ -2641,8 +2694,8 @@ msgstr "Nissune aplicazion e à domandât di doprâ il microfon"
 msgid "Protect your conversations"
 msgstr "Protêç lis tôs conversazions"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
+#: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
 msgstr "Gjenerâl"
 
@@ -2752,19 +2805,101 @@ msgstr ""
 "çampe"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr ""
 "Trackpad;Cursôr;Cursôr;Clic;Tap;Dopli;Boton;Trackball;Cursôr;Scroll;"
 "Scoriment;"
 
-#: panels/network/cc-network-panel.c:661 panels/network/cc-wifi-panel.ui:307
+#: panels/multitasking/cc-multitasking-panel.ui:56
+msgid "_Hot Corner"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:57
+msgid "Touch the top-left corner to open the Activities Overview."
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:84
+msgid "_Active Screen Edges"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:85
+msgid ""
+"Drag windows against the top, left, and right screen edges to resize them."
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:114
+#, fuzzy
+msgid "Workspaces"
+msgstr "Spazi colôr: "
+
+#: panels/multitasking/cc-multitasking-panel.ui:139
+msgid "_Dynamic workspaces"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:140
+#, fuzzy
+msgid "Automatically removes empty workspaces."
+msgstr "Elimine in automatic i _files temporanis"
+
+#: panels/multitasking/cc-multitasking-panel.ui:158
+msgid "_Fixed number of workspaces"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:159
+msgid "Specify a number of permanent workspaces."
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:179
+msgid "_Number of Workspaces"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:200
+#, fuzzy
+msgid "Multi-Monitor"
+msgstr "Monitor %s"
+
+#: panels/multitasking/cc-multitasking-panel.ui:225
+msgid "Workspaces on _primary display only"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:252
+msgid "Workspaces on all d_isplays"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:282
+#, fuzzy
+msgid "Application Switching"
+msgstr "Aplicazion definide"
+
+#: panels/multitasking/cc-multitasking-panel.ui:307
+msgid "Include applications from all _workspaces"
+msgstr ""
+
+#: panels/multitasking/cc-multitasking-panel.ui:325
+msgid "Include applications from the _current workspace only"
+msgstr ""
+
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:3
+msgid "Multitasking"
+msgstr ""
+
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:4
+msgid "Manage preferences for productivity and multitasking"
+msgstr ""
+
+#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
+msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
+msgstr ""
+
+#: panels/network/cc-network-panel.c:686 panels/network/cc-wifi-panel.ui:307
 msgid "Oops, something has gone wrong. Please contact your software vendor."
 msgstr ""
 "Orpo, al somee che alc al sedi lât par stuart. Contate il furnidôr di "
 "software."
 
-#: panels/network/cc-network-panel.c:667
+#: panels/network/cc-network-panel.c:692
 msgid "NetworkManager needs to be running."
 msgstr "NetworkManager al à di jessi in esecuzion."
 
@@ -2782,38 +2917,39 @@ msgid "Not set up"
 msgstr "No configurade"
 
 #. TRANSLATORS: This happens when the connection name does not contain the SSID.
-#: panels/network/cc-wifi-connection-row.c:208
+#: panels/network/cc-wifi-connection-row.c:207
 #, c-format
 msgctxt "Wi-Fi Connection"
 msgid "%s (SSID: %s)"
 msgstr "%s (SSID: %s)"
 
-#: panels/network/cc-wifi-connection-row.c:268
+#: panels/network/cc-wifi-connection-row.c:262
 msgid "Insecure network (WEP)"
 msgstr "Rêt no sigure (WEP)"
 
-#: panels/network/cc-wifi-connection-row.c:273
+#: panels/network/cc-wifi-connection-row.c:267
 msgid "Secure network (WPA)"
 msgstr "Rêt sigure (WPA)"
 
-#: panels/network/cc-wifi-connection-row.c:278
+#: panels/network/cc-wifi-connection-row.c:272
 msgid "Secure network (WPA2)"
 msgstr "Rêt sigure (WPA2)"
 
-#: panels/network/cc-wifi-connection-row.c:283
+#: panels/network/cc-wifi-connection-row.c:277
 msgid "Secure network (WPA3)"
 msgstr "Rêt sigure (WPA3)"
 
-#: panels/network/cc-wifi-connection-row.c:288
+#: panels/network/cc-wifi-connection-row.c:282
 msgid "Secure network"
 msgstr "Rêt sigure"
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "Tacât"
 
-#: panels/network/cc-wifi-connection-row.ui:100
+#: panels/network/cc-wifi-connection-row.ui:102
 #: panels/network/net-device-ethernet.c:333
 #: panels/network/network-bluetooth.ui:76
 #: panels/network/network-ethernet.ui:111 panels/network/network-mobile.ui:450
@@ -2865,6 +3001,7 @@ msgstr "Non rêt"
 #: panels/printers/new-printer-dialog.ui:389
 #: panels/printers/pp-jobs-dialog.ui:70
 #: panels/user-accounts/cc-add-user-dialog.ui:249
+#: panels/wwan/cc-wwan-apn-dialog.ui:214
 msgid "Password"
 msgstr "Password"
 
@@ -2910,7 +3047,7 @@ msgstr "Nissun adatadôr Wi-Fi cjatât"
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgstr "Sigurâsi di vê un adatadôr Wi-Fi tacât e impiât"
 
-#: panels/network/cc-wifi-panel.ui:134
+#: panels/network/cc-wifi-panel.ui:134 panels/wwan/cc-wwan-panel.ui:143
 msgid "Airplane Mode On"
 msgstr "Modalitât avion impiade"
 
@@ -3209,6 +3346,7 @@ msgid "WPA3 Personal"
 msgstr "WPA3 personâl"
 
 #: panels/network/connection-editor/details-page.ui:18
+#: panels/wwan/cc-wwan-details-dialog.ui:105
 msgid "Signal Strength"
 msgstr "Fuarce segnâl"
 
@@ -3479,7 +3617,7 @@ msgid "Control how you connect to the Internet"
 msgstr "Controle cemût conetiti a Internet"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr ""
 "Rêt;Network;IP;LAN;Proxy;WAN;Broadband;Bande largje;Modem;Bluetooth;vpn;DNS;"
@@ -3489,7 +3627,7 @@ msgid "Control how you connect to Wi-Fi networks"
 msgstr "Controle cemût conetiti aes rêts Wi-Fi"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr ""
 "Rêt;Network;Wireless;Cence fîl;Wi-Fi;Wifi;IP;LAN;Broadband;Bande largje;DNS;"
@@ -3605,6 +3743,7 @@ msgid "Turn device off"
 msgstr "Distude il dispositîf"
 
 #: panels/network/network-mobile.ui:29
+#: panels/wwan/cc-wwan-details-dialog.ui:286
 msgid "IMEI"
 msgstr "IMEI"
 
@@ -3702,8 +3841,7 @@ msgid "Unmanaged"
 msgstr "No gjestît"
 
 #. TRANSLATORS: device status
-#. TRANSLATORS: Status of Parental Controls setup
-#: panels/network/panel-common.c:45 panels/user-accounts/cc-user-panel.c:928
+#: panels/network/panel-common.c:45
 msgid "Unavailable"
 msgstr "No disponibil"
 
@@ -3928,7 +4066,7 @@ msgid "SIM Puk required"
 msgstr "Si domande codiç PUK de SIM"
 
 #. TRANSLATORS: device status reason
-#: panels/network/panel-common.c:252
+#: panels/network/panel-common.c:252 panels/wwan/cc-wwan-errors-private.h:53
 msgid "SIM wrong"
 msgstr "Schede SIM falade/sbaliade"
 
@@ -4035,7 +4173,7 @@ msgstr "e mancje la password EAP-LEAP"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "Non _utent"
 
@@ -4045,9 +4183,9 @@ msgstr "Non _utent"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
-#: panels/user-accounts/cc-user-panel.ui:363
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
+#: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "_Password"
 
@@ -4204,7 +4342,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "_Domini"
@@ -4400,7 +4538,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "Controle cualis notifichis mostrâ e ce che a mostrin"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Notifichis;Banner;Messaç;Tray;Popup;"
 
@@ -4440,7 +4578,7 @@ msgstr "Conetiti ai tiei account online e decît cemût doprâju"
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
@@ -4837,40 +4975,46 @@ msgid "Delay"
 msgstr "Ritart"
 
 # Lap?
-#: panels/power/cc-power-profile-row.c:62
+#: panels/power/cc-power-profile-row.c:61
 msgid "Lap detected: performance mode unavailable"
 msgstr "Portatil rilevât: modalitât prestazions no disponibile"
 
-#: panels/power/cc-power-profile-row.c:64
+#: panels/power/cc-power-profile-row.c:63
 msgid "High hardware temperature: performance mode unavailable"
 msgstr "Temperadure hardware elevade: modalitât prestazions no disponibile"
 
-#: panels/power/cc-power-profile-row.c:65
+#: panels/power/cc-power-profile-row.c:64
 msgid "Performance mode unavailable"
 msgstr "Modalitât prestazions no disponibile"
 
-#: panels/power/cc-power-profile-row.c:87
-#: panels/power/cc-power-profile-row.c:187
+#: panels/power/cc-power-profile-row.c:86
+#: panels/power/cc-power-profile-row.c:185
 msgid "High performance and power usage."
 msgstr "Prestazions elevadis e consum energjetic."
 
-#: panels/power/cc-power-profile-row.c:186
+#: panels/power/cc-power-profile-row.c:184
+#, fuzzy
+msgctxt "Power profile"
 msgid "Performance"
 msgstr "Prestazions"
 
-#: panels/power/cc-power-profile-row.c:192
-msgid "Balanced Power"
-msgstr "Belançament energjetic"
+#: panels/power/cc-power-profile-row.c:188
+#, fuzzy
+msgctxt "Power profile"
+msgid "Balanced"
+msgstr "Belançament"
 
-#: panels/power/cc-power-profile-row.c:193
+#: panels/power/cc-power-profile-row.c:189
 msgid "Standard performance and power usage."
 msgstr "Prestazions normâls e consum energjetic."
 
-#: panels/power/cc-power-profile-row.c:198
+#: panels/power/cc-power-profile-row.c:192
+#, fuzzy
+msgctxt "Power profile"
 msgid "Power Saver"
 msgstr "Sparagn energjetic"
 
-#: panels/power/cc-power-profile-row.c:199
+#: panels/power/cc-power-profile-row.c:193
 msgid "Reduced performance and power usage."
 msgstr "Prestazions ridotis e consum energjetic."
 
@@ -4884,7 +5028,7 @@ msgstr ""
 "Mostre il stât de batarie e cambie lis impostazions di sparagn energjetic"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -4903,7 +5047,7 @@ msgstr "Autentiche"
 #. Translators: This is a username on a print server.
 #: panels/printers/authentication-dialog.ui:80
 #: panels/printers/new-printer-dialog.ui:366
-#: panels/printers/pp-jobs-dialog.ui:57
+#: panels/printers/pp-jobs-dialog.ui:57 panels/wwan/cc-wwan-apn-dialog.ui:188
 msgid "Username"
 msgstr "Non utent"
 
@@ -4942,7 +5086,7 @@ msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr "Zonte stampants, mostre i lavôrs di stampe e decît cemût stampâ"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Stampant;Code;Stampe;Cjarte;Ingjustri;Toner;"
 
@@ -4957,6 +5101,7 @@ msgstr "Zonte stampant"
 #. Translators: This buttons submits the credentials for the selected server.
 #: panels/printers/new-printer-dialog.ui:96
 #: panels/printers/new-printer-dialog.ui:111
+#: panels/wwan/cc-wwan-device-page.ui:90
 msgid "_Unlock"
 msgstr "_Sbloche"
 
@@ -5369,6 +5514,7 @@ msgstr "Nissune pre-filtradure"
 
 #. Translators: Name of column showing printer manufacturers
 #: panels/printers/pp-ppd-selection-dialog.c:220
+#: panels/wwan/cc-wwan-details-dialog.ui:203
 msgid "Manufacturer"
 msgstr "Produtôr"
 
@@ -5517,6 +5663,7 @@ msgid "Remove Printer"
 msgstr "Gjave stampant"
 
 #: panels/printers/printer-entry.ui:193
+#: panels/wwan/cc-wwan-details-dialog.ui:229
 msgid "Model"
 msgstr "Model"
 
@@ -5558,7 +5705,7 @@ msgstr ""
 "nol somee jessi disponibil."
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:189
-#: panels/region/cc-format-chooser.ui:6 panels/region/cc-region-panel.ui:159
+#: panels/region/cc-format-chooser.ui:6 panels/region/cc-region-panel.ui:203
 msgid "Formats"
 msgstr "Formâts"
 
@@ -5624,40 +5771,45 @@ msgstr "Unitât di misure"
 msgid "Paper"
 msgstr "Cjarte"
 
-#: panels/region/cc-region-panel.c:740
-msgid "Login _Screen"
+#: panels/region/cc-region-panel.ui:42
+msgid "My Account"
+msgstr "Account personâl"
+
+#: panels/region/cc-region-panel.ui:53
+#, fuzzy
+msgid "Login Screen"
 msgstr "_Schermade di acès"
 
-#: panels/region/cc-region-panel.ui:34
+#: panels/region/cc-region-panel.ui:78
 msgid "Language"
 msgstr "Lenghe"
 
-#: panels/region/cc-region-panel.ui:45
+#: panels/region/cc-region-panel.ui:89
 msgid "The language used for text in windows and web pages."
 msgstr "La lenghe doprade pal test tai barcons e tes pagjinis web."
 
-#: panels/region/cc-region-panel.ui:85
-#: panels/user-accounts/cc-user-panel.ui:309
+#: panels/region/cc-region-panel.ui:129
+#: panels/user-accounts/cc-user-panel.ui:311
 msgid "_Language"
 msgstr "_Lenghe"
 
-#: panels/region/cc-region-panel.ui:120
+#: panels/region/cc-region-panel.ui:164
 msgid "Restart the session for changes to take effect"
 msgstr "Torne invie la session par aplicâ lis modifichis"
 
-#: panels/region/cc-region-panel.ui:135
+#: panels/region/cc-region-panel.ui:179
 msgid "Restart…"
 msgstr "Torne invie…"
 
-#: panels/region/cc-region-panel.ui:170
+#: panels/region/cc-region-panel.ui:214
 msgid "The format used for numbers, dates, and currencies."
 msgstr "Il formât doprât pai numars, pes datis e pe monede."
 
-#: panels/region/cc-region-panel.ui:204
+#: panels/region/cc-region-panel.ui:248
 msgid "_Formats"
 msgstr "_Formâts"
 
-#: panels/region/cc-region-panel.ui:231
+#: panels/region/cc-region-panel.ui:275
 msgid "Login settings are used by all users when logging into the system"
 msgstr ""
 "Lis impostazions di acès a vegnin dopradis di ducj i utents cuant che a "
@@ -5668,14 +5820,14 @@ msgid "Region & Language"
 msgstr "Regjon e lenghe"
 
 #: panels/region/gnome-region-panel.desktop.in.in:4
-msgid ""
-"Select your display language, formats, keyboard layouts and input sources"
+#, fuzzy
+msgid "Select your display language and formats"
 msgstr ""
 "Selezione la lenghe doprade, i formâts, lis disposizions de tastiere e lis "
 "sorzints input"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Lenghe;Disposizion;Layout;Tastiere;Input;"
 
@@ -5817,7 +5969,7 @@ msgid "Configure Removable Media settings"
 msgstr "Configure lis impostazions dai dispositîfs estraibils"
 
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
@@ -5889,7 +6041,7 @@ msgstr ""
 "ativitâts"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Cîr;Cjate;Indiç;Plate;Privacy;Risultâts;"
 
@@ -6052,7 +6204,7 @@ msgid "Control what you want to share with others"
 msgstr "Controle ce che si vûl condividi cun altris"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
@@ -6171,7 +6323,7 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Comede i nivei dal audio, i ingrès, lis jessudis e i suns di alerte"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6349,7 +6501,7 @@ msgid "Manage Thunderbolt devices"
 msgstr "Gjestìs i dispositîfs Thunderbolt"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;privacy;riservatece;"
 
@@ -6893,7 +7045,7 @@ msgid "Make it easier to see, hear, type, point and click"
 msgstr "Al fâs diventâ plui facil viodi, sintî, digjitâ e fâ clic"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7082,35 +7234,86 @@ msgstr "Cronologjie file e Scovacere"
 msgid "Don't leave traces"
 msgstr "No sta lassâ olmis"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "Zonte gnove conession"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "Impussibil vierzi l'editor di conession"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "Zonte gnove conession"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "Cambiâ lis impostazions di rêt"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "Instradaments automatics"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "Planificazion"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "Instradaments automatics"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "Al varès di corispuindi ae direzion web dal to furnidôr di acès."
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "Zonte dal account falide"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "Lis password no corispuindin."
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "Regjistrazion account falide"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "Nissun mût supuartât par autenticâsi cun chest domini"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "Falît a unîsi al domini"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7118,7 +7321,7 @@ msgstr ""
 "Non di acès no valit.\n"
 "Prove une altre volte."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7126,11 +7329,11 @@ msgstr ""
 "Password no valide.\n"
 "Prove une altre volte."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "Acès al domini falît"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "Impussibil cjatâ il domini. Isal stât scrit mâl?"
 
@@ -7156,19 +7359,26 @@ msgid "Account _Type"
 msgstr "_Gjenar di account"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "Permet al utent di stabilî une password al prossim _acès"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "Stabilìs une password _cumò"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "_Conferme"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
@@ -7178,15 +7388,15 @@ msgstr ""
 "esistent ministrât in maniere centrâl. Tu puedis ancje doprâ chest account "
 "par jentrâ tes risorsis de compagnie su internet."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "Tu sês fûr rêt"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr "Tu scugnis jessi in rêt par zontâ utents enterprise."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "Account _enterprise"
 
@@ -7452,7 +7662,7 @@ msgstr "%s — %s"
 #. Translators: This is a time format string in the style of "22:58".
 #. It indicates a login time which follows a date.
 #: panels/user-accounts/cc-login-history-dialog.c:173
-#: panels/user-accounts/cc-user-panel.c:766
+#: panels/user-accounts/cc-user-panel.c:771
 msgctxt "login date-time"
 msgid "%k:%M"
 msgstr "%H:%M"
@@ -7460,7 +7670,7 @@ msgstr "%H:%M"
 #. Translators: This indicates a login date-time.
 #. The first %s is a date, and the second %s a time.
 #: panels/user-accounts/cc-login-history-dialog.c:176
-#: panels/user-accounts/cc-user-panel.c:770
+#: panels/user-accounts/cc-user-panel.c:775
 #, c-format
 msgctxt "login date-time"
 msgid "%s, %s"
@@ -7481,15 +7691,15 @@ msgstr "Inizi session"
 msgid "%s — Account Activity"
 msgstr "%s — Ativitât dal account"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "Sielç une altre password."
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "Scrîf di gnûf la tô password atuâl."
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "Impussibil cambiâ la password"
 
@@ -7512,14 +7722,6 @@ msgstr "_Gnove password"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "_Password atuâl"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "Permet al utent di cambiâ la sô password al prossim acès"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "Stabilìs une password cumò"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -7548,26 +7750,26 @@ msgstr "Impussibil tacâsi al domini %s: %s"
 msgid "Your account"
 msgstr "Il to account"
 
-#: panels/user-accounts/cc-user-panel.c:397
+#: panels/user-accounts/cc-user-panel.c:402
 msgid "Failed to delete user"
 msgstr "Eliminazion utent falide"
 
-#: panels/user-accounts/cc-user-panel.c:452
-#: panels/user-accounts/cc-user-panel.c:507
-#: panels/user-accounts/cc-user-panel.c:553
+#: panels/user-accounts/cc-user-panel.c:457
+#: panels/user-accounts/cc-user-panel.c:512
+#: panels/user-accounts/cc-user-panel.c:558
 msgid "Failed to revoke remotely managed user"
 msgstr "No si è rivâts a revocâ l'utent gjestît di lontan"
 
-#: panels/user-accounts/cc-user-panel.c:602
+#: panels/user-accounts/cc-user-panel.c:607
 msgid "You cannot delete your own account."
 msgstr "Nol è permetût eliminâ il propri account."
 
-#: panels/user-accounts/cc-user-panel.c:611
+#: panels/user-accounts/cc-user-panel.c:616
 #, c-format
 msgid "%s is still logged in"
 msgstr "%s nol à ancjemò terminât la session"
 
-#: panels/user-accounts/cc-user-panel.c:615
+#: panels/user-accounts/cc-user-panel.c:620
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
@@ -7575,12 +7777,12 @@ msgstr ""
 "Eliminâ un utent intant che la sô session e je ancjemò in cors, al pues "
 "lassâ il sisteme in stât incoerent."
 
-#: panels/user-accounts/cc-user-panel.c:624
+#: panels/user-accounts/cc-user-panel.c:629
 #, c-format
 msgid "Do you want to keep %s’s files?"
 msgstr "Tignî i files di %s?"
 
-#: panels/user-accounts/cc-user-panel.c:628
+#: panels/user-accounts/cc-user-panel.c:633
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
@@ -7588,53 +7790,54 @@ msgstr ""
 "Al è pussibil tegnî la cartele home, la code di pueste e i varis files "
 "temporanis cuant che si elimine un account utent."
 
-#: panels/user-accounts/cc-user-panel.c:631
+#: panels/user-accounts/cc-user-panel.c:636
 msgid "_Delete Files"
 msgstr "_Elimine i files"
 
-#: panels/user-accounts/cc-user-panel.c:632
+#: panels/user-accounts/cc-user-panel.c:637
 msgid "_Keep Files"
 msgstr "_Ten i files"
 
-#: panels/user-accounts/cc-user-panel.c:646
+#: panels/user-accounts/cc-user-panel.c:651
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
 msgstr "Revocâ pardabon l'account di %s gjestît di lontan?"
 
-#: panels/user-accounts/cc-user-panel.c:650
+#: panels/user-accounts/cc-user-panel.c:655
 msgid "_Delete"
 msgstr "_Elimine"
 
-#: panels/user-accounts/cc-user-panel.c:700
+#: panels/user-accounts/cc-user-panel.c:705
 msgctxt "Password mode"
 msgid "Account disabled"
 msgstr "Account disabilitât"
 
-#: panels/user-accounts/cc-user-panel.c:708
+#: panels/user-accounts/cc-user-panel.c:713
 msgctxt "Password mode"
 msgid "To be set at next login"
 msgstr "Di stabilî al prossim acès"
 
-#: panels/user-accounts/cc-user-panel.c:711
+#: panels/user-accounts/cc-user-panel.c:716
 msgctxt "Password mode"
 msgid "None"
 msgstr "Nissun"
 
-#: panels/user-accounts/cc-user-panel.c:754
+#: panels/user-accounts/cc-user-panel.c:759
 msgid "Logged in"
 msgstr "Acès eseguît"
 
 #. TRANSLATORS: Status of Parental Controls setup
-#: panels/user-accounts/cc-user-panel.c:841
+#: panels/user-accounts/cc-user-panel.c:846
 #: panels/user-accounts/cc-user-panel.c:935
+#: panels/wwan/cc-wwan-device-page.c:477
 msgid "Enabled"
 msgstr "Abilitât"
 
-#: panels/user-accounts/cc-user-panel.c:1254
+#: panels/user-accounts/cc-user-panel.c:1259
 msgid "Failed to contact the accounts service"
 msgstr "Comunicazion cun servizi account falide"
 
-#: panels/user-accounts/cc-user-panel.c:1256
+#: panels/user-accounts/cc-user-panel.c:1261
 msgid "Please make sure that the AccountService is installed and enabled."
 msgstr "Sigurâsi che AccountService al sedi instalât e abilitât."
 
@@ -7642,7 +7845,7 @@ msgstr "Sigurâsi che AccountService al sedi instalât e abilitât."
 #. * We split the line in 2 here to "make it look good", as there's
 #. * no good way to do this in GTK+ for tooltips. See:
 #. * https://bugzilla.gnome.org/show_bug.cgi?id=657168
-#: panels/user-accounts/cc-user-panel.c:1288
+#: panels/user-accounts/cc-user-panel.c:1293
 msgid ""
 "To make changes,\n"
 "click the * icon first"
@@ -7650,12 +7853,12 @@ msgstr ""
 "Par aplicâ cambiaments,\n"
 "fâs prime clic su la icone *"
 
-#: panels/user-accounts/cc-user-panel.c:1361
+#: panels/user-accounts/cc-user-panel.c:1366
 msgid "Delete the selected user account"
 msgstr "Elimine l'account utent selezionât"
 
-#: panels/user-accounts/cc-user-panel.c:1373
-#: panels/user-accounts/cc-user-panel.c:1492
+#: panels/user-accounts/cc-user-panel.c:1378
+#: panels/user-accounts/cc-user-panel.c:1489
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
@@ -7663,7 +7866,7 @@ msgstr ""
 "Par eliminâ l'account utent selezionât,\n"
 "fâs prime clic su la icone *"
 
-#: panels/user-accounts/cc-user-panel.c:1538
+#: panels/user-accounts/cc-user-panel.c:1535
 msgid "Unlock to Add Users and Change Settings"
 msgstr "Sbloche par Zontâ utents e Cambiâ impostazions"
 
@@ -7712,32 +7915,32 @@ msgstr "Controi _parentâi"
 msgid "Open the Parental Controls application."
 msgstr "Vierç la aplicazion pai controi parentâi."
 
-#: panels/user-accounts/cc-user-panel.ui:345
+#: panels/user-accounts/cc-user-panel.ui:347
 msgid "Authentication & Login"
 msgstr "Autenticazion e acès"
 
-#: panels/user-accounts/cc-user-panel.ui:388
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "_Fingerprint Login"
 msgstr "Acès cun impronte"
 
-#: panels/user-accounts/cc-user-panel.ui:413
+#: panels/user-accounts/cc-user-panel.ui:415
 msgid "A_utomatic Login"
 msgstr "Acès automatic"
 
-#: panels/user-accounts/cc-user-panel.ui:427
+#: panels/user-accounts/cc-user-panel.ui:429
 msgid "Account Activity"
 msgstr "Ativitât dal account"
 
-#: panels/user-accounts/cc-user-panel.ui:458
+#: panels/user-accounts/cc-user-panel.ui:460
 msgid "Remove User…"
 msgstr "Gjave utent…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:499
+#: panels/user-accounts/cc-user-panel.ui:501
 msgid "No Users Found"
 msgstr "Nissun utent cjatât"
 
-#: panels/user-accounts/cc-user-panel.ui:509
+#: panels/user-accounts/cc-user-panel.ui:511
 msgid "Unlock to add a user account."
 msgstr "Sbloche par zontâ un account utent."
 
@@ -7750,9 +7953,11 @@ msgid "Add or remove users and change your password"
 msgstr "Zonte o gjave utents e cambie la tô password"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
-msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-msgstr "Login;Acès;Non;Impronte;Avatar;Logo;Muse;Password;"
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
+msgid ""
+"Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
+"Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
+msgstr ""
 
 #. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
@@ -7940,6 +8145,7 @@ msgid "The new password does not contain enough different characters"
 msgstr "La gnove password no à vonde caratars diferents"
 
 #: panels/user-accounts/run-passwd.c:526
+#: panels/wwan/cc-wwan-errors-private.h:72
 #, c-format
 msgid "Unknown error"
 msgstr "Erôr no cognossût"
@@ -8068,7 +8274,7 @@ msgstr ""
 "grafichis"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;Taulete;Pene;Gome;"
 
@@ -8189,6 +8395,490 @@ msgstr "Boton plui in bas"
 msgid "Tip Pressure Feel"
 msgstr "Sensibilitât de ponte"
 
+#: panels/wwan/cc-wwan-apn-dialog.ui:11
+#, fuzzy
+msgid "Access Points"
+msgstr "Opzions di acès"
+
+#: panels/wwan/cc-wwan-apn-dialog.ui:160
+#, fuzzy
+msgid "APN"
+msgstr "VPN"
+
+#: panels/wwan/cc-wwan-data.c:543
+msgid "Operation Cancelled"
+msgstr ""
+
+#: panels/wwan/cc-wwan-data.c:546
+msgid "<b>Error:</b> Access denied changing settings"
+msgstr ""
+
+#: panels/wwan/cc-wwan-data.c:549
+msgid "<b>Error:</b> Mobile Equipment Error"
+msgstr ""
+
+#: panels/wwan/cc-wwan-details-dialog.c:81
+msgid "Not Registered"
+msgstr ""
+
+#: panels/wwan/cc-wwan-details-dialog.c:85
+#, fuzzy
+msgid "Registered"
+msgstr "Îr"
+
+#: panels/wwan/cc-wwan-details-dialog.c:89
+msgid "Roaming"
+msgstr ""
+
+#: panels/wwan/cc-wwan-details-dialog.c:93
+#, fuzzy
+msgid "Searching"
+msgstr "Cîr"
+
+#: panels/wwan/cc-wwan-details-dialog.c:97
+msgid "Denied"
+msgstr ""
+
+#: panels/wwan/cc-wwan-details-dialog.ui:4
+#, fuzzy
+msgid "Modem Details"
+msgstr "Detais"
+
+#: panels/wwan/cc-wwan-details-dialog.ui:33
+#, fuzzy
+msgid "Modem Status"
+msgstr "Stât:"
+
+#: panels/wwan/cc-wwan-details-dialog.ui:53
+msgid "Carrier"
+msgstr ""
+
+#: panels/wwan/cc-wwan-details-dialog.ui:79
+#, fuzzy
+msgid "Network Type"
+msgstr "Non rêt"
+
+#: panels/wwan/cc-wwan-details-dialog.ui:131
+#, fuzzy
+msgid "Network Status"
+msgstr "Rêts"
+
+#: panels/wwan/cc-wwan-details-dialog.ui:158
+#, fuzzy
+msgid "Own Number"
+msgstr "Numars"
+
+#: panels/wwan/cc-wwan-details-dialog.ui:185
+#, fuzzy
+msgid "Device Details"
+msgstr "Detais stampant"
+
+#: panels/wwan/cc-wwan-details-dialog.ui:257
+#, fuzzy
+msgid "Firmware Version"
+msgstr "Firmware mancjant"
+
+#: panels/wwan/cc-wwan-device.c:988
+msgid "2G Only"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:991
+msgid "3G Only"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:994
+msgid "4G Only"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1003
+msgid "2G, 3G, 4G (Preferred)"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1005
+msgid "2G, 3G (Preferred), 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1007
+msgid "2G (Preferred), 3G, 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1009
+msgid "2G, 3G, 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1015
+msgid "3G, 4G (Preferred)"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1017
+msgid "3G (Preferred), 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1019
+msgid "3G, 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1025
+msgid "2G, 4G (Preferred)"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1027
+msgid "2G (Preferred), 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1029
+msgid "2G, 4G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1035
+msgid "2G, 3G (Preferred)"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1037
+msgid "2G (Preferred), 3G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1039
+msgid "2G, 3G"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device.c:1043
+#, fuzzy
+msgctxt "Network mode"
+msgid "Unknown"
+msgstr "No cognossût"
+
+#: panels/wwan/cc-wwan-device-page.c:188
+msgid "Unlock SIM card"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:189 panels/wwan/cc-wwan-device-page.c:237
+#, fuzzy
+msgid "Unlock"
+msgstr "_Sbloche"
+
+#: panels/wwan/cc-wwan-device-page.c:194
+#, c-format
+msgid "Please provide PIN code for SIM %d"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:195
+msgid "Enter PIN to unlock your SIM card"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:199
+#, c-format
+msgid "Please provide PUK code for SIM %d"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:200
+msgid "Enter PUK to unlock your SIM card"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:218
+#, c-format
+msgid "Wrong password entered. You have %1$u try left"
+msgid_plural "Wrong password entered. You have %1$u tries left"
+msgstr[0] ""
+msgstr[1] ""
+
+#: panels/wwan/cc-wwan-device-page.c:221
+#, c-format
+msgid "You have %u try left"
+msgid_plural "You have %u tries left"
+msgstr[0] ""
+msgstr[1] ""
+
+#: panels/wwan/cc-wwan-device-page.c:226
+msgid "Wrong password entered."
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:271
+msgid "PUK code should be an 8 digit number"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:295
+msgid "Enter New PIN"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:299
+msgid "PIN code should be a 4-8 digit number"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.c:317
+#, fuzzy
+msgid "Unlocking..."
+msgstr "Sbloche %s."
+
+#: panels/wwan/cc-wwan-device-page.ui:34
+msgid "No SIM"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:45
+msgid "Insert a SIM card to use this modem"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:78
+msgid "SIM Locked"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:139
+#, fuzzy
+msgid "_Mobile Data"
+msgstr "Bande largje _mobile"
+
+#: panels/wwan/cc-wwan-device-page.ui:140
+msgid "Access data using mobile network"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:151
+msgid "_Data Roaming"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:152
+msgid "Use mobile data when roaming"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:177
+#, fuzzy
+msgid "_Network Mode"
+msgstr "Non rêt"
+
+#: panels/wwan/cc-wwan-device-page.ui:187
+#, fuzzy
+msgid "N_etwork"
+msgstr "Rêt"
+
+#: panels/wwan/cc-wwan-device-page.ui:199
+#, fuzzy
+msgid "Advanced"
+msgstr "Avanzadis"
+
+#: panels/wwan/cc-wwan-device-page.ui:225
+#, fuzzy
+msgid "_Access Point Names"
+msgstr "Opzions di acès"
+
+#: panels/wwan/cc-wwan-device-page.ui:235
+#, fuzzy
+msgid "_SIM Lock"
+msgstr "Bloc schermi"
+
+#: panels/wwan/cc-wwan-device-page.ui:236
+msgid "Lock SIM with PIN"
+msgstr ""
+
+#: panels/wwan/cc-wwan-device-page.ui:246
+#, fuzzy
+msgid "M_odem Details"
+msgstr "Detais di %s"
+
+#: panels/wwan/cc-wwan-errors-private.h:40
+#, fuzzy
+msgid "Phone failure"
+msgstr "Verifiche PIN falide"
+
+#: panels/wwan/cc-wwan-errors-private.h:41
+#, fuzzy
+msgid "No connection to phone"
+msgstr "No tacât"
+
+#: panels/wwan/cc-wwan-errors-private.h:43
+msgid "Operation not allowed"
+msgstr ""
+
+#: panels/wwan/cc-wwan-errors-private.h:44
+msgid "Operation not supported"
+msgstr ""
+
+#: panels/wwan/cc-wwan-errors-private.h:48
+#, fuzzy
+msgid "SIM not inserted"
+msgstr "Schede SIM no inseride"
+
+#: panels/wwan/cc-wwan-errors-private.h:49
+#, fuzzy
+msgid "SIM PIN required"
+msgstr "Si domande codiç PIN de SIM"
+
+#: panels/wwan/cc-wwan-errors-private.h:50
+#, fuzzy
+msgid "SIM PUK required"
+msgstr "Si domande codiç PIN de SIM"
+
+#: panels/wwan/cc-wwan-errors-private.h:51
+msgid "SIM failure"
+msgstr ""
+
+#: panels/wwan/cc-wwan-errors-private.h:52
+msgid "SIM busy"
+msgstr ""
+
+#: panels/wwan/cc-wwan-errors-private.h:54
+#, fuzzy
+msgid "Incorrect password"
+msgstr "_Password atuâl"
+
+#: panels/wwan/cc-wwan-errors-private.h:55
+#, fuzzy
+msgid "SIM PIN2 required"
+msgstr "Si domande codiç PIN de SIM"
+
+#: panels/wwan/cc-wwan-errors-private.h:56
+#, fuzzy
+msgid "SIM PUK2 required"
+msgstr "Si domande codiç PIN de SIM"
+
+#: panels/wwan/cc-wwan-errors-private.h:59
+#, fuzzy
+msgid "Not found"
+msgstr "Nissune pene cjatade"
+
+#: panels/wwan/cc-wwan-errors-private.h:61
+#, fuzzy
+msgid "No network service"
+msgstr "Lei lis impostazion di rêt"
+
+#: panels/wwan/cc-wwan-errors-private.h:62
+#, fuzzy
+msgid "Network timeout"
+msgstr "Non rêt"
+
+#: panels/wwan/cc-wwan-errors-private.h:75
+#, fuzzy
+msgid "GPRS services not allowed"
+msgstr "Servizi AutoIP falît"
+
+#: panels/wwan/cc-wwan-errors-private.h:78
+msgid "Roaming not allowed in this location area"
+msgstr ""
+
+#: panels/wwan/cc-wwan-errors-private.h:82
+msgid "Unspecified GPRS error"
+msgstr ""
+
+#: panels/wwan/cc-wwan-errors-private.h:91
+#, fuzzy
+msgid "Action Cancelled"
+msgstr "Anulât"
+
+#: panels/wwan/cc-wwan-errors-private.h:94
+#, fuzzy
+msgid "Access denied"
+msgstr "Acedi al servizi LXD"
+
+#: panels/wwan/cc-wwan-errors-private.h:103
+#, fuzzy
+msgid "Unknown Error"
+msgstr "Erôr no cognossût"
+
+#: panels/wwan/cc-wwan-mode-dialog.ui:4
+#, fuzzy
+msgid "Network Mode"
+msgstr "Non rêt"
+
+#: panels/wwan/cc-wwan-mode-dialog.ui:44
+#: panels/wwan/cc-wwan-network-dialog.ui:175
+#: panels/wwan/cc-wwan-sim-lock-dialog.c:230
+msgid "_Set"
+msgstr ""
+
+#: panels/wwan/cc-wwan-network-dialog.ui:46 panels/wwan/cc-wwan-panel.ui:39
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:101
+msgid "Close"
+msgstr "Siere"
+
+#: panels/wwan/cc-wwan-network-dialog.ui:84
+#, fuzzy
+msgid "_Automatic"
+msgstr "Automatic"
+
+#: panels/wwan/cc-wwan-network-dialog.ui:100
+#, fuzzy
+msgid "Choose Network"
+msgstr "La mê rêt di cjase"
+
+#: panels/wwan/cc-wwan-network-dialog.ui:118
+msgid "Refresh Network Providers"
+msgstr ""
+
+#: panels/wwan/cc-wwan-panel.c:453 panels/wwan/cc-wwan-panel.c:482
+#, c-format
+msgid "SIM %d"
+msgstr ""
+
+#: panels/wwan/cc-wwan-panel.ui:101
+#, fuzzy
+msgid "No WWAN Adapter Found"
+msgstr "Nissun adatadôr Wi-Fi cjatât"
+
+#: panels/wwan/cc-wwan-panel.ui:112
+#, fuzzy
+msgid "Make sure you have a Wireless Wan/Cellular device"
+msgstr "Sigurâsi di vê un adatadôr Wi-Fi tacât e impiât"
+
+#: panels/wwan/cc-wwan-panel.ui:154
+#, fuzzy
+msgid "Wireless Wan is disabled when airplane mode is on"
+msgstr "Il Bluetooth nol è abilitât cuant che la modalitât avion e je impiade."
+
+#: panels/wwan/cc-wwan-panel.ui:163
+#, fuzzy
+msgid "_Turn off Airplane Mode"
+msgstr "Distude Modalitât Avion"
+
+#: panels/wwan/cc-wwan-panel.ui:210
+#, fuzzy
+msgid "Data Connection"
+msgstr "Dismentee conession"
+
+#: panels/wwan/cc-wwan-panel.ui:224
+#, fuzzy
+msgid "SIM card used for internet"
+msgstr "Schede SIM no inseride"
+
+#: panels/wwan/cc-wwan-panel.ui:332
+#, fuzzy
+msgid "Enable Mobile Network"
+msgstr "La mê rêt di cjase"
+
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:11
+#, fuzzy
+msgid "SIM Lock"
+msgstr "Bloc schermi"
+
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:22
+msgid "_Next"
+msgstr ""
+
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:141
+msgid "_Lock SIM with PIN"
+msgstr ""
+
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:158
+#, fuzzy
+msgid "Change PIN"
+msgstr "C_ambie"
+
+#: panels/wwan/cc-wwan-sim-lock-dialog.ui:256
+msgid "Enter current PIN to change SIM lock settings"
+msgstr ""
+
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:3
+#, fuzzy
+msgid "Mobile Network"
+msgstr "La mê rêt di cjase"
+
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:4
+#, fuzzy
+msgid "Configure Telephony and mobile data connections"
+msgstr "Configure lis impostazions dai dispositîfs estraibils"
+
+#. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
+msgid "cellular;wwan;telephony;sim;mobile;"
+msgstr ""
+
 #: shell/appdata/gnome-control-center.appdata.xml.in:7
 msgid "GNOME Settings"
 msgstr "Impostazions di GNOME"
@@ -8229,11 +8919,11 @@ msgstr "Panel di mostrâ"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[PANEL] [ARGOMENT…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "Privacy"
 
-#: shell/cc-panel-loader.c:288
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Panei disponibii:"
 
@@ -8345,6 +9035,21 @@ msgstr[1] "%u jentradis"
 msgid "System Sounds"
 msgstr "Suns di sisteme"
 
+#~ msgid "Open in Software"
+#~ msgstr "Vierç in Software"
+
+#~ msgid "Balanced Power"
+#~ msgstr "Belançament energjetic"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr "Permet al utent di cambiâ la sô password al prossim acès"
+
+#~ msgid "Set a password now"
+#~ msgstr "Stabilìs une password cumò"
+
+#~ msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
+#~ msgstr "Login;Acès;Non;Impronte;Avatar;Logo;Muse;Password;"
+
 #~ msgid "_Screen Brightness"
 #~ msgstr "Luminositât dal _schermi"
 
@@ -8362,9 +9067,6 @@ msgstr "Suns di sisteme"
 
 #~ msgid "Wi-Fi can be turned off to save power."
 #~ msgstr "Si pues distudâ il Wi-Fi par sparagnâ curint."
-
-#~ msgid "_Mobile Broadband"
-#~ msgstr "Bande largje _mobile"
 
 #~ msgid ""
 #~ "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
@@ -8527,9 +9229,6 @@ msgstr "Suns di sisteme"
 #~ msgid "Read system and application logs"
 #~ msgstr "Lei i regjistris dal sisteme e des aplicazions"
 
-#~ msgid "Access LXD service"
-#~ msgstr "Acedi al servizi LXD"
-
 #~ msgid "access the media-hub service"
 #~ msgstr "acedi al servizi di media-hub"
 
@@ -8552,12 +9251,6 @@ msgstr "Suns di sisteme"
 
 #~ msgid "Read access to network settings"
 #~ msgstr "Lei l'acès aes impostazions di rêt"
-
-#~ msgid "Change network settings"
-#~ msgstr "Cambiâ lis impostazions di rêt"
-
-#~ msgid "Read network settings"
-#~ msgstr "Lei lis impostazion di rêt"
 
 #~ msgid ""
 #~ "Access the ofono service to read and change network settings for mobile "
@@ -8981,9 +9674,6 @@ msgstr "Suns di sisteme"
 #~ msgid "Infrastructure"
 #~ msgstr "Infrastructure"
 
-#~ msgid "Not connected"
-#~ msgstr "No tacât"
-
 #~ msgid "The username cannot start with a “-”."
 #~ msgstr "Il non utent nol pues tacâ cuntun “-”."
 
@@ -9229,9 +9919,6 @@ msgstr "Suns di sisteme"
 #~ msgstr ""
 #~ "Il centri di control GNOME e je la interface principâl par configurâ "
 #~ "diviers aspiets dal to scritori."
-
-#~ msgid "My Home Network"
-#~ msgstr "La mê rêt di cjase"
 
 #~ msgid "hardware"
 #~ msgstr "hardware"
@@ -9597,9 +10284,6 @@ msgstr "Suns di sisteme"
 #~ msgid "Other Accounts"
 #~ msgstr "Altris account"
 
-#~ msgid "My Account"
-#~ msgstr "Account personâl"
-
 #~ msgctxt "notifications"
 #~ msgid "Notification _Banners"
 #~ msgstr "_Banner di notifiche"
@@ -9944,9 +10628,6 @@ msgstr "Suns di sisteme"
 
 #~ msgid "No printers available"
 #~ msgstr "Nissune stampant disponibile"
-
-#~ msgid "Close"
-#~ msgstr "Siere"
 
 #~ msgid "Resume Printing"
 #~ msgstr "Torne finìs le stampe"

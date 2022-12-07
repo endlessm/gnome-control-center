@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center.master.is\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/issu"
-"es\n"
-"POT-Creation-Date: 2021-09-24 15:42+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-07 15:17-0700\n"
 "PO-Revision-Date: 2021-10-12 22:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
@@ -74,8 +73,8 @@ msgid "File System"
 msgstr "Skráakerfi"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "Stillingar"
@@ -250,12 +249,10 @@ msgid "Notifications"
 msgstr "Tilkynningar"
 
 #: panels/applications/cc-applications-panel.ui:243
-#| msgid "Current background"
 msgid "Run in background"
 msgstr "Keyra í bakgrunni"
 
 #: panels/applications/cc-applications-panel.ui:249
-#| msgid "No Desktop Background"
 msgid "Set Desktop Background"
 msgstr "Stilla bakgrunnsmynd"
 
@@ -266,7 +263,6 @@ msgstr "Hljóð"
 
 #: panels/applications/cc-applications-panel.ui:267
 #, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "Inhibit system keyboard shortcuts"
 msgstr "Flýtilyklar"
 
@@ -296,8 +292,8 @@ msgid "Storage"
 msgstr "Geymsla"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "Opna í hugbúnaðarstýringu"
+msgid "Open in App Center"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -340,14 +336,12 @@ msgstr "Hreinsa skyndiminni…"
 msgid "Control various application permissions and settings"
 msgstr "Stýrir ýmsum heimildum og stillingum forrits"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "forrit;flatpak;heimild;stilling;"
 
 #: panels/background/cc-background-chooser.c:344
-#| msgid "Select a File…"
 msgid "Select a picture"
 msgstr "Veldu mynd"
 
@@ -356,7 +350,7 @@ msgstr "Veldu mynd"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -411,13 +405,10 @@ msgid "Current background"
 msgstr "Núverandi bakgrunnur"
 
 #: panels/background/cc-background-panel.ui:55
-#| msgid "Add a Printer…"
 msgid "Add Picture…"
 msgstr "Bæta við mynd…"
 
 #: panels/background/cc-background-preview.ui:55
-#| msgctxt "service is active"
-#| msgid "Active"
 msgid "Activities"
 msgstr "Virkni"
 
@@ -430,7 +421,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "Breyttu bakgrunni skjáborðsins í veggfóður eða ljósmynd"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Bakgrunnur;Skjár;Skjáborð;"
 
@@ -481,7 +472,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Kveiktu og slökktu á Bluetooth og tengdu tækin þín"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "deila;sameign;tengja;bluetooth;obex;"
 
@@ -491,14 +482,14 @@ msgstr ""
 
 #: panels/camera/cc-camera-panel.ui:43
 #, fuzzy
-#| msgid "No application is currently playing or recording audio."
 msgid "No applications can capture photos or video."
 msgstr "Ekkert forrit er núna að spila eða taka upp hljóð."
 
 #: panels/camera/cc-camera-panel.ui:75
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
 
 #: panels/camera/cc-camera-panel.ui:85
@@ -511,14 +502,12 @@ msgstr ""
 
 #: panels/camera/gnome-camera-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Browse for more pictures"
 msgid "Protect your pictures"
 msgstr "Finna fleiri myndir"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
@@ -1160,11 +1149,11 @@ msgid ""
 msgstr "Kvarðaðu liti tækja á borð við skjái, myndavélar, skanna eða prentara"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Litur;ICC;Litasnið;Litkvörðun;Prentari;Skjár;Nákvæmni;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "Annað…"
 
@@ -1187,12 +1176,10 @@ msgstr "Meira…"
 
 #: panels/common/cc-permission-infobar.c:107
 #, fuzzy
-#| msgid "Can change settings"
 msgid "Unlock to Change Settings"
 msgstr "Má breyta stillingum"
 
 #: panels/common/cc-permission-infobar.ui:20
-#| msgid "_Unlock"
 msgid "Unlock…"
 msgstr "Aflæsa…"
 
@@ -1221,36 +1208,34 @@ msgid "Decrement Minute"
 msgstr ""
 
 #: panels/common/cc-time-entry.c:219
-#| msgid "Copy"
 msgid "_Copy"
 msgstr "_Afrita"
 
 #: panels/common/cc-time-entry.c:225
-#| msgid "Select"
 msgid "Select _All"
 msgstr "Velja _allt"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "Í dag"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "í gær"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%e. %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%e. %b, %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -1258,14 +1243,14 @@ msgstr[0] "%d klukkustund"
 msgstr[1] "%d klukkustundir"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d mínúta"
 msgstr[1] "%d mínútur"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1273,48 +1258,42 @@ msgstr[0] "%d sekúnda"
 msgstr[1] "%d sekúndur"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
-#| msgctxt "time"
-#| msgid "%s %s %s"
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
-#| msgctxt "time"
-#| msgid "%s %s"
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr ""
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
-#| msgctxt "time"
-#| msgid "%s %s"
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr ""
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 sekúndur"
 
@@ -1488,7 +1467,7 @@ msgid "Change the date and time, including time zone"
 msgstr "Breyttu dagsetningu og tíma, þar með töldu tímabelti"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Klukka;Tímabelti;Staðsetning;"
 
@@ -1536,16 +1515,13 @@ msgid "Configure Default Applications"
 msgstr "Stilla sjálfgefin forrit"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "sjálfgefið;forrit;gagnamiðill;"
 
 #. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:146
 #, fuzzy, c-format
-#| msgid ""
-#| "Sending reports of technical problems helps us improve %s. Reports are "
-#| "sent anonymously and are scrubbed of personal data."
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
@@ -1572,16 +1548,12 @@ msgstr ""
 msgid "Report your problems"
 msgstr ""
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 #, fuzzy
-#| msgid ""
-#| "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-#| "network;identity;"
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1645,7 +1617,6 @@ msgstr "Fyrirkomulag á skjám"
 
 #: panels/display/cc-display-panel.ui:374
 #, fuzzy
-#| msgid "Single Display"
 msgid "Active Display"
 msgstr "Einn skjár"
 
@@ -1710,7 +1681,6 @@ msgstr "Aðlaga fyrir sjónvarp"
 #: panels/display/cc-display-settings.ui:59
 #: panels/display/cc-display-settings.ui:76
 #, fuzzy
-#| msgid "Scale"
 msgctxt "display setting"
 msgid "Scale"
 msgstr "Kvarða"
@@ -1751,7 +1721,6 @@ msgstr "Sólarlag til sólarupprásar"
 
 #: panels/display/cc-night-light-page.ui:137
 #, fuzzy
-#| msgid "Schedule"
 msgid "Manual Schedule"
 msgstr "Áætlun"
 
@@ -1761,6 +1730,7 @@ msgid "Times"
 msgstr "Tími"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "Frá"
 
@@ -1782,16 +1752,19 @@ msgstr "Mínúta"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "f.h."
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "e.h."
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "Til"
 
@@ -1804,7 +1777,7 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "Veldu hvernig nota eigi tengda skjái og myndvarpa"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
@@ -1812,10 +1785,10 @@ msgstr ""
 "Spjald;Skjávarpi;xrandr;Skjár;Skjáupplausn;Uppfærslutíðni;Gluggi;Nótt;nætur;"
 "ljós;litur;lýsing;sólarlag;sólarupprás;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
 #: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "Óþekkt"
@@ -1824,46 +1797,43 @@ msgstr "Óþekkt"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; Byggingarauðkenni: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64-bita"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32-bita"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr ""
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 #, fuzzy
-#| msgid "Unknown"
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Óþekkt"
 
 #: panels/info-overview/cc-info-overview-panel.ui:52
 #, fuzzy
-#| msgid "Device name"
 msgid "Device Name"
 msgstr "Heiti tækis"
 
 #: panels/info-overview/cc-info-overview-panel.ui:74
-#| msgid "Hardware Address"
 msgid "Hardware Model"
 msgstr "Tegund vélbúnaðar"
 
@@ -1890,25 +1860,21 @@ msgstr "Reikna…"
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:133
 #, fuzzy
-#| msgid "Name"
 msgid "OS Name"
 msgstr "Heiti"
 
 #: panels/info-overview/cc-info-overview-panel.ui:142
 #, fuzzy
-#| msgid "VPN Type"
 msgid "OS Type"
 msgstr "Tegund VPN"
 
 #: panels/info-overview/cc-info-overview-panel.ui:151
 #, fuzzy
-#| msgid "GNOME Settings"
 msgid "GNOME Version"
 msgstr "GNOME-stillingar"
 
 #: panels/info-overview/cc-info-overview-panel.ui:161
 #, fuzzy
-#| msgid "Windows software"
 msgid "Windowing System"
 msgstr "Windows hugbúnaður"
 
@@ -1918,25 +1884,28 @@ msgstr "Sýndarvélar"
 
 #: panels/info-overview/cc-info-overview-panel.ui:178
 #, fuzzy
-#| msgid "Software Usage"
 msgid "Software Updates"
 msgstr "Hugbúnaður í notkun"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 #, fuzzy
-#| msgid "Pending Devices"
 msgid "Rename Device"
 msgstr "Tæki í bið"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
 msgstr ""
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 #, fuzzy
-#| msgid "_Username"
 msgid "_Rename"
 msgstr "Notan_danafn"
 
@@ -1953,11 +1922,8 @@ msgstr "Skoðaðu upplýsingar um kerfið þitt"
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 #, fuzzy
-#| msgid ""
-#| "device;system;information;memory;processor;version;default;application;"
-#| "preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -1971,7 +1937,6 @@ msgstr "Hljóð og mynd"
 
 #: panels/keyboard/00-multimedia.xml.in:4
 #, fuzzy
-#| msgid "Volume mute"
 msgid "Volume mute/unmute"
 msgstr "Þagga hljóð"
 
@@ -1985,7 +1950,6 @@ msgstr "Hækka hljóðstyrk"
 
 #: panels/keyboard/00-multimedia.xml.in:10
 #, fuzzy
-#| msgid "Microphone"
 msgid "Microphone mute/unmute"
 msgstr "Hljóðnemi"
 
@@ -2163,13 +2127,11 @@ msgstr "Enginn inntaksgjafi valinn"
 
 #: panels/keyboard/cc-input-row.ui:75
 #, fuzzy
-#| msgid "Move Up"
 msgid "Move up"
 msgstr "Færa upp"
 
 #: panels/keyboard/cc-input-row.ui:86
 #, fuzzy
-#| msgid "Move Down"
 msgid "Move down"
 msgstr "Færa niður"
 
@@ -2179,7 +2141,6 @@ msgstr "Stillingar"
 
 #: panels/keyboard/cc-input-row.ui:120
 #, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "View Keyboard Layout"
 msgstr "Flýtilyklar"
 
@@ -2197,7 +2158,6 @@ msgstr "Sérsniðinn flýtilykill"
 #: panels/keyboard/cc-keyboard-panel.c:68
 #: panels/keyboard/cc-keyboard-panel.ui:213
 #, fuzzy
-#| msgid "Alternative Characters Key"
 msgid "Alternate Characters Key"
 msgstr "Vara-stafalykill (AltCharKey)"
 
@@ -2210,7 +2170,6 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-panel.c:71
 #: panels/keyboard/cc-keyboard-panel.c:89
 #, fuzzy
-#| msgid "Left+Right Alt"
 msgctxt "keyboard key"
 msgid "Left Alt"
 msgstr "Vinstri+hægri Alt"
@@ -2218,7 +2177,6 @@ msgstr "Vinstri+hægri Alt"
 #: panels/keyboard/cc-keyboard-panel.c:72
 #: panels/keyboard/cc-keyboard-panel.c:90
 #, fuzzy
-#| msgid "Left+Right Alt"
 msgctxt "keyboard key"
 msgid "Right Alt"
 msgstr "Vinstri+hægri Alt"
@@ -2226,7 +2184,6 @@ msgstr "Vinstri+hægri Alt"
 #: panels/keyboard/cc-keyboard-panel.c:73
 #: panels/keyboard/cc-keyboard-panel.c:91
 #, fuzzy
-#| msgid "Left thumb"
 msgctxt "keyboard key"
 msgid "Left Super"
 msgstr "Vinstri þumall"
@@ -2234,7 +2191,6 @@ msgstr "Vinstri þumall"
 #: panels/keyboard/cc-keyboard-panel.c:74
 #: panels/keyboard/cc-keyboard-panel.c:92
 #, fuzzy
-#| msgid "Right thumb"
 msgctxt "keyboard key"
 msgid "Right Super"
 msgstr "Hægri þumall"
@@ -2242,7 +2198,6 @@ msgstr "Hægri þumall"
 #: panels/keyboard/cc-keyboard-panel.c:75
 #: panels/keyboard/cc-keyboard-panel.c:93
 #, fuzzy
-#| msgid "Security key"
 msgctxt "keyboard key"
 msgid "Menu key"
 msgstr "Öryggislykill"
@@ -2250,7 +2205,6 @@ msgstr "Öryggislykill"
 #: panels/keyboard/cc-keyboard-panel.c:76
 #: panels/keyboard/cc-keyboard-panel.c:94
 #, fuzzy
-#| msgid "Right Half"
 msgctxt "keyboard key"
 msgid "Right Ctrl"
 msgstr "Hægri helmingur"
@@ -2275,21 +2229,18 @@ msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:96
 #, fuzzy
-#| msgid "Scroll Left"
 msgctxt "keyboard key"
 msgid "Scroll Lock"
 msgstr "Skruna til vinstri"
 
 #: panels/keyboard/cc-keyboard-panel.c:97
 #, fuzzy
-#| msgid "Login _Screen"
 msgctxt "keyboard key"
 msgid "Print Screen"
 msgstr "Inn_skráningarskjár"
 
 #: panels/keyboard/cc-keyboard-panel.c:233
 #, fuzzy, c-format
-#| msgid "These keyboard shortcuts can be changed in the keyboard settings"
 msgid ""
 "Input sources can be switched using the %s keyboard shortcut.\n"
 "This can be changed in the keyboard shortcut settings."
@@ -2301,13 +2252,11 @@ msgstr "Inntaksgjafar"
 
 #: panels/keyboard/cc-keyboard-panel.ui:59
 #, fuzzy
-#| msgid "Choose keyboard layouts or input methods."
 msgid "Includes keyboard layouts and input methods."
 msgstr "Veldu lyklaborðsuppsetningar eða inntaksferli."
 
 #: panels/keyboard/cc-keyboard-panel.ui:85
 #, fuzzy
-#| msgid "Input Source Options"
 msgid "Input Source Switching"
 msgstr "Valkostir inntaksgjafa"
 
@@ -2317,7 +2266,6 @@ msgstr "Nota _sama inntaksgjafa fyrir alla glugga"
 
 #: panels/keyboard/cc-keyboard-panel.ui:158
 #, fuzzy
-#| msgid "Allow _different sources for each window"
 msgid "Switch input sources _individually for each window"
 msgstr "Leyfa _mismunandi inntaksgjafa fyrir hvern glugga"
 
@@ -2337,14 +2285,11 @@ msgstr "Flýtilyklar"
 
 #: panels/keyboard/cc-keyboard-panel.ui:283
 #, fuzzy
-#| msgid "Custom Shortcuts"
 msgid "View and Customize Shortcuts"
 msgstr "Sérsniðinn flýtilykill"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:283
 #, fuzzy, c-format
-#| msgid "%d minute"
-#| msgid_plural "%d minutes"
 msgid "%d modified"
 msgid_plural "%d modified"
 msgstr[0] "%d mínúta"
@@ -2376,7 +2321,6 @@ msgstr "Frumstilla allt"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:115
 #, fuzzy
-#| msgid "Add Custom Shortcut"
 msgid "Add Custom Shortcuts"
 msgstr "Bæta við sérsniðnum flýtilykli"
 
@@ -2410,9 +2354,6 @@ msgstr "Endurstilla alla flýtilykla á upprunaleg gildi þeirra"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:391
 #, fuzzy, c-format
-#| msgid ""
-#| "%s is already being used for <b>%s</b>. If you replace it, %s will be "
-#| "disabled"
 msgid "%s is already being used for %s. If you replace it, %s will be disabled"
 msgstr ""
 "%s er nú þegar í notkun fyrir <b>%s</b>. Ef þú skiptir því út, verður %s "
@@ -2433,7 +2374,6 @@ msgstr "Setja flýtilykil"
 #. TRANSLATORS: %s is replaced with a description of the keyboard shortcut
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:561
 #, fuzzy, c-format
-#| msgid "Enter new shortcut to change <b>%s</b>."
 msgid "Enter new shortcut to change %s."
 msgstr "Settu inn nýjan flýtilykil til að breyta <b>%s</b>."
 
@@ -2443,7 +2383,6 @@ msgstr "Bæta við sérsniðnum flýtilykli"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:60
 #, fuzzy
-#| msgid "Press Esc to cancel or Backspace to reset the keyboard shortcut."
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
 msgstr ""
 "Ýttu á Esc til að hætta við eða á Backspace til að frumstilla flýtilykilinn."
@@ -2493,7 +2432,6 @@ msgstr "Lyklaborð"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "View and change keyboard shortcuts and set your typing preferences"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
@@ -2502,7 +2440,7 @@ msgstr ""
 "stafainnsetningu"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 msgstr ""
@@ -2511,20 +2449,20 @@ msgstr ""
 
 #: panels/location/cc-location-panel.ui:31
 #, fuzzy
-#| msgid "Location Services"
 msgid "Location services turned off"
 msgstr "Staðsetningarþjónustur"
 
 #: panels/location/cc-location-panel.ui:40
 #, fuzzy
-#| msgid "No application is currently playing or recording audio."
 msgid "No applications can obtain location information."
 msgstr "Ekkert forrit er núna að spila eða taka upp hljóð."
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
 "Staðsetningarþjónustur gera forritum kleift að finna út staðsetninguna þína. "
 "Notkun á þráðlausu WiFi og ferðabreiðbandi eykur nákvæmnina."
@@ -2549,7 +2487,6 @@ msgstr ""
 msgid "Protect your location information"
 msgstr ""
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
@@ -2558,7 +2495,6 @@ msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:44
 #, fuzzy
-#| msgid "_Blank screen"
 msgid "Blank Screen Delay"
 msgstr "_Auður skrár"
 
@@ -2572,7 +2508,6 @@ msgstr "Sjálfvirk skjá_læsing"
 
 #: panels/lock/cc-lock-panel.ui:82
 #, fuzzy
-#| msgid "Automatic Screen _Lock"
 msgid "Automatic _Screen Lock Delay"
 msgstr "Sjálfvirk skjá_læsing"
 
@@ -2582,7 +2517,6 @@ msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:103
 #, fuzzy
-#| msgid "Show _Notifications"
 msgid "Show _Notifications on Lock Screen"
 msgstr "_Birta tilkynningar"
 
@@ -2710,18 +2644,46 @@ msgstr "Skjálæsing"
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Lock screen"
 msgid "Lock your screen"
 msgstr "Læsa skjá"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "Staðsetningarþjónustur"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "Leiðargæði (metric)"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "Virkja eða afvirkja fjartengda innskráningu"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr ""
 
 #: panels/microphone/cc-microphone-panel.ui:43
 #, fuzzy
-#| msgid "No applications found"
 msgid "No applications can record sound."
 msgstr "Engin forrit fundust"
 
@@ -2729,7 +2691,7 @@ msgstr "Engin forrit fundust"
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
 
 #: panels/microphone/cc-microphone-panel.ui:85
@@ -2744,7 +2706,6 @@ msgstr ""
 msgid "Protect your conversations"
 msgstr ""
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 #: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
@@ -2854,7 +2815,7 @@ msgid ""
 msgstr "Breyttu næmni músar eða snertiplatta og veldu rétt- eða örvhent"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr "Snertiplatti;Bendill;Smella;Slá;Tvísmella;Hnappur;Bendilkúla;Skrun;"
 
@@ -2877,7 +2838,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:114
 #, fuzzy
-#| msgid "Colorspace: "
 msgid "Workspaces"
 msgstr "Litavídd: "
 
@@ -2887,7 +2847,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:140
 #, fuzzy
-#| msgid "Automatically empty _Trash"
 msgid "Automatically removes empty workspaces."
 msgstr "_Tæma rusl sjálfkrafa"
 
@@ -2905,7 +2864,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:200
 #, fuzzy
-#| msgid "%s Monitor"
 msgid "Multi-Monitor"
 msgstr "%s skjár"
 
@@ -2919,8 +2877,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:282
 #, fuzzy
-#| msgctxt "Wacom action-type"
-#| msgid "Application defined"
 msgid "Application Switching"
 msgstr "Forrit skilgreint"
 
@@ -2941,7 +2897,7 @@ msgid "Manage preferences for productivity and multitasking"
 msgstr ""
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr ""
 
@@ -2957,7 +2913,6 @@ msgstr "NetworkManager netstjórinn verður að vera í gangi."
 
 #: panels/network/cc-network-panel.ui:66
 #, fuzzy
-#| msgid "Other Files"
 msgid "Other Devices"
 msgstr "Aðrar skrár"
 
@@ -2999,6 +2954,7 @@ msgstr ""
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "Tengt"
 
@@ -3054,13 +3010,11 @@ msgstr "Lykilorð"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:83
 #, fuzzy
-#| msgid "Group Password"
 msgid "Generate Random Password"
 msgstr "Lykilorð hóps"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:84
 #, fuzzy
-#| msgid "Current _Password"
 msgid "Autogenerate Password"
 msgstr "_Núverandi lykilorð"
 
@@ -3108,7 +3062,6 @@ msgstr "Slökktu til að nota Wi-Fi"
 
 #: panels/network/cc-wifi-panel.ui:184
 #, fuzzy
-#| msgid "Wi-Fi Hotspot"
 msgid "Wi-Fi Hotspot Active"
 msgstr "Þráðlaus tengipunktur"
 
@@ -3118,7 +3071,6 @@ msgstr ""
 
 #: panels/network/cc-wifi-panel.ui:205
 #, fuzzy
-#| msgid "_Turn On Wi-Fi Hotspot…"
 msgid "Turn Off Hotspot…"
 msgstr "Kveikja á þráðlausum Wi-Fi tengipunkti…"
 
@@ -3142,7 +3094,6 @@ msgstr "Öryggi"
 
 #: panels/network/connection-editor/ce-page.c:234
 #, fuzzy
-#| msgid "reset"
 msgid "Preserve"
 msgstr "frumstilla"
 
@@ -3156,7 +3107,6 @@ msgstr ""
 
 #: panels/network/connection-editor/ce-page.c:237
 #, fuzzy
-#| msgid "Tablet"
 msgid "Stable"
 msgstr "Spjaldtölva"
 
@@ -3398,8 +3348,6 @@ msgstr "WPA og WPA2 fyrirtækja"
 
 #: panels/network/connection-editor/ce-page-security.c:381
 #, fuzzy
-#| msgctxt "category"
-#| msgid "Personal"
 msgid "WPA3 Personal"
 msgstr "Einka"
 
@@ -3419,7 +3367,6 @@ msgstr "Vistfang vélbúnaðar"
 
 #: panels/network/connection-editor/details-page.ui:162
 #, fuzzy
-#| msgid "Supported ICC profiles"
 msgid "Supported Frequencies"
 msgstr "Studd ICC litasnið"
 
@@ -3502,7 +3449,6 @@ msgstr "Gera óvirkt"
 #: panels/network/connection-editor/ip4-page.ui:97
 #: panels/network/connection-editor/ip6-page.ui:111
 #, fuzzy
-#| msgid "Shared with other computers"
 msgid "Shared to other computers"
 msgstr "Samnýtt með öðrum tölvum"
 
@@ -3676,11 +3622,8 @@ msgid "Control how you connect to the Internet"
 msgstr "Stjórnaðu hvernig þú tengist internetinu"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 #, fuzzy
-#| msgid ""
-#| "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;"
-#| "vpn;DNS;"
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr ""
 "Netkerfi;þráðlaust;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;breiðband;internet;mótald;"
@@ -3691,9 +3634,8 @@ msgid "Control how you connect to Wi-Fi networks"
 msgstr "Stjórnaðu hvernig þú tengist þráðlausum Wi-Fi netkerfum"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 #, fuzzy
-#| msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;"
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr ""
 "Netkerfi;þráðlaust;Wi-Fi;Wifi;IP;LAN;breiðband;internet;mótald;Bluetooth;vpn;"
@@ -3867,21 +3809,18 @@ msgstr "Slökkva á VPN-nettengingu"
 
 #: panels/network/network-wifi.ui:22
 #, fuzzy
-#| msgid "Network Name"
 msgctxt "Wi-Fi Hotspot"
 msgid "Network Name"
 msgstr "Heiti netkerfis"
 
 #: panels/network/network-wifi.ui:28
 #, fuzzy
-#| msgid "Security type"
 msgctxt "Wi-Fi Hotspot"
 msgid "Security type"
 msgstr "Tegund öryggis"
 
 #: panels/network/network-wifi.ui:34
 #, fuzzy
-#| msgid "Password"
 msgctxt "Wi-Fi Hotspot"
 msgid "Password"
 msgstr "Lykilorð"
@@ -4245,7 +4184,7 @@ msgstr "vantar EAP-LEAP lykilorð"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "Notan_danafn"
 
@@ -4255,8 +4194,8 @@ msgstr "Notan_danafn"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "Lykil_orð"
@@ -4414,7 +4353,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "_Lén"
@@ -4464,7 +4403,6 @@ msgstr "vantar leap-lykilorð"
 
 #: panels/network/wireless-security/ws-sae.c:77
 #, fuzzy
-#| msgid "invalid EAP-TLS password: missing"
 msgid "Wi-Fi password is missing."
 msgstr "ógilt EAP-TLS lykilorð: vantar"
 
@@ -4610,7 +4548,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "Stjórnaðu hvaða tilkynningar eru birtar og hvað þær innihalda"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Tilkynningar;Borði;Skilaboð;Kerfisbakki;Sprettgluggi;"
 
@@ -4635,7 +4573,6 @@ msgstr "Villa við að fjarlægja notandaaðgang"
 #.
 #: panels/online-accounts/cc-online-accounts-panel.c:936
 #, fuzzy, c-format
-#| msgid "<b>%s</b> removed"
 msgid "%s removed"
 msgstr "<b>%s</b> fjarlægt"
 
@@ -4652,7 +4589,7 @@ msgstr ""
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
@@ -4858,7 +4795,6 @@ msgstr "Þegar vélin er í sambandi"
 
 #: panels/power/cc-power-panel.c:980
 #, fuzzy
-#| msgid "Never"
 msgctxt "Idle time"
 msgid "Never"
 msgstr "Aldrei"
@@ -4962,7 +4898,6 @@ msgstr "2 klukkustundir"
 
 #: panels/power/cc-power-panel.ui:107
 #, fuzzy
-#| msgid "Power off"
 msgid "Power Mode"
 msgstr "Slökkva"
 
@@ -4972,13 +4907,11 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:142
 #, fuzzy
-#| msgid "Power Saving"
 msgid "Power Saving Options"
 msgstr "Orkusparnaður"
 
 #: panels/power/cc-power-panel.ui:146
 #, fuzzy
-#| msgid "Automatic brightness"
 msgid "Automatic Screen Brightness"
 msgstr "Sjálfvirkt birtustig"
 
@@ -4988,7 +4921,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:160
 #, fuzzy
-#| msgid "Screen"
 msgid "Dim Screen"
 msgstr "Skjár"
 
@@ -4998,7 +4930,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:174
 #, fuzzy
-#| msgid "Screen _Reader"
 msgid "Screen _Blank"
 msgstr "Skjá_lesari"
 
@@ -5008,7 +4939,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:183
 #, fuzzy
-#| msgid "_Automatic Problem Reporting"
 msgid "Automatic Power Saver"
 msgstr "Tilkynn_a sjálfkrafa um vandamál"
 
@@ -5018,7 +4948,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:198
 #, fuzzy
-#| msgid "Automatic Suspend"
 msgid "_Automatic Suspend"
 msgstr "Hætta sjálfvirkt"
 
@@ -5032,7 +4961,6 @@ msgstr "Bið og aflhnappar"
 
 #: panels/power/cc-power-panel.ui:221
 #, fuzzy
-#| msgid "Lower Button"
 msgid "Po_wer Button Behavior"
 msgstr "Neðri hnappur"
 
@@ -5081,7 +5009,6 @@ msgstr ""
 
 #: panels/power/cc-power-profile-row.c:188
 #, fuzzy
-#| msgid "Balance"
 msgctxt "Power profile"
 msgid "Balanced"
 msgstr "Jafnvægi"
@@ -5092,7 +5019,6 @@ msgstr ""
 
 #: panels/power/cc-power-profile-row.c:192
 #, fuzzy
-#| msgid "Power Saving"
 msgctxt "Power profile"
 msgid "Power Saver"
 msgstr "Orkusparnaður"
@@ -5110,11 +5036,8 @@ msgid "View your battery status and change power saving settings"
 msgstr "Skoða ástand rafhlöðu og sýsla með orkustillingar"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 #, fuzzy
-#| msgid ""
-#| "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;"
-#| "Idle;"
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -5172,7 +5095,7 @@ msgstr ""
 "Bættu við prenturum, skoðaðu prentverk og veldu hvernig þú vilt haga prentun"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Prentari;prentröð;Prentun;Pappír;blek;prentduft;"
 
@@ -5771,7 +5694,6 @@ msgstr "Endurræsa"
 #. Translators: This button adds new printer.
 #: panels/printers/printers.ui:12
 #, fuzzy
-#| msgid "Add a Printer…"
 msgid "Add Printer…"
 msgstr "Bæta við prentara…"
 
@@ -5806,25 +5728,21 @@ msgstr ""
 
 #: panels/region/cc-format-chooser.ui:117
 #, fuzzy
-#| msgid "Search Locations"
 msgid "Search locales..."
 msgstr "Staðsetningar sem leitað er í"
 
 #: panels/region/cc-format-chooser.ui:158
 #, fuzzy
-#| msgid "Formats"
 msgid "Common Formats"
 msgstr "Snið"
 
 #: panels/region/cc-format-chooser.ui:189
 #, fuzzy
-#| msgid "Formats"
 msgid "All Formats"
 msgstr "Snið"
 
 #: panels/region/cc-format-chooser.ui:242
 #, fuzzy
-#| msgid "No results found"
 msgid "No Search Results"
 msgstr "Engar niðurstöður fundust"
 
@@ -5868,19 +5786,16 @@ msgstr "Pappír"
 
 #: panels/region/cc-region-panel.ui:42
 #, fuzzy
-#| msgid "%s Account"
 msgid "My Account"
 msgstr "Aðgangur %s"
 
 #: panels/region/cc-region-panel.ui:53
 #, fuzzy
-#| msgid "Login _Screen"
 msgid "Login Screen"
 msgstr "Inn_skráningarskjár"
 
 #: panels/region/cc-region-panel.ui:78
 #, fuzzy
-#| msgid "_Language"
 msgid "Language"
 msgstr "Tungumá_l"
 
@@ -5921,15 +5836,13 @@ msgstr "Land & tungumál"
 
 #: panels/region/gnome-region-panel.desktop.in.in:4
 #, fuzzy
-#| msgid ""
-#| "Select your display language, formats, keyboard layouts and input sources"
 msgid "Select your display language and formats"
 msgstr ""
 "Veldu tungumálið sem þú vilt nota fyrir texta, snið, lyklaborðsframsetningu "
 "og inntaksleiðir"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Tungumál;Framsetning;Lyklaborð;Inntak;"
 
@@ -6071,7 +5984,7 @@ msgid "Configure Removable Media settings"
 msgstr "Stillingar útskiptanlegra gagnamiðla"
 
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
@@ -6136,7 +6049,7 @@ msgid ""
 msgstr "Stjórnaðu hvaða forrit birta leitarniðurstöður í virkniyfirlitinu"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Leita;Finna;Yfirlit;Fela;Gagnaleynd;Niðurstöður;"
 
@@ -6176,9 +6089,6 @@ msgstr "Veldu möppu"
 #. TRANSLATORS: %s is replaced with a link to a dav://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:696
 #, fuzzy, c-format
-#| msgid ""
-#| "File Sharing allows you to share your Public folder with others on your "
-#| "current network using: <a href=\"dav://%s\">dav://%s</a>"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
@@ -6189,10 +6099,6 @@ msgstr ""
 #. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
 #: panels/sharing/cc-sharing-panel.c:702
 #, fuzzy, c-format
-#| msgid ""
-#| "When remote login is enabled, remote users can connect using the Secure "
-#| "Shell command:\n"
-#| "<a href=\"ssh %s\">ssh %s</a>"
 msgid ""
 "When remote login is enabled, remote users can connect using the Secure "
 "Shell command:\n"
@@ -6205,9 +6111,6 @@ msgstr ""
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:708
 #, fuzzy, c-format
-#| msgid ""
-#| "Screen sharing allows remote users to view or control your screen by "
-#| "connecting to <a href=\"vnc://%s\">vnc://%s</a>"
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
@@ -6309,7 +6212,7 @@ msgid "Control what you want to share with others"
 msgstr "Stjórnaðu hverju þú vilt deila með öðrum"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
@@ -6429,9 +6332,8 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Breyta hljóðstyrk, inntaki, úttaki og aðvörunarhljóðum"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 #, fuzzy
-#| msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6611,9 +6513,8 @@ msgid "Manage Thunderbolt devices"
 msgstr "Sýsla með Thunderbolt-tæki"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 #, fuzzy
-#| msgid "Thunderbolt;"
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;"
 
@@ -6874,7 +6775,6 @@ msgstr[1] "%d mynddílar"
 
 #: panels/universal-access/cc-ua-panel.ui:55
 #, fuzzy
-#| msgid "_Always Show Universal Access Menu"
 msgid "_Always Show Accessibility Menu"
 msgstr "_Alltaf sýna valmynd fyrir altækan aðgang"
 
@@ -6942,7 +6842,6 @@ msgstr "_Músarlyklar"
 
 #: panels/universal-access/cc-ua-panel.ui:915
 #, fuzzy
-#| msgid "Remove Printer"
 msgid "_Locate Pointer"
 msgstr "Fjarlægja prentara"
 
@@ -6972,7 +6871,6 @@ msgstr "Sýna myndrænt samhliða viðvörunarhljóði."
 
 #: panels/universal-access/cc-visual-alerts-dialog.ui:94
 #, fuzzy
-#| msgid "Flash the entire _screen"
 msgid "Flash the entire _window"
 msgstr "Blikka öllum _skjánum"
 
@@ -7161,13 +7059,8 @@ msgid "Make it easier to see, hear, type, point and click"
 msgstr "Gerir auðveldara að sjá, heyra, slá inn, benda og smella"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 #, fuzzy
-#| msgid ""
-#| "Keyboard;Mouse;a11y;Accessibility;Contrast;Cursor;Sound;Zoom;Screen;"
-#| "Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;"
-#| "Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;"
-#| "typing;"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7204,7 +7097,6 @@ msgstr "_Eyða bráðabirgðaskrám"
 
 #: panels/usage/cc-usage-panel.ui:29
 #, fuzzy
-#| msgid "History"
 msgid "File History"
 msgstr "Ferill"
 
@@ -7217,7 +7109,6 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:56
 #, fuzzy
-#| msgid "History"
 msgid "File H_istory"
 msgstr "Ferill"
 
@@ -7227,13 +7118,11 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:119
 #, fuzzy
-#| msgid "Cl_ear Recent History"
 msgid "_Clear History…"
 msgstr "Hr_einsa feril nýlegra skráa"
 
 #: panels/usage/cc-usage-panel.ui:135
 #, fuzzy
-#| msgid "Purge Trash & Temporary Files"
 msgid "Trash & Temporary Files"
 msgstr "Eyða rusli og bráðabirgðaskrám"
 
@@ -7245,19 +7134,16 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:159
 #, fuzzy
-#| msgid "Automatically empty _Trash"
 msgid "Automatically Delete _Trash Content"
 msgstr "_Tæma rusl sjálfkrafa"
 
 #: panels/usage/cc-usage-panel.ui:174
 #, fuzzy
-#| msgid "Automatically purge Temporary _Files"
 msgid "Automatically Delete Temporary _Files"
 msgstr "_Eyða bráðabirgðaskrám sjálfkrafa"
 
 #: panels/usage/cc-usage-panel.ui:196
 #, fuzzy
-#| msgid "Automatically empty _Trash"
 msgid "Automatically Delete _Period"
 msgstr "_Tæma rusl sjálfkrafa"
 
@@ -7267,7 +7153,6 @@ msgstr "_Tæma ruslið…"
 
 #: panels/usage/cc-usage-panel.ui:250
 #, fuzzy
-#| msgid "_Purge Temporary Files…"
 msgid "_Delete Temporary Files…"
 msgstr "_Eyða bráðabirgðaskrám…"
 
@@ -7363,35 +7248,86 @@ msgstr ""
 msgid "Don't leave traces"
 msgstr ""
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "Bæta við nýrri tengingu"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "Get ekki opnað tengingaritil"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "Gleyma tengingu"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "Má breyta stillingum"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "Sjálfvirk beining"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "Áætlun"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "Sjálfvirk beining"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "Ætti að samsvara vefslóð á miðlarann fyrir notandaaðganginn þinn."
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "Mistókst að bæta við reikning"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "Lykilorðin stemma ekki."
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "Mistókst að skrá aðgang"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "Engin aðferð er studd til auðkenningar á þessu léni"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "Mistókst að fá aðgang að léni"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7399,7 +7335,7 @@ msgstr ""
 "Þetta innskráningarnafn virkaði ekki.\n"
 "Endilega reyndu aftur."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7407,11 +7343,11 @@ msgstr ""
 "Þetta lykilorð virkaði ekki.\n"
 "Endilega reyndu aftur."
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "Mistókst að skrá inn á lén"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "Ekki tókst að finna lénið. Er það rétt stafað?"
 
@@ -7437,19 +7373,26 @@ msgid "Account _Type"
 msgstr "Tegund notandaaðgangs"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "Leyfa notanda að stilla _lykilorð við næstu innskráningu"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "Setja lykilorð _núna"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "Stað_festa"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
@@ -7459,16 +7402,16 @@ msgstr ""
 "notandaaðgang á þessu tæki. Þú getur líka notað þennan notandaaðgang til að "
 "tengjast netlægum tilföngum viðkomandi fyrirtækis."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "Tölvan er ekki tengd við netið"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr ""
 "Nettenging er nauðsynleg til að bæta við innskráningaraðgangi í fyrirtæki."
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "Innskráning í _fyrirtæki"
 
@@ -7486,19 +7429,16 @@ msgstr "Veldu skrá…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:8
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Manager"
 msgstr "Innskráning með _fingrafari"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:23
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint"
 msgstr "Innskráning með _fingrafari"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:118
 #, fuzzy
-#| msgid "No"
 msgid "_No"
 msgstr "Nei"
 
@@ -7517,7 +7457,6 @@ msgstr ""
 #. Translators: This is the empty state page label which states that there are no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "No Fingerprint device"
 msgstr "Innskráning með _fingrafari"
 
@@ -7527,7 +7466,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:264
 #, fuzzy
-#| msgid "Gaming input device"
 msgid "No fingerprint device"
 msgstr "Leikjainntakstæki"
 
@@ -7537,7 +7475,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:309
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Device"
 msgstr "Innskráning með _fingrafari"
 
@@ -7553,13 +7490,11 @@ msgstr "_Eyða fingraförum"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:363
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Login"
 msgstr "Innskráning með _fingrafari"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:412
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Enroll"
 msgstr "Innskráning með _fingrafari"
 
@@ -7573,7 +7508,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:238
 #, fuzzy
-#| msgid "The device is already in use."
 msgid "the device is already claimed by another process"
 msgstr "Þessi búnaður er núþegar í notkun."
 
@@ -7587,13 +7521,11 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:251
 #, fuzzy
-#| msgid "Failed to register with the requested network"
 msgid "Failed to communicate with the device during enrollment"
 msgstr "Mistókst að skrá inn á umbeðið netkerfi"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:255
 #, fuzzy
-#| msgid "Could not access any fingerprint readers"
 msgid "Failed to communicate with the fingerprint reader"
 msgstr "Gat ekki tengst fingrafaralesara"
 
@@ -7603,13 +7535,11 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:585
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to list fingerprints: %s"
 msgstr "Gat ekki sent skrá: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:652
 #, fuzzy, c-format
-#| msgid "Failed to delete user"
 msgid "Failed to delete saved fingerprints: %s"
 msgstr "Gat ekki eytt notandanum"
 
@@ -7655,20 +7585,17 @@ msgstr "Hægri litlifingur"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:703
 #, fuzzy
-#| msgid "Unknown time"
 msgid "Unknown Finger"
 msgstr "Óþekktur tími"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:837
 #, fuzzy
-#| msgid "Complete!"
 msgctxt "Fingerprint enroll state"
 msgid "Complete"
 msgstr "Fullklárað!"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:848
 #, fuzzy
-#| msgid "PPP service disconnected"
 msgid "Fingerprint device disconnected"
 msgstr "PPP þjónusta aftengd"
 
@@ -7678,26 +7605,22 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:858
 #, fuzzy
-#| msgid "Failed to add new printer."
 msgid "Failed to enroll new fingerprint"
 msgstr "Mistókst að bæta við nýjum prentara"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:889
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to start enrollment: %s"
 msgstr "Gat ekki sent skrá: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:897
 #, fuzzy
-#| msgid "Failed to add new printer."
 msgctxt "Fingerprint enroll state"
 msgid "Failed to enroll new fingerprint"
 msgstr "Mistókst að bæta við nýjum prentara"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:928
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to stop enrollment: %s"
 msgstr "Gat ekki sent skrá: %s"
 
@@ -7710,32 +7633,27 @@ msgstr ""
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:1118
 #, fuzzy
-#| msgid "Enrolling fingerprints"
 msgid "Scan new fingerprint"
 msgstr "Skrái fingraför"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1157
 #, fuzzy, c-format
-#| msgid "Failed to forget device: "
 msgid "Failed to release fingerprint device %s: %s"
 msgstr "Tókst ekki að gleyma tæki: "
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1229
 #, fuzzy
-#| msgid "Pending Devices"
 msgctxt "Fingerprint enroll state"
 msgid "Problem Reading Device"
 msgstr "Tæki í bið"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1264
 #, fuzzy, c-format
-#| msgid "Failed to forget device: "
 msgid "Failed to claim fingerprint device %s: %s"
 msgstr "Tókst ekki að gleyma tæki: "
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1413
 #, fuzzy, c-format
-#| msgid "Failed to forget device: "
 msgid "Failed to get fingerprint devices: %s"
 msgstr "Tókst ekki að gleyma tæki: "
 
@@ -7804,15 +7722,15 @@ msgstr "Seta hafin"
 msgid "%s — Account Activity"
 msgstr "%s — Virkni aðgangs"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "Veldu eitthvað annað lykilorð."
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "Sláðu aftur inn núverandi lykilorð."
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "Ekki tókst að breyta lykilorðinu"
 
@@ -7835,14 +7753,6 @@ msgstr "_Nýtt lykilorð"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "_Núverandi lykilorð"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "Leyfa notanda að stilla lykilorð við næstu innskráningu"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "Setja lykilorð núna"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -8016,13 +7926,11 @@ msgstr "Táknmynd notanda"
 
 #: panels/user-accounts/cc-user-panel.ui:249
 #, fuzzy
-#| msgid "All Settings"
 msgid "Account Settings"
 msgstr "Allar stillingar"
 
 #: panels/user-accounts/cc-user-panel.ui:267
 #, fuzzy
-#| msgid "Administrator"
 msgid "_Administrator"
 msgstr "Kerfisstjóri"
 
@@ -8042,7 +7950,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-user-panel.ui:347
 #, fuzzy
-#| msgid "Au_thentication"
 msgid "Authentication & Login"
 msgstr "_Auðkenning"
 
@@ -8056,7 +7963,6 @@ msgstr "S_jálfvirk innskráning"
 
 #: panels/user-accounts/cc-user-panel.ui:429
 #, fuzzy
-#| msgid "%s — Account Activity"
 msgid "Account Activity"
 msgstr "%s — Virkni aðgangs"
 
@@ -8082,7 +7988,7 @@ msgid "Add or remove users and change your password"
 msgstr "Bæta við eða fjarlægja notendur og breyta lykilorði"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
@@ -8283,9 +8189,6 @@ msgstr "Óþekkt villa"
 
 #: panels/user-accounts/user-utils.c:432
 #, fuzzy
-#| msgid ""
-#| "The username should only consist of upper and lower case letters from a-"
-#| "z, digits and the following characters: . - _"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
@@ -8408,7 +8311,7 @@ msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr "Stilltu hnappavörpun og aðlagaðu næmni snertipenna fyrir teiknispjald"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Teiknispjald;Teiknitafla;Wacom;Snerti;Penni;Teikna;Mús;"
 
@@ -8471,7 +8374,6 @@ msgstr "Stilla skjáupplausn"
 
 #: panels/wacom/gnome-wacom-properties.ui:376
 #, fuzzy
-#| msgid "Single Display"
 msgid "Decouple Display"
 msgstr "Einn skjár"
 
@@ -8533,13 +8435,11 @@ msgstr "Þrýstiskynjun odds"
 
 #: panels/wwan/cc-wwan-apn-dialog.ui:11
 #, fuzzy
-#| msgid "Access Options"
 msgid "Access Points"
 msgstr "Valkostir við aðgengi"
 
 #: panels/wwan/cc-wwan-apn-dialog.ui:160
 #, fuzzy
-#| msgid "VPN"
 msgid "APN"
 msgstr "VPN"
 
@@ -8561,7 +8461,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.c:85
 #, fuzzy
-#| msgid "Yesterday"
 msgid "Registered"
 msgstr "í gær"
 
@@ -8571,7 +8470,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.c:93
 #, fuzzy
-#| msgid "Search"
 msgid "Searching"
 msgstr "Leita"
 
@@ -8581,13 +8479,11 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.ui:4
 #, fuzzy
-#| msgid "Details"
 msgid "Modem Details"
 msgstr "Nánar"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:33
 #, fuzzy
-#| msgid "Status:"
 msgid "Modem Status"
 msgstr "Staða:"
 
@@ -8597,31 +8493,26 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.ui:79
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network Type"
 msgstr "Heiti netkerfis"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:131
 #, fuzzy
-#| msgid "Networks"
 msgid "Network Status"
 msgstr "Netkerfi"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:158
 #, fuzzy
-#| msgid "Numbers"
 msgid "Own Number"
 msgstr "Tölustafir"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:185
 #, fuzzy
-#| msgid "Printer Details"
 msgid "Device Details"
 msgstr "Nánar um prentara"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:257
 #, fuzzy
-#| msgid "Firmware missing"
 msgid "Firmware Version"
 msgstr "grunnhugbúnað vantar (firmware)"
 
@@ -8691,7 +8582,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device.c:1043
 #, fuzzy
-#| msgid "Unknown"
 msgctxt "Network mode"
 msgid "Unknown"
 msgstr "Óþekkt"
@@ -8702,7 +8592,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.c:189 panels/wwan/cc-wwan-device-page.c:237
 #, fuzzy
-#| msgid "_Unlock"
 msgid "Unlock"
 msgstr "_Aflæsa"
 
@@ -8756,7 +8645,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.c:317
 #, fuzzy
-#| msgid "Unlock %s."
 msgid "Unlocking..."
 msgstr "Aflæsa %s."
 
@@ -8774,7 +8662,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:139
 #, fuzzy
-#| msgid "_Mobile broadband"
 msgid "_Mobile Data"
 msgstr "_Ferðabreiðband"
 
@@ -8792,32 +8679,26 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:177
 #, fuzzy
-#| msgid "Network Name"
 msgid "_Network Mode"
 msgstr "Heiti netkerfis"
 
 #: panels/wwan/cc-wwan-device-page.ui:187
 #, fuzzy
-#| msgid "Network"
 msgid "N_etwork"
 msgstr "Netkerfi"
 
 #: panels/wwan/cc-wwan-device-page.ui:199
 #, fuzzy
-#| msgctxt "Printer Option Group"
-#| msgid "Advanced"
 msgid "Advanced"
 msgstr "Nánar"
 
 #: panels/wwan/cc-wwan-device-page.ui:225
 #, fuzzy
-#| msgid "Access Options"
 msgid "_Access Point Names"
 msgstr "Valkostir við aðgengi"
 
 #: panels/wwan/cc-wwan-device-page.ui:235
 #, fuzzy
-#| msgid "Screen Lock"
 msgid "_SIM Lock"
 msgstr "Skjálæsing"
 
@@ -8827,19 +8708,16 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:246
 #, fuzzy
-#| msgid "%s Details"
 msgid "M_odem Details"
 msgstr "Nánar um %s"
 
 #: panels/wwan/cc-wwan-errors-private.h:40
 #, fuzzy
-#| msgid "PIN check failed"
 msgid "Phone failure"
 msgstr "Athugun á PIN mistókst"
 
 #: panels/wwan/cc-wwan-errors-private.h:41
 #, fuzzy
-#| msgid "Not connected"
 msgid "No connection to phone"
 msgstr "Ótengt"
 
@@ -8853,19 +8731,16 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:48
 #, fuzzy
-#| msgid "SIM Card not inserted"
 msgid "SIM not inserted"
 msgstr "SIM-kort ekki til staðar"
 
 #: panels/wwan/cc-wwan-errors-private.h:49
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PIN required"
 msgstr "Krafist er PIN-númers SIM-korts"
 
 #: panels/wwan/cc-wwan-errors-private.h:50
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PUK required"
 msgstr "Krafist er PIN-númers SIM-korts"
 
@@ -8879,43 +8754,36 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:54
 #, fuzzy
-#| msgid "Current _Password"
 msgid "Incorrect password"
 msgstr "_Núverandi lykilorð"
 
 #: panels/wwan/cc-wwan-errors-private.h:55
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PIN2 required"
 msgstr "Krafist er PIN-númers SIM-korts"
 
 #: panels/wwan/cc-wwan-errors-private.h:56
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PUK2 required"
 msgstr "Krafist er PIN-númers SIM-korts"
 
 #: panels/wwan/cc-wwan-errors-private.h:59
 #, fuzzy
-#| msgid "No stylus found"
 msgid "Not found"
 msgstr "Engin snertipenni fannst"
 
 #: panels/wwan/cc-wwan-errors-private.h:61
 #, fuzzy
-#| msgid "Networks"
 msgid "No network service"
 msgstr "Netkerfi"
 
 #: panels/wwan/cc-wwan-errors-private.h:62
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network timeout"
 msgstr "Heiti netkerfis"
 
 #: panels/wwan/cc-wwan-errors-private.h:75
 #, fuzzy
-#| msgid "AutoIP service failed"
 msgid "GPRS services not allowed"
 msgstr "AutoIP þjónusta brást"
 
@@ -8929,8 +8797,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:91
 #, fuzzy
-#| msgctxt "print job"
-#| msgid "Canceled"
 msgid "Action Cancelled"
 msgstr "Hætt við"
 
@@ -8940,13 +8806,11 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:103
 #, fuzzy
-#| msgid "Unknown error"
 msgid "Unknown Error"
 msgstr "Óþekkt villa"
 
 #: panels/wwan/cc-wwan-mode-dialog.ui:4
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network Mode"
 msgstr "Heiti netkerfis"
 
@@ -8963,13 +8827,11 @@ msgstr "Loka"
 
 #: panels/wwan/cc-wwan-network-dialog.ui:84
 #, fuzzy
-#| msgid "Automatic"
 msgid "_Automatic"
 msgstr "Sjálfvirkt"
 
 #: panels/wwan/cc-wwan-network-dialog.ui:100
 #, fuzzy
-#| msgid "My Home Network"
 msgid "Choose Network"
 msgstr "Heimanetið"
 
@@ -8984,49 +8846,41 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-panel.ui:101
 #, fuzzy
-#| msgid "No Wi-Fi Adapter Found"
 msgid "No WWAN Adapter Found"
 msgstr "Engin Wi-Fi netkort fundust"
 
 #: panels/wwan/cc-wwan-panel.ui:112
 #, fuzzy
-#| msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgid "Make sure you have a Wireless Wan/Cellular device"
 msgstr "Gangtu úr skugga um að Wi-Fi netkortið sé tengt og að kveikt sé á því"
 
 #: panels/wwan/cc-wwan-panel.ui:154
 #, fuzzy
-#| msgid "Bluetooth is disabled when airplane mode is on."
 msgid "Wireless Wan is disabled when airplane mode is on"
 msgstr "Bluetooth er óvirkt þegar flugvélahamur er virkur."
 
 #: panels/wwan/cc-wwan-panel.ui:163
 #, fuzzy
-#| msgid "Turn Off Airplane Mode"
 msgid "_Turn off Airplane Mode"
 msgstr "Slökkva á flugvélaham"
 
 #: panels/wwan/cc-wwan-panel.ui:210
 #, fuzzy
-#| msgid "Forget Connection"
 msgid "Data Connection"
 msgstr "Gleyma tengingu"
 
 #: panels/wwan/cc-wwan-panel.ui:224
 #, fuzzy
-#| msgid "SIM Card not inserted"
 msgid "SIM card used for internet"
 msgstr "SIM-kort ekki til staðar"
 
 #: panels/wwan/cc-wwan-panel.ui:332
 #, fuzzy
-#| msgid "My Home Network"
 msgid "Enable Mobile Network"
 msgstr "Heimanetið"
 
 #: panels/wwan/cc-wwan-sim-lock-dialog.ui:11
 #, fuzzy
-#| msgid "Screen Lock"
 msgid "SIM Lock"
 msgstr "Skjálæsing"
 
@@ -9040,7 +8894,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-sim-lock-dialog.ui:158
 #, fuzzy
-#| msgid "Ch_ange"
 msgid "Change PIN"
 msgstr "Bre_yta"
 
@@ -9050,19 +8903,16 @@ msgstr ""
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:3
 #, fuzzy
-#| msgid "My Home Network"
 msgid "Mobile Network"
 msgstr "Heimanetið"
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Configure Removable Media settings"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Stillingar útskiptanlegra gagnamiðla"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wwan/gnome-wwan-panel.desktop.in.in:17
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr ""
 
@@ -9106,11 +8956,11 @@ msgstr "Spjald sem á að birta"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[SPJALD] [BREYTA…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "Gagnaleynd"
 
-#: shell/cc-panel-loader.c:299
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Tiltæk spjöld:"
 
@@ -9219,6 +9069,15 @@ msgstr[1] "%u inntök"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Kerfishljóð"
+
+#~ msgid "Open in Software"
+#~ msgstr "Opna í hugbúnaðarstýringu"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr "Leyfa notanda að stilla lykilorð við næstu innskráningu"
+
+#~ msgid "Set a password now"
+#~ msgstr "Setja lykilorð núna"
 
 #~ msgid "_Background"
 #~ msgstr "_Bakgrunnur"

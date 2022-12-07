@@ -10,9 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center.HEAD\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/issu"
-"es\n"
-"POT-Creation-Date: 2021-09-18 09:55+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-07 15:17-0700\n"
 "PO-Revision-Date: 2021-09-18 16:30-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@list.sf.net>\n"
@@ -76,8 +75,8 @@ msgid "File System"
 msgstr "ਫਾਇਲ ਸਿਸਟਮ"
 
 #: panels/applications/cc-applications-panel.c:849
-#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:279
-#: shell/cc-window.c:938 shell/cc-window.ui:121
+#: panels/keyboard/01-launchers.xml.in:6 shell/cc-window.c:294
+#: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
 msgstr "ਸੈਟਿੰਗ"
@@ -92,8 +91,7 @@ msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
 msgstr ""
-"%s ਵਿੱਚ ਅੱਗੇ ਦਿੱਤੀਆਂ ਇਜਾਜ਼ਤਾਂ ਪਹਿਲਾਂ ਹੀ ਹਨ। ਇਹਨਾਂ ਨੂੰ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
-" ਜੇ ਤੁਸੀਂ ਇਹ "
+"%s ਵਿੱਚ ਅੱਗੇ ਦਿੱਤੀਆਂ ਇਜਾਜ਼ਤਾਂ ਪਹਿਲਾਂ ਹੀ ਹਨ। ਇਹਨਾਂ ਨੂੰ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਇਹ "
 "ਇਜਾਜ਼ਤਾਂ ਬਾਰੇ ਫ਼ਿਕਰ ਕਰਦੇ ਹੋ ਤਾਂ ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਹਟਾਉਣ ਬਾਰੇ ਵਿਚਾਰ ਕਰੋ।"
 
 #: panels/applications/cc-applications-panel.c:1024
@@ -179,8 +177,7 @@ msgid ""
 "Data and services that this app has asked for access to and permissions that "
 "it requires."
 msgstr ""
-"ਡਾਟਾ ਅਤੇ ਸੇਵਾਵਾਂ, ਜੋ ਇਸ ਐਪ ਨੇ ਪਹੁੰਚ ਲਈ ਅਤੇ ਇਜ਼ਾਜਤਾਂ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ, ਜੋ ਇਸ ਨੂੰ"
-" ਚਾਹੀਦੀਆਂ ਹਨ।"
+"ਡਾਟਾ ਅਤੇ ਸੇਵਾਵਾਂ, ਜੋ ਇਸ ਐਪ ਨੇ ਪਹੁੰਚ ਲਈ ਅਤੇ ਇਜ਼ਾਜਤਾਂ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ, ਜੋ ਇਸ ਨੂੰ ਚਾਹੀਦੀਆਂ ਹਨ।"
 
 #: panels/applications/cc-applications-panel.ui:121
 #: panels/applications/cc-applications-panel.ui:127
@@ -235,8 +232,7 @@ msgid ""
 "Individual permissions for applications can be reviewed in the <a href="
 "\"privacy\">Privacy</a> Settings."
 msgstr ""
-"ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਵੱਖੋ-ਵੱਖ ਇਜਾਜ਼ਤਾਂ ਦੀ ਪੜਤਾਲ <a href=\"privacy\">ਪਰਦੇਦਾਰੀ</a>"
-" ਸੈਟਿੰਗਾਂ ਵਿੱਚ "
+"ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਵੱਖੋ-ਵੱਖ ਇਜਾਜ਼ਤਾਂ ਦੀ ਪੜਤਾਲ <a href=\"privacy\">ਪਰਦੇਦਾਰੀ</a> ਸੈਟਿੰਗਾਂ ਵਿੱਚ "
 "ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।"
 
 #: panels/applications/cc-applications-panel.ui:199
@@ -302,8 +298,9 @@ msgid "Storage"
 msgstr "ਸਟੋਰੇਜ਼"
 
 #: panels/applications/cc-applications-panel.ui:424
-msgid "Open in Software"
-msgstr "ਸਾਫਟਵੇਅਰ ਵਿੱਚ ਖੋਲ੍ਹੋ"
+#, fuzzy
+msgid "Open in App Center"
+msgstr "ਫਾਈਲ ਮੈਨੇਜਰ 'ਚ ਖੋਲ੍ਹੋ"
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -344,9 +341,8 @@ msgstr "…ਕੈਸ਼ ਸਾਫ਼ ਕਰੋ"
 msgid "Control various application permissions and settings"
 msgstr "ਕਈ ਐਪੀਕੇਸ਼ਨ ਇਜਾਜ਼ਤਾਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਨੂੰ ਕੰਟੋਰਲ ਕਰਦਾ ਹੈ।"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/applications/gnome-applications-panel.desktop.in.in:16
+#: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ;ਫਲੈਟਪੈਕ;ਇਜਾਜ਼ਤ;ਸੈਟਿੰਗ;"
 
@@ -359,7 +355,7 @@ msgstr "ਤਸਵੀਰ ਚੁਣੋ"
 #: panels/color/cc-color-panel.c:886 panels/color/cc-color-panel.ui:657
 #: panels/common/cc-language-chooser.ui:25
 #: panels/display/cc-display-panel.c:1006
-#: panels/info-overview/cc-info-overview-panel.ui:243
+#: panels/info-overview/cc-info-overview-panel.ui:256
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:122
 #: panels/network/cc-wifi-panel.c:866
@@ -430,7 +426,7 @@ msgid "Change your background image to a wallpaper or photo"
 msgstr "ਆਪਣੇ ਬੈਕਗਰਾਊਂਡ ਚਿੱਤਰ ਨੂੰ ਵਾਲਪੇਪਰ ਜਾਂ ਫੋਟੋ ਨਾਲ ਬਦਲੋ"
 
 #. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/background/gnome-background-panel.desktop.in.in:15
+#: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "ਵਾਲਪੇਪਰ;ਸਕਰੀਨ;ਡੈਸਕਟਾਪ;ਕੰਧ-ਚਿੱਤਰ;"
 
@@ -481,7 +477,7 @@ msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "ਬਲੂਟੁੱਥ ਜੰਤਰ ਨੂੰ ਚਾਲੂ ਤੇ ਬੰਦ ਕਰੋ ਅਤੇ ਆਪਣੇ ਜੰਤਰਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ-"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:19
+#: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "ਸਾਂਝਾ ਕਰਨਾ;ਸਾਂਝਾ;ਸ਼ੇਅਰਿੰਗ;ਬਲਿਊਟੂੱਥ;ਬਲੂਟੁੱਥ;obex;"
 
@@ -494,12 +490,13 @@ msgid "No applications can capture photos or video."
 msgstr "ਕੋਈ ਐਪਲੀਕੇਸ਼ਨ ਫ਼ੋਟੋ ਖਿੱਚ ਜਾਂ ਵਿਡੀਓ ਬਣਾ ਨਹੀਂ ਸਕਦੀ ਹੈ।"
 
 #: panels/camera/cc-camera-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly."
+"the camera may cause some applications to not function properly. System "
+"applications can always use the camera."
 msgstr ""
-"ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਫੋਟੋ ਖਿੱਚਣ ਅਤੇ ਵਿਡੀਓ ਬਣਾਉਣ ਦਿੰਦੀ ਹੈ। ਕੈਮਰੇ ਨੂੰ"
-" ਅਸਮਰੱਥ ਕਰਨ ਨਾਲ ਕੁਝ "
+"ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਫੋਟੋ ਖਿੱਚਣ ਅਤੇ ਵਿਡੀਓ ਬਣਾਉਣ ਦਿੰਦੀ ਹੈ। ਕੈਮਰੇ ਨੂੰ ਅਸਮਰੱਥ ਕਰਨ ਨਾਲ ਕੁਝ "
 "ਐਪਲੀਕੇਸ਼ਨਾਂ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਨਹੀਂ ਕਰ ਸਕਦੀਆਂ।"
 
 #: panels/camera/cc-camera-panel.ui:85
@@ -514,15 +511,13 @@ msgstr "ਕੈਮਰਾ ਪਹੁੰਚ ਲਈ ਕੋਈ ਐਪਲੀਕੇਸ਼�
 msgid "Protect your pictures"
 msgstr "ਆਪਣੀਆਂ ਤਸਵੀਰਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/camera/gnome-camera-panel.desktop.in.in:20
-#: panels/microphone/gnome-microphone-panel.desktop.in.in:20
+#: panels/camera/gnome-camera-panel.desktop.in.in:19
+#: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
-msgstr ""
-"ਸਕਰੀਨ;ਲਾਕ;ਜਾਂਚ;ਪੜਤਾਲ;ਪ੍ਰਾਈਵੇਟ;ਨਿੱਜੀ;ਆਰਜ਼ੀ;ਇੰਡੈਕਸ;ਨਾਂ;ਨੈੱਟਵਰਕ;ਪਛਾਣ;ਕਰੈਸ਼;ਤਾਜ਼ਾ;"
+msgstr "ਸਕਰੀਨ;ਲਾਕ;ਜਾਂਚ;ਪੜਤਾਲ;ਪ੍ਰਾਈਵੇਟ;ਨਿੱਜੀ;ਆਰਜ਼ੀ;ਇੰਡੈਕਸ;ਨਾਂ;ਨੈੱਟਵਰਕ;ਪਛਾਣ;ਕਰੈਸ਼;ਤਾਜ਼ਾ;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:347
@@ -535,8 +530,7 @@ msgstr "ਆਪਣੇ ਕੈਲੀਬਰੇਸ਼ਨ ਜੰਤਰ ਨੂੰ ਵਰ�
 #: panels/color/cc-color-calibrate.c:353
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
-"ਆਪਣੇ ਕੈਲੀਬਰੇਸ਼ਨ ਜੰਤਰ ਨੂੰ ਕੈਲੀਬਰੇਸ਼ਨ ਸਥਿਤੀ ਉਤੇ ਲੈ ਜਾਉ ਅਤੇ ”ਜਾਰੀ ਰੱਖੋ” ਦੱਬੋ"
+msgstr "ਆਪਣੇ ਕੈਲੀਬਰੇਸ਼ਨ ਜੰਤਰ ਨੂੰ ਕੈਲੀਬਰੇਸ਼ਨ ਸਥਿਤੀ ਉਤੇ ਲੈ ਜਾਉ ਅਤੇ ”ਜਾਰੀ ਰੱਖੋ” ਦੱਬੋ"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -737,8 +731,7 @@ msgstr "ਇਹ URL ਲਿਖ ਲਵੋ।"
 
 #: panels/color/cc-color-panel.c:854
 msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"ਆਪਣੇ ਕੰਪਿਊਟਰ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰੋ ਅਟੇ ਆਪਣੇ ਸਧਾਰਨ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਨੂੰ ਬੂਟ ਕਰੋ।"
+msgstr "ਆਪਣੇ ਕੰਪਿਊਟਰ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰੋ ਅਟੇ ਆਪਣੇ ਸਧਾਰਨ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਨੂੰ ਬੂਟ ਕਰੋ।"
 
 #: panels/color/cc-color-panel.c:855
 msgid "Type the URL into your browser to download and install the profile."
@@ -765,9 +758,7 @@ msgstr "ਚੁਣੇ ਜੰਤਰ ਲਈ ਇੱਕ ਰੰਗ ਪਰੋਫਾਇ�
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"ਮਾਪ ਜੰਤਰ ਖੋਜਿਆ ਨਹੀਂ ਗਿਆ ਹੈ। ਚੈੱਕ ਕਰੋ ਕਿ ਇਹ ਚਾਲੂ ਹੈ ਅਤੇ ਠੀਕ ਤਰ੍ਹਾਂ ਕੂਨੈਕਟ ਕੀਤਾ"
-" ਹੋਇਆ ਹੈ।"
+msgstr "ਮਾਪ ਜੰਤਰ ਖੋਜਿਆ ਨਹੀਂ ਗਿਆ ਹੈ। ਚੈੱਕ ਕਰੋ ਕਿ ਇਹ ਚਾਲੂ ਹੈ ਅਤੇ ਠੀਕ ਤਰ੍ਹਾਂ ਕੂਨੈਕਟ ਕੀਤਾ ਹੋਇਆ ਹੈ।"
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1245
@@ -789,10 +780,8 @@ msgid ""
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
 msgstr ""
-"ਕੈਲੀਬਰੇਸ਼ਨ ਇੱਕ ਪਰੋਫਾਇਲ ਦੇਵੇਗੀ, ਜਿਸ ਨੂੰ ਤੁਸੀਂ ਆਪਣੀ ਸਕਰੀਨ ਦੇ ਰੰਗ ਦੇ ਪਰਬੰਧ ਲਈ ਵਰਤ"
-" ਸਕਦੇ ਹੋ। "
-"ਕੈਲੀਬਰੇਸ਼ਨ ਉੱਤੇ ਜਿੰਨਾ ਵੱਧ ਸਮਾਂ ਤੁਸੀਂ ਲਗਾਉਗੇ, ਰੰਗ ਪਰੋਫਾਇਲ ਉਹਨਾਂ ਹੀ ਵੱਧ ਚੰਗਾ"
-" ਹੋਵੇਗਾ।"
+"ਕੈਲੀਬਰੇਸ਼ਨ ਇੱਕ ਪਰੋਫਾਇਲ ਦੇਵੇਗੀ, ਜਿਸ ਨੂੰ ਤੁਸੀਂ ਆਪਣੀ ਸਕਰੀਨ ਦੇ ਰੰਗ ਦੇ ਪਰਬੰਧ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ। "
+"ਕੈਲੀਬਰੇਸ਼ਨ ਉੱਤੇ ਜਿੰਨਾ ਵੱਧ ਸਮਾਂ ਤੁਸੀਂ ਲਗਾਉਗੇ, ਰੰਗ ਪਰੋਫਾਇਲ ਉਹਨਾਂ ਹੀ ਵੱਧ ਚੰਗਾ ਹੋਵੇਗਾ।"
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -834,8 +823,7 @@ msgid ""
 "Select a display target white point. Most displays should be calibrated to a "
 "D65 illuminant."
 msgstr ""
-"ਡਿਸਪਲੇਅ ਟਾਰਗੇਟ ਚਿੱਟਾ ਬਿੰਦੂ ਚੁਣੋ। ਬਹੁਤੇ ਡਿਸਪਲੇਅ ਨੂੰ D65 illuminant ਤੱਕ"
-" ਕੈਲੀਬਰੇਟ ਕੀਤਾ ਜਾਣਾ "
+"ਡਿਸਪਲੇਅ ਟਾਰਗੇਟ ਚਿੱਟਾ ਬਿੰਦੂ ਚੁਣੋ। ਬਹੁਤੇ ਡਿਸਪਲੇਅ ਨੂੰ D65 illuminant ਤੱਕ ਕੈਲੀਬਰੇਟ ਕੀਤਾ ਜਾਣਾ "
 "ਚਾਹੀਦਾ ਹੈ।"
 
 #: panels/color/cc-color-panel.ui:278
@@ -847,17 +835,14 @@ msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
 msgstr ""
-"ਡਿਸਪਲੇਅ ਲਈ ਚਮਕ ਪੱਧਰ ਸੈੱਟ ਕਰੋ, ਜੋ ਤੁਸੀਂ ਆਮ ਤੌਰ ਉੱਤੇ ਵਰਤਦੇ ਹੋ। ਰੰਗ ਪਰਬੰਧ ਉਸ ਚਮਕ"
-" ਪੱਧਰ ਉੱਤੇ ਸਭ ਤੋਂ "
+"ਡਿਸਪਲੇਅ ਲਈ ਚਮਕ ਪੱਧਰ ਸੈੱਟ ਕਰੋ, ਜੋ ਤੁਸੀਂ ਆਮ ਤੌਰ ਉੱਤੇ ਵਰਤਦੇ ਹੋ। ਰੰਗ ਪਰਬੰਧ ਉਸ ਚਮਕ ਪੱਧਰ ਉੱਤੇ ਸਭ ਤੋਂ "
 "ਵੱਧ ਸ਼ੁੱਧ ਹੋਵੇਗਾ।"
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"ਬਦਲਵੇਂ ਰੂਪ ਵਿੱਚ, ਤੁਸੀਂ  ਇਹ ਜੰਤਰ ਲਈ ਹੋਰ ਪਰੋਫਾਇਲਾਂ ਵਿੱਚੋਂ ਇੱਕ ਨੂੰ ਚਮਕ ਪੱਧਰ ਲਈ"
-" ਵਰਤ ਸਕਦੇ ਹੋ।"
+msgstr "ਬਦਲਵੇਂ ਰੂਪ ਵਿੱਚ, ਤੁਸੀਂ  ਇਹ ਜੰਤਰ ਲਈ ਹੋਰ ਪਰੋਫਾਇਲਾਂ ਵਿੱਚੋਂ ਇੱਕ ਨੂੰ ਚਮਕ ਪੱਧਰ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ।"
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -868,8 +853,7 @@ msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
 msgstr ""
-"ਤੁਸੀਂ ਵੱਖਰੇ ਕੰਪਿਊਟਰ ਉੱਤੇ ਰੰਗ ਪਰੋਫਾਇਲ ਵਰਤ ਸਕਦੇ ਹੋ ਜਾਂ ਵੱਖਰੀਆਂ ਚਾਨਣ ਸ਼ਰਤਾਂ"
-" ਮੁਤਾਬਕ ਰੰਗ ਪਰੋਫਾਇਲ ਬਣਾ "
+"ਤੁਸੀਂ ਵੱਖਰੇ ਕੰਪਿਊਟਰ ਉੱਤੇ ਰੰਗ ਪਰੋਫਾਇਲ ਵਰਤ ਸਕਦੇ ਹੋ ਜਾਂ ਵੱਖਰੀਆਂ ਚਾਨਣ ਸ਼ਰਤਾਂ ਮੁਤਾਬਕ ਰੰਗ ਪਰੋਫਾਇਲ ਬਣਾ "
 "ਸਕਦੇ ਹੋ।"
 
 #: panels/color/cc-color-panel.ui:348
@@ -906,10 +890,8 @@ msgid ""
 "\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
 "\">Microsoft Windows</a> systems useful."
 msgstr ""
-"ਤੁਸੀਂ ਪਰੋਫਾਇਲ ਨੂੰ <a href=\"linux\">GNU/ਲੀਨਕਸ</a>, <a href=\"osx\">ਐਪਲ OS X<"
-"/a> "
-"ਅਤੇ <a href=\"windows\">Microsoft Windows</a> ਸਿਸਟਮ ਉੱਤੇ ਕਿਵੇਂ ਵਰਤੀਏ ਬਾਰੇ"
-" ਹਦਾਇਤਾਂ "
+"ਤੁਸੀਂ ਪਰੋਫਾਇਲ ਨੂੰ <a href=\"linux\">GNU/ਲੀਨਕਸ</a>, <a href=\"osx\">ਐਪਲ OS X</a> "
+"ਅਤੇ <a href=\"windows\">Microsoft Windows</a> ਸਿਸਟਮ ਉੱਤੇ ਕਿਵੇਂ ਵਰਤੀਏ ਬਾਰੇ ਹਦਾਇਤਾਂ "
 "ਵੇਖ ਸਕਦੇ ਹੋ।"
 
 #: panels/color/cc-color-panel.ui:607
@@ -935,8 +917,7 @@ msgstr "ਸ਼ਾਮਲ(_A)"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"ਸਮੱਸਿਆ ਆਈ ਹੈ। ਪਰੋਫਾਇਲ ਠੀਕ ਤਰ੍ਹਾਂ ਸ਼ਾਇਦ ਕੰਮ ਨਾ ਕਰੇ।  <a href=\"\">ਵੇਰਵਾ ਵੇਖੋ</a>"
+msgstr "ਸਮੱਸਿਆ ਆਈ ਹੈ। ਪਰੋਫਾਇਲ ਠੀਕ ਤਰ੍ਹਾਂ ਸ਼ਾਇਦ ਕੰਮ ਨਾ ਕਰੇ।  <a href=\"\">ਵੇਰਵਾ ਵੇਖੋ</a>"
 
 #: panels/color/cc-color-panel.ui:788
 msgid "Each device needs an up to date color profile to be color managed."
@@ -1159,16 +1140,14 @@ msgstr "ਰੰਗ"
 #: panels/color/gnome-color-panel.desktop.in.in:4
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr ""
-"ਆਪਣੇ ਜੰਤਰਾਂ, ਜਿਵੇਂ ਕਿ ਡਿਸਪਲੇਅ, ਕੈਮਰੇ ਜਾਂ ਪਰਿੰਟਰਾਂ ਦੇ ਰੰਗ ਨੂੰ ਕੈਲੀਬਰੇਟ ਕਰੋ"
+msgstr "ਆਪਣੇ ਜੰਤਰਾਂ, ਜਿਵੇਂ ਕਿ ਡਿਸਪਲੇਅ, ਕੈਮਰੇ ਜਾਂ ਪਰਿੰਟਰਾਂ ਦੇ ਰੰਗ ਨੂੰ ਕੈਲੀਬਰੇਟ ਕਰੋ"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/color/gnome-color-panel.desktop.in.in:19
+#: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
-msgstr ""
-"ਰੰਗ;Color;ICC;Profile;Calibrate;ਪ੍ਰਿੰਟਰ;ਪਰਿੰਟਰ;Printer;Display;ਡਿਸਪਲੇਅ;"
+msgstr "ਰੰਗ;Color;ICC;Profile;Calibrate;ਪ੍ਰਿੰਟਰ;ਪਰਿੰਟਰ;Printer;Display;ਡਿਸਪਲੇਅ;"
 
-#: panels/common/cc-common-language.c:300
+#: panels/common/cc-common-language.c:363
 msgid "Other…"
 msgstr "…ਹੋਰ"
 
@@ -1229,27 +1208,27 @@ msgstr "ਕਾਪੀ ਕਰੋ(_C)"
 msgid "Select _All"
 msgstr "ਸਭ ਚੁਣੋ(_A)"
 
-#: panels/common/cc-util.c:127
+#: panels/common/cc-util.c:130
 #: panels/network/connection-editor/ce-page-details.c:162
 msgid "Today"
 msgstr "ਅੱਜ"
 
-#: panels/common/cc-util.c:131
+#: panels/common/cc-util.c:134
 #: panels/network/connection-editor/ce-page-details.c:164
 msgid "Yesterday"
 msgstr "ਕੱਲ੍ਹ"
 
 #. Translators: This is a date format string in the style of "Feb 24".
-#: panels/common/cc-util.c:138
+#: panels/common/cc-util.c:141
 msgid "%b %e"
 msgstr "%e %b"
 
 #. Translators: This is a date format string in the style of "Feb 24, 2013".
-#: panels/common/cc-util.c:143
+#: panels/common/cc-util.c:146
 msgid "%b %e, %Y"
 msgstr "%e %b %Y"
 
-#: panels/common/cc-util.c:165
+#: panels/common/cc-util.c:168
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -1257,14 +1236,14 @@ msgstr[0] "%d ਘੰਟਾ"
 msgstr[1] "%d ਘੰਟੇ"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
-#: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:973
+#: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d ਮਿੰਟ"
 msgstr[1] "%d ਮਿੰਟ"
 
-#: panels/common/cc-util.c:167
+#: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -1272,42 +1251,42 @@ msgstr[0] "%d ਸਕਿੰਟ"
 msgstr[1] "%d ਸਕਿੰਟ"
 
 #. 5 hours 2 minutes 12 seconds
-#: panels/common/cc-util.c:174
+#: panels/common/cc-util.c:177
 #, c-format
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%s %s %s"
 
 #. 5 hours 2 minutes
-#: panels/common/cc-util.c:179
+#: panels/common/cc-util.c:182
 #, c-format
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 5 hours
-#: panels/common/cc-util.c:184
+#: panels/common/cc-util.c:187
 #, c-format
 msgctxt "hours"
 msgid "%s"
 msgstr "%s"
 
 #. 2 minutes 12 seconds
-#: panels/common/cc-util.c:192
+#: panels/common/cc-util.c:195
 #, c-format
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%s %s"
 
 #. 2 minutes
-#: panels/common/cc-util.c:197
+#: panels/common/cc-util.c:200
 #, c-format
 msgctxt "minutes"
 msgid "%s"
 msgstr "%s"
 
 #. 0 seconds
-#: panels/common/cc-util.c:208
+#: panels/common/cc-util.c:211
 msgid "0 seconds"
 msgstr "0 ਸਕਿੰਟ"
 
@@ -1480,7 +1459,7 @@ msgid "Change the date and time, including time zone"
 msgstr "ਤਾਰੀਖ ਅਤੇ ਵੇਲਾ, ਵੇਲੇ ਦੇ ਇਲਾਕੇ ਸਮੇਤ ਬਦਲੋ"
 
 #. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/datetime/gnome-datetime-panel.desktop.in.in:15
+#: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "ਘੜੀ;ਵੇਲਾ,ਵੇਲਾ ਇਲਾਕਾ;ਸਥਾਨ;ਥਾਂ;ਸਮਾਂ-ਖੇਤਰ;ਟਿਕਾਣਾ;"
 
@@ -1526,7 +1505,7 @@ msgid "Configure Default Applications"
 msgstr "ਮੂਲ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੰਰਚਨਾ ਕਰੋ"
 
 #. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:19
+#: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "ਡਿਫਾਲਟ;ਮੂਲ;ਐਪਲੀਕੇਸ਼ਨ;ਤਰਜੀਹੀ;ਮੀਡੀਆ;ਪਸੰਦ;"
 
@@ -1537,8 +1516,7 @@ msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
 msgstr ""
-"ਤਕਨੀਕੀ ਸਮੱਸਿਆਵਾਂ ਬਾਰੇ ਰਿਪੋਰਟਾਂ ਭੇਜਣ ਨਾਲ ਸਾਨੂੰ %s ਸੁਧਾਰਨ ਲਈ ਮਦਦ ਮਿਲਦੀ ਹੈ।"
-" ਰਿਪੋਰਟ ਅਣਪਛਾਤੇ "
+"ਤਕਨੀਕੀ ਸਮੱਸਿਆਵਾਂ ਬਾਰੇ ਰਿਪੋਰਟਾਂ ਭੇਜਣ ਨਾਲ ਸਾਨੂੰ %s ਸੁਧਾਰਨ ਲਈ ਮਦਦ ਮਿਲਦੀ ਹੈ। ਰਿਪੋਰਟ ਅਣਪਛਾਤੇ "
 "ਰੂਪ ਵਿੱਚ ਭੇਜੀਆਂ ਜਾਂਦੀਆਂ ਹਨ ਅਤੇ ਨਿੱਜੀ ਡਾਟੇ ਨੂੰ ਹਟਾਇਆ ਜਾਂਦਾ ਹੈ। %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:28
@@ -1557,18 +1535,16 @@ msgstr "ਪੜਤਾਲ"
 msgid "Report your problems"
 msgstr "ਆਪਣੀਆਂ ਸਮੱਸਿਆਵਾ ਬਾਰੇ ਰਿਪੋਰਟ ਦਿਓ"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
-#: panels/location/gnome-location-panel.desktop.in.in:20
-#: panels/lock/gnome-lock-panel.desktop.in.in:20
-#: panels/usage/gnome-usage-panel.desktop.in.in:20
+#: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
+#: panels/location/gnome-location-panel.desktop.in.in:19
+#: panels/lock/gnome-lock-panel.desktop.in.in:19
+#: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
 msgstr ""
-"ਸਕਰੀਨ;ਲਾਕ;ਜਾਂਚ;ਪੜਤਾਲ;ਪ੍ਰਾਈਵੇਟ;ਨਿੱਜੀ;ਆਰਜ਼ੀ;ਇੰਡੈਕਸ;ਨਾਂ;ਨੈੱਟਵਰਕ;ਪਛਾਣ;ਕਰੈਸ਼;ਤਾਜ਼ਾ;ਪਰਦ"
-"ੇਦਾਰੀ;"
+"ਸਕਰੀਨ;ਲਾਕ;ਜਾਂਚ;ਪੜਤਾਲ;ਪ੍ਰਾਈਵੇਟ;ਨਿੱਜੀ;ਆਰਜ਼ੀ;ਇੰਡੈਕਸ;ਨਾਂ;ਨੈੱਟਵਰਕ;ਪਛਾਣ;ਕਰੈਸ਼;ਤਾਜ਼ਾ;ਪਰਦੇਦਾਰੀ;"
 
 #: panels/display/cc-display-panel.c:1017
 #: panels/network/connection-editor/connection-editor.ui:27
@@ -1617,8 +1593,7 @@ msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
 msgstr ""
-"ਡਿਸਪਲੇਆਂ ਨੂੰ ਆਪਣੇ ਅਸਲ ਡਿਸਪਲੇਅ ਬਨਾਵਟ ਨਾਲ ਮਿਲਾਉਣ ਲਈ ਉਹਨਾਂ ਨੂੰ ਖਿਸਕਾਓ। ਡਿਸਪਲੇਅ"
-" ਦੀਆਂ ਸੈਟਿੰਗਾਂ "
+"ਡਿਸਪਲੇਆਂ ਨੂੰ ਆਪਣੇ ਅਸਲ ਡਿਸਪਲੇਅ ਬਨਾਵਟ ਨਾਲ ਮਿਲਾਉਣ ਲਈ ਉਹਨਾਂ ਨੂੰ ਖਿਸਕਾਓ। ਡਿਸਪਲੇਅ ਦੀਆਂ ਸੈਟਿੰਗਾਂ "
 "ਨੂੰ ਬਦਲਣ ਲਈ ਉਸ ਨੂੰ ਚੁਣੋ।"
 
 #: panels/display/cc-display-panel.ui:250
@@ -1716,8 +1691,7 @@ msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
 msgstr ""
-"ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ ਸਕਰੀਨ ਰੰਗਾਂ ਨੂੰ ਨਿੱਘਾ ਬਣਾਉਂਦੀ ਹੈ। ਇਸ ਅੱਖਾਂ ਉੱਤੇ ਜ਼ੋਰ ਪੈਣ ਅਤੇ ਨੀਂਦ"
-" ਟਲਣ ਤੋਂ ਰੋਕਣ ਲਈ "
+"ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ ਸਕਰੀਨ ਰੰਗਾਂ ਨੂੰ ਨਿੱਘਾ ਬਣਾਉਂਦੀ ਹੈ। ਇਸ ਅੱਖਾਂ ਉੱਤੇ ਜ਼ੋਰ ਪੈਣ ਅਤੇ ਨੀਂਦ ਟਲਣ ਤੋਂ ਰੋਕਣ ਲਈ "
 "ਮਦਦ ਕਰਦੀ ਹੈ।"
 
 #: panels/display/cc-night-light-page.ui:127
@@ -1738,6 +1712,7 @@ msgid "Times"
 msgstr "ਵੇਲੇ"
 
 #: panels/display/cc-night-light-page.ui:165
+#: panels/updates/cc-tariff-editor.ui:15
 msgid "From"
 msgstr "ਤੋਂ"
 
@@ -1759,16 +1734,19 @@ msgstr "ਮਿੰਟ"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
+#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "ਸਵੇਰ"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
+#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "ਆਥਣ"
 
 #: panels/display/cc-night-light-page.ui:267
+#: panels/updates/cc-tariff-editor.ui:109
 msgid "To"
 msgstr "ਤੱਕ"
 
@@ -1781,20 +1759,18 @@ msgid "Choose how to use connected monitors and projectors"
 msgstr "ਚੁਣੋ ਕਿ ਮਾਨੀਟਰਾਂ ਅਤੇ ਪਰੋਜੈਕਟਰ ਨਾਲ ਕਿਵੇਂ ਜੁੜਨਾ ਹੈ"
 
 #. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/display/gnome-display-panel.desktop.in.in:19
+#: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
 msgstr ""
-"ਪੈਨਲ;ਪਰੋਜੈਕਟਰ;xrandr;ਸਕਰੀਨ;ਰੈਜ਼ੋਲੂਸ਼ਨ;ਤਾਜ਼ਾ;ਮਾਨੀਟਰ;ਰਾਤ;ਰਾਤਰੀ;ਰੌਸ਼ਨੀ;ਪ੍ਰਕਾਸ਼;ਨੀਲਾ"
-";ਲਾਲ-"
-"ਪਰਿਵਰਤਨ;ਸੂਰਜ-ਚੜ੍ਹਨਾ;ਸੂਰਜ-ਲਹਿਣਾ;ਸੂਰਜ-ਡੁੱਬਣਾ;ਹਨੇਰਾ;ਰਾਤ-ਵੇਲਾ;ਚਾਨਣ;ਸਰਘੀ;ਤਰਕਾਲਾਂ;ਆਥ"
-"ਣ;"
+"ਪੈਨਲ;ਪਰੋਜੈਕਟਰ;xrandr;ਸਕਰੀਨ;ਰੈਜ਼ੋਲੂਸ਼ਨ;ਤਾਜ਼ਾ;ਮਾਨੀਟਰ;ਰਾਤ;ਰਾਤਰੀ;ਰੌਸ਼ਨੀ;ਪ੍ਰਕਾਸ਼;ਨੀਲਾ;ਲਾਲ-"
+"ਪਰਿਵਰਤਨ;ਸੂਰਜ-ਚੜ੍ਹਨਾ;ਸੂਰਜ-ਲਹਿਣਾ;ਸੂਰਜ-ਡੁੱਬਣਾ;ਹਨੇਰਾ;ਰਾਤ-ਵੇਲਾ;ਚਾਨਣ;ਸਰਘੀ;ਤਰਕਾਲਾਂ;ਆਥਣ;"
 
-#: panels/info-overview/cc-info-overview-panel.c:413
-#: panels/info-overview/cc-info-overview-panel.c:437
-#: panels/info-overview/cc-info-overview-panel.c:483
-#: panels/info-overview/cc-info-overview-panel.c:513
+#: panels/info-overview/cc-info-overview-panel.c:428
+#: panels/info-overview/cc-info-overview-panel.c:452
+#: panels/info-overview/cc-info-overview-panel.c:498
+#: panels/info-overview/cc-info-overview-panel.c:528
 #: panels/wwan/cc-wwan-details-dialog.c:101
 msgid "Unknown"
 msgstr "ਅਣਪਛਾਤਾ"
@@ -1803,32 +1779,32 @@ msgstr "ਅਣਪਛਾਤਾ"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:445
+#: panels/info-overview/cc-info-overview-panel.c:460
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ਬਿਲਡ ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:460
+#: panels/info-overview/cc-info-overview-panel.c:475
 #, c-format
 msgid "64-bit"
 msgstr "64-ਬਿੱਟ"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:463
+#: panels/info-overview/cc-info-overview-panel.c:478
 #, c-format
 msgid "32-bit"
 msgstr "32-ਬਿੱਟ"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:735
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:739
 msgid "Wayland"
 msgstr "ਵੇਲੈਂਡ"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:741
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "=ਅਣਪਛਾਤਾ"
@@ -1886,20 +1862,25 @@ msgstr "ਵਰਚੁਲਾਈਜੇਸ਼ਨ"
 msgid "Software Updates"
 msgstr "ਸਾਫਟਵੇਅਰ ਅੱਪਡੇਟ"
 
-#: panels/info-overview/cc-info-overview-panel.ui:199
+#. Translators: A link to the terms of use of Endless OS.
+#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/metrics/cc-metrics-panel.ui:69
+msgid "_Endless Terms of Use"
+msgstr ""
+
+#: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
 msgstr "ਡਿਵਾਈਸ ਦਾ ਨਾਂ ਬਦਲੋ"
 
-#: panels/info-overview/cc-info-overview-panel.ui:216
+#: panels/info-overview/cc-info-overview-panel.ui:229
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
 msgstr ""
-"ਡਿਵਾਈਸ ਨਾਂ ਨੂੰ ਇਸ ਡਿਵਾਈਸ ਦੀ ਪਛਾਣ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਜਦੋਂ ਇਸ ਨੂੰ ਨੈੱਟਵਰਕ"
-" ਉੱਤੇ ਵੇਖਦੇ ਹੋ ਜਾਂ "
+"ਡਿਵਾਈਸ ਨਾਂ ਨੂੰ ਇਸ ਡਿਵਾਈਸ ਦੀ ਪਛਾਣ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਜਦੋਂ ਇਸ ਨੂੰ ਨੈੱਟਵਰਕ ਉੱਤੇ ਵੇਖਦੇ ਹੋ ਜਾਂ "
 "ਜਦੋਂ ਬਲੂਟੁੱਥ ਡਿਵਾਈਸਾਂ ਨਾਲ ਪੇਅਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"
 
-#: panels/info-overview/cc-info-overview-panel.ui:234
+#: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(_R)"
 
@@ -1916,13 +1897,12 @@ msgstr "ਆਪਣੇ ਸਿਸਟਮ ਬਾਰੇ ਜਾਣਕਾਰੀ ਵੇ�
 #. The list MUST also end with a semicolon!
 #. "Preferred Applications" is the old name for the preference, so make
 #. sure that you use the same "translation" for those keywords
-#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
+#: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgstr ""
-"ਡਿਵਾਈਸ;ਡੀਵਾਈਸ;;ਜੰਤਰ;ਸਿਸਟਮ;ਜਾਣਕਾਰੀ;ਮੈਮੋਰੀ;ਪਰੋਸੈਸਰ;ਵਰਜ਼ਨ;ਪ੍ਰੋਸੈਸਰ;ਡਿਫਾਲਟ;ਐਪਲੀਕੇਸ"
-"਼ਨ;ਯੂਐਸਬੀ;"
+"ਡਿਵਾਈਸ;ਡੀਵਾਈਸ;;ਜੰਤਰ;ਸਿਸਟਮ;ਜਾਣਕਾਰੀ;ਮੈਮੋਰੀ;ਪਰੋਸੈਸਰ;ਵਰਜ਼ਨ;ਪ੍ਰੋਸੈਸਰ;ਡਿਫਾਲਟ;ਐਪਲੀਕੇਸ਼ਨ;ਯੂਐਸਬੀ;"
 "ਡੀਵੀਡੀ;ਸੀਡੀ;ਆਡੀਓ;ਔਡੀਓ;ਵੀਡੀਓ;ਵਿਡੀਓ;ਡਿਸਕ;ਆਟੋਰਨ;ਮੀਡੀਆ;ਹਟਾਉਣਯੋਗ;ਯੰਤਰ;ਹੋਸਟਨੇਮ;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
@@ -2154,8 +2134,7 @@ msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
 msgstr ""
-"ਬਦਲਵੀਂ ਅੱਖਰ ਸਵਿੱਚ ਨੂੰ ਹੋਰ ਅੱਖਰ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹਨਾਂ ਨੂੰ ਕਈ ਵਾਰ"
-" ਤੁਹਾਡੇ ਕੀਬੋਰਡ ਉੱਤੇ "
+"ਬਦਲਵੀਂ ਅੱਖਰ ਸਵਿੱਚ ਨੂੰ ਹੋਰ ਅੱਖਰ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹਨਾਂ ਨੂੰ ਕਈ ਵਾਰ ਤੁਹਾਡੇ ਕੀਬੋਰਡ ਉੱਤੇ "
 "ਤੀਜੀ-ਚੋਣ ਵਜੋਂ ਛਾਪਿਆ ਗਿਆ ਹੁੰਦਾ ਹੈ।"
 
 #: panels/keyboard/cc-keyboard-panel.c:71
@@ -2206,10 +2185,8 @@ msgid ""
 "followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by "
 "<b>'</b> will enter <b>á</b>."
 msgstr ""
-"ਮਿਸ਼ਰਿਤ ਸਵਿੱਚ ਕਈ ਕਿਸਮ ਦੇ ਵੱਖ-ਵੱਖ ਅੱਖਰ ਦੇਣ ਲਈ ਕੰਮ ਆਉਂਦੀ ਹੈ। ਇਹ ਵਰਤਣ ਲਈਤਦ ਲੜੀਵਾਰ"
-" ਅੱਖਰ ਦੇਣ "
-"ਲਈ ਬਣਾਓ ਨੂੰ ਦਬਾਓ। ਮਿਸਾਲ ਲਈ <b>C</b> ਅਤੇ <b>o</b> ਦੇ ਬਾਅਦ ਬਣਾਓ ਨਾਲ <b>©</b>"
-" ਪਵੇਗਾ, "
+"ਮਿਸ਼ਰਿਤ ਸਵਿੱਚ ਕਈ ਕਿਸਮ ਦੇ ਵੱਖ-ਵੱਖ ਅੱਖਰ ਦੇਣ ਲਈ ਕੰਮ ਆਉਂਦੀ ਹੈ। ਇਹ ਵਰਤਣ ਲਈਤਦ ਲੜੀਵਾਰ ਅੱਖਰ ਦੇਣ "
+"ਲਈ ਬਣਾਓ ਨੂੰ ਦਬਾਓ। ਮਿਸਾਲ ਲਈ <b>C</b> ਅਤੇ <b>o</b> ਦੇ ਬਾਅਦ ਬਣਾਓ ਨਾਲ <b>©</b> ਪਵੇਗਾ, "
 "<b>a</b> ਤੇ <b>'</b> ਦੇ ਬਾਅਦ ਬਣਾਓ ਦਬਾਉਣ ਨਾਲ <b>á</b> ਪਵੇਗਾ।"
 
 #: panels/keyboard/cc-keyboard-panel.c:95
@@ -2229,7 +2206,6 @@ msgstr "ਪਰਿੰਟ ਸਕਰੀਨ"
 
 #: panels/keyboard/cc-keyboard-panel.c:233
 #, c-format
-#| msgid "These keyboard shortcuts can be changed in the keyboard settings"
 msgid ""
 "Input sources can be switched using the %s keyboard shortcut.\n"
 "This can be changed in the keyboard shortcut settings."
@@ -2242,7 +2218,6 @@ msgid "Input Sources"
 msgstr "ਇਨਪੁੱਟ ਸਰੋਤ"
 
 #: panels/keyboard/cc-keyboard-panel.ui:59
-#| msgid "Choose keyboard layouts or input methods."
 msgid "Includes keyboard layouts and input methods."
 msgstr "ਇਸ ਵਿੱਚ ਕੀਬੋਰਡ ਲੇਆਉਟ ਅਤੇ ਇਨਪੁੱਟ ਢੰਗ ਸ਼ਾਮਲ ਹਨ।"
 
@@ -2292,8 +2267,7 @@ msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
 msgstr ""
-"ਸ਼ਾਰਟਕੱਟਾਂ ਨੂੰ ਮੁੜ-ਸੈੱਟ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਕਸਟਮ ਸ਼ਾਰਟਕੱਟਾਂ ਉੱਤੇ ਅਸਰ ਪੈ ਸਕਦਾ ਹੈ। ਇਸ"
-" ਨੂੰ ਵਾਪਸ ਨਹੀਂ "
+"ਸ਼ਾਰਟਕੱਟਾਂ ਨੂੰ ਮੁੜ-ਸੈੱਟ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਕਸਟਮ ਸ਼ਾਰਟਕੱਟਾਂ ਉੱਤੇ ਅਸਰ ਪੈ ਸਕਦਾ ਹੈ। ਇਸ ਨੂੰ ਵਾਪਸ ਨਹੀਂ "
 "ਪਰਤਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:435
@@ -2343,9 +2317,7 @@ msgstr "ਸਾਰੇ ਸ਼ਾਰਟਕੱਟਾਂ ਨੂੰ ਉਹਨਾਂ ਦ�
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:391
 #, c-format
 msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr ""
-"%s ਨੂੰ ਪਹਿਲਾਂ ਹੀ %s ਨੂੰ ਵਰਤ ਰਿਹਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲਿਆ ਤਾਂ %s ਅਸਮਰੱਥ ਹੋ"
-" ਜਾਵੇਗਾ।"
+msgstr "%s ਨੂੰ ਪਹਿਲਾਂ ਹੀ %s ਨੂੰ ਵਰਤ ਰਿਹਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲਿਆ ਤਾਂ %s ਅਸਮਰੱਥ ਹੋ ਜਾਵੇਗਾ।"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:535
 msgid "Enter the new shortcut"
@@ -2417,20 +2389,17 @@ msgid "Keyboard"
 msgstr "ਕੀ-ਬੋਰਡ"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
-#| msgid "View and change keyboard shortcuts and set your typing preferences"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
 msgstr ""
-"ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਵੇਖੋ ਤੇ ਬਦਲੋ ਅਤੇ ਆਪਣੀ ਟਾਈਪ ਕਰਨ ਲਈ ਪਸੰਦ ਦਿਓ, ਕੀਬੋਰਡ ਖਾਕੇ ਅਤੇ"
-" ਇਨਪੁੱਟ ਢੰਗ"
+"ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਵੇਖੋ ਤੇ ਬਦਲੋ ਅਤੇ ਆਪਣੀ ਟਾਈਪ ਕਰਨ ਲਈ ਪਸੰਦ ਦਿਓ, ਕੀਬੋਰਡ ਖਾਕੇ ਅਤੇ ਇਨਪੁੱਟ ਢੰਗ"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
+#: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
-"ਸ਼ਾਰਟਕੱਟ;ਵਰਕਸਪੇਸ;ਵਿੰਡੋ;ਮੁੜ-ਆਕਾਰ;ਰੀਸਾਈਜ਼;ਜ਼ੂਮ;ਕਨਟਰਾਸਟ;ਇਨਪੁਟ;ਸਰੋਤ;ਲਾਕ;ਵਾਲੀਅਮ;"
+msgstr "ਸ਼ਾਰਟਕੱਟ;ਵਰਕਸਪੇਸ;ਵਿੰਡੋ;ਮੁੜ-ਆਕਾਰ;ਰੀਸਾਈਜ਼;ਜ਼ੂਮ;ਕਨਟਰਾਸਟ;ਇਨਪੁਟ;ਸਰੋਤ;ਲਾਕ;ਵਾਲੀਅਮ;"
 
 #: panels/location/cc-location-panel.ui:31
 msgid "Location services turned off"
@@ -2441,12 +2410,13 @@ msgid "No applications can obtain location information."
 msgstr "ਕੋਈ ਵੀ ਐਪਲੀਕੇਸ਼ਨ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕਰ ਸਕਦੀ ਹੈ।"
 
 #: panels/location/cc-location-panel.ui:72
+#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
-"mobile broadband increases accuracy."
+"mobile broadband increases accuracy. System applications can always access "
+"your location."
 msgstr ""
-"ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦਾ ਪਤਾ ਲਗਾਉਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੀਆਂ ਹਨ।"
-" ਸਟੀਕਤਾ "
+"ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦਾ ਪਤਾ ਲਗਾਉਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੀਆਂ ਹਨ। ਸਟੀਕਤਾ "
 "ਵਧਾਉਣ ਲਈ Wi-Fi ਅਤੇ ਮੋਬਾਈਲ ਬਰਾਂਡਬੈਂਡ ਨੂੰ ਵਰਤੋਂ।"
 
 #: panels/location/cc-location-panel.ui:81
@@ -2469,14 +2439,12 @@ msgstr "ਟਿਕਾਣੇ ਪਹੁੰਚ ਲਈ ਕੋਈ ਐਪਲੀਕੇ�
 msgid "Protect your location information"
 msgstr "ਆਪਣੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਸੁਰੱਖਿਅਤ ਕਰੋ"
 
-#. FIXME
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
 "while you're away."
 msgstr ""
-"ਆਪਣੇ-ਆਪ ਸਕਰੀਨ ਨੂੰ ਲਾਕ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਦੂਰ ਚਲੇ ਜਾਣ ਉੱਤੇ ਹੋਰਾਂ ਵਲੋਂ ਕੰਪਿਊਟਰ ਨੂੰ"
-" ਵਰਤਣ ਤੋਂ ਰੋਕਿਆ "
+"ਆਪਣੇ-ਆਪ ਸਕਰੀਨ ਨੂੰ ਲਾਕ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਦੂਰ ਚਲੇ ਜਾਣ ਉੱਤੇ ਹੋਰਾਂ ਵਲੋਂ ਕੰਪਿਊਟਰ ਨੂੰ ਵਰਤਣ ਤੋਂ ਰੋਕਿਆ "
 "ਜਾਂਦਾ ਹੈ।"
 
 #: panels/lock/cc-lock-panel.ui:44
@@ -2511,9 +2479,7 @@ msgstr "ਨਵੇਂ _USB ਡਿਵਾਈਸਾਂ ਉੱਤੇ ਰੋਕ"
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr ""
-"ਜਦੋਂ ਸਕਰੀਨ ਲਾਕ ਹੋਵੇ ਤਾਂ ਨਵੇਂ USB ਡਿਵਾਈਸਾਂ ਨੂੰ ਸਿਸਟਮ ਨਾਲ ਤਾਲਮੇਲ ਕਰਨ ਤੋਂ ਰੋਕਦਾ"
-" ਹੈ।"
+msgstr "ਜਦੋਂ ਸਕਰੀਨ ਲਾਕ ਹੋਵੇ ਤਾਂ ਨਵੇਂ USB ਡਿਵਾਈਸਾਂ ਨੂੰ ਸਿਸਟਮ ਨਾਲ ਤਾਲਮੇਲ ਕਰਨ ਤੋਂ ਰੋਕਦਾ ਹੈ।"
 
 #. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
 #: panels/lock/cc-lock-panel.ui:166
@@ -2631,7 +2597,37 @@ msgstr "ਸਕਰੀਨ ਲਾਕ"
 msgid "Lock your screen"
 msgstr "ਆਪਣੀ ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
 
-#. FIXME
+#: panels/metrics/cc-metrics-panel.ui:32
+#, fuzzy
+msgid "Metrics services turned off"
+msgstr "ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ ਬੰਦ ਕੀਤੀਆਂ"
+
+#: panels/metrics/cc-metrics-panel.ui:41
+msgid "No anonymous usage data will be sent to Endless."
+msgstr ""
+
+#: panels/metrics/cc-metrics-panel.ui:58
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:3
+#, fuzzy
+msgid "Metrics"
+msgstr "ਮੈਟਰਿਕ"
+
+#: panels/metrics/cc-metrics-panel.ui:59
+msgid ""
+"Endless collects metrics on user behavior and actions. All data sent is "
+"anonymous. We use the data to improve the system."
+msgstr ""
+
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:4
+#, fuzzy
+msgid "Enable or disable Endless metrics collection"
+msgstr "ਰਿਮੋਟ ਲਾਗਇਨ ਸਮਰੱਥ ਜਾਂ ਅਸਮਰੱਥ"
+
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: panels/metrics/gnome-metrics-panel.desktop.in.in:14
+msgid "private;privacy;metrics;network;identity;"
+msgstr ""
+
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
 msgstr "ਮਾਈਕਰੋਫੋਨ ਬੰਦ ਹੈ"
@@ -2641,13 +2637,13 @@ msgid "No applications can record sound."
 msgstr "ਕੋਈ ਐਪਲੀਕੇਸ਼ਨ ਆਵਾਜ਼ ਰਿਕਾਰਡ ਨਹੀਂ ਕਰ ਸਕਦੀ ਹੈ।"
 
 #: panels/microphone/cc-microphone-panel.ui:75
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
-"properly."
+"properly. System applications can always use the microphone."
 msgstr ""
-"ਮਾਈਕਰੋਫੋਨ ਦੀ ਵਰਤੋਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਆਡੀਓ ਰਿਕਾਰਡ ਕਰਨ ਤੇ ਸੁਣਨ ਲਈ ਸਹਿਮਤੀ ਦਿੰਦੀ ਹੈ।"
-" ਮਾਈਕਰੋਫੋਨ ਨੂੰ "
+"ਮਾਈਕਰੋਫੋਨ ਦੀ ਵਰਤੋਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਆਡੀਓ ਰਿਕਾਰਡ ਕਰਨ ਤੇ ਸੁਣਨ ਲਈ ਸਹਿਮਤੀ ਦਿੰਦੀ ਹੈ। ਮਾਈਕਰੋਫੋਨ ਨੂੰ "
 "ਅਸਮਰੱਥ ਕਰਨ ਨਾਲ ਕੁਝ ਐਪਲੀਕੇਸ਼ਨਾਂ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਨਹੀਂ ਕਰ ਸਕਦੀਆਂ।"
 
 #: panels/microphone/cc-microphone-panel.ui:85
@@ -2662,7 +2658,6 @@ msgstr "ਮਾਈਕਰੋਫ਼ੋਨ ਪਹੁੰਚ ਲਈ ਕੋਈ ਐਪ�
 msgid "Protect your conversations"
 msgstr "ਤਹਾਡੀਆਂ ਗੱਲਾਂਬਾਤਾਂ ਸੁਰੱਖਿਅਤ ਕਰੋ"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:37
 #: panels/multitasking/cc-multitasking-panel.ui:31
 msgid "General"
@@ -2769,11 +2764,10 @@ msgstr "ਮਾਊਸ ਤੇ ਟੱਚਪੈਚ"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr ""
-"ਆਪਣੇ ਮਾਊਸ ਜਾਂ ਟੱਚਪੈਡ ਦੀ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਬਦਲੋ ਅਤੇ ਸੱਜੇ ਜਾਂ ਖੱਬੇ-ਹੱਥ ਦੀ ਚੋਣ ਕਰੋ"
+msgstr "ਆਪਣੇ ਮਾਊਸ ਜਾਂ ਟੱਚਪੈਡ ਦੀ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਬਦਲੋ ਅਤੇ ਸੱਜੇ ਜਾਂ ਖੱਬੇ-ਹੱਥ ਦੀ ਚੋਣ ਕਰੋ"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/mouse/gnome-mouse-panel.desktop.in.in:19
+#: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr "ਟਰੈਕਪੈਂਡ;ਪੁਆਇੰਟਰ;ਕਲਿੱਕ;ਟੈਪ;ਡਬਲ;ਬਟਨ;ਟਰੈਕਬਾਲ;ਸਕਰੋਲ;"
 
@@ -2851,7 +2845,7 @@ msgid "Manage preferences for productivity and multitasking"
 msgstr "ਉਤਪਾਦਨ ਤੇ ਬਹੁ-ਕੰਮਕਾਜ ਲਈ ਤਜਰੀਹਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
+#: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr "ਬਹੁ-ਕੰਮ;ਮਲਟੀ-ਟਾਸਕ;ਉਤਪਾਦਨ,ਕਸਟਮਾਈਜ਼ ਡੈਸਕਟਾਪ;"
 
@@ -2905,6 +2899,7 @@ msgstr "ਸੁਰੱਖਿਅਤ ਨੈੱਟਵਰਕ"
 
 #. TRANSLATORS: device status
 #: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
+#: panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "ਕਨੈਕਟ ਹੈ"
 
@@ -2923,8 +2918,7 @@ msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
 msgstr ""
-"ਹਾਟਸਪਾਟ ਨੂੰ ਚਾਲੂ ਕਰਨ ਨਾਲ %s ਤੋਂ ਡਿਸ-ਕਨੈਕਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ Wi-Fi ਰਾਹੀਂ"
-" ਇੰਟਰਨੈੱਟ ਨਾਲ ਪਹੁੰਚ "
+"ਹਾਟਸਪਾਟ ਨੂੰ ਚਾਲੂ ਕਰਨ ਨਾਲ %s ਤੋਂ ਡਿਸ-ਕਨੈਕਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ Wi-Fi ਰਾਹੀਂ ਇੰਟਰਨੈੱਟ ਨਾਲ ਪਹੁੰਚ "
 "ਸੰਭਵ ਨਹੀਂ ਹੋਵੇਗੀ।"
 
 #: panels/network/cc-wifi-hotspot-dialog.c:267
@@ -2946,10 +2940,8 @@ msgid ""
 "Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
 msgstr ""
-"Wi-Fi ਹਾਟਸਪਾਟ ਹੋਰਾਂ ਨੂੰ ਤੁਹਾਡੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਨੂੰ ਸਾਂਝਾ ਕਰਨ ਦਿੰਦਾ ਹੈ, ਜੋ ਕਿ"
-" Wi-Fi ਨੈੱਟਵਰਕ ਬਣਾ "
-"ਕੇ ਹੁੰਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਉਹ ਕਨੈਕਟ ਹੋ ਸਕਦੇ ਹਨ। ਇਹ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ Wi-Fi ਤੋਂ ਬਿਨਾਂ"
-" ਕਿਸੇ ਹੋਰ ਸਰੋਤ "
+"Wi-Fi ਹਾਟਸਪਾਟ ਹੋਰਾਂ ਨੂੰ ਤੁਹਾਡੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਨੂੰ ਸਾਂਝਾ ਕਰਨ ਦਿੰਦਾ ਹੈ, ਜੋ ਕਿ Wi-Fi ਨੈੱਟਵਰਕ ਬਣਾ "
+"ਕੇ ਹੁੰਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਉਹ ਕਨੈਕਟ ਹੋ ਸਕਦੇ ਹਨ। ਇਹ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ Wi-Fi ਤੋਂ ਬਿਨਾਂ ਕਿਸੇ ਹੋਰ ਸਰੋਤ "
 "ਰਾਹੀਂ ਇੰਟਰਨੈੱਟ ਨਾਲ ਕਨੈਕਟ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
@@ -3068,10 +3060,8 @@ msgid ""
 "network device this connection is activated on. This feature is known as MAC "
 "cloning or spoofing. Example: 00:11:22:33:44:55"
 msgstr ""
-"ਇੱਥੇ ਦਿੱਤਾ ਮੈਕ (MAC) ਐਡਰੈੱਸ ਨੈੱਟਵਰਕ ਡਿਵਾਈਸ ਲਈ ਹਾਰਡਵੇਅਰ ਐਡਰੈੱਸ ਵਜੋਂ ਵਰਤਿਆ"
-" ਜਾਵੇਗਾ, ਜਿਸ ਲਈ ਇਸ "
-"ਕਨੈਕਸ਼ਨ ਐਕਟੀਵੇਟ ਕੀਤਾ ਗਿਆ ਹੈ। ਇਹ ਫੀਚਰ ਨੂੰ ਮੈਕ ਕਲੋਨਿੰਗ ਜਾਂ ਸਪੂਫਿੰਗ (spoofing)"
-" ਕਹਿੰਦੇ ਹਨ। "
+"ਇੱਥੇ ਦਿੱਤਾ ਮੈਕ (MAC) ਐਡਰੈੱਸ ਨੈੱਟਵਰਕ ਡਿਵਾਈਸ ਲਈ ਹਾਰਡਵੇਅਰ ਐਡਰੈੱਸ ਵਜੋਂ ਵਰਤਿਆ ਜਾਵੇਗਾ, ਜਿਸ ਲਈ ਇਸ "
+"ਕਨੈਕਸ਼ਨ ਐਕਟੀਵੇਟ ਕੀਤਾ ਗਿਆ ਹੈ। ਇਹ ਫੀਚਰ ਨੂੰ ਮੈਕ ਕਲੋਨਿੰਗ ਜਾਂ ਸਪੂਫਿੰਗ (spoofing) ਕਹਿੰਦੇ ਹਨ। "
 "ਜਿਵੇਂ: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
@@ -3575,17 +3565,16 @@ msgid "Control how you connect to the Internet"
 msgstr "ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਇੰਟਰਨੈੱਟ ਨਾਲ ਤੁਸੀਂ ਕਿਵੇਂ ਕਨੈਕਟ ਹੋ"
 
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-network-panel.desktop.in.in:19
+#: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
-msgstr ""
-"ਨੈੱਟਵਰਕ;ਆਈਪੀ;ਬਰਾਡਬੈਂਡ;ਮਾਡਮ;ਬਲੂਟੁੱਥ;ਬਲੂਟੁੱਥ;ਵੀਪੀਐਨ;ਪਰਾਕਸੀ;ਵੈਨ;ਮੌਡਮ;ਡੀਐਨਐਸ;"
+msgstr "ਨੈੱਟਵਰਕ;ਆਈਪੀ;ਬਰਾਡਬੈਂਡ;ਮਾਡਮ;ਬਲੂਟੁੱਥ;ਬਲੂਟੁੱਥ;ਵੀਪੀਐਨ;ਪਰਾਕਸੀ;ਵੈਨ;ਮੌਡਮ;ਡੀਐਨਐਸ;"
 
 #: panels/network/gnome-wifi-panel.desktop.in.in:4
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "ਕੰਟਰੋਲ ਕਰੋ ਕਿ Wi-Fi ਨੈੱਟਵਰਕ ਨਾਲ ਤੁਸੀਂ ਕਿਵੇਂ ਕਨੈਕਟ ਕਰਨਾ ਹੈ"
 
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/network/gnome-wifi-panel.desktop.in.in:19
+#: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr "ਨੈੱਟਵਰਕ;ਬੇਤਾਰ;ਵਾਈ-ਫਾਈ;ਆਈਪੀ;ਬਰਾਡਬੈਂਡ;ਡੀਐਨਐਸ;ਹਾਟਸਪਾਟ;ਹੌਟਸਪੌਟ;"
 
@@ -3624,8 +3613,7 @@ msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
 msgstr ""
-"ਚੁਣੇ ਗਏ ਨੈੱਟਵਰਕਾਂ ਲਈ ਨੈੱਟਵਰਕ ਵੇਰਵਾ, ਜਿਸ ਵਿੱਚ ਪਾਸਵਰਡ ਅਤੇ ਹੋਰ ਪਸੰਦੀਦਾ ਸੰਰਚਨਾ"
-" ਦਿੱਤੀ ਸੀ, ਖਤਮ ਹੋ "
+"ਚੁਣੇ ਗਏ ਨੈੱਟਵਰਕਾਂ ਲਈ ਨੈੱਟਵਰਕ ਵੇਰਵਾ, ਜਿਸ ਵਿੱਚ ਪਾਸਵਰਡ ਅਤੇ ਹੋਰ ਪਸੰਦੀਦਾ ਸੰਰਚਨਾ ਦਿੱਤੀ ਸੀ, ਖਤਮ ਹੋ "
 "ਜਾਵੇਗਾ।"
 
 #: panels/network/net-device-wifi.c:855
@@ -3673,8 +3661,7 @@ msgstr "ਬੰਦ"
 #: panels/network/net-proxy.c:112
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"ਵੈੱਬ ਪਰਾਕਸੀ ਆਪੇ-ਆਪ ਖੋਜ ਵਰਤੀ ਜਾਂਦੀ ਹੈ, ਜਦੋਂ ਸੰਰਚਨਾ URL ਨਾ ਦਿੱਤਾ ਗਿਆ ਹੋਵੇ।"
+msgstr "ਵੈੱਬ ਪਰਾਕਸੀ ਆਪੇ-ਆਪ ਖੋਜ ਵਰਤੀ ਜਾਂਦੀ ਹੈ, ਜਦੋਂ ਸੰਰਚਨਾ URL ਨਾ ਦਿੱਤਾ ਗਿਆ ਹੋਵੇ।"
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -4129,7 +4116,7 @@ msgstr "ਗੁੰਮ EAP-LEAP ਪਾਸਵਰਡ"
 #: panels/network/wireless-security/eap-method-simple.ui:17
 #: panels/network/wireless-security/ws-leap.ui:18
 #: panels/user-accounts/cc-add-user-dialog.ui:146
-#: panels/user-accounts/cc-add-user-dialog.ui:527
+#: panels/user-accounts/cc-add-user-dialog.ui:545
 msgid "_Username"
 msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ(_U)"
 
@@ -4139,8 +4126,8 @@ msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ(_U)"
 #: panels/network/wireless-security/ws-sae.ui:14
 #: panels/network/wireless-security/ws-wpa-psk.ui:14
 #: panels/sharing/cc-sharing-panel.ui:202
-#: panels/user-accounts/cc-add-user-dialog.ui:310
-#: panels/user-accounts/cc-add-user-dialog.ui:547
+#: panels/user-accounts/cc-add-user-dialog.ui:328
+#: panels/user-accounts/cc-add-user-dialog.ui:565
 #: panels/user-accounts/cc-user-panel.ui:365
 msgid "_Password"
 msgstr "ਪਾਸਵਰਡ(_P)"
@@ -4242,8 +4229,7 @@ msgid ""
 "\n"
 "(You can password-protect your private key with openssl)"
 msgstr ""
-"ਚੁਣੀ ਗਈ ਪ੍ਰਾਈਵੇਟ ਕੁੰਜੀ ਪਾਸਵਰਡ ਨਾਲ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਜਾਪਦੀ ਹੈ। ਇਹ ਤੁਹਾਡੀ ਸੁਰੱਖਿਅਤ"
-" ਸਨਦ ਨੂੰ ਖਤਰਾ "
+"ਚੁਣੀ ਗਈ ਪ੍ਰਾਈਵੇਟ ਕੁੰਜੀ ਪਾਸਵਰਡ ਨਾਲ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਜਾਪਦੀ ਹੈ। ਇਹ ਤੁਹਾਡੀ ਸੁਰੱਖਿਅਤ ਸਨਦ ਨੂੰ ਖਤਰਾ "
 "ਪੈਦਾ ਕਰ ਸਕਦੀ ਹੈ। ਪਾਸਵਰਡ ਨਾਲ ਸੁਰੱਖਿਅਤ ਪ੍ਰਾਈਵੇਟ ਕੁੰਜੀ ਚੁਣੋ ਜੀ।\n"
 "\n"
 "(ਤੁਸੀਂ openssl ਨਾਲ ਪ੍ਰਾਈਵੇਟ ਕੁੰਜੀ ਪਾਸਵਰਡ ਸੁਰੱਖਿਅਤ ਕਰ ਸਕਦੇ ਹੋ)"
@@ -4298,7 +4284,7 @@ msgid "CHAP"
 msgstr "CHAP"
 
 #: panels/network/wireless-security/eap-method-ttls.ui:76
-#: panels/user-accounts/cc-add-user-dialog.ui:507
+#: panels/user-accounts/cc-add-user-dialog.ui:525
 #: panels/user-accounts/data/join-dialog.ui:116
 msgid "_Domain"
 msgstr "ਡੋਮੇਨ(_D)"
@@ -4376,8 +4362,7 @@ msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
 msgstr ""
-"ਅਵੈਧ wep-key: ਗ਼ਲਤ %zu ਕੁੰਜੀ ਲੰਬਾਈ। ਕੁੰਜੀ ਦੀ ਲੰਬਾਈ ਜਾਂ ਤਾਂ 5/13 (ascii) ਜਾਂ"
-" 10/26 "
+"ਅਵੈਧ wep-key: ਗ਼ਲਤ %zu ਕੁੰਜੀ ਲੰਬਾਈ। ਕੁੰਜੀ ਦੀ ਲੰਬਾਈ ਜਾਂ ਤਾਂ 5/13 (ascii) ਜਾਂ 10/26 "
 "(ਹੈਕਸਾ) ਹੋ ਸਕਦੇ ਹਨ"
 
 #: panels/network/wireless-security/ws-wep-key.c:144
@@ -4418,8 +4403,7 @@ msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
 msgstr ""
-"ਅਵੈਧ wpa-psk: ਕੁੰਜੀ-ਲੰਬਾਈ %zu ਅਵੈਧ ਹੈ। ਜਾਂ ਤਾਂ [8,63] ਬਾਈਟ ਜਾਂ 64 ਹੈਕਸਾ-ਅੰਕ"
-" ਹੋਣੀ ਚਾਹੀਦੀ "
+"ਅਵੈਧ wpa-psk: ਕੁੰਜੀ-ਲੰਬਾਈ %zu ਅਵੈਧ ਹੈ। ਜਾਂ ਤਾਂ [8,63] ਬਾਈਟ ਜਾਂ 64 ਹੈਕਸਾ-ਅੰਕ ਹੋਣੀ ਚਾਹੀਦੀ "
 "ਹੈ।"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:86
@@ -4448,8 +4432,7 @@ msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
 msgstr ""
-"ਜਦੋਂ ਪੋਪਅੱਪ ਅਸਮਰੱਥ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਤਾਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੂਚੀ ਵਿੱਚ ਨੋਟੀਫਿਕੇਸ਼ਨ ਦਿਖਾਈ"
-" ਦੇਣਾ ਜਾਰੀ ਰੱਖਣਗੇ।"
+"ਜਦੋਂ ਪੋਪਅੱਪ ਅਸਮਰੱਥ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਤਾਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੂਚੀ ਵਿੱਚ ਨੋਟੀਫਿਕੇਸ਼ਨ ਦਿਖਾਈ ਦੇਣਾ ਜਾਰੀ ਰੱਖਣਗੇ।"
 
 #. Popups here refers to message tray notifications in the middle of the screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
@@ -4490,7 +4473,7 @@ msgid "Control which notifications are displayed and what they show"
 msgstr "ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਕਿਹੜੀਆਂ ਸੂਚਨਾਵਾਂ ਵੇਖਾਉਣੀਆਂ ਅਤੇ ਉਹ ਕੀ ਕੁਝ ਵੇਖਾਉਣ"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/notifications/gnome-notifications-panel.desktop.in.in:20
+#: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "ਸੂਚਨਾ;ਬੈਨਰ;ਸੁਨੇਹਾ;ਟਰੇ;ਪੋਪਅੱਪ;Notifications;Banner;Message;Tray;Popup;"
 
@@ -4524,20 +4507,18 @@ msgstr "ਆਨਲਾਈਨ ਖਾਤੇ"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
-msgstr ""
-"ਆਪਣੇ ਆਨਲਾਈਨ ਖਾਤਿਆਂ ਨਾਲ ਕਨੈਕਟ ਹੋਵੋ ਅਤੇ ਫੈਸਲਾ ਕਰੋ ਕਿ ਉਹਨਾਂ ਨੂੰ ਕਿਸ ਲਈ ਵਰਤਣਾ ਹੈ"
+msgstr "ਆਪਣੇ ਆਨਲਾਈਨ ਖਾਤਿਆਂ ਨਾਲ ਕਨੈਕਟ ਹੋਵੋ ਅਤੇ ਫੈਸਲਾ ਕਰੋ ਕਿ ਉਹਨਾਂ ਨੂੰ ਕਿਸ ਲਈ ਵਰਤਣਾ ਹੈ"
 
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
-#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:22
+#: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 msgstr ""
-"ਗੂਗਲ;ਫੇਸਬੁੱਕ;ਟਵਿੱਟਰ;ਯਾਹੂ;ਵੈੱਬ;ਆਨਲਾਈਨ;ਗੱਲਬਾਤ;ਚੈਟ;ਕੈਲੰਡਰ;ਮੇਲ;ਸੰਪਰਕ;Google;Facebo"
-"ok;Twitter;"
+"ਗੂਗਲ;ਫੇਸਬੁੱਕ;ਟਵਿੱਟਰ;ਯਾਹੂ;ਵੈੱਬ;ਆਨਲਾਈਨ;ਗੱਲਬਾਤ;ਚੈਟ;ਕੈਲੰਡਰ;ਮੇਲ;ਸੰਪਰਕ;Google;Facebook;Twitter;"
 "Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;"
 "Packet;ReaditLater;"
 
@@ -4747,16 +4728,14 @@ msgstr "ਆਟੋਮੈਟਿਕ ਸਸਪੈਂਡ ਕਰੋ"
 #: panels/power/cc-power-panel.c:1171
 msgid ""
 "Performance mode temporarily disabled due to high operating temperature."
-msgstr ""
-"ਵੱਧ ਕਾਰਜਕਾਰੀ ਤਾਪਮਾਨ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਨੂੰ ਆਰਜ਼ੀ ਤੌਰ ਉੱਤੇ ਅਸਮਰੱਥ ਕੀਤਾ ਹੈ।"
+msgstr "ਵੱਧ ਕਾਰਜਕਾਰੀ ਤਾਪਮਾਨ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਨੂੰ ਆਰਜ਼ੀ ਤੌਰ ਉੱਤੇ ਅਸਮਰੱਥ ਕੀਤਾ ਹੈ।"
 
 #: panels/power/cc-power-panel.c:1173
 msgid ""
 "Lap detected: performance mode temporarily unavailable. Move the device to a "
 "stable surface to restore."
 msgstr ""
-"ਲੈਪ ਖੋਜਿਆ: ਕਾਰਜਗੁਜ਼ਾਰੀ ਢੰਗ ਆਰਜ਼ੀ ਤੌਰ ਉੱਤੇ ਅਸਮਰੱਥ ਹੈ। ਬਹਾਲ ਕਰਨ ਲਈ ਡਿਵਾਈਸ ਨੂੰ"
-" ਸਥਿਰ ਤਲ ਉੱਤੇ ਰੱਖੋ।"
+"ਲੈਪ ਖੋਜਿਆ: ਕਾਰਜਗੁਜ਼ਾਰੀ ਢੰਗ ਆਰਜ਼ੀ ਤੌਰ ਉੱਤੇ ਅਸਮਰੱਥ ਹੈ। ਬਹਾਲ ਕਰਨ ਲਈ ਡਿਵਾਈਸ ਨੂੰ ਸਥਿਰ ਤਲ ਉੱਤੇ ਰੱਖੋ।"
 
 #: panels/power/cc-power-panel.c:1175
 msgid "Performance mode temporarily disabled."
@@ -4767,8 +4746,8 @@ msgid ""
 "Low battery: power saver enabled. Previous mode will be restored when "
 "battery is sufficiently charged."
 msgstr ""
-"ਘੱਟ ਬੈਟਰੀ: ਪਾਵਰ ਬੱਚਤ ਸਮਰੱਥ ਹੈ। ਜਦੋਂ ਬੈਟਰੀ ਠੀਕ-ਠਾਕ ਚਾਰਜ ਹੋ ਗਈ ਤਾਂ ਪਿਛਲੇ ਮੋਡ"
-" ਨੂੰ ਬਹਾਲ ਕੀਤਾ ਜਾਵੇਗਾ।"
+"ਘੱਟ ਬੈਟਰੀ: ਪਾਵਰ ਬੱਚਤ ਸਮਰੱਥ ਹੈ। ਜਦੋਂ ਬੈਟਰੀ ਠੀਕ-ਠਾਕ ਚਾਰਜ ਹੋ ਗਈ ਤਾਂ ਪਿਛਲੇ ਮੋਡ ਨੂੰ ਬਹਾਲ ਕੀਤਾ "
+"ਜਾਵੇਗਾ।"
 
 #. translators: "%s" is an application name
 #: panels/power/cc-power-panel.c:1226
@@ -4859,7 +4838,6 @@ msgid "Automatic Screen Brightness"
 msgstr "ਆਟੋਮੈਟਿਕ ਸਕਰੀਨ ਚਮਕ"
 
 #: panels/power/cc-power-panel.ui:147
-#| msgid "Screen brightness and lock settings"
 msgid "Screen brightness adjusts to the surrounding light."
 msgstr "ਆਲੇ-ਦੁਆਲੇ ਦੀ ਰੋਸ਼ਨੀ ਮੁਤਾਬਕ ਸਕਰੀਨ ਦੀ ਚਮਕ ਢਾਲੋ।"
 
@@ -4892,7 +4870,6 @@ msgid "_Automatic Suspend"
 msgstr "ਆਪਣੇ-ਆਪ ਸਸਪੈਂਡ ਕਰੋ(_A)"
 
 #: panels/power/cc-power-panel.ui:199
-#| msgid "Put the computer to sleep when inactive:"
 msgid "Pauses the computer after a period of inactivity."
 msgstr "ਕੁਝ ਦੇਰ ਤੱਕ ਨਾ-ਸਰਗਰਮੀ ਦੇ ਬਾਅਦ ਕੰਪਿਊਟਰ ਨੂੰ ਵਿਰਾਮ ਕਰੋ।"
 
@@ -4974,13 +4951,12 @@ msgid "View your battery status and change power saving settings"
 msgstr "ਆਪਣੀ ਬੈਟਰੀ ਦੀ ਸਥਿਤੀ ਵੇਖੋ ਅਤੇ ਊਰਜਾ ਬੱਚਤ ਸੈਟਿੰਗਾਂ ਬਦਲੋ"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/power/gnome-power-panel.desktop.in.in:19
+#: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
 msgstr ""
-"ਸਕਰੀਨ;ਚਮਕ;ਵੇਹਲਾ;ਪਾਵਰ;ਸਲੀਪ;ਸਸਪੈਂਡ;ਹਾਈਬਰਨੇਟ;ਬੈਟਰੀ;ਵੇਹਲ;ਡਿਮ;ਖਾਲੀ;ਮਾਨੀਟਰ;ਡੀਪੀਐਮਐਸ;"
-"ਮੁਅੱਤਲ;"
+"ਸਕਰੀਨ;ਚਮਕ;ਵੇਹਲਾ;ਪਾਵਰ;ਸਲੀਪ;ਸਸਪੈਂਡ;ਹਾਈਬਰਨੇਟ;ਬੈਟਰੀ;ਵੇਹਲ;ਡਿਮ;ਖਾਲੀ;ਮਾਨੀਟਰ;ਡੀਪੀਐਮਐਸ;ਮੁਅੱਤਲ;"
 "ਊਰਜਾ;"
 
 #: panels/printers/authentication-dialog.ui:11
@@ -5030,11 +5006,10 @@ msgstr "ਪਰਿੰਟਰ"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr ""
-"ਪਰਿੰਟਰ ਜੋੜੋ, ਪਰਿੰਟਰ ਜਾਬ ਵੇਖੋ ਅਤੇ ਤਹਿ ਕਰੋ ਤੁਸੀਂ ਕਿਵੇਂ ਪਰਿੰਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੈ"
+msgstr "ਪਰਿੰਟਰ ਜੋੜੋ, ਪਰਿੰਟਰ ਜਾਬ ਵੇਖੋ ਅਤੇ ਤਹਿ ਕਰੋ ਤੁਸੀਂ ਕਿਵੇਂ ਪਰਿੰਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੈ"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/printers/gnome-printers-panel.desktop.in.in:16
+#: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Printer;Queue;Print;Paper;Ink;Toner;"
 
@@ -5065,8 +5040,7 @@ msgstr "ਨੈਟਵਰਕ ਐਡਰੈਸ ਦਿਓ ਜਾਂ ਪਰਿੰਟ�
 
 #: panels/printers/new-printer-dialog.ui:356
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"ਪਰਿੰਟਰ ਸਰਵਰ ਉੱਤੇ ਪਰਿੰਟਰਾਂ ਨੂੰ ਵੇਖਣ ਲਈ ਆਪਣਾ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਦਿਉ।"
+msgstr "ਪਰਿੰਟਰ ਸਰਵਰ ਉੱਤੇ ਪਰਿੰਟਰਾਂ ਨੂੰ ਵੇਖਣ ਲਈ ਆਪਣਾ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਦਿਉ।"
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:74
@@ -5660,9 +5634,7 @@ msgstr "ਫਾਰਮੈਟ"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"ਅੰਕਾਂ, ਤਾਰੀਖਾਂ ਤੇ ਕਰੰਸੀਆਂ ਲਈ ਫਾਰਮੈਟ ਚੁਣੋ। ਤਬਦੀਲੀਆਂ ਅਗਲੇ ਲਾਗਇਨ ਉੱਤੇ ਲਾਗੂ"
-" ਹੁੰਦੀਆਂ ਹਨ।"
+msgstr "ਅੰਕਾਂ, ਤਾਰੀਖਾਂ ਤੇ ਕਰੰਸੀਆਂ ਲਈ ਫਾਰਮੈਟ ਚੁਣੋ। ਤਬਦੀਲੀਆਂ ਅਗਲੇ ਲਾਗਇਨ ਉੱਤੇ ਲਾਗੂ ਹੁੰਦੀਆਂ ਹਨ।"
 
 #: panels/region/cc-format-chooser.ui:117
 msgid "Search locales..."
@@ -5757,9 +5729,7 @@ msgstr "ਫਾਰਮੈਟ(_F)"
 
 #: panels/region/cc-region-panel.ui:275
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"ਲਾਗਇਨ ਸੈਟਿੰਗਾਂ ਨੂੰ ਸਭ ਵਰਤੋਂਕਾਰਾਂ ਵਲੋਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਜਦੋਂ ਸਿਸਟਮ ਵਿੱਚ ਲਾਗਇਨ"
-" ਕਰਦੇ ਹਨ"
+msgstr "ਲਾਗਇਨ ਸੈਟਿੰਗਾਂ ਨੂੰ ਸਭ ਵਰਤੋਂਕਾਰਾਂ ਵਲੋਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਜਦੋਂ ਸਿਸਟਮ ਵਿੱਚ ਲਾਗਇਨ ਕਰਦੇ ਹਨ"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
 msgid "Region & Language"
@@ -5770,7 +5740,7 @@ msgid "Select your display language and formats"
 msgstr "ਆਪਣੀ ਦਿਖਾਉਣ ਵਾਲੀ ਭਾਸ਼ਾ ਤੇ ਫਾਰਮੈਟ ਚੁਣੋ"
 
 #. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/region/gnome-region-panel.desktop.in.in:19
+#: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "ਭਾਸ਼ਾ;ਲੇਆਉਟ;ਕੀਬੋਰਡ;ਇੰਪੁੱਟ;ਖਾਕਾ;ਬੋਲੀ;"
 
@@ -5912,13 +5882,12 @@ msgid "Configure Removable Media settings"
 msgstr "ਹਟਾਉਣਯੋਗ ਮੀਡੀਏ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਦੀ ਸੰਰਚਨਾ"
 
 #. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:19
+#: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
 msgstr ""
-"ਡਿਵਾਈਸ;ਡੀਵਾਈਸ;ਯੰਤਰ;ਜੰਤਰ;ਡਿਫਾਲਟ;ਮੂਲ;ਐਪਲੀਕੇਸ਼ਨ;ਤਰਜੀਹੀ;ਪਸੰਦ;ਸੀਡੀ;ਡੀਵੀਡੀ;ਆਡੀਓ;ਯੂਐਸ"
-"ਬੀ;"
+"ਡਿਵਾਈਸ;ਡੀਵਾਈਸ;ਯੰਤਰ;ਜੰਤਰ;ਡਿਫਾਲਟ;ਮੂਲ;ਐਪਲੀਕੇਸ਼ਨ;ਤਰਜੀਹੀ;ਪਸੰਦ;ਸੀਡੀ;ਡੀਵੀਡੀ;ਆਡੀਓ;ਯੂਐਸਬੀ;"
 "ਵੀਡੀਓ;ਹਟਾਉਣਯੋਗ;ਵਿਡੀਓ;ਮੀਡੀਆ;ਆਟੋ-ਰਨ;"
 
 #: panels/search/cc-search-locations-dialog.c:636
@@ -5940,9 +5909,7 @@ msgstr "ਟਿਕਾਣਾ ਖੋਜ"
 msgid ""
 "Folders which are searched by system applications, such as Files, Photos and "
 "Videos."
-msgstr ""
-"ਫੋਲਡਰ, ਜਿਹਨਾਂ ਨੂੰ ਸਿਸਟਮ ਐਪਲੀਕੇਸ਼ਨਾਂ, ਜਿਵੇਂ ਫਾਇਲਾਂ, ਫੋਟੋ ਅਤੇ ਵਿਡੀਓ ਵਲੋਂ ਖੋਜਿਆ"
-" ਜਾਂਦਾ ਹੈ।"
+msgstr "ਫੋਲਡਰ, ਜਿਹਨਾਂ ਨੂੰ ਸਿਸਟਮ ਐਪਲੀਕੇਸ਼ਨਾਂ, ਜਿਵੇਂ ਫਾਇਲਾਂ, ਫੋਟੋ ਅਤੇ ਵਿਡੀਓ ਵਲੋਂ ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ।"
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -5973,8 +5940,7 @@ msgid ""
 "Control which search results are shown in the Activities Overview. The order "
 "of search results can also be changed by moving rows in the list."
 msgstr ""
-"ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਕਿਹੜੇ ਖੋਜ ਨਤੀਜਿਆ ਨੂੰ ਸਰਗਰਮੀ ਸਾਰ ਵਿੱਚ ਵਿਖਾਇਆ ਜਾਂਦਾ ਹੈ। ਖੋਜ"
-" ਨਤੀਜਿਆਂ ਦੀ ਲੜੀ ਨੂੰ "
+"ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਕਿਹੜੇ ਖੋਜ ਨਤੀਜਿਆ ਨੂੰ ਸਰਗਰਮੀ ਸਾਰ ਵਿੱਚ ਵਿਖਾਇਆ ਜਾਂਦਾ ਹੈ। ਖੋਜ ਨਤੀਜਿਆਂ ਦੀ ਲੜੀ ਨੂੰ "
 "ਸੂਚੀ ਵਿੱਚ ਕਤਾਰਾਂ ਰਾਹੀਂ ਹਿਲਾ ਕੇ ਵੀ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
@@ -5983,11 +5949,10 @@ msgid ""
 msgstr "ਕੰਟਰੋਲ ਕਰੋ ਕਿਹੜੀਆਂ ਐਪਲੀਕੇਸ਼ਨ ਸਰਗਰਮੀ ਝਲਕ ਵਿੱਚ ਖੋਜ ਨਤੀਜਿਆਂ ਵਿੱਚ ਦਿਸਣ"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/search/gnome-search-panel.desktop.in.in:19
+#: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr ""
-"ਖੋਜ;ਲੱਭੋ;ਲੱਭਣਾ;ਇੰਡੈਕਸ;ਤਤਕਰਾ;ਪਰਾਈਵੇਸੀ;ਨਤੀਜੇ;Search;Find;Index;Hide;Privacy;Resu"
-"lts;"
+"ਖੋਜ;ਲੱਭੋ;ਲੱਭਣਾ;ਇੰਡੈਕਸ;ਤਤਕਰਾ;ਪਰਾਈਵੇਸੀ;ਨਤੀਜੇ;Search;Find;Index;Hide;Privacy;Results;"
 
 #. Label
 #: panels/sharing/cc-sharing-networks.c:306
@@ -6029,8 +5994,7 @@ msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
 msgstr ""
-"ਫਾਇਲ ਸਾਂਝ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਪਬਲਿਕ ਫੋਲਡਰ ਨੂੰ ਹੋਰਾਂ ਨਾਲ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਨੈੱਟਵਰਕ ਉੱਤੇ"
-" ਦੀ ਵਰਤੋਂ ਨਾਲ ਸਾਂਝਾ "
+"ਫਾਇਲ ਸਾਂਝ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਪਬਲਿਕ ਫੋਲਡਰ ਨੂੰ ਹੋਰਾਂ ਨਾਲ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਨੈੱਟਵਰਕ ਉੱਤੇ ਦੀ ਵਰਤੋਂ ਨਾਲ ਸਾਂਝਾ "
 "ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ: %s"
 
 #. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
@@ -6041,8 +6005,7 @@ msgid ""
 "Shell command:\n"
 "%s"
 msgstr ""
-"ਜਦੋਂ ਰਿਮੋਟ ਲਾਗਇਨ ਸਮਰੱਥ ਹੁੰਦਾ ਹੈ ਤਾਂ ਰਿਮੋਟ ਵਰਤੋਂਕਾਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਸ਼ੈੱਲ ਕਮਾਂਡ"
-" ਰਾਹੀਂ ਕਨੈਕਟ ਹੋ ਸਕਦਾ "
+"ਜਦੋਂ ਰਿਮੋਟ ਲਾਗਇਨ ਸਮਰੱਥ ਹੁੰਦਾ ਹੈ ਤਾਂ ਰਿਮੋਟ ਵਰਤੋਂਕਾਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਸ਼ੈੱਲ ਕਮਾਂਡ ਰਾਹੀਂ ਕਨੈਕਟ ਹੋ ਸਕਦਾ "
 "ਹੈ:\n"
 "%s"
 
@@ -6053,8 +6016,7 @@ msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
 msgstr ""
-"ਸਕਰੀਨ ਸਾਂਝਾ ਕਰਨ ਨਾਲ ਰਿਮੋਟ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਆਪਣੀ ਸਕਰੀਨ ਵੇਖਣ ਜਾਂ ਕੰਟਰੋਲ ਦਿੱਤਾ"
-" ਜਾਂਦਾ ਹੈ, %s ਨਾਲ "
+"ਸਕਰੀਨ ਸਾਂਝਾ ਕਰਨ ਨਾਲ ਰਿਮੋਟ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਆਪਣੀ ਸਕਰੀਨ ਵੇਖਣ ਜਾਂ ਕੰਟਰੋਲ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ, %s ਨਾਲ "
 "ਕਨੈਕਟ ਕਰਕੇ"
 
 #: panels/sharing/cc-sharing-panel.c:813
@@ -6151,13 +6113,12 @@ msgid "Control what you want to share with others"
 msgstr "ਕੰਟਰੋਲ ਕਰੋ ਕਿ ਤੁਸੀਂ ਹੋਰਾਂ ਨਾਲ ਕੀ ਸਾਂਝਾ ਕਰਦੇ ਹੋ"
 
 #. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sharing/gnome-sharing-panel.desktop.in.in:16
+#: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
 msgstr ""
-"ਸਾਂਝਾ;ਸਾਂਝਾ ਕਰੋ;ਨਾਂ;ਨਾਮ;ਡੈਸਕਟਾਪ;ਮੀਡੀਆ;ਆਡੀਓ;ਵੀਡੀਓ;ਹੋਸਟ;ssh;ਰਿਮੋਟ;ਤਸਵੀਰ;ਫੋਟੋ;ਮੂਵ"
-"ੀ;ਸਰਵਰ;"
+"ਸਾਂਝਾ;ਸਾਂਝਾ ਕਰੋ;ਨਾਂ;ਨਾਮ;ਡੈਸਕਟਾਪ;ਮੀਡੀਆ;ਆਡੀਓ;ਵੀਡੀਓ;ਹੋਸਟ;ssh;ਰਿਮੋਟ;ਤਸਵੀਰ;ਫੋਟੋ;ਮੂਵੀ;ਸਰਵਰ;"
 "ਰੈਂਡਰ;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
@@ -6271,12 +6232,10 @@ msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "ਸਾਊਂਡ ਲੈਵਲ, ਇੰਪੁੱਟ, ਆਉਟਪੁੱਟ ਅਤੇ ਚੇਤਾਵਨੀ ਸਾਊਂਡ ਬਦਲੋ"
 
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/sound/gnome-sound-panel.desktop.in.in:20
+#: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"ਕਾਰਡ;ਮਾਈਕਰੋਫੋਨ;ਵਾਲੀਅਮ;ਫੇਡ;ਬੈਲਨਸ;ਬਲਿਊਟੁੱਲ;ਹੈੱਡਸੈੱਟ;ਆਡੀਓ;ਆਉਟਪੁੱਟ;ਇੰਪੁੱਟ;ਇਨਪੁੱਟ;ਬ"
-"ਲੁਟੁੱਥ;"
+msgstr "ਕਾਰਡ;ਮਾਈਕਰੋਫੋਨ;ਵਾਲੀਅਮ;ਫੇਡ;ਬੈਲਨਸ;ਬਲਿਊਟੁੱਲ;ਹੈੱਡਸੈੱਟ;ਆਡੀਓ;ਆਉਟਪੁੱਟ;ਇੰਪੁੱਟ;ਇਨਪੁੱਟ;ਬਲੁਟੁੱਥ;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6389,8 +6348,7 @@ msgstr "ਪਰਮਾਣਿਤ ਹੈ"
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
 msgstr ""
-"ਥੰਡਰਬੋਲਟ ਸਬ-ਸਿਸਟਮ (boldtd) ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ ਜਾਂ ਠੀਕ ਤਰ੍ਹਾਂ ਸੈਟ ਅੱਪ"
-" ਨਹੀਂ ਕੀਤਾ ਹੈ।"
+"ਥੰਡਰਬੋਲਟ ਸਬ-ਸਿਸਟਮ (boldtd) ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ ਜਾਂ ਠੀਕ ਤਰ੍ਹਾਂ ਸੈਟ ਅੱਪ ਨਹੀਂ ਕੀਤਾ ਹੈ।"
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
@@ -6399,8 +6357,7 @@ msgid ""
 "BIOS or is set to an unsupported security level in the BIOS."
 msgstr ""
 "ਥੰਡਰਬੋਲਟ ਖੋਜਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।\n"
-"ਜਾਂ ਤਾਂ ਸਿਸਟਮ ਥੰਡਰਬੋਲਢ ਲਈ ਸਹਾਇਕ ਨਹੀ ਹੈ, ਇਹ BIOS ਵਿੱਚੋਂ ਅਸਮਰੱਥ ਕੀਤਾ ਹੋ ਸਕਦਾ ਹੈ"
-" ਜਾਂ BIOS "
+"ਜਾਂ ਤਾਂ ਸਿਸਟਮ ਥੰਡਰਬੋਲਢ ਲਈ ਸਹਾਇਕ ਨਹੀ ਹੈ, ਇਹ BIOS ਵਿੱਚੋਂ ਅਸਮਰੱਥ ਕੀਤਾ ਹੋ ਸਕਦਾ ਹੈ ਜਾਂ BIOS "
 "ਵਿੱਚ ਗ਼ੈਰ-ਸਹਾਇਕ ਸੁਰੱਖਿਆ ਪੱਧਰ ਲਈ ਸੈੱਟ ਕੀਤਾ ਹੋ ਸਕਦਾ ਹੈ।"
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
@@ -6449,7 +6406,7 @@ msgid "Manage Thunderbolt devices"
 msgstr "ਥੰਡਰਬੋਲਟ ਡਿਵਾਈਸਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ"
 
 #. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:19
+#: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "ਥੰਡਰਬੋਲਟ;ਪਰਦੇਦਾਰੀ;"
 
@@ -6990,17 +6947,15 @@ msgid "Make it easier to see, hear, type, point and click"
 msgstr "ਵੇਖਣਾ, ਸੁਣਨਾ, ਲਿਖਣਾ, ਪੁਆਇੰਟ ਤੇ ਕਲਿੱਕ ਕਰਨਾ ਸੌਖਾ ਬਣਾਉ"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
 "Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
 "audio;typing;"
 msgstr ""
-"ਕੀਬੋਰਡ;,ਮਾਊਸ;ਫੋਂਟ;ਟੈਕਸਟ;ਆਕਾਰ;ਕਰਸਰ;ਆਵਾਜ਼;ਸਾਊਂਡ;ਬਾਊਂਸ;ਕੀ-ਬੋਰਡ;ਸਵਿੱਚਾਂ,ਕੀ;ਅਸੈਸਬਲਿਟ"
-"ੀ;ਜ਼ੂਮ;ਡਬਲ "
-"ਕਲਿੱਕ;ਦੋਹਰਾ ਕਲਿੱਕ;ਦੇਰੀ;ਸਹਾਇਕ;ਰੀਡਰ;ਐਕਟਿਵਐਕਸ;ਹੌਲੀ;ਕਨਟਰਾਸਟ;ਦੁਹਰਾਉਣਾ;ਝਪਕਣਾ;ਦੁਹਰਾ;ਵ"
-"ੱਡੇ;ਵੱਡਾ;"
+"ਕੀਬੋਰਡ;,ਮਾਊਸ;ਫੋਂਟ;ਟੈਕਸਟ;ਆਕਾਰ;ਕਰਸਰ;ਆਵਾਜ਼;ਸਾਊਂਡ;ਬਾਊਂਸ;ਕੀ-ਬੋਰਡ;ਸਵਿੱਚਾਂ,ਕੀ;ਅਸੈਸਬਲਿਟੀ;ਜ਼ੂਮ;ਡਬਲ "
+"ਕਲਿੱਕ;ਦੋਹਰਾ ਕਲਿੱਕ;ਦੇਰੀ;ਸਹਾਇਕ;ਰੀਡਰ;ਐਕਟਿਵਐਕਸ;ਹੌਲੀ;ਕਨਟਰਾਸਟ;ਦੁਹਰਾਉਣਾ;ਝਪਕਣਾ;ਦੁਹਰਾ;ਵੱਡੇ;ਵੱਡਾ;"
 "ਉੱਚ;ਹੋਰ ਵੱਡਾ;ਸਪੀਡ;ਗਤੀ;ਦਿੱਖ;ਸੁਣਨਾ;ਆਡੀਓ;ਲਿਖਣਾ;ਟਾਈਪ ਕਰਨਾ;ਟਾਈਪਿੰਗ;ਵਿਆਪਕ ਪਹੁੰਚ;"
 
 #: panels/usage/cc-usage-panel.c:154
@@ -7037,10 +6992,8 @@ msgid ""
 "shared between applications, and makes it easier to find files that you "
 "might want to use."
 msgstr ""
-"ਫਾਇਲ ਅਤੀਤ ਫਾਇਲਾਂ ਦੇ ਰਿਕਾਰਡ ਰੱਖਦਾ ਹੈ, ਜੋ ਤੁਸੀਂ ਵਰਤੇ ਚੁੱਕੇ ਹੋ। ਇਹ ਜਾਣਕਾਰੀ ਨੂੰ"
-" ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿਚਾਲੇ "
-"ਸਾਂਝਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਹਾਡੇ ਲਈ ਫਾਇਲਾਂ ਲੱਭਣੀਆਂ ਸੌਖੀਆਂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ,"
-" ਜਦੋਂ ਵਰਤੀਆਂ ਹੋਣ।"
+"ਫਾਇਲ ਅਤੀਤ ਫਾਇਲਾਂ ਦੇ ਰਿਕਾਰਡ ਰੱਖਦਾ ਹੈ, ਜੋ ਤੁਸੀਂ ਵਰਤੇ ਚੁੱਕੇ ਹੋ। ਇਹ ਜਾਣਕਾਰੀ ਨੂੰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿਚਾਲੇ "
+"ਸਾਂਝਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਹਾਡੇ ਲਈ ਫਾਇਲਾਂ ਲੱਭਣੀਆਂ ਸੌਖੀਆਂ ਹੋ ਜਾਂਦੀਆਂ ਹਨ, ਜਦੋਂ ਵਰਤੀਆਂ ਹੋਣ।"
 
 #: panels/usage/cc-usage-panel.ui:56
 msgid "File H_istory"
@@ -7063,8 +7016,7 @@ msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
 msgstr ""
-"ਰੱਦੀ ਅਤੇ ਆਰਜ਼ੀ ਫਾਇਲਾਂ ਕਈ ਵਾਰ ਨਿੱਜੀ ਅਤੇ ਸੰਵੇਦਨਸ਼ੀਲ ਜਾਣਕਾਰੀ ਰੱਖ ਸਕਦੀਆਂ ਹਨ। ਉਹਨਾਂ"
-" ਨੂੰ ਆਪਣੇ-ਆਪ "
+"ਰੱਦੀ ਅਤੇ ਆਰਜ਼ੀ ਫਾਇਲਾਂ ਕਈ ਵਾਰ ਨਿੱਜੀ ਅਤੇ ਸੰਵੇਦਨਸ਼ੀਲ ਜਾਣਕਾਰੀ ਰੱਖ ਸਕਦੀਆਂ ਹਨ। ਉਹਨਾਂ ਨੂੰ ਆਪਣੇ-ਆਪ "
 "ਹਟਾਉਣ ਨਾਲ ਪਰਦੇਦਾਰੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਮਦਦ ਮਿਲ ਸਕਦੀ ਹੈ।"
 
 #: panels/usage/cc-usage-panel.ui:159
@@ -7179,35 +7131,86 @@ msgstr "ਫਾਇਲ ਅਤੀਤ ਤੇ ਰੱਦੀ"
 msgid "Don't leave traces"
 msgstr "ਨਿਸ਼ਾਨ ਨਾ ਛੱਡੋ"
 
-#. FIXME
+#: panels/updates/cc-updates-panel.c:525
+#, fuzzy
+msgid "Limited data plan connection"
+msgstr "ਨਵਾਂ ਕੁਨੈਕਸ਼ਨ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: panels/updates/cc-updates-panel.c:527
+#, fuzzy
+msgid "Unlimited data plan connection"
+msgstr "ਕਨੈਕਸ਼ਨ ਐਡੀਟਰ ਖੋਲ੍ਹਣ ਲਈ ਅਸਮਰੱਥ"
+
+#: panels/updates/cc-updates-panel.c:576
+#, fuzzy
+msgid "No active connection"
+msgstr "ਡਾਟਾ ਕਨੈਕਸ਼ਨ"
+
+#. "Change Network Settings" label
+#: panels/updates/cc-updates-panel.c:799
+#, fuzzy
+msgid "Change Network Settings…"
+msgstr "ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਬਦਲੋ"
+
+#: panels/updates/cc-updates-panel.ui:60
+#: panels/updates/gnome-updates-panel.desktop.in.in:3
+#, fuzzy
+msgid "Automatic Updates"
+msgstr "ਆਟੋਮੈਟਿਕ ਰੂਟ"
+
+#: panels/updates/cc-updates-panel.ui:61
+msgid "Create a daily window for updates to happen automatically."
+msgstr ""
+
+#: panels/updates/cc-updates-panel.ui:83
+#, fuzzy
+msgid "Scheduled Updates"
+msgstr "ਸੈਡਿਊਲ"
+
+#: panels/updates/cc-updates-panel.ui:84
+msgid ""
+"Allow background updates to happen automatically on this connection. These "
+"are usually upgraded apps, new content or updates to Endless OS."
+msgstr ""
+
+#: panels/updates/gnome-updates-panel.desktop.in.in:4
+#, fuzzy
+msgid "Schedule automatic updates"
+msgstr "ਆਟੋਮੈਟਿਕ ਰੂਟ"
+
+#. Translators: those are keywords for the automatic updates control-center panel
+#: panels/updates/gnome-updates-panel.desktop.in.in:17
+msgid "Updates;Automatic;Background;Metered;"
+msgstr ""
+
 #: panels/user-accounts/cc-add-user-dialog.c:34
 msgid "Should match the web address of your login provider."
 msgstr "ਤੁਹਾਡੇ ਲਾਗਇਨ ਪਰੋਵਾਇਡਰ ਦੇ ਵੈੱਬ ਐਡਰੈਸ ਨਾਲ ਮਿਲਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
 
-#: panels/user-accounts/cc-add-user-dialog.c:204
+#: panels/user-accounts/cc-add-user-dialog.c:207
 msgid "Failed to add account"
 msgstr "ਅਕਾਊਂਟ ਜੋੜਨ ਲਈ ਫੇਲ੍ਹ ਹੈ"
 
-#: panels/user-accounts/cc-add-user-dialog.c:661
-#: panels/user-accounts/cc-password-dialog.c:261
+#: panels/user-accounts/cc-add-user-dialog.c:677
+#: panels/user-accounts/cc-password-dialog.c:322
 msgid "The passwords do not match."
 msgstr "ਪਾਸਵਰਡ ਮਿਲਦਾ ਨਹੀਂ ਹੈ।"
 
-#: panels/user-accounts/cc-add-user-dialog.c:875
-#: panels/user-accounts/cc-add-user-dialog.c:914
-#: panels/user-accounts/cc-add-user-dialog.c:932
+#: panels/user-accounts/cc-add-user-dialog.c:913
+#: panels/user-accounts/cc-add-user-dialog.c:952
+#: panels/user-accounts/cc-add-user-dialog.c:970
 msgid "Failed to register account"
 msgstr "ਅਕਾਊਂਟ ਰਜਿਸਟਰ ਕਰਨ ਲਈ ਫੇਲ੍ਹ"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1047
+#: panels/user-accounts/cc-add-user-dialog.c:1085
 msgid "No supported way to authenticate with this domain"
 msgstr "ਇਹ ਡੋਮੇਨ ਨਾਲ ਪਰਮਾਣਕਿਤਾ ਦਾ ਕੋਈ ਸਹਾਇਕ ਢੰਗ ਨਹੀਂ ਹੈ"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1111
+#: panels/user-accounts/cc-add-user-dialog.c:1149
 msgid "Failed to join domain"
 msgstr "ਡੋਮੇਨ ਜੁਆਇੰਨ ਕਰਨ ਲਈ ਫੇਲ੍ਹ"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1166
+#: panels/user-accounts/cc-add-user-dialog.c:1204
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
@@ -7215,7 +7218,7 @@ msgstr ""
 "ਉਹ ਲਾਗਇਨ ਨਾਂ ਕੰਮ ਨਹੀਂ ਕਰਦਾ।\n"
 "ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ।"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1173
+#: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
@@ -7223,11 +7226,11 @@ msgstr ""
 "ਇਹ ਲਾਗਇਨ ਪਾਸਵਰਡ ਕੰਮ ਨਹੀਂ ਕਰਦਾ ਹੈ।\n"
 "ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1181
+#: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
 msgstr "ਡੋਮੇਨ ਵਿੱਚ ਲਾਗਇਨ ਲਈ ਫੇਲ੍ਹ ਹੈ"
 
-#: panels/user-accounts/cc-add-user-dialog.c:1236
+#: panels/user-accounts/cc-add-user-dialog.c:1274
 msgid "Unable to find the domain. Maybe you misspelled it?"
 msgstr "ਡੋਮੇਨ ਲੱਭਣ ਲਈ ਅਸਮਰੱਥ, ਸ਼ਾਇਦ ਤੁਸੀਂ ਇਹ ਗਲਤ ਲਿਖੀ ਹੋਵੇ?"
 
@@ -7253,37 +7256,43 @@ msgid "Account _Type"
 msgstr "ਅਕਾਊਂਟ ਕਿਸਮ(_T)"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:269
+#: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
 msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰਨ ਦਿਉ, ਜਦੋਂ ਕਿ ਉਹ ਅਗਲੀ ਵਾਰ ਲਾਗਇਨ ਕਰੇ(_l)"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:283
+#: panels/user-accounts/cc-add-user-dialog.ui:284
+#: panels/user-accounts/cc-password-dialog.ui:266
+msgid "Do not re_quire a password when logging in"
+msgstr ""
+
+#: panels/user-accounts/cc-add-user-dialog.ui:301
+#: panels/user-accounts/cc-password-dialog.ui:282
 msgid "Set a password _now"
 msgstr "ਹੁਣੇ ਪਾਸਵਰਡ ਦਿਓ(_n)"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:405
+#: panels/user-accounts/cc-add-user-dialog.ui:423
 msgid "_Confirm"
 msgstr "ਤਸਦੀਕ ਕਰੋ(_C)"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:485
-#: panels/user-accounts/cc-add-user-dialog.ui:692
+#: panels/user-accounts/cc-add-user-dialog.ui:503
+#: panels/user-accounts/cc-add-user-dialog.ui:710
 msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
 msgstr ""
-"ਇੰਟਰਪਰਾਈਜ਼ ਲਾਗਇਨ ਮੌਜੂਦਾ ਕੇਂਦਰੀਕ੍ਰਿਤ ਵਰਤੋਂਕਾਰ ਅਕਾਊਂਟ ਨੂੰ ਇਹ ਜੰਤਰ ਉੱਤੇ ਵਰਤਣ ਲਈ"
-" ਸਹਾਇਕ ਹੈ। ਤੁਸੀਂ "
+"ਇੰਟਰਪਰਾਈਜ਼ ਲਾਗਇਨ ਮੌਜੂਦਾ ਕੇਂਦਰੀਕ੍ਰਿਤ ਵਰਤੋਂਕਾਰ ਅਕਾਊਂਟ ਨੂੰ ਇਹ ਜੰਤਰ ਉੱਤੇ ਵਰਤਣ ਲਈ ਸਹਾਇਕ ਹੈ। ਤੁਸੀਂ "
 "ਇਸ ਅਕਾਊਂਟ ਨੂੰ ਇੰਟਰਨੈੱਟ ਉੱਤੇ ਕੰਪਨੀ ਦੇ ਸਰੋਤਾਂ ਤੱਕ ਪਹੁੰਚ ਲਈ ਵੀ ਵਰਤ ਸਕਦੇ ਹੋ।"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:732
+#: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
 msgstr "ਤੁਸੀਂ ਆਫਲਾਈਨ ਹੋ"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:751
+#: panels/user-accounts/cc-add-user-dialog.ui:769
 msgid "You must be online in order to add enterprise users."
 msgstr "ਇੰਟਰਪਰਾਈਜ਼ਨ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਜੋੜਨ ਲਈ ਤੁਹਾਨੂੰ ਆਨਲਾਈਨ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
 
-#: panels/user-accounts/cc-add-user-dialog.ui:782
+#: panels/user-accounts/cc-add-user-dialog.ui:800
 msgid "_Enterprise Login"
 msgstr "ਇੰਟਰਪਰਾਈਜ਼ ਲਾਗਇਨ(_E)"
 
@@ -7320,8 +7329,7 @@ msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr ""
-"ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਰਜਿਸਟਰ ਕੀਤੇ ਫਿੰਗਰਪਰਿੰਟ ਹਟਾਉਣੇ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਕਿ ਫਿੰਗਰਪਰਿੰਟ"
-" ਲਾਗਇਨ ਨੂੰ ਆਯੋਗ ਕੀਤਾ "
+"ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਰਜਿਸਟਰ ਕੀਤੇ ਫਿੰਗਰਪਰਿੰਟ ਹਟਾਉਣੇ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਕਿ ਫਿੰਗਰਪਰਿੰਟ ਲਾਗਇਨ ਨੂੰ ਆਯੋਗ ਕੀਤਾ "
 "ਜਾ ਸਕੇ?"
 
 #. Translators: This is the empty state page label which states that there are no devices ready.
@@ -7350,8 +7358,7 @@ msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
 msgstr ""
-"ਫਿੰਗਰਪਰਿੰਟ ਲਾਗਇਨ ਤੁਹਾਨੂੰ ਆਪਣੇ ਕੰਪਿਊਟਰ ਨੂੰ ਅਣ-ਲਾਕ ਕਰਨ ਤੇ ਲਾਗਇਨ ਕਰਨ ਲਈ ਤੁਹਾਡੀ"
-" ਉਂਗਲ ਵਰਤਣ ਲਈ "
+"ਫਿੰਗਰਪਰਿੰਟ ਲਾਗਇਨ ਤੁਹਾਨੂੰ ਆਪਣੇ ਕੰਪਿਊਟਰ ਨੂੰ ਅਣ-ਲਾਕ ਕਰਨ ਤੇ ਲਾਗਇਨ ਕਰਨ ਲਈ ਤੁਹਾਡੀ ਉਂਗਲ ਵਰਤਣ ਲਈ "
 "ਸਹਾਇਕ ਹੈ"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
@@ -7488,8 +7495,7 @@ msgstr "ਦਾਖਲਾ ਰੋਕਣ ਲਈ ਫੇਲ੍ਹ: %s"
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr ""
-"ਆਪਣੇ ਫਿੰਗਰਪਰਿੰਟ ਨੂੰ ਦਾਖਲ ਕਰਨ ਲਈ ਰੀਡਰ ਉੱਤੇ ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਲਗਾਤਾਰ ਚੱਕੋ ਅਤੇ ਰੱਖੋ"
+msgstr "ਆਪਣੇ ਫਿੰਗਰਪਰਿੰਟ ਨੂੰ ਦਾਖਲ ਕਰਨ ਲਈ ਰੀਡਰ ਉੱਤੇ ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਲਗਾਤਾਰ ਚੱਕੋ ਅਤੇ ਰੱਖੋ"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:1118
@@ -7581,15 +7587,15 @@ msgstr "ਸ਼ੈਸ਼ਨ ਸ਼ੁਰੂ ਹੋਇਆ"
 msgid "%s — Account Activity"
 msgstr "%s — ਖਾਤਾ ਸਰਗਰਮੀ"
 
-#: panels/user-accounts/cc-password-dialog.c:125
+#: panels/user-accounts/cc-password-dialog.c:148
 msgid "Please choose another password."
 msgstr "ਵੱਖਰਾ ਪਾਸਵਰਡ ਚੁਣੋ ਜੀ।"
 
-#: panels/user-accounts/cc-password-dialog.c:134
+#: panels/user-accounts/cc-password-dialog.c:157
 msgid "Please type your current password again."
 msgstr "ਆਪਣਾ ਮੌਜੂਦਾ ਪਾਸਵਰਡ ਫੇਰ ਲਿਖੋ ਜੀ।"
 
-#: panels/user-accounts/cc-password-dialog.c:140
+#: panels/user-accounts/cc-password-dialog.c:163
 msgid "Password could not be changed"
 msgstr "ਪਾਸਵਰਡ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।"
 
@@ -7612,14 +7618,6 @@ msgstr "ਨਵਾਂ ਪਾਸਵਰਡ(_N)"
 #: panels/user-accounts/cc-password-dialog.ui:216
 msgid "Current _Password"
 msgstr "ਮੌਜੂਦਾ ਪਾਸਵਰਡ(_P)"
-
-#: panels/user-accounts/cc-password-dialog.ui:254
-msgid "Allow user to change their password on next login"
-msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਅਗਲੇ ਲਾਗਇਨ ਉੱਤੇ ਆਪਣਾ ਪਾਸਵਰਡ ਬਦਲਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ"
-
-#: panels/user-accounts/cc-password-dialog.ui:267
-msgid "Set a password now"
-msgstr "ਹੁਣੇ ਪਾਸਵਰਡ ਦਿਓ"
 
 #: panels/user-accounts/cc-realm-manager.c:303
 msgid "Cannot automatically join this type of domain"
@@ -7672,8 +7670,7 @@ msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
 msgstr ""
-"ਜਦੋਂ ਵਰਤੋਂਕਾਰ ਲਾਗਇਨ ਹੋਵੇ ਤਾਂ ਉਸ ਨੂੰ ਹਟਾਉਣ ਨਾਲ ਸਿਸਟਮ ਖਰਾਬ ਹੋਣ ਦੀ ਹਾਲਤ 'ਚ ਆ"
-" ਸਕਦਾ ਹੈ।"
+"ਜਦੋਂ ਵਰਤੋਂਕਾਰ ਲਾਗਇਨ ਹੋਵੇ ਤਾਂ ਉਸ ਨੂੰ ਹਟਾਉਣ ਨਾਲ ਸਿਸਟਮ ਖਰਾਬ ਹੋਣ ਦੀ ਹਾਲਤ 'ਚ ਆ ਸਕਦਾ ਹੈ।"
 
 #: panels/user-accounts/cc-user-panel.c:629
 #, c-format
@@ -7685,8 +7682,7 @@ msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr ""
-"ਘਰ ਡਾਇਰੈਕਟਰੀ, ਮੇਲ ਸਪੂਲ ਅਤੇ ਆਰਜ਼ੀ ਫਾਇਲਾਂ ਨੂੰ ਰੱਖਣਾ ਸੰਭਵ ਹੈ, ਜਦੋਂ ਵਰਤੋਂਕਾਰ ਖਾਤਾ"
-" ਹਟਾਉਣਾ ਹੋਵੇ।"
+"ਘਰ ਡਾਇਰੈਕਟਰੀ, ਮੇਲ ਸਪੂਲ ਅਤੇ ਆਰਜ਼ੀ ਫਾਇਲਾਂ ਨੂੰ ਰੱਖਣਾ ਸੰਭਵ ਹੈ, ਜਦੋਂ ਵਰਤੋਂਕਾਰ ਖਾਤਾ ਹਟਾਉਣਾ ਹੋਵੇ।"
 
 #: panels/user-accounts/cc-user-panel.c:636
 msgid "_Delete Files"
@@ -7802,8 +7798,7 @@ msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
 msgstr ""
-"ਪਰਸ਼ਾਸ਼ਕ ਹੋਰ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਜੋੜ ਜਾਂ ਹਟਾ ਸਕਦੇ ਹਨ, ਅਤੇ ਸਾਰੇ ਵਰਤੋਂਕਾਰਾਂ ਲਈ"
-" ਸੈਟਿੰਗਾਂ ਬਦਲ ਸਕਦੇ ਹਨ।"
+"ਪਰਸ਼ਾਸ਼ਕ ਹੋਰ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਜੋੜ ਜਾਂ ਹਟਾ ਸਕਦੇ ਹਨ, ਅਤੇ ਸਾਰੇ ਵਰਤੋਂਕਾਰਾਂ ਲਈ ਸੈਟਿੰਗਾਂ ਬਦਲ ਸਕਦੇ ਹਨ।"
 
 #: panels/user-accounts/cc-user-panel.ui:284
 msgid "_Parental Controls"
@@ -7851,13 +7846,13 @@ msgid "Add or remove users and change your password"
 msgstr "ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਜੋੜੋ ਜਾਂ ਹਟਾਓ ਅਤੇ ਆਪਣਾ ਪਾਸਵਰਡ ਬਦਲੋ"
 
 #. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:20
+#: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
 msgstr ""
-"ਲਾਗਇਨ;ਲੌਗਇਨ;ਨਾਂ;ਨਾਮ;ਫਿੰਗਰ-ਪਰਿੰਟ;ਉਂਗਲ-ਨਿਸ਼ਾਨ;ਅਵਾਤਰ,ਲੋਗੋ,ਮੂੰਹ;ਪਾਸਵਰਡ;ਚਿਹਰਾ;ਮਾਪਿਆਂ"
-" ਕੋਲ ਕੰਟਰੋਲ;ਸਕਰੀਨ ਸਮਾਂ;ਐਪ ਪਾਬੰਦੀਆਂ;ਵੈਬ ਪਾਬੰਦੀਆਂ;ਵਰਤੋ;ਹੱਦ;ਸੀਮ,ਬੱਚੇ;ਜਵਾਕ;ਨਿਆਣੇ;"
+"ਲਾਗਇਨ;ਲੌਗਇਨ;ਨਾਂ;ਨਾਮ;ਫਿੰਗਰ-ਪਰਿੰਟ;ਉਂਗਲ-ਨਿਸ਼ਾਨ;ਅਵਾਤਰ,ਲੋਗੋ,ਮੂੰਹ;ਪਾਸਵਰਡ;ਚਿਹਰਾ;ਮਾਪਿਆਂ ਕੋਲ ਕੰਟਰੋਲ;"
+"ਸਕਰੀਨ ਸਮਾਂ;ਐਪ ਪਾਬੰਦੀਆਂ;ਵੈਬ ਪਾਬੰਦੀਆਂ;ਵਰਤੋ;ਹੱਦ;ਸੀਮ,ਬੱਚੇ;ਜਵਾਕ;ਨਿਆਣੇ;"
 
 #. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
@@ -7970,8 +7965,7 @@ msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
 msgstr ""
-"ਇੱਕੋ ਕਿਸਮ ਦੇ ਅੱਖਰ ਮੁੜ-ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ: ਤੁਸੀਂ ਅੱਖਰਾਂ, ਅੰਕਾਂ ਅਤੇ ਵਿਰਾਮ"
-" ਚਿੰਨ੍ਹਾਂ ਨੂੰ ਮਿਲ ਸਕਦੇ ਹੋ।"
+"ਇੱਕੋ ਕਿਸਮ ਦੇ ਅੱਖਰ ਮੁੜ-ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ: ਤੁਸੀਂ ਅੱਖਰਾਂ, ਅੰਕਾਂ ਅਤੇ ਵਿਰਾਮ ਚਿੰਨ੍ਹਾਂ ਨੂੰ ਮਿਲ ਸਕਦੇ ਹੋ।"
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7984,8 +7978,7 @@ msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
 msgstr ""
-"ਪਾਸਵਰਡ ਹੋਰ ਲੰਮਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। ਅੱਖਰ, ਅੰਕ ਅਤੇ ਵਿਰਾਮ-ਚਿੰਨ੍ਹ ਨੂੰ ਮਿਲਾ ਕੇ ਵਰਤ ਕੇ"
-" ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+"ਪਾਸਵਰਡ ਹੋਰ ਲੰਮਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। ਅੱਖਰ, ਅੰਕ ਅਤੇ ਵਿਰਾਮ-ਚਿੰਨ੍ਹ ਨੂੰ ਮਿਲਾ ਕੇ ਵਰਤ ਕੇ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -8053,8 +8046,7 @@ msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
 msgstr ""
-"ਵਰਤੋਂਕਾਰ ਨਾਂ ਵਿੱਚ ਅਕਸਰ ਕੇਵਲ ਅੰਗਰੇਜ਼ੀ ਦੇ ਛੋਟੇ ਅੱਖਰ (a-z), ਅੰਕ, ਅਤੇ ਅੱਗੇ ਦਿੱਤੇ"
-" ਅੱਖਰ ਹੋ ਸਕਦੇ ਹਨ: - __"
+"ਵਰਤੋਂਕਾਰ ਨਾਂ ਵਿੱਚ ਅਕਸਰ ਕੇਵਲ ਅੰਗਰੇਜ਼ੀ ਦੇ ਛੋਟੇ ਅੱਖਰ (a-z), ਅੰਕ, ਅਤੇ ਅੱਗੇ ਦਿੱਤੇ ਅੱਖਰ ਹੋ ਸਕਦੇ ਹਨ: - __"
 
 #: panels/user-accounts/user-utils.c:436
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -8086,8 +8078,7 @@ msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
 msgstr ""
-"ਸ਼ਾਰਟਕੱਟ ਸੋਧਣ ਲਈ, ”ਕੀ-ਸਟੋਰਕ ਭੇਜੋ” ਕਾਰਵਾਈ ਚੁਣੋ, ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਬਟਨ ਦੱਬੋ ਅਤੇ"
-" ਨਵੀਆਂ ਸਵਿੱਚਾਂ ਲਈ "
+"ਸ਼ਾਰਟਕੱਟ ਸੋਧਣ ਲਈ, ”ਕੀ-ਸਟੋਰਕ ਭੇਜੋ” ਕਾਰਵਾਈ ਚੁਣੋ, ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਬਟਨ ਦੱਬੋ ਅਤੇ ਨਵੀਆਂ ਸਵਿੱਚਾਂ ਲਈ "
 "ਹੋਲਡ ਕਰਕੇ ਰੱਖੋ ਜਾਂ ਬੈਕਸਪੇਸ ਸਾਫ਼ ਕਰਨ ਲਈ ਵਰਤੋਂ।"
 
 #: panels/wacom/calibrator/calibrator.ui:61
@@ -8095,8 +8086,7 @@ msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
 msgstr ""
-"ਟਾਰਗੇਟ ਮਾਰਕਰ ਲਈ ਟੈਪ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਹ ਸਕਰੀਨ ਉੱਤੇ ਟੇਬਲੇਟ ਨੂੰ ਕੈਲੀਬਰੇਟ ਕਰਨ ਲਈ"
-" ਵੇਖਾਈ ਦਿੰਦਾ ਹੈ।"
+"ਟਾਰਗੇਟ ਮਾਰਕਰ ਲਈ ਟੈਪ ਕਰੋ ਜਿਵੇਂ ਕਿ ਉਹ ਸਕਰੀਨ ਉੱਤੇ ਟੇਬਲੇਟ ਨੂੰ ਕੈਲੀਬਰੇਟ ਕਰਨ ਲਈ ਵੇਖਾਈ ਦਿੰਦਾ ਹੈ।"
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
@@ -8168,7 +8158,7 @@ msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr "ਗਰਾਫਿਕਸ ਟੇਬਲਟ ਲਈ ਬਟਨ ਮਿਲਾਨ ਕਰੋ ਅਤੇ ਸਟਾਇਲਸ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਅਡਜੱਸਟ ਕਰੋ"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wacom/gnome-wacom-panel.desktop.in.in:19
+#: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;ਟੇਬਲੇਟ;"
 
@@ -8591,7 +8581,6 @@ msgid "SIM PIN2 required"
 msgstr "SIM ਪਿੰਨ2 ਚਾਹੀਦਾ ਹੈ"
 
 #: panels/wwan/cc-wwan-errors-private.h:56
-#| msgid "SIM Pin required"
 msgid "SIM PUK2 required"
 msgstr "SIM PUK2 ਚਾਹੀਦਾ ਹੈ"
 
@@ -8608,7 +8597,6 @@ msgid "Network timeout"
 msgstr "ਨੈੱਟਵਰਕ ਸਮਾਂ-ਸਮਾਪਤ"
 
 #: panels/wwan/cc-wwan-errors-private.h:75
-#| msgid "AutoIP service failed"
 msgid "GPRS services not allowed"
 msgstr "GPRS ਸੇਵਾਵਾਂ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ"
 
@@ -8617,7 +8605,6 @@ msgid "Roaming not allowed in this location area"
 msgstr "ਇਸ ਟਿਕਾਣੇ ਉੱਤੇ ਰੋਮਿੰਗ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ"
 
 #: panels/wwan/cc-wwan-errors-private.h:82
-#| msgid "Unspecified"
 msgid "Unspecified GPRS error"
 msgstr "ਅਣਦੱਸੀ GPRS ਗ਼ਲਤੀ"
 
@@ -8626,7 +8613,6 @@ msgid "Action Cancelled"
 msgstr "ਕਾਰਵਾਈ ਰੱਦ ਕੀਤੀ"
 
 #: panels/wwan/cc-wwan-errors-private.h:94
-#| msgid "Access LXD service"
 msgid "Access denied"
 msgstr "ਪਹੁੰਚ ਲਈ ਪਾਬੰਦੀ ਹੈ"
 
@@ -8667,17 +8653,14 @@ msgid "SIM %d"
 msgstr "ਸਿਮ %d"
 
 #: panels/wwan/cc-wwan-panel.ui:101
-#| msgid "No Wi-Fi Adapter Found"
 msgid "No WWAN Adapter Found"
 msgstr "ਕੋਈ WWAN ਅਡੈਪਟਰ ਨਹੀਂ ਲੱਭਿਆ"
 
 #: panels/wwan/cc-wwan-panel.ui:112
-#| msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgid "Make sure you have a Wireless Wan/Cellular device"
 msgstr "ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਹਾਡੇ ਕੋਲ ਬੇਤਾਰ ਵੈਨ/ਸੈਲੂਲਰ ਡਿਵਾਈਸ ਹੈ"
 
 #: panels/wwan/cc-wwan-panel.ui:154
-#| msgid "Bluetooth is disabled when airplane mode is on."
 msgid "Wireless Wan is disabled when airplane mode is on"
 msgstr "ਜਦੋਂ ਏਅਰਪਲਾਨ ਢੰਗ ਚਾਲੂ ਹੁੰਦਾ ਹੈ ਤਾਂ ਬੇਤਾਰ ਵੈਨ ਅਸਮਰੱਥ ਹੁੰਦਾ ਹੈ"
 
@@ -8690,7 +8673,6 @@ msgid "Data Connection"
 msgstr "ਡਾਟਾ ਕਨੈਕਸ਼ਨ"
 
 #: panels/wwan/cc-wwan-panel.ui:224
-#| msgid "SIM Card not inserted"
 msgid "SIM card used for internet"
 msgstr "ਸਿਮ ਕਾਰਡ ਇੰਟਰਨੈੱਟ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ"
 
@@ -8723,13 +8705,11 @@ msgid "Mobile Network"
 msgstr "ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ"
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:4
-#| msgid "Configure Removable Media settings"
 msgid "Configure Telephony and mobile data connections"
 msgstr "ਟੈਲੀਫ਼ੋਨੀ ਤੇ ਮੋਬਾਈਲ ਡਾਟਾ ਕਨੈਕਸ਼ਨਾਂ ਦੀ ਸੰਰਚਨਾ ਕਰੋ"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: panels/wwan/gnome-wwan-panel.desktop.in.in:17
+#: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr "ਸੈਲੂਲਰ;ਵੈਨ;ਵੈੱਨ;ਟੈਲੀਫ਼ੋਨੀ;ਸਿਮ;ਮੋਬਾਈਲ;ਮੋਬਾਇਲ;"
 
@@ -8773,11 +8753,11 @@ msgstr "ਵੇਖਾਉਣ ਲਈ ਪੈਨਲ"
 msgid "[PANEL] [ARGUMENT…]"
 msgstr "[PANEL] [ARGUMENT…]"
 
-#: shell/cc-panel-list.ui:45 shell/cc-window.c:275
+#: shell/cc-panel-list.ui:45 shell/cc-window.c:290
 msgid "Privacy"
 msgstr "ਪਰਦੇਦਾਰੀ"
 
-#: shell/cc-panel-loader.c:299
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "ਉਪਲੱਬਧ ਪੈਨਲ:"
 
@@ -8799,8 +8779,7 @@ msgid ""
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
 msgstr ""
-"ਸੈਟਿੰਗਾਂ ਦਾ ਇਹ ਵਰਜ਼ਨ ਡਿਵੈਲਪਮੈਂਟ ਮਕਸਦ ਲਈ ਹੀ ਵਰਤਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਤੁਹਾਨੂੰ ਕੁਝ"
-" ਗਲਤ ਸਿਸਟਮ "
+"ਸੈਟਿੰਗਾਂ ਦਾ ਇਹ ਵਰਜ਼ਨ ਡਿਵੈਲਪਮੈਂਟ ਮਕਸਦ ਲਈ ਹੀ ਵਰਤਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਤੁਹਾਨੂੰ ਕੁਝ ਗਲਤ ਸਿਸਟਮ "
 "ਰਵੱਈਏ, ਡਾਟਾ ਗੁਆਚਣ ਅਤੇ ਹੋਰ ਅਚਨਚੇਤ ਮਸਲਿਆਂ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ।"
 
 #: shell/cc-window.ui:330
@@ -8851,8 +8830,7 @@ msgid ""
 "The identifier for the last Settings panel to be opened. Unrecognised values "
 "will be ignored and the first panel in the list selected."
 msgstr ""
-"ਆਖਰੀ ਸੈਟਿੰਗਾਂ ਪੈਨਲ ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ ਪਛਾਣਕਰਤਾ ਹੈ। ਬੇਪਛਾਣ ਮੁੱਲਾਂ ਨੂੰ ਅਣਡਿੱਠਾ ਕੀਤਾ"
-" ਜਾਵੇਗਾ ਅਤੇ ਸੂਚੀ "
+"ਆਖਰੀ ਸੈਟਿੰਗਾਂ ਪੈਨਲ ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ ਪਛਾਣਕਰਤਾ ਹੈ। ਬੇਪਛਾਣ ਮੁੱਲਾਂ ਨੂੰ ਅਣਡਿੱਠਾ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਸੂਚੀ "
 "ਵਿੱਚੋਂ ਪਹਿਲਾਂ ਪੈਨਲ ਚੁਣਿਆ ਜਾਂਦਾ ਹੈ।"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
@@ -8862,8 +8840,7 @@ msgstr "ਜਦੋਂ ਸੈਟਿੰਗਾਂ ਦੀ ਡਿਵੈਲਪਮੈਂ
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr ""
-"ਕੀ ਸੈਟਿੰਗਾਂ ਨੂੰ ਚੇਤਾਵਨੀ ਦਿਖਾਉਣੀ ਚਾਹੀਦੀ ਹੈ, ਜਦੋਂ ਡਿਵੈਲਪਮੈਂਟ ਬਿਲਡ ਚੱਲਦਾ ਹੋਵੇ।"
+msgstr "ਕੀ ਸੈਟਿੰਗਾਂ ਨੂੰ ਚੇਤਾਵਨੀ ਦਿਖਾਉਣੀ ਚਾਹੀਦੀ ਹੈ, ਜਦੋਂ ਡਿਵੈਲਪਮੈਂਟ ਬਿਲਡ ਚੱਲਦਾ ਹੋਵੇ।"
 
 #. translators:
 #. * The number of sound outputs on a particular device
@@ -8886,6 +8863,15 @@ msgstr[1] "%u ਇੰਪੁੱਟ"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "ਸਿਸਟਮ ਆਵਾਜ਼ਾਂ"
+
+#~ msgid "Open in Software"
+#~ msgstr "ਸਾਫਟਵੇਅਰ ਵਿੱਚ ਖੋਲ੍ਹੋ"
+
+#~ msgid "Allow user to change their password on next login"
+#~ msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਅਗਲੇ ਲਾਗਇਨ ਉੱਤੇ ਆਪਣਾ ਪਾਸਵਰਡ ਬਦਲਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ"
+
+#~ msgid "Set a password now"
+#~ msgstr "ਹੁਣੇ ਪਾਸਵਰਡ ਦਿਓ"
 
 #~| msgid "Keyboard Shortcuts"
 #~ msgid "Keyboard Shortcut"
@@ -9036,10 +9022,6 @@ msgstr "ਸਿਸਟਮ ਆਵਾਜ਼ਾਂ"
 #~| msgid "Network settings"
 #~ msgid "Read access to network settings"
 #~ msgstr "ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਲਈ ਪੜ੍ਹਨ ਪਹੁੰਚ"
-
-#~| msgid "Change keyboard settings"
-#~ msgid "Change network settings"
-#~ msgstr "ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਬਦਲੋ"
 
 #~| msgid "Network settings"
 #~ msgid "Read network settings"
@@ -13930,9 +13912,6 @@ msgstr "ਸਿਸਟਮ ਆਵਾਜ਼ਾਂ"
 
 #~ msgid "If you delete an item, it is permanently lost."
 #~ msgstr "ਜੇ ਤੁਸੀਂ ਇੱਕ ਆਈਟਮ ਹਟਾਈ ਤਾਂ ਇਹ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਖਤਮ ਹੋ ਜਾਵੇਗੀ।"
-
-#~ msgid "Open in File Manager"
-#~ msgstr "ਫਾਈਲ ਮੈਨੇਜਰ 'ਚ ਖੋਲ੍ਹੋ"
 
 #~ msgid "?"
 #~ msgstr "?"
