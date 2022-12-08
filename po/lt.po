@@ -1,33 +1,33 @@
-# Translation of gnome-control-center.HEAD.lt.po to Lithuanian
-# Lithuanian translation of gnome-control-center
-# Copyright (C) 2000-2009 Free Software Foundation, Inc.
-# Gediminas Paulauskas <menesis@chatsubo.lt>, 2000-2002.
-# Vaidotas Zemlys <mpiktas@delfi.lt>, 2003.
-# Justina Klingaitė <justina.klingaite@gmail.com>, 2005.
-# Žygimantas Beručka <zygis@gnome.org>, 2003-2007, 2009, 2010, 2012.
-# Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007.
-# Vytautas Liuolia <vytautas.liuolia@gmail.com>, 2008.
-# Mantas Kriaučiūnas <mantas@akl.lt>, 2011.
-# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010-2021.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011
+# aurisc4 <aurisc4@gmail.com>, 2010,2013-2017
+# Gintautas Miliauskas <gintas@akl.lt>, 2006-2007
+# Justina KP <justina.klingaite@gmail.com>, 2005
+# Justina KP <justina.klingaite@gmail.com>, 2005
+# Mantas Kriaučiūnas Baltix <mantas@akl.lt>, 2011
+# Mantas Kriaučiūnas Baltix <mantas@akl.lt>, 2011
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Vaidotas Zemlys <mpiktas@delfi.lt>, 2003
+# Vytautas Liuolia <vytautas.liuolia@gmail.com>, 2008
+# Žygimantas Beručka <zygis@gnome.org>, 2003-2007, 2009-2010,2012
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-07 15:17-0700\n"
-"PO-Revision-Date: 2021-09-12 20:54+0300\n"
-"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
-"Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
-"Language: lt\n"
+"POT-Creation-Date: 2022-12-08 00:11+0000\n"
+"PO-Revision-Date: 2014-09-08 22:33+0000\n"
+"Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011\n"
+"Language-Team: Lithuanian (http://www.transifex.com/endless-os/gnome-control-center/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 40.0\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Project-Style: gnome\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: panels/applications/cc-applications-panel.c:823
 msgid "System Bus"
@@ -97,9 +97,7 @@ msgstr "Gali keisti nustatymus"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"%s turi šiuo integruotus leidimus. Jų negalima keisti. Jei turite abejonių "
-"dėl šių leidimų, pagalvokite apie programos pašalinimą."
+msgstr "%s turi šiuo integruotus leidimus. Jų negalima keisti. Jei turite abejonių dėl šių leidimų, pagalvokite apie programos pašalinimą."
 
 #: panels/applications/cc-applications-panel.c:1024
 msgid "Web Links"
@@ -181,11 +179,9 @@ msgstr "Leidimai ir prieiga"
 
 #: panels/applications/cc-applications-panel.ui:106
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"Duomenys ir tarnybos, prie kurių šį programa paprašė prieigos, bei leidimai, "
-"kurių jai reikia."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "Duomenys ir tarnybos, prie kurių šį programa paprašė prieigos, bei leidimai, kurių jai reikia."
 
 #: panels/applications/cc-applications-panel.ui:121
 #: panels/applications/cc-applications-panel.ui:127
@@ -195,7 +191,6 @@ msgstr "Kamera"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -206,7 +201,8 @@ msgstr "Kamera"
 #: panels/applications/cc-applications-panel.ui:262
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:85
 #: panels/keyboard/cc-xkb-modifier-dialog.c:353
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:129
+#: panels/keyboard/keyboard-shortcuts.c:367
+#: panels/network/network-proxy.ui:129
 #: panels/user-accounts/cc-user-panel.c:848
 #: panels/user-accounts/cc-user-panel.c:938
 #: panels/wwan/cc-wwan-device-page.c:479
@@ -237,11 +233,9 @@ msgstr "Negalima keisti"
 
 #: panels/applications/cc-applications-panel.ui:175
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"Pavienius programų leidimų galima peržiūrėti <a href=\"privacy\">privatumo</"
-"a> nustatymuose."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "Pavienius programų leidimų galima peržiūrėti <a href=\"privacy\">privatumo</a> nustatymuose."
 
 #: panels/applications/cc-applications-panel.ui:199
 msgid "Integration"
@@ -322,8 +316,7 @@ msgstr "Bandykite kitą paiešką"
 #: panels/applications/cc-applications-panel.ui:555
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr ""
-"Kiek disko vietos užima šį programa su programos duomenimis bei podėliu."
+msgstr "Kiek disko vietos užima šį programa su programos duomenimis bei podėliu."
 
 #: panels/applications/cc-applications-panel.ui:564
 msgid "Application"
@@ -349,7 +342,8 @@ msgstr "Išvalyti podėlį…"
 msgid "Control various application permissions and settings"
 msgstr "Valdyti įvairius programos leidimus bei nustatymus"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "programa;flatpak;leidimas;nustatymas;"
@@ -433,7 +427,8 @@ msgstr "Fonas"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "Pakeiskite fono paveikslėlį fonu arba nuotrauka"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Fonas;Ekranas;Darbastalis;Darbalaukis;"
@@ -484,7 +479,8 @@ msgstr "Bluetooth"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Įjunkite arba išjunkite Bluetooth ir junkitės prie savo įrenginių"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "dalinimasis;dalytis;bendrinti;bluetooth;obex;"
@@ -498,14 +494,11 @@ msgid "No applications can capture photos or video."
 msgstr "Jokia programa negali daryti nuotraukų ar įrašinėti vaizdo įrašų."
 
 #: panels/camera/cc-camera-panel.ui:75
-#, fuzzy
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly. System "
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly. System "
 "applications can always use the camera."
 msgstr ""
-"Kameros naudojimas leidžia programoms daryti nuotraukas bei vaizdo įrašus. "
-"Kameros išjungimas gali sutrukdyti kai kurioms programoms teisingai veikti."
 
 #: panels/camera/cc-camera-panel.ui:85
 msgid "Allow the applications below to use your camera."
@@ -519,21 +512,18 @@ msgstr "Jokia programa neprašė prieigos prie kameros"
 msgid "Protect your pictures"
 msgstr "Apsaugokite savo paveikslėlius"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:19
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
-msgstr ""
-"ekranas;užrakinimas;diagnostika;lūžimas;privatus;neseniai naudoti;laikinieji;"
-"indeksas;pavadinimas;tinklas;tapatybė;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
+msgstr "ekranas;užrakinimas;diagnostika;lūžimas;privatus;neseniai naudoti;laikinieji;indeksas;pavadinimas;tinklas;tapatybė;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:347
 msgid "Place your calibration device over the square and press “Start”"
-msgstr ""
-"Pridėkite kalibravimo įrenginį prie stačiakampio ir spauskite „Pradėti“"
+msgstr "Pridėkite kalibravimo įrenginį prie stačiakampio ir spauskite „Pradėti“"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -541,8 +531,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:353
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
-"Perkelkite kalibravimo įrenginį į kalibravimo padėtį ir spauskite „Tęsti“"
+msgstr "Perkelkite kalibravimo įrenginį į kalibravimo padėtį ir spauskite „Tęsti“"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -770,9 +759,7 @@ msgstr "Sukurti spalvų profilį pasirinktam įrenginiui"
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"Matavimo prietaisas neaptiktas. Patikrinkite, ar jis įjungtas ir teisingai "
-"prijungtas."
+msgstr "Matavimo prietaisas neaptiktas. Patikrinkite, ar jis įjungtas ir teisingai prijungtas."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1245
@@ -793,9 +780,7 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"Kalibracija sukurs profilį, kurį galėsite naudoti ekrano spalvoms tvarkyti. "
-"Kuo ilgiau kalibruosite, tuo geresnė bus profilio kokybė."
+msgstr "Kalibracija sukurs profilį, kurį galėsite naudoti ekrano spalvoms tvarkyti. Kuo ilgiau kalibruosite, tuo geresnė bus profilio kokybė."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -834,11 +819,9 @@ msgstr "Ekrano (vaizduoklio) tipas"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
-"Pasirinkite vaizduoklio baltąjį tašką. Dauguma vaizduoklių turi būti "
-"kalibruoti D65 apšvietimui."
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "Pasirinkite vaizduoklio baltąjį tašką. Dauguma vaizduoklių turi būti kalibruoti D65 apšvietimui."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
@@ -848,17 +831,13 @@ msgstr "Profilio baltasis taškas"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
-"Nustatykite jums įprastą ekrano šviesumą. Spalvų tvarkymas bus tiksliausias "
-"šiam šviesumo lygiui."
+msgstr "Nustatykite jums įprastą ekrano šviesumą. Spalvų tvarkymas bus tiksliausias šiam šviesumo lygiui."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"Taip pat galite naudoti šviesumo lygį, naudotą su kuriuo nors kitu šio "
-"įrenginio profiliu."
+msgstr "Taip pat galite naudoti šviesumo lygį, naudotą su kuriuo nors kitu šio įrenginio profiliu."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -868,9 +847,7 @@ msgstr "Ekrano šviesumas"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"Galite naudoti spalvų profilį skirtinguose kompiuteriuose ar net sukurti "
-"profilius skirtingoms apšvietimo sąlygoms."
+msgstr "Galite naudoti spalvų profilį skirtinguose kompiuteriuose ar net sukurti profilius skirtingoms apšvietimo sąlygoms."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -902,13 +879,10 @@ msgstr "Reikalauja interneto ryšio"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"Gali būti naudingos instrukcijos, kaip naudoti profilį <a href=\"linux\">GNU/"
-"Linux</a>, <a href=\"osx\">Apple OS X</a> ar <a href=\"windows\">Microsoft "
-"Windows</a>."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "Gali būti naudingos instrukcijos, kaip naudoti profilį <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> ar <a href=\"windows\">Microsoft Windows</a>."
 
 #: panels/color/cc-color-panel.ui:607
 msgid "Summary"
@@ -933,15 +907,11 @@ msgstr "_Pridėti"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"Aptikta problemų. Profilis gali gerai neveikti. <a href=\"\">Rodyti detales."
-"</a>"
+msgstr "Aptikta problemų. Profilis gali gerai neveikti. <a href=\"\">Rodyti detales.</a>"
 
 #: panels/color/cc-color-panel.ui:788
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr ""
-"Spalvų derinimui reikia pakankamai naujo spalvų profilio kiekvienam "
-"įrenginiui."
+msgstr "Spalvų derinimui reikia pakankamai naujo spalvų profilio kiekvienam įrenginiui."
 
 #. translators: Text used in link to privacy policy
 #: panels/color/cc-color-panel.ui:810
@@ -1160,11 +1130,10 @@ msgstr "Spalva"
 #: panels/color/gnome-color-panel.desktop.in.in:4
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr ""
-"Kalibruokite savo įrenginių, tokių kaip ekranai, vaizduokliai, kameros ar "
-"spausdintuvai, spalvas"
+msgstr "Kalibruokite savo įrenginių, tokių kaip ekranai, vaizduokliai, kameros ar spausdintuvai, spalvas"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Spalva;ICC;Profilis;Kalibravimas;Spausdintuvas;Ekranas;"
@@ -1254,26 +1223,29 @@ msgstr "%Y %B %e"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d valanda"
-msgstr[1] "%d valandos"
-msgstr[2] "%d valandų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: Option for "Blank Screen" in "Power" panel
 #: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minutė"
-msgstr[1] "%d minutės"
-msgstr[2] "%d minučių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d sekundę"
-msgstr[1] "%d sekundes"
-msgstr[2] "%d sekundžių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:177
@@ -1315,7 +1287,8 @@ msgstr "%s"
 msgid "0 seconds"
 msgstr "0 sekundžių"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1483,7 +1456,8 @@ msgstr "Diena / Naktis"
 msgid "Change the date and time, including time zone"
 msgstr "Keiskite datą ir laiką, įskaitant laiko juostą"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Laikrodis;Laiko juosta;Vietovė;"
@@ -1529,20 +1503,21 @@ msgstr "Numatytosios programos"
 msgid "Configure Default Applications"
 msgstr "Konfigūruoti numatytąsias programas"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "numatytoji;programa;pageidaujama;laikmena;"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:146
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr ""
-"Pranešimų apie technines problemas siuntimas mums padeda pagerinti %s. "
-"Pranešimai yra siunčiami anonimiškai, o asmeniniai duomenys yra išdarkomi. %s"
+msgstr "Pranešimų apie technines problemas siuntimas mums padeda pagerinti %s. Pranešimai yra siunčiami anonimiškai, o asmeniniai duomenys yra išdarkomi. %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:28
 msgid "Problem Reporting"
@@ -1560,17 +1535,15 @@ msgstr "Diagnostika"
 msgid "Report your problems"
 msgstr "Pranešti apie jūsų problemas"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
 #: panels/location/gnome-location-panel.desktop.in.in:19
 #: panels/lock/gnome-lock-panel.desktop.in.in:19
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;privacy;"
-msgstr ""
-"ekranas;užrakinimas;diagnostika;lūžimas;privatus;neseniai;naudoti;laikinieji;"
-"indeksas;pavadinimas;tinklas;tapatybė;privatumas;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;"
+msgstr "ekranas;užrakinimas;diagnostika;lūžimas;privatus;neseniai;naudoti;laikinieji;indeksas;pavadinimas;tinklas;tapatybė;privatumas;"
 
 #: panels/display/cc-display-panel.c:1017
 #: panels/network/connection-editor/connection-editor.ui:27
@@ -1618,9 +1591,7 @@ msgstr "Pagrindinis ekranas"
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
-msgstr ""
-"Tempkite ekranų paveikslėlius, kad jie atitiktų jų fizinį išdėstymą. "
-"Pažymėkite ekraną jo nustatymams keisti."
+msgstr "Tempkite ekranų paveikslėlius, kad jie atitiktų jų fizinį išdėstymą. Pažymėkite ekraną jo nustatymams keisti."
 
 #: panels/display/cc-display-panel.ui:250
 msgid "Display Arrangement"
@@ -1639,7 +1610,8 @@ msgstr "Ekranų konfigūracija"
 msgid "Displays"
 msgstr "Ekranai"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:451
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1716,9 +1688,7 @@ msgstr "Laikinai išjungtas iki rytojaus"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"Naktinis apšvietimas padaro ekrano spalvas šiltesnėmis. Tai mažiau apkrauna "
-"akis ir mažina nemigą."
+msgstr "Naktinis apšvietimas padaro ekrano spalvas šiltesnėmis. Tai mažiau apkrauna akis ir mažina nemigą."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1760,14 +1730,16 @@ msgstr "Minutė"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
-#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "AM"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
-#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "PM"
 
@@ -1784,14 +1756,12 @@ msgstr "Spalvos temperatūra"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "Pasirinkite, kaip naudoti prijungtus monitorius ir projektorius"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
-msgstr ""
-"Skydelis;Projektorius;xrandr;Ekranas;Raiška;Atnaujinimas;Monitorius;Naktinis;"
-"Apšvietimas;rausvumas;spalva;saulėtekis;saulėlydis;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
+msgstr "Skydelis;Projektorius;xrandr;Ekranas;Raiška;Atnaujinimas;Monitorius;Naktinis;Apšvietimas;rausvumas;spalva;saulėtekis;saulėlydis;"
 
 #: panels/info-overview/cc-info-overview-panel.c:428
 #: panels/info-overview/cc-info-overview-panel.c:452
@@ -1902,9 +1872,7 @@ msgstr "Pervadinti įrenginį"
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr ""
-"Įrenginio pavadinimas yra naudojamas šiam įrenginiui identifikuoti, kai jis "
-"matomas per tinklą arba poruojant su Bluetooth įrenginiais."
+msgstr "Įrenginio pavadinimas yra naudojamas šiam įrenginiui identifikuoti, kai jis matomas per tinklą arba poruojant su Bluetooth įrenginiais."
 
 #: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
@@ -1925,12 +1893,8 @@ msgstr "Rodyti informaciją apie sistemą"
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
-"įrenginys;sistema;informacija;pavadinimas;atmintis;procesorius;versija;"
-"numatyta;programa;atsarginė;pageidaujama;cd;dvd;usb;audio;video;diskas;"
-"išimama;laikmena;autopaleidimas;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "įrenginys;sistema;informacija;pavadinimas;atmintis;procesorius;versija;numatyta;programa;atsarginė;pageidaujama;cd;dvd;usb;audio;video;diskas;išimama;laikmena;autopaleidimas;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2160,9 +2124,7 @@ msgstr "Alternatyvių simbolių klavišas"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr ""
-"Alternatyvių simbolių klavišą galima naudoti papildomiems simboliams įvesti. "
-"Jie kartais spausdinami kaip trečias pasirinkimas jūsų klaviatūroje."
+msgstr "Alternatyvių simbolių klavišą galima naudoti papildomiems simboliams įvesti. Jie kartais spausdinami kaip trečias pasirinkimas jūsų klaviatūroje."
 
 #: panels/keyboard/cc-keyboard-panel.c:71
 #: panels/keyboard/cc-keyboard-panel.c:89
@@ -2211,10 +2173,7 @@ msgid ""
 "it, press compose then a sequence of characters.  For example, compose key "
 "followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by "
 "<b>'</b> will enter <b>á</b>."
-msgstr ""
-"Komponavimo klavišas leidžia įvesti daug įvairių klavišų. Jis naudojamas "
-"paspaudžiant ir įvedant simbolių seką.  Pvz., komponavimo klavišas ir po to "
-"<b>C</b> ir <b>o</b> įves <b>©</b>, <b>a</b> ir po to <b>'</b> įves <b>á</b>."
+msgstr "Komponavimo klavišas leidžia įvesti daug įvairių klavišų. Jis naudojamas paspaudžiant ir įvedant simbolių seką.  Pvz., komponavimo klavišas ir po to <b>C</b> ir <b>o</b> įves <b>©</b>, <b>a</b> ir po to <b>'</b> įves <b>á</b>."
 
 #: panels/keyboard/cc-keyboard-panel.c:95
 msgctxt "keyboard key"
@@ -2236,9 +2195,7 @@ msgstr "Ekranas spausdinimas"
 msgid ""
 "Input sources can be switched using the %s keyboard shortcut.\n"
 "This can be changed in the keyboard shortcut settings."
-msgstr ""
-"Įvesties šaltinius galima keisti naudojant klaviatūros trumpinį %s.\n"
-"Galite pakeisti šiuos trumpinius klaviatūros nustatymuose."
+msgstr "Įvesties šaltinius galima keisti naudojant klaviatūros trumpinį %s.\nGalite pakeisti šiuos trumpinius klaviatūros nustatymuose."
 
 #: panels/keyboard/cc-keyboard-panel.ui:48
 msgid "Input Sources"
@@ -2282,9 +2239,10 @@ msgstr "Rodyti ir tinkinti trumpinius"
 #, c-format
 msgid "%d modified"
 msgid_plural "%d modified"
-msgstr[0] "%d pakeistas"
-msgstr[1] "%d pakeisti"
-msgstr[2] "%d pakeistų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:428
 msgid "Reset All Shortcuts?"
@@ -2294,9 +2252,7 @@ msgstr "Atstatyti visus trumpinius?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"Visų trumpinių atstatymas gali paveikti jūsų pasirinktinius trumpinius. Šio "
-"veiksmo negalėsite atšaukti."
+msgstr "Visų trumpinių atstatymas gali paveikti jūsų pasirinktinius trumpinius. Šio veiksmo negalėsite atšaukti."
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:435
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:275
@@ -2316,9 +2272,7 @@ msgstr "Pridėti pasirinktinius trumpinius"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:124
 msgid "Set up custom shortcuts for launching apps, running scripts, and more."
-msgstr ""
-"Nustatykite pasirinktinius trumpinius programų paleidimui, scenarijų "
-"vykdymui ir kitkam."
+msgstr "Nustatykite pasirinktinius trumpinius programų paleidimui, scenarijų vykdymui ir kitkam."
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:131
 msgid "Add Shortcut"
@@ -2346,7 +2300,8 @@ msgstr "Atstatyti visus trumpinius į jų numatytąsias vertes"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:391
 #, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
 msgstr "%s jau naudojamas %s. Jei jį pakeisite, %s bus išjungtas"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:535
@@ -2373,8 +2328,7 @@ msgstr "Pridėti pasirinktinis trumpinį"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:60
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr ""
-"Spauskite Esc atsisakymui arba Backspace klaviatūros trumpinio išjungimui."
+msgstr "Spauskite Esc atsisakymui arba Backspace klaviatūros trumpinio išjungimui."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:135
 #: panels/printers/pp-details-dialog.ui:40
@@ -2423,17 +2377,14 @@ msgstr "Klaviatūra"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
-msgstr ""
-"Keisti klaviatūros trumpinius bei nustatyti rašymo nuostatas, klaviatūrų "
-"išdėstymus bei įvesties šaltinius"
+msgstr "Keisti klaviatūros trumpinius bei nustatyti rašymo nuostatas, klaviatūrų išdėstymus bei įvesties šaltinius"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
-"Trumpinus;Darbo sritis;Langas;Dydžio keitimas;Mastelis;Kontrastas;Įvestis;"
-"Šaltinis;Rakinimas;Garsas;"
+msgstr "Trumpinus;Darbo sritis;Langas;Dydžio keitimas;Mastelis;Kontrastas;Įvestis;Šaltinis;Rakinimas;Garsas;"
 
 #: panels/location/cc-location-panel.ui:31
 msgid "Location services turned off"
@@ -2444,22 +2395,17 @@ msgid "No applications can obtain location information."
 msgstr "Jokia programa negali gauti vietovės informacijos."
 
 #: panels/location/cc-location-panel.ui:72
-#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy. System applications can always access "
 "your location."
 msgstr ""
-"Vietos tarnybos leidžia programoms žinoti jūsų geografinę vietą. Tikslumas "
-"padidinamas įjungiant WiFi bei mobilųjį plačiajuosti tinklą."
 
 #: panels/location/cc-location-panel.ui:81
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"Naudoja Mozilla vietos tarnybą: <a href='https://location.services.mozilla."
-"com/privacy'>Privatumo politika</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "Naudoja Mozilla vietos tarnybą: <a href='https://location.services.mozilla.com/privacy'>Privatumo politika</a>"
 
 #: panels/location/cc-location-panel.ui:94
 msgid "Allow the applications below to determine your location."
@@ -2475,11 +2421,9 @@ msgstr "Apsaugoti savo vietos informaciją"
 
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
-"Automatically locking the screen prevents others from accessing the computer "
-"while you're away."
-msgstr ""
-"Automatinis ekrano užrakinimas neleidžia kitiems naudotis jūsų kompiuteriu, "
-"kol nesate šalia."
+"Automatically locking the screen prevents others from accessing the computer"
+" while you're away."
+msgstr "Automatinis ekrano užrakinimas neleidžia kitiems naudotis jūsų kompiuteriu, kol nesate šalia."
 
 #: panels/lock/cc-lock-panel.ui:44
 msgid "Blank Screen Delay"
@@ -2498,7 +2442,8 @@ msgid "Automatic _Screen Lock Delay"
 msgstr "Automatinio ekrano už_rakinimo delsa"
 
 #: panels/lock/cc-lock-panel.ui:83
-msgid "Period after the screen blanks when the screen is automatically locked."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
 msgstr "Po kiek laiko ekranas tampa tuščias, kai yra automatiškai užrakintas."
 
 #: panels/lock/cc-lock-panel.ui:103
@@ -2513,53 +2458,59 @@ msgstr "Drausti naujus _USB įrenginius"
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr ""
-"Drausti naujiems USB įrenginiams susisieti su sistema, kai ekranas yra "
-"užrakintas."
+msgstr "Drausti naujiems USB įrenginiams susisieti su sistema, kai ekranas yra užrakintas."
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:166
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Ekranas išsijungia"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:170
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 sekundžių"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:174
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 minutė"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:178
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 minutės"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:182
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 minutės"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:186
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 minutės"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:190
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 minučių"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:194
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2634,9 +2585,8 @@ msgid "Lock your screen"
 msgstr "Užrakinti ekraną"
 
 #: panels/metrics/cc-metrics-panel.ui:32
-#, fuzzy
 msgid "Metrics services turned off"
-msgstr "Vietos tarnybos išjungtos"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:41
 msgid "No anonymous usage data will be sent to Endless."
@@ -2644,9 +2594,8 @@ msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:58
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:3
-#, fuzzy
 msgid "Metrics"
-msgstr "Metrinė"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:59
 msgid ""
@@ -2655,11 +2604,11 @@ msgid ""
 msgstr ""
 
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:4
-#, fuzzy
 msgid "Enable or disable Endless metrics collection"
-msgstr "Įjungti arba išjungti nuotolinį prisijungimą"
+msgstr ""
 
-#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:14
 msgid "private;privacy;metrics;network;identity;"
 msgstr ""
@@ -2673,14 +2622,11 @@ msgid "No applications can record sound."
 msgstr "Jokia programa negali įrašyti garso."
 
 #: panels/microphone/cc-microphone-panel.ui:75
-#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
 "properly. System applications can always use the microphone."
 msgstr ""
-"Mikrofono naudojimas leidžia programoms įrašyti garsus. Mikrofono išjungimas "
-"gali sutrukdyti kai kurių programų veikimą."
 
 #: panels/microphone/cc-microphone-panel.ui:85
 msgid "Allow the applications below to use your microphone."
@@ -2727,8 +2673,10 @@ msgstr "Pelės greitis"
 msgid "Double-click timeout"
 msgstr "Dvigubo paspaudimo laikas"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:166 panels/mouse/cc-mouse-panel.ui:230
 msgid "Natural Scrolling"
 msgstr "Natūralus slinkimas"
@@ -2800,16 +2748,14 @@ msgstr "Pelė ir jutiklinis kilimėlis"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr ""
-"Keiskite pelės ar jutiklinio kilimėlio jautrumą bei pasirinkite kairiarankio "
-"ar dešiniarankio veikseną"
+msgstr "Keiskite pelės ar jutiklinio kilimėlio jautrumą bei pasirinkite kairiarankio ar dešiniarankio veikseną"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr ""
-"Sekantis paviršius;Žymiklis;Paspaudimas;Taukštelėjimas;Dvigubas;Mygtukas;"
-"Rutulinis manipuliatorius;Slinkiklis;"
+msgstr "Sekantis paviršius;Žymiklis;Paspaudimas;Taukštelėjimas;Dvigubas;Mygtukas;Rutulinis manipuliatorius;Slinkiklis;"
 
 #: panels/multitasking/cc-multitasking-panel.ui:56
 msgid "_Hot Corner"
@@ -2826,9 +2772,7 @@ msgstr "_Aktyvūs ekrano kraštai"
 #: panels/multitasking/cc-multitasking-panel.ui:85
 msgid ""
 "Drag windows against the top, left, and right screen edges to resize them."
-msgstr ""
-"Tempkite langus į viršutinį, kairį bei dešinį ekrano kraštus jų dydžiui "
-"pakeisti."
+msgstr "Tempkite langus į viršutinį, kairį bei dešinį ekrano kraštus jų dydžiui pakeisti."
 
 #: panels/multitasking/cc-multitasking-panel.ui:114
 msgid "Workspaces"
@@ -2886,15 +2830,15 @@ msgstr "Daug užduočių"
 msgid "Manage preferences for productivity and multitasking"
 msgstr "Tvarkykite nuostatas produktyvumui ir daugeliui užduočių"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
 msgstr "Daugelis užduočių;Produktyvumas;Tinkinti;Darbastalis;"
 
 #: panels/network/cc-network-panel.c:686 panels/network/cc-wifi-panel.ui:307
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr ""
-"Oi, atsitiko kažkas negero. Susisiekite su savo programinės įrangos tiekėju."
+msgstr "Oi, atsitiko kažkas negero. Susisiekite su savo programinės įrangos tiekėju."
 
 #: panels/network/cc-network-panel.c:692
 msgid "NetworkManager needs to be running."
@@ -2913,7 +2857,8 @@ msgstr "VPN"
 msgid "Not set up"
 msgstr "Nenustatyta"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:207
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2941,8 +2886,8 @@ msgid "Secure network"
 msgstr "Saugus tinklas"
 
 #. TRANSLATORS: device status
-#: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
-#: panels/updates/cc-updates-panel.c:576
+#: panels/network/cc-wifi-connection-row.ui:68
+#: panels/network/panel-common.c:63 panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "Prisijungta"
 
@@ -2960,9 +2905,7 @@ msgstr "Parametrai..."
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr ""
-"Įjungus prieigos tašką bus atsijungta nuo %s ir nebus galima pasiekti "
-"interneto per Wi-Fi."
+msgstr "Įjungus prieigos tašką bus atsijungta nuo %s ir nebus galima pasiekti interneto per Wi-Fi."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:267
 msgid "Must have a minimum of 8 characters"
@@ -2979,13 +2922,10 @@ msgstr "Įjungti belaidį prieigos tašką"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr ""
-"Wi-Fi prieigos taškas leidžia kitiems dalinti jūsų interneto ryšiu sukuriant "
-"Wi-Fi tinklą, prie kurio jie gali prisijungti. Tam padaryti turite turėti "
-"interneto ryšį per kitą šaltinį nei Wi-Fi."
+msgstr "Wi-Fi prieigos taškas leidžia kitiems dalinti jūsų interneto ryšiu sukuriant Wi-Fi tinklą, prie kurio jie gali prisijungti. Tam padaryti turite turėti interneto ryšį per kitą šaltinį nei Wi-Fi."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
 msgid "Network Name"
@@ -3100,12 +3040,9 @@ msgstr "Stabilus"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"Įvestas MAC adresas bus naudojamas kaip aparatinis adresas tinklui, kuriame "
-"aktyvuotas šis ryšys. Ši savybė yra žinoma kaip MAC klonavimas arba "
-"apsimetimas (spoofing). Pvz.: 00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "Įvestas MAC adresas bus naudojamas kaip aparatinis adresas tinklui, kuriame aktyvuotas šis ryšys. Ši savybė yra žinoma kaip MAC klonavimas arba apsimetimas (spoofing). Pvz.: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3163,6 +3100,7 @@ msgid_plural "%i days ago"
 msgstr[0] "Prieš %i dieną"
 msgstr[1] "Prieš %i dienas"
 msgstr[2] "Prieš %i dienų"
+msgstr[3] "Prieš %i dienų"
 
 #: panels/network/connection-editor/ce-page-details.c:293
 #, c-format
@@ -3385,10 +3323,9 @@ msgstr "_Matuojamas ryšys: turi duomenų apribojimų arba gali kainuoti"
 
 #: panels/network/connection-editor/details-page.ui:478
 msgid ""
-"Software updates and other large downloads will not be started automatically."
-msgstr ""
-"Programinės įrangos atnaujinimai bei kiti dideli atsisiuntimai nebus "
-"automatiškai paleidžiami."
+"Software updates and other large downloads will not be started "
+"automatically."
+msgstr "Programinės įrangos atnaujinimai bei kiti dideli atsisiuntimai nebus automatiškai paleidžiami."
 
 #: panels/network/connection-editor/ethernet-page.ui:25
 #: panels/network/connection-editor/vpn-page.ui:23
@@ -3548,15 +3485,10 @@ msgstr "Nepavyko importuoti PVN ryšio"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
-"Failo „%s“ nepavyksta perskaityti arba jis neturi atpažįstamos VPN ryšio "
-"informacijos\n"
-"\n"
-"Klaida: %s."
+msgstr "Failo „%s“ nepavyksta perskaityti arba jis neturi atpažįstamos VPN ryšio informacijos\n\nKlaida: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3586,10 +3518,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
-"VPN ryšys „%s“ negali būti eksportuotas į %s.\n"
-"\n"
-"Klaida: %s."
+msgstr "VPN ryšys „%s“ negali būti eksportuotas į %s.\n\nKlaida: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3611,7 +3540,8 @@ msgstr "_BSSID"
 msgid "Control how you connect to the Internet"
 msgstr "Valdykite, kaip jungiatės prie interneto"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr "Tinklas;IP;LAN;Proxy;WAN;Plačiajuostis;Modemas;Bluetooth;vpn;DNS;"
@@ -3620,7 +3550,8 @@ msgstr "Tinklas;IP;LAN;Proxy;WAN;Plačiajuostis;Modemas;Bluetooth;vpn;DNS;"
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "Valdykite, kaip jungiatės prie belaidžių tinklų"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr "Tinklas;Belaidis;Wi-Fi;Wifi;IP;LAN;Plačiajuostis;DNS;Hotspot;"
@@ -3645,9 +3576,9 @@ msgstr "Paskutinį kartą naudota"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
 #: panels/network/net-device-ethernet.c:267
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "Laidinis"
 
@@ -3659,9 +3590,7 @@ msgstr "Pridėti naują ryšį"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr ""
-"Tinklo nustatymai pasirinktiems tinklams įskaitant slaptažodžius ir bet "
-"kokius asmeninius nustatymus bus prarasti."
+msgstr "Tinklo nustatymai pasirinktiems tinklams įskaitant slaptažodžius ir bet kokius asmeninius nustatymus bus prarasti."
 
 #: panels/network/net-device-wifi.c:855
 msgid "_Forget"
@@ -3671,7 +3600,8 @@ msgstr "_Pamiršti"
 msgid "Known Wi-Fi Networks"
 msgstr "Žinomi belaidžiai tinklai"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1076
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3708,9 +3638,7 @@ msgstr "Išjungta"
 #: panels/network/net-proxy.c:112
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"Žiniatinklio proxy automatinis aptikimas yra naudojamai, kai konfigūracijos "
-"URL nepateiktas."
+msgstr "Žiniatinklio proxy automatinis aptikimas yra naudojamai, kai konfigūracijos URL nepateiktas."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3724,7 +3652,6 @@ msgstr "Tai nerekomenduojama nepatikimiems viešiesiems tinklams."
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:65 panels/network/net-vpn.c:158
 #, c-format
 msgid "%s VPN"
@@ -4272,17 +4199,10 @@ msgstr "Nešifruoti privatūs raktai yra nesaugūs"
 
 #: panels/network/wireless-security/eap-method-tls.c:275
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"Pasirinktas privatus raktas nėra apsaugotas slaptažodžiu.  Tai gali leisti "
-"pažeisti jūsų saugumo įgaliojimus.  Pasirinkite slaptažodžiu apsaugotą "
-"privatų raktą.\n"
-"\n"
-"(Galite slaptažodžiu apsaugoti savo privatų raktą su openssl)"
+msgstr "Pasirinktas privatus raktas nėra apsaugotas slaptažodžiu.  Tai gali leisti pažeisti jūsų saugumo įgaliojimus.  Pasirinkite slaptažodžiu apsaugotą privatų raktą.\n\n(Galite slaptažodžiu apsaugoti savo privatų raktą su openssl)"
 
 #: panels/network/wireless-security/eap-method-tls.c:506
 msgid "Choose your personal certificate"
@@ -4398,25 +4318,20 @@ msgstr "trūksta wep rakto"
 #: panels/network/wireless-security/ws-wep-key.c:123
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
-"netinkamas wep raktas: %zu ilgio raktas turi susidėti tik iš šešioliktainių "
-"skaitmenų"
+msgstr "netinkamas wep raktas: %zu ilgio raktas turi susidėti tik iš šešioliktainių skaitmenų"
 
 #: panels/network/wireless-security/ws-wep-key.c:131
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
-"netinkamas wep raktas: %zu ilgio raktas turi susidėti tik iš ascii simbolių"
+msgstr "netinkamas wep raktas: %zu ilgio raktas turi susidėti tik iš ascii simbolių"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
-"netinkamas wep raktas: netinkamas rakto ilgis %zu. Raktus turi būti 5/13 "
-"(ascii) arba 10/16 (šešioliktainis) ilgio"
+msgstr "netinkamas wep raktas: netinkamas rakto ilgis %zu. Raktus turi būti 5/13 (ascii) arba 10/16 (šešioliktainis) ilgio"
 
 #: panels/network/wireless-security/ws-wep-key.c:144
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4424,8 +4339,7 @@ msgstr "netinkamas wep raktas: slaptafrazė negali būti tuščia"
 
 #: panels/network/wireless-security/ws-wep-key.c:146
 msgid "invalid wep-key: passphrase must be shorter than 64 characters"
-msgstr ""
-"netinkamas wep raktas: slaptafrazė turi būti trumpesnė nei 64 simboliai"
+msgstr "netinkamas wep raktas: slaptafrazė turi būti trumpesnė nei 64 simboliai"
 
 #: panels/network/wireless-security/ws-wep-key.ui:11
 msgid "1 (Default)"
@@ -4456,14 +4370,11 @@ msgstr "WEP _indeksas"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
-"netinkamas wpa-psk: netinkamas rakto ilgis %zu. Turi b8ti [8,63] baitai arba "
-"64 šešioliktainiai skaitmenys"
+msgstr "netinkamas wpa-psk: netinkamas rakto ilgis %zu. Turi b8ti [8,63] baitai arba 64 šešioliktainiai skaitmenys"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:86
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr ""
-"netinkamas wpa-psk: negalima 64 baitų rakto interpretuoti kaip šešioliktainio"
+msgstr "netinkamas wpa-psk: negalima 64 baitų rakto interpretuoti kaip šešioliktainio"
 
 #. This is the per application switch for message tray usage.
 #: panels/notifications/cc-app-notifications-dialog.ui:60
@@ -4486,10 +4397,10 @@ msgstr "_Pranešimų iššokimai"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
-"Pranešimai ir toliau bus rodomo pranešimų sąraše, kai iššokimai yra išjungti."
+msgstr "Pranešimai ir toliau bus rodomo pranešimų sąraše, kai iššokimai yra išjungti."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4527,7 +4438,8 @@ msgstr "_Pranešimai ekrano užrakte"
 msgid "Control which notifications are displayed and what they show"
 msgstr "Valdykite, kurie pranešimai yra rodomi, ir ką jie rodo"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Pranešimai;žinutė;laiškas;dėklas;iššokimai;"
@@ -4550,7 +4462,6 @@ msgstr "Klaida šalinant paskyrą"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:936
 #, c-format
 msgid "%s removed"
@@ -4562,22 +4473,20 @@ msgstr "Internetinės paskyros"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
-msgstr ""
-"Prisijunkite prie savo internetinių paskyrų ir nuspręskite, kam jas naudosite"
+msgstr "Prisijunkite prie savo internetinių paskyrų ir nuspręskite, kam jas naudosite"
 
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
-"Google;Facebook;Twitter;Yahoo;Žiniatinklis;Tinkle;Pokalbiai;Kalendorius;"
-"Paštas;Kontaktai;ownCloud;Kerberos;IMAP;SMTP;Paketas;SkaitytiVėliau;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr "Google;Facebook;Twitter;Yahoo;Žiniatinklis;Tinkle;Pokalbiai;Kalendorius;Paštas;Kontaktai;ownCloud;Kerberos;IMAP;SMTP;Paketas;SkaitytiVėliau;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:61
 msgid "Undo"
 msgstr "Atšaukti"
@@ -4588,9 +4497,7 @@ msgstr "Prisijungti prie savo duomenų debesyje"
 
 #: panels/online-accounts/online-accounts.ui:109
 msgid "No internet connection — connect to set up new online accounts"
-msgstr ""
-"Nėra interneto ryšio — prisijunkite, norėdami nusistatyti naujas "
-"internetines paskyras"
+msgstr "Nėra interneto ryšio — prisijunkite, norėdami nusistatyti naujas internetines paskyras"
 
 #: panels/online-accounts/online-accounts.ui:134
 msgid "Add an account"
@@ -4611,6 +4518,7 @@ msgid_plural "%i minutes"
 msgstr[0] "%i minutė"
 msgstr[1] "%i minutės"
 msgstr[2] "%i minučių"
+msgstr[3] "%i minučių"
 
 #: panels/power/cc-battery-row.c:92
 #, c-format
@@ -4619,6 +4527,7 @@ msgid_plural "%i hours"
 msgstr[0] "%i valanda"
 msgstr[1] "%i valandos"
 msgstr[2] "%i valandų"
+msgstr[3] "%i valandų"
 
 #. TRANSLATOR: "%i %s %i %s" are "%i hours %i minutes"
 #. * Swap order with "%2$s %2$i %1$s %1$i if needed
@@ -4633,6 +4542,7 @@ msgid_plural "hours"
 msgstr[0] "valanda"
 msgstr[1] "valandos"
 msgstr[2] "valandų"
+msgstr[3] "valandų"
 
 #: panels/power/cc-battery-row.c:100
 msgid "minute"
@@ -4640,6 +4550,7 @@ msgid_plural "minutes"
 msgstr[0] "minutė"
 msgstr[1] "minutės"
 msgstr[2] "minučių"
+msgstr[3] "minučių"
 
 #. TRANSLATORS: %1 is a time string, e.g. "1 hour 5 minutes"
 #: panels/power/cc-battery-row.c:117
@@ -4793,11 +4704,9 @@ msgstr "Našumo veiksena laikinai išjungta dėl didelės temperatūros."
 
 #: panels/power/cc-power-panel.c:1173
 msgid ""
-"Lap detected: performance mode temporarily unavailable. Move the device to a "
-"stable surface to restore."
-msgstr ""
-"Aptikti keliai: našumo veiksena laikinai išjungta. Perkelkite įrenginį ant "
-"stabilaus paviršiaus, jei norite atstatyti."
+"Lap detected: performance mode temporarily unavailable. Move the device to a"
+" stable surface to restore."
+msgstr "Aptikti keliai: našumo veiksena laikinai išjungta. Perkelkite įrenginį ant stabilaus paviršiaus, jei norite atstatyti."
 
 #: panels/power/cc-power-panel.c:1175
 msgid "Performance mode temporarily disabled."
@@ -4807,9 +4716,7 @@ msgstr "Našumo veiksena laikinai išjungta."
 msgid ""
 "Low battery: power saver enabled. Previous mode will be restored when "
 "battery is sufficiently charged."
-msgstr ""
-"Senka baterija: našumo veiksena išjungta. Ankstesnė veiksena bus atstatyta, "
-"kai baterija bus pakankamai įkrauta."
+msgstr "Senka baterija: našumo veiksena išjungta. Ankstesnė veiksena bus atstatyta, kai baterija bus pakankamai įkrauta."
 
 #. translators: "%s" is an application name
 #: panels/power/cc-power-panel.c:1226
@@ -5012,14 +4919,12 @@ msgstr "Energija"
 msgid "View your battery status and change power saving settings"
 msgstr "Rodyti baterijos būseną ir keisti energijos taupymo nustatymus"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
-"Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-"Energy;"
-msgstr ""
-"Energija;Miegoti;Pristabdyti;Užmigdyti;Akumuliatorius;šviesumas;Pritemdyti;"
-"Tuščias;Monitorius;DPMS;Laisva;"
+"Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;"
+msgstr "Energija;Miegoti;Pristabdyti;Užmigdyti;Akumuliatorius;šviesumas;Pritemdyti;Tuščias;Monitorius;DPMS;Laisva;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
@@ -5068,11 +4973,10 @@ msgstr "Spausdintuvai"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr ""
-"Pridėkite spausdintuvus, matykite spausdintuvo darbus ir nuspręskite, kaip "
-"norite spausdinti"
+msgstr "Pridėkite spausdintuvus, matykite spausdintuvo darbus ir nuspręskite, kaip norite spausdinti"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Spausdintuvas;Eilė;Spausdinti;Rašalas;"
@@ -5097,16 +5001,15 @@ msgstr "_Atrakinti"
 msgid "No Printers Found"
 msgstr "Nerasta spausdintuvų"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "Įveskite tinklo adresą arba ieškokite spausdintuvo"
 
 #: panels/printers/new-printer-dialog.ui:356
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"Įveskite savo naudotojo vardą ir slaptažodį prieinamiems spausdintuvams "
-"matyti."
+msgstr "Įveskite savo naudotojo vardą ir slaptažodį prieinamiems spausdintuvams matyti."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:74
@@ -5125,13 +5028,12 @@ msgstr "Pasirinkite PPD failą"
 
 #: panels/printers/pp-details-dialog.c:241
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
-msgstr ""
-"PostScript spausdintuvo aprašymo failai (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
+msgstr "PostScript spausdintuvo aprašymo failai (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "Vieta"
 
@@ -5266,16 +5168,19 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "Baigtas"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:249
 #, c-format
 msgid "%u Job Requires Authentication"
 msgid_plural "%u Jobs Require Authentication"
-msgstr[0] "%u darbui reikia patvirtinti tapatybę"
-msgstr[1] "%u darbams reikia patvirtinti tapatybę"
-msgstr[2] "%u darbų reikia patvirtinti tapatybę"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:401
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -5293,22 +5198,26 @@ msgstr "Įveskite savo naudotojo vardą ir slaptažodį spausdinimui iš %s."
 msgid "Domain"
 msgstr "Domenas"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "_Patvirtinti tapatybę"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "Išvalyti visus"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "_Patvirtinti tapatybę"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "Nėra aktyvių spausdintuvo darbų"
@@ -5317,19 +5226,19 @@ msgstr "Nėra aktyvių spausdintuvo darbų"
 msgid "Unlock Print Server"
 msgstr "Atrakinti spausdintuvo serverį"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:273
 #, c-format
 msgid "Unlock %s."
 msgstr "Atrakinti %s."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:277
 #, c-format
 msgid "Enter username and password to view printers on %s."
-msgstr ""
-"Įveskite savo naudotojo vardą ir slaptažodį %s prieinamiems spausdintuvams "
-"matyti."
+msgstr "Įveskite savo naudotojo vardą ir slaptažodį %s prieinamiems spausdintuvams matyti."
 
 #: panels/printers/pp-new-printer-dialog.c:587
 msgid "Searching for Printers"
@@ -5362,7 +5271,8 @@ msgstr "Vieta: %s"
 msgid "Address: %s"
 msgstr "Adresas: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1461
 msgid "Server requires authentication"
 msgstr "Serveris reikalauja patvirtinti tapatybę"
@@ -5413,13 +5323,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Bendri"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:654
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "Puslapio nustatymai"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:657
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5431,7 +5343,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "Darbas"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:663
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5443,7 +5356,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Spalva"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:669
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5522,6 +5436,7 @@ msgid_plural "%u Jobs"
 msgstr[0] "%u darbas"
 msgstr[1] "%u darbai"
 msgstr[2] "%u darbų"
+msgstr[3] "%u darbų"
 
 #. Translators: Name of job which makes printer to clean its heads
 #: panels/printers/pp-printer-entry.c:648
@@ -5645,7 +5560,8 @@ msgstr "Spausdintuvo informacija"
 msgid "Use Printer by Default"
 msgstr "Numatytai naudoti spausdintuvą"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "Išvalyti spausdinimo galvutes"
@@ -5692,9 +5608,7 @@ msgstr "Pridėti spausdintuvą…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"Atleiskite! Sistemos spausdinimo tarnyba\n"
-"atrodo nėra pasiekiama."
+msgstr "Atleiskite! Sistemos spausdinimo tarnyba\natrodo nėra pasiekiama."
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:189
 #: panels/region/cc-format-chooser.ui:6 panels/region/cc-region-panel.ui:203
@@ -5705,9 +5619,7 @@ msgstr "Formatai"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"Pasirinkite skaičių, datos ir pinigų formatus. Pakeitimai įsigalios kitą "
-"kartą prisijungus."
+msgstr "Pasirinkite skaičių, datos ir pinigų formatus. Pakeitimai įsigalios kitą kartą prisijungus."
 
 #: panels/region/cc-format-chooser.ui:117
 msgid "Search locales..."
@@ -5802,9 +5714,7 @@ msgstr "_Formatai"
 
 #: panels/region/cc-region-panel.ui:275
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"Prisijungimo nustatymai yra naudojami visų naudotojų, prisijungiant prie "
-"sistemos"
+msgstr "Prisijungimo nustatymai yra naudojami visų naudotojų, prisijungiant prie sistemos"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
 msgid "Region & Language"
@@ -5814,7 +5724,9 @@ msgstr "Regionas ir kalba"
 msgid "Select your display language and formats"
 msgstr "Pasirinkite rodymo kalbą bei formatus"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Kalba;Išdėstymas;Klaviatūra;Įvestis;"
@@ -5859,7 +5771,6 @@ msgstr "Parinkite programą programinės įrangos CD paleidimui"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "garso DVD"
@@ -5956,14 +5867,13 @@ msgstr "Išimamos laikmenos"
 msgid "Configure Removable Media settings"
 msgstr "Konfigūruoti išimamas laikmenas"
 
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
-msgstr ""
-"įrenginys;sistema;numatytoji;programa;pageidaujama;cd;dvd;usb;audio;video;"
-"diskas;išimama;laikmena;autopaleidimas;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "įrenginys;sistema;numatytoji;programa;pageidaujama;cd;dvd;usb;audio;video;diskas;išimama;laikmena;autopaleidimas;"
 
 #: panels/search/cc-search-locations-dialog.c:636
 msgid "Select Location"
@@ -5982,11 +5892,9 @@ msgstr "Ieškoti vietų"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"Aplankai, kuriuose ieškoma sistemos programų, tokių kaip Failai, Nuotraukos "
-"ar Videoįrašai."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "Aplankai, kuriuose ieškoma sistemos programų, tokių kaip Failai, Nuotraukos ar Videoįrašai."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -6014,18 +5922,17 @@ msgstr "Perkelti žemyn"
 
 #: panels/search/cc-search-panel.ui:31
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"Valdykite, kurie paieškos rezultatai rodomi veiklų apžvalgoje. Taip pat "
-"galima nustatyti paieškos rezultatų eilės tvarką stumdant eilutes sąraše."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "Valdykite, kurie paieškos rezultatai rodomi veiklų apžvalgoje. Taip pat galima nustatyti paieškos rezultatų eilės tvarką stumdant eilutes sąraše."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
 msgstr "Valdykite, kurios programos rodo paieškos rezultatus veiklų apžvalgoje"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Paieška;rasti;indeksas;slėpti;privatumas;rezultatai;"
@@ -6069,21 +5976,16 @@ msgstr "Pasirinkite aplanką"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr ""
-"Dalinimasis asmeniniais failais leidžia bendrinti viešą aplanką su kitais "
-"esamame tinkle naudojant: %s"
+msgstr "Dalinimasis asmeniniais failais leidžia bendrinti viešą aplanką su kitais esamame tinkle naudojant: %s"
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:702
 #, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
-msgstr ""
-"Kai leidžiama prisijungti nuotoliniu būdu, nutolę naudotojai gali "
-"prisijungti naudodami saugaus apvalkalo komandą:\n"
-"%s"
+msgstr "Kai leidžiama prisijungti nuotoliniu būdu, nutolę naudotojai gali prisijungti naudodami saugaus apvalkalo komandą:\n%s"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:708
@@ -6091,9 +5993,7 @@ msgstr ""
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
-msgstr ""
-"Dalijimasis ekranu leidžia nutolusiems naudotojams matyti ar valdyti jūsų "
-"ekraną prisijungiant prie %s"
+msgstr "Dalijimasis ekranu leidžia nutolusiems naudotojams matyti ar valdyti jūsų ekraną prisijungiant prie %s"
 
 #: panels/sharing/cc-sharing-panel.c:813
 msgid "Copy"
@@ -6188,15 +6088,12 @@ msgstr "Aplankai"
 msgid "Control what you want to share with others"
 msgstr "Valdykite, kuo norite dalintis su kitais"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
-msgstr ""
-"dalinimasis;dalintis;bendrinti;ssh;kompiuteris;pavadinimas;nutolęs;"
-"darbalaukis;medija;garsas;vaizdas;paveikslėliai;fotografijos;filmai;serveris;"
-"piešėjas;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
+msgstr "dalinimasis;dalintis;bendrinti;ssh;kompiuteris;pavadinimas;nutolęs;darbalaukis;medija;garsas;vaizdas;paveikslėliai;fotografijos;filmai;serveris;piešėjas;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -6204,8 +6101,7 @@ msgstr "Įjungti arba išjungti nuotolinį prisijungimą"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:12
 msgid "Authentication is required to enable or disable remote login"
-msgstr ""
-"Reikia patvirtinti tapatybę nuotoliniams prisijungimui įjungti ar išjungti"
+msgstr "Reikia patvirtinti tapatybę nuotoliniams prisijungimui įjungti ar išjungti"
 
 #: panels/sound/cc-alert-chooser.c:151
 msgid "Custom"
@@ -6309,13 +6205,12 @@ msgstr "Garsas"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Keisti garso garsumą, įvedimą ir įvykių garsus"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"Kortelė;Mikrofonas;Garsumas;Silpnėjimas;Balansas;Bluetooth;Ausinės;Garsas;"
-"Išvestis;Įvestis;"
+msgstr "Kortelė;Mikrofonas;Garsumas;Silpnėjimas;Balansas;Bluetooth;Ausinės;Garsas;Išvestis;Įvestis;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6391,9 +6286,10 @@ msgstr "Nepavyko pamiršti įrenginio:"
 #, c-format
 msgid "Depends on %u other device"
 msgid_plural "Depends on %u other devices"
-msgstr[0] "Priklauso nuo %u kito įrenginio"
-msgstr[1] "Priklauso nuo %u kitų įrenginių"
-msgstr[2] "Priklauso nuo %u kitų įrenginių"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:109
 msgid "Name:"
@@ -6433,12 +6329,8 @@ msgstr "Thunderbolt posistemė (boltd) neįdiegta arba nenustatyta teisingai."
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
-"Nepavyko aptikti Thunderbolt.\n"
-"Sistemai trūksta Thunderbolt palaikymo, ji buvo BIOS sistemoje išjungta arba "
-"nustatyta į nepalaikomą saugumo lygį."
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "Nepavyko aptikti Thunderbolt.\nSistemai trūksta Thunderbolt palaikymo, ji buvo BIOS sistemoje išjungta arba nustatyta į nepalaikomą saugumo lygį."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6463,9 +6355,7 @@ msgstr "Tiesioginė prieiga"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:269
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr ""
-"Leisti tiesioginę prieigą prie įrenginių, tokių kaip įstatymo stotys bei "
-"išoriniai GPU."
+msgstr "Leisti tiesioginę prieigą prie įrenginių, tokių kaip įstatymo stotys bei išoriniai GPU."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:289
 msgid "Only USB and Display Port devices can attach."
@@ -6487,7 +6377,9 @@ msgstr "Thunderbolt"
 msgid "Manage Thunderbolt devices"
 msgstr "Tvarkyti Thunderbolt įrenginius"
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;privatumas;"
@@ -6516,9 +6408,7 @@ msgstr "Žymiklio dydis"
 #: panels/universal-access/cc-cursor-size-dialog.ui:29
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
-"Žymiklio dydį galima sujungti su masteliu ir taip jį padaryti lengviau "
-"pastebimą."
+msgstr "Žymiklio dydį galima sujungti su masteliu ir taip jį padaryti lengviau pastebimą."
 
 #: panels/universal-access/cc-pointing-dialog.ui:7
 msgid "Click Assist"
@@ -6748,6 +6638,7 @@ msgid_plural "%d pixels"
 msgstr[0] "%d pikselis"
 msgstr[1] "%d pikseliai"
 msgstr[2] "%d pikselių"
+msgstr[3] "%d pikselių"
 
 #: panels/universal-access/cc-ua-panel.ui:55
 msgid "_Always Show Accessibility Menu"
@@ -7031,18 +6922,13 @@ msgstr "Spalvų efektai"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "Padarykite matymą, išgirdimą, rašymą, rodymą ir spaudimą paprastesnį"
 
-#. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Accessibility panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
-"Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
-"Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
-"audio;typing;"
-msgstr ""
-"Klaviatūra;Pelė;a11y;Prieiga;Universali prieiga;Kontrastas;Žymeklis;Garsas;"
-"Mastelis;Ekranas;Skaityklė;didelis;aukštas;tekstas;šriftas;dydis;AccessX;"
-"Kibūs;Klavišai;Lėtieji;Pasikartojantys;Pelė; Dvigubas;paspaudimas;Delsa;"
-"Greitis;Pagalba;Pasikartojimas;Mirksėjimas;vaizdinis;klausa;garsas;rašymas;"
+"Keyboard;Mouse;a11y;Accessibility;Universal "
+"Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "Klaviatūra;Pelė;a11y;Prieiga;Universali prieiga;Kontrastas;Žymeklis;Garsas;Mastelis;Ekranas;Skaityklė;didelis;aukštas;tekstas;šriftas;dydis;AccessX;Kibūs;Klavišai;Lėtieji;Pasikartojantys;Pelė; Dvigubas;paspaudimas;Delsa;Greitis;Pagalba;Pasikartojimas;Mirksėjimas;vaizdinis;klausa;garsas;rašymas;"
 
 #: panels/usage/cc-usage-panel.c:154
 msgid "Empty all items from Trash?"
@@ -7074,13 +6960,10 @@ msgstr "Failų istorija"
 
 #: panels/usage/cc-usage-panel.ui:41
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr ""
-"Failų istorija įrašo visus jūsų naudotus failus. Šia informacija dalinamasi "
-"tarp programų, todėl tampa lengviau rasti failus, kuriuos galbūt norite "
-"naudoti."
+msgstr "Failų istorija įrašo visus jūsų naudotus failus. Šia informacija dalinamasi tarp programų, todėl tampa lengviau rasti failus, kuriuos galbūt norite naudoti."
 
 #: panels/usage/cc-usage-panel.ui:56
 msgid "File H_istory"
@@ -7102,9 +6985,7 @@ msgstr "Šiukšlinė ir laikinieji failai"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr ""
-"Šiukšlinė ir laikinieji failai kartai gali turėti asmeninės ar jautrios "
-"informacijos. Automatinis jų ištrynimas gali padėti apsaugoti jūsų privatumą."
+msgstr "Šiukšlinė ir laikinieji failai kartai gali turėti asmeninės ar jautrios informacijos. Automatinis jų ištrynimas gali padėti apsaugoti jūsų privatumą."
 
 #: panels/usage/cc-usage-panel.ui:159
 msgid "Automatically Delete _Trash Content"
@@ -7126,61 +7007,71 @@ msgstr "Iš_valyti šiukšlinę…"
 msgid "_Delete Temporary Files…"
 msgstr "Išvalyti laikinuosius _failus…"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:278
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 valanda"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:282
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 diena"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:286
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 dienos"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:290
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 dienos"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:294
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 dienos"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:298
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 dienos"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:302
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 dienos"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:306
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 dienos"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:310
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 dienų"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:314
 msgctxt "purge_files"
 msgid "30 days"
@@ -7219,40 +7110,34 @@ msgid "Don't leave traces"
 msgstr "Nepalikti pėdsakų"
 
 #: panels/updates/cc-updates-panel.c:525
-#, fuzzy
 msgid "Limited data plan connection"
-msgstr "Pridėti naują ryšį"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.c:527
-#, fuzzy
 msgid "Unlimited data plan connection"
-msgstr "Nepavyko atverti ryšių redaktoriaus"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.c:576
-#, fuzzy
 msgid "No active connection"
-msgstr "Duomenų ryšys"
+msgstr ""
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:799
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Keisti tinklo nustatymus"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:60
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Automatiniai keliai"
+msgstr "Automatiniai atnaujinimai"
 
 #: panels/updates/cc-updates-panel.ui:61
 msgid "Create a daily window for updates to happen automatically."
 msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:83
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Tvarkaraštis"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:84
 msgid ""
@@ -7261,11 +7146,11 @@ msgid ""
 msgstr ""
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Automatiniai keliai"
+msgstr ""
 
-#. Translators: those are keywords for the automatic updates control-center panel
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
 msgstr ""
@@ -7301,17 +7186,13 @@ msgstr "Nepavyko prisijungti prie srities"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"Šis prisijungimo vardas nesuveikė.\n"
-"Bandykite dar kartą."
+msgstr "Šis prisijungimo vardas nesuveikė.\nBandykite dar kartą."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"Šis prisijungimo slaptažodis nesuveikė.\n"
-"Bandykite dar kartą."
+msgstr "Šis prisijungimo slaptažodis nesuveikė.\nBandykite dar kartą."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
@@ -7367,10 +7248,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"Kompanijos prisijungimas leidžia šiame įrenginyje naudoti centralizuotai "
-"tvarkomą naudotojo paskyrą. Taip pat galima naudoti šią paskyrą kompanijos "
-"ištekliams internete pasiekti."
+msgstr "Kompanijos prisijungimas leidžia šiame įrenginyje naudoti centralizuotai tvarkomą naudotojo paskyrą. Taip pat galima naudoti šią paskyrą kompanijos ištekliams internete pasiekti."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
@@ -7416,11 +7294,10 @@ msgstr "_Taip"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
-"Ar norite ištrinti įrašytus pirštų antspaudus, kad būtų išjungtas "
-"prisijungimas pirštų antspaudais?"
+msgstr "Ar norite ištrinti įrašytus pirštų antspaudus, kad būtų išjungtas prisijungimas pirštų antspaudais?"
 
-#. Translators: This is the empty state page label which states that there are no devices ready.
+#. Translators: This is the empty state page label which states that there are
+#. no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 msgid "No Fingerprint device"
 msgstr "Nėra _pirštų atspaudų skaitytuvo"
@@ -7445,9 +7322,7 @@ msgstr "Pirštų atspaudų skaitytuvas"
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr ""
-"Prisijungimas piršto atspaudu leidžia atrakinti bei prisijungti prie "
-"kompiuterio pirštu"
+msgstr "Prisijungimas piršto atspaudu leidžia atrakinti bei prisijungti prie kompiuterio pirštu"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
 msgid "_Delete Fingerprints"
@@ -7583,9 +7458,7 @@ msgstr "Nepavyko sustabdyti įtraukimo: %s"
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr ""
-"Pakartotinai atitraukite ir uždėkite savo pirštą ant skaitytuvo piršto "
-"atspaudui įtraukti"
+msgstr "Pakartotinai atitraukite ir uždėkite savo pirštą ant skaitytuvo piršto atspaudui įtraukti"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:1118
@@ -7759,9 +7632,7 @@ msgstr "%s vis dar prisijungęs"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
-"Naudotojų ištrynimas, kai jie yra prisijungę, gali palikti sistemą "
-"nekorektiškoje būsenoje."
+msgstr "Naudotojų ištrynimas, kai jie yra prisijungę, gali palikti sistemą nekorektiškoje būsenoje."
 
 #: panels/user-accounts/cc-user-panel.c:629
 #, c-format
@@ -7772,8 +7643,7 @@ msgstr "Ar norite palikti naudotojo %s failus?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"Trinant naudotoją galima palikti namų katalogą, paštą ir laikinus failus."
+msgstr "Trinant naudotoją galima palikti namų katalogą, paštą ir laikinus failus."
 
 #: panels/user-accounts/cc-user-panel.c:636
 msgid "_Delete Files"
@@ -7786,8 +7656,7 @@ msgstr "_Palikti failus"
 #: panels/user-accounts/cc-user-panel.c:651
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr ""
-"Ar tikrai norite atimti teises iš nuotoliniu būdu tvarkomos paskyros %s?"
+msgstr "Ar tikrai norite atimti teises iš nuotoliniu būdu tvarkomos paskyros %s?"
 
 #: panels/user-accounts/cc-user-panel.c:655
 msgid "_Delete"
@@ -7835,9 +7704,7 @@ msgstr "Įsitikinkite, kad AccountService yra įdiegta ir įjungta."
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"Pakeitimams atlikti,\n"
-"pirma paspauskite * piktogramą"
+msgstr "Pakeitimams atlikti,\npirma paspauskite * piktogramą"
 
 #: panels/user-accounts/cc-user-panel.c:1366
 msgid "Delete the selected user account"
@@ -7848,9 +7715,7 @@ msgstr "Ištrinti pasirinktą naudotoją"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"Pasirinktam naudotojui ištrinti,\n"
-"pirma paspauskite * piktogramą"
+msgstr "Pasirinktam naudotojui ištrinti,\npirma paspauskite * piktogramą"
 
 #: panels/user-accounts/cc-user-panel.c:1535
 msgid "Unlock to Add Users and Change Settings"
@@ -7889,9 +7754,7 @@ msgstr "_Administratorius"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr ""
-"Administratoriai gali pridėti bei šalinti naudotojos ir keisti visų "
-"naudotojų nustatymus."
+msgstr "Administratoriai gali pridėti bei šalinti naudotojos ir keisti visų naudotojų nustatymus."
 
 #: panels/user-accounts/cc-user-panel.ui:284
 msgid "_Parental Controls"
@@ -7921,7 +7784,8 @@ msgstr "Paskyros veikla"
 msgid "Remove User…"
 msgstr "Pašalinti naudotoją…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:501
 msgid "No Users Found"
 msgstr "Nerasta naudotojų"
@@ -7938,17 +7802,16 @@ msgstr "Naudotojai"
 msgid "Add or remove users and change your password"
 msgstr "Pridėti arba šalinti naudotojus bei keiskite savo slaptažodį"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
-msgstr ""
-"Prisijungimas;Pavadinimas;Piršto atspaudas;Atvaizdas;Logo;Veidas;Slaptažodis;"
-"Tėvų kontrolė;Ekrano laikas;Programų ribojimai;Žiniatinklio ribojimai;"
-"Naudojimas;Naudojimo ribojimai;Vaikas;"
+msgstr "Prisijungimas;Pavadinimas;Piršto atspaudas;Atvaizdas;Logo;Veidas;Slaptažodis;Tėvų kontrolė;Ekrano laikas;Programų ribojimai;Žiniatinklio ribojimai;Naudojimas;Naudojimo ribojimai;Vaikas;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "Į_traukti"
@@ -7962,10 +7825,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"Kompanijos prisijungimams naudoti, šis kompiuteris turi būti\n"
-"įtrauktas į sritį. Paprašykite tinklo administratoriaus čia\n"
-"įvesti jų srities slaptažodį."
+msgstr "Kompanijos prisijungimams naudoti, šis kompiuteris turi būti\nįtrauktas į sritį. Paprašykite tinklo administratoriaus čia\nįvesti jų srities slaptažodį."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -8058,9 +7918,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"Venkite to paties simbolio pasikartojimų: reikia maišyti raides, skaitmenis "
-"ir skyrybos ženklus."
+msgstr "Venkite to paties simbolio pasikartojimų: reikia maišyti raides, skaitmenis ir skyrybos ženklus."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -8072,9 +7930,7 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"Slaptažodis per trumpas. Mėginkite pridėti daugiau raidžių, skaitmenų ir "
-"skyrybos ženklų mišinį."
+msgstr "Slaptažodis per trumpas. Mėginkite pridėti daugiau raidžių, skaitmenų ir skyrybos ženklų mišinį."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -8084,9 +7940,9 @@ msgstr "Maišykite didžiąsias ir mažąsias raides bei panaudokite skaitmenų.
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
-msgstr ""
-"Pridėję raidžių, skaitmenų ir skyrybos ženklų  padarytumėt jį dar stipresnį."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
+msgstr "Pridėję raidžių, skaitmenų ir skyrybos ženklų  padarytumėt jį dar stipresnį."
 
 #: panels/user-accounts/run-passwd.c:413
 msgid "Authentication failed"
@@ -8142,9 +7998,7 @@ msgstr "Nežinoma klaida"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"Naudotojo vardą gali sudaryti tik raidės mažosios raidės a-z, skaitmenys ir "
-"šie simboliai: - _"
+msgstr "Naudotojo vardą gali sudaryti tik raidės mažosios raidės a-z, skaitmenys ir šie simboliai: - _"
 
 #: panels/user-accounts/user-utils.c:436
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -8175,18 +8029,13 @@ msgstr "Susieti mygtukus su funkcijomis"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"Norėdami pakeisti spartųjį klavišą, pasirinkite „siųsti klavišų "
-"kombinaciją“, paspauskite klaviatūros trumpinio mygtuką ir laikykite naujus "
-"klavišus arba spauskite grįžtamąjį trynimą išvalymui."
+msgstr "Norėdami pakeisti spartųjį klavišą, pasirinkite „siųsti klavišų kombinaciją“, paspauskite klaviatūros trumpinio mygtuką ir laikykite naujus klavišus arba spauskite grįžtamąjį trynimą išvalymui."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
-"Palieskite taikinio žymeklius jiems pasirodžius ekrane planšetės "
-"kalibravimui."
+msgstr "Palieskite taikinio žymeklius jiems pasirodžius ekrane planšetės kalibravimui."
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
@@ -8255,11 +8104,10 @@ msgstr "Wacom planšetė"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
-"Nustatykite mygtukų susiejimus ir pritaikykite pieštuko jautrumą grafinėms "
-"planšetėms"
+msgstr "Nustatykite mygtukų susiejimus ir pritaikykite pieštuko jautrumą grafinėms planšetėms"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Planšetė;Wacom;Rašiklis;Trintukas;Pelė;"
@@ -8351,8 +8199,7 @@ msgstr "Nerasta pieštukų"
 
 #: panels/wacom/wacom-stylus-page.ui:93
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr ""
-"Norėdami tęsti perkelkite savo pieštukus arčiau planšetės konfigūravimui"
+msgstr "Norėdami tęsti perkelkite savo pieštukus arčiau planšetės konfigūravimui"
 
 #: panels/wacom/wacom-stylus-page.ui:159
 msgid "Eraser Pressure Feel"
@@ -8553,17 +8400,19 @@ msgstr "Įveskite PUK kodą SIM kortelei atrakinti"
 #, c-format
 msgid "Wrong password entered. You have %1$u try left"
 msgid_plural "Wrong password entered. You have %1$u tries left"
-msgstr[0] "Įvestas blogas slaptažodis. Liko %1$u bandymas"
-msgstr[1] "Įvestas blogas slaptažodis. Liko %1$u bandymai"
-msgstr[2] "Įvestas blogas slaptažodis. Liko %1$u bandymų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: panels/wwan/cc-wwan-device-page.c:221
 #, c-format
 msgid "You have %u try left"
 msgid_plural "You have %u tries left"
-msgstr[0] "Liko %1$u bandymas"
-msgstr[1] "Liko %1$u bandymai"
-msgstr[2] "Liko %1$u bandymų"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: panels/wwan/cc-wwan-device-page.c:226
 msgid "Wrong password entered."
@@ -8813,7 +8662,8 @@ msgstr "Mobilusis tinklas"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Konfigūruoti telefonijos ir mobiliųjų duomenų ryšius"
 
-#. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the WWAN panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
 msgstr "mobilusis;wwan;telefonija;sim;mibilusis;"
@@ -8883,15 +8733,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"Ši Nustatymų versija turėtų būti naudojama tik kūrimo reikmėms. Sistema gali "
-"veikti nekorektiškai, gali būti prarasti duomenys ar kilti kitų problemų."
+msgstr "Ši Nustatymų versija turėtų būti naudojama tik kūrimo reikmėms. Sistema gali veikti nekorektiškai, gali būti prarasti duomenys ar kilti kitų problemų."
 
 #: shell/cc-window.ui:330
 msgid "Help"
 msgstr "Pagalba"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "Nuostatos;Nustatymai;"
@@ -8932,11 +8781,9 @@ msgstr "Paskutinio atverto Nustatymų skydelio identifikatorius"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
-"Paskutinio atverto Nustatymų skydelio identifikatorius. Neatpažintų verčių "
-"bus nepaisoma ir bus atvertas pirmas skydelis iš sąrašo."
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "Paskutinio atverto Nustatymų skydelio identifikatorius. Neatpažintų verčių bus nepaisoma ir bus atvertas pirmas skydelis iš sąrašo."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
@@ -8956,6 +8803,7 @@ msgid_plural "%u Outputs"
 msgstr[0] "%u išvestis"
 msgstr[1] "%u išvestys"
 msgstr[2] "%u išvesčių"
+msgstr[3] "%u išvesčių"
 
 #. translators:
 #. * The number of sound inputs on a particular device
@@ -8966,1798 +8814,8 @@ msgid_plural "%u Inputs"
 msgstr[0] "%u įvestis"
 msgstr[1] "%u įvestys"
 msgstr[2] "%u įvesčių"
+msgstr[3] "%u įvesčių"
 
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Sistemos garsai"
-
-#~ msgid "Open in Software"
-#~ msgstr "Atverti Programinėje įrangoje"
-
-#~ msgid "Allow user to change their password on next login"
-#~ msgstr "Leisti naudotojui pakeisti slaptažodį kito prisijungimo metu"
-
-#~ msgid "Set a password now"
-#~ msgstr "Nustatyti slaptažodį dabar"
-
-#~ msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-#~ msgstr ""
-#~ "Prisijungimo vardas;Vardas;Piršo atspaudas;Atvaizdas;Logotipas;Veidas;"
-#~ "Slaptažodis;"
-
-#~ msgid "_Screen Brightness"
-#~ msgstr "_Ekrano šviesumas"
-
-#~ msgid "_Keyboard Brightness"
-#~ msgstr "_Klaviatūros šviesumas"
-
-#~ msgid "Dim Screen When Inactive"
-#~ msgstr "Pritemdyti ekraną, kai kompiuteris nenaudojamas"
-
-#~ msgid "_Blank Screen"
-#~ msgstr "_Išjungti ekraną"
-
-#~ msgid "_Wi-Fi"
-#~ msgstr "_Wi-Fi"
-
-#~ msgid "Wi-Fi can be turned off to save power."
-#~ msgstr "Wi-Fi gali būti išjungtas energijos taupymui."
-
-#~ msgid ""
-#~ "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
-#~ msgstr ""
-#~ "Mobilųjį plačiajuostį (3G, 4G, LTE ir kt.) galima išjungti energijai "
-#~ "taupyti."
-
-#~ msgid "_Bluetooth"
-#~ msgstr "_Bluetooth"
-
-#~ msgid "Bluetooth can be turned off to save power."
-#~ msgstr "Bluetooth galima išjungti energijos taupymui."
-
-#~ msgid "Balanced Power"
-#~ msgstr "Balansuotas energijos suvartojimas"
-
-#~ msgid "Add…"
-#~ msgstr "Pridėti…"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Klaviatūros trumpinys"
-
-#~ msgid "This can be changed in Customize Shortcuts"
-#~ msgstr "Galima keisti trumpiniams tinkinti"
-
-#~ msgid "Hold down and type to enter different characters"
-#~ msgstr "Laikykite nuspaudę ir spausdinkite skirtingiems simboliams įvesti"
-
-#~ msgid "Left Alt"
-#~ msgstr "Kairysis Alt"
-
-#~ msgid "Right Alt"
-#~ msgstr "Dešinysis Alt"
-
-#~ msgid "Left Super"
-#~ msgstr "Kairysis Super"
-
-#~ msgid "Right Super"
-#~ msgstr "Dešinysis Super"
-
-#~ msgid "Right Ctrl"
-#~ msgstr "Dešinysis Vald"
-
-#~ msgid "Alternative Characters Key"
-#~ msgstr "Alternatyvių simbolių klavišas"
-
-#~ msgid "Modifiers-only switch to next source"
-#~ msgstr "Tik modifikatoriai perjungia į kitą šaltinį"
-
-#~ msgctxt "keyboard key"
-#~ msgid "Menu Key"
-#~ msgstr "Meniu klavišas"
-
-#~ msgctxt "Battery power"
-#~ msgid "Charging"
-#~ msgstr "Įkraunama"
-
-#~ msgctxt "Battery power"
-#~ msgid "Caution"
-#~ msgstr "Įspėjimas"
-
-#~ msgctxt "Battery power"
-#~ msgid "Low"
-#~ msgstr "Žemas"
-
-#~ msgctxt "Battery power"
-#~ msgid "Good"
-#~ msgstr "Geras"
-
-#~ msgctxt "Battery power"
-#~ msgid "Fully charged"
-#~ msgstr "Pilnai įkrautas"
-
-#~ msgctxt "Battery power"
-#~ msgid "Empty"
-#~ msgstr "Tuščia"
-
-#~ msgid "Previous source"
-#~ msgstr "Ankstesnis šaltinis"
-
-#~ msgid "Super+Shift+Space"
-#~ msgstr "Super+Lyg2+Tarpas"
-
-#~ msgid "Next source"
-#~ msgstr "Kitas šaltinis"
-
-#~ msgid "Super+Space"
-#~ msgstr "Super+Tarpa"
-
-#~ msgid "Left+Right Alt"
-#~ msgstr "Kairėn+dešinysis alt"
-
-#~ msgid "Universal Access"
-#~ msgstr "Universali prieiga"
-
-#~ msgid "Switch off to connect to a Wi-Fi network"
-#~ msgstr "Išjungti prisijungimui prie belaidžio tinklo"
-
-#~ msgctxt "Wi-Fi passkey"
-#~ msgid "Password"
-#~ msgstr "Slaptažodis"
-
-#~ msgid "Enable Fingerprint Login"
-#~ msgstr "Leisti prisijungti piršto antspaudu"
-
-#~ msgid "_Other finger:"
-#~ msgstr "Kitas _pirštas:"
-
-#~ msgid ""
-#~ "Your fingerprint was successfully saved. You should now be able to log in "
-#~ "using your fingerprint reader."
-#~ msgstr ""
-#~ "Pirštų antspaudai sėkmingai įrašyti. Dabar galite prisijungti "
-#~ "naudodamiesi pirštų antspaudų skaitytuvu."
-
-#~ msgid ""
-#~ "You are not allowed to access the device. Contact your system "
-#~ "administrator."
-#~ msgstr ""
-#~ "Jums neleidžiama naudotis šiuo įrenginiu. Susisiekite su sistemos "
-#~ "administratoriumi."
-
-#~ msgid "An internal error occurred."
-#~ msgstr "Įvyko vidinė klaida."
-
-#~ msgid "Delete registered fingerprints?"
-#~ msgstr "Ar ištrinti įrašytus pirštų antspaudus?"
-
-#~ msgid "Done!"
-#~ msgstr "Baigta!"
-
-#~ msgid "Could not access “%s” device"
-#~ msgstr "Nepavyko pasiekti įrenginio „%s“"
-
-#~ msgid "Could not start finger capture on “%s” device"
-#~ msgstr "Nepavyko pradėti piršto antspaudo nuskaitymo įrenginiu „%s“"
-
-#~ msgid "Could not access any fingerprint readers"
-#~ msgstr "Nepavyko pasiekti pirštų antspaudų skaitytuvo"
-
-#~ msgid "Please contact your system administrator for help."
-#~ msgstr "Susisiekite su sistemos administratoriumi, jei reikia pagalbos."
-
-#~ msgid ""
-#~ "To enable fingerprint login, you need to save one of your fingerprints, "
-#~ "using the “%s” device."
-#~ msgstr ""
-#~ "Jei norite prisijungti pirštų antspaudu, turite įrašyti bent vieną iš "
-#~ "savo pirštų antspaudų įrenginiu „%s“."
-
-#~ msgid "Selecting finger"
-#~ msgstr "Pasirinkite pirštą"
-
-#~ msgid "Add user accounts and change passwords"
-#~ msgstr "Pridėti arba šalinti naudotojus bei keisti slaptažodžius"
-
-#~ msgid "Play and record sound"
-#~ msgstr "Groti ir įrašyti garsą"
-
-#~ msgid "Detect network devices using mDNS/DNS-SD (Bonjour/zeroconf)"
-#~ msgstr "Aptikti tinklo įrenginius naudojant mDNS/DNS-SD (Bonjour/zeroconf)"
-
-#~ msgid "Access bluetooth hardware directly"
-#~ msgstr "Tiesiogiai pasiekti bluetooth aparatūrą"
-
-#~ msgid "Use bluetooth devices"
-#~ msgstr "Naudoti bluetooth įrenginius"
-
-#~ msgid "Use your camera"
-#~ msgstr "Naudoti jūsų kamerą"
-
-#~ msgid "Print documents"
-#~ msgstr "Spausdinti dokumentus"
-
-#~ msgid "Use any connected joystick"
-#~ msgstr "Naudoti bet kurį prijungtą žaidimų pultą"
-
-#~ msgid "Allow connecting to the Docker service"
-#~ msgstr "Leisti prisijungti prie Docker tarnybos"
-
-#~ msgid "Configure network firewall"
-#~ msgstr "Konfigūruoti tinklo ugniasienę"
-
-#~ msgid "Setup and use privileged FUSE filesystems"
-#~ msgstr "Nustatyti ir naudoti privilegijuotas FUSE failų sistemas"
-
-#~ msgid "Update firmware on this device"
-#~ msgstr "Atnaujinti šio įrenginio aparatinę programinę įrangą"
-
-#~ msgid "Access hardware information"
-#~ msgstr "Pasiekti aparatinės įrangos informaciją"
-
-#~ msgid "Provide entropy to hardware random number generator"
-#~ msgstr "Pateikti entropiją aparatiniam atsitiktinių skaičių generatoriui"
-
-#~ msgid "Use hardware-generated random numbers"
-#~ msgstr "Naudoti aparatūros sugeneruotus atsitiktinius skaičius"
-
-#~ msgid "Access files in your home folder"
-#~ msgstr "Pasiekti failus jūsų namų aplanke"
-
-#~ msgid "Access libvirt service"
-#~ msgstr "Pasiekti libvirt tarnybą"
-
-#~ msgid "Change system language and region settings"
-#~ msgstr "Keiskti sistemos kalbos ir regiono nustatymus"
-
-#~ msgid "Change location settings and providers"
-#~ msgstr "Keisti vietos nustatymus bei tiekėjus"
-
-#~ msgid "Access your location"
-#~ msgstr "Pasiekti jūsų vietą"
-
-#~ msgid "Read system and application logs"
-#~ msgstr "Skaityti sistemos ir programų žurnalus"
-
-#~ msgid "access the media-hub service"
-#~ msgstr "pasiekti media-hub tarnybą"
-
-#~ msgid "Use and configure modems"
-#~ msgstr "Naudoti ir konfigūruoti modemus"
-
-#~ msgid "Read system mount information and disk quotas"
-#~ msgstr "Skaityti sistemos prijungimo informaciją bei diskų kvotas"
-
-#~ msgid "Control music and video players"
-#~ msgstr "Valdyti muzikos bei vaizdo grotuvus"
-
-#~ msgid "Change low-level network settings"
-#~ msgstr "Keisti žemo lygmens tinklo nustatymus"
-
-#~ msgid ""
-#~ "Access the NetworkManager service to read and change network settings"
-#~ msgstr ""
-#~ "Pasiekti NetworkManager tarnybą tinklo nustatymams skaityti bei keisti"
-
-#~ msgid "Read access to network settings"
-#~ msgstr "Skaitymo prieiga prie tinklo nustatymų"
-
-#~ msgid ""
-#~ "Access the ofono service to read and change network settings for mobile "
-#~ "telephony"
-#~ msgstr ""
-#~ "Prieiga prie ofono tarnybos tinklo nustatymams skaityti bei keisti "
-#~ "mobiliai telefonijai"
-
-#~ msgid "Control Open vSwitch hardware"
-#~ msgstr "Valdyti Open vSwitch aparatūrą"
-
-#~ msgid "Read from CD/DVD"
-#~ msgstr "Skaityti iš CD/DVD"
-
-#~ msgid "Read, add, change, or remove saved passwords"
-#~ msgstr "Skaityti, pridėti, keisti arba šalinti įrašytus slaptažodžius"
-
-#~ msgid ""
-#~ "Access pppd and ppp devices for configuring Point-to-Point Protocol "
-#~ "connections"
-#~ msgstr ""
-#~ "Pasiekti pppd ir ppp įrenginius Point-to-Point protokolo ryšiams "
-#~ "konfigūruoti"
-
-#~ msgid "Pause or end any process on the system"
-#~ msgstr "Pristabdyti arba užbaigti procesą sistemoje"
-
-#~ msgid "Access USB hardware directly"
-#~ msgstr "Tiesiogiai pasiekti USB aparatūrą"
-
-#~ msgid "Read/write files on removable storage devices"
-#~ msgstr "Rašyti/skaityti failus išimamose laikmenose"
-
-#~ msgid "Prevent screen sleep/lock"
-#~ msgstr "Neleisti ekranui užmigti/užsirakinti"
-
-#~ msgid "Access serial port hardware"
-#~ msgstr "Pasiekti serijinių prievadų aparatūrą"
-
-#~ msgid "Restart or power off the device"
-#~ msgstr "Perleisti arba išjungti įrenginį"
-
-#~ msgid "Install, remove and configure software"
-#~ msgstr "Įdiegti, pašalinti arba konfigūruoti programinę įrangą"
-
-#~ msgid "Access Storage Framework service"
-#~ msgstr "Pasiekti saugyklos karkaso tarnybą"
-
-#~ msgid "Read process and system information"
-#~ msgstr "Skaityti proceso bei sistemos informaciją"
-
-#~ msgid "Monitor and control any running program"
-#~ msgstr "Stebėti bei valdyti bet kurią veikiančią programą"
-
-#~ msgid "Change the date and time"
-#~ msgstr "Keisti datą ir laiką"
-
-#~ msgid "Change time server settings"
-#~ msgstr "Keiskite laiko serverio nustatymus"
-
-#~ msgid "Change the time zone"
-#~ msgstr "Keiskite laiko juostą"
-
-#~ msgid "Access the UDisks2 service for configuring disks and removable media"
-#~ msgstr "Pasiekti UDisks2 tarnybą diskų ir išimamų laikmenų konfigūravimui"
-
-#~ msgid "Read/change shared calendar events in Ubuntu Unity 8"
-#~ msgstr "Skaityti/keisti bendrinamus kalendoriaus įvykius Ubuntu Unity 8"
-
-#~ msgid "Read/change shared contacts in Ubuntu Unity 8"
-#~ msgstr "Skaityti/keisti bendrinamus kontaktus Ubuntu Unity 8"
-
-#~ msgid "Access energy usage data"
-#~ msgstr "Pasiekti energijos naudojimo duomenis"
-
-#~ msgid "Read/write access to U2F devices exposed"
-#~ msgstr "Skaitymo/rašymo prieiga prie U2F įrenginių"
-
-#~ msgid "∶"
-#~ msgstr "∶"
-
-#~ msgid ""
-#~ "To create a user account,\n"
-#~ "click the * icon first"
-#~ msgstr ""
-#~ "Naudotojui sukurti,\n"
-#~ "pirma paspauskite * piktogramą"
-
-#~ msgid "Set Background and Lock Screen"
-#~ msgstr "Nustatyti foną ir užrakinimo ekraną"
-
-#~ msgid "Set Background"
-#~ msgstr "Nustatyti foną"
-
-#~ msgid "Set Lock Screen"
-#~ msgstr "Nustatyti užrakinimo ekraną"
-
-#~ msgid "Remove Background"
-#~ msgstr "Pašalinti foną"
-
-#~ msgid "Reports are sent anonymously and are scrubbed of personal data."
-#~ msgstr ""
-#~ "Pranešimai yra siunčiami anonimiškai, o asmeniniai duomenys yra išdarkomi."
-
-#~ msgid ""
-#~ "Sending reports of technical problems help us improve this operating "
-#~ "system."
-#~ msgstr ""
-#~ "Pranešimų apie technines problemas siuntimas mums padeda pagerinti šią "
-#~ "operacinę sistemą."
-
-#~ msgid "Restrict _background data usage"
-#~ msgstr "Riboti duomenų naudojimą _fone"
-
-#~ msgid "Appropriate for connections that have data charges or limits."
-#~ msgstr "Tinkama ryšiams, kur duomenys yra apmokestinami arba ribojami."
-
-#~ msgid "Notification _Popups"
-#~ msgstr "_Pranešimų iššokimai"
-
-#~ msgid "No regions found"
-#~ msgstr "Nerasta regionų"
-
-#~ msgid "Last Login"
-#~ msgstr "Paskutinis prisijungimas"
-
-#~ msgid "Version %s"
-#~ msgstr "Versija %s"
-
-#~ msgid "OS name"
-#~ msgstr "OS pavadinimas"
-
-#~ msgid "OS type"
-#~ msgstr "OS tipas"
-
-#~ msgid "Disk"
-#~ msgstr "Diskas"
-
-#~ msgid "Check for updates"
-#~ msgstr "Tikrinti, ar yra atnaujinimų"
-
-#~ msgid "Network proxy"
-#~ msgstr "Tarpinis tinklo serveris"
-
-#~ msgid "page 1"
-#~ msgstr "puslapis 1"
-
-#~ msgid "Inner _authentication"
-#~ msgstr "Vidinis t_apatybės patvirtinimas"
-
-#~ msgid "page 2"
-#~ msgstr "puslapis 2"
-
-#~ msgid "Twisted Pair (TP)"
-#~ msgstr "Sukta pora (TP)"
-
-#~ msgid "Attachment Unit Interface (AUI)"
-#~ msgstr "Prijungiamo modulio sąsaja (AUI)"
-
-#~ msgid "BNC"
-#~ msgstr "BNC"
-
-#~ msgid "Media Independent Interface (MII)"
-#~ msgstr "Nuo laikmenos nepriklausanti sąsaja (MII)"
-
-#~ msgid "10 Mb/s"
-#~ msgstr "10 Mb/s"
-
-#~ msgid "100 Mb/s"
-#~ msgstr "100 Mb/s"
-
-#~ msgid "1 Gb/s"
-#~ msgstr "1 Gb/s"
-
-#~ msgid "10 Gb/s"
-#~ msgstr "10 Gb/s"
-
-#~ msgid ""
-#~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
-#~ msgstr ""
-#~ "Persijungimas prie belaidžio prieigos taško atjungs jus nuo <b>%s</b>."
-
-#~ msgid ""
-#~ "It is not possible to access the Internet through your wireless while the "
-#~ "hotspot is active."
-#~ msgstr ""
-#~ "Neįmanoma pasiekti interneto per jūsų belaidį, kol prieigos taškas yra "
-#~ "aktyvus."
-
-#~ msgid ""
-#~ "Wi-Fi hotspots are usually used to share an additional Internet "
-#~ "connection over Wi-Fi."
-#~ msgstr ""
-#~ "Belaidžiai prieigos taškai dažniausiai dalinasi papildomu interneto ryšių "
-#~ "per Wi-Fi."
-
-#~ msgid "Automatic _Connect"
-#~ msgstr "A_utomatinis prisijungimas"
-
-#~ msgid "details"
-#~ msgstr "išsamiau"
-
-#~ msgid "Show P_assword"
-#~ msgstr "Rodyti sl_aptažodį"
-
-#~ msgid "Make available to other users"
-#~ msgstr "Padaryti pasiekiamu kitiems naudotojams"
-
-#~ msgid "identity"
-#~ msgstr "tapatybė"
-
-#~ msgid "IPv_4"
-#~ msgstr "IPv_4"
-
-#~ msgid "_Addresses"
-#~ msgstr "_Adresai"
-
-#~ msgid "Automatic (DHCP) addresses only"
-#~ msgstr "Tik automatiniai (DHCP) adresai"
-
-#~ msgid "Link-local only"
-#~ msgstr "Tik vietiniai susiejimai"
-
-#~ msgid "_Ignore automatically obtained routes"
-#~ msgstr "_Nepaisyti automatiškai gaunamų kelių"
-
-#~ msgid "ipv4"
-#~ msgstr "ipv4"
-
-#~ msgid "IPv_6"
-#~ msgstr "IPv_6"
-
-#~ msgid "ipv6"
-#~ msgstr "ipv6"
-
-#~ msgid "_Cloned MAC Address"
-#~ msgstr "_Klonuotas MAC adresas"
-
-#~ msgid "_Reset"
-#~ msgstr "_Atstatyti"
-
-#~ msgid ""
-#~ "Reset the settings for this connection to their defaults, but remember as "
-#~ "a preferred connection."
-#~ msgstr ""
-#~ "Atstatyti numatytuosius šio ryšio nustatymus, bet atsiminti jį kaip "
-#~ "pageidaujamą."
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect to it."
-#~ msgstr ""
-#~ "Pašalinti visus su šiuo ryšiu susijusius duomenis ir nemėginti "
-#~ "automatiškai prie jo prisijungti."
-
-#~ msgid "Hardware"
-#~ msgstr "Aparatinė įranga"
-
-#~ msgctxt "tab"
-#~ msgid "Reset"
-#~ msgstr "Atstatyti"
-
-#~ msgid "Connected Devices"
-#~ msgstr "Prisijungti įrenginiai"
-
-#~ msgid "Ad-hoc"
-#~ msgstr "Ad-hoc"
-
-#~ msgid "Infrastructure"
-#~ msgstr "Infrastruktūra"
-
-#~ msgid "In use"
-#~ msgstr "Naudojama"
-
-#~ msgctxt "Location services status"
-#~ msgid "On"
-#~ msgstr "Įjungta"
-
-#~ msgctxt "Location services status"
-#~ msgid "Off"
-#~ msgstr "Išjungta"
-
-#~ msgctxt "Camera status"
-#~ msgid "Off"
-#~ msgstr "Išjungta"
-
-#~ msgctxt "Camera status"
-#~ msgid "On"
-#~ msgstr "Įjungta"
-
-#~ msgctxt "Microphone status"
-#~ msgid "Off"
-#~ msgstr "Išjungta"
-
-#~ msgctxt "Microphone status"
-#~ msgid "On"
-#~ msgstr "Įjungta"
-
-#~ msgid "Usage & History"
-#~ msgstr "Naudojimas ir istorija"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "Privatumo politika"
-
-#~ msgid ""
-#~ "Remembering your history makes things easier to find again. These items "
-#~ "are never shared over the network."
-#~ msgstr ""
-#~ "Istorijos įsiminimas leidžia lengviau vėl rasti dalykus. Šiais elementais "
-#~ "niekada nesidalinama tinkle."
-
-#~ msgid "_Recently Used"
-#~ msgstr "_Neseniai naudoti"
-
-#~ msgid "Retain _History"
-#~ msgstr "Išlaikyti _istoriją"
-
-#~ msgid "The Screen Lock protects your privacy when you are away."
-#~ msgstr "Ekrano užrakinimas apsaugo jūsų privatumą, kai esate atsitraukęs."
-
-#~ msgid "Lock screen _after blank for"
-#~ msgstr "Užr_akinti ekraną po tuščio praėjus"
-
-#~ msgid "Lock Screen _Notifications"
-#~ msgstr "_Pranešimai ekrano užrakte"
-
-#~ msgid ""
-#~ "Automatically purge the Trash and temporary files to help keep your "
-#~ "computer free of unnecessary sensitive information."
-#~ msgstr ""
-#~ "Automatiškai išvalyti šiukšlinę ir laikinuosius failus, siekiant "
-#~ "nelaikyti kompiuteryje nereikalingos ir jautrios informacijos."
-
-#~ msgid "Purge _After"
-#~ msgstr "Išv_alyti po"
-
-#~ msgid ""
-#~ "Sending us information about which software you use helps us provide you "
-#~ "with more accurate recommendations. It also helps us to improve our "
-#~ "software.\n"
-#~ "\n"
-#~ "All the information we collect is made anonymous, and we will never share "
-#~ "your data with third parties."
-#~ msgstr ""
-#~ "Atsiųsdami mums informaciją apie naudojamą programinę įrangą padės mums "
-#~ "pateikti jums tikslesnes rekomendacija. Tai taip pat mums padeda "
-#~ "tobulinti programinę įrangą.\n"
-#~ "\n"
-#~ "Visa surinkta informacija yra anoniminė, ja niekada nebus dalinamasi su "
-#~ "trečiosiomis šalimis."
-
-#~ msgid "_Send software usage statistics"
-#~ msgstr "_Siųsti programinės įrangos naudojimo statistiką"
-
-#~ msgid "_Camera"
-#~ msgstr "_Kamera"
-
-#~ msgid "_Microphone"
-#~ msgstr "_Mikrofonas"
-
-#~ msgid "_Location Services"
-#~ msgstr "_Vietos tarnybos"
-
-#~ msgid "Protect your personal information and control what others might see"
-#~ msgstr "Apsaugokite asmeninę informaciją ir valdykite, ką kiti gali matyti"
-
-#~ msgid "Flash the _window title"
-#~ msgstr "Blykstelti _lango antraštę"
-
-#~ msgid "The username cannot start with a “-”."
-#~ msgstr "Naudotojo vardas negali prasidėti simboliu „-“."
-
-#~ msgid "_Background"
-#~ msgstr "_Fonas"
-
-#~ msgid "Changes throughout the day"
-#~ msgstr "Pakeitimai per dieną"
-
-#~ msgctxt "background, style"
-#~ msgid "Tile"
-#~ msgstr "Išdėstyti"
-
-#~ msgctxt "background, style"
-#~ msgid "Zoom"
-#~ msgstr "Keisti mastelį"
-
-#~ msgctxt "background, style"
-#~ msgid "Center"
-#~ msgstr "Centruoti"
-
-#~ msgctxt "background, style"
-#~ msgid "Scale"
-#~ msgstr "Ištempti"
-
-#~ msgctxt "background, style"
-#~ msgid "Fill"
-#~ msgstr "Užpildyti"
-
-#~ msgctxt "background, style"
-#~ msgid "Span"
-#~ msgstr "Apgaubti"
-
-#~ msgid "Wallpapers"
-#~ msgstr "Darbastalio paveikslėliai"
-
-#~ msgid "Colors"
-#~ msgstr "Spalvos"
-
-#~ msgid "Pictures"
-#~ msgstr "Paveikslėliai"
-
-#~ msgid "No Pictures Found"
-#~ msgstr "Nerasta paveikslėlių"
-
-#~ msgid "You can add images to your %s folder and they will show up here"
-#~ msgstr "Galite pridėti paveikslėlių į aplanką %s ir juos matysite čia"
-
-#~ msgid "_Off"
-#~ msgstr "_Išjungta"
-
-#~ msgid "Connection/SSID"
-#~ msgstr "Ryšys/SSID"
-
-#~ msgid "_Automatic suspend"
-#~ msgstr "_Automatinis pristabdymas"
-
-#~ msgid "_When the Power Button is pressed"
-#~ msgstr "_Kai nuspaudžiamas įjungimo mygtukas"
-
-#~ msgid "application-x-executable"
-#~ msgstr "application-x-executable"
-
-#~ msgid "preferences-desktop-wallpaper"
-#~ msgstr "preferences-desktop-wallpaper"
-
-#~ msgid "bluetooth"
-#~ msgstr "bluetooth"
-
-#~ msgid "preferences-color"
-#~ msgstr "preferences-color"
-
-#~ msgid "preferences-system-time"
-#~ msgstr "preferences-system-time"
-
-#~ msgid "preferences-desktop-display"
-#~ msgstr "preferences-desktop-display"
-
-#~ msgid "starred"
-#~ msgstr "starred"
-
-#~ msgid "help-about"
-#~ msgstr "help-about"
-
-#~ msgid "media-removable"
-#~ msgstr "media-removable"
-
-#~ msgid "input-keyboard"
-#~ msgstr "input-keyboard"
-
-#~ msgid "input-mouse"
-#~ msgstr "input-mouse"
-
-#~ msgid "network-workgroup"
-#~ msgstr "network-workgroup"
-
-#~ msgid "network-wireless"
-#~ msgstr "network-wireless"
-
-#~ msgid "preferences-system-notifications"
-#~ msgstr "preferences-system-notifications"
-
-#~ msgid "goa-panel"
-#~ msgstr "goa-panel"
-
-#~ msgid "gnome-power-manager"
-#~ msgstr "gnome-power-manager"
-
-#~ msgid "printer"
-#~ msgstr "printer"
-
-#~ msgid "preferences-system-privacy"
-#~ msgstr "preferences-system-privacy"
-
-#~ msgid "preferences-desktop-locale"
-#~ msgstr "preferences-desktop-locale"
-
-#~ msgid "preferences-system-search"
-#~ msgstr "preferences-system-search"
-
-#~ msgid "preferences-system-sharing"
-#~ msgstr "preferences-system-sharing"
-
-#~ msgid "multimedia-volume-control"
-#~ msgstr "multimedia-volume-control"
-
-#~ msgid "thunderbolt"
-#~ msgstr "thunderbolt"
-
-#~ msgid "preferences-desktop-accessibility"
-#~ msgstr "preferences-desktop-accessibility"
-
-#~ msgid "system-users"
-#~ msgstr "system-users"
-
-#~ msgid "input-tablet"
-#~ msgstr "input-tablet"
-
-#~ msgid "org.gnome.Settings"
-#~ msgstr "org.gnome.Settings"
-
-#~ msgid "_Night Light"
-#~ msgstr "_Naktinis apšvietimas"
-
-#~ msgid "Could not get screen information"
-#~ msgstr "Nepavyko gauti ekrano informacijos"
-
-#~ msgid "Add input source"
-#~ msgstr "Pridėti įvesties šaltinį"
-
-#~ msgid "Remove input source"
-#~ msgstr "Pašalinti įvesties šaltinį"
-
-#~ msgid "Move input source up"
-#~ msgstr "Pakelti įvesties šaltinį"
-
-#~ msgid "Move input source down"
-#~ msgstr "Neleisti įvesties šaltinį"
-
-#~ msgid "Show input source keyboard layout"
-#~ msgstr "Rodyti įvesties šaltinio klaviatūros išdėstymą"
-
-#~ msgctxt "balance"
-#~ msgid "Left"
-#~ msgstr "Kairė"
-
-#~ msgctxt "balance"
-#~ msgid "Right"
-#~ msgstr "Dešinė"
-
-#~ msgctxt "balance"
-#~ msgid "Minimum"
-#~ msgstr "Mažiausia"
-
-#~ msgctxt "balance"
-#~ msgid "Maximum"
-#~ msgstr "Didžiausia"
-
-#~ msgid "_Subwoofer:"
-#~ msgstr "Žemų garsų _stiprintuvas:"
-
-#~ msgid "_Profile:"
-#~ msgstr "_Profilis:"
-
-#~ msgid "_Test Speakers"
-#~ msgstr "_Tikrinti garsiakalbius"
-
-#~ msgid "Peak detect"
-#~ msgstr "Viršūnių aptikimas"
-
-#~ msgid "Device"
-#~ msgstr "Įrenginys"
-
-#~ msgid "Speaker Testing for %s"
-#~ msgstr "%s garsiakalbių testavimas"
-
-#~ msgid "C_hoose a device for sound output:"
-#~ msgstr "_Pasirinkite garso išvesties įrenginį:"
-
-#~ msgid "Settings for the selected device:"
-#~ msgstr "Pasirinkto įrenginio nustatymai:"
-
-#~ msgid "_Input volume:"
-#~ msgstr "Į_vesties garsumas:"
-
-#~ msgid "C_hoose a device for sound input:"
-#~ msgstr "_Pasirinkite garso įvesties įrenginį:"
-
-#~ msgid "Sound Effects"
-#~ msgstr "Garso efektai"
-
-#~ msgid "Built-in"
-#~ msgstr "Vidinis"
-
-#~ msgid "Sound Preferences"
-#~ msgstr "Garso nuostatos"
-
-#~ msgid "Testing event sound"
-#~ msgstr "Testuojamas įvykio garsas"
-
-#~ msgid "From theme"
-#~ msgstr "Iš temos"
-
-#~ msgid "C_hoose an alert sound:"
-#~ msgstr "_Pasirinkite įspėjimo garsą:"
-
-#~ msgid "Stop"
-#~ msgstr "Stabdyti"
-
-#~ msgid "hardware"
-#~ msgstr "aparatinė įranga"
-
-#~ msgid "Switch to previous source"
-#~ msgstr "Perjungti į ankstesnį šaltinį"
-
-#~ msgid "Switch to next source"
-#~ msgstr "Perjungti į kitą šaltinį"
-
-#~ msgid "Alternative switch to next source"
-#~ msgstr "Alternatyvus perjungimas į kitą šaltinį"
-
-#~ msgid "English (United Kingdom)"
-#~ msgstr "Anglų (Jungtinė Karalystė)"
-
-#~ msgid "United Kingdom"
-#~ msgstr "Jungtinė Karalystė"
-
-#~ msgid "_Options"
-#~ msgstr "_Parametrai"
-
-#~ msgctxt "Account type"
-#~ msgid "Standard"
-#~ msgstr "Standartinis"
-
-#~ msgctxt "Account type"
-#~ msgid "Administrator"
-#~ msgstr "Administratorius"
-
-#~ msgid "page 3"
-#~ msgstr "puslapis 3"
-
-#~ msgid "GNOME Control Center"
-#~ msgstr "GNOME valdymo centras"
-
-#~ msgid ""
-#~ "The control center is GNOME’s main interface for configuration of various "
-#~ "aspects of your desktop."
-#~ msgstr ""
-#~ "Valdymo centras yra GNOME pagrindinė sąsaja įvairių darbalaukio aspektų "
-#~ "konfigūravimui."
-
-#~ msgid "Quit"
-#~ msgstr "Išeiti"
-
-#~ msgid "gnome-control-center"
-#~ msgstr "gnome-control-center"
-
-#~ msgid "_Verify New Password"
-#~ msgstr "_Tikrinti naują slaptažodį"
-
-#~ msgid "Passwords do not match."
-#~ msgstr "Slaptažodžiai nesutampa."
-
-#~ msgid "Show the overview"
-#~ msgstr "Rodyti apžvalgą"
-
-#~ msgid "Place your left thumb on %s"
-#~ msgstr "Uždėkite kairįjį nykštį ant %s"
-
-#~ msgid "Swipe your left thumb on %s"
-#~ msgstr "Perbraukite kairiuoju nykščiu per %s"
-
-#~| msgid "_Left index finger"
-#~ msgid "Place your left index finger on %s"
-#~ msgstr "Uždėkite kairįjį smilių ant %s"
-
-#~| msgid "_Left index finger"
-#~ msgid "Swipe your left index finger on %s"
-#~ msgstr "Perbraukite kairiuoju smiliumi per %s"
-
-#~| msgid "Left middle finger"
-#~ msgid "Place your left middle finger on %s"
-#~ msgstr "Uždėkite kairįjį didįjį pirštą ant %s"
-
-#~| msgid "Left middle finger"
-#~ msgid "Swipe your left middle finger on %s"
-#~ msgstr "Perbraukite kairiuoju didžiuoju pirštu per %s"
-
-#~| msgid "Left ring finger"
-#~ msgid "Place your left ring finger on %s"
-#~ msgstr "Uždėkite kairįjį bevardį pirštą ant %s"
-
-#~| msgid "Left ring finger"
-#~ msgid "Swipe your left ring finger on %s"
-#~ msgstr "Perbraukite kairiuoju bevardžių pirštu per %s"
-
-#~| msgid "Left little finger"
-#~ msgid "Place your left little finger on %s"
-#~ msgstr "Uždėkite kairįjį mažąjį pirštą ant %s"
-
-#~| msgid "Left little finger"
-#~ msgid "Swipe your left little finger on %s"
-#~ msgstr "Perbraukite kairiuoju mažuoju pirštu per %s"
-
-#~ msgid "Place your right thumb on %s"
-#~ msgstr "Uždėkite dešinįjį nykštį ant %s"
-
-#~ msgid "Swipe your right thumb on %s"
-#~ msgstr "Perbraukite dešiniuoju nykščiu per %s"
-
-#~| msgid "_Right index finger"
-#~ msgid "Place your right index finger on %s"
-#~ msgstr "Uždėkite dešinįjį smilių ant %s"
-
-#~| msgid "_Right index finger"
-#~ msgid "Swipe your right index finger on %s"
-#~ msgstr "Perbraukite dešiniuoju smiliumi per %s"
-
-#~| msgid "Right middle finger"
-#~ msgid "Place your right middle finger on %s"
-#~ msgstr "Uždėkite dešinįjį didįjį pirštą ant %s"
-
-#~| msgid "Right middle finger"
-#~ msgid "Swipe your right middle finger on %s"
-#~ msgstr "Perbraukite dešiniuoju didžiuoju pirštu per %s"
-
-#~| msgid "Right ring finger"
-#~ msgid "Place your right ring finger on %s"
-#~ msgstr "Uždėkite dešinįjį bevardį pirštą ant %s"
-
-#~| msgid "Right ring finger"
-#~ msgid "Swipe your right ring finger on %s"
-#~ msgstr "Perbraukite dešiniuoju bevardžiu pirštu per %s"
-
-#~| msgid "Right little finger"
-#~ msgid "Place your right little finger on %s"
-#~ msgstr "Uždėkite dešinįjį mažąjį pirštą ant %s"
-
-#~| msgid "Right little finger"
-#~ msgid "Swipe your right little finger on %s"
-#~ msgstr "Perbraukite dešiniuoju mažuoju pirštu per %s"
-
-#~ msgid "Place your finger on the reader again"
-#~ msgstr "Uždėkite pirštą ant skaityklės dar kartą"
-
-#~ msgid "Swipe your finger again"
-#~ msgstr "Perbraukite pirštu dar kartą"
-
-#~ msgid "Swipe was too short; try again"
-#~ msgstr "Perbraukimas per trumpas; bandykite dar kartą"
-
-#~ msgid "Your finger was not centered; try swiping your finger again"
-#~ msgstr "Jūsų pirštas nebuvo centruotas; pabandykite perbraukti dar kartą"
-
-#~ msgid "Remove your finger and try swiping it again"
-#~ msgstr "Atitraukite pirštą ir bandykite perbraukti juo dar kartą"
-
-#~ msgid "Swipe was too short, try again"
-#~ msgstr "Perbraukimas buvo per trumpas, bandykite dar kartą"
-
-#~ msgid "Your finger was not centered, try swiping your finger again"
-#~ msgstr ""
-#~ "Jūsų pirštas nebuvo centruotas, pabandykite juo perbraukti dar kartą"
-
-#~ msgid "Remove your finger, and try swiping your finger again"
-#~ msgstr "Atitraukite pirštą ir pabandykite juo perbraukti dar kartą"
-
-#~ msgid "Disable image"
-#~ msgstr "Išjungti paveikslėlį"
-
-#~ msgid "Browse for more pictures…"
-#~ msgstr "Naršyti daugiau paveikslėlių..."
-
-#~ msgid "Used by %s"
-#~ msgstr "Naudoja %s"
-
-#~ msgid "Back­ground"
-#~ msgstr "Fonas"
-
-#~ msgid "Blue­tooth"
-#~ msgstr "Bluetooth"
-
-#~ msgid "Co­lor"
-#~ msgstr "Spalva"
-
-#~ msgid "Section"
-#~ msgstr "Skyrius"
-
-#~ msgid "Overview"
-#~ msgstr "Apžvalga"
-
-#~ msgid "Defa­ult Applications"
-#~ msgstr "Numatytosios programos"
-
-#~ msgid "Ab­out"
-#~ msgstr "Apie"
-
-#~ msgid "De­tails"
-#~ msgstr "Išsamiau"
-
-#~ msgid "Remo­vable Media"
-#~ msgstr "Išimamos laikmenos"
-
-#~ msgid "Net­work"
-#~ msgstr "Tinklas"
-
-#~ msgid "No­ti­fi­ca­tions"
-#~ msgstr "Pranešimai"
-
-#~ msgid "Po­wer"
-#~ msgstr "Energija"
-
-#~ msgid "Pri­va­cy"
-#~ msgstr "Privatumas"
-
-#~ msgid "Sha­ring"
-#~ msgstr "Dalinimasis"
-
-#~ msgid "Uni­ver­sal Access"
-#~ msgstr "Universali prieiga"
-
-#~ msgid "Wa­com Tab­let"
-#~ msgstr "Wacom planšetė"
-
-#~ msgctxt "category"
-#~ msgid "Hardware"
-#~ msgstr "Aparatinė įranga"
-
-#~ msgctxt "category"
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~| msgid "_Apply"
-#~ msgid "Apply"
-#~ msgstr "Pritaikyti"
-
-#~ msgid "Lid Closed"
-#~ msgstr "Užvertas"
-
-#~ msgid "Mirrored"
-#~ msgstr "Dubliuoti"
-
-#~ msgid "Secondary"
-#~ msgstr "Antrinis"
-
-#~ msgid "Arrange Combined Displays"
-#~ msgstr "Išdėstyti vaizduoklius"
-
-#~ msgid "Drag displays to rearrange them"
-#~ msgstr "Tempkite vaizduoklius jų išdėstymui"
-
-#~ msgid "%d Hz (NTSC)"
-#~ msgstr "%d Hz (NTSC)"
-
-#~ msgid "%d Hz"
-#~ msgstr "%d Hz"
-
-#~ msgid "Rotate counterclockwise by 90°"
-#~ msgstr "Pasukti 90° prieš laikrodžio rodyklę "
-
-#~ msgid "Rotate by 180°"
-#~ msgstr "Pasukti 180°"
-
-#~ msgid "Rotate clockwise by 90°"
-#~ msgstr "Pasukti 90° pagal laikrodžio rodyklę"
-
-#~ msgid "Size"
-#~ msgstr "Dydis"
-
-#~ msgid "Aspect Ratio"
-#~ msgstr "Proporcija"
-
-#~ msgid "Show the top bar and Activities Overview on this display"
-#~ msgstr "Rodyti viršutinę juostą ir veiklų apžvalgą šiame vaizduoklyje"
-
-#~ msgid "Join this display with another to create an extra workspace"
-#~ msgstr "Prijungti šį vaizduoklį prie kito, papildomai darbo sričiai sukurti"
-
-#~ msgid "Presentation"
-#~ msgstr "Pateiktis"
-
-#~ msgid "Show slideshows and media only"
-#~ msgstr "Rodyti tik skaidres ir daugialypę terpę"
-
-#~ msgid "Show your existing view on both displays"
-#~ msgstr "Rodyti jūsų esamą vaizdą abiejuose vaizduokliuose"
-
-#~ msgid "Turn Off"
-#~ msgstr "Išjungti"
-
-#~ msgid "Don’t use this display"
-#~ msgstr "Nenaudoti šio vaizduoklio"
-
-#~ msgid "_Arrange Combined Displays"
-#~ msgstr "Iš_dėstyti sujungtus vaizduoklius"
-
-#~ msgid "Air_plane Mode"
-#~ msgstr "_Skrydžio veiksena"
-
-#~ msgid "Server"
-#~ msgstr "Serveris"
-
-#~ msgid "Delete DNS Server"
-#~ msgstr "Ištrinti DNS serverį"
-
-#~ msgid "Proxy"
-#~ msgstr "Tarpinis serveris"
-
-#~ msgid "_Add Profile…"
-#~ msgstr "_Pridėti profilį…"
-
-#~ msgctxt "proxy method"
-#~ msgid "None"
-#~ msgstr "Joks"
-
-#~ msgctxt "proxy method"
-#~ msgid "Manual"
-#~ msgstr "Rankinis"
-
-#~ msgctxt "proxy method"
-#~ msgid "Automatic"
-#~ msgstr "Automatinis"
-
-#~ msgid "_Method"
-#~ msgstr "_Metodas"
-
-#~ msgid "Group Name"
-#~ msgstr "Grupės pavadinimas"
-
-#~ msgid "_Use as Hotspot…"
-#~ msgstr "Na_udoti kaip prieigos tašką..."
-
-#~ msgid "_History"
-#~ msgstr "_Istorija"
-
-#~ msgid "%s %d-bit (Build ID: %s)"
-#~ msgstr "%s %d-bitų (Sukūrimo ID: %s)"
-
-#~ msgid "%s %d-bit"
-#~ msgstr "%s %d-bitų"
-
-#~ msgid "Base system"
-#~ msgstr "Bazinė sistema"
-
-#~ msgid "Press Esc to cancel."
-#~ msgstr "Spauskite Esc atsisakymui."
-
-#~ msgid "Make available to other _users"
-#~ msgstr "Padaryti prieinamu kitiems na_udotojams"
-
-#~ msgid ""
-#~ "Reset the settings for this network, including passwords, but remember it "
-#~ "as a preferred network"
-#~ msgstr ""
-#~ "Atstatyti šio tinklo nustatymus, įskaitant slaptažodžius, bet atsiminti "
-#~ "jį kaip pageidaujamą tinklą"
-
-#~ msgid ""
-#~ "Remove all details relating to this network and do not try to "
-#~ "automatically connect"
-#~ msgstr ""
-#~ "Pašalinti visas su šiuo tinklu susijusias detales ir nebemėginti "
-#~ "automatiškai prisijungti"
-
-#~ msgid ""
-#~ "If you have a connection to the Internet other than wireless, you can set "
-#~ "up a wireless hotspot to share the connection with others."
-#~ msgstr ""
-#~ "Jei turite kitokį interneto ryšį nei belaidis, galite nustatyti belaidį "
-#~ "prieigos tašką ir dalintis interneto ryšiu su kitais."
-
-#~ msgid "Loading options…"
-#~ msgstr "Įkeliami parametrai..."
-
-#~ msgctxt "Password hint"
-#~ msgid "Try to add more letters, numbers and symbols."
-#~ msgstr "Mėginkite naudoti daugiau raidžių, skaitmenų ir simbolių."
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Weak"
-#~ msgstr "Stiprumas: silpnas"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Low"
-#~ msgstr "Stiprumas: silpnokas"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Medium"
-#~ msgstr "Stiprumas: vidutinis"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: Good"
-#~ msgstr "Stiprumas: geras"
-
-#~ msgctxt "Password strength"
-#~ msgid "Strength: High"
-#~ msgstr "Stiprumas: labai geras"
-
-#~ msgid "Shortcut;Repeat;Blink;"
-#~ msgstr "Trumpinys;Pakartoti;Mirksėti;"
-
-#~ msgid "Firewall _Zone"
-#~ msgstr "Ugniasienės _zona"
-
-#~ msgctxt "Firewall zone"
-#~ msgid "Default"
-#~ msgstr "Numatyta"
-
-#~ msgid "The zone defines the trust level of the connection"
-#~ msgstr "Zona nustato ryšio pasitikėjimo lygį"
-
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgid "<small>Your account</small>"
-#~ msgstr "<small>Jūsų paskyra</small>"
-
-#~ msgid "Edit"
-#~ msgstr "Keisti"
-
-#~| msgid "Set Shortcut"
-#~ msgctxt "button"
-#~ msgid "Set Shortcut"
-#~ msgstr "Nustatyti trumpinį"
-
-#~ msgctxt "notifications"
-#~ msgid "Notification _Banners"
-#~ msgstr "Pranešimų išš_okimai"
-
-#~ msgid "Notification _Banners"
-#~ msgstr "Pranešimų išš_okimai"
-
-#~ msgid "Add Account"
-#~ msgstr "Pridėti paskyrą"
-
-#~ msgid "Mail"
-#~ msgstr "Paštas"
-
-#~ msgid "Calendar"
-#~ msgstr "Kalendorius"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontaktai"
-
-#~ msgid "Chat"
-#~ msgstr "Pokalbiai"
-
-#~ msgid "Error creating account"
-#~ msgstr "Klaida kuriant paskyrą"
-
-#~ msgid "Are you sure you want to remove the account?"
-#~ msgstr "Ar tikrai norite pašalinti paskyrą?"
-
-#~ msgid "This will not remove the account on the server."
-#~ msgstr "Tai nepašalins šios paskyros serveryje."
-
-#~ msgid "_Remove"
-#~ msgstr "_Pašalinti"
-
-#~ msgid "No online accounts configured"
-#~ msgstr "Nėra nustatytų internetinių paskyrų"
-
-#~ msgid ""
-#~ "Adding an account allows your applications to access it for documents, "
-#~ "mail, contacts, calendar, chat and more."
-#~ msgstr ""
-#~ "Paskyros pridėjimas leidžia jūsų programoms ją prieiti dokumentams, "
-#~ "paštui, kontaktams, kalendoriui, pokalbiams ir kt."
-
-#~ msgctxt "printer state"
-#~ msgid "Configuring"
-#~ msgstr "Konfigūruojama"
-
-#~ msgid "Toner Level"
-#~ msgstr "Dažų lygis"
-
-#~ msgid "Supply Level"
-#~ msgstr "Tiekimo lygis"
-
-#~ msgctxt "printer state"
-#~ msgid "Installing"
-#~ msgstr "Diegiama"
-
-#~ msgid "%u active"
-#~ msgid_plural "%u active"
-#~ msgstr[0] "%u aktyvus"
-#~ msgstr[1] "%u aktyvūs"
-#~ msgstr[2] "%u aktyvių"
-
-#~ msgid "Supply"
-#~ msgstr "Tiekimas"
-
-#~ msgid "Jobs"
-#~ msgstr "Darbai"
-
-#~ msgid "Show _Jobs"
-#~ msgstr "Rodyti _darbus"
-
-#~ msgid "label"
-#~ msgstr "žyma"
-
-#~ msgid "Setting new driver…"
-#~ msgstr "Nustatoma nauja tvarkyklė..."
-
-#~ msgid "Print _Test Page"
-#~ msgstr "Spausdinti _testinį puslapį"
-
-#~ msgid "Other Accounts"
-#~ msgstr "Kitos paskyros"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Up"
-#~ msgstr "Aukštyn"
-
-#~ msgctxt "Wacom tablet button"
-#~ msgid "Down"
-#~ msgstr "Žemyn"
-
-#~ msgctxt "Wacom action-type"
-#~ msgid "None"
-#~ msgstr "Nėra"
-
-#~ msgid "Left Ring"
-#~ msgstr "Kairysis ratukas"
-
-#~ msgid "Left Ring Mode #%d"
-#~ msgstr "Skambinimo veiksena #%d"
-
-#~ msgid "Right Ring Mode #%d"
-#~ msgstr "Dešiniojo ratuko veiksena #%d"
-
-#~ msgid "Left Touchstrip"
-#~ msgstr "Kairiosios liečiamosios juostelės"
-
-#~ msgid "Left Touchstrip Mode #%d"
-#~ msgstr "Kairiųjų liečiamų juostelių veiksena #%d"
-
-#~ msgid "Right Touchstrip"
-#~ msgstr "Dešiniosios liečiamosios juostelės"
-
-#~ msgid "Right Touchstrip Mode #%d"
-#~ msgstr "Dešiniųjų liečiamų juostelių veiksena #%d"
-
-#~ msgid "Left Touchring Mode Switch"
-#~ msgstr "Kairiojo liečiamojo rateliu veiksenos jungiklis"
-
-#~ msgid "Right Touchring Mode Switch"
-#~ msgstr "Dešiniojo liečiamojo rateliu veiksenos jungiklis"
-
-#~ msgid "Left Touchstrip Mode Switch"
-#~ msgstr "Kairiųjų liečiamųjų juostelių veiksenos jungiklis"
-
-#~ msgid "Right Touchstrip Mode Switch"
-#~ msgstr "Dešiniųjų liečiamųjų juostelių veiksenos jungiklis"
-
-#~ msgid "Mode Switch #%d"
-#~ msgstr "Veiksenos jungiklis #%d"
-
-#~ msgid "Left Button #%d"
-#~ msgstr "Kairysis mygtukas #%d"
-
-#~ msgid "Right Button #%d"
-#~ msgstr "Dešinysis mygtukas #%d"
-
-#~ msgid "Top Button #%d"
-#~ msgstr "Viršutinis mygtukas #%d"
-
-#~ msgid "Bottom Button #%d"
-#~ msgstr "Apatinis mygtukas #%d"
-
-#~ msgid "No Action"
-#~ msgstr "Jokio veiksmo"
-
-#~ msgid "Left Mouse Button Click"
-#~ msgstr "Kairiojo pelės mygtuko paspaudimas"
-
-#~ msgid "Scroll Up"
-#~ msgstr "Slinkimas aukštyn"
-
-#~ msgid "Scroll Down"
-#~ msgstr "Slinkimas žemyn"
-
-#~ msgid "Scroll Right"
-#~ msgstr "Slinkimas dešinėn"
-
-#~ msgid "Add a New Printer"
-#~ msgstr "Pridėti naują spausdintuvą"
-
-#~ msgid "No printers detected."
-#~ msgstr "Nerasta spausdintuvų."
-
-#~ msgctxt "login history week label"
-#~ msgid "%s - %s"
-#~ msgstr "%s - %s"
-
-#~ msgid "Keyboard shortcut for <b>%s</b>. Enter new shortcut to change."
-#~ msgstr ""
-#~ "Klaviatūros trumpinys <b>%s</b>. Įveskite naują trumpinį pakeitimui."
-
-#~ msgid ""
-#~ "To edit a shortcut, click the row and hold down the new keys or press "
-#~ "Backspace to clear."
-#~ msgstr ""
-#~ "Norėdami pakeisti spartųjį klavišą, spustelėkite atitinkamą eilutę ir "
-#~ "paspauskite spartųjį klavišą arba spauskite Backspace išvalymui."
-
-#~ msgid "Error logging into the account"
-#~ msgstr "Klaida prisijungiant prie paskyros"
-
-#~ msgid "Credentials have expired."
-#~ msgstr "Baigėsi įgaliojimai"
-
-#~ msgid "Sign in to enable this account."
-#~ msgstr "Prisijunkite šiai paskyrai įjungti."
-
-#~ msgid "_Sign In"
-#~ msgstr "Pri_sijungti"
-
-#~ msgid "Remove Shortcut"
-#~ msgstr "Pašalinti trumpinį"
-
-#~ msgid "<Unknown Action>"
-#~ msgstr "<Nežinomas veiksmas>"
-
-#~ msgid ""
-#~ "The shortcut \"%s\" cannot be used because it will become impossible to "
-#~ "type using this key.\n"
-#~ "Please try with a key such as Control, Alt or Shift at the same time."
-#~ msgstr ""
-#~ "Negalima naudoti sparčiojo klavišo „%s“, kadangi nebegalėsite rašyti šiuo "
-#~ "klavišu.\n"
-#~ "Bandykite klavišą kartu su tokiais klavišai kaip Control, Alt ar Shift."
-
-#~ msgid ""
-#~ "The shortcut \"%s\" is already used for\n"
-#~ "\"%s\""
-#~ msgstr ""
-#~ "Susiejimas „%s“ jau yra naudojamas\n"
-#~ "„%s“"
-
-#~ msgid ""
-#~ "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#~ "disabled."
-#~ msgstr "Jei priskirsite spartųjį klavišą komandai „%s“, „%s“ bus išjungtas."
-
-#~ msgid "_Reassign"
-#~ msgstr "_Priskirti iš naujo"
-
-#~ msgid ""
-#~ "The \"%s\" shortcut has an associated \"%s\" shortcut. Do you want to "
-#~ "automatically set it to \"%s\"?"
-#~ msgstr ""
-#~ "Trumpinys „%s“ turi susietą trumpinį „%s“. Ar norite jį automatiškai "
-#~ "nustatyti į „%s“?"
-
-#~ msgid ""
-#~ "\"%s\" is currently associated with \"%s\", this shortcut will be "
-#~ "disabled if you move forward."
-#~ msgstr ""
-#~ "„%s“ šiuo metu yra susietas su „%s“, jei tęsite, šis trumpinys bus "
-#~ "išjungtas."
-
-#~ msgid "_Assign"
-#~ msgstr "_Priskirti"
-
-#~ msgid "Bond"
-#~ msgstr "Bond"
-
-#~ msgid "Team"
-#~ msgstr "Team"
-
-#~ msgid "Bridge"
-#~ msgstr "Bridge"
-
-#~ msgid "VLAN"
-#~ msgstr "VLAN"
-
-#~ msgid "Could not load VPN plugins"
-#~ msgstr "Nepavyko įkelti VPN įskiepių"
-
-#~ msgid "Add Network Connection"
-#~ msgstr "Pridėti tinklo ryšį"
-
-#~ msgid "Bond slaves"
-#~ msgstr "Prijungimai"
-
-#~ msgid "(none)"
-#~ msgstr "(nėra)"
-
-#~ msgid "Bridge slaves"
-#~ msgstr "Sujungti antraeilius"
-
-#~ msgid "Team slaves"
-#~ msgstr "Team antraeiliai"
-
-#~ msgid "InfiniBand device does not support connected mode"
-#~ msgstr "InfiniBand įrenginys nepalaiko ryšio veiksenos"
-
-#~ msgid "No Certificate Authority certificate chosen"
-#~ msgstr "Nepasirinktas liudijimų įstaigos liudijimas"
-
-#~ msgid ""
-#~ "Not using a Certificate Authority (CA) certificate can result in "
-#~ "connections to insecure, rogue Wi-Fi networks.  Would you like to choose "
-#~ "a Certificate Authority certificate?"
-#~ msgstr ""
-#~ "Nenaudojamas liudijimų įstaigos (LĮ) liudijimas gali sukurti nesaugius, "
-#~ "kenkėjiškus belaidžius tinklus.  Ar norite pasirinkti liudijimų įstaigos "
-#~ "liudijimą?"
-
-#~ msgid "Ignore"
-#~ msgstr "Nepaisyti"
-
-#~ msgid "Choose CA Certificate"
-#~ msgstr "Pasirinkti LĮ liudijimą"
-
-#~ msgid "As_k for this password every time"
-#~ msgstr "_Klausti šio slaptažodžiu kiekvieną kartą"
-
-#~ msgid "Don't _warn me again"
-#~ msgstr "_Daugiau neperspėti"
-
-#~ msgid "Yes"
-#~ msgstr "Taip"
-
-#~ msgctxt "Search Location"
-#~ msgid "Other"
-#~ msgstr "Kita"
-
-#~ msgid "Personal File Sharing"
-#~ msgstr "Dalinimasis asmeniniais failais"
-
-#~ msgid "_Allow Remote Control"
-#~ msgstr "_Leisti nuotolinį valdymą"
-
-#~ msgid "_Verify"
-#~ msgstr "_Tikrinti"
-
-#~ msgid "Login History"
-#~ msgstr "Prisijungimo istorija"
-
-#~ msgid "Add User Account"
-#~ msgstr "Pridėti naudotojo paskyrą"
-
-#~ msgid "A user with the username '%s' already exists."
-#~ msgstr "Naudotojas vardu „%s“ jau yra."
-
-#~ msgid "Used to determine your geographical location"
-#~ msgstr "Naudojama jūsų geografinei padėčiai nustatyti"
-
-#~ msgid "Done"
-#~ msgstr "Atlikta"
-
-#~ msgid "Time _Zone"
-#~ msgstr "Laiko _juosta"
-
-#~ msgid "Resume Printing"
-#~ msgstr "Pratęsti spausdinimą"
-
-#~ msgid "Pause Printing"
-#~ msgstr "Pristabdyti spausdinimą"
-
-#~ msgctxt "print job"
-#~ msgid "Held"
-#~ msgstr "Laikomas"
-
-#~ msgid "Job Title"
-#~ msgstr "Darbo pavadinimas"
-
-#~ msgid "Job State"
-#~ msgstr "Darbo būsena"
-
-#~ msgid "Options"
-#~ msgstr "Parametrai"
-
-#~ msgid "Password:"
-#~ msgstr "Slaptažodis:"
-
-#~ msgid "_Repeat Keys"
-#~ msgstr "Ka_rtojimo klavišai"
-
-#~ msgid "_Cursor Blinking"
-#~ msgstr "Ž_ymeklio mirksėjimas"
-
-#~ msgid "Zoom"
-#~ msgstr "Mastelis"
-
-#~ msgctxt "universal access, contrast"
-#~ msgid "Color"
-#~ msgstr "Spalva"
-
-#~ msgid "_Delay:"
-#~ msgstr "_Delsa:"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Short"
-#~ msgstr "Trumpas"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Slow"
-#~ msgstr "Lėtas"
-
-#~ msgctxt "keyboard, delay"
-#~ msgid "Long"
-#~ msgstr "Ilgas"
-
-#~ msgctxt "keyboard, speed"
-#~ msgid "Fast"
-#~ msgstr "Greitas"
-
-#~ msgid "S_peed:"
-#~ msgstr "G_reitis:"
-
-#~ msgid "Test Your Settings"
-#~ msgstr "Tikrinkite savo nustatymus"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Slow"
-#~ msgstr "Lėtas"
-
-#~ msgctxt "double click, speed"
-#~ msgid "Fast"
-#~ msgstr "Greitas"
-
-#~ msgctxt "mouse, left button as primary"
-#~ msgid "_Left"
-#~ msgstr "_Kairė"
-
-#~ msgctxt "mouse, right button as primary"
-#~ msgid "_Right"
-#~ msgstr "_Dešinė"
-
-#~ msgid "_Pointer speed"
-#~ msgstr "Žymeklio _greitis"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "Lėtas"
-
-#~ msgctxt "mouse pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "Greitas"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Slow"
-#~ msgstr "Lėtas"
-
-#~ msgctxt "touchpad pointer, speed"
-#~ msgid "Fast"
-#~ msgstr "Greitas"
-
-#~ msgid "No printers available"
-#~ msgstr "Nėra spausdintuvų"
-
-#~ msgid "Add New Printer"
-#~ msgstr "Pridėti naują spausdintuvą"
-
-#~ msgid "Wireless devices require extra power"
-#~ msgstr "Belaidžiams įrenginiams reikia papildomos energijos"
-
-#~ msgid "Bluetooth is disabled"
-#~ msgstr "Bluetooth yra išjungtas"
-
-#~ msgid "When battery power is _critical"
-#~ msgstr "Kai baterijos įkrovos lygis _kritiškai žemas"
-
-#~ msgid ""
-#~ "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
-#~ "devices"
-#~ msgstr ""
-#~ "Dalinimasis per Bluetooth leidžia dalintis failais su kitais Bluetooth "
-#~ "gebančiais įrenginiais"
-
-#~ msgid "Only Receive From Trusted Devices"
-#~ msgstr "Priimti tik iš įrenginių, kuriais pasitikima"
-
-#~ msgid "Save Received Files to Downloads Folder"
-#~ msgstr "Įrašyti gautus failus parsiuntimų aplanke"
-
-#~ msgid "Show help options"
-#~ msgstr "Rodyti pagalbos parinktis"
-
-#~ msgid ""
-#~ "%s\n"
-#~ "Run '%s --help' to see a full list of available command line options.\n"
-#~ msgstr ""
-#~ "%s\n"
-#~ "Paleiskite „%s --help“ visam komandų eilutės parinkčių sąrašui gauti.\n"
-
-#~ msgid "United States"
-#~ msgstr "Jungtinės Amerikos Valstijos"
-
-#~ msgid "France"
-#~ msgstr "Prancūzija"
-
-#~ msgid "Spain"
-#~ msgstr "Ispanija"
-
-#~ msgid "China"
-#~ msgstr "Kinija"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "Spausdinimo _metu išjungti"
-
-#~ msgid "The system network services are not compatible with this version."
-#~ msgstr "Sistemos tinklo tarnybos nesuderinamos su šia versija."
-
-#~ msgctxt "notifications"
-#~ msgid "Show Popup Banners"
-#~ msgstr "Rodyti iššokančios pranešimus"
-
-#~ msgctxt "notifications"
-#~ msgid "View in Lock Screen"
-#~ msgstr "Rodyti užrakinimo ekrane"
-
-#~ msgid "Show Pop Up Banners"
-#~ msgstr "Rodyti iššokančios pranešimus"
-
-#~ msgid "Turns off wireless devices"
-#~ msgstr "Išjungia visus belaidžius įrenginius"
-
-#~ msgid "Enter address of a printer or a text to filter results"
-#~ msgstr "Įveskite spausdintuvo adresą arba tekstą rezultatų filtravimui"
-
-#~ msgid "Sorry"
-#~ msgstr "Atleiskite"

@@ -1,26 +1,27 @@
-# Ukrainian translation of control-center.
-# Copyright (C) 1999 Free Software Foundation, Inc.
-# Yuri Syrota <rasta@renome.rovno.ua>, 1999.
-# Maxim Dzumanenko <dziumanenko@gmail.com>, 2002-2009.
-# Wanderlust <wanderlust@ukr.net>, 2009.
-# Daniel Korostil <ted.korostiled@gmail.com>, 2013, 2014, 2015, 2016, 2017.
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-control-center-2.0 package.
+# 
+# Translators:
+# Данило Коростіль <ted.korostiled@gmail.com>, 2013-2017
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Roddy Shuler <roddy@stanfordalumni.org>, 2018
+# Wanderlust <wanderlust@ukr.net>, 2009
+# Yuri Chornoivan <yurchor@ukr.net>, 2020-2021
+# Yuri Syrota <rasta@renome.rovno.ua>, 1999
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-07 15:17-0700\n"
-"PO-Revision-Date: 2021-09-08 12:56+0300\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
-"Language: uk\n"
+"POT-Creation-Date: 2022-12-08 00:11+0000\n"
+"PO-Revision-Date: 2014-09-08 22:33+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>, 2020-2021\n"
+"Language-Team: Ukrainian (http://www.transifex.com/endless-os/gnome-control-center/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.0\n"
-"X-Project-Style: gnome\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: panels/applications/cc-applications-panel.c:823
 msgid "System Bus"
@@ -90,9 +91,7 @@ msgstr "Може змінювати налаштування"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr ""
-"%s має вказані нижче вбудовані дозволи. Це неможливо змінити. Якщо вас "
-"турбують ці дозволи, розгляньте можливість вилучення цієї програми."
+msgstr "%s має вказані нижче вбудовані дозволи. Це неможливо змінити. Якщо вас турбують ці дозволи, розгляньте можливість вилучення цієї програми."
 
 #: panels/applications/cc-applications-panel.c:1024
 msgid "Web Links"
@@ -174,11 +173,9 @@ msgstr "Дозволи і доступ"
 
 #: panels/applications/cc-applications-panel.ui:106
 msgid ""
-"Data and services that this app has asked for access to and permissions that "
-"it requires."
-msgstr ""
-"Дані й служби, до яких ця програма запитала доступ та дозволи, яких вона "
-"вимагає."
+"Data and services that this app has asked for access to and permissions that"
+" it requires."
+msgstr "Дані й служби, до яких ця програма запитала доступ та дозволи, яких вона вимагає."
 
 #: panels/applications/cc-applications-panel.ui:121
 #: panels/applications/cc-applications-panel.ui:127
@@ -188,7 +185,6 @@ msgstr "Камера"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
-#.
 #. TRANSLATORS: Status of Parental Controls setup
 #. translators:
 #. * The device has been disabled
@@ -199,7 +195,8 @@ msgstr "Камера"
 #: panels/applications/cc-applications-panel.ui:262
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:85
 #: panels/keyboard/cc-xkb-modifier-dialog.c:353
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:129
+#: panels/keyboard/keyboard-shortcuts.c:367
+#: panels/network/network-proxy.ui:129
 #: panels/user-accounts/cc-user-panel.c:848
 #: panels/user-accounts/cc-user-panel.c:938
 #: panels/wwan/cc-wwan-device-page.c:479
@@ -230,11 +227,9 @@ msgstr "Неможливо змінити"
 
 #: panels/applications/cc-applications-panel.ui:175
 msgid ""
-"Individual permissions for applications can be reviewed in the <a href="
-"\"privacy\">Privacy</a> Settings."
-msgstr ""
-"Індивідуальні дозволи для програм можна переглянути в розділі <a href="
-"\"privacy\">Конфіденційність</a> налаштувань."
+"Individual permissions for applications can be reviewed in the <a "
+"href=\"privacy\">Privacy</a> Settings."
+msgstr "Індивідуальні дозволи для програм можна переглянути в розділі <a href=\"privacy\">Конфіденційність</a> налаштувань."
 
 #: panels/applications/cc-applications-panel.ui:199
 msgid "Integration"
@@ -315,9 +310,7 @@ msgstr "Спробуйте пошукати по-інакшому"
 #: panels/applications/cc-applications-panel.ui:555
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr ""
-"Обсяг дискового простору, що займає ця програма разом зі своїми даними і "
-"кешем."
+msgstr "Обсяг дискового простору, що займає ця програма разом зі своїми даними і кешем."
 
 #: panels/applications/cc-applications-panel.ui:564
 msgid "Application"
@@ -343,7 +336,8 @@ msgstr "Очистити кеш…"
 msgid "Control various application permissions and settings"
 msgstr "Керування різними дозволами й налаштуваннями програм"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
 msgstr "програма;flatpak;дозвіл;налаштування;application;permission;setting;"
@@ -427,7 +421,8 @@ msgstr "Тло"
 msgid "Change your background image to a wallpaper or photo"
 msgstr "Змінити малюнок тла на шпалери або фотографію"
 
-#. Translators: Search terms to find the Background panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Background panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:14
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Шпалери;Екран;Стільниця;"
@@ -478,7 +473,8 @@ msgstr "Bluetooth"
 msgid "Turn Bluetooth on and off and connect your devices"
 msgstr "Увімкнути або вимкнути з'єднання з пристроєм через Bluetooth"
 
-#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:18
 msgid "share;sharing;bluetooth;obex;"
 msgstr "оприлюднення;поділитись;блютуз;obex;"
@@ -492,14 +488,11 @@ msgid "No applications can capture photos or video."
 msgstr "Немає програм, які здатні знімати фотографії та відео."
 
 #: panels/camera/cc-camera-panel.ui:75
-#, fuzzy
 msgid ""
-"Use of the camera allows applications to capture photos and video. Disabling "
-"the camera may cause some applications to not function properly. System "
+"Use of the camera allows applications to capture photos and video. Disabling"
+" the camera may cause some applications to not function properly. System "
 "applications can always use the camera."
 msgstr ""
-"Використання камери надає програмам змогу створювати знімки і записувати "
-"відео. Вимкнення камери може спричинити неправильну роботу програм."
 
 #: panels/camera/cc-camera-panel.ui:85
 msgid "Allow the applications below to use your camera."
@@ -513,22 +506,18 @@ msgstr "Немає програм, які надсилають запит щод
 msgid "Protect your pictures"
 msgstr "Захистіть ваші зображення"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:19
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;"
-msgstr ""
-"екран;блокування;діагностика;крах;особисте;нещодавнє;тимчасове;tmp;індекс;"
-"назва;мережа;засвідчення;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;"
+msgstr "екран;блокування;діагностика;крах;особисте;нещодавнє;тимчасове;tmp;індекс;назва;мережа;засвідчення;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:347
 msgid "Place your calibration device over the square and press “Start”"
-msgstr ""
-"Розмістіть ваш калібрувальний пристрій поверх квадрату й натисніть "
-"«Запустити»"
+msgstr "Розмістіть ваш калібрувальний пристрій поверх квадрату й натисніть «Запустити»"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -536,9 +525,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:353
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr ""
-"Перемістіть ваш калібрувальний пристрій на відповідну позицію та натисніть "
-"«Далі»"
+msgstr "Перемістіть ваш калібрувальний пристрій на відповідну позицію та натисніть «Далі»"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -546,9 +533,7 @@ msgstr ""
 #: panels/color/cc-color-calibrate.c:359
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr ""
-"Перемістіть ваш калібрувальний пристрій на позицію поверхні та натисніть "
-"«Далі»"
+msgstr "Перемістіть ваш калібрувальний пристрій на позицію поверхні та натисніть «Далі»"
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -741,8 +726,7 @@ msgstr "Запишіть собі це посилання."
 
 #: panels/color/cc-color-panel.c:854
 msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"Перезапустіть цей комп'ютер і завантажте вашу звичайну операційну систему."
+msgstr "Перезапустіть цей комп'ютер і завантажте вашу звичайну операційну систему."
 
 #: panels/color/cc-color-panel.c:855
 msgid "Type the URL into your browser to download and install the profile."
@@ -769,9 +753,7 @@ msgstr "Створити профіль кольорів для вибраног
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr ""
-"Інструмент міри не виявлено. Будь ласка, перевірте, чи це ввімкнено й "
-"правильно з'єднано."
+msgstr "Інструмент міри не виявлено. Будь ласка, перевірте, чи це ввімкнено й правильно з'єднано."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1245
@@ -792,10 +774,7 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr ""
-"Калібрування створить профіль, який ви можете для керування кольорами на "
-"вашому екрані. Чим довше проходить калібрування, тим краща якість профілю "
-"кольорів."
+msgstr "Калібрування створить профіль, який ви можете для керування кольорами на вашому екрані. Чим довше проходить калібрування, тим краща якість профілю кольорів."
 
 #: panels/color/cc-color-panel.ui:38
 msgid ""
@@ -834,11 +813,9 @@ msgstr "Тип екрана"
 
 #: panels/color/cc-color-panel.ui:241
 msgid ""
-"Select a display target white point. Most displays should be calibrated to a "
-"D65 illuminant."
-msgstr ""
-"Виберіть відмітку білого екрана. Більшість екранів слід відкалібрувати до "
-"освітлювача D65."
+"Select a display target white point. Most displays should be calibrated to a"
+" D65 illuminant."
+msgstr "Виберіть відмітку білого екрана. Більшість екранів слід відкалібрувати до освітлювача D65."
 
 #: panels/color/cc-color-panel.ui:278
 msgid "Profile Whitepoint"
@@ -848,17 +825,13 @@ msgstr "Профіль відмітки білого"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr ""
-"Вкажіть яскравість екрана, яка типова для вас. Керування кольором буде "
-"найточніше саме для цього рівня яскравості."
+msgstr "Вкажіть яскравість екрана, яка типова для вас. Керування кольором буде найточніше саме для цього рівня яскравості."
 
 #: panels/color/cc-color-panel.ui:307
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr ""
-"Як варіант, можете використовувати рівень яскравості з інших профілів для "
-"цього пристрою."
+msgstr "Як варіант, можете використовувати рівень яскравості з інших профілів для цього пристрою."
 
 #: panels/color/cc-color-panel.ui:318
 msgid "Display Brightness"
@@ -868,9 +841,7 @@ msgstr "Яскравість екрана"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr ""
-"Можете використовувати профіль кольорів на різних комп'ютерах, або навіть "
-"створити профілі для різних умов освітлення."
+msgstr "Можете використовувати профіль кольорів на різних комп'ютерах, або навіть створити профілі для різних умов освітлення."
 
 #: panels/color/cc-color-panel.ui:348
 msgid "Profile Name:"
@@ -902,13 +873,10 @@ msgstr "Потребує зв'язок з інтернетом"
 
 #: panels/color/cc-color-panel.ui:591
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr ""
-"Ці інструкції про використання профілів на системах <a href=\"linux\">GNU/"
-"Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows\">Microsoft "
-"Windows</a> можуть стати в пригоді."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr "Ці інструкції про використання профілів на системах <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows\">Microsoft Windows</a> можуть стати в пригоді."
 
 #: panels/color/cc-color-panel.ui:607
 msgid "Summary"
@@ -933,14 +901,11 @@ msgstr "_Додати"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr ""
-"Виявлено проблему. Профіль може не працювати правильно. <a href="
-"\"\">Показати подробиці.</a>"
+msgstr "Виявлено проблему. Профіль може не працювати правильно. <a href=\"\">Показати подробиці.</a>"
 
 #: panels/color/cc-color-panel.ui:788
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr ""
-"Кожен пристрій потребує оновлення профілю кольорів для керування кольорами."
+msgstr "Кожен пристрій потребує оновлення профілю кольорів для керування кольорами."
 
 #. translators: Text used in link to privacy policy
 #: panels/color/cc-color-panel.ui:810
@@ -1161,7 +1126,8 @@ msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
 msgstr "Відкалібрувати кольори таких пристроїв, як екрани, камери і принтери"
 
-#. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Color panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:18
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "Колір;ICC;Профіль;Калібрування;Принтер;Екран;"
@@ -1315,7 +1281,8 @@ msgstr "%s"
 msgid "0 seconds"
 msgstr "0 секунд"
 
-#. translators: This is the default hotspot name, need to be less than 32-bytes
+#. translators: This is the default hotspot name, need to be less than
+#. 32-bytes
 #: panels/common/hostname-helper.c:177
 msgctxt "hotspot"
 msgid "Hotspot"
@@ -1461,8 +1428,7 @@ msgstr "Автоматичні часові _пояси"
 
 #: panels/datetime/cc-datetime-panel.ui:431
 msgid "Requires location services enabled and internet access"
-msgstr ""
-"Вимагає увімкнених служб даних місця перебування і доступу до інтернету"
+msgstr "Вимагає увімкнених служб даних місця перебування і доступу до інтернету"
 
 #: panels/datetime/cc-datetime-panel.ui:446
 msgid "Time Z_one"
@@ -1484,7 +1450,8 @@ msgstr "До / після полудня "
 msgid "Change the date and time, including time zone"
 msgstr "Змінити дату та час, і часовий пояс зокрема"
 
-#. Translators: Search terms to find the Date and Time panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Date and Time panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/datetime/gnome-datetime-panel.desktop.in.in:14
 msgid "Clock;Timezone;Location;"
 msgstr "Годинник;Пояс;Місцевість;"
@@ -1530,20 +1497,21 @@ msgstr "Типові програми"
 msgid "Configure Default Applications"
 msgstr "Налаштовування типових програм"
 
-#. Translators: Search terms to find the Default Applications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Default Applications panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/default-apps/gnome-default-apps-panel.desktop.in.in:18
 msgid "default;application;preferred;media;"
 msgstr "типове;програма;бажане;носій;default;application;preferred;media;"
 
-#. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
+#. translators: The first '%s' is the distributor's name, such as 'Fedora',
+#. the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:146
 #, c-format
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr ""
-"Надсилання звітів про технічні проблеми допомагає нам покращити %s. Звіти "
-"надсилаються анонімно і не містять особистих даних. %s"
+msgstr "Надсилання звітів про технічні проблеми допомагає нам покращити %s. Звіти надсилаються анонімно і не містять особистих даних. %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:28
 msgid "Problem Reporting"
@@ -1561,17 +1529,15 @@ msgstr "Діагностика"
 msgid "Report your problems"
 msgstr "Повідомити про помилки"
 
-#. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Privacy panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:19
 #: panels/location/gnome-location-panel.desktop.in.in:19
 #: panels/lock/gnome-lock-panel.desktop.in.in:19
 #: panels/usage/gnome-usage-panel.desktop.in.in:19
 msgid ""
-"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-"network;identity;privacy;"
-msgstr ""
-"екран;блокування;діагностика;крах;особисте;нещодавнє;тимчасове;tmp;індекс;"
-"назва;мережа;засвідчення;конфіденційність;"
+"screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;"
+msgstr "екран;блокування;діагностика;крах;особисте;нещодавнє;тимчасове;tmp;індекс;назва;мережа;засвідчення;конфіденційність;"
 
 #: panels/display/cc-display-panel.c:1017
 #: panels/network/connection-editor/connection-editor.ui:27
@@ -1619,9 +1585,7 @@ msgstr "Основний дисплей"
 msgid ""
 "Drag displays to match your physical display setup. Select a display to "
 "change its settings."
-msgstr ""
-"Перетягніть дисплеї, щоб зіставити налаштування вашого фізичного дисплея. "
-"Виберіть дисплей, щоб змінити його налаштування."
+msgstr "Перетягніть дисплеї, щоб зіставити налаштування вашого фізичного дисплея. Виберіть дисплей, щоб змінити його налаштування."
 
 #: panels/display/cc-display-panel.ui:250
 msgid "Display Arrangement"
@@ -1640,7 +1604,8 @@ msgstr "Налаштування дисплея"
 msgid "Displays"
 msgstr "Дисплеї"
 
-#. This is the redshift functionality where we suppress blue light when the sun has gone down
+#. This is the redshift functionality where we suppress blue light when the
+#. sun has gone down
 #: panels/display/cc-display-panel.ui:451
 #: panels/display/cc-night-light-page.ui:111
 msgid "Night Light"
@@ -1717,9 +1682,7 @@ msgstr "Тимчасово вимкнено до завтра"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr ""
-"Нічне світло робить колір екрана теплішим. Це дозволяє запобігти "
-"примружуванню очей і сонливості."
+msgstr "Нічне світло робить колір екрана теплішим. Це дозволяє запобігти примружуванню очей і сонливості."
 
 #: panels/display/cc-night-light-page.ui:127
 msgid "Schedule"
@@ -1761,14 +1724,16 @@ msgstr "Хвилина"
 #. This is the short form for the time period in the morning
 #: panels/display/cc-night-light-page.ui:234
 #: panels/display/cc-night-light-page.ui:337
-#: panels/updates/cc-tariff-editor.ui:60 panels/updates/cc-tariff-editor.ui:154
+#: panels/updates/cc-tariff-editor.ui:60
+#: panels/updates/cc-tariff-editor.ui:154
 msgid "AM"
 msgstr "AM"
 
 #. This is the short form for the time period in the afternoon
 #: panels/display/cc-night-light-page.ui:247
 #: panels/display/cc-night-light-page.ui:350
-#: panels/updates/cc-tariff-editor.ui:74 panels/updates/cc-tariff-editor.ui:168
+#: panels/updates/cc-tariff-editor.ui:74
+#: panels/updates/cc-tariff-editor.ui:168
 msgid "PM"
 msgstr "PM"
 
@@ -1785,14 +1750,12 @@ msgstr "Кольорова температура"
 msgid "Choose how to use connected monitors and projectors"
 msgstr "Змінити використання під'єднаних моніторів та проекторів"
 
-#. Translators: Search terms to find the Displays panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Displays panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/display/gnome-display-panel.desktop.in.in:18
 msgid ""
-"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
-"redshift;color;sunset;sunrise;"
-msgstr ""
-"Панель;Проектори;xrandr;Екран;Роздільність;Оновлення;Монітор;Нічне;Світло;"
-"Синій;redshift;колір;захід;світанок;"
+"Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;redshift;color;sunset;sunrise;"
+msgstr "Панель;Проектори;xrandr;Екран;Роздільність;Оновлення;Монітор;Нічне;Світло;Синій;redshift;колір;захід;світанок;"
 
 #: panels/info-overview/cc-info-overview-panel.c:428
 #: panels/info-overview/cc-info-overview-panel.c:452
@@ -1903,9 +1866,7 @@ msgstr "Перейменувати пристрій"
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr ""
-"Назва пристрою використовується для ідентифікації цього пристрою при "
-"перегляді у мережі або при прив'язуванні пристроїв Bluetooth."
+msgstr "Назва пристрою використовується для ідентифікації цього пристрою при перегляді у мережі або при прив'язуванні пристроїв Bluetooth."
 
 #: panels/info-overview/cc-info-overview-panel.ui:247
 msgid "_Rename"
@@ -1926,14 +1887,8 @@ msgstr "Переглянути інформацію про вашу систем
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:22
 msgid ""
-"device;system;information;hostname;memory;processor;version;default;"
-"application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr ""
-"пристрій;система;інформація;назва;вузол;пам'ять;процесор;версія;типово;"
-"програма;альтернативний;переважний;cd;dvd;usb;аудіо;звук;відео;диск;знімний;"
-"знімний;носій;автозапуск;device;system;information;hostname;memory;processor;"
-"version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;"
-"media;autorun;"
+"device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "пристрій;система;інформація;назва;вузол;пам'ять;процесор;версія;типово;програма;альтернативний;переважний;cd;dvd;usb;аудіо;звук;відео;диск;знімний;знімний;носій;автозапуск;device;system;information;hostname;memory;processor;version;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2163,10 +2118,7 @@ msgstr "Клавіша альтернативних символів"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr ""
-"Клавіша альтернативних символів може використовуватися для уведення "
-"додаткових символів. Вони інколи зображені на кнопках клавіатури як третій "
-"варіант."
+msgstr "Клавіша альтернативних символів може використовуватися для уведення додаткових символів. Вони інколи зображені на кнопках клавіатури як третій варіант."
 
 #: panels/keyboard/cc-keyboard-panel.c:71
 #: panels/keyboard/cc-keyboard-panel.c:89
@@ -2215,12 +2167,7 @@ msgid ""
 "it, press compose then a sequence of characters.  For example, compose key "
 "followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by "
 "<b>'</b> will enter <b>á</b>."
-msgstr ""
-"Клавіша компонування дозволяє вводити велику кількість символів Щоб "
-"скористатися нею, натисніть клавішу складання, а потім послідовність "
-"символів. Наприклад, якщо за клавішею складання йтиме <b>C</b> і <b>o</b> "
-"буде виведено <b>©</b>, натиснувши <b>a</b>, за яким слідує <b>'</b>, "
-"отримаємо <b>á</b>."
+msgstr "Клавіша компонування дозволяє вводити велику кількість символів Щоб скористатися нею, натисніть клавішу складання, а потім послідовність символів. Наприклад, якщо за клавішею складання йтиме <b>C</b> і <b>o</b> буде виведено <b>©</b>, натиснувши <b>a</b>, за яким слідує <b>'</b>, отримаємо <b>á</b>."
 
 #: panels/keyboard/cc-keyboard-panel.c:95
 msgctxt "keyboard key"
@@ -2242,9 +2189,7 @@ msgstr "Print Screen"
 msgid ""
 "Input sources can be switched using the %s keyboard shortcut.\n"
 "This can be changed in the keyboard shortcut settings."
-msgstr ""
-"Джерела введення можна перемикати за допомогою клавіатурного скорочення %s.\n"
-"Змінити скорочення можна у параметрах клавіатурних скорочень."
+msgstr "Джерела введення можна перемикати за допомогою клавіатурного скорочення %s.\nЗмінити скорочення можна у параметрах клавіатурних скорочень."
 
 #: panels/keyboard/cc-keyboard-panel.ui:48
 msgid "Input Sources"
@@ -2301,9 +2246,7 @@ msgstr "Скинути всі скорочення?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr ""
-"Скидання скорочень може вплинути і на ваші власні скорочення. Це неможливо "
-"вернути."
+msgstr "Скидання скорочень може вплинути і на ваші власні скорочення. Це неможливо вернути."
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:435
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:275
@@ -2323,9 +2266,7 @@ msgstr "Додати нетипові скорочення"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:124
 msgid "Set up custom shortcuts for launching apps, running scripts, and more."
-msgstr ""
-"Налаштувати нетипові клавіатурні скорочення для запуску програм, скриптів "
-"тощо."
+msgstr "Налаштувати нетипові клавіатурні скорочення для запуску програм, скриптів тощо."
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:131
 msgid "Add Shortcut"
@@ -2353,10 +2294,9 @@ msgstr "Скинути всі скорочення до їхніх типови�
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:391
 #, c-format
-msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr ""
-"%s вже використовується для %s. Якщо застосувати, сполучення для %s буде "
-"вимкнено"
+msgid ""
+"%s is already being used for %s. If you replace it, %s will be disabled"
+msgstr "%s вже використовується для %s. Якщо застосувати, сполучення для %s буде вимкнено"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:535
 msgid "Enter the new shortcut"
@@ -2382,8 +2322,7 @@ msgstr "Додати своє скорочення"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:60
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr ""
-"Натисніть Esc, щоб скасувати, або Backspace, щоб вимкнути комбінації клавіш."
+msgstr "Натисніть Esc, щоб скасувати, або Backspace, щоб вимкнути комбінації клавіш."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:135
 #: panels/printers/pp-details-dialog.ui:40
@@ -2432,18 +2371,14 @@ msgstr "Клавіатура"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
-msgstr ""
-"Змінити клавіатурні скорочення і вказати параметри введення, розкладки "
-"клавіатури та джерела введення даних"
+msgstr "Змінити клавіатурні скорочення і вказати параметри введення, розкладки клавіатури та джерела введення даних"
 
-#. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Keyboard panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:18
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr ""
-"Комбінація;Робоча область;Вікно;Зміна розміру;Масштаб;Контраст;Введення;"
-"Джерело;Блокування;Том;Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;"
-"Source;Lock;Volume;"
+msgstr "Комбінація;Робоча область;Вікно;Зміна розміру;Масштаб;Контраст;Введення;Джерело;Блокування;Том;Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
 
 #: panels/location/cc-location-panel.ui:31
 msgid "Location services turned off"
@@ -2454,34 +2389,25 @@ msgid "No applications can obtain location information."
 msgstr "Немає програм, які здатні отримувати дані щодо місця перебування."
 
 #: panels/location/cc-location-panel.ui:72
-#, fuzzy
 msgid ""
 "Location services allow applications to know your location. Using Wi-Fi and "
 "mobile broadband increases accuracy. System applications can always access "
 "your location."
 msgstr ""
-"Служба розташування дозволяє програмам дізнаватись ваше розміщення. Точність "
-"підвищується, якщо ввімкнути WiFi і мобільний зв'язок."
 
 #: panels/location/cc-location-panel.ui:81
 msgid ""
-"Uses Mozilla Location Service: <a href='https://location.services.mozilla."
-"com/privacy'>Privacy Policy</a>"
-msgstr ""
-"Використовує Mozilla Location Service: <a href='https://location.services."
-"mozilla.com/privacy'>Умови конфіденційності</a>"
+"Uses Mozilla Location Service: <a "
+"href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>"
+msgstr "Використовує Mozilla Location Service: <a href='https://location.services.mozilla.com/privacy'>Умови конфіденційності</a>"
 
 #: panels/location/cc-location-panel.ui:94
 msgid "Allow the applications below to determine your location."
-msgstr ""
-"Дозволити вказаним нижче програмам доступ до даних щодо вашого місця "
-"перебування."
+msgstr "Дозволити вказаним нижче програмам доступ до даних щодо вашого місця перебування."
 
 #: panels/location/cc-location-panel.ui:114
 msgid "No Applications Have Asked for Location Access"
-msgstr ""
-"Немає програм, які б надсилали запит щодо доступу до даних щодо місця "
-"перебування"
+msgstr "Немає програм, які б надсилали запит щодо доступу до даних щодо місця перебування"
 
 #: panels/location/gnome-location-panel.desktop.in.in:4
 msgid "Protect your location information"
@@ -2489,11 +2415,9 @@ msgstr "Захистіть ваші дані щодо місця перебув�
 
 #: panels/lock/cc-lock-panel.ui:27
 msgid ""
-"Automatically locking the screen prevents others from accessing the computer "
-"while you're away."
-msgstr ""
-"Автоматичне блокування екрана запобігає доступу інших користувачів до "
-"комп'ютера, поки вас немає."
+"Automatically locking the screen prevents others from accessing the computer"
+" while you're away."
+msgstr "Автоматичне блокування екрана запобігає доступу інших користувачів до комп'ютера, поки вас немає."
 
 #: panels/lock/cc-lock-panel.ui:44
 msgid "Blank Screen Delay"
@@ -2512,7 +2436,8 @@ msgid "Automatic _Screen Lock Delay"
 msgstr "Затримка _автоматичного блокування екрана"
 
 #: panels/lock/cc-lock-panel.ui:83
-msgid "Period after the screen blanks when the screen is automatically locked."
+msgid ""
+"Period after the screen blanks when the screen is automatically locked."
 msgstr "Затримка автоматичного блокування після вимикання екрана."
 
 #: panels/lock/cc-lock-panel.ui:103
@@ -2527,53 +2452,59 @@ msgstr "Заборонити _нові пристрої USB"
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr ""
-"Заборонити новим пристроям USB взаємодіяти із системою, коли екран "
-"заблоковано."
+msgstr "Заборонити новим пристроям USB взаємодіяти із системою, коли екран заблоковано."
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:166
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Екран вимикається"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:170
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 секунд"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:174
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 хвилина"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:178
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 хвилини"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:182
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 хвилини"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:186
 msgctxt "lock_screen"
 msgid "5 minutes"
 msgstr "5 хвилин"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:190
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "30 хвилин"
 
-#. Translators: Option for "Lock screen after blank for" in "Screen Lock" dialog.
+#. Translators: Option for "Lock screen after blank for" in "Screen Lock"
+#. dialog.
 #: panels/lock/cc-lock-panel.ui:194
 msgctxt "lock_screen"
 msgid "1 hour"
@@ -2648,9 +2579,8 @@ msgid "Lock your screen"
 msgstr "Заблокувати екран"
 
 #: panels/metrics/cc-metrics-panel.ui:32
-#, fuzzy
 msgid "Metrics services turned off"
-msgstr "Служби даних місця перебування вимкнено"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:41
 msgid "No anonymous usage data will be sent to Endless."
@@ -2658,9 +2588,8 @@ msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:58
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:3
-#, fuzzy
 msgid "Metrics"
-msgstr "Метрична"
+msgstr ""
 
 #: panels/metrics/cc-metrics-panel.ui:59
 msgid ""
@@ -2669,11 +2598,11 @@ msgid ""
 msgstr ""
 
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:4
-#, fuzzy
 msgid "Enable or disable Endless metrics collection"
-msgstr "Увімкнути або вимкнути віддалений вхід"
+msgstr ""
 
-#. Translators: Search terms to find the Metrics panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Metrics panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:14
 msgid "private;privacy;metrics;network;identity;"
 msgstr ""
@@ -2687,15 +2616,11 @@ msgid "No applications can record sound."
 msgstr "Немає програм, які можуть записувати звук."
 
 #: panels/microphone/cc-microphone-panel.ui:75
-#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
 "properly. System applications can always use the microphone."
 msgstr ""
-"Використання мікрофона надає програмам змогу записувати та отримувати "
-"звукові дані. Вимикання мікрофона може призвести до неправильної роботи "
-"деяких програм."
 
 #: panels/microphone/cc-microphone-panel.ui:85
 msgid "Allow the applications below to use your microphone."
@@ -2742,8 +2667,10 @@ msgstr "Швидкість миші"
 msgid "Double-click timeout"
 msgstr "Затримка подвійного клацання"
 
-#. Translators: This switch reverses the scrolling direction for mices. The term used comes from OS X so use the same translation if possible.
-#. Translators: This switch reverses the scrolling direction for touchpads. The term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for mices. The
+#. term used comes from OS X so use the same translation if possible.
+#. Translators: This switch reverses the scrolling direction for touchpads.
+#. The term used comes from OS X so use the same translation if possible.
 #: panels/mouse/cc-mouse-panel.ui:166 panels/mouse/cc-mouse-panel.ui:230
 msgid "Natural Scrolling"
 msgstr "Природне гортання"
@@ -2817,7 +2744,9 @@ msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
 msgstr "Змінити чутливість вашої миші та сенсорного пристрою і вибрати руку"
 
-#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:18
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
 msgstr "Сенсор;Вказівник;Клік;Стукіт;Подвійний;Кнопка;Кулька;Прокрутити;"
@@ -2837,9 +2766,7 @@ msgstr "_Активні краї екрана"
 #: panels/multitasking/cc-multitasking-panel.ui:85
 msgid ""
 "Drag windows against the top, left, and right screen edges to resize them."
-msgstr ""
-"Перетягніть вікна до верхнього, лівого або правого країв екрана, щоб змінити "
-"їхній розмір."
+msgstr "Перетягніть вікна до верхнього, лівого або правого країв екрана, щоб змінити їхній розмір."
 
 #: panels/multitasking/cc-multitasking-panel.ui:114
 msgid "Workspaces"
@@ -2897,17 +2824,15 @@ msgstr "Багатозадачність"
 msgid "Manage preferences for productivity and multitasking"
 msgstr "Керування параметрами продуктивності та багатозадачності"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/multitasking/gnome-multitasking-panel.desktop.in.in:14
 msgid "Multitasking;Multitask;Productivity;Customize;Desktop;"
-msgstr ""
-"Multitasking;Multitask;Productivity;Customize;Desktop;багатозадачність;"
-"задача;завдання;продуктивність;налаштовування;налаштування;стільниця;"
+msgstr "Multitasking;Multitask;Productivity;Customize;Desktop;багатозадачність;задача;завдання;продуктивність;налаштовування;налаштування;стільниця;"
 
 #: panels/network/cc-network-panel.c:686 panels/network/cc-wifi-panel.ui:307
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr ""
-"Отакої, щось не так. Зв'яжіться з вашим постачальником програмних засобів."
+msgstr "Отакої, щось не так. Зв'яжіться з вашим постачальником програмних засобів."
 
 #: panels/network/cc-network-panel.c:692
 msgid "NetworkManager needs to be running."
@@ -2926,7 +2851,8 @@ msgstr "VPN"
 msgid "Not set up"
 msgstr "Не налаштовано"
 
-#. TRANSLATORS: This happens when the connection name does not contain the SSID.
+#. TRANSLATORS: This happens when the connection name does not contain the
+#. SSID.
 #: panels/network/cc-wifi-connection-row.c:207
 #, c-format
 msgctxt "Wi-Fi Connection"
@@ -2954,8 +2880,8 @@ msgid "Secure network"
 msgstr "Захищена мережа"
 
 #. TRANSLATORS: device status
-#: panels/network/cc-wifi-connection-row.ui:68 panels/network/panel-common.c:63
-#: panels/updates/cc-updates-panel.c:576
+#: panels/network/cc-wifi-connection-row.ui:68
+#: panels/network/panel-common.c:63 panels/updates/cc-updates-panel.c:576
 msgid "Connected"
 msgstr "З'єднано"
 
@@ -2973,9 +2899,7 @@ msgstr "Параметри…"
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr ""
-"Увімкнення хот-споту, призведе до від'єднання від %s і неможливості доступу "
-"до інтернету за допомогою Wi-Fi."
+msgstr "Увімкнення хот-споту, призведе до від'єднання від %s і неможливості доступу до інтернету за допомогою Wi-Fi."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:267
 msgid "Must have a minimum of 8 characters"
@@ -2992,14 +2916,10 @@ msgstr "Увімкнути точку доступу Wi-Fi?"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:19
 msgid ""
-"Wi-Fi hotspot allows others to share your internet connection, by creating a "
-"Wi-Fi network that they can connect to. To do this, you must have an "
+"Wi-Fi hotspot allows others to share your internet connection, by creating a"
+" Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr ""
-"Точка доступу Wi-Fi надає змогу іншим користувачам використовувати ваше "
-"інтернет-з'єднання, створюючи мережу Wi-Fi, до якої вони можуть "
-"під'єднуватися. Для цього у вас має бути під'єднання до інтернету за "
-"допомогою джерела, відмінного від Wi-Fi."
+msgstr "Точка доступу Wi-Fi надає змогу іншим користувачам використовувати ваше інтернет-з'єднання, створюючи мережу Wi-Fi, до якої вони можуть під'єднуватися. Для цього у вас має бути під'єднання до інтернету за допомогою джерела, відмінного від Wi-Fi."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:44
 msgid "Network Name"
@@ -3071,8 +2991,7 @@ msgstr "Активна точка доступу Wi-Fi"
 
 #: panels/network/cc-wifi-panel.ui:195
 msgid "Mobile devices can scan the QR code to connect."
-msgstr ""
-"На мобільних пристроях можна сканувати штрих-код для встановлення з'єднання."
+msgstr "На мобільних пристроях можна сканувати штрих-код для встановлення з'єднання."
 
 #: panels/network/cc-wifi-panel.ui:205
 msgid "Turn Off Hotspot…"
@@ -3115,12 +3034,9 @@ msgstr "Стабільна"
 #: panels/network/connection-editor/ce-page.c:241
 msgid ""
 "The MAC address entered here will be used as hardware address for the "
-"network device this connection is activated on. This feature is known as MAC "
-"cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr ""
-"Введена тут МАС-адреса буде використовуватися як апаратна адреса для "
-"пристрою мережі, на якому активовано це з'єднання. Ця функція відома як "
-"клонування або підробка MAC-адреси. Приклад: 00:11:22:33:44:55"
+"network device this connection is activated on. This feature is known as MAC"
+" cloning or spoofing. Example: 00:11:22:33:44:55"
+msgstr "Введена тут МАС-адреса буде використовуватися як апаратна адреса для пристрою мережі, на якому активовано це з'єднання. Ця функція відома як клонування або підробка MAC-адреси. Приклад: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3397,16 +3313,13 @@ msgstr "Зробити доступним для _інших користува�
 
 #: panels/network/connection-editor/details-page.ui:467
 msgid "_Metered connection: has data limits or can incur charges"
-msgstr ""
-"З'єднання із об_ліком: мають обмеження на об'єм даних або обліковуються за "
-"тарифним планом"
+msgstr "З'єднання із об_ліком: мають обмеження на об'єм даних або обліковуються за тарифним планом"
 
 #: panels/network/connection-editor/details-page.ui:478
 msgid ""
-"Software updates and other large downloads will not be started automatically."
-msgstr ""
-"Оновлення програмного забезпечення та отримання інших великих обсягів даних "
-"не виконуватиметься автоматично."
+"Software updates and other large downloads will not be started "
+"automatically."
+msgstr "Оновлення програмного забезпечення та отримання інших великих обсягів даних не виконуватиметься автоматично."
 
 #: panels/network/connection-editor/ethernet-page.ui:25
 #: panels/network/connection-editor/vpn-page.ui:23
@@ -3566,15 +3479,10 @@ msgstr "Не вдалось імпортувати з'єднання з VPN"
 #: panels/network/connection-editor/vpn-helpers.c:141
 #, c-format
 msgid ""
-"The file “%s” could not be read or does not contain recognized VPN "
-"connection information\n"
+"The file “%s” could not be read or does not contain recognized VPN connection information\n"
 "\n"
 "Error: %s."
-msgstr ""
-"Файл «%s» неможливо прочитати або він містить невідому інформацію про "
-"з'єднання з VPN\n"
-"\n"
-"Помилка: %s."
+msgstr "Файл «%s» неможливо прочитати або він містить невідому інформацію про з'єднання з VPN\n\nПомилка: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:173
 msgid "Select file to import"
@@ -3604,10 +3512,7 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr ""
-"З'єднання з VPN «%s» неможливо експортувати в %s.\n"
-"\n"
-"Помилка: %s."
+msgstr "З'єднання з VPN «%s» неможливо експортувати в %s.\n\nПомилка: %s."
 
 #: panels/network/connection-editor/vpn-helpers.c:296
 msgid "Export VPN connection"
@@ -3629,7 +3534,8 @@ msgstr "_BSSID"
 msgid "Control how you connect to the Internet"
 msgstr "Вказати яким способом з'єднуватись з інтернетом"
 
-#. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Network panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:18
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr "Мережа;IP;LAN;Проксі;WAN;Broadband;Модем;Bluetooth;vpn;DNS;"
@@ -3638,7 +3544,8 @@ msgstr "Мережа;IP;LAN;Проксі;WAN;Broadband;Модем;Bluetooth;vpn;
 msgid "Control how you connect to Wi-Fi networks"
 msgstr "Керування способами з'єднання із мережами Wi-Fi"
 
-#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:18
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr "Мережа;Бездротова;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
@@ -3663,9 +3570,9 @@ msgstr "Востаннє використано"
 #. * details window for ethernet, if there is only a single
 #. * profile. It is also used to display ethernet in the
 #. * device list.
-#.
 #: panels/network/net-device-ethernet.c:267
-#: panels/network/network-bluetooth.ui:38 panels/network/network-ethernet.ui:18
+#: panels/network/network-bluetooth.ui:38
+#: panels/network/network-ethernet.ui:18
 msgid "Wired"
 msgstr "Дротовий"
 
@@ -3677,9 +3584,7 @@ msgstr "Додати нове з'єднання"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr ""
-"Подробиці мережі для вибраної мережі, зокрема паролі та інші параметри буде "
-"втрачено."
+msgstr "Подробиці мережі для вибраної мережі, зокрема паролі та інші параметри буде втрачено."
 
 #: panels/network/net-device-wifi.c:855
 msgid "_Forget"
@@ -3689,7 +3594,8 @@ msgstr "_Забути"
 msgid "Known Wi-Fi Networks"
 msgstr "Відомі мережі Wi-Fi"
 
-#. translators: This is the label for the "Forget wireless network" functionality
+#. translators: This is the label for the "Forget wireless network"
+#. functionality
 #: panels/network/net-device-wifi.c:1076
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
@@ -3726,9 +3632,7 @@ msgstr "Вимкнено"
 #: panels/network/net-proxy.c:112
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr ""
-"Коли URL налаштувань не надається, використовується автоматичне виявлення "
-"проксі. "
+msgstr "Коли URL налаштувань не надається, використовується автоматичне виявлення проксі. "
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3742,7 +3646,6 @@ msgstr "Це не рекомендовано для ненадійних при�
 #. Translators: this is the title of the connection details
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
-#.
 #: panels/network/net-vpn.c:65 panels/network/net-vpn.c:158
 #, c-format
 msgid "%s VPN"
@@ -4290,17 +4193,10 @@ msgstr "Небезпечно використовувати секретні к�
 
 #: panels/network/wireless-security/eap-method-tls.c:275
 msgid ""
-"The selected private key does not appear to be protected by a password. This "
-"could allow your security credentials to be compromised. Please select a "
-"password-protected private key.\n"
+"The selected private key does not appear to be protected by a password. This could allow your security credentials to be compromised. Please select a password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr ""
-"Схоже, що обраний закритий ключ не захищено паролем. Це може призвести до "
-"компрометації ваших облікових даних. Будь ласка, виберіть закритий ключ, "
-"захищений паролем.\n"
-"\n"
-"(Ви можете захистити закритий ключ за допомогою openssl)"
+msgstr "Схоже, що обраний закритий ключ не захищено паролем. Це може призвести до компрометації ваших облікових даних. Будь ласка, виберіть закритий ключ, захищений паролем.\n\n(Ви можете захистити закритий ключ за допомогою openssl)"
 
 #: panels/network/wireless-security/eap-method-tls.c:506
 msgid "Choose your personal certificate"
@@ -4416,26 +4312,20 @@ msgstr "бракує ключа WEP"
 #: panels/network/wireless-security/ws-wep-key.c:123
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr ""
-"неправильний ключ WEP: ключ з довжиною %zu мусить містити тільки "
-"шістнадцяткові значення"
+msgstr "неправильний ключ WEP: ключ з довжиною %zu мусить містити тільки шістнадцяткові значення"
 
 #: panels/network/wireless-security/ws-wep-key.c:131
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr ""
-"неправильний ключ WEP: ключ з довжиною %zu мусить містити тільки символи "
-"ascii"
+msgstr "неправильний ключ WEP: ключ з довжиною %zu мусить містити тільки символи ascii"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr ""
-"неправильний ключ WEP: хибний довжина ключа %zu. Ключ має бути: або довжина "
-"5/13 (ascii), або 10/26 (шістнадцятковий)"
+msgstr "неправильний ключ WEP: хибний довжина ключа %zu. Ключ має бути: або довжина 5/13 (ascii), або 10/26 (шістнадцятковий)"
 
 #: panels/network/wireless-security/ws-wep-key.c:144
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4474,14 +4364,11 @@ msgstr "_Індекс WEP"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr ""
-"неправильний ключ PSK: неправильна довжина ключа %zu. Має бути [8,63] біти "
-"або 64 шістнадцяткових значення"
+msgstr "неправильний ключ PSK: неправильна довжина ключа %zu. Має бути [8,63] біти або 64 шістнадцяткових значення"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:86
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr ""
-"неправильний WPA-PSK: неможливо означити ключ з 64 шістнадцятковими бітами"
+msgstr "неправильний WPA-PSK: неможливо означити ключ з 64 шістнадцятковими бітами"
 
 #. This is the per application switch for message tray usage.
 #: panels/notifications/cc-app-notifications-dialog.ui:60
@@ -4504,10 +4391,10 @@ msgstr "_Поява сповіщення"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr ""
-"Сповіщення будуть накопичуватись у переліку сповіщень і після їхньої появи."
+msgstr "Сповіщення будуть накопичуватись у переліку сповіщень і після їхньої появи."
 
-#. Popups here refers to message tray notifications in the middle of the screen.
+#. Popups here refers to message tray notifications in the middle of the
+#. screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:249
 msgctxt "notifications"
 msgid "Show Message _Content in Popups"
@@ -4545,7 +4432,8 @@ msgstr "Сповіщення на за_блокованому екрані"
 msgid "Control which notifications are displayed and what they show"
 msgstr "Вказує які сповіщення показуються і що вони показують"
 
-#. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Notifications panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:19
 msgid "Notifications;Banner;Message;Tray;Popup;"
 msgstr "Сповіщення;Шапка;Повідомлення;Лоток;Контекстний;"
@@ -4568,7 +4456,6 @@ msgstr "Помилка вилучення облікового запису"
 
 #. Translators: The %s is the username (eg., debarshi.ray@gmail.com
 #. * or rishi).
-#.
 #: panels/online-accounts/cc-online-accounts-panel.c:936
 #, c-format
 msgid "%s removed"
@@ -4580,23 +4467,20 @@ msgstr "Облікові записи в інтернеті"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
-msgstr ""
-"З'єднатись з вашим мережевими обліковими записами і вирішити, що з ними "
-"робити "
+msgstr "З'єднатись з вашим мережевими обліковими записами і вирішити, що з ними робити "
 
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
 #. The list MUST also end with a semicolon!
-#. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+#. For ReadItLater and Pocket, see
+#. http://en.wikipedia.org/wiki/Pocket_(application)
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:21
 msgid ""
-"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
-"Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr ""
-"Google;Facebook;Twitter;Yahoo;Інтернет;Мережа;Балачка;Календар;Пошта;Контакт;"
-"ownCloud;IMAP;SMTP;Pocket;ReadItLater;"
+"Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr "Google;Facebook;Twitter;Yahoo;Інтернет;Мережа;Балачка;Календар;Пошта;Контакт;ownCloud;IMAP;SMTP;Pocket;ReadItLater;"
 
-#. Translators: This is the button which allows undoing the removal of the printer.
+#. Translators: This is the button which allows undoing the removal of the
+#. printer.
 #: panels/online-accounts/online-accounts.ui:38 panels/printers/printers.ui:61
 msgid "Undo"
 msgstr "Повернути"
@@ -4607,8 +4491,7 @@ msgstr "З'єднати ваші дані з хмарою"
 
 #: panels/online-accounts/online-accounts.ui:109
 msgid "No internet connection — connect to set up new online accounts"
-msgstr ""
-"Немає інтернету — з'єднайтеся з мережею, щоб створювати облікові записи"
+msgstr "Немає інтернету — з'єднайтеся з мережею, щоб створювати облікові записи"
 
 #: panels/online-accounts/online-accounts.ui:134
 msgid "Add an account"
@@ -4811,18 +4694,13 @@ msgstr "Автоматично призупиняти роботу"
 #: panels/power/cc-power-panel.c:1171
 msgid ""
 "Performance mode temporarily disabled due to high operating temperature."
-msgstr ""
-"Режим підвищеної швидкодії тимчасово вимкнено через високу операційну "
-"температуру."
+msgstr "Режим підвищеної швидкодії тимчасово вимкнено через високу операційну температуру."
 
 #: panels/power/cc-power-panel.c:1173
 msgid ""
-"Lap detected: performance mode temporarily unavailable. Move the device to a "
-"stable surface to restore."
-msgstr ""
-"Виявлено розташування на нетривкій поверхні: режим високої швидкодії "
-"тимчасово недоступний. Перенесіть пристрій на стабільну поверхню, щоб "
-"відновити доступ."
+"Lap detected: performance mode temporarily unavailable. Move the device to a"
+" stable surface to restore."
+msgstr "Виявлено розташування на нетривкій поверхні: режим високої швидкодії тимчасово недоступний. Перенесіть пристрій на стабільну поверхню, щоб відновити доступ."
 
 #: panels/power/cc-power-panel.c:1175
 msgid "Performance mode temporarily disabled."
@@ -4832,9 +4710,7 @@ msgstr "Режим підвищеної швидкодії тимчасово в
 msgid ""
 "Low battery: power saver enabled. Previous mode will be restored when "
 "battery is sufficiently charged."
-msgstr ""
-"Низький рівень заряду акумулятора: увімкнено заощадження енергії. Попередній "
-"режим буде відновлено за достатнього рівня заряду акумулятора."
+msgstr "Низький рівень заряду акумулятора: увімкнено заощадження енергії. Попередній режим буде відновлено за достатнього рівня заряду акумулятора."
 
 #. translators: "%s" is an application name
 #: panels/power/cc-power-panel.c:1226
@@ -4942,8 +4818,7 @@ msgstr "В_имикання екрана"
 
 #: panels/power/cc-power-panel.ui:175
 msgid "Turns the screen off after a period of inactivity."
-msgstr ""
-"Вимикає екран, якщо комп'ютер є неактивним протягом певного періоду часу."
+msgstr "Вимикає екран, якщо комп'ютер є неактивним протягом певного періоду часу."
 
 #: panels/power/cc-power-panel.ui:183
 msgid "Automatic Power Saver"
@@ -4951,8 +4826,7 @@ msgstr "Автоматичне заощадження енергії"
 
 #: panels/power/cc-power-panel.ui:184
 msgid "Enables power saver mode when battery is low."
-msgstr ""
-"Вмикає режим заощадження енергії при низькому рівні заряду акумулятора."
+msgstr "Вмикає режим заощадження енергії при низькому рівні заряду акумулятора."
 
 #: panels/power/cc-power-panel.ui:198
 msgid "_Automatic Suspend"
@@ -4960,9 +4834,7 @@ msgstr "_Автоматично призупиняти"
 
 #: panels/power/cc-power-panel.ui:199
 msgid "Pauses the computer after a period of inactivity."
-msgstr ""
-"Призупиняє роботу комп'ютера, якщо той є неактивним протягом певного періоду "
-"часу."
+msgstr "Призупиняє роботу комп'ютера, якщо той є неактивним протягом певного періоду часу."
 
 #: panels/power/cc-power-panel.ui:217
 msgid "Suspend & Power Button"
@@ -4995,9 +4867,7 @@ msgstr "Затримка"
 
 #: panels/power/cc-power-profile-row.c:61
 msgid "Lap detected: performance mode unavailable"
-msgstr ""
-"Виявлено розташування на нетривкій поверхні: режим високої швидкодії "
-"недоступний"
+msgstr "Виявлено розташування на нетривкій поверхні: режим високої швидкодії недоступний"
 
 #: panels/power/cc-power-profile-row.c:63
 msgid "High hardware temperature: performance mode unavailable"
@@ -5043,14 +4913,12 @@ msgstr "Живлення"
 msgid "View your battery status and change power saving settings"
 msgstr "Переглянути стан вашої батареї і змінити параметри заощадження енергії"
 
-#. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Power panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:18
 msgid ""
-"Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
-"Energy;"
-msgstr ""
-"Живлення;Сон;Призупинити;Приспати;Батарея;Яскравість;Затемнення;Порожній;"
-"DPMS;Бездіяльність;живлення;енергія;"
+"Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;"
+msgstr "Живлення;Сон;Призупинити;Приспати;Батарея;Яскравість;Затемнення;Порожній;DPMS;Бездіяльність;живлення;енергія;"
 
 #: panels/printers/authentication-dialog.ui:11
 msgid " "
@@ -5099,10 +4967,10 @@ msgstr "Принтери"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr ""
-"Додати принтер, переглянути завдання і визначити, яким способом друкувати"
+msgstr "Додати принтер, переглянути завдання і визначити, яким способом друкувати"
 
-#. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Printers panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:15
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Принтер;Черга;Друк;Папір;Чорнило;Тонер;"
@@ -5127,15 +4995,15 @@ msgstr "_Розблокувати"
 msgid "No Printers Found"
 msgstr "Не знайдено жодного принтера"
 
-#. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
+#. Translators: The entered text should contain network address of a printer
+#. or a text which will filter found devices (their names and locations)
 #: panels/printers/new-printer-dialog.ui:284
 msgid "Enter a network address or search for a printer"
 msgstr "Уведіть адресу мережі або знайдіть принтер"
 
 #: panels/printers/new-printer-dialog.ui:356
 msgid "Enter username and password to view printers on Print Server."
-msgstr ""
-"Введіть користувача та пароль, щоб переглянути доступні принтери на сервері."
+msgstr "Введіть користувача та пароль, щоб переглянути доступні принтери на сервері."
 
 #. Translators: This is the title of the dialog. %s is the printer name.
 #: panels/printers/pp-details-dialog.c:74
@@ -5154,12 +5022,12 @@ msgstr "Виберіть файл PPD"
 
 #: panels/printers/pp-details-dialog.c:241
 msgid ""
-"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
-"PPD.GZ)"
-msgstr ""
-"Файли опису принтера PostScript (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
+"PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, "
+"*.PPD.GZ)"
+msgstr "Файли опису принтера PostScript (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
 
-#: panels/printers/pp-details-dialog.ui:68 panels/printers/printer-entry.ui:223
+#: panels/printers/pp-details-dialog.ui:68
+#: panels/printers/printer-entry.ui:223
 msgid "Location"
 msgstr "Адреса"
 
@@ -5294,7 +5162,8 @@ msgctxt "print job"
 msgid "Completed"
 msgstr "Завершено"
 
-#. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
+#. Translators: This label shows how many jobs of this printer needs to be
+#. authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:249
 #, c-format
 msgid "%u Job Requires Authentication"
@@ -5304,7 +5173,8 @@ msgstr[1] "Для %u завдань слід пройти розпізнаван
 msgstr[2] "Для %u завдань слід пройти розпізнавання"
 msgstr[3] "Для %u завдання слід пройти розпізнавання"
 
-#. Translators: This is the printer name for which we are showing the active jobs
+#. Translators: This is the printer name for which we are showing the active
+#. jobs
 #: panels/printers/pp-jobs-dialog.c:401
 #, c-format
 msgctxt "Printer jobs dialog title"
@@ -5322,22 +5192,26 @@ msgstr "Для друку з %s введіть реєстраційні дані
 msgid "Domain"
 msgstr "Домен"
 
-#. Translators: This button authenticates all print jobs and send them for printing.
+#. Translators: This button authenticates all print jobs and send them for
+#. printing.
 #: panels/printers/pp-jobs-dialog.ui:129
 msgid "A_uthenticate"
 msgstr "За_свідчення"
 
-#. Translators: this action removes (purges) all the listed jobs from the list.
+#. Translators: this action removes (purges) all the listed jobs from the
+#. list.
 #: panels/printers/pp-jobs-dialog.ui:169
 msgid "Clear All"
 msgstr "Очистити все"
 
-#. Translators: This button pop up authentication dialog for print jobs which need credentials.
+#. Translators: This button pop up authentication dialog for print jobs which
+#. need credentials.
 #: panels/printers/pp-jobs-dialog.ui:232
 msgid "_Authenticate"
 msgstr "_Автентифікація"
 
-#. Translators: this label describes the dialog empty state, with no jobs listed.
+#. Translators: this label describes the dialog empty state, with no jobs
+#. listed.
 #: panels/printers/pp-jobs-dialog.ui:358
 msgid "No Active Printer Jobs"
 msgstr "Немає робочих завдань для принтерів"
@@ -5346,18 +5220,19 @@ msgstr "Немає робочих завдань для принтерів"
 msgid "Unlock Print Server"
 msgstr "Розблокувати сервер друкування"
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:273
 #, c-format
 msgid "Unlock %s."
 msgstr "Розблокувати %s."
 
-#. Translators: Samba server needs authentication of the user to show list of its printers.
+#. Translators: Samba server needs authentication of the user to show list of
+#. its printers.
 #: panels/printers/pp-new-printer-dialog.c:277
 #, c-format
 msgid "Enter username and password to view printers on %s."
-msgstr ""
-"Введіть користувача та пароль, щоб переглянути доступні принтери на %s."
+msgstr "Введіть користувача та пароль, щоб переглянути доступні принтери на %s."
 
 #: panels/printers/pp-new-printer-dialog.c:587
 msgid "Searching for Printers"
@@ -5390,7 +5265,8 @@ msgstr "Розміщення: %s"
 msgid "Address: %s"
 msgstr "Адреса: %s"
 
-#. Translators: This item is a server which needs authentication to show its printers
+#. Translators: This item is a server which needs authentication to show its
+#. printers
 #: panels/printers/pp-new-printer-dialog.c:1461
 msgid "Server requires authentication"
 msgstr "Сервер потребує засвідчення"
@@ -5441,13 +5317,15 @@ msgctxt "Printer Option Group"
 msgid "General"
 msgstr "Загальне"
 
-#. Translators: "Page Setup" tab contains settings related to pages (page size, paper source, etc.)
+#. Translators: "Page Setup" tab contains settings related to pages (page
+#. size, paper source, etc.)
 #: panels/printers/pp-options-dialog.c:654
 msgctxt "Printer Option Group"
 msgid "Page Setup"
 msgstr "Параметри сторінки"
 
-#. Translators: "Installable Options" tab contains settings of presence of installed options (amount of RAM, duplex unit, etc.)
+#. Translators: "Installable Options" tab contains settings of presence of
+#. installed options (amount of RAM, duplex unit, etc.)
 #: panels/printers/pp-options-dialog.c:657
 msgctxt "Printer Option Group"
 msgid "Installable Options"
@@ -5459,7 +5337,8 @@ msgctxt "Printer Option Group"
 msgid "Job"
 msgstr "Завдання"
 
-#. Translators: "Image Quality" tab contains settings for quality of output print (e.g. resolution)
+#. Translators: "Image Quality" tab contains settings for quality of output
+#. print (e.g. resolution)
 #: panels/printers/pp-options-dialog.c:663
 msgctxt "Printer Option Group"
 msgid "Image Quality"
@@ -5471,7 +5350,8 @@ msgctxt "Printer Option Group"
 msgid "Color"
 msgstr "Колір"
 
-#. Translators: "Finishing" tab contains finishing settings (e.g. booklet printing)
+#. Translators: "Finishing" tab contains finishing settings (e.g. booklet
+#. printing)
 #: panels/printers/pp-options-dialog.c:669
 msgctxt "Printer Option Group"
 msgid "Finishing"
@@ -5674,7 +5554,8 @@ msgstr "Подробиці про принтер"
 msgid "Use Printer by Default"
 msgstr "Використовувати як типовий принтер"
 
-#. Translators: This button executes command which cleans print heads of the printer.
+#. Translators: This button executes command which cleans print heads of the
+#. printer.
 #: panels/printers/printer-entry.ui:50
 msgid "Clean Print Heads"
 msgstr "Очистити друкарські голівки"
@@ -5721,9 +5602,7 @@ msgstr "Додати принтер…"
 msgid ""
 "Sorry! The system printing service\n"
 "doesn’t seem to be available."
-msgstr ""
-"Вибачте! Система служба друкування,\n"
-"здається, недоступна."
+msgstr "Вибачте! Система служба друкування,\nздається, недоступна."
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:189
 #: panels/region/cc-format-chooser.ui:6 panels/region/cc-region-panel.ui:203
@@ -5734,9 +5613,7 @@ msgstr "Формати"
 msgid ""
 "Choose the format for numbers, dates and currencies. Changes take effect on "
 "next login."
-msgstr ""
-"Вкажіть формат чисел, дат і валют. Зміни буде застосовано при наступному "
-"вході до системи."
+msgstr "Вкажіть формат чисел, дат і валют. Зміни буде застосовано при наступному вході до системи."
 
 #: panels/region/cc-format-chooser.ui:117
 msgid "Search locales..."
@@ -5831,9 +5708,7 @@ msgstr "_Формати"
 
 #: panels/region/cc-region-panel.ui:275
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"Параметри входу використовуються всіма користувачами, коли вони входять у "
-"систему"
+msgstr "Параметри входу використовуються всіма користувачами, коли вони входять у систему"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
 msgid "Region & Language"
@@ -5843,7 +5718,9 @@ msgstr "Регіон та мова"
 msgid "Select your display language and formats"
 msgstr "Вибрати мову і формати показу даних"
 
-#. Translators: Search terms to find the Region and Language panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Region and Language panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/region/gnome-region-panel.desktop.in.in:18
 msgid "Language;Layout;Keyboard;Input;"
 msgstr "Мова;Розкладка;Клавіатура;Введення;"
@@ -5888,7 +5765,6 @@ msgstr "Вибрати програму для програмного CD"
 #. * strings, just here to fix capitalization of the English originals.
 #. * If the shared-mime-info translation works for your language,
 #. * simply leave these untranslated.
-#.
 #: panels/removable-media/cc-removable-media-panel.c:378
 msgid "audio DVD"
 msgstr "audio DVD"
@@ -5985,14 +5861,13 @@ msgstr "Змінний носій"
 msgid "Configure Removable Media settings"
 msgstr "Налаштування параметрів портативних носіїв даних"
 
-#. Translators: Search terms to find the Removable Media panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Removable Media panel. Do NOT
+#. translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/removable-media/gnome-removable-media-panel.desktop.in.in:18
 msgid ""
-"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
-"removable;media;autorun;"
-msgstr ""
-"пристрій;система;типове;програма;бажане;cd;dvd;usb;аудіо;відео;диск;знімний;"
-"носій;автозапуск;"
+"device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
+msgstr "пристрій;система;типове;програма;бажане;cd;dvd;usb;аудіо;відео;диск;знімний;носій;автозапуск;"
 
 #: panels/search/cc-search-locations-dialog.c:636
 msgid "Select Location"
@@ -6011,11 +5886,9 @@ msgstr "Місця пошуку"
 #: panels/search/cc-search-locations-dialog.ui:69
 #: panels/search/cc-search-locations-dialog.ui:107
 msgid ""
-"Folders which are searched by system applications, such as Files, Photos and "
-"Videos."
-msgstr ""
-"Теки, у яких виконуватимуть пошук загальносистемні програмами, наприклад, "
-"«Файли», «Фото» і «Відео»."
+"Folders which are searched by system applications, such as Files, Photos and"
+" Videos."
+msgstr "Теки, у яких виконуватимуть пошук загальносистемні програмами, наприклад, «Файли», «Фото» і «Відео»."
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Places"
@@ -6043,19 +5916,17 @@ msgstr "Пересунути вниз"
 
 #: panels/search/cc-search-panel.ui:31
 msgid ""
-"Control which search results are shown in the Activities Overview. The order "
-"of search results can also be changed by moving rows in the list."
-msgstr ""
-"Керуйте тим, які результати пошуку буде показано в огляді діяльності. "
-"Порядок результатів пошуку також можна змінити пересуванням рядків у списку."
+"Control which search results are shown in the Activities Overview. The order"
+" of search results can also be changed by moving rows in the list."
+msgstr "Керуйте тим, які результати пошуку буде показано в огляді діяльності. Порядок результатів пошуку також можна змінити пересуванням рядків у списку."
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr ""
-"Вказує, які програми показувати у результатах пошуку в огляді діяльності"
+msgstr "Вказує, які програми показувати у результатах пошуку в огляді діяльності"
 
-#. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Search panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:18
 msgid "Search;Find;Index;Hide;Privacy;Results;"
 msgstr "Пошук;Знайти;Індекс;Сховати;Конфіденційність;Результати;"
@@ -6099,21 +5970,16 @@ msgstr "Вибрати теку"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr ""
-"Спільний доступ до файлів надає вам змогу спільного використовувати вашу "
-"теку із іншими користувачами вашої поточної мережі за допомогою: %s"
+msgstr "Спільний доступ до файлів надає вам змогу спільного використовувати вашу теку із іншими користувачами вашої поточної мережі за допомогою: %s"
 
-#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
+#. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to
+#. run
 #: panels/sharing/cc-sharing-panel.c:702
 #, c-format
 msgid ""
-"When remote login is enabled, remote users can connect using the Secure "
-"Shell command:\n"
+"When remote login is enabled, remote users can connect using the Secure Shell command:\n"
 "%s"
-msgstr ""
-"Якщо дистанційний доступ увімкнено, віддалені користувачі можуть "
-"під'єднуватися за допомогою команди SSH:\n"
-"%s"
+msgstr "Якщо дистанційний доступ увімкнено, віддалені користувачі можуть під'єднуватися за допомогою команди SSH:\n%s"
 
 #. TRANSLATORS: %s is replaced with a link to a vnc://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:708
@@ -6121,9 +5987,7 @@ msgstr ""
 msgid ""
 "Screen sharing allows remote users to view or control your screen by "
 "connecting to %s"
-msgstr ""
-"Спільний доступ до екрана надає змогу віддаленим користувачам переглядати "
-"або керувати вашим екраном, під'єднавшись до %s"
+msgstr "Спільний доступ до екрана надає змогу віддаленим користувачам переглядати або керувати вашим екраном, під'єднавшись до %s"
 
 #: panels/sharing/cc-sharing-panel.c:813
 msgid "Copy"
@@ -6218,14 +6082,12 @@ msgstr "Теки"
 msgid "Control what you want to share with others"
 msgstr "Вказує, чим ви бажаєте поділитись з іншими"
 
-#. Translators: Search terms to find the Sharing panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sharing panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:15
 msgid ""
-"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
-"movies;server;renderer;"
-msgstr ""
-"спільне;оприлюднення;ssh;вузол;назва;віддалений;стільниця;носій;аудіо;відео;"
-"малюнок;фотографії;фільми;сервер;відтворення;"
+"share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;movies;server;renderer;"
+msgstr "спільне;оприлюднення;ssh;вузол;назва;віддалений;стільниця;носій;аудіо;відео;малюнок;фотографії;фільми;сервер;відтворення;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -6337,13 +6199,12 @@ msgstr "Звук"
 msgid "Change sound levels, inputs, outputs, and alert sounds"
 msgstr "Змінити рівень звуку"
 
-#. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Sound panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:19
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr ""
-"Карта;Мікрофон;Гучність;Згасання;Баланс;Bluetooth;Гарнітура;Аудіо;Вивід;Ввід;"
-"Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
+msgstr "Карта;Мікрофон;Гучність;Згасання;Баланс;Bluetooth;Гарнітура;Аудіо;Вивід;Ввід;Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:94
 #: panels/thunderbolt/cc-bolt-device-entry.c:125
@@ -6457,19 +6318,13 @@ msgstr "Авторизовано"
 #: panels/thunderbolt/cc-bolt-panel.c:175
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr ""
-"Підсистема Thunderbolt (boltd) не встановлена і не налаштована належним "
-"чином."
+msgstr "Підсистема Thunderbolt (boltd) не встановлена і не налаштована належним чином."
 
 #: panels/thunderbolt/cc-bolt-panel.c:468
 msgid ""
 "Thunderbolt could not be detected.\n"
-"Either the system lacks Thunderbolt support, it has been disabled in the "
-"BIOS or is set to an unsupported security level in the BIOS."
-msgstr ""
-"Не вдалося виявити Thunderbolt. \n"
-"Або у системі немає підтримки Thunderbolt, або вона була вимкнена в BIOS чи "
-"заданий непідтримуваний рівень захисту в BIOS."
+"Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
+msgstr "Не вдалося виявити Thunderbolt. \nАбо у системі немає підтримки Thunderbolt, або вона була вимкнена в BIOS чи заданий непідтримуваний рівень захисту в BIOS."
 
 #: panels/thunderbolt/cc-bolt-panel.c:512
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6494,9 +6349,7 @@ msgstr "Безпосередній доступ"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:269
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr ""
-"Дозволити безпосередній доступ до таких пристроїв, як зарядні станції та "
-"зовнішні графічні процесори."
+msgstr "Дозволити безпосередній доступ до таких пристроїв, як зарядні станції та зовнішні графічні процесори."
 
 #: panels/thunderbolt/cc-bolt-panel.ui:289
 msgid "Only USB and Display Port devices can attach."
@@ -6518,7 +6371,9 @@ msgstr "Thunderbolt"
 msgid "Manage Thunderbolt devices"
 msgstr "Керування пристроями Thunderbolt"
 
-#. Translators: those are keywords for the thunderbolt control-center panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: those are keywords for the thunderbolt control-center panel.
+#. Do NOT translate or localize the semicolons! The list MUST also end with a
+#. semicolon!
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:18
 msgid "Thunderbolt;privacy;"
 msgstr "Thunderbolt;тандерболт;конфіденційність;"
@@ -6547,8 +6402,7 @@ msgstr "Розмір курсора"
 #: panels/universal-access/cc-cursor-size-dialog.ui:29
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr ""
-"Розмір курсора може бути об'єднаний з масштабуванням, щоб він був помітніший."
+msgstr "Розмір курсора може бути об'єднаний з масштабуванням, щоб він був помітніший."
 
 #: panels/universal-access/cc-pointing-dialog.ui:7
 msgid "Click Assist"
@@ -7062,21 +6916,13 @@ msgstr "Ефекти кольорів"
 msgid "Make it easier to see, hear, type, point and click"
 msgstr "Полегшує читання, слухання, набирання, наведення і натискання"
 
-#. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Accessibility panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:18
 msgid ""
-"Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
-"Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
-"Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
-"audio;typing;"
-msgstr ""
-"Клавіатура;Миша;Доступність;Універсальний доступ;Контраст;Курсор;Звук;"
-"Масштаб;Екран;Читач;розмір;висота;великий;текст;шрифт;Доступ;Липкі;Клавіші;"
-"Повільно;Клацання;Подвійний;клік;Затримка;Швидкість;Допомога;Повторити;Blink;"
-"візуальний;слух;аудіо;введення;Keyboard;Mouse;a11y;Accessibility;Universal "
-"Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;"
-"size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;"
-"Repeat;Blink;visual;hearing;audio;typing;"
+"Keyboard;Mouse;a11y;Accessibility;Universal "
+"Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
+msgstr "Клавіатура;Миша;Доступність;Універсальний доступ;Контраст;Курсор;Звук;Масштаб;Екран;Читач;розмір;висота;великий;текст;шрифт;Доступ;Липкі;Клавіші;Повільно;Клацання;Подвійний;клік;Затримка;Швидкість;Допомога;Повторити;Blink;візуальний;слух;аудіо;введення;Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;"
 
 #: panels/usage/cc-usage-panel.c:154
 msgid "Empty all items from Trash?"
@@ -7108,13 +6954,10 @@ msgstr "Журнал файлів"
 
 #: panels/usage/cc-usage-panel.ui:41
 msgid ""
-"File history keeps a record of files that you have used. This information is "
-"shared between applications, and makes it easier to find files that you "
+"File history keeps a record of files that you have used. This information is"
+" shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr ""
-"У журналі роботи з файлами обліковуються файли, якими ви користувалися. Ця "
-"відомості є спільними для усіх програм. Вони полегшують пошук файлів, які "
-"можуть вам знадобитися."
+msgstr "У журналі роботи з файлами обліковуються файли, якими ви користувалися. Ця відомості є спільними для усіх програм. Вони полегшують пошук файлів, які можуть вам знадобитися."
 
 #: panels/usage/cc-usage-panel.ui:56
 msgid "File H_istory"
@@ -7136,10 +6979,7 @@ msgstr "Смітник та тимчасові файли"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr ""
-"Смітник та тимчасові файли можуть інколи містити особисту або конфіденційну "
-"інформацію. Автоматичне вилучення цих файлів може допомогти захистити "
-"конфіденційність."
+msgstr "Смітник та тимчасові файли можуть інколи містити особисту або конфіденційну інформацію. Автоматичне вилучення цих файлів може допомогти захистити конфіденційність."
 
 #: panels/usage/cc-usage-panel.ui:159
 msgid "Automatically Delete _Trash Content"
@@ -7161,61 +7001,71 @@ msgstr "С_порожнити смітник…"
 msgid "_Delete Temporary Files…"
 msgstr "_Вилучити тимчасові файли…"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:278
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 година"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:282
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 день"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:286
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 дні"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:290
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 дні"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:294
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 дні"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:298
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 днів"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:302
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 днів"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:306
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 днів"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:310
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "14 днів"
 
-#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files" dialog.
+#. Translators: Option for "Purge After" in "Purge Trash & Temporary Files"
+#. dialog.
 #: panels/usage/cc-usage-panel.ui:314
 msgctxt "purge_files"
 msgid "30 days"
@@ -7254,40 +7104,34 @@ msgid "Don't leave traces"
 msgstr "Не залишати слідів"
 
 #: panels/updates/cc-updates-panel.c:525
-#, fuzzy
 msgid "Limited data plan connection"
-msgstr "Додати нове з'єднання"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.c:527
-#, fuzzy
 msgid "Unlimited data plan connection"
-msgstr "Не вдалося відкрити редактор з'єднань"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.c:576
-#, fuzzy
 msgid "No active connection"
-msgstr "З'єднання із передаванням даних"
+msgstr ""
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:799
-#, fuzzy
 msgid "Change Network Settings…"
-msgstr "Може змінювати налаштування"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:60
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
-#, fuzzy
 msgid "Automatic Updates"
-msgstr "Автоматичні маршрути"
+msgstr "Автоматичні оновлення"
 
 #: panels/updates/cc-updates-panel.ui:61
 msgid "Create a daily window for updates to happen automatically."
 msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:83
-#, fuzzy
 msgid "Scheduled Updates"
-msgstr "Розклад"
+msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:84
 msgid ""
@@ -7296,11 +7140,11 @@ msgid ""
 msgstr ""
 
 #: panels/updates/gnome-updates-panel.desktop.in.in:4
-#, fuzzy
 msgid "Schedule automatic updates"
-msgstr "Автоматичні маршрути"
+msgstr ""
 
-#. Translators: those are keywords for the automatic updates control-center panel
+#. Translators: those are keywords for the automatic updates control-center
+#. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:17
 msgid "Updates;Automatic;Background;Metered;"
 msgstr ""
@@ -7336,17 +7180,13 @@ msgstr "Не вдалось долучитись до домену"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr ""
-"Цей користувач не спрацював.\n"
-"Спробуйте ще."
+msgstr "Цей користувач не спрацював.\nСпробуйте ще."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1211
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr ""
-"Цей пароль не спрацював.\n"
-"Спробуйте ще."
+msgstr "Цей пароль не спрацював.\nСпробуйте ще."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1219
 msgid "Failed to log into domain"
@@ -7380,8 +7220,7 @@ msgstr "_Тип облікового запису"
 #: panels/user-accounts/cc-add-user-dialog.ui:269
 #: panels/user-accounts/cc-password-dialog.ui:251
 msgid "Allow user to set a password when they next _login"
-msgstr ""
-"Дозволяє користувачу вказати пароль, коли він в_ходитиме наступного разу"
+msgstr "Дозволяє користувачу вказати пароль, коли він в_ходитиме наступного разу"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:284
 #: panels/user-accounts/cc-password-dialog.ui:266
@@ -7403,10 +7242,7 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr ""
-"Комерційний вхід дозволяє наявним обліковим записам централізовано "
-"використовуватись на цьому пристрою. Можете також використовувати цей "
-"обліковий запис для доступу ресурсів компанії через інтернет."
+msgstr "Комерційний вхід дозволяє наявним обліковим записам централізовано використовуватись на цьому пристрою. Можете також використовувати цей обліковий запис для доступу ресурсів компанії через інтернет."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:750
 msgid "You are Offline"
@@ -7452,10 +7288,10 @@ msgstr "_Так"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr ""
-"Вилучити зареєстровані відбитки пальців та заборонити вхід через відбитки?"
+msgstr "Вилучити зареєстровані відбитки пальців та заборонити вхід через відбитки?"
 
-#. Translators: This is the empty state page label which states that there are no devices ready.
+#. Translators: This is the empty state page label which states that there are
+#. no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:249
 msgid "No Fingerprint device"
 msgstr "Немає пристроїв для зчитування відбитків"
@@ -7480,9 +7316,7 @@ msgstr "Пристрій для зчитування відбитків"
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr ""
-"Вхід за допомогою відбитка пальця надасть вам змогу розблоковувати систему і "
-"входити до вашого облікового запису за допомогою вашого пальця"
+msgstr "Вхід за допомогою відбитка пальця надасть вам змогу розблоковувати систему і входити до вашого облікового запису за допомогою вашого пальця"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:352
 msgid "_Delete Fingerprints"
@@ -7618,9 +7452,7 @@ msgstr "Не вдалося зупинити реєстрацію: %s"
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr ""
-"Знімайте і притискайте ваш палець до пристрою зчитування, щоб зареєструвати "
-"відбиток пальця"
+msgstr "Знімайте і притискайте ваш палець до пристрою зчитування, щоб зареєструвати відбиток пальця"
 
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:1118
@@ -7794,9 +7626,7 @@ msgstr "%s досі у системі"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr ""
-"Вилучивши користувача, коли він у системі, змусить його покинути систему в "
-"нестійкому стані."
+msgstr "Вилучивши користувача, коли він у системі, змусить його покинути систему в нестійкому стані."
 
 #: panels/user-accounts/cc-user-panel.c:629
 #, c-format
@@ -7807,9 +7637,7 @@ msgstr "Зберегти файли користувача %s?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr ""
-"Можна утримати домашній каталог, поштову скриньку та тимчасові файли, коли "
-"обліковий запис користувача буде вилучатись."
+msgstr "Можна утримати домашній каталог, поштову скриньку та тимчасові файли, коли обліковий запис користувача буде вилучатись."
 
 #: panels/user-accounts/cc-user-panel.c:636
 msgid "_Delete Files"
@@ -7870,9 +7698,7 @@ msgstr "Будь ласка, переконайтесь, що AccountService в�
 msgid ""
 "To make changes,\n"
 "click the * icon first"
-msgstr ""
-"Щоб унести зміни,\n"
-"натисніть спочатку на піктограму *"
+msgstr "Щоб унести зміни,\nнатисніть спочатку на піктограму *"
 
 #: panels/user-accounts/cc-user-panel.c:1366
 msgid "Delete the selected user account"
@@ -7883,9 +7709,7 @@ msgstr "Вилучити вибраний обліковий запис кори
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr ""
-"Щоб вилучити вибраний обліковий запис користувача,\n"
-"натисніть спочатку на піктограму *"
+msgstr "Щоб вилучити вибраний обліковий запис користувача,\nнатисніть спочатку на піктограму *"
 
 #: panels/user-accounts/cc-user-panel.c:1535
 msgid "Unlock to Add Users and Change Settings"
@@ -7924,9 +7748,7 @@ msgstr "_Адміністратор"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr ""
-"Адміністратори можуть додавати або вилучати інших користувачів, а також "
-"змінювати параметри для усіх користувачів."
+msgstr "Адміністратори можуть додавати або вилучати інших користувачів, а також змінювати параметри для усіх користувачів."
 
 #: panels/user-accounts/cc-user-panel.ui:284
 msgid "_Parental Controls"
@@ -7956,7 +7778,8 @@ msgstr "Активність облікового запису"
 msgid "Remove User…"
 msgstr "Вилучити користувача…"
 
-#. Translators: This is the empty state page label which states that there are no users to show in the panel.
+#. Translators: This is the empty state page label which states that there are
+#. no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:501
 msgid "No Users Found"
 msgstr "Не знайдено жодного користувача"
@@ -7973,19 +7796,16 @@ msgstr "Користувачі"
 msgid "Add or remove users and change your password"
 msgstr "Додати або вилучити користувачів і змінити свій пароль"
 
-#. Translators: Search terms to find the Users panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Users panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:19
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
-msgstr ""
-"Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
-"Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;вхід;"
-"логін;лоґін;назва;ім'я;відбиток;аватар;логотип;обличчя;пароль;батьківський "
-"контроль;час за екраном;обмеження програм;обмеження інтернету;використання;"
-"користування;обмеження користування;діти;дитина;дитячий;"
+msgstr "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;вхід;логін;лоґін;назва;ім'я;відбиток;аватар;логотип;обличчя;пароль;батьківський контроль;час за екраном;обмеження програм;обмеження інтернету;використання;користування;обмеження користування;діти;дитина;дитячий;"
 
-#. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
+#. Translators: This button enrolls the computer in the domain in order to use
+#. enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:39
 msgid "_Enroll"
 msgstr "З_ареєструвати"
@@ -7999,10 +7819,7 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr ""
-"Комп'ютер потрібно зареєструвати в домені, щоб\n"
-"використовувати комерційний вхід. Попрохайте вашого \n"
-"мережевого адміністратора ввести тут пароль домену."
+msgstr "Комп'ютер потрібно зареєструвати в домені, щоб\nвикористовувати комерційний вхід. Попрохайте вашого \nмережевого адміністратора ввести тут пароль домену."
 
 #: panels/user-accounts/data/join-dialog.ui:150
 msgid "Administrator _Name"
@@ -8078,8 +7895,7 @@ msgstr "Намагайтесь використовувати малі букв�
 #: panels/user-accounts/pw-utils.c:118
 msgctxt "Password hint"
 msgid "Try to use more special characters, like punctuation."
-msgstr ""
-"Намагайтесь використовувати спеціальні символи, наприклад, розділові знаки."
+msgstr "Намагайтесь використовувати спеціальні символи, наприклад, розділові знаки."
 
 #: panels/user-accounts/pw-utils.c:120
 msgctxt "Password hint"
@@ -8096,9 +7912,7 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr ""
-"Намагайтесь уникати повторення однакового типу символів: варто змішувати "
-"букви з числами і розділові знаки."
+msgstr "Намагайтесь уникати повторення однакового типу символів: варто змішувати букви з числами і розділові знаки."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -8110,9 +7924,7 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr ""
-"Пароль має бути довшим. Спробуйте додати більше літер, цифр та символів "
-"пунктуації."
+msgstr "Пароль має бути довшим. Спробуйте додати більше літер, цифр та символів пунктуації."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
@@ -8122,7 +7934,8 @@ msgstr "Змішуйте великі букви з малими і намага
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
 msgid ""
-"Adding more letters, numbers and punctuation will make the password stronger."
+"Adding more letters, numbers and punctuation will make the password "
+"stronger."
 msgstr "Додавання літер, цифр і розділових знаків зробить пароль надійнішим!"
 
 #: panels/user-accounts/run-passwd.c:413
@@ -8179,9 +7992,7 @@ msgstr "Невідома помилка"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr ""
-"Ім'я користувача зазвичай має містити лише літери нижнього регістру a-z, "
-"цифри і такі символи: - _"
+msgstr "Ім'я користувача зазвичай має містити лише літери нижнього регістру a-z, цифри і такі символи: - _"
 
 #: panels/user-accounts/user-utils.c:436
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -8193,8 +8004,7 @@ msgstr "Перейменуйте користувача на меншу кіль
 
 #: panels/user-accounts/user-utils.c:537
 msgid "This will be used to name your home folder and can’t be changed."
-msgstr ""
-"Це буде назвою вашого домашнього каталогу, яку згодом змінити буде неможливо."
+msgstr "Це буде назвою вашого домашнього каталогу, яку згодом змінити буде неможливо."
 
 #: panels/wacom/button-mapping.ui:9
 msgid "Map Buttons"
@@ -8213,18 +8023,13 @@ msgstr "Кнопка відбиття для функцій"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr ""
-"Щоб змінити комбінацію клавіш, виберіть дію «Надіслати натискання клавіші», "
-"натисніть кнопку скорочення й утримайте нові клавіші або натисніть "
-"Backspace, щоб очистити."
+msgstr "Щоб змінити комбінацію клавіш, виберіть дію «Надіслати натискання клавіші», натисніть кнопку скорочення й утримайте нові клавіші або натисніть Backspace, щоб очистити."
 
 #: panels/wacom/calibrator/calibrator.ui:61
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
-msgstr ""
-"Торкніться цільового маркера, коли той з'явиться на екрані, щоб калібрувати "
-"планшет."
+msgstr "Торкніться цільового маркера, коли той з'явиться на екрані, щоб калібрувати планшет."
 
 #: panels/wacom/calibrator/calibrator.ui:78
 msgid "Mis-click detected, restarting…"
@@ -8293,10 +8098,10 @@ msgstr "Планшет Wacom"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr ""
-"Вкажіть відбиття кнопок і скоригуйте чутливість стила для графічних планшетів"
+msgstr "Вкажіть відбиття кнопок і скоригуйте чутливість стила для графічних планшетів"
 
-#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate
+#. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:18
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Планшет;Wacom;Стилус;стило;Гумка;Миша;"
@@ -8388,8 +8193,7 @@ msgstr "Не знайдено стила"
 
 #: panels/wacom/wacom-stylus-page.ui:93
 msgid "Please move your stylus to the proximity of the tablet to configure it"
-msgstr ""
-"Будь ласка, перемістіть ваше стило ближче до планшету, що його налаштувати"
+msgstr "Будь ласка, перемістіть ваше стило ближче до планшету, що його налаштувати"
 
 #: panels/wacom/wacom-stylus-page.ui:159
 msgid "Eraser Pressure Feel"
@@ -8802,8 +8606,7 @@ msgstr "Не знайдено жодного адаптера WWAN"
 
 #: panels/wwan/cc-wwan-panel.ui:112
 msgid "Make sure you have a Wireless Wan/Cellular device"
-msgstr ""
-"Переконайтеся, що у вас є пристрій бездротової WAN або стільникової мережі"
+msgstr "Переконайтеся, що у вас є пристрій бездротової WAN або стільникової мережі"
 
 #: panels/wwan/cc-wwan-panel.ui:154
 msgid "Wireless Wan is disabled when airplane mode is on"
@@ -8853,12 +8656,11 @@ msgstr "Мобільна мережа"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Налаштовування телефонії та мобільних з'єднань для передавання даних"
 
-#. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find the WWAN panel. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:15
 msgid "cellular;wwan;telephony;sim;mobile;"
-msgstr ""
-"cellular;wwan;telephony;sim;mobile;стільниковий;телефонія;телефон;сім;картка;"
-"мобільний;вван;"
+msgstr "cellular;wwan;telephony;sim;mobile;стільниковий;телефонія;телефон;сім;картка;мобільний;вван;"
 
 #: shell/appdata/gnome-control-center.appdata.xml.in:7
 msgid "GNOME Settings"
@@ -8925,16 +8727,14 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr ""
-"Цю версію «Налаштувань» слід використовувати лише для розробки. Ви можете "
-"спостерігати неправильну роботу системи, втрату даних та інші "
-"непередбачувані проблеми. "
+msgstr "Цю версію «Налаштувань» слід використовувати лише для розробки. Ви можете спостерігати неправильну роботу системи, втрату даних та інші непередбачувані проблеми. "
 
 #: shell/cc-window.ui:330
 msgid "Help"
 msgstr "Довідка"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: shell/gnome-control-center.desktop.in.in:17
 msgid "Preferences;Settings;"
 msgstr "Налаштування;Параметри;"
@@ -8975,11 +8775,9 @@ msgstr "Ідентифікатор останньої панелі «Парам�
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
-"The identifier for the last Settings panel to be opened. Unrecognised values "
-"will be ignored and the first panel in the list selected."
-msgstr ""
-"Ідентифікатор останньої панелі «Параметри», яку буде відкрито. Нерозпізнані "
-"значення будуть проігноровані і вибрана перша панель у списку."
+"The identifier for the last Settings panel to be opened. Unrecognised values"
+" will be ignored and the first panel in the list selected."
+msgstr "Ідентифікатор останньої панелі «Параметри», яку буде відкрито. Нерозпізнані значення будуть проігноровані і вибрана перша панель у списку."
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
@@ -8988,8 +8786,7 @@ msgstr "Показати застереження при запуску розр
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr ""
-"Чи «Параметри» показуватимуть попередження при запуску розробницької збірки."
+msgstr "Чи «Параметри» показуватимуть попередження при запуску розробницької збірки."
 
 #. translators:
 #. * The number of sound outputs on a particular device
@@ -9016,214 +8813,3 @@ msgstr[3] "%u вхід"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Системні звуки"
-
-#~ msgid "Open in Software"
-#~ msgstr "Відкрити у «Програмах»"
-
-#~ msgid "Allow user to change their password on next login"
-#~ msgstr "Дозволяє користувачу змінювати пароль під час наступного входу"
-
-#~ msgid "Set a password now"
-#~ msgstr "Вкажіть пароль зараз"
-
-#~ msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
-#~ msgstr "Вхід;Назва;Відбитки;Аватар;Логотип;Лице;Пароль;"
-
-#~| msgid "Password"
-#~ msgid "Passsword"
-#~ msgstr "Пароль"
-
-#~ msgid "Phone-adaptor link reserved"
-#~ msgstr "Зв'язок телефон-адаптер зарезервовано"
-
-#~| msgid "SIM Pin required"
-#~ msgid "PH-SIM PIN required"
-#~ msgstr "Потрібен пінкод PH-SIM"
-
-#~| msgid "SIM Pin required"
-#~ msgid "PH-FSIM PIN required"
-#~ msgstr "Потрібен пінкод PH-FSIM"
-
-#~| msgid "SIM Pin required"
-#~ msgid "PH-FSIM PUK required"
-#~ msgstr "Потрібен PUK-код PH-FSIM"
-
-#~| msgid "Memory"
-#~ msgid "Memory full"
-#~ msgstr "Пам'ять переповнено"
-
-#~ msgid "Invalid index"
-#~ msgstr "Некоректний індекс"
-
-#~| msgid "Memory"
-#~ msgid "Memory failure"
-#~ msgstr "Помилка пам'яті"
-
-#~ msgid "Network not allowed - emergency calls only"
-#~ msgstr "З'єднання з мережею заборонено — лише термінові виклики"
-
-#~| msgid "Network registration denied"
-#~ msgid "Network personalization PIN required"
-#~ msgstr "Потрібен мережевий пінкод персоналізації"
-
-#~| msgid "Network registration denied"
-#~ msgid "Network personalization PUK required"
-#~ msgstr "Потрібен мережевий PUK-код персоналізації"
-
-#~| msgid "Network registration denied"
-#~ msgid "Network subset personalization PIN required"
-#~ msgstr "Потрібен пінкод персоналізації підмережі"
-
-#~| msgid "Network registration denied"
-#~ msgid "Network subset personalization PUK required"
-#~ msgstr "Потрібен PUK-код персоналізації підмережі"
-
-#~ msgid "Service provider personalization PIN required"
-#~ msgstr "Потрібен пінкод персоналізації надавача послуг"
-
-#~ msgid "Service provider personalization PUK required"
-#~ msgstr "Потрібен PUK-код персоналізації надавача послуг"
-
-#~ msgid "Corporate personalization PIN required"
-#~ msgstr "Потрібен корпоративний пінкод персоналізації"
-
-#~ msgid "Corporate personalization PUK required"
-#~ msgstr "Потрібен корпоративний PUK-код персоналізації"
-
-#~ msgid "Illegal MS"
-#~ msgstr "Заборонений MS"
-
-#~ msgid "Illegal ME"
-#~ msgstr "Заборонений ME"
-
-#~ msgid "PLMN not allowed"
-#~ msgstr "PLMN заборонено"
-
-#~ msgid "Location area not allowed"
-#~ msgstr "Обслуговування у цій місцевості заборонено"
-
-#~| msgid "The device type is not currently supported."
-#~ msgid "Service option not supported"
-#~ msgstr "Підтримки варіанта служби не передбачено"
-
-#~ msgid "Requested service option not subscribed"
-#~ msgstr "Немає передплати на запитану службу"
-
-#~ msgid "Service option temporarily out of order"
-#~ msgstr "Варіант служби тимчасово не працює"
-
-#~| msgid "Authentication failed"
-#~ msgid "PDP authentication failure"
-#~ msgstr "Помилка розпізнавання у PDP"
-
-#~ msgid "Invalid mobile class"
-#~ msgstr "Некоректний клас мобільного"
-
-#~ msgid "Balanced Power"
-#~ msgstr "Збалансоване споживання"
-
-#~ msgid "_Screen Brightness"
-#~ msgstr "_Яскравість екрана"
-
-#~ msgid "_Keyboard Brightness"
-#~ msgstr "_Яскравість клавіатури"
-
-#~ msgid "Dim Screen When Inactive"
-#~ msgstr "Притлумлювати яскравість екрана, якщо немає дій"
-
-#~ msgid "_Blank Screen"
-#~ msgstr "По_гасити екран"
-
-#~ msgid "_Wi-Fi"
-#~ msgstr "Wi_-Fi"
-
-#~ msgid "Wi-Fi can be turned off to save power."
-#~ msgstr "Wi-Fi може бути вимкнений для заощадження енергії."
-
-#~ msgid ""
-#~ "Mobile broadband (LTE, 4G, 3G, etc.) can be turned off to save power."
-#~ msgstr ""
-#~ "Мобільна мережа (LTE, 4G, 3G тощо) може бути вимкнена для заощадження "
-#~ "енергії."
-
-#~ msgid "_Bluetooth"
-#~ msgstr "_Bluetooth"
-
-#~ msgid "Bluetooth can be turned off to save power."
-#~ msgstr "Bluetooth може бути вимкнений для заощадження енергії."
-
-#~ msgid "Add…"
-#~ msgstr "Додати…"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Клавіатурне скорочення"
-
-#~ msgid "This can be changed in Customize Shortcuts"
-#~ msgstr "Це можна змінити у налаштуваннях клавіатурних скорочень"
-
-#~ msgid "Hold down and type to enter different characters"
-#~ msgstr "Затисніть кнопку і друкуйте для уведення різноманітних символів"
-
-#~ msgid "Previous source"
-#~ msgstr "Попереднє джерело"
-
-#~ msgid "Super+Shift+Space"
-#~ msgstr "Super+Shift+Space"
-
-#~ msgid "Next source"
-#~ msgstr "Наступне джерело"
-
-#~ msgid "Super+Space"
-#~ msgstr "Super+Space"
-
-#~ msgid "Left+Right Alt"
-#~ msgstr "Лівий та правий Alt"
-
-#~ msgid "Alternative Characters Key"
-#~ msgstr "Альтернативна клавіша символів"
-
-#~ msgid "Modifiers-only switch to next source"
-#~ msgstr "Тільки модифікатори перемикають наступне джерело"
-
-#~ msgid "Left Alt"
-#~ msgstr "Ліва Alt"
-
-#~ msgid "Right Alt"
-#~ msgstr "Права Alt"
-
-#~ msgid "Left Super"
-#~ msgstr "Ліва Super"
-
-#~ msgid "Right Super"
-#~ msgstr "Права Super"
-
-#~ msgid "Right Ctrl"
-#~ msgstr "Права Ctrl"
-
-#~ msgctxt "keyboard key"
-#~ msgid "Menu Key"
-#~ msgstr "Кнопка меню"
-
-#~ msgctxt "Battery power"
-#~ msgid "Charging"
-#~ msgstr "Заряджання"
-
-#~ msgctxt "Battery power"
-#~ msgid "Caution"
-#~ msgstr "Застереження"
-
-#~ msgctxt "Battery power"
-#~ msgid "Low"
-#~ msgstr "Низько"
-
-#~ msgctxt "Battery power"
-#~ msgid "Good"
-#~ msgstr "Працездатно"
-
-#~ msgctxt "Battery power"
-#~ msgid "Fully charged"
-#~ msgstr "Повністю заряджено"
-
-#~ msgctxt "Battery power"
-#~ msgid "Empty"
-#~ msgstr "Вичерпано"
