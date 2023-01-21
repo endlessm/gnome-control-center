@@ -19,14 +19,15 @@
 # Yuri Kozlov <kozlov.y@gmail.com>, 2008
 # Yuri Kozlov <yuray@komyakino.ru>, 2010,2012
 # Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012,2014-2015
+# Виктор, 2023
 # Иван <vantu5z@mail.ru>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-08 00:11+0000\n"
+"POT-Creation-Date: 2023-01-21 01:22+0000\n"
 "PO-Revision-Date: 2014-09-08 22:33+0000\n"
-"Last-Translator: Иван <vantu5z@mail.ru>, 2017\n"
+"Last-Translator: Виктор, 2023\n"
 "Language-Team: Russian (http://www.transifex.com/endless-os/gnome-control-center/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,7 +92,7 @@ msgstr "Файловая система"
 #: shell/cc-window.c:953 shell/cc-window.ui:121
 #: shell/gnome-control-center.desktop.in.in:3
 msgid "Settings"
-msgstr "Параметры"
+msgstr "Настройки"
 
 #: panels/applications/cc-applications-panel.c:849
 msgid "Can change settings"
@@ -106,7 +107,7 @@ msgstr "%s имеет следующие встроенные разрешени
 
 #: panels/applications/cc-applications-panel.c:1024
 msgid "Web Links"
-msgstr "Веб ссылки"
+msgstr "Веб-ссылки"
 
 #: panels/applications/cc-applications-panel.c:1034
 msgid "Git Links"
@@ -152,11 +153,11 @@ msgstr "Файлы пакетов"
 
 #: panels/applications/cc-applications-panel.c:1295
 msgid "Audio Files"
-msgstr "Аудио файлы"
+msgstr "Аудиофайлы"
 
 #: panels/applications/cc-applications-panel.c:1312
 msgid "Video Files"
-msgstr "Видео файлы"
+msgstr "Видеофайлы"
 
 #: panels/applications/cc-applications-panel.c:1320
 msgid "Other Files"
@@ -306,7 +307,7 @@ msgstr "Хранилище"
 
 #: panels/applications/cc-applications-panel.ui:424
 msgid "Open in App Center"
-msgstr ""
+msgstr "Открыть в Центре приложений"
 
 #: panels/applications/cc-applications-panel.ui:474 shell/cc-panel-list.ui:121
 msgid "No results found"
@@ -351,7 +352,7 @@ msgstr "Управление различными разрешениями и н
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:15
 msgid "application;flatpak;permission;setting;"
-msgstr "приложение;flatpak;права;доступ;настройки;параметры;"
+msgstr "приложение;flatpak;права;доступ;настройки;настройки;"
 
 #: panels/background/cc-background-chooser.c:344
 msgid "Select a picture"
@@ -456,23 +457,23 @@ msgstr "Включите для подключения устройств и п�
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:107
 msgid "Airplane Mode is on"
-msgstr "Режим для авиаперелётов включён"
+msgstr "Режим полёта включён"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:118
 msgid "Bluetooth is disabled when airplane mode is on."
-msgstr "Bluetooth отключается при включённом режиме для авиаперелётов."
+msgstr "Bluetooth отключается, когда включён режим полёта."
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:124
 msgid "Turn Off Airplane Mode"
-msgstr "Выключить режим для авиаперелётов"
+msgstr "Выключить режим полёта"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:154
 msgid "Hardware Airplane Mode is on"
-msgstr "Аппаратный режим для авиаперелётов включён"
+msgstr "Аппаратный режим полёта включён"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:165
 msgid "Turn off the Airplane mode switch to enable Bluetooth."
-msgstr "Для включения Bluetooth выключите режим для авиаперелётов."
+msgstr "Выключите режима полёта, чтобы включить Bluetooth."
 
 #. Translators: The found device is a printer connected via Bluetooth
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:3
@@ -482,7 +483,7 @@ msgstr "Bluetooth"
 
 #: panels/bluetooth/gnome-bluetooth-panel.desktop.in.in:4
 msgid "Turn Bluetooth on and off and connect your devices"
-msgstr "Включение и отключение Bluetooth. Подключение устройств Bluetooth"
+msgstr "Включайте и выключайте Bluetooth и подключайте свои устройства"
 
 #. Translators: Search terms to find the Bluetooth panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -496,14 +497,14 @@ msgstr "Камера отключена"
 
 #: panels/camera/cc-camera-panel.ui:43
 msgid "No applications can capture photos or video."
-msgstr "Нет приложений способных снимать фото и видео."
+msgstr "Никакие приложения не могут снимать фото или видео."
 
 #: panels/camera/cc-camera-panel.ui:75
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling"
 " the camera may cause some applications to not function properly. System "
 "applications can always use the camera."
-msgstr ""
+msgstr "Использование камеры позволяет приложениям снимать фото и видео. Отключение камеры может вызвать неправильную работу некоторых приложений. Системные приложения всегда могут использовать камеру."
 
 #: panels/camera/cc-camera-panel.ui:85
 msgid "Allow the applications below to use your camera."
@@ -674,7 +675,7 @@ msgstr "Показать цветовые профили для %s"
 #. not calibrated
 #: panels/color/cc-color-device.c:292
 msgid "Not calibrated"
-msgstr "Неоткалиброванный"
+msgstr "Не откалибровано"
 
 #. TRANSLATORS: this is a profile prefix to signify the
 #. * profile has been auto-generated for this hardware
@@ -991,7 +992,7 @@ msgstr "LCD (CCFL-подсветка)"
 
 #: panels/color/cc-color-panel.ui:1060
 msgid "LCD (RGB LED backlight)"
-msgstr "LCD (RGB LED-подсветка)"
+msgstr "LCD (LED-подсветка RGB)"
 
 #: panels/color/cc-color-panel.ui:1065
 msgid "LCD (white LED backlight)"
@@ -1003,7 +1004,7 @@ msgstr "LCD с расширенной цветовой палитрой (CCFL-п
 
 #: panels/color/cc-color-panel.ui:1075
 msgid "Wide gamut LCD (RGB LED backlight)"
-msgstr "LCD с расширенной цветовой палитрой (RGB LED-подсветка)"
+msgstr "LCD с расширенной цветовой палитрой (LED-подсветка RGB)"
 
 #: panels/color/cc-color-panel.ui:1092
 msgctxt "Calibration quality"
@@ -1228,29 +1229,29 @@ msgstr "%-d %b %Y"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d час"
+msgstr[1] "%d часа"
+msgstr[2] "%d часов"
+msgstr[3] "%d часов"
 
 #. Translators: Option for "Blank Screen" in "Power" panel
 #: panels/common/cc-util.c:169 panels/power/cc-power-panel.c:973
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d минута"
+msgstr[1] "%d минуты"
+msgstr[2] "%d минут"
+msgstr[3] "%d минут"
 
 #: panels/common/cc-util.c:170
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунды"
+msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:177
@@ -1867,7 +1868,7 @@ msgstr "Обновление ПО"
 #: panels/info-overview/cc-info-overview-panel.ui:189
 #: panels/metrics/cc-metrics-panel.ui:69
 msgid "_Endless Terms of Use"
-msgstr ""
+msgstr "Правила пользования _Endless"
 
 #: panels/info-overview/cc-info-overview-panel.ui:212
 msgid "Rename Device"
@@ -2178,7 +2179,7 @@ msgid ""
 "it, press compose then a sequence of characters.  For example, compose key "
 "followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by "
 "<b>'</b> will enter <b>á</b>."
-msgstr "The compose key allows a wide variety of characters to be entered. To use it, press compose then a sequence of characters.  For example, compose key followed by <b>C</b> и <b>o</b> введут <b>©</b>, буква <b>a</b>, а потом - <b>'</b> введут <b>á</b>."
+msgstr "Клавиша compose позволяет вводить широкий набор символов. Чтобы использовать её, нажмите compose, а затем последовательность символов. Например, клавиша compose, за которой следует <b>C</b> и <b>o</b> введут <b>©</b>, <b>a</b>, а потом <b>'</b> введут <b>á</b>."
 
 #: panels/keyboard/cc-keyboard-panel.c:95
 msgctxt "keyboard key"
@@ -2193,7 +2194,7 @@ msgstr "Scroll Lock"
 #: panels/keyboard/cc-keyboard-panel.c:97
 msgctxt "keyboard key"
 msgid "Print Screen"
-msgstr "Печать экрана"
+msgstr "Print Screen"
 
 #: panels/keyboard/cc-keyboard-panel.c:233
 #, c-format
@@ -2600,7 +2601,7 @@ msgstr ""
 #: panels/metrics/cc-metrics-panel.ui:58
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:3
 msgid "Metrics"
-msgstr ""
+msgstr "Метрики"
 
 #: panels/metrics/cc-metrics-panel.ui:59
 msgid ""
@@ -2610,13 +2611,13 @@ msgstr ""
 
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:4
 msgid "Enable or disable Endless metrics collection"
-msgstr ""
+msgstr "Включить или отключить сбор метрик Endless"
 
 #. Translators: Search terms to find the Metrics panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:14
 msgid "private;privacy;metrics;network;identity;"
-msgstr ""
+msgstr "приватность;конфиденциальность;метрики;сеть;идентификация;"
 
 #: panels/microphone/cc-microphone-panel.ui:34
 msgid "Microphone is turned off"
@@ -2712,7 +2713,7 @@ msgstr "Участки прокрутки по краям"
 
 #: panels/mouse/cc-mouse-panel.ui:335 panels/wacom/cc-wacom-panel.c:441
 msgid "Test Your _Settings"
-msgstr "_Проверить параметры"
+msgstr "_Проверить настройки"
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:25
 msgid "Try clicking, double clicking, scrolling"
@@ -4922,7 +4923,7 @@ msgstr "Электропитание"
 
 #: panels/power/gnome-power-panel.desktop.in.in:4
 msgid "View your battery status and change power saving settings"
-msgstr "Просмотр состояния батареи и изменение параметров энергосбережения"
+msgstr "Просмотр состояния батареи и изменение настроек энергосбережения"
 
 #. Translators: Search terms to find the Power panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -5719,7 +5720,7 @@ msgstr "_Форматы"
 
 #: panels/region/cc-region-panel.ui:275
 msgid "Login settings are used by all users when logging into the system"
-msgstr "Параметры входа в систему используются всеми пользователями"
+msgstr "Настройки входа в систему используются всеми пользователями"
 
 #: panels/region/gnome-region-panel.desktop.in.in:3
 msgid "Region & Language"
@@ -7116,7 +7117,7 @@ msgstr "Не оставлять следов"
 
 #: panels/updates/cc-updates-panel.c:525
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "Ограниченное подключение по тарифному плану"
 
 #: panels/updates/cc-updates-panel.c:527
 msgid "Unlimited data plan connection"
@@ -7124,12 +7125,12 @@ msgstr ""
 
 #: panels/updates/cc-updates-panel.c:576
 msgid "No active connection"
-msgstr ""
+msgstr "Нет активного подключения"
 
 #. "Change Network Settings" label
 #: panels/updates/cc-updates-panel.c:799
 msgid "Change Network Settings…"
-msgstr ""
+msgstr "Изменить настройки сети…"
 
 #: panels/updates/cc-updates-panel.ui:60
 #: panels/updates/gnome-updates-panel.desktop.in.in:3
@@ -7142,7 +7143,7 @@ msgstr ""
 
 #: panels/updates/cc-updates-panel.ui:83
 msgid "Scheduled Updates"
-msgstr ""
+msgstr "Запланированные обновления"
 
 #: panels/updates/cc-updates-panel.ui:84
 msgid ""
@@ -8143,7 +8144,7 @@ msgstr "Подключите или включите планшет Wacom"
 
 #: panels/wacom/gnome-wacom-properties.ui:161
 msgid "Bluetooth Settings"
-msgstr "Параметры Bluetooth"
+msgstr "Настройки Bluetooth"
 
 #: panels/wacom/gnome-wacom-properties.ui:238
 msgid "Tracking Mode"
@@ -8168,7 +8169,7 @@ msgstr "Калибровать…"
 
 #: panels/wacom/gnome-wacom-properties.ui:340
 msgid "Adjust mouse settings"
-msgstr "Изменить параметры мыши"
+msgstr "Изменить настройки мыши"
 
 #: panels/wacom/gnome-wacom-properties.ui:356
 msgid "Adjust display resolution"
@@ -8248,7 +8249,7 @@ msgstr "Операция отменена"
 
 #: panels/wwan/cc-wwan-data.c:546
 msgid "<b>Error:</b> Access denied changing settings"
-msgstr "<b>Ошибка:</b> Доступ запрещён для смены настроек"
+msgstr "<b>Ошибка:</b> Доступ к изменению настроек запрещён"
 
 #: panels/wwan/cc-wwan-data.c:549
 msgid "<b>Error:</b> Mobile Equipment Error"
@@ -8414,10 +8415,10 @@ msgstr[3] ""
 #, c-format
 msgid "You have %u try left"
 msgid_plural "You have %u tries left"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "У вас осталась %u попытка"
+msgstr[1] "У вас осталось %u попытки"
+msgstr[2] "У вас осталось %u попыток"
+msgstr[3] "У вас осталось %u попыток"
 
 #: panels/wwan/cc-wwan-device-page.c:226
 msgid "Wrong password entered."
@@ -8723,7 +8724,7 @@ msgstr "Доступные панели:"
 
 #: shell/cc-window.ui:136
 msgid "All Settings"
-msgstr "Все параметры"
+msgstr "Все настройки"
 
 #: shell/cc-window.ui:174
 msgid "Primary Menu"
@@ -8738,7 +8739,7 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr "Эта версия приложения Параметры должна использоваться только в целях разработки. Вы можете столкнуться с неправильным поведением системы, потерей данных и другими непредвиденными проблемами. "
+msgstr "Эта версия приложения Настройки должна использоваться только в целях разработки. Вы можете столкнуться с неправильным поведением системы, потерей данных и другими непредвиденными проблемами. "
 
 #: shell/cc-window.ui:330
 msgid "Help"
@@ -8782,7 +8783,7 @@ msgstr "Отменить поиск"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:5
 msgid "The identifier for the last Settings panel to be opened"
-msgstr "Идентификатор последней панели настроек открывается"
+msgstr "Идентификатор последней открытой панели настроек"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:6
 msgid ""
@@ -8792,7 +8793,7 @@ msgstr "Идентификатор последней панели настро�
 
 #: shell/org.gnome.ControlCenter.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
-msgstr "Показывать предупреждение при запуске сборки приложения Параметры для разработки"
+msgstr "Показывать предупреждение при запуске сборки приложения Настройки для разработки"
 
 #: shell/org.gnome.ControlCenter.gschema.xml:14
 msgid ""
