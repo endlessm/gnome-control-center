@@ -20,7 +20,11 @@ endif
 endif
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
+ifeq ($(shell dpkg-vendor --is Endless && echo yes),yes)
+SNAP := -Dsnap=false
+else
 SNAP := -Dsnap=true
+endif
 else
 SNAP := -Dsnap=false
 endif
