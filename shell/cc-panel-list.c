@@ -399,6 +399,7 @@ static const gchar * const panel_order[] = {
   "privacy",
   "online-accounts",
   "sharing",
+  "updates",
 
   /* Privacy page */
   "location",
@@ -409,7 +410,7 @@ static const gchar * const panel_order[] = {
   "lock",
   "diagnostics",
   "firmware-security",
-
+  "metrics",
   /* Devices page */
   "sound",
   "power",

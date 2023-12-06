@@ -61,6 +61,7 @@ extern GType cc_sound_panel_get_type (void);
 extern GType cc_bolt_panel_get_type (void);
 #endif /* BUILD_THUNDERBOLT */
 extern GType cc_ua_panel_get_type (void);
+extern GType cc_updates_panel_get_type (void);
 extern GType cc_user_panel_get_type (void);
 #ifdef BUILD_WACOM
 extern GType cc_wacom_panel_get_type (void);
@@ -75,6 +76,7 @@ extern GType cc_microphone_panel_get_type (void);
 extern GType cc_usage_panel_get_type (void);
 extern GType cc_screen_panel_get_type (void);
 extern GType cc_diagnostics_panel_get_type (void);
+extern GType cc_metrics_panel_get_type (void);
 
 /* Static init functions */
 extern void cc_diagnostics_panel_static_init_func (void);
@@ -114,6 +116,7 @@ static CcPanelLoaderVtable default_panels[] =
   PANEL_TYPE("keyboard",         cc_keyboard_panel_get_type,             NULL),
   PANEL_TYPE("location",         cc_location_panel_get_type,             NULL),
   PANEL_TYPE("firmware-security",cc_firmware_security_panel_get_type,    cc_firmware_security_panel_static_init_func),
+  PANEL_TYPE("metrics",          cc_metrics_panel_get_type,              NULL),
   PANEL_TYPE("microphone",       cc_microphone_panel_get_type,           NULL),
   PANEL_TYPE("mouse",            cc_mouse_panel_get_type,                NULL),
   PANEL_TYPE("multitasking",     cc_multitasking_panel_get_type,         NULL),
@@ -135,6 +138,7 @@ static CcPanelLoaderVtable default_panels[] =
   PANEL_TYPE("thunderbolt",      cc_bolt_panel_get_type,                 NULL),
 #endif
   PANEL_TYPE("universal-access", cc_ua_panel_get_type,                   NULL),
+  PANEL_TYPE("updates",          cc_updates_panel_get_type,              NULL),
   PANEL_TYPE("usage",            cc_usage_panel_get_type,                NULL),
   PANEL_TYPE("user-accounts",    cc_user_panel_get_type,                 NULL),
 #ifdef BUILD_WACOM

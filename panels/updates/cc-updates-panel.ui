@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CcUpdatesPanel" parent="CcPanel">
+
+    <child type="content">
+      <object class="AdwPreferencesPage">
+        <!-- Device header -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <child>
+              <object class="AdwActionRow" id="network_row">
+                <property name="activatable">False</property>
+                <property name="title" translatable="true">No active connection</property>
+
+                <child type="prefix">
+                  <object class="GtkImage" id="network_status_icon">
+                    <property name="valign">center</property>
+                    <property name="pixel-size">32</property>
+                    <property name="icon-name">network-wireless-symbolic</property>
+                    <style>
+                      <class name="dim-label" />
+                    </style>
+                  </object>
+                </child>
+
+                <child type="suffix">
+                  <object class="GtkLinkButton">
+                    <property name="label">Change Network Settings…</property>
+                    <signal name="activate-link" handler="on_change_network_link_activated_cb" object="CcUpdatesPanel" swapped="no" />"
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <!-- Automatic Updates -->
+            <child>
+              <object class="AdwActionRow" id="automatic_updates_row">
+                <property name="title" translatable="yes">Automatic Updates</property>
+                <property name="subtitle" translatable="yes">Create a daily window for updates to happen automatically.</property>
+                <property name="activatable-widget">automatic_updates_switch</property>"
+
+                <child type="suffix">
+                  <object class="GtkSwitch" id="automatic_updates_switch">
+                    <property name="valign">center</property>
+                    <signal name="notify::active" handler="on_automatic_updates_switch_changed_cb" object="CcUpdatesPanel" swapped="no" />
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <!-- Schedule Updates -->
+            <child>
+              <object class="AdwExpanderRow" id="schedule_updates_row">
+                <property name="title" translatable="yes">Scheduled Updates</property>
+                <property name="subtitle" translatable="yes">Allow background updates to happen automatically on this connection. These are usually upgraded apps, new content or updates to Endless OS.</property>
+                <property name="sensitive" bind-source="automatic_updates_switch" bind-property="active" bind-flags="default|sync-create" />
+                <property name="expanded" bind-source="scheduled_updates_switch" bind-property="active" bind-flags="default|bidirectional" />
+
+                <child type="action">
+                  <object class="GtkSwitch" id="scheduled_updates_switch">
+                    <property name="valign">center</property>
+                    <signal name="notify::active" handler="on_scheduled_updates_switch_changed_cb" object="CcUpdatesPanel" swapped="no" />
+                  </object>
+                </child>
+
+                <child>
+                  <object class="CcTariffEditor" id="tariff_editor">
+                    <property name="can_focus">True</property>
+                    <property name="sensitive" bind-source="scheduled_updates_switch" bind-property="active" bind-flags="default|sync-create" />
+                    <signal name="tariff-changed" handler="on_tariff_changed_cb" object="CcUpdatesPanel" swapped="no" />
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
