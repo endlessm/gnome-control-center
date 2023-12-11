@@ -20,6 +20,7 @@
 #include "config.h"
 
 #include <glib/gi18n.h>
+#include <gio/gdesktopappinfo.h>
 #include <stdlib.h>
 
 #include <gio/gio.h>
@@ -105,6 +106,15 @@ cc_search_provider_app_startup (GApplication *application)
 
   self->model = cc_shell_model_new ();
   cc_panel_loader_fill_model (self->model);
+
+  g_autoptr(GDesktopAppInfo) malcontent = g_desktop_app_info_new ("org.freedesktop.MalcontentControl.desktop");
+  if (malcontent != NULL)
+    {
+      cc_shell_model_add_item (self->model,
+                               CC_CATEGORY_ACCOUNT,
+                               G_APP_INFO (malcontent),
+                               "malcontent");
+    }
 }
 
 static void
