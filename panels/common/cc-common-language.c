@@ -218,7 +218,8 @@ insert_language (GHashTable *ht,
         }
 }
 
-#define FBE_VENDOR_CONF_FILE "/var/lib/eos-image-defaults/branding/gnome-initial-setup.conf"
+#define FBE_LOCAL_CONF_FILE "/etc/gnome-initial-setup/vendor.conf"
+#define FBE_VENDOR_CONF_FILE "/usr/share/gnome-initial-setup/vendor.conf"
 #define FBE_VENDOR_LANGUAGE_GROUP "Language"
 #define FBE_VENDOR_LANGUAGE_INITIAL_LANGUAGES_KEY "initial_languages"
 
@@ -228,6 +229,12 @@ insert_vendor_languages (GHashTable *ht)
         g_autoptr(GKeyFile) keyfile = NULL;
         g_autoptr(GError) error = NULL;
         g_autoptr(GKeyFile) fbe_vendor_conf_file = NULL;
+        const char * const *fbe_vendor_conf_paths = (const char *[]) {
+                FBE_LOCAL_CONF_FILE,
+                FBE_VENDOR_CONF_FILE,
+                NULL
+        };
+        const char *fbe_vendor_conf_path = NULL;
         g_auto(GStrv) languages = NULL;
         int idx;
 
@@ -241,14 +248,24 @@ insert_vendor_languages (GHashTable *ht)
          */
         fbe_vendor_conf_file = g_key_file_new ();
 
-        if (!g_key_file_load_from_file (fbe_vendor_conf_file,
-                                        FBE_VENDOR_CONF_FILE,
-                                        G_KEY_FILE_NONE, &error)) {
-                if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
-                        g_warning ("Could not read file " FBE_VENDOR_CONF_FILE
-                                   ": %s", error->message);
-                return FALSE;
+        for (idx = 0; fbe_vendor_conf_paths[idx] != NULL; idx++) {
+                g_autoptr(GError) conf_error = NULL;
+
+                fbe_vendor_conf_path = fbe_vendor_conf_paths[idx];
+                if (g_key_file_load_from_file (fbe_vendor_conf_file,
+                                               fbe_vendor_conf_path,
+                                               G_KEY_FILE_NONE,
+                                               &conf_error))
+                        break;
+
+                if (!g_error_matches (conf_error, G_FILE_ERROR, G_FILE_ERROR_NOENT))
+                        g_warning ("Could not read file %s: %s",
+                                   fbe_vendor_conf_path, conf_error->message);
         }
+
+        if (fbe_vendor_conf_paths[idx] == NULL)
+                /* No vendor conf file could be read. */
+                return FALSE;
 
         languages = g_key_file_get_string_list (fbe_vendor_conf_file,
                                                 FBE_VENDOR_LANGUAGE_GROUP,
@@ -263,8 +280,8 @@ insert_vendor_languages (GHashTable *ht)
                         g_warning ("Error getting the value for key '"
                                    FBE_VENDOR_LANGUAGE_INITIAL_LANGUAGES_KEY
                                    "' of group [" FBE_VENDOR_LANGUAGE_GROUP
-                                   "] in " FBE_VENDOR_CONF_FILE ": %s",
-                                   error->message);
+                                   "] in %s: %s",
+                                   fbe_vendor_conf_path, error->message);
                 return FALSE;
         }
 
