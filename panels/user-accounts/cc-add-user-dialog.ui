@@ -151,7 +151,7 @@
                       <object class="GtkCheckButton" id="local_password_login_radio">
                         <property name="valign">center</property>
                         <property name="active">True</property>
-                        <signal name="toggled" handler="password_mode_changed_cb" object="CcAddUserDialog"/>
+                        <signal name="toggled" handler="password_mode_changed_cb" object="CcAddUserDialog" swapped="no"/>
                       </object>
                     </child>
                   </object>
@@ -165,7 +165,7 @@
                         <property name="valign">center</property>
                         <property name="use_underline">True</property>
                         <property name="group">local_password_login_radio</property>
-                        <signal name="toggled" handler="password_mode_changed_cb" object="CcAddUserDialog"/>
+                        <signal name="toggled" handler="password_mode_changed_cb" object="CcAddUserDialog" swapped="no"/>
                       </object>
                     </child>
                   </object>
@@ -179,7 +179,7 @@
                         <property name="valign">center</property>
                         <property name="use_underline">True</property>
                         <property name="group">local_password_login_radio</property>
-                        <signal name="toggled" handler="password_mode_changed_cb" object="CcAddUserDialog"/>
+                        <signal name="toggled" handler="password_mode_changed_cb" object="CcAddUserDialog" swapped="no"/>
                       </object>
                     </child>
                   </object>

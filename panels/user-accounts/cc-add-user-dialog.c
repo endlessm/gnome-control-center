@@ -790,12 +790,12 @@ password_mode_changed_cb (GtkCheckButton *button,
         if (!gtk_check_button_get_active (button))
                 return;
 
-        if (button == GTK_CHECK_BUTTON (self->local_no_password_radio))
-                mode = ACT_USER_PASSWORD_MODE_NONE;
-        else if (button == GTK_CHECK_BUTTON (self->local_password_radio))
-                mode = ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
-        else
+        if (button == GTK_CHECK_BUTTON (self->local_password_radio))
                 mode = ACT_USER_PASSWORD_MODE_REGULAR;
+        else if (button == GTK_CHECK_BUTTON (self->local_no_password_radio))
+                mode = ACT_USER_PASSWORD_MODE_NONE;
+        else
+                mode = ACT_USER_PASSWORD_MODE_SET_AT_LOGIN;
 
         self->local_password_mode = mode;
         gtk_widget_set_sensitive (GTK_WIDGET (self->password_group),
