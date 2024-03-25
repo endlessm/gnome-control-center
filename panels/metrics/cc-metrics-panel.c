@@ -36,9 +36,7 @@ struct _CcMetricsPanel
   AdwStatusPage      *metrics_disabled_page;
   AdwPreferencesPage *preferences_page;
 
-  gboolean       metrics_active;
   gboolean       changing_state;
-  gboolean       pending_state;
 
   GDBusProxy    *metrics_proxy;
 };
@@ -46,9 +44,9 @@ struct _CcMetricsPanel
 CC_PANEL_REGISTER (CcMetricsPanel, cc_metrics_panel)
 
 static void
-on_metrics_panel_set_enabled (GObject      *source_object,
-                              GAsyncResult *res,
-                              gpointer      user_data)
+on_metrics_proxy_set_enabled_finish (GObject      *source_object,
+                                     GAsyncResult *res,
+                                     gpointer      user_data)
 {
   CcMetricsPanel *self = CC_METRICS_PANEL (user_data);
   g_autoptr(GVariant) results = NULL;
@@ -66,15 +64,12 @@ on_metrics_panel_set_enabled (GObject      *source_object,
     }
 
   self->changing_state = FALSE;
-  self->metrics_active = self->pending_state;
-  gtk_switch_set_state (GTK_SWITCH (self->enable_metrics_switch),
-                        self->metrics_active);
 }
 
 static gboolean
-metrics_switch_active_changed_cb (GtkSwitch *widget,
-                                  gboolean   new_state,
-                                  gpointer   user_data)
+on_metrics_switch_state_set (GtkSwitch *widget,
+                             gboolean   new_state,
+                             gpointer   user_data)
 {
   CcMetricsPanel *self = CC_METRICS_PANEL (user_data);
 
@@ -82,14 +77,13 @@ metrics_switch_active_changed_cb (GtkSwitch *widget,
     return TRUE;
 
   self->changing_state = TRUE;
-  self->pending_state = new_state;
   g_dbus_proxy_call (self->metrics_proxy,
                      "SetEnabled",
-                     g_variant_new ("(b)", self->pending_state),
+                     g_variant_new ("(b)", new_state),
                      G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION,
                      -1,
                      cc_panel_get_cancellable (CC_PANEL (self)),
-                     on_metrics_panel_set_enabled,
+                     on_metrics_proxy_set_enabled_finish,
                      self);
   return TRUE;
 }
@@ -107,13 +101,7 @@ on_metrics_proxy_properties_changed (GDBusProxy     *proxy,
   if (value)
     {
       metrics_active = g_variant_get_boolean (value);
-
-      /* If the D-Bus property is changed externally (for e.g. via d-feet), sync state */
-      if (self->metrics_active != metrics_active)
-        {
-          gtk_switch_set_state (GTK_SWITCH (self->enable_metrics_switch), metrics_active);
-          self->metrics_active = metrics_active;
-        }
+      gtk_switch_set_state (GTK_SWITCH (self->enable_metrics_switch), metrics_active);
       g_clear_pointer (&value, g_variant_unref);
     }
 }
@@ -166,7 +154,8 @@ cc_metrics_panel_constructed (GObject *object)
 {
   CcMetricsPanel *self = CC_METRICS_PANEL (object);
   g_autoptr(GError) error = NULL;
-  gboolean metrics_can_change;
+  gboolean metrics_active = FALSE;
+  gboolean metrics_can_change = FALSE;
   GtkWidget *box;
   g_autoptr(GPermission) permission = NULL;
   g_autoptr(GVariant) value = NULL;
@@ -190,25 +179,29 @@ cc_metrics_panel_constructed (GObject *object)
                         G_CALLBACK (on_metrics_proxy_properties_changed), self);
 
       value = g_dbus_proxy_get_cached_property (self->metrics_proxy, "Enabled");
-      self->metrics_active = g_variant_get_boolean (value);
+      metrics_active = g_variant_get_boolean (value);
       g_clear_pointer (&value, g_variant_unref);
     }
 
   permission = polkit_permission_new_sync ("com.endlessm.Metrics.SetEnabled",
                                            NULL, NULL, NULL);
-  if (!permission)
-    metrics_can_change = FALSE;
-  else
+  if (permission)
     metrics_can_change = g_permission_get_allowed (permission);
 
   box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-  gtk_widget_show (box);
+  gtk_widget_set_visible (box, true);
 
   gtk_widget_set_sensitive (GTK_WIDGET (self->enable_metrics_switch), metrics_can_change);
-  gtk_switch_set_state (GTK_SWITCH (self->enable_metrics_switch), self->metrics_active);
+
+  /* It would be clearer to use our own metrics_enabled property, but for this
+   * purpose it is fine to treat the switch's state property as canonical. */
+  g_object_bind_property (self->enable_metrics_switch, "state",
+                          self->enable_metrics_switch, "active",
+                          G_BINDING_SYNC_CREATE);
+  gtk_switch_set_state (GTK_SWITCH (self->enable_metrics_switch), metrics_active);
 
   g_object_bind_property_full (self->enable_metrics_switch,
-                               "active",
+                               "state",
                                self->stack,
                                "visible-child",
                                G_BINDING_SYNC_CREATE,
@@ -235,7 +228,7 @@ cc_metrics_panel_class_init (CcMetricsPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcMetricsPanel, preferences_page);
 
   gtk_widget_class_bind_template_callback (widget_class, on_attribution_label_link);
-  gtk_widget_class_bind_template_callback (widget_class, metrics_switch_active_changed_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_metrics_switch_state_set);
 }
 
 static void
