@@ -5,7 +5,7 @@
     <child type="titlebar-end">
       <object class="GtkSwitch" id="enable_metrics_switch">
         <property name="valign">center</property>
-        <signal name="state-set" handler="metrics_switch_active_changed_cb"/>
+        <signal name="state-set" handler="on_metrics_switch_state_set"/>
         <accessibility>
           <property name="label" translatable="yes">Enable Metrics</property>
         </accessibility>
