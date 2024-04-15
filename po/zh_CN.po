@@ -20,6 +20,7 @@
 # Mingcong Bai <jeffbai@aosc.xyz>, 2015-2016
 # Lele Long <schemacs@gmail.com>, 2011
 # Liu Tao <lyuutau@outlook.com>, 2021
+# lumingzh <lumingzh@qq.com>, 2022
 # Manphiz Manphiz <manphiz@gmail.com>, 2009
 # Marco Mai <marco@endlessm.com>, 2016
 # Mingcong Bai <jeffbai@aosc.xyz>, 2015-2016,2018
@@ -48,7 +49,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-09 11:08+0000\n"
 "PO-Revision-Date: 2014-09-08 22:33+0000\n"
-"Last-Translator: Liu Tao <lyuutau@outlook.com>, 2021\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>, 2022\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/endless-os/gnome-control-center/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -131,18 +132,18 @@ msgstr "%s 拥有以下内置权限。这些无法被更改。如果您在意这
 #, c-format
 msgid "%u file and link type that is opened by the app"
 msgid_plural "%u file and link types that are opened by the app"
-msgstr[0] ""
+msgstr[0] "%u 个文件和链接类型可以被该应用打开"
 
 #: panels/applications/cc-applications-panel.c:1199
 #, c-format
 msgid "<b>%s</b> is used to open the following types of files and links."
-msgstr ""
+msgstr "<b>%s</b> 用来打开下列文件和链接类型。"
 
 #. Translators: '%s' is the formatted size, e.g. "26.2 MB"
 #: panels/applications/cc-applications-panel.c:1251
 #, c-format
 msgid "%s of disk space used."
-msgstr ""
+msgstr "已占用 %s 磁盘空间。"
 
 #. List of applications.
 #: panels/applications/cc-applications-panel.c:1415
@@ -163,11 +164,11 @@ msgstr "安装一些…"
 #: panels/applications/cc-applications-panel.ui:84
 #: panels/network/wireless-security/ws-file-chooser-button.c:96
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: panels/applications/cc-applications-panel.ui:94
 msgid "View Details"
-msgstr ""
+msgstr "查看详情"
 
 #: panels/applications/cc-applications-panel.ui:112
 #: panels/applications/cc-applications-panel.ui:119
@@ -183,7 +184,7 @@ msgstr "搜索"
 #: panels/applications/cc-applications-panel.ui:113
 #: panels/applications/cc-applications-panel.ui:120
 msgid "Receive system searches and send results."
-msgstr ""
+msgstr "接收系统搜索并发送结果。"
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
@@ -213,15 +214,15 @@ msgstr "通知"
 
 #: panels/applications/cc-applications-panel.ui:127
 msgid "Show system notifications."
-msgstr ""
+msgstr "显示系统通知。"
 
 #: panels/applications/cc-applications-panel.ui:133
 msgid "Run in Background"
-msgstr ""
+msgstr "后台运行"
 
 #: panels/applications/cc-applications-panel.ui:134
 msgid "Allow activity when the app is closed."
-msgstr ""
+msgstr "允许应用关闭后活动。"
 
 #: panels/applications/cc-applications-panel.ui:140
 msgid "Screenshots"
@@ -229,15 +230,15 @@ msgstr "截图"
 
 #: panels/applications/cc-applications-panel.ui:141
 msgid "Take pictures of the screen at any time."
-msgstr ""
+msgstr "在任何时候都能获取屏幕截图。"
 
 #: panels/applications/cc-applications-panel.ui:147
 msgid "Change Wallpaper"
-msgstr ""
+msgstr "更改壁纸"
 
 #: panels/applications/cc-applications-panel.ui:148
 msgid "Change the desktop wallpaper."
-msgstr ""
+msgstr "更换桌面壁纸。"
 
 #: panels/applications/cc-applications-panel.ui:154
 #: panels/applications/cc-applications-panel.ui:161
@@ -247,26 +248,26 @@ msgstr "声音"
 #: panels/applications/cc-applications-panel.ui:155
 #: panels/applications/cc-applications-panel.ui:162
 msgid "Reproduce sounds."
-msgstr ""
+msgstr "再现声音。"
 
 #: panels/applications/cc-applications-panel.ui:168
 msgid "Inhibit Shortcuts"
-msgstr ""
+msgstr "禁止快捷键"
 
 #: panels/applications/cc-applications-panel.ui:169
 msgid "Block standard keyboard shortcuts."
-msgstr ""
+msgstr "封锁标准的键盘快捷键。"
 
 #: panels/applications/cc-applications-panel.ui:175
 #: panels/applications/cc-applications-panel.ui:182
 #: panels/camera/gnome-camera-panel.desktop.in.in:3
 msgid "Camera"
-msgstr "相机"
+msgstr "摄像头"
 
 #: panels/applications/cc-applications-panel.ui:176
 #: panels/applications/cc-applications-panel.ui:183
 msgid "Take pictures with the camera."
-msgstr ""
+msgstr "使用摄像头拍照。"
 
 #: panels/applications/cc-applications-panel.ui:189
 #: panels/applications/cc-applications-panel.ui:196
@@ -277,7 +278,7 @@ msgstr "麦克风"
 #: panels/applications/cc-applications-panel.ui:190
 #: panels/applications/cc-applications-panel.ui:197
 msgid "Record audio with the microphone."
-msgstr ""
+msgstr "使用麦克风录音。"
 
 #: panels/applications/cc-applications-panel.ui:203
 #: panels/applications/cc-applications-panel.ui:210
@@ -288,7 +289,7 @@ msgstr "定位服务"
 #: panels/applications/cc-applications-panel.ui:204
 #: panels/applications/cc-applications-panel.ui:211
 msgid "Access device location data."
-msgstr ""
+msgstr "访问设备的位置数据。"
 
 #: panels/applications/cc-applications-panel.ui:222
 #: panels/applications/cc-applications-panel.ui:326
@@ -297,11 +298,11 @@ msgstr "内置权限"
 
 #: panels/applications/cc-applications-panel.ui:223
 msgid "System access that is required by the app"
-msgstr ""
+msgstr "该应用需要的系统访问权限"
 
 #: panels/applications/cc-applications-panel.ui:231
 msgid "File &amp; Link Associations"
-msgstr ""
+msgstr "文件与链接关联"
 
 #: panels/applications/cc-applications-panel.ui:239
 #: panels/applications/cc-applications-panel.ui:406
@@ -320,15 +321,15 @@ msgstr "尝试不同的搜索"
 
 #: panels/applications/cc-applications-panel.ui:351
 msgid "File & Link Associations"
-msgstr ""
+msgstr "文件与链接关联"
 
 #: panels/applications/cc-applications-panel.ui:374
 msgid "File Types"
-msgstr ""
+msgstr "文件类型"
 
 #: panels/applications/cc-applications-panel.ui:380
 msgid "Link Types"
-msgstr ""
+msgstr "链接类型"
 
 #: panels/applications/cc-applications-panel.ui:390
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:131
@@ -437,7 +438,7 @@ msgstr "当前背景"
 
 #: panels/background/cc-background-panel.ui:9
 msgid "Style"
-msgstr ""
+msgstr "样式"
 
 #: panels/background/cc-background-panel.ui:49
 #: panels/wacom/cc-wacom-stylus-page.ui:133
@@ -446,7 +447,7 @@ msgstr "默认"
 
 #: panels/background/cc-background-panel.ui:79
 msgid "Dark"
-msgstr ""
+msgstr "暗色"
 
 #: panels/background/cc-background-panel.ui:98
 msgid "Background"
@@ -458,17 +459,17 @@ msgstr "添加图片…"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Appearance"
-msgstr ""
+msgstr "外观"
 
 #: panels/background/gnome-background-panel.desktop.in.in:4
 msgid "Change your background image or the UI colors"
-msgstr ""
+msgstr "更改您的背景图像或用户界面配色"
 
 #. Translators: Search terms to find the Appearance panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:15
 msgid "Background;Wallpaper;Screen;Desktop;Style;Light;Dark;Appearance;"
-msgstr ""
+msgstr "Background;Wallpaper;Screen;Desktop;Style;Light;Dark;Appearance;背景;墙纸;屏幕;桌面;样式;亮色;暗色;夜间模式;外观;个性化;"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:11
 #: panels/camera/cc-camera-panel.ui:8 panels/datetime/cc-datetime-panel.ui:172
@@ -498,7 +499,7 @@ msgstr "打开以连接设备和接收文件传送。"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:38
 msgid "Airplane Mode is On"
-msgstr ""
+msgstr "飞行模式已打开"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:39
 msgid "Bluetooth is disabled when airplane mode is on."
@@ -510,7 +511,7 @@ msgstr "关闭飞行模式"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:56
 msgid "Hardware Airplane Mode is On"
-msgstr ""
+msgstr "硬件飞行模式已打开"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:57
 msgid "Turn off the Airplane mode switch to enable Bluetooth."
@@ -534,7 +535,7 @@ msgstr "share;sharing;bluetooth;obex;分享;共享;蓝牙;"
 
 #: panels/camera/cc-camera-panel.ui:24
 msgid "Camera is Turned Off"
-msgstr ""
+msgstr "摄像头已关闭"
 
 #: panels/camera/cc-camera-panel.ui:25
 msgid "No sandboxed applications can capture photos or video."
@@ -559,7 +560,7 @@ msgstr "保护您的图片"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 msgid "camera;photos;video;webcam;lock;private;privacy;"
-msgstr ""
+msgstr "camera;photos;video;webcam;lock;private;privacy;相机;摄像头;照片;视频;网络摄像头;锁定;私人;隐私;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:347
@@ -1419,7 +1420,7 @@ msgstr "搜索城市"
 
 #: panels/datetime/cc-datetime-panel.ui:164
 msgid "Automatic _Date &amp; Time"
-msgstr ""
+msgstr "自动设置日期和时间(_D)"
 
 #: panels/datetime/cc-datetime-panel.ui:165
 msgid "Requires internet access"
@@ -1427,7 +1428,7 @@ msgstr "需要互联网连接"
 
 #: panels/datetime/cc-datetime-panel.ui:180
 msgid "Date &amp; _Time"
-msgstr ""
+msgstr "日期和时间(_T)"
 
 #: panels/datetime/cc-datetime-panel.ui:204
 msgid "Automatic Time _Zone"
@@ -1546,7 +1547,7 @@ msgstr "报告问题"
 #. or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 msgid "diagnostics;crash;"
-msgstr ""
+msgstr "diagnostics;crash;诊断;崩溃;"
 
 #: panels/display/cc-display-panel.c:492
 #: panels/notifications/cc-notifications-panel.c:217
@@ -1601,16 +1602,16 @@ msgstr "后退"
 
 #: panels/display/cc-display-panel.ui:100
 msgid "Display Settings Disabled"
-msgstr ""
+msgstr "显示器设置已禁用"
 
 #: panels/display/cc-display-panel.ui:111
 msgid "Multiple Displays"
-msgstr ""
+msgstr "多显示器"
 
 #. 'Join' as in 'Join displays'
 #: panels/display/cc-display-panel.ui:120
 msgid "Join"
-msgstr ""
+msgstr "加入"
 
 #: panels/display/cc-display-panel.ui:127
 msgid "Mirror"
@@ -1618,7 +1619,7 @@ msgstr "镜像"
 
 #: panels/display/cc-display-panel.ui:155
 msgid "Contains top bar and Activities"
-msgstr "包含顶栏和“活动”"
+msgstr "包含顶栏和活动按钮"
 
 #: panels/display/cc-display-panel.ui:156
 msgid "Primary Display"
@@ -1683,13 +1684,13 @@ msgstr "缩放"
 
 #: panels/display/cc-night-light-page.ui:22
 msgid "Night Light unavailable"
-msgstr ""
+msgstr "夜灯不可用"
 
 #: panels/display/cc-night-light-page.ui:31
 msgid ""
 "This could be the result of the graphics driver being used, or the desktop "
 "being used remotely"
-msgstr ""
+msgstr "这可能是使用的显卡驱动或者桌面是远程使用造成的"
 
 #. Inhibit the redshift functionality until the next day starts
 #: panels/display/cc-night-light-page.ui:58
@@ -1794,19 +1795,19 @@ msgstr "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blu
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:72
 #: panels/firmware-security/cc-firmware-security-panel.c:112
 msgid "Secure Boot is Active"
-msgstr ""
+msgstr "安全启动已激活"
 
 #. TRANSLATORS: this is the first section of the decription
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:77
 msgid ""
 "Secure boot prevents malicious software from being loaded when the device "
 "starts. It is currently turned on and is functioning correctly."
-msgstr ""
+msgstr "安全启动会在设备启动时阻止恶意软件加载。安全启动当前已开启并正确工作。"
 
 #. TRANSLATORS: secure boot refers to the system firmware security mode
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:83
 msgid "Secure Boot Has Problems"
-msgstr ""
+msgstr "安全启动有问题"
 
 #. TRANSLATORS: this is the first section of the decription.
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:87
@@ -1814,7 +1815,7 @@ msgid ""
 "Secure boot prevents malicious software from being loaded when the device "
 "starts. It is currently turned on, but will not work due to having an "
 "invalid key."
-msgstr ""
+msgstr "安全启动会在设备启动时阻止恶意软件加载。安全启动当前已开启但因密钥无效无法工作。"
 
 #. TRANSLATORS: this is the second section of description.
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:90
@@ -1822,24 +1823,24 @@ msgid ""
 "Secure boot problems can often be resolved from your computer's UEFI "
 "firmware settings (BIOS) and your hardware manufacturer may provide "
 "information on how to do this."
-msgstr ""
+msgstr "安全启动的问题通常可以从您计算机的 UEFI 固件设置（BIOS）解决且您的硬件厂商可能会提供如何操作的信息。"
 
 #. TRANSLATORS: this is the third section of description.
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:93
 msgid "For help, contact your hardware manufacturer or IT support provider."
-msgstr ""
+msgstr "要寻求帮助，请联系您的硬件厂商或 IT 支持提供者。"
 
 #. TRANSLATORS: secure boot refers to the system firmware security mode
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:99
 msgid "Secure Boot is Turned Off"
-msgstr ""
+msgstr "安全启动已关闭"
 
 #. TRANSLATORS: this is the first section of the description.
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:103
 msgid ""
 "Secure boot prevents malicious software from being loaded when the device "
 "starts. It is currently turned off."
-msgstr ""
+msgstr "安全启动会在设备启动时阻止恶意软件加载。安全启动当前已关闭。"
 
 #. TRANSLATORS: this is the second section of the description.
 #: panels/firmware-security/cc-firmware-security-boot-dialog.c:106
@@ -1847,157 +1848,157 @@ msgid ""
 "Secure boot can often be turned on from your computer's UEFI firmware "
 "settings (BIOS). For help, contact your hardware manufacturer or IT support "
 "provider."
-msgstr ""
+msgstr "安全启动通常可以从您计算机的 UEFI 固件设置（BIOS）开启。要寻求帮助，请联系您的硬件厂商或 IT 支持提供者。"
 
 #: panels/firmware-security/cc-firmware-security-boot-dialog.ui:53
 msgid ""
 "Secure boot prevents malicious software from being loaded when the device starts.\n"
 "\n"
 "For more information, contact the hardware manufacturer or IT support."
-msgstr ""
+msgstr "安全启动会在设备启动时阻止恶意软件加载。\n\n获取更多信息请联系硬件厂商或 IT 支持。"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:96
 #: panels/firmware-security/cc-firmware-security-dialog.c:98
 #: panels/firmware-security/cc-firmware-security-dialog.c:100
 msgid "Passed"
-msgstr ""
+msgstr "已通过"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:96
 #: panels/firmware-security/cc-firmware-security-dialog.c:98
 #: panels/firmware-security/cc-firmware-security-dialog.c:100
 msgid "Failed"
-msgstr ""
+msgstr "已失败"
 
 #. TRANSLATORS: HSI stands for Host Security ID and device refers to the
 #. computer as a whole
 #: panels/firmware-security/cc-firmware-security-dialog.c:137
 #, c-format
 msgid "Device conforms to HSI level %d"
-msgstr ""
+msgstr "设备遵从 HSI 级别 %d"
 
 #. TRANSLATORS: in reference to firmware protection: 0/4 stars
 #: panels/firmware-security/cc-firmware-security-dialog.c:149
 #: panels/firmware-security/cc-firmware-security-panel.c:485
 msgid "Security Level 0"
-msgstr ""
+msgstr "安全级别 0"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:150
 msgid ""
 "This device has no protection against hardware security issues. This could "
 "be because of a hardware or firmware configuration issue. It is recommended "
 "to contact your IT support provider."
-msgstr ""
+msgstr "该设备没有针对硬件安全问题的保护。这可能是因为硬件或固件配置问题。推荐联系您的 IT 支持提供者。"
 
 #. TRANSLATORS: in reference to firmware protection: 1/4 stars
 #: panels/firmware-security/cc-firmware-security-dialog.c:158
 #: panels/firmware-security/cc-firmware-security-dialog.c:357
 #: panels/firmware-security/cc-firmware-security-panel.c:492
 msgid "Security Level 1"
-msgstr ""
+msgstr "安全级别 1"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:159
 msgid ""
 "This device has minimal protection against hardware security issues. This is"
 " the lowest device security level and only provides protection against "
 "simple security threats."
-msgstr ""
+msgstr "该设备具有针对硬件安全问题的最小化保护。这是最低的设备安全级别且仅提供对简单安全威胁的保护。"
 
 #. TRANSLATORS: in reference to firmware protection: 2/4 stars
 #: panels/firmware-security/cc-firmware-security-dialog.c:167
 #: panels/firmware-security/cc-firmware-security-dialog.c:362
 #: panels/firmware-security/cc-firmware-security-panel.c:499
 msgid "Security Level 2"
-msgstr ""
+msgstr "安全级别 2"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:168
 msgid ""
 "This device has basic protection against hardware security issues. This "
 "provides protection against some common security threats."
-msgstr ""
+msgstr "该设备具有针对硬件安全问题的基本保护。这提供了对一些常见安全威胁的保护。"
 
 #. TRANSLATORS: in reference to firmware protection: 3/4 stars
 #: panels/firmware-security/cc-firmware-security-dialog.c:176
 #: panels/firmware-security/cc-firmware-security-dialog.c:367
 #: panels/firmware-security/cc-firmware-security-panel.c:506
 msgid "Security Level 3"
-msgstr ""
+msgstr "安全级别 3"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:177
 msgid ""
 "This device has extended protection against hardware security issues. This "
 "is the highest device security level and provides protection against "
 "advanced security threats."
-msgstr ""
+msgstr "该设备具有针对硬件安全问题的扩展保护。这是最高的设备安全级别且提供了对高级安全威胁的保护。"
 
 #. TRANSLATORS: in reference to firmware protection: ??? stars
 #: panels/firmware-security/cc-firmware-security-dialog.c:185
 #: panels/firmware-security/cc-firmware-security-dialog.ui:22
 #: panels/firmware-security/cc-firmware-security-panel.c:521
 msgid "Security Level"
-msgstr ""
+msgstr "安全级别"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:186
 #: panels/firmware-security/cc-firmware-security-panel.c:522
 msgid "Security levels are not available for this device."
-msgstr ""
+msgstr "安全级别对该设备不可用。"
 
 #. TRANSLATORS: hardware manufacturer as in OEM
 #: panels/firmware-security/cc-firmware-security-dialog.c:201
 #: panels/firmware-security/cc-firmware-security-dialog.c:211
 #: panels/firmware-security/cc-firmware-security-dialog.c:218
 msgid "Contact your hardware manufacturer for help with security updates."
-msgstr ""
+msgstr "请联系您的硬件厂商获取有关安全更新的帮助。"
 
 #. TRANSLATORS: support technician as in someone with root
 #: panels/firmware-security/cc-firmware-security-dialog.c:203
 msgid ""
 "It might be possible to resolve this issue in the device’s UEFI firmware "
 "settings, or by a support technician."
-msgstr ""
+msgstr "在该设备的 UEFI 固件设置中有可能会解决该问题，或寻求支持技术员的帮助。"
 
 #: panels/firmware-security/cc-firmware-security-dialog.c:212
 #: panels/firmware-security/cc-firmware-security-dialog.c:223
 msgid ""
 "It might be possible to resolve this issue in the device’s UEFI firmware "
 "settings."
-msgstr ""
+msgstr "在该设备的 UEFI 固件设置中有可能会解决该问题。"
 
 #. TRANSLATORS: support technician as in someone with root
 #: panels/firmware-security/cc-firmware-security-dialog.c:229
 msgid "It might be possible for a support technician to resolve this issue."
-msgstr ""
+msgstr "支持技术员有可能会解决该问题。"
 
 #: panels/firmware-security/cc-firmware-security-dialog.ui:88
 msgid "Level 1"
-msgstr ""
+msgstr "1 级"
 
 #: panels/firmware-security/cc-firmware-security-dialog.ui:124
 msgid "Level 2"
-msgstr ""
+msgstr "2 级"
 
 #: panels/firmware-security/cc-firmware-security-dialog.ui:160
 msgid "Level 3"
-msgstr ""
+msgstr "3 级"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:113
 msgid "Protected against malicious software when the device starts."
-msgstr ""
+msgstr "设备启动时针对恶意软件的保护。"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:119
 msgid "Secure Boot has Problems"
-msgstr ""
+msgstr "安全启动有问题"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:120
 msgid "Some protection when the device is started."
-msgstr ""
+msgstr "设备启动时的一些保护。"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:125
 msgid "Secure Boot is Off"
-msgstr ""
+msgstr "安全启动已关闭"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:126
 msgid "No protection when the device is started."
-msgstr ""
+msgstr "设备启动时没有保护。"
 
 #. TRANSLATORS: this is to explain an event that has already happened
 #: panels/firmware-security/cc-firmware-security-panel.c:145
@@ -2005,184 +2006,184 @@ msgid ""
 "This issue could have been caused by a change in UEFI firmware settings, an "
 "operating system configuration change, or because of malicious software on "
 "this system."
-msgstr ""
+msgstr "该问题可能由 UEFI 固件设置中的更改，操作系统配置的更改，或系统上的恶意软件等所造成。"
 
 #. TRANSLATORS: this is to explain an event that has already happened
 #: panels/firmware-security/cc-firmware-security-panel.c:153
 msgid ""
 "This issue could have been caused by a change in the UEFI firmware settings,"
 " or because of malicious software on this system."
-msgstr ""
+msgstr "该问题可能由 UEFI 固件设置中的更改，或系统上的恶意软件等所造成。"
 
 #. TRANSLATORS: this is to explain an event that has already happened
 #: panels/firmware-security/cc-firmware-security-panel.c:160
 msgid ""
 "This issue could have been caused by an operating system configuration "
 "change, or because of malicious software on this system."
-msgstr ""
+msgstr "该问题可能由操作系统配置的更改，或系统上的恶意软件等所造成。"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:486
 msgid "Exposed to serious security threats."
-msgstr ""
+msgstr "暴露于严重的安全威胁。"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:493
 msgid "Limited protection against simple security threats."
-msgstr ""
+msgstr "对简单安全威胁的有限保护。"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:500
 msgid "Protected against common security threats."
-msgstr ""
+msgstr "对常见安全威胁的保护。"
 
 #: panels/firmware-security/cc-firmware-security-panel.c:507
 #: panels/firmware-security/cc-firmware-security-panel.c:515
 msgid "Protected against a wide range of security threats."
-msgstr ""
+msgstr "对宽泛安全威胁的保护。"
 
 #. TRANSLATORS: in reference to firmware protection: 4/4 stars
 #: panels/firmware-security/cc-firmware-security-panel.c:514
 msgid "Comprehensive Protection"
-msgstr ""
+msgstr "全面保护"
 
 #: panels/firmware-security/cc-firmware-security-panel.ui:150
 msgid "No Events"
-msgstr ""
+msgstr "无事件"
 
 #. TRANSLATORS: Title: firmware refers to the flash chip in the computer
 #: panels/firmware-security/cc-firmware-security-utils.c:37
 msgid "Firmware Write Protection"
-msgstr ""
+msgstr "固件写入保护"
 
 #. TRANSLATORS: Title: firmware refers to the flash chip in the computer
 #: panels/firmware-security/cc-firmware-security-utils.c:42
 msgid "Firmware Write Protection Lock"
-msgstr ""
+msgstr "固件写入保护锁"
 
 #. TRANSLATORS: Title: SPI refers to the flash chip in the computer
 #: panels/firmware-security/cc-firmware-security-utils.c:47
 msgid "Firmware BIOS Region"
-msgstr ""
+msgstr "固件 BIOS 区域"
 
 #. TRANSLATORS: Title: firmware refers to the flash chip in the computer
 #: panels/firmware-security/cc-firmware-security-utils.c:52
 msgid "Firmware BIOS Descriptor"
-msgstr ""
+msgstr "固件 BIOS 描述符"
 
 #. TRANSLATORS: Title: DMA as in https://en.wikipedia.org/wiki/DMA_attack
 #: panels/firmware-security/cc-firmware-security-utils.c:57
 msgid "Pre-boot DMA Protection"
-msgstr ""
+msgstr "预启动 DMA 保护"
 
 #. TRANSLATORS: Title: BootGuard is a trademark from Intel
 #: panels/firmware-security/cc-firmware-security-utils.c:62
 msgid "Intel BootGuard"
-msgstr ""
+msgstr "英特尔启动卫士"
 
 #. TRANSLATORS: Title: BootGuard is a trademark from Intel,
 #. * verified boot refers to the way the boot process is verified
 #: panels/firmware-security/cc-firmware-security-utils.c:68
 msgid "Intel BootGuard Verified Boot"
-msgstr ""
+msgstr "英特尔启动卫士验证的启动"
 
 #. TRANSLATORS: Title: BootGuard is a trademark from Intel,
 #. * ACM means to verify the integrity of Initial Boot Block
 #: panels/firmware-security/cc-firmware-security-utils.c:74
 msgid "Intel BootGuard ACM Protected"
-msgstr ""
+msgstr "英特尔启动卫士 ACM 保护"
 
 #. TRANSLATORS: Title: BootGuard is a trademark from Intel,
 #. * error policy is what to do on failure
 #: panels/firmware-security/cc-firmware-security-utils.c:80
 msgid "Intel BootGuard Error Policy"
-msgstr ""
+msgstr "英特尔启动卫士错误策略"
 
 #. TRANSLATORS: Title: BootGuard is a trademark from Intel
 #: panels/firmware-security/cc-firmware-security-utils.c:85
 msgid "Intel BootGuard Fuse"
-msgstr ""
+msgstr "英特尔启动卫士保险"
 
 #. TRANSLATORS: Title: CET = Control-flow Enforcement Technology,
 #. * enabled means supported by the processor
 #: panels/firmware-security/cc-firmware-security-utils.c:91
 msgid "Intel CET Enabled"
-msgstr ""
+msgstr "英特尔 CET 已启用"
 
 #. TRANSLATORS: Title: CET = Control-flow Enforcement Technology,
 #. * active means being used by the OS
 #: panels/firmware-security/cc-firmware-security-utils.c:97
 msgid "Intel CET Active"
-msgstr ""
+msgstr "英特尔 CET 已激活"
 
 #. TRANSLATORS: Title: SMAP = Supervisor Mode Access Prevention
 #: panels/firmware-security/cc-firmware-security-utils.c:102
 msgid "Intel SMAP"
-msgstr ""
+msgstr "英特尔 SMAP"
 
 #. TRANSLATORS: Title: Memory contents are encrypted, e.g. Intel TME
 #: panels/firmware-security/cc-firmware-security-utils.c:107
 msgid "Encrypted RAM"
-msgstr ""
+msgstr "加密的内存"
 
 #. TRANSLATORS: Title:
 #. * https://en.wikipedia.org/wiki/Input%E2%80%93output_memory_management_unit
 #: panels/firmware-security/cc-firmware-security-utils.c:113
 msgid "IOMMU Protection"
-msgstr ""
+msgstr "IOMMU 保护"
 
 #. TRANSLATORS: Title: lockdown is a security mode of the kernel
 #: panels/firmware-security/cc-firmware-security-utils.c:118
 msgid "Linux Kernel Lockdown"
-msgstr ""
+msgstr "Linux 内核封锁"
 
 #. TRANSLATORS: Title: if it's tainted or not
 #: panels/firmware-security/cc-firmware-security-utils.c:123
 msgid "Linux Kernel Verification"
-msgstr ""
+msgstr "Linux 内核确认"
 
 #. TRANSLATORS: Title: swap space or swap partition
 #: panels/firmware-security/cc-firmware-security-utils.c:128
 msgid "Linux Swap"
-msgstr ""
+msgstr "Linux 交换空间"
 
 #. TRANSLATORS: Title: sleep state
 #: panels/firmware-security/cc-firmware-security-utils.c:133
 msgid "Suspend To RAM"
-msgstr ""
+msgstr "挂起到内存"
 
 #. TRANSLATORS: Title: a better sleep state
 #: panels/firmware-security/cc-firmware-security-utils.c:138
 msgid "Suspend To Idle"
-msgstr ""
+msgstr "挂起到空闲"
 
 #. TRANSLATORS: Title: PK is the 'platform key' for the machine
 #: panels/firmware-security/cc-firmware-security-utils.c:143
 msgid "UEFI Platform Key"
-msgstr ""
+msgstr "UEFI 平台密钥"
 
 #. TRANSLATORS: Title: SB is a way of locking down UEFI
 #: panels/firmware-security/cc-firmware-security-utils.c:148
 msgid "UEFI Secure Boot"
-msgstr ""
+msgstr "UEFI 安全启动"
 
 #. TRANSLATORS: Title: PCRs (Platform Configuration Registers) shouldn't be
 #. empty
 #: panels/firmware-security/cc-firmware-security-utils.c:153
 msgid "TPM Platform Configuration"
-msgstr ""
+msgstr "TPM 平台配置"
 
 #. TRANSLATORS: Title: the PCR is rebuilt from the TPM event log
 #: panels/firmware-security/cc-firmware-security-utils.c:158
 msgid "TPM Reconstruction"
-msgstr ""
+msgstr "TPM 复原"
 
 #. TRANSLATORS: Title: TPM = Trusted Platform Module
 #: panels/firmware-security/cc-firmware-security-utils.c:163
 msgid "TPM v2.0"
-msgstr ""
+msgstr "TPM v2.0"
 
 #. TRANSLATORS: Title: MEI = Intel Management Engine
 #: panels/firmware-security/cc-firmware-security-utils.c:168
 msgid "Intel Management Engine Manufacturing Mode"
-msgstr ""
+msgstr "英特尔管理引擎厂商模式"
 
 #. TRANSLATORS: Title: MEI = Intel Management Engine, and the "override" is
 #. enabled
@@ -2191,132 +2192,132 @@ msgstr ""
 #. * boards
 #: panels/firmware-security/cc-firmware-security-utils.c:175
 msgid "Intel Management Engine Override"
-msgstr ""
+msgstr "英特尔管理引擎覆盖"
 
 #. TRANSLATORS: Title: MEI = Intel Management Engine
 #: panels/firmware-security/cc-firmware-security-utils.c:180
 msgid "Intel Management Engine Version"
-msgstr ""
+msgstr "英特尔管理引擎版本"
 
 #. TRANSLATORS: Title: if firmware updates are available
 #: panels/firmware-security/cc-firmware-security-utils.c:185
 msgid "Firmware Updates"
-msgstr ""
+msgstr "固件更新"
 
 #. TRANSLATORS: Title: if we can verify the firmware checksums
 #: panels/firmware-security/cc-firmware-security-utils.c:190
 msgid "Firmware Attestation"
-msgstr ""
+msgstr "固件认证"
 
 #. TRANSLATORS: Title: if the fwupd plugins are all present and correct
 #: panels/firmware-security/cc-firmware-security-utils.c:195
 msgid "Firmware Updater Verification"
-msgstr ""
+msgstr "固件更新器验证"
 
 #. TRANSLATORS: Title: Allows debugging of parts using proprietary hardware
 #: panels/firmware-security/cc-firmware-security-utils.c:201
 msgid "Platform Debugging"
-msgstr ""
+msgstr "平台调试"
 
 #. TRANSLATORS: Title: if fwupd supports HSI on this chip
 #: panels/firmware-security/cc-firmware-security-utils.c:206
 msgid "Processor Security Checks"
-msgstr ""
+msgstr "处理器安全检查"
 
 #. TRANSLATORS: Title: if firmware enforces rollback protection
 #: panels/firmware-security/cc-firmware-security-utils.c:211
 msgid "AMD Rollback Protection"
-msgstr ""
+msgstr "AMD 回滚保护"
 
 #. TRANSLATORS: Title: if hardware enforces control of SPI replays
 #: panels/firmware-security/cc-firmware-security-utils.c:216
 msgid "AMD Firmware Replay Protection"
-msgstr ""
+msgstr "AMD 固件重播保护"
 
 #. TRANSLATORS: Title: if hardware enforces control of SPI writes
 #: panels/firmware-security/cc-firmware-security-utils.c:221
 msgid "AMD Firmware Write Protection"
-msgstr ""
+msgstr "AMD 固件写入保护"
 
 #. TRANSLATORS: Title: if the part has been fused
 #: panels/firmware-security/cc-firmware-security-utils.c:226
 msgid "Fused Platform"
-msgstr ""
+msgstr "已熔断的平台"
 
 #. TRANSLATORS: if the stauts is valid. For example security check is valid
 #. and key is valid.
 #: panels/firmware-security/cc-firmware-security-utils.c:237
 msgid "Valid"
-msgstr ""
+msgstr "已验证"
 
 #. TRANSLATORS: if the status or key is not valid.
 #: panels/firmware-security/cc-firmware-security-utils.c:242
 msgid "Not Valid"
-msgstr ""
+msgstr "未验证"
 
 #. TRANSLATORS: if the function is not enabled through BIOS or OS settings.
 #: panels/firmware-security/cc-firmware-security-utils.c:252
 msgid "Not Enabled"
-msgstr ""
+msgstr "未启用"
 
 #. TRANSLATORS: the memory space or system mode is locked to prevent from
 #. malicious modification.
 #: panels/firmware-security/cc-firmware-security-utils.c:257
 msgid "Locked"
-msgstr ""
+msgstr "已锁定"
 
 #. TRANSLATORS: the memory space or system mode is not locked.
 #: panels/firmware-security/cc-firmware-security-utils.c:262
 msgid "Not Locked"
-msgstr ""
+msgstr "未锁定"
 
 #. TRANSLATORS: The data is encrypted to prevent from malicious reading.
 #: panels/firmware-security/cc-firmware-security-utils.c:267
 msgid "Encrypted"
-msgstr ""
+msgstr "已加密"
 
 #. TRANSLATORS: the data in memory is plane text.
 #: panels/firmware-security/cc-firmware-security-utils.c:272
 msgid "Not Encrypted"
-msgstr ""
+msgstr "未加密"
 
 #. TRANSLATORS: Linux kernel is tainted by third party kernel module.
 #: panels/firmware-security/cc-firmware-security-utils.c:277
 msgid "Tainted"
-msgstr ""
+msgstr "受污染"
 
 #. TRANSLATORS: All the loaded kernel module are licensed.
 #: panels/firmware-security/cc-firmware-security-utils.c:282
 msgid "Not Tainted"
-msgstr ""
+msgstr "未污染"
 
 #. TRANSLATORS: the feature can be detected.
 #: panels/firmware-security/cc-firmware-security-utils.c:287
 msgid "Found"
-msgstr ""
+msgstr "已找到"
 
 #. TRANSLATORS: the feature can't be detected.
 #: panels/firmware-security/cc-firmware-security-utils.c:292
 msgid "Not Found"
-msgstr ""
+msgstr "未找到"
 
 #. TRANSLATORS: the function is supported by hardware.
 #: panels/firmware-security/cc-firmware-security-utils.c:297
 msgid "Supported"
-msgstr ""
+msgstr "已支持"
 
 #. TRANSLATORS: the function isn't supported by hardware.
 #: panels/firmware-security/cc-firmware-security-utils.c:302
 msgid "Not Supported"
-msgstr ""
+msgstr "未支持"
 
 #: panels/firmware-security/gnome-firmware-security-panel.desktop.in.in:3
 msgid "Device Security"
-msgstr ""
+msgstr "设备安全"
 
 #: panels/firmware-security/gnome-firmware-security-panel.desktop.in.in:4
 msgid "Host firmware security status"
-msgstr ""
+msgstr "主机固件安全状态"
 
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -2362,11 +2363,11 @@ msgstr "未知"
 #. * version couldn't be loaded, eg. “GNOME Version: Not Available”
 #: panels/info-overview/cc-info-overview-panel.c:694
 msgid "Not Available"
-msgstr ""
+msgstr "不可用"
 
 #: panels/info-overview/cc-info-overview-panel.ui:17
 msgid "System Logo"
-msgstr ""
+msgstr "系统标志"
 
 #: panels/info-overview/cc-info-overview-panel.ui:32
 #: panels/sharing/cc-sharing-panel.ui:304
@@ -2387,7 +2388,7 @@ msgstr "处理器"
 
 #: panels/info-overview/cc-info-overview-panel.ui:74
 msgid "Graphics"
-msgstr "图形"
+msgstr "显卡"
 
 #: panels/info-overview/cc-info-overview-panel.ui:82
 msgid "Disk Capacity"
@@ -2405,7 +2406,7 @@ msgstr "操作系统名称"
 #. translators: this field contains the distro build ID
 #: panels/info-overview/cc-info-overview-panel.ui:107
 msgid "OS Build ID"
-msgstr ""
+msgstr "系统构建标识"
 
 #: panels/info-overview/cc-info-overview-panel.ui:115
 msgid "OS Type"
@@ -2418,7 +2419,7 @@ msgstr "GNOME 版本"
 #. translators: this is a placeholder while the GNOME version is being fetched
 #: panels/info-overview/cc-info-overview-panel.ui:125
 msgid "Loading…"
-msgstr ""
+msgstr "正在加载…"
 
 #: panels/info-overview/cc-info-overview-panel.ui:133
 msgid "Windowing System"
@@ -2636,7 +2637,7 @@ msgstr "未选择输入源"
 
 #: panels/keyboard/cc-input-row.ui:20
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: panels/keyboard/cc-input-row.ui:31 panels/search/cc-search-panel-row.ui:52
 msgid "Move Up"
@@ -2680,25 +2681,25 @@ msgstr "备用字符键可用于输入其他字符。这些有时会作为第三
 #: panels/keyboard/cc-keyboard-panel.c:85
 msgctxt "keyboard key"
 msgid "Left Alt"
-msgstr "左Alt键"
+msgstr "左 Alt 键"
 
 #: panels/keyboard/cc-keyboard-panel.c:68
 #: panels/keyboard/cc-keyboard-panel.c:86
 msgctxt "keyboard key"
 msgid "Right Alt"
-msgstr "右Alt键"
+msgstr "右 Alt 键"
 
 #: panels/keyboard/cc-keyboard-panel.c:69
 #: panels/keyboard/cc-keyboard-panel.c:87
 msgctxt "keyboard key"
 msgid "Left Super"
-msgstr "左Super徽标键"
+msgstr "左 Super 键"
 
 #: panels/keyboard/cc-keyboard-panel.c:70
 #: panels/keyboard/cc-keyboard-panel.c:88
 msgctxt "keyboard key"
 msgid "Right Super"
-msgstr "左Super徽标键"
+msgstr "右 Super 键"
 
 #: panels/keyboard/cc-keyboard-panel.c:71
 #: panels/keyboard/cc-keyboard-panel.c:89
@@ -2710,7 +2711,7 @@ msgstr "菜单键"
 #: panels/keyboard/cc-keyboard-panel.c:90
 msgctxt "keyboard key"
 msgid "Right Ctrl"
-msgstr "右Ctrl键"
+msgstr "右 Ctrl 键"
 
 #: panels/keyboard/cc-keyboard-panel.c:80
 #: panels/keyboard/cc-keyboard-panel.ui:80
@@ -2728,7 +2729,7 @@ msgstr "Compose 键可帮助输入更多种类的字符。如需使用，请按�
 #: panels/keyboard/cc-keyboard-panel.c:91
 msgctxt "keyboard key"
 msgid "Caps Lock"
-msgstr "大小写锁定"
+msgstr "大写锁定"
 
 #: panels/keyboard/cc-keyboard-panel.c:92
 msgctxt "keyboard key"
@@ -2822,7 +2823,7 @@ msgstr "重置所有快捷键为它们的默认键绑定"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:89
 msgid "Section"
-msgstr ""
+msgstr "节"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:111
 msgid "Shortcuts"
@@ -2830,7 +2831,7 @@ msgstr "快捷键"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:120
 msgid "Add a shortcut"
-msgstr ""
+msgstr "添加快捷键"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:155
 msgid "Add Custom Shortcuts"
@@ -2882,7 +2883,7 @@ msgstr "移除(_R)"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:49
 msgid "Re_place"
-msgstr ""
+msgstr "替换(_P)"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:56
 #: panels/wwan/cc-wwan-mode-dialog.ui:39
@@ -2942,7 +2943,7 @@ msgstr "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;
 
 #: panels/location/cc-location-panel.ui:23
 msgid "Location Services Turned Off"
-msgstr ""
+msgstr "定位服务已关闭"
 
 #: panels/location/cc-location-panel.ui:24
 msgid "No sandboxed applications can obtain location information."
@@ -2969,7 +2970,7 @@ msgstr "保护您的位置信息"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/location/gnome-location-panel.desktop.in.in:20
 msgid "location;gps;private;privacy;"
-msgstr ""
+msgstr "location;gps;private;privacy;位置;定位;私人;隐私;"
 
 #: panels/metrics/cc-metrics-panel.ui:10
 msgid "Enable Metrics"
@@ -3006,7 +3007,7 @@ msgstr ""
 
 #: panels/microphone/cc-microphone-panel.ui:23
 msgid "Microphone Turned Off"
-msgstr ""
+msgstr "麦克风已关闭"
 
 #: panels/microphone/cc-microphone-panel.ui:24
 msgid "No sandboxed applications can record sound."
@@ -3031,7 +3032,7 @@ msgstr "保护对话"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
 msgid "microphone;recording;application;privacy;"
-msgstr ""
+msgstr "microphone;recording;application;privacy;麦克风;话筒;录制;应用程序;隐私;"
 
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
@@ -3094,7 +3095,7 @@ msgstr "轻触以点击"
 
 #: panels/mouse/cc-mouse-panel.ui:154
 msgid "Tap to click"
-msgstr ""
+msgstr "轻触以点击"
 
 #: panels/mouse/cc-mouse-panel.ui:163 panels/mouse/cc-mouse-panel.ui:169
 msgid "Two-finger Scrolling"
@@ -3230,7 +3231,7 @@ msgstr "管理生产力和多任务的首选项"
 #: panels/multitasking/gnome-multitasking-panel.desktop.in.in:15
 msgid ""
 "Multitasking;Multitask;Productivity;Customize;Desktop;Hot Corner;Workspaces;"
-msgstr ""
+msgstr "Multitasking;Multitask;Productivity;Customize;Desktop;Hot Corner;Workspaces;多任务;生产力;自定义;桌面;热区;工作区;"
 
 #: panels/network/cc-network-panel.c:662 panels/network/cc-wifi-panel.ui:303
 msgid "Oops, something has gone wrong. Please contact your software vendor."
@@ -3251,7 +3252,7 @@ msgstr "VPN"
 
 #: panels/network/cc-network-panel.ui:42
 msgid "Add connection"
-msgstr ""
+msgstr "添加连接"
 
 #: panels/network/cc-network-panel.ui:62
 msgid "Not set up"
@@ -3315,7 +3316,7 @@ msgstr "至少包含 8 个字符"
 #, c-format
 msgid "Must have a maximum of %d character"
 msgid_plural "Must have a maximum of %d characters"
-msgstr[0] ""
+msgstr[0] "至多包含 %d 个字符"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:4
 msgid "Turn On Wi-Fi Hotspot?"
@@ -3751,7 +3752,7 @@ msgstr "字节"
 
 #: panels/network/connection-editor/ip4-page.ui:21
 msgid "IPv_4 Method"
-msgstr "IPv_4 方式(_4)"
+msgstr "IPv_4 方式"
 
 #: panels/network/connection-editor/ip4-page.ui:36
 msgid "Automatic (DHCP)"
@@ -3776,7 +3777,7 @@ msgstr "禁用"
 #: panels/network/connection-editor/ip4-page.ui:75
 #: panels/network/connection-editor/ip6-page.ui:85
 msgid "Shared to other computers"
-msgstr "已与其他计算机共享"
+msgstr "与其他计算机共享"
 
 #: panels/network/connection-editor/ip4-page.ui:98
 #: panels/network/connection-editor/ip6-page.ui:108
@@ -3822,7 +3823,7 @@ msgstr "自动 DNS"
 #: panels/network/connection-editor/ip4-page.ui:192
 #: panels/network/connection-editor/ip6-page.ui:202
 msgid "DNS server address(es)"
-msgstr ""
+msgstr "DNS 服务器地址"
 
 #: panels/network/connection-editor/ip4-page.ui:200
 #: panels/network/connection-editor/ip6-page.ui:210
@@ -3852,7 +3853,7 @@ msgstr "仅对该网络上的资源使用此连接(_O)"
 
 #: panels/network/connection-editor/ip6-page.ui:21
 msgid "IPv_6 Method"
-msgstr "IPv_6 方式(_6)"
+msgstr "IPv_6 方式"
 
 #: panels/network/connection-editor/ip6-page.ui:45
 msgid "Automatic, DHCP only"
@@ -3874,12 +3875,12 @@ msgstr "新配置"
 #: panels/network/connection-editor/net-connection-editor.c:360
 #, c-format
 msgid "Invalid setting %s: %s"
-msgstr ""
+msgstr "无效的设置 %s：%s"
 
 #: panels/network/connection-editor/net-connection-editor.c:363
 #, c-format
 msgid "Invalid setting %s"
-msgstr ""
+msgstr "无效的设置 %s"
 
 #: panels/network/connection-editor/net-connection-editor.c:721
 msgid "Import from file…"
@@ -4130,7 +4131,7 @@ msgstr "关闭 Wi-Fi"
 
 #: panels/network/network-wifi.ui:99 panels/search/cc-search-panel-row.ui:39
 msgid "More options…"
-msgstr ""
+msgstr "更多选项…"
 
 #: panels/network/network-wifi.ui:119
 msgid "_Connect to Hidden Network…"
@@ -4413,11 +4414,11 @@ msgstr "验证 eap-method 文件时发生未知错误"
 
 #: panels/network/wireless-security/eap-method.c:394
 msgid "DER, PEM, PKCS#12, or PGP private keys"
-msgstr ""
+msgstr "DER、PEM、PKCS#12 或 PGP 私钥"
 
 #: panels/network/wireless-security/eap-method.c:397
 msgid "DER or PEM certificates"
-msgstr ""
+msgstr "DER 或 PEM 证书"
 
 #: panels/network/wireless-security/eap-method-fast.c:88
 msgid "missing EAP-FAST PAC file"
@@ -4687,7 +4688,7 @@ msgstr "认证(_T)"
 
 #: panels/network/wireless-security/ws-file-chooser-button.c:49
 msgid "Select a file"
-msgstr ""
+msgstr "选择文件"
 
 #: panels/network/wireless-security/ws-leap.c:66
 msgid "missing leap-username"
@@ -4856,7 +4857,7 @@ msgstr "撤消"
 
 #: panels/online-accounts/cc-online-accounts-panel.ui:31
 msgid "Close the notification"
-msgstr ""
+msgstr "关闭通知"
 
 #: panels/online-accounts/cc-online-accounts-panel.ui:58
 msgid "Connect to your data in the cloud"
@@ -5200,7 +5201,7 @@ msgstr "当计算机处于非活动状态时降低屏幕亮度。"
 
 #: panels/power/cc-power-panel.ui:151
 msgid "Screen _Blank"
-msgstr "屏幕空白(_B)"
+msgstr "息屏(_B)"
 
 #: panels/power/cc-power-panel.ui:152
 msgid "Turns the screen off after a period of inactivity."
@@ -5287,7 +5288,7 @@ msgstr "查看电池状态并更改省电设置"
 #: panels/power/gnome-power-panel.desktop.in.in:19
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;"
-msgstr "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;电源;睡眠;挂起;休眠;电池;亮度;暗;空白;监视器;显示器;空闲;能源;能耗;"
+msgstr "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;Energy;电源;睡眠;挂起;休眠;电池;亮度;暗;空白;息屏;监视器;显示器;空闲;能源;能耗;"
 
 #. Translators: %s is the printer name
 #: panels/printers/cc-printers-panel.c:685
@@ -5391,7 +5392,7 @@ msgstr "PostScript 打印机描述文件 (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PP
 
 #: panels/printers/pp-details-dialog.ui:69
 msgid "Printer names cannot contain SPACE, TAB, #, or /"
-msgstr ""
+msgstr "打印机名称不能包含空格、制表符、# 或 /"
 
 #: panels/printers/pp-details-dialog.ui:89
 #: panels/printers/printer-entry.ui:211
@@ -5487,7 +5488,7 @@ msgstr "恢复"
 
 #: panels/printers/pp-job-row.c:55
 msgid "Pause"
-msgstr ""
+msgstr "暂停"
 
 #. Translators: Job's state (job is waiting to be printed)
 #: panels/printers/pp-job-row.c:144
@@ -5499,7 +5500,7 @@ msgstr "等待中"
 #: panels/printers/pp-job-row.c:150
 msgctxt "print job"
 msgid "Paused"
-msgstr "暂停"
+msgstr "已暂停"
 
 #. Translators: Job's state (job needs authentication to proceed further)
 #: panels/printers/pp-job-row.c:155
@@ -5511,7 +5512,7 @@ msgstr "需要认证"
 #: panels/printers/pp-job-row.c:160
 msgctxt "print job"
 msgid "Processing"
-msgstr "正在处理"
+msgstr "处理中"
 
 #. Translators: Job's state (job has been stopped)
 #: panels/printers/pp-job-row.c:164
@@ -5540,7 +5541,7 @@ msgstr "已完成"
 #. Translators: Clicking this button prioritizes printing of this print job
 #: panels/printers/pp-job-row.c:186
 msgid "Move this job to the top of the queue"
-msgstr ""
+msgstr "将此任务移至队列顶端"
 
 #. Translators: This label shows how many jobs of this printer needs to be
 #. authenticated to be printed.
@@ -5972,7 +5973,7 @@ msgstr "无打印机"
 msgid ""
 "Sorry! The system printing service\n"
 "    doesn’t seem to be available."
-msgstr ""
+msgstr "抱歉，系统打印服务\n似乎不可用。"
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:196
 #: panels/region/cc-format-chooser.ui:4
@@ -5981,7 +5982,7 @@ msgstr "格式"
 
 #: panels/region/cc-format-chooser.ui:76
 msgid "Search locales…"
-msgstr ""
+msgstr "搜索区域…"
 
 #: panels/region/cc-format-chooser.ui:116
 msgid "Common Formats"
@@ -6035,21 +6036,21 @@ msgstr "纸张"
 
 #: panels/region/cc-region-panel.ui:19
 msgid "Language and format will be changed after next login"
-msgstr ""
+msgstr "语言和格式的修改将在下次登录后生效"
 
 #: panels/region/cc-region-panel.ui:29
 msgid "Logout…"
-msgstr ""
+msgstr "注销…"
 
 #: panels/region/cc-region-panel.ui:45
 msgid ""
 "The language setting is used for interface text and web pages. Formats are "
 "used for numbers, dates, and currencies."
-msgstr ""
+msgstr "语言设置用于界面文本和网页。格式用于数字、日期和货币。"
 
 #: panels/region/cc-region-panel.ui:51
 msgid "Your Account"
-msgstr ""
+msgstr "您的帐号"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
 #: panels/user-accounts/cc-user-panel.ui:306
@@ -6347,7 +6348,7 @@ msgstr "息屏延时"
 
 #: panels/screen/cc-screen-panel.ui:15
 msgid "Period of inactivity after which the screen will go blank."
-msgstr "闲置一段时间后，屏幕将变为空白。"
+msgstr "闲置一段时间后，屏幕将变为黑屏。"
 
 #: panels/screen/cc-screen-panel.ui:33
 msgid "Automatic Screen _Lock"
@@ -6360,7 +6361,7 @@ msgstr "自动锁屏延迟(_S)"
 #: panels/screen/cc-screen-panel.ui:51
 msgid ""
 "Period after the screen blanks when the screen is automatically locked."
-msgstr "屏幕空白后屏幕自动锁定的时间。"
+msgstr "息屏后屏幕自动锁定的时间。"
 
 #: panels/screen/cc-screen-panel.ui:87
 msgid "Forbid new _USB devices"
@@ -6374,21 +6375,21 @@ msgstr "在屏幕锁定时阻止新 USB 设备与系统进行交互。"
 
 #: panels/screen/cc-screen-panel.ui:108
 msgid "Screen Privacy"
-msgstr ""
+msgstr "屏幕隐私"
 
 #: panels/screen/cc-screen-panel.ui:113
 msgid "Restrict Viewing Angle"
-msgstr ""
+msgstr "限制可视角度"
 
 #: panels/screen/gnome-screen-panel.desktop.in.in:4
 msgid "Screen Settings"
-msgstr ""
+msgstr "屏幕设置"
 
 #. Translators: Search terms to find the Screen panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: panels/screen/gnome-screen-panel.desktop.in.in:20
 msgid "screen;lock;private;privacy;"
-msgstr ""
+msgstr "screen;lock;private;privacy;屏幕;显示器;锁定;私人;隐私;"
 
 #: panels/search/cc-search-locations-dialog.c:674
 msgid "Select Location"
@@ -6419,11 +6420,11 @@ msgstr "书签"
 
 #: panels/search/cc-search-locations-dialog.ui:52
 msgid "Others"
-msgstr ""
+msgstr "其它"
 
 #: panels/search/cc-search-locations-dialog.ui:59
 msgid "Add Location"
-msgstr ""
+msgstr "添加位置"
 
 #: panels/search/cc-search-panel.c:165
 msgid "No applications found"
@@ -6431,23 +6432,23 @@ msgstr "未找到应用"
 
 #: panels/search/cc-search-panel.ui:10
 msgid "Application Search"
-msgstr ""
+msgstr "应用程序搜索"
 
 #: panels/search/cc-search-panel.ui:11
 msgid "Include application-provided search results."
-msgstr ""
+msgstr "包括应用程序提供的搜索结果。"
 
 #: panels/search/cc-search-panel.ui:23
 msgid "Folders which are searched by system applications."
-msgstr ""
+msgstr "系统应用程序所搜索的文件夹。"
 
 #: panels/search/cc-search-panel.ui:37
 msgid "Search Results"
-msgstr ""
+msgstr "搜索结果"
 
 #: panels/search/cc-search-panel.ui:38
 msgid "Results are displayed according to the list order."
-msgstr ""
+msgstr "结果会根据列表顺序显示。"
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
@@ -6499,7 +6500,7 @@ msgstr "添加"
 
 #: panels/sharing/cc-sharing-panel.c:736
 msgid "Enable media sharing"
-msgstr ""
+msgstr "启用媒体共享"
 
 #. TRANSLATORS: %s is replaced with a link to a dav://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:756
@@ -6520,23 +6521,23 @@ msgstr "当启用远程登录时，远程用户可以使用 SSH 命令来连接�
 
 #: panels/sharing/cc-sharing-panel.c:942
 msgid "Enable personal media sharing"
-msgstr ""
+msgstr "启用个人媒体共享"
 
 #: panels/sharing/cc-sharing-panel.c:1308
 msgid "Device name copied"
-msgstr ""
+msgstr "设备名称已复制"
 
 #: panels/sharing/cc-sharing-panel.c:1319
 msgid "Device address copied"
-msgstr ""
+msgstr "设备地址已复制"
 
 #: panels/sharing/cc-sharing-panel.c:1330
 msgid "Username copied"
-msgstr ""
+msgstr "用户名已复制"
 
 #: panels/sharing/cc-sharing-panel.c:1341
 msgid "Password copied"
-msgstr ""
+msgstr "密码已复制"
 
 #: panels/sharing/cc-sharing-panel.ui:9
 #: panels/sharing/gnome-sharing-panel.desktop.in.in:3
@@ -6553,7 +6554,7 @@ msgstr "文件共享(_F)"
 
 #: panels/sharing/cc-sharing-panel.ui:65
 msgid "Remote _Desktop"
-msgstr ""
+msgstr "远程桌面(_D)"
 
 #: panels/sharing/cc-sharing-panel.ui:72
 msgid "_Media Sharing"
@@ -6579,34 +6580,34 @@ msgstr "远程登录"
 #: panels/sharing/cc-sharing-panel.ui:251
 #: panels/sharing/cc-sharing-panel.ui:270
 msgid "Remote Desktop"
-msgstr ""
+msgstr "远程桌面"
 
 #: panels/sharing/cc-sharing-panel.ui:266
 msgid ""
 "Remote desktop allows viewing and controlling your desktop from another "
 "computer."
-msgstr ""
+msgstr "远程桌面允许从另一个计算机查看和操控您的桌面。"
 
 #: panels/sharing/cc-sharing-panel.ui:271
 msgid "Enable or disable remote desktop connections to this computer."
-msgstr ""
+msgstr "启用或禁用远程桌面连接至该计算机。"
 
 #: panels/sharing/cc-sharing-panel.ui:284
 msgid "Remote Control"
-msgstr ""
+msgstr "远程控制"
 
 #: panels/sharing/cc-sharing-panel.ui:285
 msgid "Allows remote connections to control the screen."
-msgstr ""
+msgstr "允许远程连接操控该屏幕。"
 
 #: panels/sharing/cc-sharing-panel.ui:299
 msgid "How to Connect"
-msgstr ""
+msgstr "如何连接"
 
 #: panels/sharing/cc-sharing-panel.ui:300
 msgid ""
 "Connect to this computer using the device name or remote desktop address."
-msgstr ""
+msgstr "使用设备名称或远程桌面地址连接至该计算机。"
 
 #: panels/sharing/cc-sharing-panel.ui:318
 #: panels/sharing/cc-sharing-panel.ui:345
@@ -6617,33 +6618,33 @@ msgstr "复制"
 
 #: panels/sharing/cc-sharing-panel.ui:331
 msgid "Remote Desktop Address"
-msgstr ""
+msgstr "远程桌面地址"
 
 #: panels/sharing/cc-sharing-panel.ui:361
 msgid "Authentication"
-msgstr ""
+msgstr "认证"
 
 #: panels/sharing/cc-sharing-panel.ui:362
 msgid "The user name and password are required to connect to this computer."
-msgstr ""
+msgstr "连接至该计算机需要用户名和密码。"
 
 #: panels/sharing/cc-sharing-panel.ui:366
 msgid "User Name"
-msgstr ""
+msgstr "用户名"
 
 #: panels/sharing/cc-sharing-panel.ui:405
 msgid "Verify Encryption"
-msgstr ""
+msgstr "验证加密"
 
 #: panels/sharing/cc-sharing-panel.ui:434
 msgid "Encryption Fingerprint"
-msgstr ""
+msgstr "加密指纹"
 
 #: panels/sharing/cc-sharing-panel.ui:435
 msgid ""
 "The encryption fingerprint can be seen in connecting clients and should be "
 "identical."
-msgstr ""
+msgstr "加密指纹可以在连接的客户端中看到且应一致。"
 
 #: panels/sharing/cc-sharing-panel.ui:467
 msgid "Media Sharing"
@@ -6682,19 +6683,19 @@ msgstr "自定义"
 
 #: panels/sound/cc-alert-chooser.ui:12
 msgid "Click"
-msgstr ""
+msgstr "点击"
 
 #: panels/sound/cc-alert-chooser.ui:20
 msgid "String"
-msgstr ""
+msgstr "弦乐"
 
 #: panels/sound/cc-alert-chooser.ui:28
 msgid "Swing"
-msgstr ""
+msgstr "摇摆"
 
 #: panels/sound/cc-alert-chooser.ui:36
 msgid "Hum"
-msgstr ""
+msgstr "哼唱"
 
 #: panels/sound/cc-balance-slider.ui:13 panels/sound/cc-sound-panel.ui:144
 msgid "Balance"
@@ -6727,7 +6728,7 @@ msgstr "系统音量"
 
 #: panels/sound/cc-sound-panel.ui:12
 msgid "Master volume"
-msgstr ""
+msgstr "主音量"
 
 #: panels/sound/cc-sound-panel.ui:28
 msgid "Volume Levels"
@@ -6776,7 +6777,7 @@ msgstr "100%"
 
 #: panels/sound/cc-volume-slider.ui:22
 msgid "Mute"
-msgstr ""
+msgstr "静音"
 
 #: panels/sound/gnome-sound-panel.desktop.in.in:3
 msgid "Sound"
@@ -6872,7 +6873,7 @@ msgstr[0] "依赖于 %u 个其它设备"
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:43
 #: panels/thunderbolt/cc-bolt-panel.ui:41
 msgid "Close notification"
-msgstr ""
+msgstr "关闭通知"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:87
 msgid "Name:"
@@ -6907,7 +6908,7 @@ msgstr "已授权"
 #: panels/thunderbolt/cc-bolt-panel.c:169
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr "雷雳子系统 (boltd) 未安装或配置不正确。"
+msgstr "雷电接口子系统（boltd）未安装或配置不正确。"
 
 #: panels/thunderbolt/cc-bolt-panel.c:425
 #: panels/thunderbolt/cc-bolt-panel.ui:156
@@ -6922,15 +6923,15 @@ msgstr "只能挂接 USB 和 Display Port 设备。"
 msgid ""
 "Thunderbolt could not be detected.\n"
 "Either the system lacks Thunderbolt support, it has been disabled in the BIOS or is set to an unsupported security level in the BIOS."
-msgstr "无法探测到 雷雳。\n可能是该系统无 雷雳支持，或在 BIOS 中被禁用，抑或是设置成了不被支持的安全级别。"
+msgstr "无法探测到雷电接口。\n可能是该系统无雷电接口支持，或在 BIOS 中被禁用，抑或是设置成了不被支持的安全级别。"
 
 #: panels/thunderbolt/cc-bolt-panel.c:505
 msgid "Thunderbolt support has been disabled in the BIOS."
-msgstr "雷雳支持在 BIOS 中被禁用。"
+msgstr "雷电接口支持在 BIOS 中被禁用。"
 
 #: panels/thunderbolt/cc-bolt-panel.c:509
 msgid "Thunderbolt security level could not be determined."
-msgstr "无法确定 雷雳安全级别。"
+msgstr "无法确定雷电接口安全级别。"
 
 #: panels/thunderbolt/cc-bolt-panel.c:618
 #, c-format
@@ -6939,11 +6940,11 @@ msgstr "无法切换为直接模式：%s"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:102
 msgid "No Thunderbolt Support"
-msgstr ""
+msgstr "无雷电接口支持"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:103
 msgid "Could not connect to the thunderbolt subsystem."
-msgstr ""
+msgstr "无法连接到雷电接口子系统。"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:152
 msgid "Direct Access"
@@ -6959,11 +6960,11 @@ msgstr "未连接设备"
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:3
 msgid "Thunderbolt"
-msgstr "雷雳"
+msgstr "雷电接口"
 
 #: panels/thunderbolt/gnome-thunderbolt-panel.desktop.in.in:4
 msgid "Manage Thunderbolt devices"
-msgstr "管理雷雳设备"
+msgstr "管理雷电接口设备"
 
 #. Translators: those are keywords for the thunderbolt control-center panel.
 #. Do NOT translate or localize the semicolons! The list MUST also end with a
@@ -7272,7 +7273,7 @@ msgstr "AccessX 打字助手(_T)"
 
 #: panels/universal-access/cc-ua-panel.ui:240
 msgid "Pointing &amp; Clicking"
-msgstr ""
+msgstr "指向和点击"
 
 #: panels/universal-access/cc-ua-panel.ui:243
 msgid "_Mouse Keys"
@@ -7500,7 +7501,7 @@ msgstr "辅助视觉、听觉、打字和指点操作"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal "
 "Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;animations;"
-msgstr ""
+msgstr "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;audio;typing;animations;键盘;鼠标;无障碍;辅助功能;通用访问;可访问;对比度;光标;声音;缩放;屏幕;读取器;阅读器;大;高;巨大;文本;文字;字体;大小;粘滞;按键;慢;回弹;鼠标;双击;点击;单击;延迟;速度;助手;重复;闪烁;可视化;视觉;听觉;音频;输入;打字;动画;"
 
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary
 #. Files" group
@@ -7645,7 +7646,7 @@ msgstr "清理历史(_C)…"
 
 #: panels/usage/cc-usage-panel.ui:63
 msgid "Trash &amp; Temporary Files"
-msgstr ""
+msgstr "回收站与临时文件"
 
 #: panels/usage/cc-usage-panel.ui:64
 msgid ""
@@ -7686,7 +7687,7 @@ msgstr "不留痕迹"
 #: panels/usage/gnome-usage-panel.desktop.in.in:20
 msgid ""
 "usage;recent;history;files;temporary;tmp;private;privacy;trash;purge;retain;"
-msgstr ""
+msgstr "usage;recent;history;files;temporary;tmp;private;privacy;trash;purge;retain;占用;最近;历史;文件;临时;私人;隐私;回收站;垃圾;清除;保留;"
 
 #: panels/updates/cc-updates-panel.c:522
 msgid "Limited data plan connection"
@@ -7789,11 +7790,11 @@ msgstr "管理员"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users. Parental controls cannot be applied to administrators."
-msgstr ""
+msgstr "管理员可以添加和移除其他用户，并且可以更改所有用户的设置。家长控制不能应用到管理员上。"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:149
 msgid "User sets password on first login"
-msgstr ""
+msgstr "用户在首次登录时设置密码"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:162
 #: panels/user-accounts/cc-password-dialog.ui:165
@@ -7802,19 +7803,19 @@ msgstr ""
 
 #: panels/user-accounts/cc-add-user-dialog.ui:176
 msgid "Set password now"
-msgstr ""
+msgstr "现在设置密码"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:238
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:292
 msgid "Enterprise Login"
-msgstr ""
+msgstr "企业登录"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:293
 msgid "User accounts which are managed by a company or organization."
-msgstr ""
+msgstr "由企业或组织管理的用户账户。"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:402
 msgid "You are Offline"
@@ -8113,11 +8114,11 @@ msgstr "%s — 帐号活动"
 
 #: panels/user-accounts/cc-login-history-dialog.ui:30
 msgid "Previous"
-msgstr ""
+msgstr "上页"
 
 #: panels/user-accounts/cc-login-history-dialog.ui:40
 msgid "Next"
-msgstr ""
+msgstr "下页"
 
 #: panels/user-accounts/cc-password-dialog.c:122
 msgid "Please choose another password."
@@ -8141,15 +8142,15 @@ msgstr "更改(_A)"
 
 #: panels/user-accounts/cc-password-dialog.ui:53
 msgid "Current Password"
-msgstr ""
+msgstr "当前密码"
 
 #: panels/user-accounts/cc-password-dialog.ui:68
 msgid "New Password"
-msgstr ""
+msgstr "新建密码"
 
 #: panels/user-accounts/cc-password-dialog.ui:99
 msgid "Confirm Password"
-msgstr ""
+msgstr "确认密码"
 
 #: panels/user-accounts/cc-password-dialog.ui:152
 msgid "Allow user to change their password on next login"
@@ -8264,7 +8265,7 @@ msgstr "请确定帐号服务已正确安装并启用。"
 
 #: panels/user-accounts/cc-user-panel.c:1256
 msgid "This panel must be unlocked to change this setting"
-msgstr ""
+msgstr "该面板必须解锁才能更改设置"
 
 #: panels/user-accounts/cc-user-panel.c:1323
 msgid "Delete the selected user account"
@@ -8300,11 +8301,11 @@ msgstr "关闭"
 
 #: panels/user-accounts/cc-user-panel.ui:120
 msgid "Edit avatar"
-msgstr ""
+msgstr "编辑头像"
 
 #: panels/user-accounts/cc-user-panel.ui:152
 msgid "Full name"
-msgstr ""
+msgstr "全名"
 
 #: panels/user-accounts/cc-user-panel.ui:171
 #: panels/wwan/cc-wwan-apn-dialog.c:295
@@ -8348,11 +8349,11 @@ msgstr "移除用户…"
 
 #: panels/user-accounts/cc-user-panel.ui:347
 msgid "Other Users"
-msgstr ""
+msgstr "其它用户"
 
 #: panels/user-accounts/cc-user-panel.ui:360
 msgid "Add User…"
-msgstr ""
+msgstr "添加用户…"
 
 #. Translators: This is the empty state page label which states that there are
 #. no users to show in the panel.
@@ -8630,59 +8631,59 @@ msgstr "显示屏幕帮助"
 
 #: panels/wacom/cc-wacom-device.c:431
 msgid "Tablet mounted on laptop panel"
-msgstr ""
+msgstr "数位板已挂载在笔记本屏幕上"
 
 #: panels/wacom/cc-wacom-device.c:433
 msgid "Tablet mounted on external display"
-msgstr ""
+msgstr "数位板已挂载在外部显示器上"
 
 #: panels/wacom/cc-wacom-device.c:435
 msgid "External tablet device"
-msgstr ""
+msgstr "外部数位板设备"
 
 #. translators: this is a drawing tablet pad, i.e. a collection of buttons and
 #. knobs
 #: panels/wacom/cc-wacom-ekr-page.ui:9
 msgid "External pad device"
-msgstr ""
+msgstr "外部平板设备"
 
 #. All displays item
 #: panels/wacom/cc-wacom-page.c:643
 msgid "All Displays"
-msgstr ""
+msgstr "全部显示器"
 
 #: panels/wacom/cc-wacom-page.ui:16
 msgid "Tablet Mode"
-msgstr ""
+msgstr "数位板模式"
 
 #: panels/wacom/cc-wacom-page.ui:17
 msgid "Use absolute positioning for the pen"
-msgstr ""
+msgstr "为笔使用绝对位置"
 
 #: panels/wacom/cc-wacom-page.ui:28
 msgid "Left Hand Orientation"
-msgstr ""
+msgstr "惯用左手"
 
 #: panels/wacom/cc-wacom-page.ui:29
 msgid "Tablet and Express Keys™ are rotated for left hand use"
-msgstr ""
+msgstr "数位板和快捷按键已旋转为左手使用"
 
 #: panels/wacom/cc-wacom-page.ui:58
 msgctxt "display setting"
 msgid "Map to Monitor"
-msgstr ""
+msgstr "映射到显示器"
 
 #: panels/wacom/cc-wacom-page.ui:64
 msgid "Keep Aspect Ratio"
-msgstr ""
+msgstr "保持宽高比"
 
 #: panels/wacom/cc-wacom-page.ui:65
 msgid "Only use a portion of the tablet surface to keep monitor aspect ratio"
-msgstr ""
+msgstr "仅使用数位板表面的一部分来保持显示器宽高比"
 
 #: panels/wacom/cc-wacom-page.ui:76
 msgid "Calibrate"
-msgstr ""
+msgstr "校准"
 
 #: panels/wacom/cc-wacom-panel.ui:56
 msgid "No tablet detected"
@@ -8690,7 +8691,7 @@ msgstr "未检测到数位板"
 
 #: panels/wacom/cc-wacom-panel.ui:57
 msgid "Please plug in or turn on your Wacom tablet."
-msgstr ""
+msgstr "请插入或打开您的 Wacom 数位板。"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:16
 msgid "Tip Pressure Feel"
@@ -8703,7 +8704,7 @@ msgstr "软"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:35
 msgid "Stylus tip pressure"
-msgstr ""
+msgstr "笔尖压力"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:41
 #: panels/wacom/cc-wacom-stylus-page.ui:102
@@ -8713,17 +8714,17 @@ msgstr "硬"
 #: panels/wacom/cc-wacom-stylus-page.ui:54
 msgctxt "display setting"
 msgid "Button 1"
-msgstr ""
+msgstr "按键 1"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:62
 msgctxt "display setting"
 msgid "Button 2"
-msgstr ""
+msgstr "按键 2"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:70
 msgctxt "display setting"
 msgid "Button 3"
-msgstr ""
+msgstr "按键 3"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:77
 msgid "Eraser Pressure Feel"
@@ -8731,7 +8732,7 @@ msgstr "擦除压感"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:96
 msgid "Eraser pressure"
-msgstr ""
+msgstr "擦除压力"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:134
 msgid "Middle Mouse Button Click"
@@ -8747,19 +8748,19 @@ msgstr "前进"
 
 #: panels/wacom/cc-wacom-tool.c:321
 msgid "Airbrush stylus with pressure, tilt, and integrated slider"
-msgstr ""
+msgstr "具有压感、倾斜和集成滑块的喷枪笔"
 
 #: panels/wacom/cc-wacom-tool.c:323
 msgid "Airbrush stylus with pressure, tilt, and rotation"
-msgstr ""
+msgstr "具有压感、倾斜和旋转的喷枪笔"
 
 #: panels/wacom/cc-wacom-tool.c:325
 msgid "Standard stylus with pressure and tilt"
-msgstr ""
+msgstr "具有压感和倾斜的标准笔"
 
 #: panels/wacom/cc-wacom-tool.c:327
 msgid "Standard stylus with pressure"
-msgstr ""
+msgstr "具有压感的标准笔"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:3
 msgid "Wacom Tablet"
@@ -8809,11 +8810,11 @@ msgstr "已注册"
 
 #: panels/wwan/cc-wwan-details-dialog.c:88
 msgid "Roaming"
-msgstr "漫游"
+msgstr "漫游中"
 
 #: panels/wwan/cc-wwan-details-dialog.c:92
 msgid "Searching"
-msgstr "正在搜索"
+msgstr "搜索中"
 
 #: panels/wwan/cc-wwan-details-dialog.c:96
 msgid "Denied"
@@ -8865,163 +8866,163 @@ msgstr "仅 4G"
 
 #: panels/wwan/cc-wwan-device.c:997
 msgid "5G Only"
-msgstr ""
+msgstr "仅 5G"
 
 #: panels/wwan/cc-wwan-device.c:1007
 msgid "2G, 3G, 4G, 5G (Preferred)"
-msgstr ""
+msgstr "2G、3G、4G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1009
 msgid "2G, 3G, 4G (Preferred), 5G"
-msgstr ""
+msgstr "2G、3G、4G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1011
 msgid "2G, 3G (Preferred), 4G, 5G"
-msgstr ""
+msgstr "2G、3G（首选）、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1013
 msgid "2G (Preferred), 3G, 4G, 5G"
-msgstr ""
+msgstr "2G（首选）、3G、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1015
 msgid "2G, 3G, 4G, 5G"
-msgstr ""
+msgstr "2G、3G、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1022
 msgid "2G, 3G, 4G (Preferred)"
-msgstr "2G, 3G, 4G（首选）"
+msgstr "2G、3G、4G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1024
 msgid "2G, 3G (Preferred), 4G"
-msgstr "2G, 3G（首选）, 4G"
+msgstr "2G、3G（首选）、4G"
 
 #: panels/wwan/cc-wwan-device.c:1026
 msgid "2G (Preferred), 3G, 4G"
-msgstr "2G（首选）, 3G, 4G"
+msgstr "2G（首选）、3G、4G"
 
 #: panels/wwan/cc-wwan-device.c:1028
 msgid "2G, 3G, 4G"
-msgstr "2G, 3G, 4G"
+msgstr "2G、3G、4G"
 
 #: panels/wwan/cc-wwan-device.c:1035
 msgid "3G, 4G, 5G (Preferred)"
-msgstr ""
+msgstr "3G、4G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1037
 msgid "3G, 4G (Preferred), 5G"
-msgstr ""
+msgstr "3G、4G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1039
 msgid "3G (Preferred), 4G, 5G"
-msgstr ""
+msgstr "3G（首选）、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1041
 msgid "3G, 4G, 5G"
-msgstr ""
+msgstr "3G、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1048
 msgid "2G, 4G, 5G (Preferred)"
-msgstr ""
+msgstr "2G、4G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1050
 msgid "2G, 4G (Preferred), 5G"
-msgstr ""
+msgstr "2G、4G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1052
 msgid "2G (Preferred), 4G, 5G"
-msgstr ""
+msgstr "2G（首选）、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1054
 msgid "2G, 4G, 5G"
-msgstr ""
+msgstr "2G、4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1061
 msgid "2G, 3G, 5G (Preferred)"
-msgstr ""
+msgstr "2G、3G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1063
 msgid "2G, 3G (Preferred), 5G"
-msgstr ""
+msgstr "2G、3G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1065
 msgid "2G (Preferred), 3G, 5G"
-msgstr ""
+msgstr "2G（首选）、3G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1067
 msgid "2G, 3G, 5G"
-msgstr ""
+msgstr "2G、3G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1073
 msgid "3G, 4G (Preferred)"
-msgstr "3G, 4G（首选）"
+msgstr "3G、4G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1075
 msgid "3G (Preferred), 4G"
-msgstr "3G（首选）, 4G"
+msgstr "3G（首选）、4G"
 
 #: panels/wwan/cc-wwan-device.c:1077
 msgid "3G, 4G"
-msgstr "3G, 4G"
+msgstr "3G、4G"
 
 #: panels/wwan/cc-wwan-device.c:1083
 msgid "2G, 4G (Preferred)"
-msgstr "2G, 4G（首选）"
+msgstr "2G、4G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1085
 msgid "2G (Preferred), 4G"
-msgstr "2G（首选）, 4G"
+msgstr "2G（首选）、4G"
 
 #: panels/wwan/cc-wwan-device.c:1087
 msgid "2G, 4G"
-msgstr "2G, 4G"
+msgstr "2G、4G"
 
 #: panels/wwan/cc-wwan-device.c:1093
 msgid "2G, 3G (Preferred)"
-msgstr "2G, 3G（首选）"
+msgstr "2G、3G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1095
 msgid "2G (Preferred), 3G"
-msgstr "2G（首选）, 3G"
+msgstr "2G（首选）、3G"
 
 #: panels/wwan/cc-wwan-device.c:1097
 msgid "2G, 3G"
-msgstr "2G, 3G"
+msgstr "2G、3G"
 
 #: panels/wwan/cc-wwan-device.c:1103
 msgid "2G, 5G (Preferred)"
-msgstr ""
+msgstr "2G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1105
 msgid "2G (Preferred), 5G"
-msgstr ""
+msgstr "2G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1107
 msgid "2G, 5G"
-msgstr ""
+msgstr "2G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1113
 msgid "3G, 5G (Preferred)"
-msgstr ""
+msgstr "3G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1115
 msgid "3G (Preferred), 5G"
-msgstr ""
+msgstr "3G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1117
 msgid "3G, 5G"
-msgstr ""
+msgstr "3G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1123
 msgid "4G, 5G (Preferred)"
-msgstr ""
+msgstr "4G、5G（首选）"
 
 #: panels/wwan/cc-wwan-device.c:1125
 msgid "4G (Preferred), 5G"
-msgstr ""
+msgstr "4G（首选）、5G"
 
 #: panels/wwan/cc-wwan-device.c:1127
 msgid "4G, 5G"
-msgstr ""
+msgstr "4G、5G"
 
 #: panels/wwan/cc-wwan-device.c:1131
 msgctxt "Network mode"
@@ -9084,7 +9085,7 @@ msgstr "PIN 码应为 4 到 8 位数字"
 
 #: panels/wwan/cc-wwan-device-page.c:316
 msgid "Unlocking…"
-msgstr ""
+msgstr "正在解锁……"
 
 #: panels/wwan/cc-wwan-device-page.ui:18
 msgid "No SIM"
@@ -9216,7 +9217,7 @@ msgstr "未指定的 GPRS 错误"
 
 #: panels/wwan/cc-wwan-errors-private.h:91
 msgid "No Error"
-msgstr ""
+msgstr "没有错误"
 
 #: panels/wwan/cc-wwan-errors-private.h:94
 msgid "Action Cancelled"
@@ -9351,7 +9352,7 @@ msgstr "[面板] [参数…]"
 
 #: shell/cc-panel-list.ui:18
 msgid "Settings categories"
-msgstr ""
+msgstr "设置分类"
 
 #: shell/cc-panel-list.ui:42 shell/cc-window.c:242
 msgid "Privacy"
@@ -9441,13 +9442,13 @@ msgstr "是否在运行开发版本的 GNOME 设置时显示警告。"
 
 #: shell/org.gnome.Settings.gschema.xml:20
 msgid "Initial state of the window"
-msgstr ""
+msgstr "窗口初始状态"
 
 #: shell/org.gnome.Settings.gschema.xml:21
 msgid ""
 "A tuple containing the initial width, height and maximized state of the "
 "application window."
-msgstr ""
+msgstr "元组类型的值，包含应用程序窗口的初始宽度、高度和最大化状态。"
 
 #. translators:
 #. * The number of sound outputs on a particular device
