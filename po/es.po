@@ -19,6 +19,7 @@
 # Jorge González <jorgegonz@svn.gnome.org>, 2007-2011
 # leo <daniel.mustieles@gmail.com>, 2022
 # Lucas Di Pentima <lucas@lunix.com.ar>, 2002
+# Manuel Quiñones, 2024
 # Nuritzi Sanchez <ns@endlessm.com>, 2014,2016-2018
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003
 # Roddy Shuler <roddy@stanfordalumni.org>, 2014-2018
@@ -28,9 +29,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:08+0000\n"
+"POT-Creation-Date: 2024-04-23 11:08+0000\n"
 "PO-Revision-Date: 2014-09-08 22:33+0000\n"
-"Last-Translator: leo <daniel.mustieles@gmail.com>, 2022\n"
+"Last-Translator: Manuel Quiñones, 2024\n"
 "Language-Team: Spanish (http://app.transifex.com/endless-os/gnome-control-center/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,9 +114,9 @@ msgstr "%s tiene los siguientes permisos integrados y no se pueden modificar. Si
 #, c-format
 msgid "%u file and link type that is opened by the app"
 msgid_plural "%u file and link types that are opened by the app"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%u tipo de archivos y enlace que abre la aplicación"
+msgstr[1] "%u tipos de archivos y enlaces que abre la aplicación"
+msgstr[2] "%u tipos de archivos y enlaces que abre la aplicación"
 
 #: panels/applications/cc-applications-panel.c:1199
 #, c-format
@@ -522,14 +523,14 @@ msgstr "La cámara está apagada"
 
 #: panels/camera/cc-camera-panel.ui:25
 msgid "No sandboxed applications can capture photos or video."
-msgstr ""
+msgstr "Ninguna aplicación aislada puede capturar fotos o vídeo."
 
 #: panels/camera/cc-camera-panel.ui:39
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling the camera may cause some applications to not function properly.\n"
 "\n"
 "Allow the applications below to use your camera. Applications without sandboxing can always use the camera, and do not appear here."
-msgstr ""
+msgstr "El uso de la cámara permite a las aplicaciones tomar fotos y grabar vídeos. Si desactiva la cámara, es posible que algunas aplicaciones no funcionen correctamente.\n\nPermite a las aplicaciones abajo el uso de la cámara. Las aplicaciones del sistema siempre pueden utilizar la cámara, y no figuran aquí."
 
 #: panels/camera/cc-camera-panel.ui:55
 msgid "No Applications Have Asked for Camera Access"
@@ -2938,7 +2939,7 @@ msgstr "Servicios de ubicación apagados"
 
 #: panels/location/cc-location-panel.ui:24
 msgid "No sandboxed applications can obtain location information."
-msgstr ""
+msgstr "Ninguna aplicación aislada puede obtener información sobre la ubicación."
 
 #: panels/location/cc-location-panel.ui:38
 msgid ""
@@ -2947,7 +2948,7 @@ msgid ""
 "Uses Mozilla Location Service: <a href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>\n"
 "\n"
 "Allow the applications below to determine your location. Applications without sandboxing can always determine your location, and do not appear here."
-msgstr ""
+msgstr "Los servicios de ubicación permiten que las aplicaciones conozcan su ubicación. El uso de Wi-Fi y banda ancha móvil aumenta la precisión.\n\nUtiliza el servicio de ubicación de Mozilla: <a href='https://location.services.mozilla.com/privacy'>Política de privacidad</a>\n\nPermita que las siguientes aplicaciones determinen su ubicación. Las aplicaciones del sistema siempre pueden determinar su ubicación y no figuran aquí."
 
 #: panels/location/cc-location-panel.ui:56
 msgid "No Applications Have Asked for Location Access"
@@ -2965,7 +2966,7 @@ msgstr "ubicación;gps;privado;privacidad;"
 
 #: panels/metrics/cc-metrics-panel.ui:10
 msgid "Enable Metrics"
-msgstr ""
+msgstr "Habilitar métricas"
 
 #: panels/metrics/cc-metrics-panel.ui:20
 msgid "Metrics services turned off"
@@ -3002,14 +3003,14 @@ msgstr "Micrófono está apagado"
 
 #: panels/microphone/cc-microphone-panel.ui:24
 msgid "No sandboxed applications can record sound."
-msgstr ""
+msgstr "Ninguna aplicación aislada puede grabar sonido."
 
 #: panels/microphone/cc-microphone-panel.ui:37
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. Disabling the microphone may cause some applications to not function properly.\n"
 "\n"
 "Allow the applications below to use your microphone. Applications without sandboxing can always use your microphone, and do not appear here."
-msgstr ""
+msgstr "El uso del micrófono permite a las aplicaciones grabar y escuchar audio. Si desactiva el micrófono, es posible que algunas aplicaciones no funcionen correctamente.\n\nPermite a las aplicaciones abajo el uso del micrófono. Las aplicaciones del sistema siempre pueden utilizar el micrófono, y no figuran aquí."
 
 #: panels/microphone/cc-microphone-panel.ui:54
 msgid "No Applications Have Asked for Microphone Access"
@@ -3307,9 +3308,9 @@ msgstr "Debe tener un mínimo de 8 caracteres"
 #, c-format
 msgid "Must have a maximum of %d character"
 msgid_plural "Must have a maximum of %d characters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Debe tener un máximo de %d caracter"
+msgstr[1] "Debe tener un máximo de %d caracteres"
+msgstr[2] "Debe tener un máximo de %d caracteres"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:4
 msgid "Turn On Wi-Fi Hotspot?"
@@ -7810,7 +7811,7 @@ msgstr "El usuario establece su contraseña en el primer inicio de sesión"
 #: panels/user-accounts/cc-add-user-dialog.ui:162
 #: panels/user-accounts/cc-password-dialog.ui:165
 msgid "Do not require a password when logging in"
-msgstr ""
+msgstr "No requiere una contraseña al iniciar sesión"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:176
 msgid "Set password now"
