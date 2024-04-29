@@ -121,9 +121,9 @@ msgstr "Les permissions suivantes sont intégrées à %s. Elles ne peuvent être
 #, c-format
 msgid "%u file and link type that is opened by the app"
 msgid_plural "%u file and link types that are opened by the app"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%u type de fichier et de lien ouvert par l’application"
+msgstr[1] "%u types de fichiers et de liens ouverts par l’application"
+msgstr[2] "%u types de fichiers et de liens ouverts par l’application"
 
 #: panels/applications/cc-applications-panel.c:1199
 #, c-format
@@ -159,7 +159,7 @@ msgstr "Ouvrir"
 
 #: panels/applications/cc-applications-panel.ui:94
 msgid "View Details"
-msgstr ""
+msgstr "Afficher les détails"
 
 #: panels/applications/cc-applications-panel.ui:112
 #: panels/applications/cc-applications-panel.ui:119
@@ -175,7 +175,7 @@ msgstr "Recherche"
 #: panels/applications/cc-applications-panel.ui:113
 #: panels/applications/cc-applications-panel.ui:120
 msgid "Receive system searches and send results."
-msgstr ""
+msgstr "Recevoir les recherches système et envoyer les résultats."
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
@@ -205,7 +205,7 @@ msgstr "Notifications"
 
 #: panels/applications/cc-applications-panel.ui:127
 msgid "Show system notifications."
-msgstr ""
+msgstr "Afficher les notifications système."
 
 #: panels/applications/cc-applications-panel.ui:133
 msgid "Run in Background"
@@ -213,7 +213,7 @@ msgstr "Exécuter en arrière-plan"
 
 #: panels/applications/cc-applications-panel.ui:134
 msgid "Allow activity when the app is closed."
-msgstr ""
+msgstr "Autoriser l’exécution même lorsque l’application est fermée."
 
 #: panels/applications/cc-applications-panel.ui:140
 msgid "Screenshots"
@@ -221,7 +221,7 @@ msgstr "Captures d’écran"
 
 #: panels/applications/cc-applications-panel.ui:141
 msgid "Take pictures of the screen at any time."
-msgstr ""
+msgstr "Prendre des images de l’écran à tout moment."
 
 #: panels/applications/cc-applications-panel.ui:147
 msgid "Change Wallpaper"
@@ -247,7 +247,7 @@ msgstr "Ignorer les raccourcis"
 
 #: panels/applications/cc-applications-panel.ui:169
 msgid "Block standard keyboard shortcuts."
-msgstr ""
+msgstr "Bloquer les raccourcis clavier standard."
 
 #: panels/applications/cc-applications-panel.ui:175
 #: panels/applications/cc-applications-panel.ui:182
@@ -258,7 +258,7 @@ msgstr "Caméra"
 #: panels/applications/cc-applications-panel.ui:176
 #: panels/applications/cc-applications-panel.ui:183
 msgid "Take pictures with the camera."
-msgstr ""
+msgstr "Prendre des photos avec la caméra."
 
 #: panels/applications/cc-applications-panel.ui:189
 #: panels/applications/cc-applications-panel.ui:196
@@ -269,7 +269,7 @@ msgstr "Micro"
 #: panels/applications/cc-applications-panel.ui:190
 #: panels/applications/cc-applications-panel.ui:197
 msgid "Record audio with the microphone."
-msgstr ""
+msgstr "Enregistrer l’audio avec le microphone."
 
 #: panels/applications/cc-applications-panel.ui:203
 #: panels/applications/cc-applications-panel.ui:210
@@ -280,7 +280,7 @@ msgstr "Services de localisation"
 #: panels/applications/cc-applications-panel.ui:204
 #: panels/applications/cc-applications-panel.ui:211
 msgid "Access device location data."
-msgstr ""
+msgstr "Accéder aux données d’emplacement du périphérique."
 
 #: panels/applications/cc-applications-panel.ui:222
 #: panels/applications/cc-applications-panel.ui:326
@@ -530,14 +530,14 @@ msgstr "La caméra est désactivée"
 
 #: panels/camera/cc-camera-panel.ui:25
 msgid "No sandboxed applications can capture photos or video."
-msgstr ""
+msgstr "Aucune application s’exécutant dans un bac à sable ne peut prendre de photo ou de vidéo."
 
 #: panels/camera/cc-camera-panel.ui:39
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling the camera may cause some applications to not function properly.\n"
 "\n"
 "Allow the applications below to use your camera. Applications without sandboxing can always use the camera, and do not appear here."
-msgstr ""
+msgstr "L’utilisation de la caméra permet aux applications de prendre des photos et des vidéos. En la désactivant, il se peut que certaines applications ne fonctionnent pas correctement.\n\nAutoriser les applications ci-dessous à utiliser votre caméra. Les applications qui ne s’exécutent pas dans un bac à sable peuvent utiliser la caméra sans demander de permission."
 
 #: panels/camera/cc-camera-panel.ui:55
 msgid "No Applications Have Asked for Camera Access"
@@ -1681,7 +1681,7 @@ msgstr "Échelle"
 
 #: panels/display/cc-night-light-page.ui:22
 msgid "Night Light unavailable"
-msgstr ""
+msgstr "Mode nuit indisponible"
 
 #: panels/display/cc-night-light-page.ui:31
 msgid ""
@@ -2830,7 +2830,7 @@ msgstr "Raccourcis"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:120
 msgid "Add a shortcut"
-msgstr ""
+msgstr "Ajouter un raccourci"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:155
 msgid "Add Custom Shortcuts"
@@ -2942,11 +2942,11 @@ msgstr "Raccourci;Espace de travail;Fenêtre;Redimensionner;Zoom;Contraste;Saisi
 
 #: panels/location/cc-location-panel.ui:23
 msgid "Location Services Turned Off"
-msgstr ""
+msgstr "Les services de localisation sont désactivés"
 
 #: panels/location/cc-location-panel.ui:24
 msgid "No sandboxed applications can obtain location information."
-msgstr ""
+msgstr "Aucune application s’exécutant dans un bac à sable ne peut obtenir les informations liées à votre emplacement."
 
 #: panels/location/cc-location-panel.ui:38
 msgid ""
@@ -2955,7 +2955,7 @@ msgid ""
 "Uses Mozilla Location Service: <a href='https://location.services.mozilla.com/privacy'>Privacy Policy</a>\n"
 "\n"
 "Allow the applications below to determine your location. Applications without sandboxing can always determine your location, and do not appear here."
-msgstr ""
+msgstr "Les services de localisation permettent aux applications de connaître votre emplacement. Utiliser le Wi-Fi et les réseaux mobiles améliore la précision.\n\nUtilise le service de localisation de Mozilla : <a href='https://location.services.mozilla.com/privacy'>Politique de confidentialité</a>\n\nAutoriser les applications ci-dessous à accéder à votre emplacement. Les applications qui ne s’exécutent pas dans un bac à sable peuvent accéder à votre emplacement sans demander de permission."
 
 #: panels/location/cc-location-panel.ui:56
 msgid "No Applications Have Asked for Location Access"
@@ -2973,7 +2973,7 @@ msgstr "localisation;géolocalisation;emplacement;gps;privé;vie privée;confide
 
 #: panels/metrics/cc-metrics-panel.ui:10
 msgid "Enable Metrics"
-msgstr ""
+msgstr "Activer les données"
 
 #: panels/metrics/cc-metrics-panel.ui:20
 msgid "Metrics services turned off"
@@ -3006,18 +3006,18 @@ msgstr "privé;vie privée;indicateurs;réseau;identité ;"
 
 #: panels/microphone/cc-microphone-panel.ui:23
 msgid "Microphone Turned Off"
-msgstr ""
+msgstr "Le microphone est désactivé"
 
 #: panels/microphone/cc-microphone-panel.ui:24
 msgid "No sandboxed applications can record sound."
-msgstr ""
+msgstr "Aucune application s’exécutant dans un bac à sable ne peut enregistrer du son."
 
 #: panels/microphone/cc-microphone-panel.ui:37
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. Disabling the microphone may cause some applications to not function properly.\n"
 "\n"
 "Allow the applications below to use your microphone. Applications without sandboxing can always use your microphone, and do not appear here."
-msgstr ""
+msgstr "L’utilisation du microphone permet aux applications d’enregistrer et d’écouter de l’audio. En le désactivant, il se peut que certaines applications ne fonctionnent pas correctement.\n\nAutoriser les applications ci-dessous à utiliser votre microphone. Les applications qui ne s’exécutent pas dans un bac à sable peuvent utiliser votre microphone sans demander de permission."
 
 #: panels/microphone/cc-microphone-panel.ui:54
 msgid "No Applications Have Asked for Microphone Access"
@@ -3315,9 +3315,9 @@ msgstr "Doit comporter au minimum 8 caractères"
 #, c-format
 msgid "Must have a maximum of %d character"
 msgid_plural "Must have a maximum of %d characters"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Doit comporter au maximum %d caractère"
+msgstr[1] "Doit comporter au maximum %d caractère"
+msgstr[2] "Doit comporter au maximum %d caractère"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:4
 msgid "Turn On Wi-Fi Hotspot?"
@@ -4691,7 +4691,7 @@ msgstr "Au_thentification"
 
 #: panels/network/wireless-security/ws-file-chooser-button.c:49
 msgid "Select a file"
-msgstr ""
+msgstr "Sélectionner un fichier"
 
 #: panels/network/wireless-security/ws-leap.c:66
 msgid "missing leap-username"
@@ -5988,7 +5988,7 @@ msgstr "Aucune imprimante"
 msgid ""
 "Sorry! The system printing service\n"
 "    doesn’t seem to be available."
-msgstr ""
+msgstr "Désolé ! Le service d’impression du système\nne semble pas être disponible."
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:196
 #: panels/region/cc-format-chooser.ui:4
@@ -6398,7 +6398,7 @@ msgstr "Restreindre l’angle de vue"
 
 #: panels/screen/gnome-screen-panel.desktop.in.in:4
 msgid "Screen Settings"
-msgstr ""
+msgstr "Paramètres d’écran"
 
 #. Translators: Search terms to find the Screen panel. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -6447,15 +6447,15 @@ msgstr "Aucune application trouvée"
 
 #: panels/search/cc-search-panel.ui:10
 msgid "Application Search"
-msgstr ""
+msgstr "Recherche d’applications"
 
 #: panels/search/cc-search-panel.ui:11
 msgid "Include application-provided search results."
-msgstr ""
+msgstr "Inclure les résultats de recherche fournis par les applications."
 
 #: panels/search/cc-search-panel.ui:23
 msgid "Folders which are searched by system applications."
-msgstr ""
+msgstr "Dossiers recherchés par les applications système."
 
 #: panels/search/cc-search-panel.ui:37
 msgid "Search Results"
@@ -6706,7 +6706,7 @@ msgstr "Corde"
 
 #: panels/sound/cc-alert-chooser.ui:28
 msgid "Swing"
-msgstr ""
+msgstr "Balançoire"
 
 #: panels/sound/cc-alert-chooser.ui:36
 msgid "Hum"
@@ -7292,7 +7292,7 @@ msgstr "Assistant de _saisie (AccessX)"
 
 #: panels/universal-access/cc-ua-panel.ui:240
 msgid "Pointing &amp; Clicking"
-msgstr ""
+msgstr "Pointage et clic de souris"
 
 #: panels/universal-access/cc-ua-panel.ui:243
 msgid "_Mouse Keys"
@@ -7818,7 +7818,7 @@ msgstr "L’utilisateur définit son mot de passe lors de la première connexion
 #: panels/user-accounts/cc-add-user-dialog.ui:162
 #: panels/user-accounts/cc-password-dialog.ui:165
 msgid "Do not require a password when logging in"
-msgstr ""
+msgstr "Ne nécessite pas de mot de passe lors de la connexion"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:176
 msgid "Set password now"
@@ -8664,7 +8664,7 @@ msgstr "Tablette externe"
 #. knobs
 #: panels/wacom/cc-wacom-ekr-page.ui:9
 msgid "External pad device"
-msgstr ""
+msgstr "Tablette externe"
 
 #. All displays item
 #: panels/wacom/cc-wacom-page.c:643
@@ -9471,7 +9471,7 @@ msgstr "État initial de la fenêtre"
 msgid ""
 "A tuple containing the initial width, height and maximized state of the "
 "application window."
-msgstr ""
+msgstr "Un tuple contenant l’état initial de la largeur, la hauteur ainsi que l’état maximisé de la fenêtre de l’application."
 
 #. translators:
 #. * The number of sound outputs on a particular device
