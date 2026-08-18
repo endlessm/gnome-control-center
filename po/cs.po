@@ -15,7 +15,7 @@
 # Michal Bukovjan <bukm@centrum.cz>, 2002-2003
 # Miloslav Trmač <mtrmac@me.com>, 2003-2006
 # Ondřej Kopka <ondrej.kopka@gmail.com>, 2011
-# Pavel Borecki <pavel.borecki@gmail.com>, 2020
+# Pavel Borecki <pavel.borecki@gmail.com>, 2020,2026
 # Petr Kovar <pknbe@volny.cz>, 2007-2012
 # Petr Tomeš <ptomes@gmail.com>, 2006
 # Roddy Shuler <roddy@stanfordalumni.org>, 2018
@@ -29,9 +29,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 08:31+0000\n"
+"POT-Creation-Date: 2026-08-18 11:10+0000\n"
 "PO-Revision-Date: 2014-09-08 22:33+0000\n"
-"Last-Translator: Vojtěch Perník <translations@pervoj.cz>, 2021\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2020,2026\n"
 "Language-Team: Czech (http://app.transifex.com/endless-os/gnome-control-center/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,10 +114,10 @@ msgstr "%s má následující oprávnění zabudovaná a nelze je měnit. Pokud 
 #, c-format
 msgid "%u file and link type that is opened by the app"
 msgid_plural "%u file and link types that are opened by the app"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%u soubor a typ odkazu, který je otevírán aplikací"
+msgstr[1] "%u soubor a typy odkazů, který jsou otevírány aplikací"
+msgstr[2] "%u soubor a typy odkazů, který jsou otevírány aplikací"
+msgstr[3] "%u soubor a typy odkazů, který jsou otevírány aplikací"
 
 #: panels/applications/cc-applications-panel.c:1199
 #, c-format
@@ -524,14 +524,14 @@ msgstr "Kamera je vypnutá"
 
 #: panels/camera/cc-camera-panel.ui:25
 msgid "No sandboxed applications can capture photos or video."
-msgstr ""
+msgstr "Žádné aplikace v ohraničeném prostředí (sandbox) nemohou pořizovat fotky nebo video."
 
 #: panels/camera/cc-camera-panel.ui:39
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling the camera may cause some applications to not function properly.\n"
 "\n"
 "Allow the applications below to use your camera. Applications without sandboxing can always use the camera, and do not appear here."
-msgstr ""
+msgstr "Použití kamery aplikacím umožňuje zachytávat fotky a video. Zakázání kamery může u některých aplikací způsobit, že nebudou fungovat správně.\n\nPovolte níže uvedeným aplikacím používat kameru. Aplikace neprovozované v ohraničeném prostředí (sandbox) mohou kameru používat vždy a proto se zde neobjevují."
 
 #: panels/camera/cc-camera-panel.ui:55
 msgid "No Applications Have Asked for Camera Access"
@@ -2236,7 +2236,7 @@ msgstr "Ochrana firmwaru AMD proti zápisu"
 #. TRANSLATORS: Title: if the part has been fused
 #: panels/firmware-security/cc-firmware-security-utils.c:226
 msgid "Fused Platform"
-msgstr ""
+msgstr "Platforma s pojistkou"
 
 #. TRANSLATORS: if the stauts is valid. For example security check is valid
 #. and key is valid.
@@ -2431,7 +2431,7 @@ msgstr "Aktualizace softwaru"
 #: panels/info-overview/cc-info-overview-panel.ui:169
 #: panels/metrics/cc-metrics-panel.ui:33
 msgid "_Endless Terms of Use"
-msgstr ""
+msgstr "Podmínky použití _Endless"
 
 #: panels/info-overview/cc-info-overview-panel.ui:189
 msgid "Rename Device"
@@ -2784,10 +2784,10 @@ msgstr "Zobrazit a přizpůsobit klávesové zkratky"
 #, c-format
 msgid "%d modified"
 msgid_plural "%d modified"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d změněno"
+msgstr[1] "%d změněny"
+msgstr[2] "%d změněno"
+msgstr[3] "%d změněny"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:463
 msgid "Reset All Shortcuts?"
@@ -2944,7 +2944,7 @@ msgstr "Služby určování polohy jsou vypnuty"
 
 #: panels/location/cc-location-panel.ui:24
 msgid "No sandboxed applications can obtain location information."
-msgstr ""
+msgstr "Žádné aplikace v ohraničeném prostředí (sandbox) nemohou získávat informace o poloze zařízení."
 
 #: panels/location/cc-location-panel.ui:38
 msgid ""
@@ -2969,7 +2969,7 @@ msgstr "místo;poloha;pozice;gps;galileo;glonass;gnss;soukromí;"
 
 #: panels/metrics/cc-metrics-panel.ui:10
 msgid "Enable Metrics"
-msgstr ""
+msgstr "Povolit metriky"
 
 #: panels/metrics/cc-metrics-panel.ui:20
 msgid "Metrics services turned off"
@@ -2982,7 +2982,7 @@ msgstr ""
 #: panels/metrics/cc-metrics-panel.ui:28
 #: panels/metrics/gnome-metrics-panel.desktop.in.in:3
 msgid "Metrics"
-msgstr ""
+msgstr "Metriky"
 
 #: panels/metrics/cc-metrics-panel.ui:29
 msgid ""
@@ -6887,10 +6887,10 @@ msgstr "Zapomenutí zařízení selhalo: "
 #, c-format
 msgid "Depends on %u other device"
 msgid_plural "Depends on %u other devices"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Závisí na %u dalším zařízení"
+msgstr[1] "Závisí na %u dalších zařízeních"
+msgstr[2] "Závisí na %u dalších zařízeních"
+msgstr[3] "Závisí na %u dalších zařízeních"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:43
 #: panels/thunderbolt/cc-bolt-panel.ui:41
@@ -7716,11 +7716,11 @@ msgstr "využití;nedávný;nedávné;historie;soubory;dočasné;dočasný;tmp;s
 
 #: panels/updates/cc-updates-panel.c:522
 msgid "Limited data plan connection"
-msgstr ""
+msgstr "Připojení s tarifem s omezeným objemem dat"
 
 #: panels/updates/cc-updates-panel.c:524
 msgid "Unlimited data plan connection"
-msgstr ""
+msgstr "Připojení s tarifem s neomezeným objemem dat"
 
 #: panels/updates/cc-updates-panel.c:573 panels/updates/cc-updates-panel.ui:13
 msgid "No active connection"
@@ -7753,7 +7753,7 @@ msgstr "Naplánujte automatické aktualizace"
 #. panel
 #: panels/updates/gnome-updates-panel.desktop.in.in:18
 msgid "Updates;Automatic;Background;Metered;"
-msgstr ""
+msgstr "Aktualizace;Automaticky;Na pozadí;Účtovaná data;"
 
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
@@ -7824,7 +7824,7 @@ msgstr "Uživatel nastaví heslo při prvním přihlášení"
 #: panels/user-accounts/cc-add-user-dialog.ui:162
 #: panels/user-accounts/cc-password-dialog.ui:165
 msgid "Do not require a password when logging in"
-msgstr ""
+msgstr "Při přihlašování se nevyžadovat heslo"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:176
 msgid "Set password now"
@@ -8670,7 +8670,7 @@ msgstr "Externí grafický tablet"
 #. knobs
 #: panels/wacom/cc-wacom-ekr-page.ui:9
 msgid "External pad device"
-msgstr ""
+msgstr "Zařízení externího tabletu"
 
 #. All displays item
 #: panels/wacom/cc-wacom-page.c:643
@@ -9093,10 +9093,10 @@ msgstr[3] ""
 #, c-format
 msgid "You have %u try left"
 msgid_plural "You have %u tries left"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Zbývá vám %u pokus"
+msgstr[1] "Zbývají vám %u pokusy"
+msgstr[2] "Zbývá vám %u pokusů"
+msgstr[3] "Zbývají vám %u pokusy"
 
 #: panels/wwan/cc-wwan-device-page.c:225
 msgid "Wrong password entered."
